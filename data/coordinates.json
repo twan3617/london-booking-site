@@ -1,0 +1,2137 @@
+{
+  "barking-and-dagenham-barking-park": {
+    "latitude": 51.5457316,
+    "longitude": 0.0866363,
+    "display_name": "Barking Park, Thames View, London Borough of Barking and Dagenham, Greater London, England, United Kingdom",
+    "query": "Barking Park, Barking and Dagenham, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "barking-and-dagenham-central-park-dagenham": {
+    "latitude": 51.5252698,
+    "longitude": 0.1624624,
+    "display_name": "Central Park West, Dagenham, London Borough of Barking and Dagenham, Greater London, England, United Kingdom",
+    "query": "Central Park Dagenham, Barking and Dagenham, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "barking-and-dagenham-greatfields-park": {
+    "latitude": 51.5312123,
+    "longitude": 0.0902852,
+    "display_name": "Greatfields Park, Thames View, London Borough of Barking and Dagenham, Greater London, England, United Kingdom",
+    "query": "Greatfields Park, Barking and Dagenham, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "barking-and-dagenham-old-dagenham-park": {
+    "latitude": 51.5361822,
+    "longitude": 0.1576849,
+    "display_name": "Old Dagenham Park, Dagenham, London Borough of Barking and Dagenham, Greater London, England, United Kingdom",
+    "query": "Old Dagenham Park, Barking and Dagenham, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "barking-and-dagenham-st-chads-park": null,
+  "barnet-bethune-park": {
+    "latitude": 51.6193662,
+    "longitude": -0.1520897,
+    "display_name": "Bethune Park, Brunswick Park, London Borough of Barnet, Greater London, England, United Kingdom",
+    "query": "Bethune Park, Barnet, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "barnet-bittacy-hill-park": {
+    "latitude": 51.6106344,
+    "longitude": -0.2151298,
+    "display_name": "Bittacy Hill Park, Mill Hill, London Borough of Barnet, Greater London, England, United Kingdom",
+    "query": "Bittacy Hill Park, Barnet, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "barnet-burnt-oak-leisure-centre": {
+    "latitude": 51.6050018,
+    "longitude": -0.2572366,
+    "display_name": "Burnt Oak Leisure Centre, Watling Avenue, Burnt Oak, Colindale, London Borough of Barnet, Greater London, England, HA8 0NN, United Kingdom",
+    "query": "Burnt Oak Leisure Centre, Barnet, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "barnet-cherry-tree-wood": {
+    "latitude": 51.5856452,
+    "longitude": -0.1597889,
+    "display_name": "Cherry Tree Wood, Hampstead Garden Suburb, London Borough of Barnet, Greater London, England, United Kingdom",
+    "query": "Cherry Tree Wood, Barnet, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "barnet-childs-hill-park": {
+    "latitude": 51.5672044,
+    "longitude": -0.200703,
+    "display_name": "Childs Hill Park, Childs Hill, Golders Green, London Borough of Barnet, Greater London, England, United Kingdom",
+    "query": "Childs Hill Park, Barnet, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "barnet-edgwarebury-park": {
+    "latitude": 51.6261478,
+    "longitude": -0.2825901,
+    "display_name": "Edgwarebury Park, London Borough of Barnet, Greater London, England, United Kingdom",
+    "query": "Edgwarebury Park, Barnet, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "barnet-friary-park": {
+    "latitude": 51.6188324,
+    "longitude": -0.1626106,
+    "display_name": "Friary Park, Friern Barnet, London Borough of Barnet, Greater London, England, N20 0NR, United Kingdom",
+    "query": "Friary Park, Barnet, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "barnet-golders-hill-park": {
+    "latitude": 51.5668186,
+    "longitude": -0.1893807,
+    "display_name": "Golders Hill Park, Golders Green, London Borough of Barnet, Greater London, England, NW3 7HD, United Kingdom",
+    "query": "Golders Hill Park, Barnet, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "barnet-halliwick-recreation-ground": {
+    "latitude": 51.6011726,
+    "longitude": -0.151989,
+    "display_name": "Halliwick Recreation Ground, Colney Hatch, London Borough of Barnet, Greater London, England, United Kingdom",
+    "query": "Halliwick Recreation Ground, Barnet, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "barnet-hendon-park": {
+    "latitude": 51.5812375,
+    "longitude": -0.2210045,
+    "display_name": "Hendon Park, Hendon Central, London Borough of Barnet, Greater London, England, NW4 2TE, United Kingdom",
+    "query": "Hendon Park, Barnet, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "barnet-lyttelton-playing-fields": {
+    "latitude": 51.5835883,
+    "longitude": -0.1769619,
+    "display_name": "Lyttelton Playing Fields, Hampstead Garden Suburb, London Borough of Barnet, Greater London, England, United Kingdom",
+    "query": "Lyttelton Playing Fields, Barnet, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "barnet-mill-hill-park": {
+    "latitude": 51.6123633,
+    "longitude": -0.2389816,
+    "display_name": "Mill Hill Park, Mill Hill, London Borough of Barnet, Greater London, England, United Kingdom",
+    "query": "Mill Hill Park, Barnet, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "barnet-montrose-playing-fields": {
+    "latitude": 51.5980598,
+    "longitude": -0.2563015,
+    "display_name": "Montrose Playing Fields, Colindale, London Borough of Barnet, Greater London, England, United Kingdom",
+    "query": "Montrose Playing Fields, Barnet, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "barnet-new-barnet-leisure-centre": {
+    "latitude": 51.6528903,
+    "longitude": -0.1691917,
+    "display_name": "New Barnet Leisure Centre, 1, Lawton Road, Barnet Vale, New Barnet, Chipping Barnet, Greater London, England, EN4 9BS, United Kingdom",
+    "query": "New Barnet Leisure Centre, Barnet, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "barnet-new-southgate-recreation-ground": {
+    "latitude": 51.6212813,
+    "longitude": -0.1469672,
+    "display_name": "New Southgate Recreation Ground, Brunswick Park, London Borough of Barnet, Greater London, England, United Kingdom",
+    "query": "New Southgate Recreation Ground, Barnet, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "barnet-northway-gardens": {
+    "latitude": 51.585711,
+    "longitude": -0.1875668,
+    "display_name": "Northway Gardens, Hampstead Garden Suburb, London Borough of Barnet, Greater London, England, United Kingdom",
+    "query": "Northway Gardens, Barnet, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "barnet-oak-hill-park": {
+    "latitude": 51.638433,
+    "longitude": -0.1561098,
+    "display_name": "Oak Hill Park, East Barnet, London Borough of Barnet, Greater London, England, United Kingdom",
+    "query": "Oak Hill Park, Barnet, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "barnet-old-courthouse-recreation-ground": {
+    "latitude": 51.6495955,
+    "longitude": -0.2030637,
+    "display_name": "Old Courthouse Recreation Ground, High Barnet, London Borough of Barnet, Greater London, England, United Kingdom",
+    "query": "Old Courthouse Recreation Ground, Barnet, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "barnet-princes-park": {
+    "latitude": 51.5818,
+    "longitude": -0.2060186,
+    "display_name": "Princes Park, Temple Fortune, London Borough of Barnet, Greater London, England, United Kingdom",
+    "query": "Princes Park, Barnet, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "barnet-rushgrove-park": {
+    "latitude": 51.5888743,
+    "longitude": -0.243215,
+    "display_name": "Rushgrove Park, The Hyde, Colindale, London Borough of Barnet, Greater London, England, United Kingdom",
+    "query": "Rushgrove Park, Barnet, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "barnet-stonegrove-park": {
+    "latitude": 51.61602,
+    "longitude": -0.2835149,
+    "display_name": "Stonegrove Park, London Borough of Barnet, Greater London, England, United Kingdom",
+    "query": "Stonegrove Park, Barnet, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "barnet-sunnyhill-park": {
+    "latitude": 51.5957236,
+    "longitude": -0.2297954,
+    "display_name": "Sunnyhill Park, Hendon, London Borough of Barnet, Greater London, England, NW4 4JR, United Kingdom",
+    "query": "Sunnyhill Park, Barnet, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "barnet-tudor-sports-ground": null,
+  "barnet-victoria-park-finchley": {
+    "latitude": 51.6053709,
+    "longitude": -0.1842353,
+    "display_name": "Victoria Park, Fallow Corner, London Borough of Barnet, Greater London, England, N3 2NE, United Kingdom",
+    "query": "Victoria Park (Finchley), Barnet, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "barnet-west-hendon-playing-fields": {
+    "latitude": 51.5790233,
+    "longitude": -0.2517896,
+    "display_name": "West Hendon Playing Fields, West Hendon, London Borough of Barnet, Greater London, England, NW9 7NE, United Kingdom",
+    "query": "West Hendon Playing Fields, Barnet, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "bexley-belvedere-recreation-ground-south": {
+    "latitude": 51.4832624,
+    "longitude": 0.1444424,
+    "display_name": "Belvedere Recreation Ground (South), Upper Belvedere, London Borough of Bexley, Greater London, England, United Kingdom",
+    "query": "Belvedere Recreation Ground South, Bexley, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "bexley-bexleyheath-tennis-club": null,
+  "bexley-danson-park": {
+    "latitude": 51.454878,
+    "longitude": 0.1175876,
+    "display_name": "Danson Park, Blendon, London Borough of Bexley, Greater London, England, DA6 8HL, United Kingdom",
+    "query": "Danson Park, Bexley, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "bexley-northumberland-heath-recreation-ground": {
+    "latitude": 51.4765166,
+    "longitude": 0.1532598,
+    "display_name": "Northumberland Heath Recreation Ground, Lessness Heath, London Borough of Bexley, Greater London, England, United Kingdom",
+    "query": "Northumberland Heath Recreation Ground, Bexley, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "bexley-russell-park": {
+    "latitude": 51.4618751,
+    "longitude": 0.1499245,
+    "display_name": "Russell Park, Barnehurst, London Borough of Bexley, Greater London, England, United Kingdom",
+    "query": "Russell Park, Bexley, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "bexley-sidcup-place": {
+    "latitude": 51.4221388,
+    "longitude": 0.1019984,
+    "display_name": "Sidcup Place, Longlands, London Borough of Bexley, Greater London, England, DA14 6BN, United Kingdom",
+    "query": "Sidcup Place, Bexley, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "bexley-waring-park": {
+    "latitude": 51.4315473,
+    "longitude": 0.1102712,
+    "display_name": "Waring Park, Hurst, Albany Park, London Borough of Bexley, Greater London, England, United Kingdom",
+    "query": "Waring Park, Bexley, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "bexley-west-heath-recreation-ground": null,
+  "brent-alperton-sports-ground": {
+    "latitude": 51.5351983,
+    "longitude": -0.3028037,
+    "display_name": "Alperton Sports Ground, Alperton, London Borough of Brent, Greater London, England, HA0 1JH, United Kingdom",
+    "query": "Alperton Sports Ground, Brent, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "brent-chelmsford-square": {
+    "latitude": 51.5383727,
+    "longitude": -0.2262945,
+    "display_name": "Chelmsford Square, Willesden Green, Brondesbury, London Borough of Brent, Greater London, England, NW10 3AP, United Kingdom",
+    "query": "Chelmsford Square, Brent, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "brent-eton-grove-open-space": {
+    "latitude": 51.5919103,
+    "longitude": -0.2757475,
+    "display_name": "Eton Grove Open Space, Kingsbury, London Borough of Brent, Greater London, England, NW9 9LD, United Kingdom",
+    "query": "Eton Grove Open Space, Brent, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "brent-gladstone-park": {
+    "latitude": 51.5581908,
+    "longitude": -0.2374521,
+    "display_name": "Gladstone Park, Dollis Hill, London Borough of Brent, Greater London, England, United Kingdom",
+    "query": "Gladstone Park, Brent, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "brent-king-edward-vii-park": {
+    "latitude": 51.5570711,
+    "longitude": -0.2954281,
+    "display_name": "King Edward VII Park, Sudbury, London Borough of Brent, Greater London, England, HA9 7RX, United Kingdom",
+    "query": "King Edward VII Park, Brent, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "brent-preston-park": {
+    "latitude": 51.5707994,
+    "longitude": -0.3027632,
+    "display_name": "Preston Park, Preston, London Borough of Brent, Greater London, England, United Kingdom",
+    "query": "Preston Park, Brent, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "brent-queen-s-park-tennis-courts": null,
+  "brent-roe-green-park": {
+    "latitude": 51.5865082,
+    "longitude": -0.2713561,
+    "display_name": "Roe Green Park, Kingsbury, London Borough of Brent, Greater London, England, NW9 9HA, United Kingdom",
+    "query": "Roe Green Park, Brent, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "brent-vale-farm": {
+    "latitude": 51.5576095,
+    "longitude": -0.3158399,
+    "display_name": "Vale Farm, Eton Avenue, Sudbury, London Borough of Brent, Greater London, England, HA0 3AU, United Kingdom",
+    "query": "Vale Farm, Brent, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "brent-woodcock-park": {
+    "latitude": 51.5840035,
+    "longitude": -0.3019907,
+    "display_name": "Woodcock Park, Preston, London Borough of Brent, Greater London, England, United Kingdom",
+    "query": "Woodcock Park, Brent, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "bromley-bromley-sports-club": null,
+  "bromley-bromley-tennis-centre-at-newstead-wood": null,
+  "bromley-church-house-gardens": {
+    "latitude": 51.4033418,
+    "longitude": 0.0127242,
+    "display_name": "Church House Gardens, Bromley Park, Plaistow, London Borough of Bromley, Greater London, England, United Kingdom",
+    "query": "Church House Gardens, Bromley, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "bromley-coney-hall-recreation-ground": {
+    "latitude": 51.3669372,
+    "longitude": -0.0019609,
+    "display_name": "Coney Hall Recreation Ground, Coney Hall, London Borough of Bromley, Greater London, England, BR4 9JJ, United Kingdom",
+    "query": "Coney Hall Recreation Ground, Bromley, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "bromley-croydon-road-recreation-ground": {
+    "latitude": 51.4039018,
+    "longitude": -0.0328543,
+    "display_name": "Croydon Road Recreation Ground, Beckenham, London Borough of Bromley, Greater London, England, United Kingdom",
+    "query": "Croydon Road Recreation Ground, Bromley, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "bromley-crystal-palace-national-sports-centre": {
+    "latitude": 51.4204026,
+    "longitude": -0.069075,
+    "display_name": "Crystal Palace National Sports Centre, Geological strata bridge, Crystal Palace, London Borough of Bromley, Greater London, England, SE20 8DN, United Kingdom",
+    "query": "Crystal Palace National Sports Centre, Bromley, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "bromley-cudham-lane-south-recreation-ground": null,
+  "bromley-goddington-park": {
+    "latitude": 51.3671455,
+    "longitude": 0.1144387,
+    "display_name": "Goddington Park, Goddington, London Borough of Bromley, Greater London, England, BR6 9DH, United Kingdom",
+    "query": "Goddington Park, Bromley, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "bromley-kelsey-park": {
+    "latitude": 51.4020139,
+    "longitude": -0.0222547,
+    "display_name": "Kelsey Park, Beckenham, London Borough of Bromley, Greater London, England, United Kingdom",
+    "query": "Kelsey Park, Bromley, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "bromley-kings-hall-road-cator-park": null,
+  "bromley-poverest-park": {
+    "latitude": 51.3850698,
+    "longitude": 0.0965437,
+    "display_name": "Poverest Park, Perry Hall, Crofton, London Borough of Bromley, Greater London, England, United Kingdom",
+    "query": "Poverest Park, Bromley, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "bromley-willett-recreation-ground": {
+    "latitude": 51.3928204,
+    "longitude": 0.0780217,
+    "display_name": "Willett Recreation Ground, Hawkwood, Petts Wood, London Borough of Bromley, Greater London, England, United Kingdom",
+    "query": "Willett Recreation Ground, Bromley, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "camden-kilburn-grange-park": {
+    "latitude": 51.5438343,
+    "longitude": -0.1981301,
+    "display_name": "Kilburn Grange Park, Kilburn, London Borough of Camden, Greater London, England, United Kingdom",
+    "query": "Kilburn Grange Park, Camden, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "camden-lincoln-s-inn-fields": {
+    "latitude": 51.5162327,
+    "longitude": -0.1165666,
+    "display_name": "Lincoln's Inn Fields, Holborn, London Borough of Camden, Greater London, England, WC2, United Kingdom",
+    "query": "Lincoln's Inn Fields, Camden, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "camden-parliament-hill-fields": {
+    "latitude": 51.5611136,
+    "longitude": -0.1506428,
+    "display_name": "Parliament Hill Fields, Highgate Road, Dartmouth Park, London Borough of Camden, Greater London, England, NW5 1QX, United Kingdom",
+    "query": "Parliament Hill Fields, Camden, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "camden-waterlow-park": {
+    "latitude": 51.5684751,
+    "longitude": -0.1445816,
+    "display_name": "Waterlow Park, Highgate, London Borough of Camden, Greater London, England, United Kingdom",
+    "query": "Waterlow Park, Camden, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "city-of-london-golden-lane-sport-and-fitness": null,
+  "croydon-addiscombe-recreation-ground": {
+    "latitude": 51.3777599,
+    "longitude": -0.0707043,
+    "display_name": "Addiscombe Recreation Ground, Addiscombe, London Borough of Croydon, Greater London, England, United Kingdom",
+    "query": "Addiscombe Recreation Ground, Croydon, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "croydon-ashburton-park": {
+    "latitude": 51.3853026,
+    "longitude": -0.0657507,
+    "display_name": "Ashburton Park, Woodside, London Borough of Croydon, Greater London, England, United Kingdom",
+    "query": "Ashburton Park, Croydon, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "croydon-biggin-woods": {
+    "latitude": 51.415573,
+    "longitude": -0.1077168,
+    "display_name": "Biggin Woods, Upper Norwood, London Borough of Croydon, Greater London, England, United Kingdom",
+    "query": "Biggin Woods, Croydon, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "croydon-coulsdon-memorial-park": {
+    "latitude": 51.3150491,
+    "longitude": -0.1341937,
+    "display_name": "Coulsdon Memorial Ground, London Borough of Croydon, Greater London, England, CR5 2HE, United Kingdom",
+    "query": "Coulsdon Memorial Park, Croydon, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "croydon-grangewood-park": {
+    "latitude": 51.4031598,
+    "longitude": -0.0894939,
+    "display_name": "Grangewood Park, Selhurst, London Borough of Croydon, Greater London, England, United Kingdom",
+    "query": "Grangewood Park, Croydon, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "croydon-higher-drive-recreation-ground": {
+    "latitude": 51.3255389,
+    "longitude": -0.1128421,
+    "display_name": "Higher Drive Recreation Ground, Kenley, London Borough of Croydon, Greater London, England, United Kingdom",
+    "query": "Higher Drive Recreation Ground, Croydon, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "croydon-park-hill-recreation-ground": {
+    "latitude": 51.3694193,
+    "longitude": -0.0916235,
+    "display_name": "Park Hill Recreation Ground, Selhurst, London Borough of Croydon, Greater London, England, United Kingdom",
+    "query": "Park Hill Recreation Ground, Croydon, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "croydon-purley-beeches-park": null,
+  "croydon-rickman-hill-park": null,
+  "croydon-shirley-church-recreation-ground": {
+    "latitude": 51.3708511,
+    "longitude": -0.0472262,
+    "display_name": "Shirley Church Recreation Ground, Shirley, London Borough of Croydon, Greater London, England, United Kingdom",
+    "query": "Shirley Church Recreation Ground, Croydon, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "croydon-south-norwood-lake": {
+    "latitude": 51.4079373,
+    "longitude": -0.0761906,
+    "display_name": "South Norwood Lake, South Norwood, London Borough of Croydon, Greater London, England, SE25 4DX, United Kingdom",
+    "query": "South Norwood Lake, Croydon, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "croydon-south-norwood-recreation-ground": {
+    "latitude": 51.3953756,
+    "longitude": -0.0780787,
+    "display_name": "South Norwood Recreation Ground, South Norwood, London Borough of Croydon, Greater London, England, United Kingdom",
+    "query": "South Norwood Recreation Ground, Croydon, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "croydon-trumble-gardens": {
+    "latitude": 51.3966482,
+    "longitude": -0.1046441,
+    "display_name": "Trumble Gardens, Thornton Heath, London Borough of Croydon, Greater London, England, United Kingdom",
+    "query": "Trumble Gardens, Croydon, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "croydon-upper-norwood-recreation-ground": {
+    "latitude": 51.4173592,
+    "longitude": -0.0919005,
+    "display_name": "Upper Norwood Recreation Ground, Upper Norwood, London Borough of Croydon, Greater London, England, United Kingdom",
+    "query": "Upper Norwood Recreation Ground, Croydon, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "croydon-wandle-park": {
+    "latitude": 51.3734814,
+    "longitude": -0.1133617,
+    "display_name": "Wandle Park, Vicarage Road, Waddon Marsh, London Borough of Croydon, Greater London, England, CR0 4JS, United Kingdom",
+    "query": "Wandle Park, Croydon, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "ealing-acton-park": {
+    "latitude": 51.5080706,
+    "longitude": -0.2599863,
+    "display_name": "Acton Park, London Borough of Ealing, Greater London, England, W3 7LJ, United Kingdom",
+    "query": "Acton Park, Ealing, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "ealing-alec-reed-academy-community-sports-centre": null,
+  "ealing-berkeley-fields": null,
+  "ealing-brentside-high-school": {
+    "latitude": 51.5265737,
+    "longitude": -0.3406098,
+    "display_name": "Brentside High School, Brookbank Avenue, Greenford, London Borough of Ealing, Greater London, England, W7 1JJ, United Kingdom",
+    "query": "Brentside High School, Ealing, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "ealing-churchfields-recreation-ground": {
+    "latitude": 51.5126183,
+    "longitude": -0.3450227,
+    "display_name": "Churchfields Recreation Ground, Hanwell, London Borough of Ealing, Greater London, England, United Kingdom",
+    "query": "Churchfields Recreation Ground, Ealing, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "ealing-dormers-wells-leisure-centre": {
+    "latitude": 51.5177042,
+    "longitude": -0.365443,
+    "display_name": "Dormers Wells Leisure Centre, Lovell Road, Greenford, London Borough of Ealing, Greater London, England, UB1 3LD, United Kingdom",
+    "query": "Dormers Wells Leisure Centre, Ealing, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "ealing-elthorne-park": {
+    "latitude": 51.5014914,
+    "longitude": -0.3322529,
+    "display_name": "Elthorne Park, Hanwell, London Borough of Ealing, Greater London, England, United Kingdom",
+    "query": "Elthorne Park, Ealing, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "ealing-elthorne-sports-centre": {
+    "latitude": 51.4999134,
+    "longitude": -0.3310002,
+    "display_name": "Elthorne Sports Centre, Westlea Road, Hanwell, London Borough of Ealing, Greater London, England, W7 2AD, United Kingdom",
+    "query": "Elthorne Sports Centre, Ealing, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "ealing-featherstone-sports-centre": null,
+  "ealing-greenford-sports-centre": {
+    "latitude": 51.531407,
+    "longitude": -0.3695815,
+    "display_name": "Greenford Sports Centre, Ruislip Road, Greenford, London Borough of Ealing, Greater London, England, UB6 9RR, United Kingdom",
+    "query": "Greenford Sports Centre, Ealing, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "ealing-lammas-park": {
+    "latitude": 51.5038735,
+    "longitude": -0.3115558,
+    "display_name": "Lammas Park, Hanwell, London Borough of Ealing, Greater London, England, United Kingdom",
+    "query": "Lammas Park, Ealing, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "ealing-north-acton-playing-fields": {
+    "latitude": 51.5208071,
+    "longitude": -0.271013,
+    "display_name": "North Acton Playing Fields, Park Royal, London Borough of Ealing, Greater London, England, United Kingdom",
+    "query": "North Acton Playing Fields, Ealing, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "ealing-perivale-park": {
+    "latitude": 51.5304141,
+    "longitude": -0.3427231,
+    "display_name": "Perivale Park, Greenford, London Borough of Ealing, Greater London, England, UB6 8RP, United Kingdom",
+    "query": "Perivale Park, Ealing, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "ealing-pitshanger-park": {
+    "latitude": 51.5279735,
+    "longitude": -0.3195151,
+    "display_name": "Pitshanger Park, Perivale, London Borough of Ealing, Greater London, England, W13 8DJ, United Kingdom",
+    "query": "Pitshanger Park, Ealing, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "ealing-ravenor-park": {
+    "latitude": 51.5304397,
+    "longitude": -0.357044,
+    "display_name": "Ravenor Park, Greenford, London Borough of Ealing, Greater London, England, United Kingdom",
+    "query": "Ravenor Park, Ealing, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "ealing-reynolds-sports-centre": {
+    "latitude": 51.5051382,
+    "longitude": -0.2801982,
+    "display_name": "Reynolds Sports Centre, Museum Way, London Borough of Ealing, Greater London, England, W3 8HF, United Kingdom",
+    "query": "Reynolds Sports Centre, Ealing, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "ealing-southall-park": {
+    "latitude": 51.5094888,
+    "longitude": -0.3696509,
+    "display_name": "Southall Park, Greenford, London Borough of Ealing, Greater London, England, United Kingdom",
+    "query": "Southall Park, Ealing, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "ealing-southfield-recreation-ground": {
+    "latitude": 51.5035865,
+    "longitude": -0.2616369,
+    "display_name": "Southfield Recreation Ground, London Borough of Ealing, Greater London, England, United Kingdom",
+    "query": "Southfield Recreation Ground, Ealing, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "ealing-spikes-bridge-park": {
+    "latitude": 51.5180979,
+    "longitude": -0.379834,
+    "display_name": "Spikes Bridge Park, Greenford, London Borough of Ealing, Greater London, England, UB1 2AS, United Kingdom",
+    "query": "Spikes Bridge Park, Ealing, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "ealing-swift-road-outdoor-sports-centre": {
+    "latitude": 51.5023173,
+    "longitude": -0.3741734,
+    "display_name": "Swift Road Outdoor Sports Centre, Swift Road, Havelock Estate, London Borough of Ealing, Greater London, England, UB2 4RP, United Kingdom",
+    "query": "Swift Road Outdoor Sports Centre, Ealing, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "ealing-twyford-sports-centre": {
+    "latitude": 51.5089998,
+    "longitude": -0.2779878,
+    "display_name": "Twyford Sports Centre, Acton Hill Mews, London Borough of Ealing, Greater London, England, W3 9QP, United Kingdom",
+    "query": "Twyford Sports Centre, Ealing, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "ealing-wolf-fields-park": {
+    "latitude": 51.4952277,
+    "longitude": -0.3748877,
+    "display_name": "Wolf Fields Park, London Borough of Ealing, Greater London, England, United Kingdom",
+    "query": "Wolf Fields Park, Ealing, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "enfield-albany-park": {
+    "latitude": 51.6672587,
+    "longitude": -0.0325635,
+    "display_name": "Albany Park, Southbury, London Borough of Enfield, Greater London, England, EN3 5FB, United Kingdom",
+    "query": "Albany Park, Enfield, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "enfield-arnos-park": {
+    "latitude": 51.6189695,
+    "longitude": -0.1320551,
+    "display_name": "Arnos Park, New Southgate, London Borough of Enfield, Greater London, England, United Kingdom",
+    "query": "Arnos Park, Enfield, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "enfield-broomfield-park": {
+    "latitude": 51.6186797,
+    "longitude": -0.1175267,
+    "display_name": "Broomfield Park, Palmers Green, London Borough of Enfield, Greater London, England, United Kingdom",
+    "query": "Broomfield Park, Enfield, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "enfield-bush-hill-park": {
+    "latitude": 51.641707,
+    "longitude": -0.0693944,
+    "display_name": "Bush Hill Park, Queen Anne's Place, Bush Hill Park, Southbury, London Borough of Enfield, Greater London, England, EN1 2PT, United Kingdom",
+    "query": "Bush Hill Park, Enfield, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "enfield-craig-park": {
+    "latitude": 51.6157405,
+    "longitude": -0.0576633,
+    "display_name": "Craig Park, Upper Edmonton, Edmonton, London Borough of Enfield, Greater London, England, United Kingdom",
+    "query": "Craig Park, Enfield, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "enfield-durants-park": {
+    "latitude": 51.6534944,
+    "longitude": -0.0417367,
+    "display_name": "Durants Park, Ponders End, London Borough of Enfield, Greater London, England, United Kingdom",
+    "query": "Durants Park, Enfield, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "enfield-enfield-town-park": {
+    "latitude": 51.6492694,
+    "longitude": -0.0858987,
+    "display_name": "Enfield Town Park, Southbury, London Borough of Enfield, Greater London, England, United Kingdom",
+    "query": "Enfield Town Park, Enfield, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "enfield-firs-farm-recreation-ground": {
+    "latitude": 51.6264965,
+    "longitude": -0.0848885,
+    "display_name": "Firs Farm Wetlands, Park and Playing Fields, Edmonton, London Borough of Enfield, Greater London, England, N21 2PJ, United Kingdom",
+    "query": "Firs Farm Recreation Ground, Enfield, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "enfield-grovelands-park": {
+    "latitude": 51.6328884,
+    "longitude": -0.1147536,
+    "display_name": "Grovelands Park, Southgate, London Borough of Enfield, Greater London, England, United Kingdom",
+    "query": "Grovelands Park, Enfield, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "enfield-hazelwood-recreation-ground": null,
+  "enfield-jubilee-park": {
+    "latitude": 51.6345041,
+    "longitude": -0.0592798,
+    "display_name": "Jubilee Park, Southbury, London Borough of Enfield, Greater London, England, N9 7EJ, United Kingdom",
+    "query": "Jubilee Park, Enfield, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "enfield-north-enfield-recreation-ground": null,
+  "enfield-oakwood-park": {
+    "latitude": 51.6413556,
+    "longitude": -0.1205189,
+    "display_name": "Oakwood Park, Southgate, London Borough of Enfield, Greater London, England, United Kingdom",
+    "query": "Oakwood Park, Enfield, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "enfield-ponders-end-recreation-ground": {
+    "latitude": 51.6450049,
+    "longitude": -0.0436804,
+    "display_name": "Ponders End Park, Ponders End, London Borough of Enfield, Greater London, England, United Kingdom",
+    "query": "Ponders End Recreation Ground, Enfield, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "enfield-pymmes-park": {
+    "latitude": 51.6176324,
+    "longitude": -0.0694728,
+    "display_name": "Pymmes Park, Edmonton, London Borough of Enfield, Greater London, England, United Kingdom",
+    "query": "Pymmes Park, Enfield, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "greenwich-altash-gardens": {
+    "latitude": 51.4331871,
+    "longitude": 0.0605284,
+    "display_name": "Altash Gardens, Edgebury, Coldharbour, Royal Borough of Greenwich, Greater London, England, United Kingdom",
+    "query": "Altash Gardens, Greenwich, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "greenwich-blackheath-chesterfield-walk": null,
+  "greenwich-bostall-gardens": {
+    "latitude": 51.4870621,
+    "longitude": 0.1104938,
+    "display_name": "Bostall Gardens, McLeod Road, Abbey Wood, Royal Borough of Greenwich, Greater London, England, SE2 0NQ, United Kingdom",
+    "query": "Bostall Gardens, Greenwich, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "greenwich-charlton-lido-and-lifestyle-club-hornfair-park": {
+    "latitude": 51.4753333,
+    "longitude": 0.0389764,
+    "display_name": "Charlton Lido and Lifestyle Club, Shooters Hill Road, Charlton, Royal Borough of Greenwich, Greater London, England, SE18 4LX, United Kingdom",
+    "query": "Charlton Lido and Lifestyle Club (Hornfair Park), Greenwich, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "greenwich-eltham-park-south": {
+    "latitude": 51.455567,
+    "longitude": 0.0684243,
+    "display_name": "Eltham Park South, Avery Hill, Royal Borough of Greenwich, Greater London, England, United Kingdom",
+    "query": "Eltham Park South, Greenwich, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "greenwich-fairy-hill-park": {
+    "latitude": 51.4383907,
+    "longitude": 0.0570424,
+    "display_name": "Fairy Hill Park, South End, Coldharbour, Royal Borough of Greenwich, Greater London, England, United Kingdom",
+    "query": "Fairy Hill Park, Greenwich, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "greenwich-greenwich-park": {
+    "latitude": 51.4772355,
+    "longitude": 0.0009227,
+    "display_name": "Greenwich Park, Great Cross Avenue, Greenwich Town Centre, East Greenwich, Royal Borough of Greenwich, Greater London, England, SE10 8EJ, United Kingdom",
+    "query": "Greenwich Park, Greenwich, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "greenwich-kidbrooke-green": {
+    "latitude": 51.4644048,
+    "longitude": 0.0319373,
+    "display_name": "Kidbrooke Green Park, Kidbrooke, Royal Borough of Greenwich, Greater London, England, United Kingdom",
+    "query": "Kidbrooke Green, Greenwich, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "greenwich-maryon-park": {
+    "latitude": 51.4893014,
+    "longitude": 0.0425366,
+    "display_name": "Maryon Park, Charlton Riverside, Royal Borough of Greenwich, Greater London, England, SE7 8HB, United Kingdom",
+    "query": "Maryon Park, Greenwich, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "greenwich-plumstead-common": {
+    "latitude": 51.4815737,
+    "longitude": 0.0823182,
+    "display_name": "Plumstead Common, Plumstead, Royal Borough of Greenwich, Greater London, England, United Kingdom",
+    "query": "Plumstead Common, Greenwich, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "greenwich-shooters-hill-sixth-form-college": {
+    "latitude": 51.4744801,
+    "longitude": 0.062872,
+    "display_name": "Shooters Hill Sixth Form College, Red Lion Lane, Shooters Hill, Royal Borough of Greenwich, Greater London, England, SE18 4LD, United Kingdom",
+    "query": "Shooters Hill Sixth Form College, Greenwich, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hackney-britannia-leisure-centre-rooftop-courts": null,
+  "hackney-clissold-park": {
+    "latitude": 51.5610346,
+    "longitude": -0.0882763,
+    "display_name": "Clissold Park, Stoke Newington, London Borough of Hackney, Greater London, England, United Kingdom",
+    "query": "Clissold Park, Hackney, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hackney-hackney-downs": {
+    "latitude": 51.5486455,
+    "longitude": -0.060686,
+    "display_name": "Hackney Downs, Dalston Lane, Lower Clapton, Shacklewell, London Borough of Hackney, Greater London, England, E8 1LA, United Kingdom",
+    "query": "Hackney Downs, Hackney, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hackney-haggerston-park": {
+    "latitude": 51.5330859,
+    "longitude": -0.0676509,
+    "display_name": "Haggerston Park, De Beauvoir Town, Haggerston, London Borough of Hackney, Greater London, England, E2 8QA, United Kingdom",
+    "query": "Haggerston Park, Hackney, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hackney-joe-white-gardens-aske-gardens": null,
+  "hackney-london-fields": {
+    "latitude": 51.5410518,
+    "longitude": -0.0577737,
+    "display_name": "London Fields, Martello Terrace, Hackney, London Borough of Hackney, Greater London, England, E8 3PH, United Kingdom",
+    "query": "London Fields, Hackney, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hackney-millfields-park": {
+    "latitude": 51.559914,
+    "longitude": -0.0478129,
+    "display_name": "Millfields Park, Chatsworth Road, Clapton Park, Clapton, London Borough of Hackney, Greater London, England, E5 9QT, United Kingdom",
+    "query": "Millfields Park, Hackney, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hackney-spring-hill": {
+    "latitude": 51.5706239,
+    "longitude": -0.0640314,
+    "display_name": "Spring Hill, Upper Clapton, Stamford Hill, London Borough of Hackney, Greater London, England, E5 9UH, United Kingdom",
+    "query": "Spring Hill, Hackney, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hackney-springfield-park": {
+    "latitude": 51.5691513,
+    "longitude": -0.0598633,
+    "display_name": "Springfield Park Cafe, Springfield, Upper Clapton, Hackney, London Borough of Hackney, Greater London, England, E5 9EF, United Kingdom",
+    "query": "Springfield Park, Hackney, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hammersmith-and-fulham-bishops-park": {
+    "latitude": 51.4732049,
+    "longitude": -0.2152057,
+    "display_name": "Bishops Park Tennis Centre, Bishop's Park Road, Fulham, London Borough of Hammersmith and Fulham, Greater London, England, SW6 6DX, United Kingdom",
+    "query": "Bishops Park, Hammersmith and Fulham, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hammersmith-and-fulham-brook-green-tennis": {
+    "latitude": 51.4965307,
+    "longitude": -0.2208593,
+    "display_name": "Brook Green Tennis Courts, Brook Green, London Borough of Hammersmith and Fulham, Greater London, England, United Kingdom",
+    "query": "Brook Green Tennis, Hammersmith and Fulham, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hammersmith-and-fulham-eel-brook-common": {
+    "latitude": 51.4772777,
+    "longitude": -0.1955474,
+    "display_name": "Eel Brook Common, Fulham, London Borough of Hammersmith and Fulham, Greater London, England, United Kingdom",
+    "query": "Eel Brook Common, Hammersmith and Fulham, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hammersmith-and-fulham-hammersmith-park": {
+    "latitude": 51.5102993,
+    "longitude": -0.2282106,
+    "display_name": "Hammersmith Park, Shepherd's Bush, London Borough of Hammersmith and Fulham, Greater London, England, United Kingdom",
+    "query": "Hammersmith Park, Hammersmith and Fulham, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hammersmith-and-fulham-hurlingham-park": {
+    "latitude": 51.4690666,
+    "longitude": -0.2022517,
+    "display_name": "Hurlingham Park, Fulham, London Borough of Hammersmith and Fulham, Greater London, England, United Kingdom",
+    "query": "Hurlingham Park, Hammersmith and Fulham, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hammersmith-and-fulham-lillie-road-recreation-ground": {
+    "latitude": 51.4824952,
+    "longitude": -0.2172193,
+    "display_name": "Lillie Road Recreation Ground, Hammersmith, London Borough of Hammersmith and Fulham, Greater London, England, United Kingdom",
+    "query": "Lillie Road Recreation Ground, Hammersmith and Fulham, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hammersmith-and-fulham-linford-christie-outdoor-sports-centre": null,
+  "hammersmith-and-fulham-normand-park-fulham-pools": null,
+  "hammersmith-and-fulham-ravenscourt-park": {
+    "latitude": 51.4941293,
+    "longitude": -0.2357932,
+    "display_name": "Ravenscourt Park, Ravenscourt Place, Hammersmith, London Borough of Hammersmith and Fulham, Greater London, England, W6 0UQ, United Kingdom",
+    "query": "Ravenscourt Park, Hammersmith and Fulham, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hammersmith-and-fulham-south-park": {
+    "latitude": 51.4690654,
+    "longitude": -0.1942683,
+    "display_name": "South Park, Fulham, London Borough of Hammersmith and Fulham, Greater London, England, United Kingdom",
+    "query": "South Park, Hammersmith and Fulham, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "haringey-bruce-castle-park": {
+    "latitude": 51.6001983,
+    "longitude": -0.074153,
+    "display_name": "Bruce Castle Park, West Green, London Borough of Haringey, Greater London, England, United Kingdom",
+    "query": "Bruce Castle Park, Haringey, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "haringey-chapmans-green": null,
+  "haringey-chestnuts-park": {
+    "latitude": 51.5826368,
+    "longitude": -0.0896784,
+    "display_name": "Chestnuts Park, South Tottenham, West Green, London Borough of Haringey, Greater London, England, United Kingdom",
+    "query": "Chestnuts Park, Haringey, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "haringey-down-lane-park": {
+    "latitude": 51.5915745,
+    "longitude": -0.0621657,
+    "display_name": "Down Lane Park, Tottenham Hale, West Green, London Borough of Haringey, Greater London, England, N17 9EX, United Kingdom",
+    "query": "Down Lane Park, Haringey, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "haringey-downhills-park": {
+    "latitude": 51.5888209,
+    "longitude": -0.0903167,
+    "display_name": "Downhills Park, West Green, London Borough of Haringey, Greater London, England, N17 6PD, United Kingdom",
+    "query": "Downhills Park, Haringey, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "haringey-finsbury-park": {
+    "latitude": 51.5702142,
+    "longitude": -0.1010824,
+    "display_name": "Finsbury Park, Stroud Green, London Borough of Haringey, Greater London, England, United Kingdom",
+    "query": "Finsbury Park, Haringey, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "haringey-markfield-park": {
+    "latitude": 51.5810573,
+    "longitude": -0.0636275,
+    "display_name": "Markfield Park, Tottenham Hale, West Green, London Borough of Haringey, Greater London, England, N15 4RB, United Kingdom",
+    "query": "Markfield Park, Haringey, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "haringey-new-river-sport-and-fitness": null,
+  "haringey-o-r-tambo-recreation-ground-albert-road-rec": null,
+  "haringey-priory-park": {
+    "latitude": 51.5854896,
+    "longitude": -0.1262066,
+    "display_name": "Priory Park, Hornsey, London Borough of Haringey, Greater London, England, N8 7PD, United Kingdom",
+    "query": "Priory Park, Haringey, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "haringey-stationers-park": {
+    "latitude": 51.5792418,
+    "longitude": -0.1117436,
+    "display_name": "Stationers Park, Stroud Green, London Borough of Haringey, Greater London, England, N8 9LP, United Kingdom",
+    "query": "Stationers Park, Haringey, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "harrow-byron-recreation-ground": {
+    "latitude": 51.5940519,
+    "longitude": -0.3261933,
+    "display_name": "Byron Recreation Ground, Wealdstone, London Borough of Harrow, Greater London, England, United Kingdom",
+    "query": "Byron Recreation Ground, Harrow, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "harrow-centenary-park": {
+    "latitude": 51.5990438,
+    "longitude": -0.3043987,
+    "display_name": "Centenary Park, Queensbury, Belmont, London Borough of Harrow, Greater London, England, HA7 2NW, United Kingdom",
+    "query": "Centenary Park, Harrow, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "harrow-chandos-recreation-ground": {
+    "latitude": 51.605567,
+    "longitude": -0.2828264,
+    "display_name": "Chandos Recreation Ground, South Stanmore, Stanmore, London Borough of Harrow, Greater London, England, United Kingdom",
+    "query": "Chandos Recreation Ground, Harrow, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "harrow-harrow-recreation-ground": {
+    "latitude": 51.5843167,
+    "longitude": -0.3457076,
+    "display_name": "Harrow Recreation Ground, Greenhill, Wealdstone, London Borough of Harrow, Greater London, England, United Kingdom",
+    "query": "Harrow Recreation Ground, Harrow, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "harrow-harrow-weald-recreation-ground": {
+    "latitude": 51.606826,
+    "longitude": -0.3419792,
+    "display_name": "Harrow Weald Recreation Ground, Harrow Weald, London Borough of Harrow, Greater London, England, United Kingdom",
+    "query": "Harrow Weald Recreation Ground, Harrow, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "harrow-headstone-manor-park": null,
+  "harrow-montesole-playing-fields": {
+    "latitude": 51.6026504,
+    "longitude": -0.389956,
+    "display_name": "Montesole Playing Fields (Dingles Wood), Pinner, London Borough of Harrow, Greater London, England, United Kingdom",
+    "query": "Montesole Playing Fields, Harrow, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "harrow-pinner-village-gardens": {
+    "latitude": 51.5869745,
+    "longitude": -0.3778267,
+    "display_name": "Pinner Village Gardens, Pinner, London Borough of Harrow, Greater London, England, United Kingdom",
+    "query": "Pinner Village Gardens, Harrow, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "harrow-queensbury-park": {
+    "latitude": 51.5946609,
+    "longitude": -0.2861,
+    "display_name": "Queensbury Station Car Park, Turner Road, Queensbury, Kenton, London Borough of Harrow, Greater London, England, HA8 6AU, United Kingdom",
+    "query": "Queensbury Park, Harrow, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "harrow-rayners-mead": {
+    "latitude": 51.5789639,
+    "longitude": -0.3687329,
+    "display_name": "Rayners Mead, Rayners Lane, London Borough of Harrow, Greater London, England, United Kingdom",
+    "query": "Rayners Mead, Harrow, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "harrow-roxeth-recreation-ground": {
+    "latitude": 51.5604822,
+    "longitude": -0.3500747,
+    "display_name": "Roxeth Recreation Ground, Sudbury Hill, London Borough of Harrow, Greater London, England, United Kingdom",
+    "query": "Roxeth Recreation Ground, Harrow, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "harrow-west-harrow-recreation-ground": {
+    "latitude": 51.5771803,
+    "longitude": -0.355522,
+    "display_name": "West Harrow Recreation Ground, Rayners Lane, London Borough of Harrow, Greater London, England, United Kingdom",
+    "query": "West Harrow Recreation Ground, Harrow, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "havering-harold-wood-park": {
+    "latitude": 51.5877879,
+    "longitude": 0.2369497,
+    "display_name": "Harold Wood Park, Harold Wood, London Borough of Havering, Greater London, England, United Kingdom",
+    "query": "Harold Wood Park, Havering, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "havering-harrow-lodge-park": {
+    "latitude": 51.5575693,
+    "longitude": 0.2044696,
+    "display_name": "Harrow Lodge Park, Elm Park, London Borough of Havering, Greater London, England, United Kingdom",
+    "query": "Harrow Lodge Park, Havering, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "havering-haynes-park": {
+    "latitude": 51.5774822,
+    "longitude": 0.2147934,
+    "display_name": "Haynes Park, Ardleigh Green, London Borough of Havering, Greater London, England, United Kingdom",
+    "query": "Haynes Park, Havering, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "havering-hylands-park": {
+    "latitude": 51.57117,
+    "longitude": 0.2006182,
+    "display_name": "Hylands Park, Gidea Park, London Borough of Havering, Greater London, England, United Kingdom",
+    "query": "Hylands Park, Havering, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "havering-lodge-farm-park": {
+    "latitude": 51.5808669,
+    "longitude": 0.1920198,
+    "display_name": "Lodge Farm Park, Gidea Park, London Borough of Havering, Greater London, England, United Kingdom",
+    "query": "Lodge Farm Park, Havering, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "havering-noak-hill-sports-complex": {
+    "latitude": 51.6122027,
+    "longitude": 0.209137,
+    "display_name": "Noak Hill Sports Complex, Noak Hill Road, Harold Hill, London Borough of Havering, Greater London, England, RM3 7FL, United Kingdom",
+    "query": "Noak Hill Sports Complex, Havering, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "havering-raphael-park": {
+    "latitude": 51.5883367,
+    "longitude": 0.1899266,
+    "display_name": "Raphael Park, Gidea Park, London Borough of Havering, Greater London, England, RM2 5EB, United Kingdom",
+    "query": "Raphael Park, Havering, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "havering-rise-park": {
+    "latitude": 51.5988138,
+    "longitude": 0.1846246,
+    "display_name": "Rise Park, Collier Row, London Borough of Havering, Greater London, England, United Kingdom",
+    "query": "Rise Park, Havering, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "havering-spring-farm-park": {
+    "latitude": 51.5197805,
+    "longitude": 0.2158853,
+    "display_name": "Spring Farm Park, Rainham, London Borough of Havering, Greater London, England, United Kingdom",
+    "query": "Spring Farm Park, Havering, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "havering-upminster-park": {
+    "latitude": 51.5549665,
+    "longitude": 0.2460813,
+    "display_name": "Upminster Park, Upminster Bridge, Upminster, London Borough of Havering, Greater London, England, United Kingdom",
+    "query": "Upminster Park, Havering, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hillingdon-brunel-sports-park": {
+    "latitude": 51.5321679,
+    "longitude": -0.4651079,
+    "display_name": "Brunel University Sports Park, Kingston Lane, Hillingdon, London Borough of Hillingdon, Greater London, England, UB8 3PW, United Kingdom",
+    "query": "Brunel Sports Park, Hillingdon, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hillingdon-cavendish-recreation-ground": {
+    "latitude": 51.5712768,
+    "longitude": -0.398646,
+    "display_name": "The Cavendish Recreation Ground, London Borough of Hillingdon, Greater London, England, United Kingdom",
+    "query": "Cavendish Recreation Ground, Hillingdon, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hillingdon-churchfield-gardens": {
+    "latitude": 51.5763073,
+    "longitude": -0.4246608,
+    "display_name": "Churchfield Gardens, Eastcote Road, Ickenham, London Borough of Hillingdon, Greater London, England, HA4 8AD, United Kingdom",
+    "query": "Churchfield Gardens, Hillingdon, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hillingdon-fassnidge-park": {
+    "latitude": 51.5471393,
+    "longitude": -0.4848236,
+    "display_name": "Fassnidge Park, Cowley, London Borough of Hillingdon, Greater London, England, United Kingdom",
+    "query": "Fassnidge Park, Hillingdon, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hillingdon-harmondsworth-recreation-ground": {
+    "latitude": 51.486802,
+    "longitude": -0.4820163,
+    "display_name": "Harmondsworth Recreation Ground, Harmondsworth, London Borough of Hillingdon, Greater London, England, United Kingdom",
+    "query": "Harmondsworth Recreation Ground, Hillingdon, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hillingdon-hillingdon-court-park": {
+    "latitude": 51.5447098,
+    "longitude": -0.4558551,
+    "display_name": "Hillingdon Court Park, Hillingdon, London Borough of Hillingdon, Greater London, England, United Kingdom",
+    "query": "Hillingdon Court Park, Hillingdon, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hillingdon-moorhall-recreation-ground": {
+    "latitude": 51.5894531,
+    "longitude": -0.4835614,
+    "display_name": "Moorhall Recreation Ground, London Borough of Hillingdon, Greater London, England, United Kingdom",
+    "query": "Moorhall Recreation Ground, Hillingdon, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hillingdon-northwood-recreation-ground": {
+    "latitude": 51.6020991,
+    "longitude": -0.4149376,
+    "display_name": "Northwood Recreation Ground, Northwood, London Borough of Hillingdon, Greater London, England, United Kingdom",
+    "query": "Northwood Recreation Ground, Hillingdon, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hillingdon-rosedale-park": {
+    "latitude": 51.5224162,
+    "longitude": -0.426285,
+    "display_name": "Rosedale Park, Hayes, London Borough of Hillingdon, Greater London, England, United Kingdom",
+    "query": "Rosedale Park, Hillingdon, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hillingdon-swakeleys-park": {
+    "latitude": 51.561162,
+    "longitude": -0.4548348,
+    "display_name": "Swakeleys Park, Ickenham, London Borough of Hillingdon, Greater London, England, United Kingdom",
+    "query": "Swakeleys Park, Hillingdon, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hillingdon-the-closes-recreation-ground": {
+    "latitude": 51.5016856,
+    "longitude": -0.4734944,
+    "display_name": "The Closes Recreation Ground, West Drayton, London Borough of Hillingdon, Greater London, England, United Kingdom",
+    "query": "The Closes Recreation Ground, Hillingdon, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hounslow-avenue-park": {
+    "latitude": 51.4861872,
+    "longitude": -0.4125059,
+    "display_name": "Avenue Park, Cranford, London Borough of Hounslow, Greater London, England, United Kingdom",
+    "query": "Avenue Park, Hounslow, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hounslow-beaversfield-park": {
+    "latitude": 51.4711193,
+    "longitude": -0.3884752,
+    "display_name": "Beaversfield Park, Beavers, Hounslow West, London Borough of Hounslow, Greater London, England, United Kingdom",
+    "query": "Beaversfield Park, Hounslow, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hounslow-bedfont-recreation-ground": {
+    "latitude": 51.4492734,
+    "longitude": -0.4297104,
+    "display_name": "Bedfont Recreation Ground, Bedfont, London Borough of Hounslow, Greater London, England, United Kingdom",
+    "query": "Bedfont Recreation Ground, Hounslow, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hounslow-brent-lea": {
+    "latitude": 51.4808422,
+    "longitude": -0.3129659,
+    "display_name": "Brent Lea, London Borough of Hounslow, Greater London, England, TW8 8JE, United Kingdom",
+    "query": "Brent Lea, Hounslow, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hounslow-chiswick-house-and-gardens-tennis": null,
+  "hounslow-dukes-meadows-tennis": {
+    "latitude": 51.4731395,
+    "longitude": -0.2630978,
+    "display_name": "Dukes Meadows Golf, Tennis & Ski, Dan Mason Drive, London Borough of Hounslow, Greater London, England, W4 2SH, United Kingdom",
+    "query": "Dukes Meadows Tennis, Hounslow, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hounslow-feltham-park": {
+    "latitude": 51.4519247,
+    "longitude": -0.4075885,
+    "display_name": "Feltham Park, North Feltham, Feltham, London Borough of Hounslow, Greater London, England, United Kingdom",
+    "query": "Feltham Park, Hounslow, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hounslow-gunnersbury-park-sports-hub": null,
+  "hounslow-hanworth-air-park-leisure-centre-library": {
+    "latitude": 51.4409505,
+    "longitude": -0.392312,
+    "display_name": "Hanworth Air Park Leisure Centre & Library, Uxbridge Road, Hanworth, London Borough of Hounslow, Greater London, England, TW13 5ED, United Kingdom",
+    "query": "Hanworth Air Park Leisure Centre & Library, Hounslow, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hounslow-heston-park": {
+    "latitude": 51.4869812,
+    "longitude": -0.3773991,
+    "display_name": "Heston Park, Heston, London Borough of Hounslow, Greater London, England, United Kingdom",
+    "query": "Heston Park, Hounslow, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hounslow-isleworth-leisure-centre-library": null,
+  "hounslow-jersey-gardens": {
+    "latitude": 51.4834352,
+    "longitude": -0.3406825,
+    "display_name": "Jersey Gardens, Spring Grove, London Borough of Hounslow, Greater London, England, United Kingdom",
+    "query": "Jersey Gardens, Hounslow, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hounslow-lampton-park": {
+    "latitude": 51.4741816,
+    "longitude": -0.3730083,
+    "display_name": "Lampton Park, Heston, London Borough of Hounslow, Greater London, England, United Kingdom",
+    "query": "Lampton Park, Hounslow, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "hounslow-rocks-lane-chiswick": {
+    "latitude": 51.4947972,
+    "longitude": -0.2578367,
+    "display_name": "Rocks Lane Chiswick, 60, Chiswick Common Road, London Borough of Hounslow, Greater London, England, W4 1RZ, United Kingdom",
+    "query": "Rocks Lane Chiswick, Hounslow, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "islington-highbury-fields": {
+    "latitude": 51.5512942,
+    "longitude": -0.1001003,
+    "display_name": "Highbury Fields, Highbury, London Borough of Islington, Greater London, England, United Kingdom",
+    "query": "Highbury Fields, Islington, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "islington-islington-tennis-centre": {
+    "latitude": 51.5458823,
+    "longitude": -0.1217593,
+    "display_name": "Islington Tennis Centre and Gym, Market Road, Barnsbury, London Borough of Islington, Greater London, England, N7 9AW, United Kingdom",
+    "query": "Islington Tennis Centre, Islington, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "islington-rosemary-gardens": {
+    "latitude": 51.5384256,
+    "longitude": -0.0875981,
+    "display_name": "Rosemary Gardens, Islington, London Borough of Islington, Greater London, England, United Kingdom",
+    "query": "Rosemary Gardens, Islington, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "islington-tufnell-park-playing-fields": {
+    "latitude": 51.5584002,
+    "longitude": -0.1337142,
+    "display_name": "Tufnell Park Playing Fields, Tufnell Park, London Borough of Islington, Greater London, England, United Kingdom",
+    "query": "Tufnell Park Playing Fields, Islington, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "kensington-and-chelsea-avondale-park": {
+    "latitude": 51.5106565,
+    "longitude": -0.2124069,
+    "display_name": "Avondale Park, Notting Hill, Royal Borough of Kensington and Chelsea, Greater London, England, United Kingdom",
+    "query": "Avondale Park, Kensington and Chelsea, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "kensington-and-chelsea-emslie-horniman-pleasance-park": null,
+  "kensington-and-chelsea-holland-park": {
+    "latitude": 51.5029216,
+    "longitude": -0.2040959,
+    "display_name": "Holland Park, Kensington, Royal Borough of Kensington and Chelsea, Greater London, England, United Kingdom",
+    "query": "Holland Park, Kensington and Chelsea, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "kensington-and-chelsea-kensington-memorial-park": {
+    "latitude": 51.5205798,
+    "longitude": -0.2198158,
+    "display_name": "Kensington Memorial Park, North Kensington, Royal Borough of Kensington and Chelsea, Greater London, England, United Kingdom",
+    "query": "Kensington Memorial Park, Kensington and Chelsea, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "kensington-and-chelsea-westway-sports-fitness-centre": null,
+  "kingston-upon-thames-alexandra-recreation-ground": null,
+  "kingston-upon-thames-beverley-park": {
+    "latitude": 51.4038962,
+    "longitude": -0.246236,
+    "display_name": "Beverley Park, Motspur Park, Royal Borough of Kingston upon Thames, Greater London, England, KT3 4LL, United Kingdom",
+    "query": "Beverley Park, Kingston upon Thames, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "kingston-upon-thames-canbury-gardens-tennis-centre": null,
+  "kingston-upon-thames-chessington-sports-centre": {
+    "latitude": 51.3568073,
+    "longitude": -0.3086152,
+    "display_name": "Chessington Sports, Garrison Lane, Chessington, Royal Borough of Kingston upon Thames, Greater London, England, KT9 2JS, United Kingdom",
+    "query": "Chessington Sports Centre, Kingston upon Thames, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "kingston-upon-thames-king-edward-s-recreation-ground": {
+    "latitude": 51.3726139,
+    "longitude": -0.3061429,
+    "display_name": "King Edward's recreation ground, Hook, Royal Borough of Kingston upon Thames, Greater London, England, United Kingdom",
+    "query": "King Edward's Recreation Ground, Kingston upon Thames, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "kingston-upon-thames-kingston-road-recreation-ground": {
+    "latitude": 51.4040722,
+    "longitude": -0.2786049,
+    "display_name": "Kingston Road Recreation Ground, Norbiton, Royal Borough of Kingston upon Thames, Greater London, England, United Kingdom",
+    "query": "Kingston Road Recreation Ground, Kingston upon Thames, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "kingston-upon-thames-manor-park": {
+    "latitude": 51.3872822,
+    "longitude": -0.2496402,
+    "display_name": "Manor Park Recreation Ground, Motspur Park, Royal Borough of Kingston upon Thames, Greater London, England, United Kingdom",
+    "query": "Manor Park, Kingston upon Thames, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "kingston-upon-thames-sir-francis-barker-recreation-ground": {
+    "latitude": 51.3553221,
+    "longitude": -0.3135125,
+    "display_name": "Sir Francis Barker Recreation Ground, Hook, Royal Borough of Kingston upon Thames, Greater London, England, KT9 2NB, United Kingdom",
+    "query": "Sir Francis Barker Recreation Ground, Kingston upon Thames, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "kingston-upon-thames-victoria-recreation-ground": {
+    "latitude": 51.3898556,
+    "longitude": -0.3147552,
+    "display_name": "Victoria Recreation Ground, Balaclava Road, Long Ditton, Royal Borough of Kingston upon Thames, Greater London, Surrey, England, KT6 5RY, United Kingdom",
+    "query": "Victoria Recreation Ground, Kingston upon Thames, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "kingston-upon-thames-ymca-hawker": {
+    "latitude": 51.4268686,
+    "longitude": -0.3092598,
+    "display_name": "YMCA Hawker Centre, Lower Ham Road, Norbiton, Kingston upon Thames, Greater London, England, KT2 5BH, United Kingdom",
+    "query": "YMCA Hawker, Kingston upon Thames, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "lambeth-archbishop-s-park": {
+    "latitude": 51.4968157,
+    "longitude": -0.1170284,
+    "display_name": "Archbishop's Park, South Bank, Lambeth, London Borough of Lambeth, Greater London, England, SE1 7LE, United Kingdom",
+    "query": "Archbishop's Park, Lambeth, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "lambeth-archbishop-s-park-multi-use-games-area": null,
+  "lambeth-brockwell-park": {
+    "latitude": 51.4505301,
+    "longitude": -0.1060926,
+    "display_name": "Brockwell Park, Herne Hill, London Borough of Lambeth, Greater London, England, SE24 9BJ, United Kingdom",
+    "query": "Brockwell Park, Lambeth, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "lambeth-clapham-common": {
+    "latitude": 51.4620748,
+    "longitude": -0.1373589,
+    "display_name": "Clapham Common, Clapham High Street, Clapham, London Borough of Lambeth, Greater London, England, SW4 7UG, United Kingdom",
+    "query": "Clapham Common, Lambeth, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "lambeth-ferndale-community-sports-centre": {
+    "latitude": 51.463198,
+    "longitude": -0.1178113,
+    "display_name": "Ferndale Community Sports Centre, Nursery Road, Stockwell Park, Brixton, London Borough of Lambeth, Greater London, England, SW9 8BS, United Kingdom",
+    "query": "Ferndale Community Sports Centre, Lambeth, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "lambeth-hillside-gardens-park": {
+    "latitude": 51.4378662,
+    "longitude": -0.1154072,
+    "display_name": "Hillside Gardens Park, Streatham Hill, London Borough of Lambeth, Greater London, England, SW2 3HL, United Kingdom",
+    "query": "Hillside Gardens Park, Lambeth, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "lambeth-kennington-park": {
+    "latitude": 51.4832936,
+    "longitude": -0.1091116,
+    "display_name": "Kennington Park, Kennington, London Borough of Lambeth, Greater London, England, SE11 4BE, United Kingdom",
+    "query": "Kennington Park, Lambeth, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "lambeth-larkhall-park": {
+    "latitude": 51.4733762,
+    "longitude": -0.1310836,
+    "display_name": "Larkhall Park, Stockwell Park, Stockwell, London Borough of Lambeth, Greater London, England, SW8 2RS, United Kingdom",
+    "query": "Larkhall Park, Lambeth, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "lambeth-myatt-s-fields-park": {
+    "latitude": 51.4736865,
+    "longitude": -0.1033127,
+    "display_name": "Myatt's Fields Park, Myatt's Fields, Loughborough Junction, London Borough of Lambeth, Greater London, England, SE5 9RA, United Kingdom",
+    "query": "Myatt's Fields Park, Lambeth, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "lambeth-ruskin-park": {
+    "latitude": 51.4642785,
+    "longitude": -0.0945184,
+    "display_name": "Ruskin Park, Loughborough Junction, London Borough of Lambeth, Greater London, England, SE5 8EL, United Kingdom",
+    "query": "Ruskin Park, Lambeth, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "lambeth-streatham-common-the-rookery": null,
+  "lambeth-streatham-vale-park": {
+    "latitude": 51.4136161,
+    "longitude": -0.1452499,
+    "display_name": "Streatham Vale Park, Streatham, London Borough of Lambeth, Greater London, England, SW16 5AL, United Kingdom",
+    "query": "Streatham Vale Park, Lambeth, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "lambeth-vauxhall-park": {
+    "latitude": 51.4828105,
+    "longitude": -0.1219801,
+    "display_name": "Vauxhall Park, Vauxhall, London Borough of Lambeth, Greater London, England, SW8 1QY, United Kingdom",
+    "query": "Vauxhall Park, Lambeth, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "lewisham-catford-bridge": {
+    "latitude": 51.4445909,
+    "longitude": -0.0249226,
+    "display_name": "Catford Bridge, Adenmore Road, Ladywell, London Borough of Lewisham, Greater London, England, SE6 4FD, United Kingdom",
+    "query": "Catford Bridge, Lewisham, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "lewisham-chinbrook-meadows": {
+    "latitude": 51.4281817,
+    "longitude": 0.0281607,
+    "display_name": "Chinbrook Meadows, Chinbrook, London Borough of Lewisham, Greater London, England, United Kingdom",
+    "query": "Chinbrook Meadows, Lewisham, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "lewisham-downham-health-leisure-centre": {
+    "latitude": 51.4262787,
+    "longitude": 0.0120416,
+    "display_name": "Downham Health & Leisure Centre, Moorside Road, Downham, London Borough of Lewisham, Greater London, England, BR1 5EP, United Kingdom",
+    "query": "Downham Health & Leisure Centre, Lewisham, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "lewisham-forest-hill-school-sports-centre": null,
+  "lewisham-hilly-fields": {
+    "latitude": 51.4599865,
+    "longitude": -0.0254688,
+    "display_name": "Hilly Fields, Ladywell, London Borough of Lewisham, Greater London, England, United Kingdom",
+    "query": "Hilly Fields, Lewisham, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "lewisham-honor-oak-park-sports-ground": null,
+  "lewisham-ladywell-fields": {
+    "latitude": 51.4479674,
+    "longitude": -0.0273638,
+    "display_name": "Ladywell Fields, Ladywell, London Borough of Lewisham, Greater London, England, United Kingdom",
+    "query": "Ladywell Fields, Lewisham, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "lewisham-manor-house-gardens": {
+    "latitude": 51.4560796,
+    "longitude": 0.0051356,
+    "display_name": "Manor House Gardens, Blackheath, London Borough of Lewisham, Greater London, England, SE12 8QG, United Kingdom",
+    "query": "Manor House Gardens, Lewisham, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "lewisham-mayow-park": {
+    "latitude": 51.4297276,
+    "longitude": -0.0490145,
+    "display_name": "Mayow Park, Lower Sydenham, Perry Vale, London Borough of Lewisham, Greater London, England, United Kingdom",
+    "query": "Mayow Park, Lewisham, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "lewisham-mountsfield-park": {
+    "latitude": 51.4476452,
+    "longitude": -0.0092334,
+    "display_name": "Mountsfield Park, Hither Green, London Borough of Lewisham, Greater London, England, SE6 1AN, United Kingdom",
+    "query": "Mountsfield Park, Lewisham, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "lewisham-st-dunstan-s-college": {
+    "latitude": 51.4440584,
+    "longitude": -0.0297912,
+    "display_name": "St Dunstan's College, Stanstead Road, Honor Oak, Catford, Greater London, England, SE6 4TY, United Kingdom",
+    "query": "St Dunstan's College, Lewisham, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "lewisham-sydenham-wells-park": {
+    "latitude": 51.4296267,
+    "longitude": -0.068169,
+    "display_name": "Sydenham Wells Park, Upper Sydenham, Forest Hill, London Borough of Lewisham, Greater London, England, United Kingdom",
+    "query": "Sydenham Wells Park, Lewisham, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "lewisham-telegraph-hill-park": {
+    "latitude": 51.4692325,
+    "longitude": -0.0450776,
+    "display_name": "Telegraph Hill Lower Park, New Cross Gate, London Borough of Lewisham, Greater London, England, United Kingdom",
+    "query": "Telegraph Hill Park, Lewisham, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "merton-cottenham-park": {
+    "latitude": 51.4143002,
+    "longitude": -0.2360857,
+    "display_name": "Cottenham Park, Raynes Park, London Borough of Merton, Greater London, England, SW20 0DJ, United Kingdom",
+    "query": "Cottenham Park, Merton, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "merton-dundonald-recreation-ground": {
+    "latitude": 51.4152283,
+    "longitude": -0.2098127,
+    "display_name": "Dundonald Recreation Ground, Merton Park, London Borough of Merton, Greater London, England, United Kingdom",
+    "query": "Dundonald Recreation Ground, Merton, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "merton-harris-academy-merton": {
+    "latitude": 51.4035809,
+    "longitude": -0.1334048,
+    "display_name": "Harris Academy Merton, Wide Way, Lonesome, Mitcham, London Borough of Merton, Greater London, England, CR4 1BP, United Kingdom",
+    "query": "Harris Academy Merton, Merton, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "merton-haydons-road-recreation-ground": {
+    "latitude": 51.4199476,
+    "longitude": -0.1889384,
+    "display_name": "Haydons Road Recreation Ground, Merton, London Borough of Merton, Greater London, England, SW19 1AP, United Kingdom",
+    "query": "Haydons Road Recreation Ground, Merton, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "merton-holland-garden": {
+    "latitude": 51.4152659,
+    "longitude": -0.2314109,
+    "display_name": "Holland Garden, Cottenham Park, Raynes Park, London Borough of Merton, Greater London, England, United Kingdom",
+    "query": "Holland Garden, Merton, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "merton-john-innes-park": {
+    "latitude": 51.4093621,
+    "longitude": -0.2065884,
+    "display_name": "John Innes Park, Merton Park, London Borough of Merton, Greater London, England, United Kingdom",
+    "query": "John Innes Park, Merton, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "merton-joseph-hood-recreation-ground": {
+    "latitude": 51.403892,
+    "longitude": -0.2181221,
+    "display_name": "Joseph Hood Recreation Ground, Raynes Park, London Borough of Merton, Greater London, England, United Kingdom",
+    "query": "Joseph Hood Recreation Ground, Merton, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "merton-king-george-s-playing-fields": null,
+  "merton-morden-park": {
+    "latitude": 51.3913369,
+    "longitude": -0.2106626,
+    "display_name": "Morden Park, Lower Morden, London Borough of Merton, Greater London, England, SM4 4SF, United Kingdom",
+    "query": "Morden Park, Merton, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "merton-morden-recreation-ground": {
+    "latitude": 51.3921955,
+    "longitude": -0.1952806,
+    "display_name": "Morden Recreation Ground, Morden, London Borough of Merton, Greater London, England, United Kingdom",
+    "query": "Morden Recreation Ground, Merton, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "merton-nursery-road-playing-fields": null,
+  "merton-oakleigh-way-recreation-ground": {
+    "latitude": 51.4120052,
+    "longitude": -0.1478994,
+    "display_name": "Oakleigh Way Recreation Ground, Lonesome, Mitcham, London Borough of Merton, Greater London, England, United Kingdom",
+    "query": "Oakleigh Way Recreation Ground, Merton, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "merton-sir-joseph-hood-memorial-playing-fields": {
+    "latitude": 51.3914596,
+    "longitude": -0.2376259,
+    "display_name": "Sir Joseph Hood Memorial Playing Fields, West Barnes, London Borough of Merton, Greater London, England, United Kingdom",
+    "query": "Sir Joseph Hood Memorial Playing Fields, Merton, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "merton-st-mark-s-church-of-england-academy": {
+    "latitude": 51.407939,
+    "longitude": -0.1521672,
+    "display_name": "St Mark's Church of England Academy, Acacia Road, Lonesome, Mitcham, London Borough of Merton, Greater London, England, CR4 1SF, United Kingdom",
+    "query": "St Mark's Church of England Academy, Merton, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "merton-tamworth-recreation-ground": null,
+  "merton-wimbledon-park": {
+    "latitude": 51.4340563,
+    "longitude": -0.1990432,
+    "display_name": "Wimbledon Park, Arthur Road, Wimbledon Park, Collier's Wood, London Borough of Merton, Greater London, England, SW19 8AA, United Kingdom",
+    "query": "Wimbledon Park, Merton, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "newham-canning-town-recreation-ground": {
+    "latitude": 51.5159159,
+    "longitude": 0.0301232,
+    "display_name": "Canning Town Recreation Ground, Custom House, Canning Town, London Borough of Newham, Greater London, England, United Kingdom",
+    "query": "Canning Town Recreation Ground, Newham, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "newham-central-park": {
+    "latitude": 51.5293822,
+    "longitude": 0.0523589,
+    "display_name": "Central Park, Beckton, London Borough of Newham, Greater London, England, United Kingdom",
+    "query": "Central Park, Newham, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "newham-gooseley-playing-fields": null,
+  "newham-hermit-road-recreation-ground": null,
+  "newham-little-ilford-park": {
+    "latitude": 51.5511338,
+    "longitude": 0.0666728,
+    "display_name": "Little Ilford Park, Little Ilford, London Borough of Newham, Greater London, England, United Kingdom",
+    "query": "Little Ilford Park, Newham, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "newham-lyle-park": {
+    "latitude": 51.500169,
+    "longitude": 0.0236537,
+    "display_name": "Lyle Park, Silvertown, London Borough of Newham, Greater London, England, United Kingdom",
+    "query": "Lyle Park, Newham, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "newham-plashet-park": {
+    "latitude": 51.5410831,
+    "longitude": 0.0459249,
+    "display_name": "Plashet Park, Plashet, London Borough of Newham, Greater London, England, E7 8QR, United Kingdom",
+    "query": "Plashet Park, Newham, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "newham-royal-victoria-gardens": {
+    "latitude": 51.4996819,
+    "longitude": 0.0663795,
+    "display_name": "Royal Victoria Gardens, North Woolwich, London Borough of Newham, Greater London, England, United Kingdom",
+    "query": "Royal Victoria Gardens, Newham, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "newham-stratford-park": {
+    "latitude": 51.5383006,
+    "longitude": 0.0068917,
+    "display_name": "Stratford Park, Mill Meads, West Ham, London Borough of Newham, Greater London, England, United Kingdom",
+    "query": "Stratford Park, Newham, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "newham-west-ham-park": {
+    "latitude": 51.5389318,
+    "longitude": 0.0184609,
+    "display_name": "West Ham Park, Upton, London Borough of Newham, Greater London, England, United Kingdom",
+    "query": "West Ham Park, Newham, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "redbridge-barkingside-recreation-ground": {
+    "latitude": 51.5877222,
+    "longitude": 0.0785234,
+    "display_name": "Barkingside Recreation Ground, Barkingside, Ilford, Greater London, England, IG6 2PE, United Kingdom",
+    "query": "Barkingside Recreation Ground, Redbridge, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "redbridge-barley-lane-recreation-ground": {
+    "latitude": 51.5676405,
+    "longitude": 0.1132278,
+    "display_name": "Barley Lane Recreation Ground, Goodmayes, Seven Kings, London Borough of Redbridge, Greater London, England, United Kingdom",
+    "query": "Barley Lane Recreation Ground, Redbridge, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "redbridge-clayhall-park": {
+    "latitude": 51.5850127,
+    "longitude": 0.0600139,
+    "display_name": "Clayhall Park, Clayhall, Ilford, Greater London, England, IG5 0EB, United Kingdom",
+    "query": "Clayhall Park, Redbridge, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "redbridge-elmhurst-gardens": {
+    "latitude": 51.5966806,
+    "longitude": 0.030348,
+    "display_name": "Elmhurst Gardens, South Woodford, London Borough of Redbridge, Greater London, England, E18 1DW, United Kingdom",
+    "query": "Elmhurst Gardens, Redbridge, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "redbridge-goodmayes-park": {
+    "latitude": 51.5600078,
+    "longitude": 0.1144176,
+    "display_name": "Goodmayes Park, Chadwell Heath, London Borough of Redbridge, Greater London, England, United Kingdom",
+    "query": "Goodmayes Park, Redbridge, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "redbridge-loxford-park": {
+    "latitude": 51.5483436,
+    "longitude": 0.0813818,
+    "display_name": "Loxford Park, Loxford, Seven Kings, London Borough of Redbridge, Greater London, England, United Kingdom",
+    "query": "Loxford Park, Redbridge, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "redbridge-ray-park": {
+    "latitude": 51.6087091,
+    "longitude": 0.0451159,
+    "display_name": "Ray Park, Woodford Bridge, London Borough of Redbridge, Greater London, England, United Kingdom",
+    "query": "Ray Park, Redbridge, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "redbridge-redbridge-sports-leisure": {
+    "latitude": 51.5976388,
+    "longitude": 0.0904404,
+    "display_name": "Redbridge Sports & Leisure, Forest Road, Fairlop, London Borough of Redbridge, Greater London, England, IG6 3HD, United Kingdom",
+    "query": "Redbridge Sports & Leisure, Redbridge, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "redbridge-seven-kings-park": {
+    "latitude": 51.5735852,
+    "longitude": 0.1020306,
+    "display_name": "Seven Kings Park, Newbury Park, London Borough of Redbridge, Greater London, England, IG3 8HD, United Kingdom",
+    "query": "Seven Kings Park, Redbridge, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "redbridge-south-park": {
+    "latitude": 51.557061,
+    "longitude": 0.0916918,
+    "display_name": "South Park, Seven Kings, London Borough of Redbridge, Greater London, England, United Kingdom",
+    "query": "South Park, Redbridge, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "redbridge-valentines-park": {
+    "latitude": 51.5690849,
+    "longitude": 0.0714012,
+    "display_name": "Valentines Park, Gants Hill, London Borough of Redbridge, Greater London, England, United Kingdom",
+    "query": "Valentines Park, Redbridge, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "richmond-upon-thames-barn-elms-playing-fields-sports-trust": null,
+  "richmond-upon-thames-barn-elms-sports-centre": {
+    "latitude": 51.4737294,
+    "longitude": -0.2285192,
+    "display_name": "Barn Elms Sports Centre, London Borough of Richmond upon Thames, Greater London, England, SW13 9SA, United Kingdom",
+    "query": "Barn Elms Sports Centre, Richmond upon Thames, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "richmond-upon-thames-cambridge-gardens": {
+    "latitude": 51.4560051,
+    "longitude": -0.3063299,
+    "display_name": "Cambridge Gardens, Petersham, London Borough of Richmond upon Thames, Greater London, England, TW1 2TY, United Kingdom",
+    "query": "Cambridge Gardens, Richmond upon Thames, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "richmond-upon-thames-carlisle-park": {
+    "latitude": 51.4206685,
+    "longitude": -0.3671154,
+    "display_name": "Carlisle Park, Hampton, London Borough of Richmond upon Thames, Greater London, England, United Kingdom",
+    "query": "Carlisle Park, Richmond upon Thames, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "richmond-upon-thames-hampton-sports-fitness-centre": null,
+  "richmond-upon-thames-king-george-s-field": {
+    "latitude": 51.4430032,
+    "longitude": -0.318341,
+    "display_name": "King George's Field, Ham, London Borough of Richmond upon Thames, Greater London, England, United Kingdom",
+    "query": "King George's Field, Richmond upon Thames, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "richmond-upon-thames-kings-field": {
+    "latitude": 51.4109184,
+    "longitude": -0.3120113,
+    "display_name": "Kings Field Place, 1, Hampton Court Road, Hampton Wick, London Borough of Richmond upon Thames, Greater London, England, KT1 4AE, United Kingdom",
+    "query": "Kings Field, Richmond upon Thames, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "richmond-upon-thames-kneller-gardens": {
+    "latitude": 51.4472153,
+    "longitude": -0.3494574,
+    "display_name": "Kneller Gardens, Whitton, London Borough of Richmond upon Thames, Greater London, England, TW2 6PH, United Kingdom",
+    "query": "Kneller Gardens, Richmond upon Thames, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "richmond-upon-thames-moor-mead-recreation-ground": null,
+  "richmond-upon-thames-old-deer-park": {
+    "latitude": 51.4670716,
+    "longitude": -0.3100054,
+    "display_name": "Old Deer Park, St Margarets, London Borough of Richmond upon Thames, Greater London, England, United Kingdom",
+    "query": "Old Deer Park, Richmond upon Thames, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "richmond-upon-thames-palewell-common": {
+    "latitude": 51.4578724,
+    "longitude": -0.2602265,
+    "display_name": "Palewell Fields and Common, East Sheen, London Borough of Richmond upon Thames, Greater London, England, SW14 8RE, United Kingdom",
+    "query": "Palewell Common, Richmond upon Thames, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "richmond-upon-thames-rocks-lane-barnes": {
+    "latitude": 51.4691073,
+    "longitude": -0.2388735,
+    "display_name": "Rocks Lane, East Sheen, London Borough of Richmond upon Thames, Greater London, England, SW13 0HS, United Kingdom",
+    "query": "Rocks Lane Barnes, Richmond upon Thames, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "richmond-upon-thames-sheen-common": {
+    "latitude": 51.459076,
+    "longitude": -0.281415,
+    "display_name": "East Sheen Common, North Sheen, London Borough of Richmond upon Thames, Greater London, England, United Kingdom",
+    "query": "Sheen Common, Richmond upon Thames, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "richmond-upon-thames-teddington-sports-centre": {
+    "latitude": 51.4234565,
+    "longitude": -0.3084624,
+    "display_name": "Teddington Watersports Centre: Mainland site, Trowlock Way, Hampton Wick, London Borough of Richmond upon Thames, Greater London, England, TW11 9PJ, United Kingdom",
+    "query": "Teddington Sports Centre, Richmond upon Thames, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "richmond-upon-thames-westerly-ware": {
+    "latitude": 51.4858989,
+    "longitude": -0.2863795,
+    "display_name": "Westerly Ware, Kew, London Borough of Richmond upon Thames, Greater London, England, United Kingdom",
+    "query": "Westerly Ware, Richmond upon Thames, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "richmond-upon-thames-whitton-sports-fitness-centre": null,
+  "richmond-upon-thames-york-house-gardens": {
+    "latitude": 51.4474519,
+    "longitude": -0.3233571,
+    "display_name": "York House Gardens, St Margarets, London Borough of Richmond upon Thames, Greater London, England, United Kingdom",
+    "query": "York House Gardens, Richmond upon Thames, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "southwark-belair-park": {
+    "latitude": 51.4432317,
+    "longitude": -0.0907465,
+    "display_name": "Belair Park, Dulwich, London Borough of Southwark, Greater London, England, United Kingdom",
+    "query": "Belair Park, Southwark, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "southwark-brunswick-park": {
+    "latitude": 51.475619,
+    "longitude": -0.0858656,
+    "display_name": "Brunswick Park, Denmark Hill, Camberwell, London Borough of Southwark, Greater London, England, SE5 7RH, United Kingdom",
+    "query": "Brunswick Park, Southwark, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "southwark-burgess-park": {
+    "latitude": 51.4816112,
+    "longitude": -0.0899394,
+    "display_name": "Burgess Park, Old Kent Road, London Borough of Southwark, Greater London, England, United Kingdom",
+    "query": "Burgess Park, Southwark, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "southwark-dulwich-park": {
+    "latitude": 51.4454832,
+    "longitude": -0.0778957,
+    "display_name": "Dulwich Park, Dulwich Village, London Borough of Southwark, Greater London, England, SE21 7BQ, United Kingdom",
+    "query": "Dulwich Park, Southwark, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "southwark-geraldine-mary-harmsworth-park": {
+    "latitude": 51.4958711,
+    "longitude": -0.1085812,
+    "display_name": "Geraldine Mary Harmsworth Park, Elephant and Castle, London Borough of Southwark, Greater London, England, SE1 6HZ, United Kingdom",
+    "query": "Geraldine Mary Harmsworth Park, Southwark, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "southwark-honor-oak-recreation-ground": null,
+  "southwark-southwark-park": {
+    "latitude": 51.495192,
+    "longitude": -0.056272,
+    "display_name": "Southwark Park, Bermondsey, London Borough of Southwark, Greater London, England, United Kingdom",
+    "query": "Southwark Park, Southwark, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "southwark-tanner-street-park": {
+    "latitude": 51.5000837,
+    "longitude": -0.0804359,
+    "display_name": "Tanner Street Park, Bermondsey Village, The Borough, London Borough of Southwark, Greater London, England, SE1 3LD, United Kingdom",
+    "query": "Tanner Street Park, Southwark, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "sutton-beddington-park": {
+    "latitude": 51.373119,
+    "longitude": -0.1452774,
+    "display_name": "Beddington Park, Beddington, London Borough of Sutton, Greater London, England, SM6 7BW, United Kingdom",
+    "query": "Beddington Park, Sutton, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "sutton-carshalton-park": {
+    "latitude": 51.3616191,
+    "longitude": -0.1611562,
+    "display_name": "Carshalton Park, Carshalton-on-the-Hill, London Borough of Sutton, Greater London, England, United Kingdom",
+    "query": "Carshalton Park, Sutton, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "sutton-cheam-recreation-ground": {
+    "latitude": 51.3620079,
+    "longitude": -0.2238062,
+    "display_name": "Cheam Recreation Ground, Stoneleigh, London Borough of Sutton, Greater London, Surrey, England, United Kingdom",
+    "query": "Cheam Recreation Ground, Sutton, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "sutton-corrigan-avenue-recreation-ground": null,
+  "sutton-cuddington-recreation-ground": {
+    "latitude": 51.3704786,
+    "longitude": -0.2405311,
+    "display_name": "Cuddington Recreation Ground, Worcester Park, London Borough of Sutton, Greater London, England, United Kingdom",
+    "query": "Cuddington Recreation Ground, Sutton, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "sutton-mellows-park": {
+    "latitude": 51.3610676,
+    "longitude": -0.1337402,
+    "display_name": "Mellows Park, South Beddington, London Borough of Sutton, Greater London, England, United Kingdom",
+    "query": "Mellows Park, Sutton, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "sutton-rosehill-park-west": {
+    "latitude": 51.378998,
+    "longitude": -0.1920409,
+    "display_name": "Rosehill Park West, Rose Hill, Rosehill, London Borough of Sutton, Greater London, England, SM1 3EX, United Kingdom",
+    "query": "Rosehill Park West, Sutton, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "sutton-roundshaw-park": {
+    "latitude": 51.3508425,
+    "longitude": -0.136306,
+    "display_name": "Roundshaw Park, Roundshaw, London Borough of Sutton, Greater London, England, United Kingdom",
+    "query": "Roundshaw Park, Sutton, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "sutton-royston-park": {
+    "latitude": 51.3729955,
+    "longitude": -0.1802806,
+    "display_name": "Royston Park, The Wrythe, London Borough of Sutton, Greater London, England, United Kingdom",
+    "query": "Royston Park, Sutton, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "sutton-stanley-park": {
+    "latitude": 51.3566203,
+    "longitude": -0.1634152,
+    "display_name": "Stanley Park, Carshalton-on-the-Hill, London Borough of Sutton, Greater London, England, United Kingdom",
+    "query": "Stanley Park, Sutton, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "sutton-sutton-common-recreation-ground": null,
+  "sutton-sutton-sports-village": null,
+  "tower-hamlets-bethnal-green-gardens": {
+    "latitude": 51.5259471,
+    "longitude": -0.0538755,
+    "display_name": "Bethnal Green Gardens, Bethnal Green, London Borough of Tower Hamlets, Greater London, England, E2 0ET, United Kingdom",
+    "query": "Bethnal Green Gardens, Tower Hamlets, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "tower-hamlets-john-orwell-sports-centre": {
+    "latitude": 51.504987,
+    "longitude": -0.0622476,
+    "display_name": "John Orwell Sports Centre, Tench Street, St. George in the East, Wapping, London Borough of Tower Hamlets, Greater London, England, E1W 2QD, United Kingdom",
+    "query": "John Orwell Sports Centre, Tower Hamlets, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "tower-hamlets-king-edward-memorial-park": {
+    "latitude": 51.5089274,
+    "longitude": -0.0486644,
+    "display_name": "King Edward Memorial Park, Ratcliffe, Shadwell, London Borough of Tower Hamlets, Greater London, England, E1W 3EQ, United Kingdom",
+    "query": "King Edward Memorial Park, Tower Hamlets, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "tower-hamlets-poplar-recreation-ground": {
+    "latitude": 51.5099144,
+    "longitude": -0.0166576,
+    "display_name": "Poplar Recreation Ground, Poplar, London Borough of Tower Hamlets, Greater London, England, United Kingdom",
+    "query": "Poplar Recreation Ground, Tower Hamlets, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "tower-hamlets-ropemakers-fields": {
+    "latitude": 51.5097351,
+    "longitude": -0.0325497,
+    "display_name": "Ropemakers Fields, Ratcliffe, Limehouse, London Borough of Tower Hamlets, Greater London, England, E14 8BP, United Kingdom",
+    "query": "Ropemakers Fields, Tower Hamlets, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "tower-hamlets-st-john-s-park": {
+    "latitude": 51.4967331,
+    "longitude": -0.0099574,
+    "display_name": "St John's Park, Cubitt Town, Isle of Dogs, London Borough of Tower Hamlets, Greater London, England, United Kingdom",
+    "query": "St John's Park, Tower Hamlets, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "tower-hamlets-victoria-park": {
+    "latitude": 51.5389557,
+    "longitude": -0.0340641,
+    "display_name": "Victoria Park, Bethnal Green, London Borough of Tower Hamlets, Greater London, England, United Kingdom",
+    "query": "Victoria Park, Tower Hamlets, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "tower-hamlets-wapping-gardens": {
+    "latitude": 51.5045445,
+    "longitude": -0.060483,
+    "display_name": "Wapping Gardens, St. George in the East, Wapping, London Borough of Tower Hamlets, Greater London, England, E1W 2PA, United Kingdom",
+    "query": "Wapping Gardens, Tower Hamlets, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "waltham-forest-abbotts-park": {
+    "latitude": 51.5712053,
+    "longitude": -0.0068408,
+    "display_name": "Abbotts Park, Leyton, London Borough of Waltham Forest, Greater London, England, United Kingdom",
+    "query": "Abbotts Park, Waltham Forest, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "waltham-forest-chingford-memorial-park": null,
+  "waltham-forest-chingford-school-of-tennis-club": null,
+  "waltham-forest-higham-hill-park": {
+    "latitude": 51.5975483,
+    "longitude": -0.0375509,
+    "display_name": "Higham Hill Recreation Ground, Higham Hill, London Borough of Waltham Forest, Greater London, England, United Kingdom",
+    "query": "Higham Hill Park, Waltham Forest, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "waltham-forest-lee-valley-hockey-and-tennis-centre": {
+    "latitude": 51.5528912,
+    "longitude": -0.0164596,
+    "display_name": "Lee Valley Hockey and Tennis Centre, Leadmill Lane, Leyton, London Borough of Waltham Forest, Greater London, England, E20 3AD, United Kingdom",
+    "query": "Lee Valley Hockey and Tennis Centre, Waltham Forest, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "waltham-forest-lloyd-and-aveling-park": null,
+  "waltham-forest-ridgeway-park": {
+    "latitude": 51.625445,
+    "longitude": -0.0100521,
+    "display_name": "Ridgeway Park, Chingford, London Borough of Waltham Forest, Greater London, England, United Kingdom",
+    "query": "Ridgeway Park, Waltham Forest, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "wandsworth-battersea-park-millennium-arena": {
+    "latitude": 51.4810895,
+    "longitude": -0.1516202,
+    "display_name": "Battersea Park Millennium Arena, Carriage Drive East, Battersea, London Borough of Wandsworth, Greater London, England, SW11 4NJ, United Kingdom",
+    "query": "Battersea Park Millennium Arena, Wandsworth, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "wandsworth-fred-wells-gardens": {
+    "latitude": 51.4722328,
+    "longitude": -0.1755158,
+    "display_name": "Fred Wells Gardens, Battersea, London Borough of Wandsworth, Greater London, England, United Kingdom",
+    "query": "Fred Wells Gardens, Wandsworth, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "wandsworth-furzedown-recreation-centre": null,
+  "wandsworth-furzedown-recreation-ground": {
+    "latitude": 51.4253974,
+    "longitude": -0.1509364,
+    "display_name": "Furzedown Recreation Ground, Furzedown, London Borough of Wandsworth, Greater London, England, United Kingdom",
+    "query": "Furzedown Recreation Ground, Wandsworth, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "wandsworth-king-george-s-park": {
+    "latitude": 51.4521826,
+    "longitude": -0.1948257,
+    "display_name": "King George's Park, Wandsworth, London Borough of Wandsworth, Greater London, England, SW18 2GJ, United Kingdom",
+    "query": "King George's Park, Wandsworth, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "wandsworth-leader-s-gardens": {
+    "latitude": 51.4706652,
+    "longitude": -0.2223724,
+    "display_name": "Leader's Gardens, Putney, London Borough of Wandsworth, Greater London, England, United Kingdom",
+    "query": "Leader's Gardens, Wandsworth, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "wandsworth-roehampton-playing-fields": null,
+  "wandsworth-tooting-bec-common": {
+    "latitude": 51.4345084,
+    "longitude": -0.1452765,
+    "display_name": "Tooting Bec Common, Furzedown, London Borough of Wandsworth, Greater London, England, United Kingdom",
+    "query": "Tooting Bec Common, Wandsworth, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "wandsworth-wandsworth-common": {
+    "latitude": 51.4484642,
+    "longitude": -0.167588,
+    "display_name": "Wandsworth Common, Clapham Junction, London Borough of Wandsworth, Greater London, England, SW18 3RT, United Kingdom",
+    "query": "Wandsworth Common, Wandsworth, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "wandsworth-wandsworth-park": {
+    "latitude": 51.4623065,
+    "longitude": -0.2041783,
+    "display_name": "Wandsworth Park, Wandsworth, London Borough of Wandsworth, Greater London, England, United Kingdom",
+    "query": "Wandsworth Park, Wandsworth, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "westminster-academy-sport": {
+    "latitude": 51.520241,
+    "longitude": -0.1925318,
+    "display_name": "Academy Sport, Westway, Lancaster West Estate, North Kensington, City of Westminster, Greater London, England, W10 5YG, United Kingdom",
+    "query": "Academy Sport, Westminster, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "westminster-hyde-park-courts": {
+    "latitude": 51.5031988,
+    "longitude": -0.1732562,
+    "display_name": "The Courts at Hyde Park, South Carriage Drive, Knightsbridge, City of Westminster, Greater London, England, W2 2UH, United Kingdom",
+    "query": "Hyde Park Courts, Westminster, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "westminster-paddington-recreation-ground": {
+    "latitude": 51.5302746,
+    "longitude": -0.190562,
+    "display_name": "Paddington Recreation Ground, Kensal Town, Maida Vale, City of Westminster, Greater London, England, W9 1PD, United Kingdom",
+    "query": "Paddington Recreation Ground, Westminster, London, UK",
+    "checked_on": "2026-09-14"
+  },
+  "westminster-the-regent-s-park-courts": null
+}

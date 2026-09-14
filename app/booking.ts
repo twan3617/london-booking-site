@@ -36,6 +36,24 @@ export type Filters = {
 };
 
 export type Release = { date: string; time: string; open: boolean };
+export type Point = { latitude: number; longitude: number };
+
+export function distanceMiles(from: Point, to: Point): number {
+  const radians = (degrees: number) => degrees * Math.PI / 180;
+  const latitude = radians(to.latitude - from.latitude);
+  const longitude = radians(to.longitude - from.longitude);
+  const a = Math.sin(latitude / 2) ** 2 + Math.cos(radians(from.latitude)) * Math.cos(radians(to.latitude)) * Math.sin(longitude / 2) ** 2;
+  return 3958.8 * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+export function osmEmbedUrl(point: Point): string {
+  const padding = 0.008;
+  const url = new URL('https://www.openstreetmap.org/export/embed.html');
+  url.searchParams.set('bbox', [point.longitude - padding, point.latitude - padding, point.longitude + padding, point.latitude + padding].map((value) => value.toFixed(5)).join(','));
+  url.searchParams.set('marker', `${point.latitude.toFixed(5)},${point.longitude.toFixed(5)}`);
+  url.searchParams.set('layer', 'mapnik');
+  return url.toString();
+}
 
 export function relevantHourlyPrice(venue: Venue, mode: Mode): number | null {
   const text = venue.price_text;
@@ -91,8 +109,8 @@ export function withinBookingWindow(venue: Venue, playDate: string, today = lond
   return daysAhead <= venue.advance_days;
 }
 
-function venueDestination(venue: Venue): string {
-  return [venue.name, venue.area, venue.borough, 'London', 'UK'].filter(Boolean).join(', ');
+export function venueDestination(venue: Venue): string {
+  return [...new Set([venue.name, venue.area, venue.borough, 'London', 'UK'].filter(Boolean))].join(', ');
 }
 
 export function directionsUrl(venue: Venue): string {

@@ -3,6 +3,8 @@ import assert from 'node:assert/strict';
 import {
   calendarText,
   directionsUrl,
+  distanceMiles,
+  osmEmbedUrl,
   matchesVenue,
   releaseDetails,
   relevantHourlyPrice,
@@ -83,5 +85,20 @@ test('directions leave the origin open for the device current location', () => {
   assert.equal(url.origin + url.pathname, 'https://www.google.com/maps/dir/');
   assert.equal(url.searchParams.get('api'), '1');
   assert.equal(url.searchParams.get('origin'), null);
-  assert.equal(url.searchParams.get('destination'), 'Hyde Park, Hyde Park, Westminster, London, UK');
+  assert.equal(url.searchParams.get('destination'), 'Hyde Park, Westminster, London, UK');
+});
+
+test('distance uses great-circle miles', () => {
+  assert.equal(distanceMiles({ latitude: 51.5, longitude: -0.1 }, { latitude: 51.6, longitude: -0.1 }).toFixed(1), '6.9');
+});
+
+test('distance from a point to itself is zero', () => {
+  assert.equal(distanceMiles({ latitude: 51.5, longitude: -0.1 }, { latitude: 51.5, longitude: -0.1 }), 0);
+});
+
+test('map embed centres an OpenStreetMap marker on the court', () => {
+  const url = new URL(osmEmbedUrl({ latitude: 51.5, longitude: -0.1 }));
+  assert.equal(url.origin + url.pathname, 'https://www.openstreetmap.org/export/embed.html');
+  assert.equal(url.searchParams.get('marker'), '51.50000,-0.10000');
+  assert.equal(url.searchParams.get('bbox'), '-0.10800,51.49200,-0.09200,51.50800');
 });
