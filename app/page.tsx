@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import catalogue from '../data/venues.json';
-import { calendarText, matchesVenue, releaseDetails, relevantHourlyPrice, type Filters, type Mode, type Venue } from './booking';
+import { calendarText, directionsUrl, matchesVenue, releaseDetails, relevantHourlyPrice, withinBookingWindow, type Filters, type Mode, type Venue } from './booking';
 
 const venues = catalogue.venues as Venue[];
 const boroughs = [...new Set(venues.map((venue) => venue.borough))].sort();
@@ -44,9 +44,9 @@ export default function Home() {
   const results = useMemo(() => {
     const filters: Filters = { mode, borough, query, facility, status: mode === 'weekend' ? 'all' : status, maxPrice: maxPrice === '' ? null : Number(maxPrice) };
     return venues
-      .filter((venue) => matchesVenue(venue, filters) && (!favouritesOnly || favourites.includes(venue.id)))
+      .filter((venue) => matchesVenue(venue, filters) && withinBookingWindow(venue, playDate) && (!favouritesOnly || favourites.includes(venue.id)))
       .sort((a, b) => Number(favourites.includes(b.id)) - Number(favourites.includes(a.id)) || ['suitable', 'seasonal', 'unknown', 'unsuitable'].indexOf(a.evening_assessment) - ['suitable', 'seasonal', 'unknown', 'unsuitable'].indexOf(b.evening_assessment) || a.name.localeCompare(b.name));
-  }, [mode, borough, query, facility, status, maxPrice, favourites, favouritesOnly]);
+  }, [mode, playDate, borough, query, facility, status, maxPrice, favourites, favouritesOnly]);
 
   function toggleFavourite(id: string) {
     const next = favourites.includes(id) ? favourites.filter((item) => item !== id) : [...favourites, id];
@@ -99,7 +99,7 @@ export default function Home() {
           <div className="facts"><div><span>COURTS</span><strong>{venue.courts_total ?? '—'}</strong></div><div><span>LIGHT</span><strong>{venue.indoor_courts ? `${venue.indoor_courts} indoor` : venue.lighting}</strong></div><div><span>PRICE</span><strong>{price === null ? 'Check' : `£${price}/hr`}</strong></div></div>
           <p className="suitability">{mode === 'after-work' ? venue.evening_notes : venue.weekend_notes ?? venue.hours_text ?? 'Weekend court hours need checking.'}</p>
           <div className={`release ${release?.open ? 'open' : ''}`}><span>{release?.open ? 'BOOKING WINDOW' : 'BE READY TO BOOK'}</span><strong>{release ? (release.open ? 'Open — check slots now' : `${prettyDate(release.date)} · ${release.time}`) : 'Release time needs checking'}</strong><small>{venue.release_rule ?? 'No verified release rule.'}</small></div>
-          <div className="actions">{bookingUrl && <a className="book" href={bookingUrl} target="_blank" rel="noreferrer">Check booking ↗</a>}{release && !release.open && <button onClick={() => downloadReminder(venue)}>Add reminder</button>}<a className="source" href={venue.sources[0]?.url} target="_blank" rel="noreferrer">Source</a></div>
+          <div className="actions">{bookingUrl && <a className="book" href={bookingUrl} target="_blank" rel="noreferrer">Check booking ↗</a>}<a href={directionsUrl(venue)} target="_blank" rel="noreferrer">Directions from me</a>{release && !release.open && <button onClick={() => downloadReminder(venue)}>Add reminder</button>}<a className="source" href={venue.sources[0]?.url} target="_blank" rel="noreferrer">Source</a></div>
         </article>;
       })}</div>
       {!results.length && <div className="empty"><h3>No matching courts</h3><p>Try showing every status or removing a price cap.</p></div>}

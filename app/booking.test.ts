@@ -2,9 +2,11 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
   calendarText,
+  directionsUrl,
   matchesVenue,
   releaseDetails,
   relevantHourlyPrice,
+  withinBookingWindow,
 } from './booking.ts';
 
 const venue = {
@@ -62,4 +64,24 @@ test('calendar reminder uses Europe/London and links to booking', () => {
   assert.match(text, /DTSTART;TZID=Europe\/London:20260914T070000/);
   assert.match(text, /TRIGGER:-PT5M/);
   assert.match(text, /https:\/\/example.com\/book/);
+});
+
+test('a seven-day venue remains visible for the seventh day', () => {
+  assert.equal(withinBookingWindow(venue, '2026-09-21', '2026-09-14'), true);
+});
+
+test('a seven-day venue is hidden for the eighth day', () => {
+  assert.equal(withinBookingWindow(venue, '2026-09-22', '2026-09-14'), false);
+});
+
+test('venues with an unknown advance window remain visible', () => {
+  assert.equal(withinBookingWindow({ ...venue, advance_days: null }, '2026-10-01', '2026-09-14'), true);
+});
+
+test('directions leave the origin open for the device current location', () => {
+  const url = new URL(directionsUrl({ ...venue, area: 'Hyde Park' }));
+  assert.equal(url.origin + url.pathname, 'https://www.google.com/maps/dir/');
+  assert.equal(url.searchParams.get('api'), '1');
+  assert.equal(url.searchParams.get('origin'), null);
+  assert.equal(url.searchParams.get('destination'), 'Hyde Park, Hyde Park, Westminster, London, UK');
 });

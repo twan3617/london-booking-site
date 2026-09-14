@@ -85,6 +85,23 @@ export function releaseDetails(venue: Venue, playDate: string, now = new Date())
   return { date, time: venue.release_time, open: londonNow(now) >= `${date}T${venue.release_time}` };
 }
 
+export function withinBookingWindow(venue: Venue, playDate: string, today = londonNow(new Date()).slice(0, 10)): boolean {
+  if (!playDate || venue.advance_days == null) return true;
+  const daysAhead = (Date.parse(`${playDate}T00:00:00Z`) - Date.parse(`${today}T00:00:00Z`)) / 86_400_000;
+  return daysAhead <= venue.advance_days;
+}
+
+function venueDestination(venue: Venue): string {
+  return [venue.name, venue.area, venue.borough, 'London', 'UK'].filter(Boolean).join(', ');
+}
+
+export function directionsUrl(venue: Venue): string {
+  const url = new URL('https://www.google.com/maps/dir/');
+  url.searchParams.set('api', '1');
+  url.searchParams.set('destination', venueDestination(venue));
+  return url.toString();
+}
+
 function icsEscape(value: string): string {
   return value.replace(/\\/g, '\\\\').replace(/\n/g, '\\n').replace(/,/g, '\\,').replace(/;/g, '\\;');
 }
