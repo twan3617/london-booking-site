@@ -6,11 +6,13 @@ const temporary = new URL('../data/coordinates.tmp.json', import.meta.url);
 const coordinates = existsSync(output) ? JSON.parse(readFileSync(output)) : {};
 const limit = Number(process.argv.find((arg) => arg.startsWith('--limit='))?.split('=')[1] ?? Infinity);
 const retryMisses = process.argv.includes('--retry-misses');
+const sport = process.argv.find((arg) => arg.startsWith('--sport='))?.split('=')[1];
 let requested = 0;
 
 for (const venue of venues) {
+  if (sport && venue.sport !== sport) continue;
   if ((venue.id in coordinates && !(retryMisses && coordinates[venue.id] === null)) || requested >= limit) continue;
-  const query = [...new Set(retryMisses ? [venue.name, venue.area, 'London', 'UK'] : [venue.name, venue.borough, 'London', 'UK'])].filter(Boolean).join(', ');
+  const query = venue.geo_query ?? [...new Set(retryMisses ? [venue.name, venue.area, 'London', 'UK'] : [venue.name, venue.borough, 'London', 'UK'])].filter(Boolean).join(', ');
   const url = new URL('https://nominatim.openstreetmap.org/search');
   url.search = new URLSearchParams({
     q: query, format: 'jsonv2', addressdetails: '1', limit: '3',

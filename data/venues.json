@@ -1,7 +1,8 @@
 {
-  "checked_on": "2026-09-14",
+  "checked_on": "2026-09-15",
   "timezone": "Europe/London",
-  "scope": "Public tennis venue collection; includes explicitly unconfirmed candidates. Not an exhaustive census or live availability feed.",
+  "coverage_scope": "tennis",
+  "scope": "Public racquet venue collection; tennis is broad coverage, squash is a researched pay-and-play selection, and padel is an initial selection. Not a live availability feed.",
   "preferences": {
     "duration_minutes": 60,
     "weekday_window": [
@@ -53,7 +54,9 @@
       "notes": "Scheme FAQ gives conditional lit/unlit opening hours but does not identify this venue's lighting.",
       "id": "barking-and-dagenham-barking-park",
       "name": "Barking Park",
-      "borough": "Barking and Dagenham"
+      "borough": "Barking and Dagenham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Dagenham",
@@ -96,7 +99,9 @@
       "notes": "Scheme FAQ gives conditional lit/unlit opening hours but does not identify this venue's lighting.",
       "id": "barking-and-dagenham-central-park-dagenham",
       "name": "Central Park Dagenham",
-      "borough": "Barking and Dagenham"
+      "borough": "Barking and Dagenham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Barking",
@@ -139,7 +144,9 @@
       "notes": "Scheme FAQ gives conditional lit/unlit opening hours but does not identify this venue's lighting.",
       "id": "barking-and-dagenham-greatfields-park",
       "name": "Greatfields Park",
-      "borough": "Barking and Dagenham"
+      "borough": "Barking and Dagenham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Dagenham",
@@ -182,7 +189,9 @@
       "notes": "Scheme FAQ gives conditional lit/unlit opening hours but does not identify this venue's lighting.",
       "id": "barking-and-dagenham-old-dagenham-park",
       "name": "Old Dagenham Park",
-      "borough": "Barking and Dagenham"
+      "borough": "Barking and Dagenham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Chadwell Heath",
@@ -225,7 +234,9 @@
       "notes": "Scheme FAQ gives conditional lit/unlit opening hours but does not identify this venue's lighting.",
       "id": "barking-and-dagenham-st-chads-park",
       "name": "St Chads Park",
-      "borough": "Barking and Dagenham"
+      "borough": "Barking and Dagenham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -265,7 +276,9 @@
       "id": "barnet-bethune-park",
       "name": "Bethune Park",
       "borough": "Barnet",
-      "policy_id": "barnet-parks"
+      "policy_id": "barnet-parks",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -305,7 +318,9 @@
       "id": "barnet-bittacy-hill-park",
       "name": "Bittacy Hill Park",
       "borough": "Barnet",
-      "policy_id": "barnet-parks"
+      "policy_id": "barnet-parks",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Watling Avenue, HA8 0NP",
@@ -340,7 +355,9 @@
       "notes": null,
       "id": "barnet-burnt-oak-leisure-centre",
       "name": "Burnt Oak Leisure Centre",
-      "borough": "Barnet"
+      "borough": "Barnet",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -380,7 +397,9 @@
       "id": "barnet-cherry-tree-wood",
       "name": "Cherry Tree Wood",
       "borough": "Barnet",
-      "policy_id": "barnet-parks"
+      "policy_id": "barnet-parks",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -420,7 +439,9 @@
       "id": "barnet-childs-hill-park",
       "name": "Childs Hill Park",
       "borough": "Barnet",
-      "policy_id": "barnet-parks"
+      "policy_id": "barnet-parks",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -460,7 +481,9 @@
       "id": "barnet-edgwarebury-park",
       "name": "Edgwarebury Park",
       "borough": "Barnet",
-      "policy_id": "barnet-parks"
+      "policy_id": "barnet-parks",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -500,7 +523,9 @@
       "id": "barnet-friary-park",
       "name": "Friary Park",
       "borough": "Barnet",
-      "policy_id": "barnet-parks"
+      "policy_id": "barnet-parks",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -531,7 +556,9 @@
       "notes": "Seasonal park closing times and lighting need checking.",
       "id": "barnet-golders-hill-park",
       "name": "Golders Hill Park",
-      "borough": "Barnet"
+      "borough": "Barnet",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -571,7 +598,9 @@
       "id": "barnet-halliwick-recreation-ground",
       "name": "Halliwick Recreation Ground",
       "borough": "Barnet",
-      "policy_id": "barnet-parks"
+      "policy_id": "barnet-parks",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -611,7 +640,9 @@
       "id": "barnet-hendon-park",
       "name": "Hendon Park",
       "borough": "Barnet",
-      "policy_id": "barnet-parks"
+      "policy_id": "barnet-parks",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -651,7 +682,9 @@
       "id": "barnet-lyttelton-playing-fields",
       "name": "Lyttelton Playing Fields",
       "borough": "Barnet",
-      "policy_id": "barnet-parks"
+      "policy_id": "barnet-parks",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -691,7 +724,9 @@
       "id": "barnet-mill-hill-park",
       "name": "Mill Hill Park",
       "borough": "Barnet",
-      "policy_id": "barnet-parks"
+      "policy_id": "barnet-parks",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -731,7 +766,9 @@
       "id": "barnet-montrose-playing-fields",
       "name": "Montrose Playing Fields",
       "borough": "Barnet",
-      "policy_id": "barnet-parks"
+      "policy_id": "barnet-parks",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "1 Lawton Road, EN4 9BS",
@@ -766,7 +803,9 @@
       "notes": null,
       "id": "barnet-new-barnet-leisure-centre",
       "name": "New Barnet Leisure Centre",
-      "borough": "Barnet"
+      "borough": "Barnet",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -806,7 +845,9 @@
       "id": "barnet-new-southgate-recreation-ground",
       "name": "New Southgate Recreation Ground",
       "borough": "Barnet",
-      "policy_id": "barnet-parks"
+      "policy_id": "barnet-parks",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -846,7 +887,9 @@
       "id": "barnet-northway-gardens",
       "name": "Northway Gardens",
       "borough": "Barnet",
-      "policy_id": "barnet-parks"
+      "policy_id": "barnet-parks",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -886,7 +929,9 @@
       "id": "barnet-oak-hill-park",
       "name": "Oak Hill Park",
       "borough": "Barnet",
-      "policy_id": "barnet-parks"
+      "policy_id": "barnet-parks",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -926,7 +971,9 @@
       "id": "barnet-old-courthouse-recreation-ground",
       "name": "Old Courthouse Recreation Ground",
       "borough": "Barnet",
-      "policy_id": "barnet-parks"
+      "policy_id": "barnet-parks",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -966,7 +1013,9 @@
       "id": "barnet-princes-park",
       "name": "Princes Park",
       "borough": "Barnet",
-      "policy_id": "barnet-parks"
+      "policy_id": "barnet-parks",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -1006,7 +1055,9 @@
       "id": "barnet-rushgrove-park",
       "name": "Rushgrove Park",
       "borough": "Barnet",
-      "policy_id": "barnet-parks"
+      "policy_id": "barnet-parks",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -1046,7 +1097,9 @@
       "id": "barnet-stonegrove-park",
       "name": "Stonegrove Park",
       "borough": "Barnet",
-      "policy_id": "barnet-parks"
+      "policy_id": "barnet-parks",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -1086,7 +1139,41 @@
       "id": "barnet-sunnyhill-park",
       "name": "Sunnyhill Park",
       "borough": "Barnet",
-      "policy_id": "barnet-parks"
+      "policy_id": "barnet-parks",
+      "sport": "tennis",
+      "slot_minutes": 60
+    },
+    {
+      "access": "pay_and_play",
+      "indoor_courts": 6,
+      "floodlit_courts": null,
+      "lighting": "indoor",
+      "hours_text": null,
+      "evening_assessment": "unknown",
+      "evening_notes": "Six indoor pay-and-play courts; evening hours need checking.",
+      "weekend_notes": "Book a casual indoor court through Playtomic.",
+      "price_text": null,
+      "slot_minutes": null,
+      "advance_days": null,
+      "release_time": null,
+      "release_rule": "Casual booking window needs checking.",
+      "release_status": "unknown",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "padel-barnet-padel-hub-n20",
+      "sport": "padel",
+      "name": "The Padel Hub N20",
+      "borough": "Barnet",
+      "area": "Downland Close, N20",
+      "booking_url": "https://playtomic.com/clubs/the-padel-hub-n20-north-london",
+      "courts_total": 6,
+      "sources": [
+        {
+          "url": "https://www.ltapadel.org.uk/play/padel-in-your-area/padel-in-london/",
+          "supports": "Six indoor pay-and-play courts, N20 address and booking link."
+        }
+      ],
+      "geo_query": "Unit 4 Downland Close, London N20 9LB"
     },
     {
       "area": null,
@@ -1126,7 +1213,9 @@
       "id": "barnet-tudor-sports-ground",
       "name": "Tudor Sports Ground",
       "borough": "Barnet",
-      "policy_id": "barnet-parks"
+      "policy_id": "barnet-parks",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -1166,7 +1255,9 @@
       "id": "barnet-victoria-park-finchley",
       "name": "Victoria Park (Finchley)",
       "borough": "Barnet",
-      "policy_id": "barnet-parks"
+      "policy_id": "barnet-parks",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -1206,7 +1297,9 @@
       "id": "barnet-west-hendon-playing-fields",
       "name": "West Hendon Playing Fields",
       "borough": "Barnet",
-      "policy_id": "barnet-parks"
+      "policy_id": "barnet-parks",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Belvedere",
@@ -1249,7 +1342,9 @@
       "notes": null,
       "id": "bexley-belvedere-recreation-ground-south",
       "name": "Belvedere Recreation Ground South",
-      "borough": "Bexley"
+      "borough": "Bexley",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Bexleyheath",
@@ -1288,7 +1383,9 @@
       "notes": "Public hire is confirmed, but PAYG page predates floodlights; its winter hours may be obsolete.",
       "id": "bexley-bexleyheath-tennis-club",
       "name": "Bexleyheath Tennis Club",
-      "borough": "Bexley"
+      "borough": "Bexley",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Bexleyheath",
@@ -1331,7 +1428,9 @@
       "notes": null,
       "id": "bexley-danson-park",
       "name": "Danson Park",
-      "borough": "Bexley"
+      "borough": "Bexley",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Northumberland Heath",
@@ -1374,7 +1473,9 @@
       "notes": null,
       "id": "bexley-northumberland-heath-recreation-ground",
       "name": "Northumberland Heath Recreation Ground",
-      "borough": "Bexley"
+      "borough": "Bexley",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Bexleyheath",
@@ -1417,7 +1518,9 @@
       "notes": null,
       "id": "bexley-russell-park",
       "name": "Russell Park",
-      "borough": "Bexley"
+      "borough": "Bexley",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Sidcup",
@@ -1460,7 +1563,9 @@
       "notes": "Two separate pickleball courts excluded from tennis count.",
       "id": "bexley-sidcup-place",
       "name": "Sidcup Place",
-      "borough": "Bexley"
+      "borough": "Bexley",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Sidcup",
@@ -1503,7 +1608,9 @@
       "notes": null,
       "id": "bexley-waring-park",
       "name": "Waring Park",
-      "borough": "Bexley"
+      "borough": "Bexley",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "West Heath",
@@ -1546,7 +1653,9 @@
       "notes": null,
       "id": "bexley-west-heath-recreation-ground",
       "name": "West Heath Recreation Ground",
-      "borough": "Bexley"
+      "borough": "Bexley",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Wembley",
@@ -1585,7 +1694,9 @@
       "notes": null,
       "id": "brent-alperton-sports-ground",
       "name": "Alperton Sports Ground",
-      "borough": "Brent"
+      "borough": "Brent",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Kensal Rise",
@@ -1624,7 +1735,9 @@
       "notes": null,
       "id": "brent-chelmsford-square",
       "name": "Chelmsford Square",
-      "borough": "Brent"
+      "borough": "Brent",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Kingsbury",
@@ -1663,7 +1776,9 @@
       "notes": null,
       "id": "brent-eton-grove-open-space",
       "name": "Eton Grove Open Space",
-      "borough": "Brent"
+      "borough": "Brent",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Dollis Hill",
@@ -1702,7 +1817,9 @@
       "notes": "Three mini courts excluded; optional Club Pass advertises fourteen-day booking.",
       "id": "brent-gladstone-park",
       "name": "Gladstone Park",
-      "borough": "Brent"
+      "borough": "Brent",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Wembley",
@@ -1741,7 +1858,9 @@
       "notes": null,
       "id": "brent-king-edward-vii-park",
       "name": "King Edward VII Park",
-      "borough": "Brent"
+      "borough": "Brent",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Preston",
@@ -1780,7 +1899,9 @@
       "notes": null,
       "id": "brent-preston-park",
       "name": "Preston Park",
-      "borough": "Brent"
+      "borough": "Brent",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Queen's Park",
@@ -1811,7 +1932,9 @@
       "notes": "Pass does not include court fees. Three bookings per rolling week on free package; five on paid pass.",
       "id": "brent-queen-s-park-tennis-courts",
       "name": "Queen's Park Tennis Courts",
-      "borough": "Brent"
+      "borough": "Brent",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Kingsbury",
@@ -1850,7 +1973,9 @@
       "notes": null,
       "id": "brent-roe-green-park",
       "name": "Roe Green Park",
-      "borough": "Brent"
+      "borough": "Brent",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Wembley",
@@ -1889,7 +2014,45 @@
       "notes": null,
       "id": "brent-vale-farm",
       "name": "Vale Farm",
-      "borough": "Brent"
+      "borough": "Brent",
+      "sport": "tennis",
+      "slot_minutes": 60
+    },
+    {
+      "access": "pay_and_play",
+      "indoor_courts": 0,
+      "floodlit_courts": null,
+      "lighting": "unknown",
+      "hours_text": "Sun–Thu 07:00–22:00; Fri–Sat 07:00–00:00.",
+      "evening_assessment": "unknown",
+      "evening_notes": "Four outdoor courts; venue hours fit 19:00–21:00, but floodlights need confirming.",
+      "weekend_notes": "Outdoor pay-and-play courts available during daytime hours.",
+      "price_text": "Venue booking page quotes £56/hour full price or £48/hour semi-off-peak; check live Playtomic price.",
+      "slot_minutes": null,
+      "advance_days": null,
+      "release_time": null,
+      "release_rule": "Member priority windows published; casual booking window needs checking.",
+      "release_status": "unknown",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "padel-brent-wembley",
+      "sport": "padel",
+      "name": "Wembley Padel",
+      "borough": "Brent",
+      "area": "Wembley Park",
+      "operator": "Social Sports Society",
+      "booking_url": "https://socialsportssociety.com/venue/wembley-padel/",
+      "courts_total": 4,
+      "sources": [
+        {
+          "url": "https://socialsportssociety.com/venue/wembley-padel/",
+          "supports": "Four outdoor courts, public booking and venue hours."
+        },
+        {
+          "url": "https://socialsportssociety.com/book/",
+          "supports": "Published full and semi-off-peak pay-and-play prices."
+        }
+      ]
     },
     {
       "area": "Kenton",
@@ -1928,7 +2091,9 @@
       "notes": "Two mini courts excluded. Postal Harrow address; physically Brent.",
       "id": "brent-woodcock-park",
       "name": "Woodcock Park",
-      "borough": "Brent"
+      "borough": "Brent",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Plaistow Lane, Bromley",
@@ -1959,7 +2124,9 @@
       "notes": "Six grass, two clay and four hard courts; two hard courts covered September–May.",
       "id": "bromley-bromley-sports-club",
       "name": "Bromley Sports Club",
-      "borough": "Bromley"
+      "borough": "Bromley",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Orpington",
@@ -1994,7 +2161,9 @@
       "notes": "Six permanent indoor courts; four outdoor courts covered by a bubble in winter. Same-day bookings by phone; future bookings via portal.",
       "id": "bromley-bromley-tennis-centre-at-newstead-wood",
       "name": "Bromley Tennis Centre at Newstead Wood",
-      "borough": "Bromley"
+      "borough": "Bromley",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Bromley",
@@ -2029,7 +2198,9 @@
       "notes": "Venue also advertises nonmember off-peak hire at £5 per 30 minutes.",
       "id": "bromley-church-house-gardens",
       "name": "Church House Gardens",
-      "borough": "Bromley"
+      "borough": "Bromley",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "West Wickham",
@@ -2064,7 +2235,9 @@
       "notes": null,
       "id": "bromley-coney-hall-recreation-ground",
       "name": "Coney Hall Recreation Ground",
-      "borough": "Bromley"
+      "borough": "Bromley",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Beckenham",
@@ -2099,7 +2272,50 @@
       "notes": null,
       "id": "bromley-croydon-road-recreation-ground",
       "name": "Croydon Road Recreation Ground",
-      "borough": "Bromley"
+      "borough": "Bromley",
+      "sport": "tennis",
+      "slot_minutes": 60
+    },
+    {
+      "access": "pay_and_play",
+      "indoor_courts": 2,
+      "floodlit_courts": null,
+      "lighting": "indoor",
+      "hours_text": "Centre Mon–Fri 06:30–22:00; squash-specific hours need checking.",
+      "evening_assessment": "unknown",
+      "evening_notes": "Court-specific 19:00–21:00 slots need checking.",
+      "weekend_notes": "Weekend daytime court hire; check live slots.",
+      "price_text": "Nonmember adult £9.25 per 40 minutes, peak or off-peak; PAYG member rates differ.",
+      "slot_minutes": 40,
+      "advance_days": null,
+      "release_time": null,
+      "release_rule": null,
+      "release_status": "unknown",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "squash-bromley-crystal-palace",
+      "sport": "squash",
+      "name": "Crystal Palace National Sports Centre",
+      "borough": "Bromley",
+      "area": "Crystal Palace",
+      "operator": "Better",
+      "booking_url": "https://www.better.org.uk/leisure-centre/london/crystal-palace/crystal-palace-national-sports-centre/facilities",
+      "courts_total": 2,
+      "sources": [
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/crystal-palace/crystal-palace-national-sports-centre/facilities",
+          "supports": "Current operator court-hire information, count and hours where published."
+        },
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/crystal-palace/crystal-palace-national-sports-centre/prices",
+          "supports": "Published adult 40-minute squash rates."
+        },
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/crystal-palace/crystal-palace-national-sports-centre",
+          "supports": "Current centre hours."
+        }
+      ],
+      "geo_query": "Crystal Palace National Sports Centre, London SE19 2BB"
     },
     {
       "area": "Crystal Palace",
@@ -2138,7 +2354,9 @@
       "notes": "Current facility page lists one outdoor tennis court; do not use historic indoor tennis counts.",
       "id": "bromley-crystal-palace-national-sports-centre",
       "name": "Crystal Palace National Sports Centre",
-      "borough": "Bromley"
+      "borough": "Bromley",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Cudham",
@@ -2169,7 +2387,9 @@
       "notes": "Not part of the eight-park Bromley Parks Tennis pass.",
       "id": "bromley-cudham-lane-south-recreation-ground",
       "name": "Cudham Lane South Recreation Ground",
-      "borough": "Bromley"
+      "borough": "Bromley",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Orpington",
@@ -2204,7 +2424,9 @@
       "notes": null,
       "id": "bromley-goddington-park",
       "name": "Goddington Park",
-      "borough": "Bromley"
+      "borough": "Bromley",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Beckenham",
@@ -2239,7 +2461,9 @@
       "notes": null,
       "id": "bromley-kelsey-park",
       "name": "Kelsey Park",
-      "borough": "Bromley"
+      "borough": "Bromley",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Beckenham",
@@ -2274,7 +2498,9 @@
       "notes": null,
       "id": "bromley-kings-hall-road-cator-park",
       "name": "Kings Hall Road (Cator Park)",
-      "borough": "Bromley"
+      "borough": "Bromley",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Orpington",
@@ -2309,7 +2535,9 @@
       "notes": null,
       "id": "bromley-poverest-park",
       "name": "Poverest Park",
-      "borough": "Bromley"
+      "borough": "Bromley",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Petts Wood",
@@ -2344,7 +2572,46 @@
       "notes": null,
       "id": "bromley-willett-recreation-ground",
       "name": "Willett Recreation Ground",
-      "borough": "Bromley"
+      "borough": "Bromley",
+      "sport": "tennis",
+      "slot_minutes": 60
+    },
+    {
+      "access": "pay_and_play",
+      "indoor_courts": 3,
+      "floodlit_courts": null,
+      "lighting": "indoor",
+      "hours_text": "Squash booking Mon–Fri 07:30–21:00; weekends 09:00–18:00.",
+      "evening_assessment": "suitable",
+      "evening_notes": "Three indoor 45-minute courts; nonmembers must buy a day pass and book in person at reception.",
+      "weekend_notes": "Weekend bookings 09:00–18:00; nonmembers must book at reception.",
+      "price_text": "Court hire £4 per 45 minutes, plus a nonmember day pass; day-pass price not verified.",
+      "slot_minutes": 45,
+      "advance_days": null,
+      "release_time": null,
+      "release_rule": null,
+      "release_status": "unknown",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "squash-camden-bloomsbury-fitness",
+      "sport": "squash",
+      "name": "Bloomsbury Fitness Centre",
+      "borough": "Camden",
+      "area": "Bloomsbury",
+      "operator": "Students’ Union UCL",
+      "booking_url": "https://studentsunionucl.org/sport-fitness/book-our-squash-courts",
+      "courts_total": 3,
+      "sources": [
+        {
+          "url": "https://studentsunionucl.org/sport-fitness/book-our-squash-courts",
+          "supports": "Current operator page: three courts, nonmember day-pass route, £4/45-minute hire, booking hours."
+        },
+        {
+          "url": "https://www.westminster.gov.uk/sites/default/files/media/documents/wcc-indoor-facilities-assessment-needs-assessment-2026.pdf",
+          "supports": "2026 public-facility assessment classifies Bloomsbury Fitness as pay-and-play."
+        }
+      ],
+      "geo_query": "Bloomsbury Fitness Centre, 15 Gordon Street, London WC1H 0AY"
     },
     {
       "area": "Kilburn",
@@ -2356,14 +2623,14 @@
       "indoor_courts": 0,
       "floodlit_courts": null,
       "lighting": "unknown",
-      "hours_text": "From08:00; final booking hour before seasonal park closure.",
+      "hours_text": "From 08:00; final booking hour before seasonal park closure.",
       "evening_assessment": "seasonal",
-      "evening_notes": "Park closes19:30 on14Sep2026, too early for a19:00–20:00 game. Summer use depends on closing schedule.",
+      "evening_notes": "Park closes 19:30 on 14 Sep 2026, too early for a 19:00–20:00 game. Summer use depends on closing schedule.",
       "weekend_notes": "Daytime option within seasonal park hours.",
       "price_text": "Standard charge £10.75; booking-duration unit not explicit on venue page.",
       "advance_days": 35,
       "release_time": null,
-      "release_rule": "Up to5weeks ahead; exact release time unpublished.",
+      "release_rule": "Up to 5 weeks ahead; exact release time unpublished.",
       "release_status": "partial",
       "checked_on": "2026-09-14",
       "sources": [
@@ -2383,7 +2650,9 @@
       "notes": "No verified tennis floodlight details. Do not apply Kilburn MUGA after-dark rules to tennis courts.",
       "id": "camden-kilburn-grange-park",
       "name": "Kilburn Grange Park",
-      "borough": "Camden"
+      "borough": "Camden",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Holborn",
@@ -2395,14 +2664,14 @@
       "indoor_courts": 0,
       "floodlit_courts": null,
       "lighting": "unknown",
-      "hours_text": "From08:00; final booking hour before seasonal park closure.",
+      "hours_text": "From 08:00; final booking hour before seasonal park closure.",
       "evening_assessment": "seasonal",
-      "evening_notes": "Park closes19:30 on14Sep2026, too early for a19:00–20:00 game. Summer use depends on closing schedule.",
+      "evening_notes": "Park closes 19:30 on 14 Sep 2026, too early for a 19:00–20:00 game. Summer use depends on closing schedule.",
       "weekend_notes": "Daytime option within seasonal park hours.",
       "price_text": "Standard charge £14.30; booking-duration unit not explicit on venue page.",
       "advance_days": 35,
       "release_time": null,
-      "release_rule": "Up to5weeks ahead; exact release time unpublished.",
+      "release_rule": "Up to 5 weeks ahead; exact release time unpublished.",
       "release_status": "partial",
       "checked_on": "2026-09-14",
       "sources": [
@@ -2422,7 +2691,50 @@
       "notes": "No verified tennis floodlight details. Do not apply Kilburn MUGA after-dark rules to tennis courts.",
       "id": "camden-lincoln-s-inn-fields",
       "name": "Lincoln's Inn Fields",
-      "borough": "Camden"
+      "borough": "Camden",
+      "sport": "tennis",
+      "slot_minutes": 60
+    },
+    {
+      "access": "pay_and_play",
+      "indoor_courts": 3,
+      "floodlit_courts": null,
+      "lighting": "indoor",
+      "hours_text": "Squash courts Mon–Fri 07:00–21:40; weekends 09:40–17:40.",
+      "evening_assessment": "suitable",
+      "evening_notes": "Indoor court hire during the 19:00–21:00 window; check live slots.",
+      "weekend_notes": "Weekend daytime court hire; check live slots.",
+      "price_text": "Nonmember adult £20.90; Better price page is labelled April 2025, so check today’s rate.",
+      "slot_minutes": 40,
+      "advance_days": null,
+      "release_time": null,
+      "release_rule": null,
+      "release_status": "unknown",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "squash-camden-oasis",
+      "sport": "squash",
+      "name": "Oasis Sports Centre",
+      "borough": "Camden",
+      "area": "Covent Garden",
+      "operator": "Better",
+      "booking_url": "https://www.better.org.uk/leisure-centre/london/camden/oasis-sports-centre/squash",
+      "courts_total": 3,
+      "sources": [
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/camden/oasis-sports-centre/squash",
+          "supports": "Current operator court-hire information, count and hours where published."
+        },
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/camden/oasis-sports-centre",
+          "supports": "Current court-specific hours."
+        },
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/camden/oasis-sports-centre/prices",
+          "supports": "Published adult rates; page dated April 2025."
+        }
+      ],
+      "geo_query": "32 Endell Street, London WC2H 9AG"
     },
     {
       "area": null,
@@ -2453,7 +2765,45 @@
       "notes": "Seasonal park closing times and lighting need checking.",
       "id": "camden-parliament-hill-fields",
       "name": "Parliament Hill Fields",
-      "borough": "Camden"
+      "borough": "Camden",
+      "sport": "tennis",
+      "slot_minutes": 60
+    },
+    {
+      "access": "pay_and_play",
+      "indoor_courts": 2,
+      "floodlit_courts": null,
+      "lighting": "indoor",
+      "hours_text": "Squash courts Mon–Fri 07:00–21:40; weekends 08:00–18:00.",
+      "evening_assessment": "suitable",
+      "evening_notes": "Indoor courts have 40-minute slots during the after-work window.",
+      "weekend_notes": "40-minute indoor slots during daytime hours.",
+      "price_text": "Better's April 2025 price page quotes £20.90 nonmember or £15.35 PAYG adult; check the booking calendar for today's rate.",
+      "slot_minutes": 40,
+      "advance_days": null,
+      "release_time": null,
+      "release_rule": null,
+      "release_status": "unknown",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "squash-camden-swiss-cottage",
+      "sport": "squash",
+      "name": "Swiss Cottage Leisure Centre",
+      "borough": "Camden",
+      "area": "Swiss Cottage",
+      "operator": "Better",
+      "booking_url": "https://www.better.org.uk/leisure-centre/london/camden/swiss-cottage-leisure-centre/6985b6f8-b1c7-4cc7-adad-15c719a5ef88",
+      "courts_total": 2,
+      "sources": [
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/camden/swiss-cottage-leisure-centre/6985b6f8-b1c7-4cc7-adad-15c719a5ef88",
+          "supports": "Two courts, 40-minute sessions and court hours."
+        },
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/camden/swiss-cottage-leisure-centre/prices",
+          "supports": "Published price page, labelled April 2025."
+        }
+      ]
     },
     {
       "area": "Highgate",
@@ -2465,14 +2815,14 @@
       "indoor_courts": 0,
       "floodlit_courts": null,
       "lighting": "unknown",
-      "hours_text": "From08:00; final booking hour before seasonal park closure.",
+      "hours_text": "From 08:00; final booking hour before seasonal park closure.",
       "evening_assessment": "seasonal",
-      "evening_notes": "Park closes19:30 on14Sep2026, too early for a19:00–20:00 game. Summer use depends on closing schedule.",
+      "evening_notes": "Park closes 19:30 on 14 Sep 2026, too early for a 19:00–20:00 game. Summer use depends on closing schedule.",
       "weekend_notes": "Daytime option within seasonal park hours.",
       "price_text": "Standard charge £10.75; booking-duration unit not explicit on venue page.",
       "advance_days": 35,
       "release_time": null,
-      "release_rule": "Up to5weeks ahead; exact release time unpublished.",
+      "release_rule": "Up to 5 weeks ahead; exact release time unpublished.",
       "release_status": "partial",
       "checked_on": "2026-09-14",
       "sources": [
@@ -2492,7 +2842,9 @@
       "notes": "No verified tennis floodlight details. Do not apply Kilburn MUGA after-dark rules to tennis courts.",
       "id": "camden-waterlow-park",
       "name": "Waterlow Park",
-      "borough": "Camden"
+      "borough": "Camden",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Fann Street, EC1Y 0SH",
@@ -2527,7 +2879,9 @@
       "notes": "Centre closed for refurbishment; council says outdoor courts remain open but replacement booking arrangements need confirmation.",
       "id": "city-of-london-golden-lane-sport-and-fitness",
       "name": "Golden Lane Sport and Fitness",
-      "borough": "City of London"
+      "borough": "City of London",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Addiscombe",
@@ -2558,7 +2912,9 @@
       "notes": null,
       "id": "croydon-addiscombe-recreation-ground",
       "name": "Addiscombe Recreation Ground",
-      "borough": "Croydon"
+      "borough": "Croydon",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Addiscombe",
@@ -2589,7 +2945,9 @@
       "notes": null,
       "id": "croydon-ashburton-park",
       "name": "Ashburton Park",
-      "borough": "Croydon"
+      "borough": "Croydon",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Upper Norwood",
@@ -2620,7 +2978,9 @@
       "notes": null,
       "id": "croydon-biggin-woods",
       "name": "Biggin Woods",
-      "borough": "Croydon"
+      "borough": "Croydon",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Coulsdon",
@@ -2651,7 +3011,9 @@
       "notes": null,
       "id": "croydon-coulsdon-memorial-park",
       "name": "Coulsdon Memorial Park",
-      "borough": "Croydon"
+      "borough": "Croydon",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "South Norwood",
@@ -2682,7 +3044,9 @@
       "notes": null,
       "id": "croydon-grangewood-park",
       "name": "Grangewood Park",
-      "borough": "Croydon"
+      "borough": "Croydon",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Purley",
@@ -2713,7 +3077,9 @@
       "notes": "Outside current Better 14-park booking directory; access terms, current condition and booking route need confirmation.",
       "id": "croydon-higher-drive-recreation-ground",
       "name": "Higher Drive Recreation Ground",
-      "borough": "Croydon"
+      "borough": "Croydon",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Croydon",
@@ -2744,7 +3110,9 @@
       "notes": null,
       "id": "croydon-park-hill-recreation-ground",
       "name": "Park Hill Recreation Ground",
-      "borough": "Croydon"
+      "borough": "Croydon",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "South Croydon",
@@ -2775,7 +3143,9 @@
       "notes": "Venue page reports court 2 awaiting final painting; reconfirm before booking.",
       "id": "croydon-purley-beeches-park",
       "name": "Purley Beeches Park",
-      "borough": "Croydon"
+      "borough": "Croydon",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Coulsdon",
@@ -2806,7 +3176,9 @@
       "notes": null,
       "id": "croydon-rickman-hill-park",
       "name": "Rickman Hill Park",
-      "borough": "Croydon"
+      "borough": "Croydon",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Shirley",
@@ -2837,7 +3209,9 @@
       "notes": null,
       "id": "croydon-shirley-church-recreation-ground",
       "name": "Shirley Church Recreation Ground",
-      "borough": "Croydon"
+      "borough": "Croydon",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "South Norwood",
@@ -2868,7 +3242,9 @@
       "notes": null,
       "id": "croydon-south-norwood-lake",
       "name": "South Norwood Lake",
-      "borough": "Croydon"
+      "borough": "Croydon",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "South Norwood",
@@ -2899,7 +3275,9 @@
       "notes": null,
       "id": "croydon-south-norwood-recreation-ground",
       "name": "South Norwood Recreation Ground",
-      "borough": "Croydon"
+      "borough": "Croydon",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Thornton Heath",
@@ -2930,7 +3308,9 @@
       "notes": null,
       "id": "croydon-trumble-gardens",
       "name": "Trumble Gardens",
-      "borough": "Croydon"
+      "borough": "Croydon",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Upper Norwood",
@@ -2961,7 +3341,9 @@
       "notes": null,
       "id": "croydon-upper-norwood-recreation-ground",
       "name": "Upper Norwood Recreation Ground",
-      "borough": "Croydon"
+      "borough": "Croydon",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Waddon",
@@ -2992,7 +3374,9 @@
       "notes": null,
       "id": "croydon-wandle-park",
       "name": "Wandle Park",
-      "borough": "Croydon"
+      "borough": "Croydon",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Acton",
@@ -3027,7 +3411,9 @@
       "notes": "Older borough ClubSpark text says free; current fee needs checking.",
       "id": "ealing-acton-park",
       "name": "Acton Park",
-      "borough": "Ealing"
+      "borough": "Ealing",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Northolt",
@@ -3058,7 +3444,9 @@
       "notes": "Directory-listed hire venue; current tennis offer not independently confirmed.",
       "id": "ealing-alec-reed-academy-community-sports-centre",
       "name": "Alec Reed Academy Community Sports Centre",
-      "borough": "Ealing"
+      "borough": "Ealing",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Greenford",
@@ -3093,7 +3481,9 @@
       "notes": "Older borough ClubSpark text says free; current fee needs checking.",
       "id": "ealing-berkeley-fields",
       "name": "Berkeley Fields",
-      "borough": "Ealing"
+      "borough": "Ealing",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Greenford",
@@ -3124,7 +3514,9 @@
       "notes": "Directory-listed hire venue; current tennis offer not independently confirmed.",
       "id": "ealing-brentside-high-school",
       "name": "Brentside High School",
-      "borough": "Ealing"
+      "borough": "Ealing",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Hanwell",
@@ -3159,7 +3551,9 @@
       "notes": "Older borough ClubSpark text says free; current fee needs checking.",
       "id": "ealing-churchfields-recreation-ground",
       "name": "Churchfields Recreation Ground",
-      "borough": "Ealing"
+      "borough": "Ealing",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Southall",
@@ -3190,7 +3584,9 @@
       "notes": "Directory-listed hire venue; current tennis offer not independently confirmed.",
       "id": "ealing-dormers-wells-leisure-centre",
       "name": "Dormers Wells Leisure Centre",
-      "borough": "Ealing"
+      "borough": "Ealing",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Hanwell",
@@ -3225,7 +3621,9 @@
       "notes": "Four additional school MUGA courts appear separately as Elthorne Sports Centre.",
       "id": "ealing-elthorne-park",
       "name": "Elthorne Park",
-      "borough": "Ealing"
+      "borough": "Ealing",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Hanwell",
@@ -3256,7 +3654,9 @@
       "notes": "Directory-listed hire venue; current tennis offer not independently confirmed.",
       "id": "ealing-elthorne-sports-centre",
       "name": "Elthorne Sports Centre",
-      "borough": "Ealing"
+      "borough": "Ealing",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Southall",
@@ -3287,7 +3687,9 @@
       "notes": "Directory-listed hire venue; current tennis offer not independently confirmed.",
       "id": "ealing-featherstone-sports-centre",
       "name": "Featherstone Sports Centre",
-      "borough": "Ealing"
+      "borough": "Ealing",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Greenford",
@@ -3318,7 +3720,9 @@
       "notes": "Directory-listed hire venue; current tennis offer not independently confirmed.",
       "id": "ealing-greenford-sports-centre",
       "name": "Greenford Sports Centre",
-      "borough": "Ealing"
+      "borough": "Ealing",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Ealing",
@@ -3353,7 +3757,9 @@
       "notes": null,
       "id": "ealing-lammas-park",
       "name": "Lammas Park",
-      "borough": "Ealing"
+      "borough": "Ealing",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "North Acton",
@@ -3384,7 +3790,41 @@
       "notes": "LTA page has five courts in prose but three in booking header; total left unconfirmed.",
       "id": "ealing-north-acton-playing-fields",
       "name": "North Acton Playing Fields",
-      "borough": "Ealing"
+      "borough": "Ealing",
+      "sport": "tennis",
+      "slot_minutes": 60
+    },
+    {
+      "access": "pay_and_play",
+      "indoor_courts": 3,
+      "floodlit_courts": null,
+      "lighting": "indoor",
+      "hours_text": null,
+      "evening_assessment": "unknown",
+      "evening_notes": "Three indoor pay-and-play courts; after-work hours need checking.",
+      "weekend_notes": "Indoor casual-booking option; check current slots.",
+      "price_text": null,
+      "slot_minutes": null,
+      "advance_days": null,
+      "release_time": null,
+      "release_rule": "Casual booking window needs checking.",
+      "release_status": "unknown",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "padel-ealing-parkside-southall",
+      "sport": "padel",
+      "name": "Parkside Padel",
+      "borough": "Ealing",
+      "area": "Southall",
+      "booking_url": "https://www.game4padel.com/",
+      "courts_total": 3,
+      "sources": [
+        {
+          "url": "https://www.ltapadel.org.uk/play/padel-in-your-area/padel-in-london/",
+          "supports": "Three indoor pay-and-play courts, Southall address and booking link."
+        }
+      ],
+      "geo_query": "3 Seva Drive, Southall UB1 1GH"
     },
     {
       "area": "Perivale",
@@ -3419,7 +3859,9 @@
       "notes": "Older borough ClubSpark text says free; current fee needs checking.",
       "id": "ealing-perivale-park",
       "name": "Perivale Park",
-      "borough": "Ealing"
+      "borough": "Ealing",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Ealing",
@@ -3454,7 +3896,9 @@
       "notes": null,
       "id": "ealing-pitshanger-park",
       "name": "Pitshanger Park",
-      "borough": "Ealing"
+      "borough": "Ealing",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Greenford",
@@ -3489,7 +3933,9 @@
       "notes": "Older borough ClubSpark text says free; current fee needs checking.",
       "id": "ealing-ravenor-park",
       "name": "Ravenor Park",
-      "borough": "Ealing"
+      "borough": "Ealing",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Acton",
@@ -3520,7 +3966,9 @@
       "notes": "Directory-listed hire venue; current tennis offer not independently confirmed.",
       "id": "ealing-reynolds-sports-centre",
       "name": "Reynolds Sports Centre",
-      "borough": "Ealing"
+      "borough": "Ealing",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Southall",
@@ -3555,7 +4003,9 @@
       "notes": "Older borough ClubSpark text says free; current fee needs checking.",
       "id": "ealing-southall-park",
       "name": "Southall Park",
-      "borough": "Ealing"
+      "borough": "Ealing",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Acton",
@@ -3590,7 +4040,9 @@
       "notes": "Older borough ClubSpark text says free; current fee needs checking.",
       "id": "ealing-southfield-recreation-ground",
       "name": "Southfield Recreation Ground",
-      "borough": "Ealing"
+      "borough": "Ealing",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Southall",
@@ -3625,7 +4077,9 @@
       "notes": "Older borough ClubSpark text says free; current fee needs checking.",
       "id": "ealing-spikes-bridge-park",
       "name": "Spikes Bridge Park",
-      "borough": "Ealing"
+      "borough": "Ealing",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Southall",
@@ -3656,7 +4110,9 @@
       "notes": "Directory-listed hire venue; current tennis offer not independently confirmed.",
       "id": "ealing-swift-road-outdoor-sports-centre",
       "name": "Swift Road Outdoor Sports Centre",
-      "borough": "Ealing"
+      "borough": "Ealing",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Acton",
@@ -3687,7 +4143,9 @@
       "notes": "Directory-listed hire venue; current tennis offer not independently confirmed.",
       "id": "ealing-twyford-sports-centre",
       "name": "Twyford Sports Centre",
-      "borough": "Ealing"
+      "borough": "Ealing",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Southall",
@@ -3722,7 +4180,9 @@
       "notes": "Older borough ClubSpark text says free; current fee needs checking.",
       "id": "ealing-wolf-fields-park",
       "name": "Wolf Fields Park",
-      "borough": "Ealing"
+      "borough": "Ealing",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Bell Lane",
@@ -3734,11 +4194,11 @@
       "indoor_courts": 0,
       "floodlit_courts": null,
       "lighting": "unknown",
-      "hours_text": "Daily08:00–dusk.",
+      "hours_text": "Daily 08:00–dusk.",
       "evening_assessment": "seasonal",
-      "evening_notes": "Dusk-limited hire; only when daylight and closing time permit a full hour after19:00.",
-      "weekend_notes": "Daytime option from08:00, ending before dusk.",
-      "price_text": "£6/hour weekday after17:00 and weekends; weekday08:00–17:00 free.",
+      "evening_notes": "Dusk-limited hire; only when daylight and closing time permit a full hour after 19:00.",
+      "weekend_notes": "Daytime option from 08:00, ending before dusk.",
+      "price_text": "£6/hour weekday after 17:00 and weekends; weekday 08:00–17:00 free.",
       "advance_days": null,
       "release_time": null,
       "release_rule": null,
@@ -3753,7 +4213,9 @@
       "notes": null,
       "id": "enfield-albany-park",
       "name": "Albany Park",
-      "borough": "Enfield"
+      "borough": "Enfield",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Waterfall Road",
@@ -3765,11 +4227,11 @@
       "indoor_courts": 0,
       "floodlit_courts": null,
       "lighting": "unknown",
-      "hours_text": "Daily08:00–dusk.",
+      "hours_text": "Daily 08:00–dusk.",
       "evening_assessment": "seasonal",
-      "evening_notes": "Dusk-limited hire; only when daylight and closing time permit a full hour after19:00.",
-      "weekend_notes": "Daytime option from08:00, ending before dusk.",
-      "price_text": "£6/hour weekday after17:00 and weekends; weekday08:00–17:00 free.",
+      "evening_notes": "Dusk-limited hire; only when daylight and closing time permit a full hour after 19:00.",
+      "weekend_notes": "Daytime option from 08:00, ending before dusk.",
+      "price_text": "£6/hour weekday after 17:00 and weekends; weekday 08:00–17:00 free.",
       "advance_days": null,
       "release_time": null,
       "release_rule": null,
@@ -3784,7 +4246,9 @@
       "notes": null,
       "id": "enfield-arnos-park",
       "name": "Arnos Park",
-      "borough": "Enfield"
+      "borough": "Enfield",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -3796,11 +4260,11 @@
       "indoor_courts": 0,
       "floodlit_courts": null,
       "lighting": "floodlit",
-      "hours_text": "Daily08:00–22:00.",
+      "hours_text": "Daily 08:00–22:00.",
       "evening_assessment": "suitable",
-      "evening_notes": "Automatic floodlighting and evening gate PIN access; published hours fit19–21.",
-      "weekend_notes": "Daytime hire from08:00.",
-      "price_text": "£6/hour peak; £4 additional when lights needed (£10for1hour).",
+      "evening_notes": "Automatic floodlighting and evening gate PIN access; published hours fit 19–21.",
+      "weekend_notes": "Daytime hire from 08:00.",
+      "price_text": "£6/hour peak; £4 additional when lights needed (£10 for 1 hour).",
       "advance_days": null,
       "release_time": null,
       "release_rule": null,
@@ -3819,7 +4283,9 @@
       "notes": "Page mentions nine refurbished courts and also netball. Tennis-only count not independently resolved.",
       "id": "enfield-broomfield-park",
       "name": "Broomfield Park",
-      "borough": "Enfield"
+      "borough": "Enfield",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -3854,7 +4320,9 @@
       "notes": null,
       "id": "enfield-bush-hill-park",
       "name": "Bush Hill Park",
-      "borough": "Enfield"
+      "borough": "Enfield",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Craig Park Road",
@@ -3866,11 +4334,11 @@
       "indoor_courts": 0,
       "floodlit_courts": null,
       "lighting": "unknown",
-      "hours_text": "Daily08:00–dusk.",
+      "hours_text": "Daily 08:00–dusk.",
       "evening_assessment": "seasonal",
-      "evening_notes": "Dusk-limited hire; only when daylight and closing time permit a full hour after19:00.",
-      "weekend_notes": "Daytime option from08:00, ending before dusk.",
-      "price_text": "£6/hour weekday after17:00 and weekends; weekday08:00–17:00 free.",
+      "evening_notes": "Dusk-limited hire; only when daylight and closing time permit a full hour after 19:00.",
+      "weekend_notes": "Daytime option from 08:00, ending before dusk.",
+      "price_text": "£6/hour weekday after 17:00 and weekends; weekday 08:00–17:00 free.",
       "advance_days": null,
       "release_time": null,
       "release_rule": null,
@@ -3885,7 +4353,9 @@
       "notes": null,
       "id": "enfield-craig-park",
       "name": "Craig Park",
-      "borough": "Enfield"
+      "borough": "Enfield",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Hertford Road",
@@ -3897,11 +4367,11 @@
       "indoor_courts": 0,
       "floodlit_courts": null,
       "lighting": "unknown",
-      "hours_text": "Daily08:00–dusk.",
+      "hours_text": "Daily 08:00–dusk.",
       "evening_assessment": "seasonal",
-      "evening_notes": "Dusk-limited hire; only when daylight and closing time permit a full hour after19:00.",
-      "weekend_notes": "Daytime option from08:00, ending before dusk.",
-      "price_text": "£6/hour weekday after17:00 and weekends; weekday08:00–17:00 free.",
+      "evening_notes": "Dusk-limited hire; only when daylight and closing time permit a full hour after 19:00.",
+      "weekend_notes": "Daytime option from 08:00, ending before dusk.",
+      "price_text": "£6/hour weekday after 17:00 and weekends; weekday 08:00–17:00 free.",
       "advance_days": null,
       "release_time": null,
       "release_rule": null,
@@ -3916,7 +4386,9 @@
       "notes": null,
       "id": "enfield-durants-park",
       "name": "Durants Park",
-      "borough": "Enfield"
+      "borough": "Enfield",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Essex Road",
@@ -3928,11 +4400,11 @@
       "indoor_courts": 0,
       "floodlit_courts": null,
       "lighting": "unknown",
-      "hours_text": "Daily08:00–dusk.",
+      "hours_text": "Daily 08:00–dusk.",
       "evening_assessment": "seasonal",
-      "evening_notes": "Dusk-limited hire; only when daylight and closing time permit a full hour after19:00.",
-      "weekend_notes": "Daytime option from08:00, ending before dusk.",
-      "price_text": "£6/hour weekday after17:00 and weekends; weekday08:00–17:00 free.",
+      "evening_notes": "Dusk-limited hire; only when daylight and closing time permit a full hour after 19:00.",
+      "weekend_notes": "Daytime option from 08:00, ending before dusk.",
+      "price_text": "£6/hour weekday after 17:00 and weekends; weekday 08:00–17:00 free.",
       "advance_days": null,
       "release_time": null,
       "release_rule": null,
@@ -3947,7 +4419,9 @@
       "notes": null,
       "id": "enfield-enfield-town-park",
       "name": "Enfield Town Park",
-      "borough": "Enfield"
+      "borough": "Enfield",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -3982,7 +4456,9 @@
       "notes": "Optional affiliation gives earlier booking; standard advance window unresolved.",
       "id": "enfield-firs-farm-recreation-ground",
       "name": "Firs Farm Recreation Ground",
-      "borough": "Enfield"
+      "borough": "Enfield",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -4007,7 +4483,7 @@
       "sources": [
         {
           "url": "https://clubspark.lta.org.uk/GrovelandsPark",
-          "supports": "Council-linked booking destination; access returned403"
+          "supports": "Council-linked booking destination; access returned 403"
         },
         {
           "url": "https://www.enfield.gov.uk/services/leisure-and-culture/enfield-tennis-courts-refurbishment",
@@ -4017,7 +4493,9 @@
       "notes": null,
       "id": "enfield-grovelands-park",
       "name": "Grovelands Park",
-      "borough": "Enfield"
+      "borough": "Enfield",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Hedge Lane",
@@ -4029,11 +4507,11 @@
       "indoor_courts": 0,
       "floodlit_courts": null,
       "lighting": "unknown",
-      "hours_text": "Daily08:00–dusk.",
+      "hours_text": "Daily 08:00–dusk.",
       "evening_assessment": "seasonal",
-      "evening_notes": "Dusk-limited hire; only when daylight and closing time permit a full hour after19:00.",
-      "weekend_notes": "Daytime option from08:00, ending before dusk.",
-      "price_text": "£6/hour weekday after17:00 and weekends; weekday08:00–17:00 free.",
+      "evening_notes": "Dusk-limited hire; only when daylight and closing time permit a full hour after 19:00.",
+      "weekend_notes": "Daytime option from 08:00, ending before dusk.",
+      "price_text": "£6/hour weekday after 17:00 and weekends; weekday 08:00–17:00 free.",
       "advance_days": null,
       "release_time": null,
       "release_rule": null,
@@ -4048,7 +4526,9 @@
       "notes": null,
       "id": "enfield-hazelwood-recreation-ground",
       "name": "Hazelwood Recreation Ground",
-      "borough": "Enfield"
+      "borough": "Enfield",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Galliard Road",
@@ -4060,11 +4540,11 @@
       "indoor_courts": 0,
       "floodlit_courts": null,
       "lighting": "unknown",
-      "hours_text": "Daily08:00–dusk.",
+      "hours_text": "Daily 08:00–dusk.",
       "evening_assessment": "seasonal",
-      "evening_notes": "Dusk-limited hire; only when daylight and closing time permit a full hour after19:00.",
-      "weekend_notes": "Daytime option from08:00, ending before dusk.",
-      "price_text": "£6/hour weekday after17:00 and weekends; weekday08:00–17:00 free.",
+      "evening_notes": "Dusk-limited hire; only when daylight and closing time permit a full hour after 19:00.",
+      "weekend_notes": "Daytime option from 08:00, ending before dusk.",
+      "price_text": "£6/hour weekday after 17:00 and weekends; weekday 08:00–17:00 free.",
       "advance_days": null,
       "release_time": null,
       "release_rule": null,
@@ -4079,7 +4559,9 @@
       "notes": null,
       "id": "enfield-jubilee-park",
       "name": "Jubilee Park",
-      "borough": "Enfield"
+      "borough": "Enfield",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Myrtle Grove",
@@ -4091,11 +4573,11 @@
       "indoor_courts": 0,
       "floodlit_courts": null,
       "lighting": "unknown",
-      "hours_text": "Daily08:00–dusk.",
+      "hours_text": "Daily 08:00–dusk.",
       "evening_assessment": "seasonal",
-      "evening_notes": "Dusk-limited hire; only when daylight and closing time permit a full hour after19:00.",
-      "weekend_notes": "Daytime option from08:00, ending before dusk.",
-      "price_text": "£6/hour weekday after17:00 and weekends; weekday08:00–17:00 free.",
+      "evening_notes": "Dusk-limited hire; only when daylight and closing time permit a full hour after 19:00.",
+      "weekend_notes": "Daytime option from 08:00, ending before dusk.",
+      "price_text": "£6/hour weekday after 17:00 and weekends; weekday 08:00–17:00 free.",
       "advance_days": null,
       "release_time": null,
       "release_rule": null,
@@ -4110,7 +4592,9 @@
       "notes": null,
       "id": "enfield-north-enfield-recreation-ground",
       "name": "North Enfield Recreation Ground",
-      "borough": "Enfield"
+      "borough": "Enfield",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Oakwood Park Road",
@@ -4122,11 +4606,11 @@
       "indoor_courts": 0,
       "floodlit_courts": null,
       "lighting": "unknown",
-      "hours_text": "Daily08:00–dusk.",
+      "hours_text": "Daily 08:00–dusk.",
       "evening_assessment": "seasonal",
-      "evening_notes": "Dusk-limited hire; only when daylight and closing time permit a full hour after19:00.",
-      "weekend_notes": "Daytime option from08:00, ending before dusk.",
-      "price_text": "£6/hour weekday after17:00 and weekends; weekday08:00–17:00 free.",
+      "evening_notes": "Dusk-limited hire; only when daylight and closing time permit a full hour after 19:00.",
+      "weekend_notes": "Daytime option from 08:00, ending before dusk.",
+      "price_text": "£6/hour weekday after 17:00 and weekends; weekday 08:00–17:00 free.",
       "advance_days": null,
       "release_time": null,
       "release_rule": null,
@@ -4141,7 +4625,9 @@
       "notes": null,
       "id": "enfield-oakwood-park",
       "name": "Oakwood Park",
-      "borough": "Enfield"
+      "borough": "Enfield",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "High Street",
@@ -4153,11 +4639,11 @@
       "indoor_courts": 0,
       "floodlit_courts": null,
       "lighting": "unknown",
-      "hours_text": "Daily08:00–dusk.",
+      "hours_text": "Daily 08:00–dusk.",
       "evening_assessment": "seasonal",
-      "evening_notes": "Dusk-limited hire; only when daylight and closing time permit a full hour after19:00.",
-      "weekend_notes": "Daytime option from08:00, ending before dusk.",
-      "price_text": "£6/hour weekday after17:00 and weekends; weekday08:00–17:00 free.",
+      "evening_notes": "Dusk-limited hire; only when daylight and closing time permit a full hour after 19:00.",
+      "weekend_notes": "Daytime option from 08:00, ending before dusk.",
+      "price_text": "£6/hour weekday after 17:00 and weekends; weekday 08:00–17:00 free.",
       "advance_days": null,
       "release_time": null,
       "release_rule": null,
@@ -4172,7 +4658,9 @@
       "notes": null,
       "id": "enfield-ponders-end-recreation-ground",
       "name": "Ponders End Recreation Ground",
-      "borough": "Enfield"
+      "borough": "Enfield",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Victoria Road",
@@ -4184,11 +4672,11 @@
       "indoor_courts": 0,
       "floodlit_courts": null,
       "lighting": "unknown",
-      "hours_text": "Daily08:00–dusk.",
+      "hours_text": "Daily 08:00–dusk.",
       "evening_assessment": "seasonal",
-      "evening_notes": "Dusk-limited hire; only when daylight and closing time permit a full hour after19:00.",
-      "weekend_notes": "Daytime option from08:00, ending before dusk.",
-      "price_text": "£6/hour weekday after17:00 and weekends; weekday08:00–17:00 free.",
+      "evening_notes": "Dusk-limited hire; only when daylight and closing time permit a full hour after 19:00.",
+      "weekend_notes": "Daytime option from 08:00, ending before dusk.",
+      "price_text": "£6/hour weekday after 17:00 and weekends; weekday 08:00–17:00 free.",
       "advance_days": null,
       "release_time": null,
       "release_rule": null,
@@ -4203,7 +4691,9 @@
       "notes": null,
       "id": "enfield-pymmes-park",
       "name": "Pymmes Park",
-      "borough": "Enfield"
+      "borough": "Enfield",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Coldharbour Estate",
@@ -4238,7 +4728,9 @@
       "notes": null,
       "id": "greenwich-altash-gardens",
       "name": "Altash Gardens",
-      "borough": "Greenwich"
+      "borough": "Greenwich",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Blackheath",
@@ -4273,7 +4765,9 @@
       "notes": null,
       "id": "greenwich-blackheath-chesterfield-walk",
       "name": "Blackheath (Chesterfield Walk)",
-      "borough": "Greenwich"
+      "borough": "Greenwich",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Abbey Wood",
@@ -4308,7 +4802,9 @@
       "notes": null,
       "id": "greenwich-bostall-gardens",
       "name": "Bostall Gardens",
-      "borough": "Greenwich"
+      "borough": "Greenwich",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Charlton",
@@ -4343,7 +4839,9 @@
       "notes": "Hornfair Park courts and Charlton Lido are one venue. Standard-court count not separated reliably from mini courts.",
       "id": "greenwich-charlton-lido-and-lifestyle-club-hornfair-park",
       "name": "Charlton Lido and Lifestyle Club (Hornfair Park)",
-      "borough": "Greenwich"
+      "borough": "Greenwich",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Eltham",
@@ -4378,7 +4876,9 @@
       "notes": "Floodlights require a physical smartcard and credit; arrange collection with operator. Count covers current hard-court hire.",
       "id": "greenwich-eltham-park-south",
       "name": "Eltham Park South",
-      "borough": "Greenwich"
+      "borough": "Greenwich",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Mottingham",
@@ -4413,7 +4913,9 @@
       "notes": "Retained from council inventory; current bookability and condition unconfirmed.",
       "id": "greenwich-fairy-hill-park",
       "name": "Fairy Hill Park",
-      "borough": "Greenwich"
+      "borough": "Greenwich",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Greenwich",
@@ -4452,7 +4954,9 @@
       "notes": "Royal Parks took operations in-house from February 2026; do not use obsolete Park Sports rules.",
       "id": "greenwich-greenwich-park",
       "name": "Greenwich Park",
-      "borough": "Greenwich"
+      "borough": "Greenwich",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Kidbrooke",
@@ -4487,7 +4991,9 @@
       "notes": null,
       "id": "greenwich-kidbrooke-green",
       "name": "Kidbrooke Green",
-      "borough": "Greenwich"
+      "borough": "Greenwich",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Charlton",
@@ -4522,7 +5028,9 @@
       "notes": null,
       "id": "greenwich-maryon-park",
       "name": "Maryon Park",
-      "borough": "Greenwich"
+      "borough": "Greenwich",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Plumstead",
@@ -4557,7 +5065,9 @@
       "notes": null,
       "id": "greenwich-plumstead-common",
       "name": "Plumstead Common",
-      "borough": "Greenwich"
+      "borough": "Greenwich",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Shooters Hill / Red Lion Lane",
@@ -4588,7 +5098,91 @@
       "notes": null,
       "id": "greenwich-shooters-hill-sixth-form-college",
       "name": "Shooters Hill Sixth Form College",
-      "borough": "Greenwich"
+      "borough": "Greenwich",
+      "sport": "tennis",
+      "slot_minutes": 60
+    },
+    {
+      "access": "pay_and_play",
+      "indoor_courts": 2,
+      "floodlit_courts": null,
+      "lighting": "indoor",
+      "hours_text": "Centre Mon–Fri 06:00–22:00; weekends 08:00–20:00. Confirm squash-specific hours.",
+      "evening_assessment": "unknown",
+      "evening_notes": "Court-specific 19:00–21:00 slots need checking.",
+      "weekend_notes": "Weekend daytime court hire; check live slots.",
+      "price_text": "Nonmember adult £17.20 peak or £13.30 off-peak; duration needs checking.",
+      "slot_minutes": null,
+      "advance_days": 6,
+      "release_time": null,
+      "release_rule": null,
+      "release_status": "partial",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "squash-greenwich-woolwich-waves",
+      "sport": "squash",
+      "name": "Woolwich Waves",
+      "borough": "Greenwich",
+      "area": "Woolwich",
+      "operator": "Better",
+      "booking_url": "https://www.better.org.uk/leisure-centre/london/greenwich/woolwich-waves/squash",
+      "courts_total": 2,
+      "sources": [
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/greenwich/woolwich-waves/squash",
+          "supports": "Current operator court-hire information, count and hours where published."
+        },
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/greenwich/woolwich-waves/facilities",
+          "supports": "Two courts; published six-day advance reservation window."
+        },
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/greenwich/woolwich-waves",
+          "supports": "Current centre hours."
+        },
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/greenwich/woolwich-waves/prices",
+          "supports": "Published adult squash rates."
+        }
+      ],
+      "geo_query": "Woolwich Waves, 49 Woolwich New Road, London SE18 6EU"
+    },
+    {
+      "access": "pay_and_play",
+      "indoor_courts": 4,
+      "floodlit_courts": null,
+      "lighting": "indoor",
+      "hours_text": "Centre Mon–Fri 06:00–22:00; confirm squash-specific hours.",
+      "evening_assessment": "unknown",
+      "evening_notes": "Court-specific 19:00–21:00 slots need checking.",
+      "weekend_notes": "Weekend daytime court hire; check live slots.",
+      "price_text": null,
+      "slot_minutes": null,
+      "advance_days": null,
+      "release_time": null,
+      "release_rule": null,
+      "release_status": "unknown",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "squash-hackney-britannia",
+      "sport": "squash",
+      "name": "Britannia Leisure Centre",
+      "borough": "Hackney",
+      "area": "Shoreditch",
+      "operator": "Better",
+      "booking_url": "https://www.better.org.uk/leisure-centre/london/hackney/britannia-leisure-centre/squash",
+      "courts_total": 4,
+      "sources": [
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/hackney/britannia-leisure-centre/squash",
+          "supports": "Current operator court-hire information, count and hours where published."
+        },
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/hackney/britannia-leisure-centre",
+          "supports": "Current centre hours; court page warns additional players pay admission."
+        }
+      ],
+      "geo_query": "Britannia Leisure Centre, Pitfield Street, London N1 5FT"
     },
     {
       "area": null,
@@ -4623,7 +5217,50 @@
       "notes": null,
       "id": "hackney-britannia-leisure-centre-rooftop-courts",
       "name": "Britannia Leisure Centre rooftop courts",
-      "borough": "Hackney"
+      "borough": "Hackney",
+      "sport": "tennis",
+      "slot_minutes": 60
+    },
+    {
+      "access": "pay_and_play",
+      "indoor_courts": 2,
+      "floodlit_courts": null,
+      "lighting": "indoor",
+      "hours_text": "Centre Mon–Fri 06:00–22:00; weekends Sat 07:00–20:00, Sun 07:00–18:00. Confirm squash-specific hours.",
+      "evening_assessment": "unknown",
+      "evening_notes": "Court-specific 19:00–21:00 slots need checking.",
+      "weekend_notes": "Weekend daytime court hire; check live slots.",
+      "price_text": "Nonmember adult £12.25 per 40 minutes; PAYG member £8.85.",
+      "slot_minutes": 40,
+      "advance_days": 6,
+      "release_time": null,
+      "release_rule": null,
+      "release_status": "partial",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "squash-hackney-clissold",
+      "sport": "squash",
+      "name": "Clissold Leisure Centre",
+      "borough": "Hackney",
+      "area": "Stoke Newington",
+      "operator": "Better",
+      "booking_url": "https://www.better.org.uk/leisure-centre/london/hackney/clissold-leisure-centre/facilities",
+      "courts_total": 2,
+      "sources": [
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/hackney/clissold-leisure-centre/facilities",
+          "supports": "Current operator court-hire information, count and hours where published."
+        },
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/hackney/clissold-leisure-centre",
+          "supports": "Current centre hours."
+        },
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/hackney/clissold-leisure-centre/prices",
+          "supports": "Published adult 40-minute squash rates."
+        }
+      ],
+      "geo_query": "Clissold Leisure Centre, 63 Clissold Road, London N16 9EX"
     },
     {
       "area": null,
@@ -4659,7 +5296,9 @@
       "id": "hackney-clissold-park",
       "name": "Clissold Park",
       "borough": "Hackney",
-      "policy_id": "hackney-tennis"
+      "policy_id": "hackney-tennis",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -4695,7 +5334,9 @@
       "id": "hackney-hackney-downs",
       "name": "Hackney Downs",
       "borough": "Hackney",
-      "policy_id": "hackney-tennis"
+      "policy_id": "hackney-tennis",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -4726,7 +5367,9 @@
       "notes": "Shared games area supports tennis. Exact court count, lighting and venue-specific timetable need confirmation.",
       "id": "hackney-haggerston-park",
       "name": "Haggerston Park",
-      "borough": "Hackney"
+      "borough": "Hackney",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -4762,7 +5405,9 @@
       "id": "hackney-joe-white-gardens-aske-gardens",
       "name": "Joe White Gardens (Aske Gardens)",
       "borough": "Hackney",
-      "policy_id": "hackney-tennis"
+      "policy_id": "hackney-tennis",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -4798,7 +5443,9 @@
       "id": "hackney-london-fields",
       "name": "London Fields",
       "borough": "Hackney",
-      "policy_id": "hackney-tennis"
+      "policy_id": "hackney-tennis",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -4834,7 +5481,9 @@
       "id": "hackney-millfields-park",
       "name": "Millfields Park",
       "borough": "Hackney",
-      "policy_id": "hackney-tennis"
+      "policy_id": "hackney-tennis",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -4870,7 +5519,9 @@
       "id": "hackney-spring-hill",
       "name": "Spring Hill",
       "borough": "Hackney",
-      "policy_id": "hackney-tennis"
+      "policy_id": "hackney-tennis",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -4901,7 +5552,9 @@
       "notes": "Limit play to one hour if others wait. A 2024 council announcement proposed booking gates; current operator page still says no booking system.",
       "id": "hackney-springfield-park",
       "name": "Springfield Park",
-      "borough": "Hackney"
+      "borough": "Hackney",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Fulham",
@@ -4932,7 +5585,9 @@
       "notes": "Public booking via Playtomic. Current operator reports 14 courts.",
       "id": "hammersmith-and-fulham-bishops-park",
       "name": "Bishops Park",
-      "borough": "Hammersmith and Fulham"
+      "borough": "Hammersmith and Fulham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Brook Green",
@@ -4963,7 +5618,9 @@
       "notes": "Free Friends registration required. Maximum three bookings per seven days. Two mini courts excluded.",
       "id": "hammersmith-and-fulham-brook-green-tennis",
       "name": "Brook Green Tennis",
-      "borough": "Hammersmith and Fulham"
+      "borough": "Hammersmith and Fulham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Fulham",
@@ -4998,7 +5655,49 @@
       "notes": null,
       "id": "hammersmith-and-fulham-eel-brook-common",
       "name": "Eel Brook Common",
-      "borough": "Hammersmith and Fulham"
+      "borough": "Hammersmith and Fulham",
+      "sport": "tennis",
+      "slot_minutes": 60
+    },
+    {
+      "access": "pay_and_play",
+      "indoor_courts": 3,
+      "floodlit_courts": null,
+      "lighting": "indoor",
+      "hours_text": "Centre Mon–Fri 06:30–22:00; weekends 08:00–17:00. Confirm court-specific hours.",
+      "evening_assessment": "suitable",
+      "evening_notes": "Three indoor pay-as-you-go courts; confirm an evening slot in Better.",
+      "weekend_notes": "Weekend centre hours are 08:00–17:00; check squash slots.",
+      "price_text": "Published nonmember adult squash: £20.25 peak, £15.90 off-peak; session length needs checking.",
+      "slot_minutes": null,
+      "advance_days": null,
+      "release_time": null,
+      "release_rule": null,
+      "release_status": "unknown",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "squash-hammersmith-fitness",
+      "sport": "squash",
+      "name": "Hammersmith Fitness and Squash Centre",
+      "borough": "Hammersmith and Fulham",
+      "area": "Hammersmith",
+      "operator": "Better",
+      "booking_url": "https://www.better.org.uk/leisure-centre/london/hammersmith-and-fulham/hammersmith-fitness-and-squash-centre/squash",
+      "courts_total": 3,
+      "sources": [
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/hammersmith-and-fulham/hammersmith-fitness-and-squash-centre/squash",
+          "supports": "Three squash courts and casual pay-as-you-go hire."
+        },
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/hammersmith-and-fulham/hammersmith-fitness-and-squash-centre",
+          "supports": "Current centre hours."
+        },
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/hammersmith-and-fulham/hammersmith-fitness-and-squash-centre/prices",
+          "supports": "Published nonmember squash rates."
+        }
+      ]
     },
     {
       "area": "White City",
@@ -5029,7 +5728,9 @@
       "notes": "Drop-in courts; no reservation.",
       "id": "hammersmith-and-fulham-hammersmith-park",
       "name": "Hammersmith Park",
-      "borough": "Hammersmith and Fulham"
+      "borough": "Hammersmith and Fulham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Fulham",
@@ -5064,7 +5765,9 @@
       "notes": null,
       "id": "hammersmith-and-fulham-hurlingham-park",
       "name": "Hurlingham Park",
-      "borough": "Hammersmith and Fulham"
+      "borough": "Hammersmith and Fulham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Fulham",
@@ -5095,7 +5798,9 @@
       "notes": "2022 council consultation proposes refurbishing one tennis court with free community bookings. Completion and current tennis access unconfirmed.",
       "id": "hammersmith-and-fulham-lillie-road-recreation-ground",
       "name": "Lillie Road Recreation Ground",
-      "borough": "Hammersmith and Fulham"
+      "borough": "Hammersmith and Fulham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Wormwood Scrubs",
@@ -5130,7 +5835,9 @@
       "notes": null,
       "id": "hammersmith-and-fulham-linford-christie-outdoor-sports-centre",
       "name": "Linford Christie Outdoor Sports Centre",
-      "borough": "Hammersmith and Fulham"
+      "borough": "Hammersmith and Fulham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Fulham",
@@ -5161,7 +5868,9 @@
       "notes": "Council directory directs public bookings to Fulham Pools, 020 7471 0450. Two mini courts excluded.",
       "id": "hammersmith-and-fulham-normand-park-fulham-pools",
       "name": "Normand Park / Fulham Pools",
-      "borough": "Hammersmith and Fulham"
+      "borough": "Hammersmith and Fulham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Hammersmith",
@@ -5196,7 +5905,9 @@
       "notes": null,
       "id": "hammersmith-and-fulham-ravenscourt-park",
       "name": "Ravenscourt Park",
-      "borough": "Hammersmith and Fulham"
+      "borough": "Hammersmith and Fulham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Fulham",
@@ -5231,7 +5942,9 @@
       "notes": "Four dedicated courts plus three in a multiuse area.",
       "id": "hammersmith-and-fulham-south-park",
       "name": "South Park",
-      "borough": "Hammersmith and Fulham"
+      "borough": "Hammersmith and Fulham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Lordship Lane, N17 8NS",
@@ -5267,7 +5980,9 @@
       "id": "haringey-bruce-castle-park",
       "name": "Bruce Castle Park",
       "borough": "Haringey",
-      "policy_id": "pavilion-tennis"
+      "policy_id": "pavilion-tennis",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Perth Road, N22 5EA",
@@ -5303,7 +6018,9 @@
       "id": "haringey-chapmans-green",
       "name": "Chapmans Green",
       "borough": "Haringey",
-      "policy_id": "haringey-six-parks"
+      "policy_id": "haringey-six-parks",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "St Ann's Road, N15 5AZ",
@@ -5339,7 +6056,9 @@
       "id": "haringey-chestnuts-park",
       "name": "Chestnuts Park",
       "borough": "Haringey",
-      "policy_id": "haringey-six-parks"
+      "policy_id": "haringey-six-parks",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Park View Road, N17 9AU",
@@ -5375,7 +6094,9 @@
       "id": "haringey-down-lane-park",
       "name": "Down Lane Park",
       "borough": "Haringey",
-      "policy_id": "haringey-six-parks"
+      "policy_id": "haringey-six-parks",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Downhills Park Road, N17 6PD",
@@ -5411,7 +6132,9 @@
       "id": "haringey-downhills-park",
       "name": "Downhills Park",
       "borough": "Haringey",
-      "policy_id": "haringey-six-parks"
+      "policy_id": "haringey-six-parks",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Finsbury Park",
@@ -5442,7 +6165,9 @@
       "notes": "Total full-size count not settled by reviewed current booking page.",
       "id": "haringey-finsbury-park",
       "name": "Finsbury Park",
-      "borough": "Haringey"
+      "borough": "Haringey",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Crowland Road, N15 6EB",
@@ -5473,7 +6198,9 @@
       "notes": "Two tennis markings within a shared football/netball games area; not two dedicated tennis courts.",
       "id": "haringey-markfield-park",
       "name": "Markfield Park",
-      "borough": "Haringey"
+      "borough": "Haringey",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "White Hart Lane, Wood Green, N22 5QW",
@@ -5504,7 +6231,9 @@
       "notes": "Council page text available through indexed search; direct fetch returned 403.",
       "id": "haringey-new-river-sport-and-fitness",
       "name": "New River Sport and Fitness",
-      "borough": "Haringey"
+      "borough": "Haringey",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Albert Road, N22 7XL",
@@ -5540,7 +6269,9 @@
       "id": "haringey-o-r-tambo-recreation-ground-albert-road-rec",
       "name": "O.R. Tambo Recreation Ground (Albert Road Rec)",
       "borough": "Haringey",
-      "policy_id": "pavilion-tennis"
+      "policy_id": "pavilion-tennis",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Middle Lane, Hornsey, N8 7LA",
@@ -5576,7 +6307,9 @@
       "id": "haringey-priory-park",
       "name": "Priory Park",
       "borough": "Haringey",
-      "policy_id": "haringey-six-parks"
+      "policy_id": "haringey-six-parks",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Mayfield Road, N8 9LP",
@@ -5612,7 +6345,9 @@
       "id": "haringey-stationers-park",
       "name": "Stationers Park",
       "borough": "Haringey",
-      "policy_id": "haringey-six-parks"
+      "policy_id": "haringey-six-parks",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Wealdstone",
@@ -5647,7 +6382,9 @@
       "notes": "Operator tariff supersedes council's older £5.",
       "id": "harrow-byron-recreation-ground",
       "name": "Byron Recreation Ground",
-      "borough": "Harrow"
+      "borough": "Harrow",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Stanmore",
@@ -5682,7 +6419,9 @@
       "notes": "Operator tariff supersedes council's older £5.",
       "id": "harrow-centenary-park",
       "name": "Centenary Park",
-      "borough": "Harrow"
+      "borough": "Harrow",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Edgware",
@@ -5717,7 +6456,9 @@
       "notes": "Operator tariff supersedes council's older £5.",
       "id": "harrow-chandos-recreation-ground",
       "name": "Chandos Recreation Ground",
-      "borough": "Harrow"
+      "borough": "Harrow",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Harrow",
@@ -5752,7 +6493,9 @@
       "notes": "Operator tariff supersedes council's older £5.",
       "id": "harrow-harrow-recreation-ground",
       "name": "Harrow Recreation Ground",
-      "borough": "Harrow"
+      "borough": "Harrow",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Harrow Weald",
@@ -5787,7 +6530,9 @@
       "notes": "Operator tariff supersedes council's older £5.",
       "id": "harrow-harrow-weald-recreation-ground",
       "name": "Harrow Weald Recreation Ground",
-      "borough": "Harrow"
+      "borough": "Harrow",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Harrow",
@@ -5822,7 +6567,9 @@
       "notes": "Operator tariff supersedes council's older £5.",
       "id": "harrow-headstone-manor-park",
       "name": "Headstone Manor Park",
-      "borough": "Harrow"
+      "borough": "Harrow",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Pinner",
@@ -5857,7 +6604,9 @@
       "notes": "Operator tariff supersedes council's older £5.",
       "id": "harrow-montesole-playing-fields",
       "name": "Montesole Playing Fields",
-      "borough": "Harrow"
+      "borough": "Harrow",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Pinner",
@@ -5892,7 +6641,9 @@
       "notes": "Operator tariff supersedes council's older £5.",
       "id": "harrow-pinner-village-gardens",
       "name": "Pinner Village Gardens",
-      "borough": "Harrow"
+      "borough": "Harrow",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Queensbury",
@@ -5927,7 +6678,9 @@
       "notes": "Operator tariff supersedes council's older £5.",
       "id": "harrow-queensbury-park",
       "name": "Queensbury Park",
-      "borough": "Harrow"
+      "borough": "Harrow",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "North Harrow",
@@ -5962,7 +6715,9 @@
       "notes": "Operator tariff supersedes council's older £5.",
       "id": "harrow-rayners-mead",
       "name": "Rayners Mead",
-      "borough": "Harrow"
+      "borough": "Harrow",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "South Harrow",
@@ -5997,7 +6752,9 @@
       "notes": "Operator tariff supersedes council's older £5.",
       "id": "harrow-roxeth-recreation-ground",
       "name": "Roxeth Recreation Ground",
-      "borough": "Harrow"
+      "borough": "Harrow",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "West Harrow",
@@ -6032,7 +6789,9 @@
       "notes": "Operator tariff supersedes council's older £5.",
       "id": "harrow-west-harrow-recreation-ground",
       "name": "West Harrow Recreation Ground",
-      "borough": "Harrow"
+      "borough": "Harrow",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Harold Wood",
@@ -6067,7 +6826,9 @@
       "notes": null,
       "id": "havering-harold-wood-park",
       "name": "Harold Wood Park",
-      "borough": "Havering"
+      "borough": "Havering",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Hornchurch",
@@ -6102,7 +6863,9 @@
       "notes": null,
       "id": "havering-harrow-lodge-park",
       "name": "Harrow Lodge Park",
-      "borough": "Havering"
+      "borough": "Havering",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Hornchurch",
@@ -6137,7 +6900,9 @@
       "notes": null,
       "id": "havering-haynes-park",
       "name": "Haynes Park",
-      "borough": "Havering"
+      "borough": "Havering",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Hornchurch",
@@ -6172,7 +6937,9 @@
       "notes": null,
       "id": "havering-hylands-park",
       "name": "Hylands Park",
-      "borough": "Havering"
+      "borough": "Havering",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Romford",
@@ -6207,7 +6974,9 @@
       "notes": null,
       "id": "havering-lodge-farm-park",
       "name": "Lodge Farm Park",
-      "borough": "Havering"
+      "borough": "Havering",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Noak Hill / Romford",
@@ -6238,7 +7007,9 @@
       "notes": "Casual PAYG available with a free Everyone Active card.",
       "id": "havering-noak-hill-sports-complex",
       "name": "Noak Hill Sports Complex",
-      "borough": "Havering"
+      "borough": "Havering",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Romford",
@@ -6273,7 +7044,9 @@
       "notes": null,
       "id": "havering-raphael-park",
       "name": "Raphael Park",
-      "borough": "Havering"
+      "borough": "Havering",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Romford",
@@ -6308,7 +7081,9 @@
       "notes": null,
       "id": "havering-rise-park",
       "name": "Rise Park",
-      "borough": "Havering"
+      "borough": "Havering",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Rainham",
@@ -6343,7 +7118,9 @@
       "notes": null,
       "id": "havering-spring-farm-park",
       "name": "Spring Farm Park",
-      "borough": "Havering"
+      "borough": "Havering",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Upminster",
@@ -6378,7 +7155,9 @@
       "notes": null,
       "id": "havering-upminster-park",
       "name": "Upminster Park",
-      "borough": "Havering"
+      "borough": "Havering",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Uxbridge",
@@ -6417,7 +7196,9 @@
       "notes": "Community hire confirmed; lighting, hours and release rule need verification.",
       "id": "hillingdon-brunel-sports-park",
       "name": "Brunel Sports Park",
-      "borough": "Hillingdon"
+      "borough": "Hillingdon",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Eastcote",
@@ -6452,7 +7233,9 @@
       "notes": "Four mini courts excluded from count.",
       "id": "hillingdon-cavendish-recreation-ground",
       "name": "Cavendish Recreation Ground",
-      "borough": "Hillingdon"
+      "borough": "Hillingdon",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Ruislip",
@@ -6487,7 +7270,9 @@
       "notes": null,
       "id": "hillingdon-churchfield-gardens",
       "name": "Churchfield Gardens",
-      "borough": "Hillingdon"
+      "borough": "Hillingdon",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Uxbridge",
@@ -6522,7 +7307,9 @@
       "notes": null,
       "id": "hillingdon-fassnidge-park",
       "name": "Fassnidge Park",
-      "borough": "Hillingdon"
+      "borough": "Hillingdon",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Harmondsworth",
@@ -6557,7 +7344,9 @@
       "notes": null,
       "id": "hillingdon-harmondsworth-recreation-ground",
       "name": "Harmondsworth Recreation Ground",
-      "borough": "Hillingdon"
+      "borough": "Hillingdon",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Hillingdon",
@@ -6592,7 +7381,9 @@
       "notes": null,
       "id": "hillingdon-hillingdon-court-park",
       "name": "Hillingdon Court Park",
-      "borough": "Hillingdon"
+      "borough": "Hillingdon",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Harefield",
@@ -6627,7 +7418,9 @@
       "notes": null,
       "id": "hillingdon-moorhall-recreation-ground",
       "name": "Moorhall Recreation Ground",
-      "borough": "Hillingdon"
+      "borough": "Hillingdon",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Northwood",
@@ -6658,7 +7451,9 @@
       "notes": "Council link redirects to sign-in; directory used.",
       "id": "hillingdon-northwood-recreation-ground",
       "name": "Northwood Recreation Ground",
-      "borough": "Hillingdon"
+      "borough": "Hillingdon",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Hayes",
@@ -6693,7 +7488,9 @@
       "notes": null,
       "id": "hillingdon-rosedale-park",
       "name": "Rosedale Park",
-      "borough": "Hillingdon"
+      "borough": "Hillingdon",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Ickenham",
@@ -6728,7 +7525,9 @@
       "notes": "Booking URL returned 403 during research.",
       "id": "hillingdon-swakeleys-park",
       "name": "Swakeleys Park",
-      "borough": "Hillingdon"
+      "borough": "Hillingdon",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "West Drayton",
@@ -6763,7 +7562,9 @@
       "notes": null,
       "id": "hillingdon-the-closes-recreation-ground",
       "name": "The Closes Recreation Ground",
-      "borough": "Hillingdon"
+      "borough": "Hillingdon",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Cranford",
@@ -6794,7 +7595,9 @@
       "notes": "Public park directory confirms courts; current access/booking conditions need checking.",
       "id": "hounslow-avenue-park",
       "name": "Avenue Park",
-      "borough": "Hounslow"
+      "borough": "Hounslow",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Hounslow",
@@ -6825,7 +7628,9 @@
       "notes": "Public park directory confirms courts; current access/booking conditions need checking.",
       "id": "hounslow-beaversfield-park",
       "name": "Beaversfield Park",
-      "borough": "Hounslow"
+      "borough": "Hounslow",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Bedfont",
@@ -6856,7 +7661,9 @@
       "notes": "Public park directory confirms courts; current access/booking conditions need checking.",
       "id": "hounslow-bedfont-recreation-ground",
       "name": "Bedfont Recreation Ground",
-      "borough": "Hounslow"
+      "borough": "Hounslow",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Brentford",
@@ -6887,7 +7694,9 @@
       "notes": "Public park directory confirms courts; current access/booking conditions need checking.",
       "id": "hounslow-brent-lea",
       "name": "Brent Lea",
-      "borough": "Hounslow"
+      "borough": "Hounslow",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Chiswick",
@@ -6922,7 +7731,9 @@
       "notes": "Four dedicated floodlit pickleball courts excluded from tennis count.",
       "id": "hounslow-chiswick-house-and-gardens-tennis",
       "name": "Chiswick House and Gardens Tennis",
-      "borough": "Hounslow"
+      "borough": "Hounslow",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Chiswick",
@@ -6957,7 +7768,9 @@
       "notes": "Indoor count conflicts: current LTA seven versus 2024 operator five. Site fetch unavailable; totals left unconfirmed.",
       "id": "hounslow-dukes-meadows-tennis",
       "name": "Dukes Meadows Tennis",
-      "borough": "Hounslow"
+      "borough": "Hounslow",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Feltham",
@@ -6988,7 +7801,9 @@
       "notes": "Public park directory confirms courts; current access/booking conditions need checking.",
       "id": "hounslow-feltham-park",
       "name": "Feltham Park",
-      "borough": "Hounslow"
+      "borough": "Hounslow",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Gunnersbury",
@@ -7027,7 +7842,9 @@
       "notes": "Also listed in Ealing directories; one physical venue.",
       "id": "hounslow-gunnersbury-park-sports-hub",
       "name": "Gunnersbury Park Sports Hub",
-      "borough": "Hounslow"
+      "borough": "Hounslow",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Hanworth",
@@ -7062,7 +7879,9 @@
       "notes": "Council January 2026 describes four tennis courts and plans to convert two to padel in spring/summer 2027; current works status unverified.",
       "id": "hounslow-hanworth-air-park-leisure-centre-library",
       "name": "Hanworth Air Park Leisure Centre & Library",
-      "borough": "Hounslow"
+      "borough": "Hounslow",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Heston",
@@ -7093,7 +7912,9 @@
       "notes": "Public park directory confirms courts; current access/booking conditions need checking.",
       "id": "hounslow-heston-park",
       "name": "Heston Park",
-      "borough": "Hounslow"
+      "borough": "Hounslow",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Isleworth",
@@ -7128,7 +7949,9 @@
       "notes": "Council January 2026 describes four tennis courts and plans to convert two to padel in spring/summer 2027; current works status unverified.",
       "id": "hounslow-isleworth-leisure-centre-library",
       "name": "Isleworth Leisure Centre & Library",
-      "borough": "Hounslow"
+      "borough": "Hounslow",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Isleworth",
@@ -7159,7 +7982,9 @@
       "notes": "Public park directory confirms courts; current access/booking conditions need checking.",
       "id": "hounslow-jersey-gardens",
       "name": "Jersey Gardens",
-      "borough": "Hounslow"
+      "borough": "Hounslow",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Hounslow",
@@ -7190,7 +8015,9 @@
       "notes": "Free account required; one hour per person per day.",
       "id": "hounslow-lampton-park",
       "name": "Lampton Park",
-      "borough": "Hounslow"
+      "borough": "Hounslow",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Chiswick Common",
@@ -7221,7 +8048,46 @@
       "notes": "Current operator count used; older directories list more courts before padel conversion. Book via Playtomic.",
       "id": "hounslow-rocks-lane-chiswick",
       "name": "Rocks Lane Chiswick",
-      "borough": "Hounslow"
+      "borough": "Hounslow",
+      "sport": "tennis",
+      "slot_minutes": 60
+    },
+    {
+      "access": "pay_and_play",
+      "indoor_courts": 4,
+      "floodlit_courts": null,
+      "lighting": "indoor",
+      "hours_text": "Court hire Mon–Fri 09:00–22:00; weekends 09:00–18:00.",
+      "evening_assessment": "suitable",
+      "evening_notes": "Indoor court hire during the 19:00–21:00 window; check live slots.",
+      "weekend_notes": "Weekend daytime court hire; check live slots.",
+      "price_text": "Nonmember adult £19.20 peak and off-peak; price page does not state court duration.",
+      "slot_minutes": null,
+      "advance_days": null,
+      "release_time": null,
+      "release_rule": null,
+      "release_status": "unknown",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "squash-islington-finsbury",
+      "sport": "squash",
+      "name": "Finsbury Leisure Centre",
+      "borough": "Islington",
+      "area": "Old Street",
+      "operator": "Better",
+      "booking_url": "https://www.better.org.uk/leisure-centre/london/islington/finsbury/squash",
+      "courts_total": 4,
+      "sources": [
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/islington/finsbury/squash",
+          "supports": "Current operator court-hire information, count and hours where published."
+        },
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/islington/finsbury/prices",
+          "supports": "Published adult squash prices."
+        }
+      ],
+      "geo_query": "Finsbury Leisure Centre, Norman Street, London EC1V 3PU"
     },
     {
       "area": "Highbury",
@@ -7233,14 +8099,14 @@
       "indoor_courts": 0,
       "floodlit_courts": 11,
       "lighting": "floodlit",
-      "hours_text": "Daily08:00–21:00.",
+      "hours_text": "Daily 08:00–21:00.",
       "evening_assessment": "suitable",
-      "evening_notes": "Published floodlit courts and21:00 close fit the preferred session.",
-      "weekend_notes": "Daytime hire within08:00–21:00.",
+      "evening_notes": "Published floodlit courts and 21:00 close fit the preferred session.",
+      "weekend_notes": "Daytime hire within 08:00–21:00.",
       "price_text": null,
       "advance_days": null,
       "release_time": null,
-      "release_rule": "Account-tier and local release rules need checking; general Better terms are not a verified venue rule.",
+      "release_rule": "Check Better for this court's booking window.",
       "release_status": "unknown",
       "checked_on": "2026-09-14",
       "sources": [
@@ -7253,10 +8119,49 @@
           "supports": "General tier-dependent rules, local exceptions"
         }
       ],
-      "notes": "User-supplied calendar is dated15Sep2026; not interactively verified. The URL uses Islington Tennis Centre as booking location but activity is Highbury Fields.",
+      "notes": "User-supplied calendar is dated 15 Sep 2026; not interactively verified. The URL uses Islington Tennis Centre as booking location but activity is Highbury Fields.",
       "id": "islington-highbury-fields",
       "name": "Highbury Fields",
-      "borough": "Islington"
+      "borough": "Islington",
+      "sport": "tennis",
+      "slot_minutes": 60
+    },
+    {
+      "access": "pay_and_play",
+      "indoor_courts": 2,
+      "floodlit_courts": null,
+      "lighting": "indoor",
+      "hours_text": "Court hire Mon–Fri 06:40–21:20; weekends 09:00–17:40.",
+      "evening_assessment": "suitable",
+      "evening_notes": "Indoor court hire during the 19:00–21:00 window; check live slots.",
+      "weekend_notes": "Weekend daytime court hire; check live slots.",
+      "price_text": "Nonmember adult £19.20; booking duration not confirmed by price page.",
+      "slot_minutes": null,
+      "advance_days": null,
+      "release_time": null,
+      "release_rule": null,
+      "release_status": "unknown",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "squash-islington-ironmonger-row",
+      "sport": "squash",
+      "name": "Ironmonger Row Baths",
+      "borough": "Islington",
+      "area": "Old Street",
+      "operator": "Better",
+      "booking_url": "https://www.better.org.uk/leisure-centre/london/islington/ironmonger-row-baths/squash",
+      "courts_total": 2,
+      "sources": [
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/islington/ironmonger-row-baths/squash",
+          "supports": "Current operator court-hire information, count and hours where published."
+        },
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/islington/ironmonger-row-baths/prices",
+          "supports": "Published adult nonmember squash rate."
+        }
+      ],
+      "geo_query": "Ironmonger Row Baths, 1 Norman Street, London EC1V 3AA"
     },
     {
       "area": "Market Road",
@@ -7268,14 +8173,14 @@
       "indoor_courts": 6,
       "floodlit_courts": 2,
       "lighting": "floodlit",
-      "hours_text": "Outdoor courts: Mon–Thu07:00–23:00; Fri–Sun07:00–22:00 (displayed week07Sep2026).",
+      "hours_text": "Outdoor courts: Mon–Thu 07:00–23:00; Fri–Sun 07:00–22:00 (displayed week 07 Sep 2026).",
       "evening_assessment": "suitable",
-      "evening_notes": "Two floodlit outdoor courts fit19–21. Indoor timetable needs separate checking.",
+      "evening_notes": "Two floodlit outdoor courts fit 19–21. Indoor timetable needs separate checking.",
       "weekend_notes": "Indoor and outdoor options; check selected-date timetable.",
       "price_text": null,
       "advance_days": null,
       "release_time": null,
-      "release_rule": "Account-tier and local release rules need checking; general Better terms are not a verified venue rule.",
+      "release_rule": "Check Better for this court's booking window.",
       "release_status": "unknown",
       "checked_on": "2026-09-14",
       "sources": [
@@ -7291,7 +8196,9 @@
       "notes": "Facility suitability only; no current free-slot check.",
       "id": "islington-islington-tennis-centre",
       "name": "Islington Tennis Centre",
-      "borough": "Islington"
+      "borough": "Islington",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -7322,7 +8229,45 @@
       "notes": null,
       "id": "islington-rosemary-gardens",
       "name": "Rosemary Gardens",
-      "borough": "Islington"
+      "borough": "Islington",
+      "sport": "tennis",
+      "slot_minutes": 60
+    },
+    {
+      "access": "pay_and_play",
+      "indoor_courts": 6,
+      "floodlit_courts": null,
+      "lighting": "indoor",
+      "hours_text": "Court hire Mon–Fri 07:00–22:00; weekends 08:00–18:00.",
+      "evening_assessment": "suitable",
+      "evening_notes": "Indoor court hire during the 19:00–21:00 window; check live slots.",
+      "weekend_notes": "Weekend daytime court hire; check live slots.",
+      "price_text": "Nonmember adult £18.25 peak or £12.80 off-peak; weekend after 13:00 is off-peak.",
+      "slot_minutes": 40,
+      "advance_days": null,
+      "release_time": null,
+      "release_rule": null,
+      "release_status": "unknown",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "squash-islington-sobell",
+      "sport": "squash",
+      "name": "Sobell Leisure Centre",
+      "borough": "Islington",
+      "area": "Holloway",
+      "operator": "Better",
+      "booking_url": "https://www.better.org.uk/leisure-centre/london/islington/sobell/squash",
+      "courts_total": 6,
+      "sources": [
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/islington/sobell/squash",
+          "supports": "Current operator court-hire information, count and hours where published."
+        },
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/islington/sobell/prices",
+          "supports": "Published adult peak/off-peak squash rates."
+        }
+      ]
     },
     {
       "area": null,
@@ -7353,7 +8298,9 @@
       "notes": null,
       "id": "islington-tufnell-park-playing-fields",
       "name": "Tufnell Park Playing Fields",
-      "borough": "Islington"
+      "borough": "Islington",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "North Kensington",
@@ -7388,7 +8335,9 @@
       "notes": "Three artificial turf courts; shared football use on weekday evenings.",
       "id": "kensington-and-chelsea-avondale-park",
       "name": "Avondale Park",
-      "borough": "Kensington and Chelsea"
+      "borough": "Kensington and Chelsea",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "North Kensington",
@@ -7423,7 +8372,9 @@
       "notes": "Multiuse pitch; other sports restrict tennis times.",
       "id": "kensington-and-chelsea-emslie-horniman-pleasance-park",
       "name": "Emslie Horniman Pleasance Park",
-      "borough": "Kensington and Chelsea"
+      "borough": "Kensington and Chelsea",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Holland Park",
@@ -7462,7 +8413,46 @@
       "notes": "After-dark access via Abbotsbury Road car park with booking PIN; resident pass £21.40/year.",
       "id": "kensington-and-chelsea-holland-park",
       "name": "Holland Park",
-      "borough": "Kensington and Chelsea"
+      "borough": "Kensington and Chelsea",
+      "sport": "tennis",
+      "slot_minutes": 60
+    },
+    {
+      "access": "pay_and_play",
+      "indoor_courts": 2,
+      "floodlit_courts": null,
+      "lighting": "indoor",
+      "hours_text": "Squash courts Mon–Fri 06:40–22:00; weekends 08:00–20:00.",
+      "evening_assessment": "suitable",
+      "evening_notes": "Indoor court hire during the 19:00–21:00 window; check live slots.",
+      "weekend_notes": "Weekend daytime court hire; check live slots.",
+      "price_text": "Nonmember adult squash £14.70; price page does not explicitly attach a duration.",
+      "slot_minutes": 40,
+      "advance_days": null,
+      "release_time": null,
+      "release_rule": null,
+      "release_status": "unknown",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "squash-kensington-kensington",
+      "sport": "squash",
+      "name": "Kensington Leisure Centre",
+      "borough": "Kensington and Chelsea",
+      "area": "North Kensington",
+      "operator": "Better",
+      "booking_url": "https://www.better.org.uk/leisure-centre/london/kensington-and-chelsea/kensington-leisure-centre",
+      "courts_total": 2,
+      "sources": [
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/kensington-and-chelsea/kensington-leisure-centre",
+          "supports": "Current operator court-hire information, count and hours where published."
+        },
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/kensingtonand-chelsea/kensington-leisure-centre/prices",
+          "supports": "Published nonmember adult squash rate."
+        }
+      ],
+      "geo_query": "Kensington Leisure Centre, Silchester Road, London W10 6EX"
     },
     {
       "area": "North Kensington",
@@ -7497,7 +8487,9 @@
       "notes": null,
       "id": "kensington-and-chelsea-kensington-memorial-park",
       "name": "Kensington Memorial Park",
-      "borough": "Kensington and Chelsea"
+      "borough": "Kensington and Chelsea",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "North Kensington",
@@ -7532,7 +8524,9 @@
       "notes": "Free registration permits public court booking. Indexed operator pages are older; verify current timetable.",
       "id": "kensington-and-chelsea-westway-sports-fitness-centre",
       "name": "Westway Sports & Fitness Centre",
-      "borough": "Kensington and Chelsea"
+      "borough": "Kensington and Chelsea",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Surbiton",
@@ -7575,7 +8569,9 @@
       "notes": "Lighting evidence dated 2023; current upgrade status unconfirmed.",
       "id": "kingston-upon-thames-alexandra-recreation-ground",
       "name": "Alexandra Recreation Ground",
-      "borough": "Kingston upon Thames"
+      "borough": "Kingston upon Thames",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "New Malden",
@@ -7618,7 +8614,9 @@
       "notes": "Lighting evidence dated 2023; current upgrade status unconfirmed.",
       "id": "kingston-upon-thames-beverley-park",
       "name": "Beverley Park",
-      "borough": "Kingston upon Thames"
+      "borough": "Kingston upon Thames",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Kingston",
@@ -7653,7 +8651,9 @@
       "notes": "Historic council lease documents require public pay-and-play; current booking route not confirmed.",
       "id": "kingston-upon-thames-canbury-gardens-tennis-centre",
       "name": "Canbury Gardens Tennis Centre",
-      "borough": "Kingston upon Thames"
+      "borough": "Kingston upon Thames",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Chessington",
@@ -7688,7 +8688,9 @@
       "notes": "Retained as a public facility lead pending confirmation of tennis-specific access.",
       "id": "kingston-upon-thames-chessington-sports-centre",
       "name": "Chessington Sports Centre",
-      "borough": "Kingston upon Thames"
+      "borough": "Kingston upon Thames",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Chessington",
@@ -7719,7 +8721,9 @@
       "notes": "Public park tennis retained as a lead; court condition/count and current access terms not confirmed.",
       "id": "kingston-upon-thames-king-edward-s-recreation-ground",
       "name": "King Edward's Recreation Ground",
-      "borough": "Kingston upon Thames"
+      "borough": "Kingston upon Thames",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "New Malden",
@@ -7762,7 +8766,9 @@
       "notes": "Lighting evidence dated 2023; current upgrade status unconfirmed.",
       "id": "kingston-upon-thames-kingston-road-recreation-ground",
       "name": "Kingston Road Recreation Ground",
-      "borough": "Kingston upon Thames"
+      "borough": "Kingston upon Thames",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "New Malden",
@@ -7797,7 +8803,9 @@
       "notes": "Hire by phone 07871 098825. Lighting evidence from 2023 assessment.",
       "id": "kingston-upon-thames-manor-park",
       "name": "Manor Park",
-      "borough": "Kingston upon Thames"
+      "borough": "Kingston upon Thames",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Chessington",
@@ -7836,7 +8844,9 @@
       "notes": "Court closed for flood works in May–August 2025; no explicit reopening notice found.",
       "id": "kingston-upon-thames-sir-francis-barker-recreation-ground",
       "name": "Sir Francis Barker Recreation Ground",
-      "borough": "Kingston upon Thames"
+      "borough": "Kingston upon Thames",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Surbiton",
@@ -7871,7 +8881,9 @@
       "notes": "Public-pay-access recorded in older council lease strategy; current operator and booking not established.",
       "id": "kingston-upon-thames-victoria-recreation-ground",
       "name": "Victoria Recreation Ground",
-      "borough": "Kingston upon Thames"
+      "borough": "Kingston upon Thames",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "North Kingston",
@@ -7906,7 +8918,9 @@
       "notes": "Operator now also offers padel; reconfirm tennis count if layouts change.",
       "id": "kingston-upon-thames-ymca-hawker",
       "name": "YMCA Hawker",
-      "borough": "Kingston upon Thames"
+      "borough": "Kingston upon Thames",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Lambeth North",
@@ -7945,7 +8959,9 @@
       "notes": null,
       "id": "lambeth-archbishop-s-park",
       "name": "Archbishop's Park",
-      "borough": "Lambeth"
+      "borough": "Lambeth",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Lambeth North",
@@ -7984,7 +9000,46 @@
       "notes": "Separate booking from the park's two unlit ClubSpark courts; confirm tennis setup when booking.",
       "id": "lambeth-archbishop-s-park-multi-use-games-area",
       "name": "Archbishop's Park Multi-Use Games Area",
-      "borough": "Lambeth"
+      "borough": "Lambeth",
+      "sport": "tennis",
+      "slot_minutes": 60
+    },
+    {
+      "access": "pay_and_play",
+      "indoor_courts": null,
+      "floodlit_courts": null,
+      "lighting": "indoor",
+      "hours_text": "Centre Mon–Fri 06:00–22:00; weekends 08:00–18:00. Confirm squash-specific hours.",
+      "evening_assessment": "unknown",
+      "evening_notes": "Court-specific 19:00–21:00 slots need checking.",
+      "weekend_notes": "Weekend daytime court hire; check live slots.",
+      "price_text": null,
+      "slot_minutes": null,
+      "advance_days": null,
+      "release_time": null,
+      "release_rule": null,
+      "release_status": "unknown",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "squash-lambeth-brixton",
+      "sport": "squash",
+      "name": "Brixton Recreation Centre",
+      "borough": "Lambeth",
+      "area": "Brixton",
+      "operator": "Active Lambeth",
+      "booking_url": "https://active.lambeth.gov.uk/facilities/squash-courts/",
+      "courts_total": null,
+      "sources": [
+        {
+          "url": "https://active.lambeth.gov.uk/facilities/squash-courts/",
+          "supports": "Current operator court-hire information, count and hours where published."
+        },
+        {
+          "url": "https://active.lambeth.gov.uk/locations/brixton-recreation-centre/",
+          "supports": "Current centre hours and squash facilities."
+        }
+      ],
+      "geo_query": "Brixton Recreation Centre, 27 Brixton Station Road, London SW9 8QQ"
     },
     {
       "area": "Herne Hill",
@@ -8027,7 +9082,9 @@
       "notes": null,
       "id": "lambeth-brockwell-park",
       "name": "Brockwell Park",
-      "borough": "Lambeth"
+      "borough": "Lambeth",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Clapham",
@@ -8062,7 +9119,9 @@
       "notes": null,
       "id": "lambeth-clapham-common",
       "name": "Clapham Common",
-      "borough": "Lambeth"
+      "borough": "Lambeth",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Brixton",
@@ -8097,7 +9156,46 @@
       "notes": "Multi-sport courts; telephone 020 7738 6834 to arrange tennis hire.",
       "id": "lambeth-ferndale-community-sports-centre",
       "name": "Ferndale Community Sports Centre",
-      "borough": "Lambeth"
+      "borough": "Lambeth",
+      "sport": "tennis",
+      "slot_minutes": 60
+    },
+    {
+      "access": "pay_and_play",
+      "indoor_courts": null,
+      "floodlit_courts": null,
+      "lighting": "indoor",
+      "hours_text": "Centre Mon–Fri 06:30–22:00; weekends 09:00–17:00. Confirm squash-specific hours.",
+      "evening_assessment": "unknown",
+      "evening_notes": "Court-specific 19:00–21:00 slots need checking.",
+      "weekend_notes": "Weekend daytime court hire; check live slots.",
+      "price_text": null,
+      "slot_minutes": null,
+      "advance_days": null,
+      "release_time": null,
+      "release_rule": null,
+      "release_status": "unknown",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "squash-lambeth-flaxman",
+      "sport": "squash",
+      "name": "Flaxman Sports Centre",
+      "borough": "Lambeth",
+      "area": "Camberwell",
+      "operator": "Active Lambeth",
+      "booking_url": "https://active.lambeth.gov.uk/facilities/squash-courts/",
+      "courts_total": null,
+      "sources": [
+        {
+          "url": "https://active.lambeth.gov.uk/facilities/squash-courts/",
+          "supports": "Current operator court-hire information, count and hours where published."
+        },
+        {
+          "url": "https://active.lambeth.gov.uk/locations/flaxman/",
+          "supports": "Current centre hours and squash facilities."
+        }
+      ],
+      "geo_query": "Flaxman Sports Centre, Carew Street, London SE5 9DF"
     },
     {
       "area": "Streatham Hill",
@@ -8136,7 +9234,9 @@
       "notes": null,
       "id": "lambeth-hillside-gardens-park",
       "name": "Hillside Gardens Park",
-      "borough": "Lambeth"
+      "borough": "Lambeth",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Kennington",
@@ -8179,7 +9279,9 @@
       "notes": null,
       "id": "lambeth-kennington-park",
       "name": "Kennington Park",
-      "borough": "Lambeth"
+      "borough": "Lambeth",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Stockwell",
@@ -8214,7 +9316,9 @@
       "notes": null,
       "id": "lambeth-larkhall-park",
       "name": "Larkhall Park",
-      "borough": "Lambeth"
+      "borough": "Lambeth",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Camberwell",
@@ -8249,7 +9353,9 @@
       "notes": null,
       "id": "lambeth-myatt-s-fields-park",
       "name": "Myatt's Fields Park",
-      "borough": "Lambeth"
+      "borough": "Lambeth",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Denmark Hill",
@@ -8284,7 +9390,9 @@
       "notes": null,
       "id": "lambeth-ruskin-park",
       "name": "Ruskin Park",
-      "borough": "Lambeth"
+      "borough": "Lambeth",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Streatham",
@@ -8323,7 +9431,9 @@
       "notes": "ClubSpark booking page redirects public booking to LTA Play.",
       "id": "lambeth-streatham-common-the-rookery",
       "name": "Streatham Common (The Rookery)",
-      "borough": "Lambeth"
+      "borough": "Lambeth",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Streatham Vale",
@@ -8362,7 +9472,9 @@
       "notes": null,
       "id": "lambeth-streatham-vale-park",
       "name": "Streatham Vale Park",
-      "borough": "Lambeth"
+      "borough": "Lambeth",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Vauxhall",
@@ -8401,7 +9513,9 @@
       "notes": null,
       "id": "lambeth-vauxhall-park",
       "name": "Vauxhall Park",
-      "borough": "Lambeth"
+      "borough": "Lambeth",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Catford",
@@ -8440,7 +9554,9 @@
       "notes": null,
       "id": "lewisham-catford-bridge",
       "name": "Catford Bridge",
-      "borough": "Lewisham"
+      "borough": "Lewisham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Grove Park",
@@ -8479,7 +9595,9 @@
       "notes": null,
       "id": "lewisham-chinbrook-meadows",
       "name": "Chinbrook Meadows",
-      "borough": "Lewisham"
+      "borough": "Lewisham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Downham",
@@ -8518,7 +9636,9 @@
       "notes": "Retained from current council inventory; operator does not presently describe tennis hire.",
       "id": "lewisham-downham-health-leisure-centre",
       "name": "Downham Health & Leisure Centre",
-      "borough": "Lewisham"
+      "borough": "Lewisham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Forest Hill",
@@ -8553,7 +9673,9 @@
       "notes": "Current letting page describes a MUGA but does not confirm casual tennis setup.",
       "id": "lewisham-forest-hill-school-sports-centre",
       "name": "Forest Hill School Sports Centre",
-      "borough": "Lewisham"
+      "borough": "Lewisham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Brockley",
@@ -8592,7 +9714,9 @@
       "notes": "Council lists three courts; operator directory lists two. Count needs reconciliation.",
       "id": "lewisham-hilly-fields",
       "name": "Hilly Fields",
-      "borough": "Lewisham"
+      "borough": "Lewisham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Honor Oak Park / Brockley Rise",
@@ -8623,7 +9747,9 @@
       "notes": "Also described in older council inventory as Brockley Rise HOP; tennis count, hours and lighting unconfirmed.",
       "id": "lewisham-honor-oak-park-sports-ground",
       "name": "Honor Oak Park Sports Ground",
-      "borough": "Lewisham"
+      "borough": "Lewisham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Ladywell",
@@ -8662,7 +9788,9 @@
       "notes": "Court 5 has no floodlights.",
       "id": "lewisham-ladywell-fields",
       "name": "Ladywell Fields",
-      "borough": "Lewisham"
+      "borough": "Lewisham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Lee",
@@ -8701,7 +9829,9 @@
       "notes": null,
       "id": "lewisham-manor-house-gardens",
       "name": "Manor House Gardens",
-      "borough": "Lewisham"
+      "borough": "Lewisham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Sydenham",
@@ -8740,7 +9870,9 @@
       "notes": null,
       "id": "lewisham-mayow-park",
       "name": "Mayow Park",
-      "borough": "Lewisham"
+      "borough": "Lewisham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Hither Green",
@@ -8775,7 +9907,9 @@
       "notes": "No advance reservation published.",
       "id": "lewisham-mountsfield-park",
       "name": "Mountsfield Park",
-      "borough": "Lewisham"
+      "borough": "Lewisham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Catford",
@@ -8806,7 +9940,9 @@
       "notes": "Outside published tennis hire season on the research date. Public account booking available.",
       "id": "lewisham-st-dunstan-s-college",
       "name": "St Dunstan's College",
-      "borough": "Lewisham"
+      "borough": "Lewisham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Sydenham",
@@ -8845,7 +9981,9 @@
       "notes": null,
       "id": "lewisham-sydenham-wells-park",
       "name": "Sydenham Wells Park",
-      "borough": "Lewisham"
+      "borough": "Lewisham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "New Cross",
@@ -8884,7 +10022,49 @@
       "notes": null,
       "id": "lewisham-telegraph-hill-park",
       "name": "Telegraph Hill Park",
-      "borough": "Lewisham"
+      "borough": "Lewisham",
+      "sport": "tennis",
+      "slot_minutes": 60
+    },
+    {
+      "access": "pay_and_play",
+      "indoor_courts": 1,
+      "floodlit_courts": null,
+      "lighting": "indoor",
+      "hours_text": null,
+      "evening_assessment": "unknown",
+      "evening_notes": "One casual-hire court uses 40-minute bookings; confirm 19:00–21:00 court hours.",
+      "weekend_notes": "40-minute court bookings; confirm weekend court hours.",
+      "price_text": "Price page lists £13 nonmember or £10 PAYG adult; booking duration not explicit.",
+      "slot_minutes": 40,
+      "advance_days": null,
+      "release_time": null,
+      "release_rule": null,
+      "release_status": "unknown",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "squash-merton-canons",
+      "sport": "squash",
+      "name": "Canons Leisure Centre",
+      "borough": "Merton",
+      "area": "Mitcham",
+      "operator": "Better",
+      "booking_url": "https://www.better.org.uk/leisure-centre/london/merton/canons-leisure-centre/squash-courts",
+      "courts_total": 1,
+      "sources": [
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/merton/canons-leisure-centre/squash-courts",
+          "supports": "Two squash courts and public hire."
+        },
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/merton/canons-leisure-centre/prices",
+          "supports": "Published squash rate table; duration unstated."
+        },
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/merton/canons-leisure-centre/squash",
+          "supports": "Current squash page explicitly says one court and 40-minute hire."
+        }
+      ]
     },
     {
       "area": "West Wimbledon",
@@ -8919,7 +10099,9 @@
       "notes": null,
       "id": "merton-cottenham-park",
       "name": "Cottenham Park",
-      "borough": "Merton"
+      "borough": "Merton",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Wimbledon",
@@ -8954,7 +10136,9 @@
       "notes": null,
       "id": "merton-dundonald-recreation-ground",
       "name": "Dundonald Recreation Ground",
-      "borough": "Merton"
+      "borough": "Merton",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Mitcham",
@@ -8985,7 +10169,9 @@
       "notes": "Book via school sports facilities contact; courts also marked for netball.",
       "id": "merton-harris-academy-merton",
       "name": "Harris Academy Merton",
-      "borough": "Merton"
+      "borough": "Merton",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Wimbledon",
@@ -9016,7 +10202,9 @@
       "notes": null,
       "id": "merton-haydons-road-recreation-ground",
       "name": "Haydons Road Recreation Ground",
-      "borough": "Merton"
+      "borough": "Merton",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Raynes Park",
@@ -9051,7 +10239,9 @@
       "notes": null,
       "id": "merton-holland-garden",
       "name": "Holland Garden",
-      "borough": "Merton"
+      "borough": "Merton",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Morden",
@@ -9086,7 +10276,9 @@
       "notes": "Latest venue homepage offers free booking; older council/payment information differs.",
       "id": "merton-john-innes-park",
       "name": "John Innes Park",
-      "borough": "Merton"
+      "borough": "Merton",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Morden",
@@ -9121,7 +10313,9 @@
       "notes": "Five full-size courts plus two mini courts.",
       "id": "merton-joseph-hood-recreation-ground",
       "name": "Joseph Hood Recreation Ground",
-      "borough": "Merton"
+      "borough": "Merton",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Morden",
@@ -9156,7 +10350,9 @@
       "notes": null,
       "id": "merton-king-george-s-playing-fields",
       "name": "King George's Playing Fields",
-      "borough": "Merton"
+      "borough": "Merton",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Morden",
@@ -9191,7 +10387,9 @@
       "notes": "Confirm advance window with operator; conflicting published instructions.",
       "id": "merton-morden-park",
       "name": "Morden Park",
-      "borough": "Merton"
+      "borough": "Merton",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Morden",
@@ -9222,7 +10420,9 @@
       "notes": null,
       "id": "merton-morden-recreation-ground",
       "name": "Morden Recreation Ground",
-      "borough": "Merton"
+      "borough": "Merton",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Merton Park",
@@ -9257,7 +10457,9 @@
       "notes": "School priority during term time.",
       "id": "merton-nursery-road-playing-fields",
       "name": "Nursery Road Playing Fields",
-      "borough": "Merton"
+      "borough": "Merton",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Mitcham",
@@ -9288,7 +10490,9 @@
       "notes": null,
       "id": "merton-oakleigh-way-recreation-ground",
       "name": "Oakleigh Way Recreation Ground",
-      "borough": "Merton"
+      "borough": "Merton",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Motspur Park",
@@ -9323,7 +10527,9 @@
       "notes": null,
       "id": "merton-sir-joseph-hood-memorial-playing-fields",
       "name": "Sir Joseph Hood Memorial Playing Fields",
-      "borough": "Merton"
+      "borough": "Merton",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Mitcham",
@@ -9358,7 +10564,9 @@
       "notes": "Multi-use astroturf venue; confirm tennis markings and nets before booking.",
       "id": "merton-st-mark-s-church-of-england-academy",
       "name": "St Mark's Church of England Academy",
-      "borough": "Merton"
+      "borough": "Merton",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Mitcham",
@@ -9393,7 +10601,9 @@
       "notes": "Confirm advance window with operator; conflicting published instructions.",
       "id": "merton-tamworth-recreation-ground",
       "name": "Tamworth Recreation Ground",
-      "borough": "Merton"
+      "borough": "Merton",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Wimbledon",
@@ -9428,7 +10638,9 @@
       "notes": "Courts 1–10 astroturf floodlit; 11–20 plexipave.",
       "id": "merton-wimbledon-park",
       "name": "Wimbledon Park",
-      "borough": "Merton"
+      "borough": "Merton",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -9467,7 +10679,9 @@
       "notes": null,
       "id": "newham-canning-town-recreation-ground",
       "name": "Canning Town Recreation Ground",
-      "borough": "Newham"
+      "borough": "Newham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -9506,7 +10720,9 @@
       "notes": null,
       "id": "newham-central-park",
       "name": "Central Park",
-      "borough": "Newham"
+      "borough": "Newham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -9545,7 +10761,9 @@
       "notes": null,
       "id": "newham-gooseley-playing-fields",
       "name": "Gooseley Playing Fields",
-      "borough": "Newham"
+      "borough": "Newham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -9584,7 +10802,9 @@
       "notes": null,
       "id": "newham-hermit-road-recreation-ground",
       "name": "Hermit Road Recreation Ground",
-      "borough": "Newham"
+      "borough": "Newham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -9623,7 +10843,9 @@
       "notes": null,
       "id": "newham-little-ilford-park",
       "name": "Little Ilford Park",
-      "borough": "Newham"
+      "borough": "Newham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -9637,7 +10859,7 @@
       "lighting": "floodlit",
       "hours_text": "07:00–22:00",
       "evening_assessment": "suitable",
-      "evening_notes": "Floodlit; open until22:00.",
+      "evening_notes": "Floodlit; open until 22:00.",
       "weekend_notes": null,
       "price_text": "£6/hour + lighting; check booking fee.",
       "advance_days": null,
@@ -9662,7 +10884,9 @@
       "notes": null,
       "id": "newham-lyle-park",
       "name": "Lyle Park",
-      "borough": "Newham"
+      "borough": "Newham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -9701,7 +10925,9 @@
       "notes": null,
       "id": "newham-plashet-park",
       "name": "Plashet Park",
-      "borough": "Newham"
+      "borough": "Newham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -9740,7 +10966,45 @@
       "notes": null,
       "id": "newham-royal-victoria-gardens",
       "name": "Royal Victoria Gardens",
-      "borough": "Newham"
+      "borough": "Newham",
+      "sport": "tennis",
+      "slot_minutes": 60
+    },
+    {
+      "access": "pay_and_play",
+      "indoor_courts": 9,
+      "floodlit_courts": null,
+      "lighting": "indoor",
+      "hours_text": "Mon–Sat 08:00–23:30; Sun 08:00–22:00.",
+      "evening_assessment": "suitable",
+      "evening_notes": "Nine indoor pay-and-play courts; 60- and 90-minute bookings published.",
+      "weekend_notes": "Indoor courts open on weekends; published weekend hours are peak-priced.",
+      "price_text": "Nonmember full-court: £58.68/60 minutes peak; £88/90 minutes peak. Off-peak £48/60 or £72/90.",
+      "slot_minutes": 60,
+      "advance_days": null,
+      "release_time": null,
+      "release_rule": "Casual booking window needs checking.",
+      "release_status": "unknown",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "padel-newham-stratford",
+      "sport": "padel",
+      "name": "Stratford Padel Club",
+      "borough": "Newham",
+      "area": "Stratford High Street",
+      "operator": "Stratford Padel Club",
+      "booking_url": "https://stratfordpadelclub.org/",
+      "courts_total": 9,
+      "sources": [
+        {
+          "url": "https://stratfordpadelclub.org/",
+          "supports": "Nine indoor pay-and-play courts and hours."
+        },
+        {
+          "url": "https://stratfordpadelclub.org/pricing/",
+          "supports": "Nonmember 60- and 90-minute full-court prices."
+        }
+      ]
     },
     {
       "area": null,
@@ -9754,7 +11018,7 @@
       "lighting": "floodlit",
       "hours_text": "07:00–22:00",
       "evening_assessment": "suitable",
-      "evening_notes": "Floodlit; open until22:00.",
+      "evening_notes": "Floodlit; open until 22:00.",
       "weekend_notes": null,
       "price_text": "£6/hour + lighting; check booking fee.",
       "advance_days": null,
@@ -9783,7 +11047,9 @@
       "notes": "Booking page also states £1/hour booking fee. Confirm checkout total.",
       "id": "newham-stratford-park",
       "name": "Stratford Park",
-      "borough": "Newham"
+      "borough": "Newham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Forest Gate",
@@ -9795,10 +11061,10 @@
       "indoor_courts": 0,
       "floodlit_courts": 0,
       "lighting": "unlit",
-      "hours_text": "Daily08:00–dusk; leave30min before park closes.",
+      "hours_text": "Daily 08:00–dusk; leave 30 min before park closes.",
       "evening_assessment": "seasonal",
       "evening_notes": "No floodlighting; daylight only.",
-      "weekend_notes": "Daytime hire from08:00.",
+      "weekend_notes": "Daytime hire from 08:00.",
       "price_text": "£7.90/hour; £4.80 concession.",
       "advance_days": 3,
       "release_time": null,
@@ -9822,7 +11088,9 @@
       "notes": null,
       "id": "newham-west-ham-park",
       "name": "West Ham Park",
-      "borough": "Newham"
+      "borough": "Newham",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Barkingside",
@@ -9861,7 +11129,9 @@
       "notes": null,
       "id": "redbridge-barkingside-recreation-ground",
       "name": "Barkingside Recreation Ground",
-      "borough": "Redbridge"
+      "borough": "Redbridge",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Chadwell Heath",
@@ -9896,7 +11166,9 @@
       "notes": null,
       "id": "redbridge-barley-lane-recreation-ground",
       "name": "Barley Lane Recreation Ground",
-      "borough": "Redbridge"
+      "borough": "Redbridge",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Clayhall",
@@ -9931,7 +11203,9 @@
       "notes": null,
       "id": "redbridge-clayhall-park",
       "name": "Clayhall Park",
-      "borough": "Redbridge"
+      "borough": "Redbridge",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "South Woodford",
@@ -9970,7 +11244,9 @@
       "notes": null,
       "id": "redbridge-elmhurst-gardens",
       "name": "Elmhurst Gardens",
-      "borough": "Redbridge"
+      "borough": "Redbridge",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Goodmayes",
@@ -10005,7 +11281,9 @@
       "notes": null,
       "id": "redbridge-goodmayes-park",
       "name": "Goodmayes Park",
-      "borough": "Redbridge"
+      "borough": "Redbridge",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Loxford",
@@ -10044,7 +11322,9 @@
       "notes": null,
       "id": "redbridge-loxford-park",
       "name": "Loxford Park",
-      "borough": "Redbridge"
+      "borough": "Redbridge",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Woodford Green",
@@ -10083,7 +11363,9 @@
       "notes": null,
       "id": "redbridge-ray-park",
       "name": "Ray Park",
-      "borough": "Redbridge"
+      "borough": "Redbridge",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Barkingside",
@@ -10095,14 +11377,14 @@
       "indoor_courts": 6,
       "floodlit_courts": null,
       "lighting": "floodlit",
-      "hours_text": "Weekdays06:30–23:00; weekends08:00–20:00.",
+      "hours_text": "Weekdays 06:30–23:00; weekends 08:00–20:00.",
       "evening_assessment": "suitable",
-      "evening_notes": "Indoor courts and evening floodlights; centre open until23:00.",
-      "weekend_notes": "Indoor and seasonal outdoor hire; centre08:00–20:00.",
+      "evening_notes": "Indoor courts and evening floodlights; centre open until 23:00.",
+      "weekend_notes": "Indoor and seasonal outdoor hire; centre 08:00–20:00.",
       "price_text": null,
       "advance_days": 1,
       "release_time": "00:00",
-      "release_rule": "Nonmembers1 day ahead at midnight; members10 days. Site timezone not stated.",
+      "release_rule": "Nonmembers 1 day ahead at midnight; members 10 days. Site timezone not stated.",
       "release_status": "published",
       "checked_on": "2026-09-14",
       "sources": [
@@ -10119,10 +11401,49 @@
           "supports": "Conflicting legacy count"
         }
       ],
-      "notes": "Current dedicated tennis page:6 indoor+4 outdoor; legacy racket page:8+6. Tennis page says nonmembers book on day; terms allow1day ahead. Confirm in booking system.",
+      "notes": "Current dedicated tennis page: 6 indoor + 4 outdoor; legacy racket page: 8 + 6. Tennis page says nonmembers book on day; terms allow 1 day ahead. Confirm in booking system.",
       "id": "redbridge-redbridge-sports-leisure",
       "name": "Redbridge Sports & Leisure",
-      "borough": "Redbridge"
+      "borough": "Redbridge",
+      "sport": "tennis",
+      "slot_minutes": 60
+    },
+    {
+      "access": "pay_and_play",
+      "indoor_courts": 12,
+      "floodlit_courts": null,
+      "lighting": "indoor",
+      "hours_text": null,
+      "evening_assessment": "unknown",
+      "evening_notes": "Twelve indoor public-bookable courts; after-work hours need checking.",
+      "weekend_notes": "Indoor pay-and-play courts; check Padel Mates slots.",
+      "price_text": null,
+      "slot_minutes": null,
+      "advance_days": 7,
+      "release_time": null,
+      "release_rule": "General public can book seven days ahead; release clock unpublished.",
+      "release_status": "partial",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "padel-redbridge-rocket-ilford",
+      "sport": "padel",
+      "name": "Rocket Padel Ilford",
+      "borough": "Redbridge",
+      "area": "Ilford",
+      "operator": "Rocket Padel",
+      "booking_url": "https://padelmates.se/club/rocketpadelilford",
+      "courts_total": 12,
+      "sources": [
+        {
+          "url": "https://www.rocketpadel.com/club/ilford",
+          "supports": "Twelve indoor courts and seven-day general-public window."
+        },
+        {
+          "url": "https://www.ltapadel.org.uk/play/padel-in-your-area/padel-in-london/",
+          "supports": "Public-booking link and Ilford address."
+        }
+      ],
+      "geo_query": "The Drive, Ilford IG1 3PS"
     },
     {
       "area": "Seven Kings",
@@ -10157,7 +11478,9 @@
       "notes": null,
       "id": "redbridge-seven-kings-park",
       "name": "Seven Kings Park",
-      "borough": "Redbridge"
+      "borough": "Redbridge",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Ilford",
@@ -10196,7 +11519,9 @@
       "notes": null,
       "id": "redbridge-south-park",
       "name": "South Park",
-      "borough": "Redbridge"
+      "borough": "Redbridge",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Ilford",
@@ -10231,7 +11556,9 @@
       "notes": null,
       "id": "redbridge-valentines-park",
       "name": "Valentines Park",
-      "borough": "Redbridge"
+      "borough": "Redbridge",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Barnes",
@@ -10270,7 +11597,9 @@
       "notes": "Council confirms tennis and community use. 2023 assessment records six unlit courts; current coach describes floodlights, so lighting remains unverified. Separate from Enable Sports Centre.",
       "id": "richmond-upon-thames-barn-elms-playing-fields-sports-trust",
       "name": "Barn Elms Playing Fields / Sports Trust",
-      "borough": "Richmond upon Thames"
+      "borough": "Richmond upon Thames",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Barnes",
@@ -10301,7 +11630,9 @@
       "notes": "Ten tarmac and six artificial grass courts. Separate from Barn Elms Sports Trust playing fields; physically Richmond despite Wandsworth operator.",
       "id": "richmond-upon-thames-barn-elms-sports-centre",
       "name": "Barn Elms Sports Centre",
-      "borough": "Richmond upon Thames"
+      "borough": "Richmond upon Thames",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -10336,7 +11667,9 @@
       "notes": "Network notice planned reopening 10 September 2026 after resurfacing; completion not independently checked.",
       "id": "richmond-upon-thames-cambridge-gardens",
       "name": "Cambridge Gardens",
-      "borough": "Richmond upon Thames"
+      "borough": "Richmond upon Thames",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Hampton",
@@ -10371,7 +11704,9 @@
       "notes": null,
       "id": "richmond-upon-thames-carlisle-park",
       "name": "Carlisle Park",
-      "borough": "Richmond upon Thames"
+      "borough": "Richmond upon Thames",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Hampton",
@@ -10406,7 +11741,9 @@
       "notes": null,
       "id": "richmond-upon-thames-hampton-sports-fitness-centre",
       "name": "Hampton Sports & Fitness Centre",
-      "borough": "Richmond upon Thames"
+      "borough": "Richmond upon Thames",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Ham",
@@ -10441,7 +11778,9 @@
       "notes": null,
       "id": "richmond-upon-thames-king-george-s-field",
       "name": "King George's Field",
-      "borough": "Richmond upon Thames"
+      "borough": "Richmond upon Thames",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Hampton Wick",
@@ -10480,7 +11819,9 @@
       "notes": "Venue named in council network; individual page returned 403.",
       "id": "richmond-upon-thames-kings-field",
       "name": "Kings Field",
-      "borough": "Richmond upon Thames"
+      "borough": "Richmond upon Thames",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Twickenham",
@@ -10515,7 +11856,9 @@
       "notes": null,
       "id": "richmond-upon-thames-kneller-gardens",
       "name": "Kneller Gardens",
-      "borough": "Richmond upon Thames"
+      "borough": "Richmond upon Thames",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -10550,7 +11893,9 @@
       "notes": "Venue named in council network; individual page returned 403.",
       "id": "richmond-upon-thames-moor-mead-recreation-ground",
       "name": "Moor Mead Recreation Ground",
-      "borough": "Richmond upon Thames"
+      "borough": "Richmond upon Thames",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Richmond",
@@ -10585,7 +11930,9 @@
       "notes": null,
       "id": "richmond-upon-thames-old-deer-park",
       "name": "Old Deer Park",
-      "borough": "Richmond upon Thames"
+      "borough": "Richmond upon Thames",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "East Sheen",
@@ -10620,7 +11967,9 @@
       "notes": null,
       "id": "richmond-upon-thames-palewell-common",
       "name": "Palewell Common",
-      "borough": "Richmond upon Thames"
+      "borough": "Richmond upon Thames",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Barnes",
@@ -10651,7 +12000,9 @@
       "notes": "Public booking through Playtomic.",
       "id": "richmond-upon-thames-rocks-lane-barnes",
       "name": "Rocks Lane Barnes",
-      "borough": "Richmond upon Thames"
+      "borough": "Richmond upon Thames",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "East Sheen",
@@ -10686,7 +12037,46 @@
       "notes": null,
       "id": "richmond-upon-thames-sheen-common",
       "name": "Sheen Common",
-      "borough": "Richmond upon Thames"
+      "borough": "Richmond upon Thames",
+      "sport": "tennis",
+      "slot_minutes": 60
+    },
+    {
+      "access": "pay_and_play",
+      "indoor_courts": 2,
+      "floodlit_courts": null,
+      "lighting": "indoor",
+      "hours_text": "Centre Mon–Thu 17:00–22:00; Fri 17:00–21:00; weekends 09:00–18:00.",
+      "evening_assessment": "suitable",
+      "evening_notes": "Two casual-hire courts use 45-minute bookings; Friday closes at 21:00.",
+      "weekend_notes": "45-minute casual bookings during weekend centre hours.",
+      "price_text": "Adult standard £13.50 per court per 45 minutes; PAYG £12.50.",
+      "slot_minutes": 45,
+      "advance_days": null,
+      "release_time": null,
+      "release_rule": null,
+      "release_status": "unknown",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "squash-richmond-teddington",
+      "sport": "squash",
+      "name": "Teddington Sports Centre",
+      "borough": "Richmond upon Thames",
+      "area": "Teddington",
+      "operator": "Richmond Council / Better",
+      "booking_url": "https://www.better.org.uk/leisure-centre/london/richmond-upon-thames/teddington-sports-centre/3623-teddington-sports-centre",
+      "courts_total": 2,
+      "sources": [
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/richmond-upon-thames/teddington-sports-centre/3623-teddington-sports-centre",
+          "supports": "Two casual squash courts and 45-minute prices."
+        },
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/richmond-upon-thames/teddington-sports-centre",
+          "supports": "Current centre opening hours."
+        }
+      ],
+      "geo_query": "Teddington School, Broom Road, Teddington TW11 9PJ"
     },
     {
       "area": "Teddington",
@@ -10721,7 +12111,9 @@
       "notes": null,
       "id": "richmond-upon-thames-teddington-sports-centre",
       "name": "Teddington Sports Centre",
-      "borough": "Richmond upon Thames"
+      "borough": "Richmond upon Thames",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Kew",
@@ -10756,7 +12148,9 @@
       "notes": null,
       "id": "richmond-upon-thames-westerly-ware",
       "name": "Westerly Ware",
-      "borough": "Richmond upon Thames"
+      "borough": "Richmond upon Thames",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Whitton",
@@ -10795,7 +12189,9 @@
       "notes": null,
       "id": "richmond-upon-thames-whitton-sports-fitness-centre",
       "name": "Whitton Sports & Fitness Centre",
-      "borough": "Richmond upon Thames"
+      "borough": "Richmond upon Thames",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Twickenham",
@@ -10830,7 +12226,9 @@
       "notes": null,
       "id": "richmond-upon-thames-york-house-gardens",
       "name": "York House Gardens",
-      "borough": "Richmond upon Thames"
+      "borough": "Richmond upon Thames",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Dulwich",
@@ -10865,7 +12263,9 @@
       "notes": null,
       "id": "southwark-belair-park",
       "name": "Belair Park",
-      "borough": "Southwark"
+      "borough": "Southwark",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Camberwell",
@@ -10900,7 +12300,9 @@
       "notes": null,
       "id": "southwark-brunswick-park",
       "name": "Brunswick Park",
-      "borough": "Southwark"
+      "borough": "Southwark",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Camberwell",
@@ -10939,7 +12341,9 @@
       "notes": null,
       "id": "southwark-burgess-park",
       "name": "Burgess Park",
-      "borough": "Southwark"
+      "borough": "Southwark",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Dulwich",
@@ -10974,7 +12378,9 @@
       "notes": null,
       "id": "southwark-dulwich-park",
       "name": "Dulwich Park",
-      "borough": "Southwark"
+      "borough": "Southwark",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Lambeth North",
@@ -11013,7 +12419,9 @@
       "notes": "Venue booking page retains older £9.40 peak rate; borough rules explicitly effective April 2026 give £10.40.",
       "id": "southwark-geraldine-mary-harmsworth-park",
       "name": "Geraldine Mary Harmsworth Park",
-      "borough": "Southwark"
+      "borough": "Southwark",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Honor Oak",
@@ -11048,7 +12456,41 @@
       "notes": null,
       "id": "southwark-honor-oak-recreation-ground",
       "name": "Honor Oak Recreation Ground",
-      "borough": "Southwark"
+      "borough": "Southwark",
+      "sport": "tennis",
+      "slot_minutes": 60
+    },
+    {
+      "access": "pay_and_play",
+      "indoor_courts": 5,
+      "floodlit_courts": null,
+      "lighting": "indoor",
+      "hours_text": "Daily 07:00–23:00.",
+      "evening_assessment": "suitable",
+      "evening_notes": "Five indoor courts; published hours fit after-work play.",
+      "weekend_notes": "Indoor casual courts open during daytime hours.",
+      "price_text": "Live Playtomic calendar shows slot-specific prices; no stable court rate verified.",
+      "slot_minutes": null,
+      "advance_days": null,
+      "release_time": null,
+      "release_rule": "Membership priority is ten days; casual window needs checking.",
+      "release_status": "unknown",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "padel-southwark-padel-box-bermondsey",
+      "sport": "padel",
+      "name": "Padel Box Bermondsey",
+      "borough": "Southwark",
+      "area": "Rollins Street, Bermondsey",
+      "booking_url": "https://playtomic.com/clubs/padel-box-bermondsey",
+      "courts_total": 5,
+      "sources": [
+        {
+          "url": "https://playtomic.com/clubs/padel-box-bermondsey",
+          "supports": "Five indoor courts, daily hours and booking platform."
+        }
+      ],
+      "geo_query": "Rollins Street, London SE15 1EP"
     },
     {
       "area": "Bermondsey",
@@ -11083,7 +12525,9 @@
       "notes": null,
       "id": "southwark-southwark-park",
       "name": "Southwark Park",
-      "borough": "Southwark"
+      "borough": "Southwark",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Bermondsey",
@@ -11118,7 +12562,9 @@
       "notes": null,
       "id": "southwark-tanner-street-park",
       "name": "Tanner Street Park",
-      "borough": "Southwark"
+      "borough": "Southwark",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Beddington",
@@ -11157,7 +12603,9 @@
       "notes": null,
       "id": "sutton-beddington-park",
       "name": "Beddington Park",
-      "borough": "Sutton"
+      "borough": "Sutton",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Carshalton",
@@ -11188,7 +12636,9 @@
       "notes": null,
       "id": "sutton-carshalton-park",
       "name": "Carshalton Park",
-      "borough": "Sutton"
+      "borough": "Sutton",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Cheam",
@@ -11219,7 +12669,9 @@
       "notes": null,
       "id": "sutton-cheam-recreation-ground",
       "name": "Cheam Recreation Ground",
-      "borough": "Sutton"
+      "borough": "Sutton",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Coulsdon",
@@ -11254,7 +12706,9 @@
       "notes": null,
       "id": "sutton-corrigan-avenue-recreation-ground",
       "name": "Corrigan Avenue Recreation Ground",
-      "borough": "Sutton"
+      "borough": "Sutton",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Worcester Park",
@@ -11293,7 +12747,9 @@
       "notes": null,
       "id": "sutton-cuddington-recreation-ground",
       "name": "Cuddington Recreation Ground",
-      "borough": "Sutton"
+      "borough": "Sutton",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Wallington",
@@ -11332,7 +12788,9 @@
       "notes": null,
       "id": "sutton-mellows-park",
       "name": "Mellows Park",
-      "borough": "Sutton"
+      "borough": "Sutton",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Rosehill",
@@ -11363,7 +12821,9 @@
       "notes": null,
       "id": "sutton-rosehill-park-west",
       "name": "Rosehill Park West",
-      "borough": "Sutton"
+      "borough": "Sutton",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Wallington",
@@ -11394,7 +12854,9 @@
       "notes": null,
       "id": "sutton-roundshaw-park",
       "name": "Roundshaw Park",
-      "borough": "Sutton"
+      "borough": "Sutton",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Carshalton",
@@ -11425,7 +12887,42 @@
       "notes": null,
       "id": "sutton-royston-park",
       "name": "Royston Park",
-      "borough": "Sutton"
+      "borough": "Sutton",
+      "sport": "tennis",
+      "slot_minutes": 60
+    },
+    {
+      "access": "pay_and_play",
+      "indoor_courts": 0,
+      "floodlit_courts": null,
+      "lighting": "unknown",
+      "hours_text": "Daily 08:00–22:00.",
+      "evening_assessment": "unknown",
+      "evening_notes": "Four covered courts; published venue hours fit 19:00–21:00, but court lighting needs checking.",
+      "weekend_notes": "Covered pay-and-play courts open during daytime hours.",
+      "price_text": null,
+      "slot_minutes": null,
+      "advance_days": null,
+      "release_time": null,
+      "release_rule": "Member priority windows published; casual window needs checking.",
+      "release_status": "unknown",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "padel-sutton-social-sports",
+      "sport": "padel",
+      "name": "S3 Padel Sutton",
+      "borough": "Sutton",
+      "area": "London Cancer Hub, Sutton",
+      "operator": "Social Sports Society",
+      "booking_url": "https://socialsportssociety.com/venue/sutton/",
+      "courts_total": 4,
+      "sources": [
+        {
+          "url": "https://socialsportssociety.com/venue/sutton/",
+          "supports": "Four covered courts, public booking and daily hours."
+        }
+      ],
+      "geo_query": "London Cancer Hub, Cotswold Road, Sutton SM2 5NS"
     },
     {
       "area": "Carshalton",
@@ -11464,7 +12961,9 @@
       "notes": null,
       "id": "sutton-stanley-park",
       "name": "Stanley Park",
-      "borough": "Sutton"
+      "borough": "Sutton",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Sutton Common",
@@ -11499,7 +12998,9 @@
       "notes": null,
       "id": "sutton-sutton-common-recreation-ground",
       "name": "Sutton Common Recreation Ground",
-      "borough": "Sutton"
+      "borough": "Sutton",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Rosehill",
@@ -11534,7 +13035,9 @@
       "notes": "Indoor closure panel conflicts with advertised indoor hire; court counts left unknown.",
       "id": "sutton-sutton-sports-village",
       "name": "Sutton Sports Village",
-      "borough": "Sutton"
+      "borough": "Sutton",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Bethnal Green",
@@ -11577,7 +13080,9 @@
       "notes": "Booking page requires human verification.",
       "id": "tower-hamlets-bethnal-green-gardens",
       "name": "Bethnal Green Gardens",
-      "borough": "Tower Hamlets"
+      "borough": "Tower Hamlets",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Wapping",
@@ -11608,7 +13113,9 @@
       "notes": "Operator lists tennis on a multipurpose court; casual tennis terms and lighting need confirmation.",
       "id": "tower-hamlets-john-orwell-sports-centre",
       "name": "John Orwell Sports Centre",
-      "borough": "Tower Hamlets"
+      "borough": "Tower Hamlets",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Wapping",
@@ -11651,7 +13158,9 @@
       "notes": null,
       "id": "tower-hamlets-king-edward-memorial-park",
       "name": "King Edward Memorial Park",
-      "borough": "Tower Hamlets"
+      "borough": "Tower Hamlets",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Poplar",
@@ -11694,7 +13203,9 @@
       "notes": null,
       "id": "tower-hamlets-poplar-recreation-ground",
       "name": "Poplar Recreation Ground",
-      "borough": "Tower Hamlets"
+      "borough": "Tower Hamlets",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Limehouse",
@@ -11737,7 +13248,9 @@
       "notes": null,
       "id": "tower-hamlets-ropemakers-fields",
       "name": "Ropemakers Fields",
-      "borough": "Tower Hamlets"
+      "borough": "Tower Hamlets",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Isle of Dogs",
@@ -11784,7 +13297,9 @@
       "notes": "Operator reports temporary reopening on 1 September; final works pending. Booking page requires human verification.",
       "id": "tower-hamlets-st-john-s-park",
       "name": "St John's Park",
-      "borough": "Tower Hamlets"
+      "borough": "Tower Hamlets",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Bow",
@@ -11827,7 +13342,9 @@
       "notes": null,
       "id": "tower-hamlets-victoria-park",
       "name": "Victoria Park",
-      "borough": "Tower Hamlets"
+      "borough": "Tower Hamlets",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Wapping",
@@ -11870,7 +13387,9 @@
       "notes": null,
       "id": "tower-hamlets-wapping-gardens",
       "name": "Wapping Gardens",
-      "borough": "Tower Hamlets"
+      "borough": "Tower Hamlets",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -11889,7 +13408,7 @@
       "price_text": "£6/hour.",
       "advance_days": 5,
       "release_time": null,
-      "release_rule": "Nonmembers5 days; pass holders7; clock unpublished.",
+      "release_rule": "Nonmembers 5 days; pass holders 7; clock unpublished.",
       "release_status": "partial",
       "checked_on": "2026-09-14",
       "sources": [
@@ -11909,7 +13428,9 @@
       "notes": null,
       "id": "waltham-forest-abbotts-park",
       "name": "Abbotts Park",
-      "borough": "Waltham Forest"
+      "borough": "Waltham Forest",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -11928,7 +13449,7 @@
       "price_text": "£6/hour.",
       "advance_days": 5,
       "release_time": null,
-      "release_rule": "Nonmembers5 days; pass holders7; clock unpublished.",
+      "release_rule": "Nonmembers 5 days; pass holders 7; clock unpublished.",
       "release_status": "partial",
       "checked_on": "2026-09-14",
       "sources": [
@@ -11948,7 +13469,9 @@
       "notes": null,
       "id": "waltham-forest-chingford-memorial-park",
       "name": "Chingford Memorial Park",
-      "borough": "Waltham Forest"
+      "borough": "Waltham Forest",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Highams Park / Rolls Sports Ground",
@@ -11983,7 +13506,9 @@
       "notes": "ClubSpark describes three permanent indoor, three seasonal dome/floodlit, and three outdoor courts. Older hire page describes only six; confirm configuration when booking.",
       "id": "waltham-forest-chingford-school-of-tennis-club",
       "name": "Chingford School of Tennis Club",
-      "borough": "Waltham Forest"
+      "borough": "Waltham Forest",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -12002,7 +13527,7 @@
       "price_text": "£6/hour.",
       "advance_days": 5,
       "release_time": null,
-      "release_rule": "Nonmembers5 days; pass holders7; clock unpublished.",
+      "release_rule": "Nonmembers 5 days; pass holders 7; clock unpublished.",
       "release_status": "partial",
       "checked_on": "2026-09-14",
       "sources": [
@@ -12022,7 +13547,9 @@
       "notes": null,
       "id": "waltham-forest-higham-hill-park",
       "name": "Higham Hill Park",
-      "borough": "Waltham Forest"
+      "borough": "Waltham Forest",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Queen Elizabeth Olympic Park / Leyton",
@@ -12061,7 +13588,9 @@
       "notes": "Indoor PAYG is described as weekday daytime and weekend evening only; weekday evening recommendation refers to outdoor courts. Free booking account required.",
       "id": "waltham-forest-lee-valley-hockey-and-tennis-centre",
       "name": "Lee Valley Hockey and Tennis Centre",
-      "borough": "Waltham Forest"
+      "borough": "Waltham Forest",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -12080,7 +13609,7 @@
       "price_text": "£6/hour.",
       "advance_days": 5,
       "release_time": null,
-      "release_rule": "Nonmembers5 days; pass holders7; clock unpublished.",
+      "release_rule": "Nonmembers 5 days; pass holders 7; clock unpublished.",
       "release_status": "partial",
       "checked_on": "2026-09-14",
       "sources": [
@@ -12100,7 +13629,9 @@
       "notes": null,
       "id": "waltham-forest-lloyd-and-aveling-park",
       "name": "Lloyd and Aveling Park",
-      "borough": "Waltham Forest"
+      "borough": "Waltham Forest",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": null,
@@ -12119,7 +13650,7 @@
       "price_text": "Venue:£7.50 floodlit; scheme:£6/hour. Confirm total.",
       "advance_days": 5,
       "release_time": null,
-      "release_rule": "Nonmembers5 days; pass holders7; clock unpublished.",
+      "release_rule": "Nonmembers 5 days; pass holders 7; clock unpublished.",
       "release_status": "partial",
       "checked_on": "2026-09-14",
       "sources": [
@@ -12136,10 +13667,52 @@
           "supports": "Venue"
         }
       ],
-      "notes": "Scheme directory says7 full-size courts; venue says6 floodlit plus mini courts. Total unresolved.",
+      "notes": "Scheme directory says 7 full-size courts; venue says 6 floodlit plus mini courts. Total unresolved.",
       "id": "waltham-forest-ridgeway-park",
       "name": "Ridgeway Park",
-      "borough": "Waltham Forest"
+      "borough": "Waltham Forest",
+      "sport": "tennis",
+      "slot_minutes": 60
+    },
+    {
+      "access": "pay_and_play",
+      "indoor_courts": 2,
+      "floodlit_courts": null,
+      "lighting": "indoor",
+      "hours_text": "Centre Mon–Fri 06:30–22:00; weekends 08:00–18:00. Squash bookings are 40 minutes.",
+      "evening_assessment": "suitable",
+      "evening_notes": "Two indoor courts; published centre hours fit 40-minute after-work slots.",
+      "weekend_notes": "40-minute squash bookings; check live weekend slots.",
+      "price_text": "Nonmember adult £12.85 peak or £9.10 off-peak per 40-minute court booking; extra players beyond two pay entry.",
+      "slot_minutes": 40,
+      "advance_days": null,
+      "release_time": null,
+      "release_rule": null,
+      "release_status": "unknown",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "squash-waltham-forest-walthamstow",
+      "sport": "squash",
+      "name": "Walthamstow Leisure Centre",
+      "borough": "Waltham Forest",
+      "area": "Walthamstow",
+      "operator": "Better",
+      "booking_url": "https://www.better.org.uk/leisure-centre/london/waltham-forest/walthamstow-leisure-centre/squash",
+      "courts_total": 2,
+      "sources": [
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/waltham-forest/walthamstow-leisure-centre/squash",
+          "supports": "Two bookable squash courts."
+        },
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/waltham-forest/walthamstow-leisure-centre",
+          "supports": "Current centre hours."
+        },
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/waltham-forest/walthamstow-leisure-centre/prices",
+          "supports": "40-minute bookings and adult nonmember peak/off-peak rates."
+        }
+      ]
     },
     {
       "area": "Battersea",
@@ -12178,7 +13751,9 @@
       "notes": "Current ClubSpark count supersedes Enable's older 19-court page.",
       "id": "wandsworth-battersea-park-millennium-arena",
       "name": "Battersea Park Millennium Arena",
-      "borough": "Wandsworth"
+      "borough": "Wandsworth",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Battersea",
@@ -12209,7 +13784,9 @@
       "notes": null,
       "id": "wandsworth-fred-wells-gardens",
       "name": "Fred Wells Gardens",
-      "borough": "Wandsworth"
+      "borough": "Wandsworth",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Furzedown",
@@ -12240,7 +13817,9 @@
       "notes": "Different venue from All Star's Furzedown Recreation Ground.",
       "id": "wandsworth-furzedown-recreation-centre",
       "name": "Furzedown Recreation Centre",
-      "borough": "Wandsworth"
+      "borough": "Wandsworth",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Tooting",
@@ -12279,7 +13858,9 @@
       "notes": "Free booking account available; paid Member Plus optional.",
       "id": "wandsworth-furzedown-recreation-ground",
       "name": "Furzedown Recreation Ground",
-      "borough": "Wandsworth"
+      "borough": "Wandsworth",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Wandsworth",
@@ -12318,7 +13899,9 @@
       "notes": "Free booking account available; paid Member Plus optional.",
       "id": "wandsworth-king-george-s-park",
       "name": "King George's Park",
-      "borough": "Wandsworth"
+      "borough": "Wandsworth",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Putney",
@@ -12357,7 +13940,46 @@
       "notes": "Free booking account available; paid Member Plus optional.",
       "id": "wandsworth-leader-s-gardens",
       "name": "Leader's Gardens",
-      "borough": "Wandsworth"
+      "borough": "Wandsworth",
+      "sport": "tennis",
+      "slot_minutes": 60
+    },
+    {
+      "access": "pay_and_play",
+      "indoor_courts": 4,
+      "floodlit_courts": null,
+      "lighting": "indoor",
+      "hours_text": null,
+      "evening_assessment": "unknown",
+      "evening_notes": "Four indoor courts; confirm after-work operating hours and slots.",
+      "weekend_notes": "Book a casual indoor padel court through Padel Mates.",
+      "price_text": null,
+      "slot_minutes": null,
+      "advance_days": 7,
+      "release_time": null,
+      "release_rule": "Nonmembers can book seven days ahead; release clock unpublished.",
+      "release_status": "partial",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "padel-wandsworth-rocket-battersea",
+      "sport": "padel",
+      "name": "Rocket Padel Battersea Power Station",
+      "borough": "Wandsworth",
+      "area": "Battersea Power Station",
+      "operator": "Rocket Padel",
+      "booking_url": "https://padelmates.se/club/rocketpadelbattersea",
+      "courts_total": 4,
+      "sources": [
+        {
+          "url": "https://www.rocketpadel.com/club/Battersea-power-station",
+          "supports": "Four indoor courts and nonmember seven-day window."
+        },
+        {
+          "url": "https://www.ltapadel.org.uk/play/padel-in-your-area/padel-in-london/",
+          "supports": "Public-booking link and Battersea address."
+        }
+      ],
+      "geo_query": "Circus Road West, London SW11 8AL"
     },
     {
       "area": "Roehampton",
@@ -12388,7 +14010,42 @@
       "notes": null,
       "id": "wandsworth-roehampton-playing-fields",
       "name": "Roehampton Playing Fields",
-      "borough": "Wandsworth"
+      "borough": "Wandsworth",
+      "sport": "tennis",
+      "slot_minutes": 60
+    },
+    {
+      "access": "pay_and_play",
+      "indoor_courts": 0,
+      "floodlit_courts": null,
+      "lighting": "floodlit",
+      "hours_text": "Mon–Thu and Sun 07:00–23:00; Fri–Sat 07:00–23:30.",
+      "evening_assessment": "suitable",
+      "evening_notes": "Outdoor courts have floodlights; venue hours fit after-work play.",
+      "weekend_notes": "Book a casual outdoor padel court through MATCHi.",
+      "price_text": "Nonmember court price depends on slot; check MATCHi. Racket hire is extra.",
+      "slot_minutes": null,
+      "advance_days": 7,
+      "release_time": "00:00",
+      "release_rule": "Nonmembers: seven days ahead at midnight via MATCHi; members have longer access.",
+      "release_status": "published",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "padel-wandsworth-padel-yard",
+      "sport": "padel",
+      "name": "The Padel Yard",
+      "borough": "Wandsworth",
+      "area": "2 Armoury Way, SW18 1HZ",
+      "operator": "The Padel Yard / Game4Padel",
+      "booking_url": "https://thepadelyard.com/",
+      "courts_total": 3,
+      "sources": [
+        {
+          "url": "https://thepadelyard.com/",
+          "supports": "Three-court Wandsworth venue, MATCHi booking, floodlights, hours and nonmember seven-day midnight release."
+        }
+      ],
+      "geo_query": "2 Armoury Way, London SW18 1HZ"
     },
     {
       "area": "Tooting",
@@ -12427,7 +14084,9 @@
       "notes": "Free booking account available; paid Member Plus optional.",
       "id": "wandsworth-tooting-bec-common",
       "name": "Tooting Bec Common",
-      "borough": "Wandsworth"
+      "borough": "Wandsworth",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Wandsworth",
@@ -12466,7 +14125,9 @@
       "notes": "Free booking account available; paid Member Plus optional.",
       "id": "wandsworth-wandsworth-common",
       "name": "Wandsworth Common",
-      "borough": "Wandsworth"
+      "borough": "Wandsworth",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Putney",
@@ -12505,7 +14166,9 @@
       "notes": "Free booking account available; paid Member Plus optional.",
       "id": "wandsworth-wandsworth-park",
       "name": "Wandsworth Park",
-      "borough": "Wandsworth"
+      "borough": "Wandsworth",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Torquay Street, W2 5EW",
@@ -12536,7 +14199,45 @@
       "notes": "Outdoor court 7 shared with netball; court 6 is basketball. Sports hall also advertises tennis but configuration unknown. Avoid older two-outdoor-tennis count.",
       "id": "westminster-academy-sport",
       "name": "Academy Sport",
-      "borough": "Westminster"
+      "borough": "Westminster",
+      "sport": "tennis",
+      "slot_minutes": 60
+    },
+    {
+      "access": "pay_and_play",
+      "indoor_courts": 0,
+      "floodlit_courts": 1,
+      "lighting": "floodlit",
+      "hours_text": "Daily 07:00–21:00.",
+      "evening_assessment": "suitable",
+      "evening_notes": "One outdoor floodlit padel court; check 19:00–21:00 slots.",
+      "weekend_notes": "Outdoor floodlit court open during daytime hours.",
+      "price_text": "Peak/off-peak price and floodlight fee vary by slot; check booking calendar.",
+      "slot_minutes": null,
+      "advance_days": 7,
+      "release_time": "07:00",
+      "release_rule": "Daily 07:00, seven days ahead; free account required.",
+      "release_status": "published",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "padel-westminster-hyde-park",
+      "sport": "padel",
+      "name": "Hyde Park Courts",
+      "borough": "Westminster",
+      "area": "Hyde Park",
+      "operator": "The Royal Parks",
+      "booking_url": "https://sportsandleisureroyalparks.bookings.flow.onl/location/hyde-park-courts/padel/2026-01-19/by-time",
+      "courts_total": 1,
+      "sources": [
+        {
+          "url": "https://sportsandleisure.royalparks.org.uk/the-courts/padel",
+          "supports": "One floodlit Hyde Park court and seven-day 07:00 release."
+        },
+        {
+          "url": "https://sportsandleisure.royalparks.org.uk/faqs",
+          "supports": "Daily 07:00–21:00 hours and free-account booking."
+        }
+      ]
     },
     {
       "area": "Hyde Park",
@@ -12548,14 +14249,14 @@
       "indoor_courts": 0,
       "floodlit_courts": 6,
       "lighting": "floodlit",
-      "hours_text": "Daily07:00–21:00.",
+      "hours_text": "Daily 07:00–21:00.",
       "evening_assessment": "suitable",
-      "evening_notes": "Published floodlit courts and closing21:00 fit19–20 or20–21, subject to booking.",
-      "weekend_notes": "Daytime hire within07:00–21:00.",
+      "evening_notes": "Published floodlit courts and closing 21:00 fit 19–20 or 20–21, subject to booking.",
+      "weekend_notes": "Daytime hire within 07:00–21:00.",
       "price_text": null,
       "advance_days": 7,
       "release_time": "07:00",
-      "release_rule": "Daily07:00, up to7days ahead.",
+      "release_rule": "Daily 07:00, up to 7 days ahead.",
       "release_status": "published",
       "checked_on": "2026-09-14",
       "sources": [
@@ -12568,10 +14269,12 @@
           "supports": "Hours and release rule"
         }
       ],
-      "notes": "User-supplied calendar is dated19Sep2026; not interactively verified. LTA overview's older eight-court count is not used.",
+      "notes": "User-supplied calendar is dated 19 Sep 2026; not interactively verified. LTA overview's older eight-court count is not used.",
       "id": "westminster-hyde-park-courts",
       "name": "Hyde Park Courts",
-      "borough": "Westminster"
+      "borough": "Westminster",
+      "sport": "tennis",
+      "slot_minutes": 60
     },
     {
       "area": "Randolph Avenue, W9 1PD",
@@ -12602,7 +14305,120 @@
       "notes": null,
       "id": "westminster-paddington-recreation-ground",
       "name": "Paddington Recreation Ground",
-      "borough": "Westminster"
+      "borough": "Westminster",
+      "sport": "tennis",
+      "slot_minutes": 60
+    },
+    {
+      "access": "pay_and_play",
+      "indoor_courts": 1,
+      "floodlit_courts": null,
+      "lighting": "indoor",
+      "hours_text": "Centre Mon–Fri 06:30–22:00; weekends 08:00–20:00. Confirm squash-specific hours.",
+      "evening_assessment": "unknown",
+      "evening_notes": "Court-specific 19:00–21:00 slots need checking.",
+      "weekend_notes": "Weekend daytime court hire; check live slots.",
+      "price_text": null,
+      "slot_minutes": null,
+      "advance_days": null,
+      "release_time": null,
+      "release_rule": null,
+      "release_status": "unknown",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "squash-westminster-porchester",
+      "sport": "squash",
+      "name": "Porchester Centre",
+      "borough": "Westminster",
+      "area": "Bayswater",
+      "operator": "Everyone Active",
+      "booking_url": "https://www.everyoneactive.com/centre/porchester-centre/",
+      "courts_total": 1,
+      "sources": [
+        {
+          "url": "https://www.everyoneactive.com/centre/porchester-centre/",
+          "supports": "Current operator court-hire information, count and hours where published."
+        },
+        {
+          "url": "https://www.westminster.gov.uk/sites/default/files/media/documents/wcc-indoor-facilities-assessment-needs-assessment-2026.pdf",
+          "supports": "Westminster’s 2026 assessment describes primarily pay-and-play use."
+        }
+      ],
+      "geo_query": "Porchester Centre, Queensway, London W2 5HS"
+    },
+    {
+      "access": "pay_and_play",
+      "indoor_courts": 3,
+      "floodlit_courts": null,
+      "lighting": "indoor",
+      "hours_text": "Centre hours and squash-specific slots need checking.",
+      "evening_assessment": "unknown",
+      "evening_notes": "Court-specific 19:00–21:00 slots need checking.",
+      "weekend_notes": "Weekend daytime court hire; check live slots.",
+      "price_text": null,
+      "slot_minutes": null,
+      "advance_days": null,
+      "release_time": null,
+      "release_rule": null,
+      "release_status": "unknown",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "squash-westminster-queen-mother",
+      "sport": "squash",
+      "name": "Queen Mother Sports Centre",
+      "borough": "Westminster",
+      "area": "Victoria",
+      "operator": "Everyone Active",
+      "booking_url": "https://www.everyoneactive.com/centre/queen-mother-sports-centre/",
+      "courts_total": 3,
+      "sources": [
+        {
+          "url": "https://www.everyoneactive.com/centre/queen-mother-sports-centre/",
+          "supports": "Current operator court-hire information, count and hours where published."
+        },
+        {
+          "url": "https://www.westminster.gov.uk/sites/default/files/media/documents/wcc-indoor-facilities-assessment-needs-assessment-2026.pdf",
+          "supports": "Westminster’s 2026 assessment confirms three operational courts."
+        }
+      ],
+      "geo_query": "SW1V 1EL, London"
+    },
+    {
+      "access": "pay_and_play",
+      "indoor_courts": 0,
+      "floodlit_courts": 2,
+      "lighting": "floodlit",
+      "hours_text": "Daily 07:00–21:00.",
+      "evening_assessment": "suitable",
+      "evening_notes": "Two outdoor floodlit padel courts; check 19:00–21:00 slots.",
+      "weekend_notes": "Outdoor floodlit courts open during daytime hours.",
+      "price_text": "Peak/off-peak price and floodlight fee vary by slot; check booking calendar.",
+      "slot_minutes": null,
+      "advance_days": 7,
+      "release_time": "07:00",
+      "release_rule": "Daily 07:00, seven days ahead; free account required.",
+      "release_status": "published",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "padel-westminster-regents-park",
+      "sport": "padel",
+      "name": "The Regent's Park Courts",
+      "borough": "Westminster",
+      "area": "The Regent's Park",
+      "operator": "The Royal Parks",
+      "booking_url": "https://sportsandleisureroyalparks.bookings.flow.onl/location/the-regents-park-courts/padel/2026-01-19/by-time",
+      "courts_total": 2,
+      "sources": [
+        {
+          "url": "https://sportsandleisure.royalparks.org.uk/the-courts/padel",
+          "supports": "Two floodlit Regent's Park courts and seven-day 07:00 release."
+        },
+        {
+          "url": "https://sportsandleisure.royalparks.org.uk/faqs",
+          "supports": "Daily 07:00–21:00 hours and free-account booking."
+        }
+      ],
+      "geo_query": "York Bridge, London NW1 4NU"
     },
     {
       "area": "Regent's Park",
@@ -12614,14 +14430,14 @@
       "indoor_courts": 0,
       "floodlit_courts": null,
       "lighting": "mixed",
-      "hours_text": "Daily07:00–21:00.",
+      "hours_text": "Daily 07:00–21:00.",
       "evening_assessment": "suitable",
-      "evening_notes": "Use a floodlit court. Published hours fit1hour between19–21; lit court numbers need checking.",
-      "weekend_notes": "Daytime hire within07:00–21:00.",
+      "evening_notes": "Use a floodlit court. Published hours fit 1 hour between 19–21; lit court numbers need checking.",
+      "weekend_notes": "Daytime hire within 07:00–21:00.",
       "price_text": null,
       "advance_days": 7,
       "release_time": "07:00",
-      "release_rule": "Daily07:00, up to7days ahead.",
+      "release_rule": "Daily 07:00, up to 7 days ahead.",
       "release_status": "published",
       "checked_on": "2026-09-14",
       "sources": [
@@ -12638,22 +14454,24 @@
           "supports": "Release rule"
         }
       ],
-      "notes": "Official activities page says10floodlit; clubs page8. Exact count unresolved.",
+      "notes": "Official activities page says 10 floodlit; clubs page 8. Exact count unresolved.",
       "id": "westminster-the-regent-s-park-courts",
       "name": "The Regent's Park Courts",
-      "borough": "Westminster"
+      "borough": "Westminster",
+      "sport": "tennis",
+      "slot_minutes": 60
     }
   ],
   "policies": [
     {
       "id": "barnet-parks",
       "operator": "Barnet Council",
-      "scope": "The22PlayTennisBarnet park sites; not leisure centres or City of London-managed Golders Hill.",
+      "scope": "The 22 PlayTennisBarnet park sites; not leisure centres or City of London-managed Golders Hill.",
       "price_text": "Council adult PAYG £8.55/hour; optional £37.50 annual pass. Venue exceptions need calendar checking.",
       "advance_days": null,
       "release_time": "19:00",
       "release_status": "partial",
-      "release_rule": "Council calls the window7days but illustrates1Jan19:00 releasing9Jan. Time published; day-count interpretation conflicts, so do not schedule automatic reminders.",
+      "release_rule": "Council calls the window 7 days but illustrates 1 Jan 19:00 releasing 9 Jan. Time published; day-count interpretation conflicts, so do not schedule automatic reminders.",
       "sources": [
         {
           "url": "https://www.barnet.gov.uk/parks-sport-and-leisure/sport-and-physical-activity/tennis-barnet",

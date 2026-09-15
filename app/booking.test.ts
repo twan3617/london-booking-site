@@ -1,18 +1,25 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import {
   calendarText,
+  bookingUrlFor,
   directionsUrl,
   distanceMiles,
   osmEmbedUrl,
   matchesVenue,
+  publishedPriceRange,
+  parseCatalogue,
+  venueDisplay,
   releaseDetails,
   relevantHourlyPrice,
   withinBookingWindow,
+  type Venue,
 } from './booking.ts';
 
-const venue = {
+const venue: Venue = {
   id: 'hyde-park',
+  sport: 'tennis' as const,
   name: 'Hyde Park',
   borough: 'Westminster',
   access: 'pay_and_play',
@@ -31,24 +38,72 @@ const venue = {
 
 test('Any price keeps venues whose price is unknown', () => {
   assert.equal(matchesVenue({ ...venue, price_text: null }, {
-    mode: 'after-work', borough: '', query: '', facility: 'any', status: 'all', maxPrice: null,
+    sport: 'tennis', mode: 'after-work', borough: '', query: '', facility: 'any', status: 'all', maxPrice: null,
   }), true);
 });
 
 test('a price cap excludes venues without a verified relevant hourly price', () => {
   assert.equal(matchesVenue({ ...venue, price_text: null }, {
-    mode: 'after-work', borough: '', query: '', facility: 'any', status: 'all', maxPrice: 20,
+    sport: 'tennis', mode: 'after-work', borough: '', query: '', facility: 'any', status: 'all', maxPrice: 20,
   }), false);
 });
 
 test('after-work Ready filter includes suitable courts and excludes seasonal courts', () => {
-  const filters = { mode: 'after-work' as const, borough: '', query: '', facility: 'any' as const, status: 'ready' as const, maxPrice: null };
+  const filters = { sport: 'tennis' as const, mode: 'after-work' as const, borough: '', query: '', facility: 'any' as const, status: 'ready' as const, maxPrice: null };
   assert.equal(matchesVenue(venue, filters), true);
   assert.equal(matchesVenue({ ...venue, evening_assessment: 'seasonal' }, filters), false);
 });
 
 test('evening price prefers an explicitly published floodlit tariff', () => {
   assert.equal(relevantHourlyPrice(venue, 'after-work'), 16);
+});
+
+test('sport filter keeps squash and padel separate', () => {
+  const filters = { sport: 'squash' as const, mode: 'weekend' as const, borough: '', query: '', facility: 'any' as const, status: 'all' as const, maxPrice: null };
+  assert.equal(matchesVenue(venue, filters), false);
+  assert.equal(matchesVenue({ ...venue, sport: 'squash' }, filters), true);
+});
+
+test('published public rates form an indicative range', () => {
+  assert.deepEqual(publishedPriceRange({ ...venue, price_options: [
+    { label: 'Daylight', amount_gbp: 8, duration_minutes: 60, modes: ['weekend'], lighting: 'unlit' },
+    { label: 'Floodlit', amount_gbp: 12, duration_minutes: 60, modes: ['after-work', 'weekend'], lighting: 'included' },
+  ] }, 'weekend'), { min: 8, max: 12, duration_minutes: 60 });
+});
+
+test('after-work range excludes daylight-only rates', () => {
+  assert.deepEqual(publishedPriceRange({ ...venue, price_options: [
+    { label: 'Daylight', amount_gbp: 8, duration_minutes: 60, modes: ['weekend'], lighting: 'unlit' },
+    { label: 'Floodlit', amount_gbp: 12, duration_minutes: 60, modes: ['after-work', 'weekend'], lighting: 'included' },
+  ] }, 'after-work'), { min: 12, max: 12, duration_minutes: 60 });
+});
+
+test('price cap ignores indicative ranges with more than one possible rate', () => {
+  const varied: Venue = { ...venue, price_options: [
+    { label: 'Peak', amount_gbp: 26, duration_minutes: 60, modes: ['after-work'], lighting: 'included' },
+    { label: 'Off-peak', amount_gbp: 33, duration_minutes: 60, modes: ['after-work'], lighting: 'included' },
+  ] };
+  assert.equal(relevantHourlyPrice(varied, 'after-work'), null);
+});
+
+test('a 40-minute squash price stays a booking price rather than an hourly price', () => {
+  const squash: Venue = { ...venue, sport: 'squash', slot_minutes: 40, price_options: [
+    { label: 'Nonmember peak', amount_gbp: 12.85, duration_minutes: 40, modes: ['after-work', 'weekend'], lighting: 'included' },
+  ] };
+  assert.deepEqual(publishedPriceRange(squash, 'after-work'), { min: 12.85, max: 12.85, duration_minutes: 40 });
+  assert.equal(relevantHourlyPrice(squash, 'after-work'), null);
+});
+
+test('a headline range never combines 60- and 90-minute padel bookings', () => {
+  const padel: Venue = { ...venue, sport: 'padel', slot_minutes: 60, price_options: [
+    { label: '60 minutes', amount_gbp: 58.68, duration_minutes: 60, modes: ['weekend'], lighting: 'included' },
+    { label: '90 minutes', amount_gbp: 88, duration_minutes: 90, modes: ['weekend'], lighting: 'included' },
+  ] };
+  assert.deepEqual(publishedPriceRange(padel, 'weekend'), { min: 58.68, max: 58.68, duration_minutes: 60 });
+});
+
+test('dated booking links follow the selected playing date', () => {
+  assert.equal(bookingUrlFor({ ...venue, booking_url: 'https://example.com/tennis/2026-09-19/by-time' }, '2026-09-26'), 'https://example.com/tennis/2026-09-26/by-time');
 });
 
 test('a complete published rule gives the exact London release time', () => {
@@ -59,6 +114,26 @@ test('a complete published rule gives the exact London release time', () => {
 
 test('an ambiguous release rule does not invent an exact date', () => {
   assert.equal(releaseDetails({ ...venue, release_status: 'partial' }, '2026-09-21'), null);
+});
+
+test('catalogue parser keeps structured facts and renders booking labels', () => {
+  const parsed = parseCatalogue({ venues: [{ ...venue, release_status: 'partial', advance_days: 6, release_time: null, release_rule: null }] }, {
+    'hyde-park': [{ customer: 'nonmember', time_band: 'peak', amount_gbp: 12.25, duration_minutes: 40, modes: ['after-work'], lighting: 'included' }],
+  }, { 'hyde-park': null });
+  assert.equal(parsed[0].advance_days, 6);
+  assert.equal(parsed[0].coordinate, null);
+  assert.equal(venueDisplay(parsed[0], 'after-work', '2026-09-21').releaseRule, 'Up to 6 days ahead; release time unknown.');
+  assert.equal(venueDisplay(parsed[0], 'after-work', '2026-09-21').rates[0].label, 'Nonmember · peak');
+});
+
+test('static data joins have matching venue IDs and explicit empty rates', () => {
+  const load = (name: string) => JSON.parse(readFileSync(new URL(`../data/${name}.json`, import.meta.url), 'utf8'));
+  const venues = parseCatalogue(load('venues'), load('prices'), load('coordinates'));
+  assert.ok(venues.length > 0);
+  assert.ok(venues.every((item) => Array.isArray(item.price_options) && item.coordinate !== undefined));
+  assert.throws(() => parseCatalogue({ venues: [venue] }, { orphan: [] }, { 'hyde-park': null }), /Unknown price venue/);
+  assert.throws(() => parseCatalogue({ venues: [venue] }, {}, { 'hyde-park': null }), /Missing price entry/);
+  assert.throws(() => parseCatalogue({ venues: [venue] }, { 'hyde-park': null }, {}), /Missing coordinate entry/);
 });
 
 test('calendar reminder uses Europe/London and links to booking', () => {

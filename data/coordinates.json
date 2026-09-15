@@ -2133,5 +2133,215 @@
     "query": "Paddington Recreation Ground, Westminster, London, UK",
     "checked_on": "2026-09-14"
   },
-  "westminster-the-regent-s-park-courts": null
+  "westminster-the-regent-s-park-courts": null,
+  "padel-barnet-padel-hub-n20": {
+    "latitude": 51.6335288,
+    "longitude": -0.1778419,
+    "display_name": "Downland Close, Oakleigh Park, Whetstone, London Borough of Barnet, Greater London, England, N20 9LB, United Kingdom",
+    "query": "Unit 4 Downland Close, London N20 9LB",
+    "checked_on": "2026-09-15"
+  },
+  "padel-brent-wembley": {
+    "latitude": 51.5563471,
+    "longitude": -0.2825046,
+    "display_name": "Wembley Padel, Wembley Park Boulevard, London Borough of Brent, Greater London, England, HA9 0BU, United Kingdom",
+    "query": "Wembley Padel, Brent, London, UK",
+    "checked_on": "2026-09-15"
+  },
+  "squash-camden-swiss-cottage": {
+    "latitude": 51.5425202,
+    "longitude": -0.1726474,
+    "display_name": "Swiss Cottage Leisure Centre, Winchester Mews, Swiss Cottage, Belsize Park, London Borough of Camden, Greater London, England, NW3 3NZ, United Kingdom",
+    "query": "Swiss Cottage Leisure Centre, Camden, London, UK",
+    "checked_on": "2026-09-15"
+  },
+  "padel-ealing-parkside-southall": {
+    "latitude": 51.5062962,
+    "longitude": -0.3891341,
+    "display_name": "3, Seva Drive, London Borough of Ealing, Greater London, England, UB1 1GH, United Kingdom",
+    "query": "3 Seva Drive, Southall UB1 1GH",
+    "checked_on": "2026-09-15"
+  },
+  "squash-hammersmith-fitness": {
+    "latitude": 51.4920482,
+    "longitude": -0.2213562,
+    "display_name": "Hammersmith Fitness and Squash Centre, Chalk Hill Road, Hammersmith, London Borough of Hammersmith and Fulham, Greater London, England, W6 8DW, United Kingdom",
+    "query": "Hammersmith Fitness and Squash Centre, Hammersmith and Fulham, London, UK",
+    "checked_on": "2026-09-15"
+  },
+  "squash-merton-canons": {
+    "latitude": 51.4003707,
+    "longitude": -0.1628676,
+    "display_name": "Canons Leisure Centre, Madeira Road, Mitcham, London Borough of Merton, Greater London, England, CR4 4HD, United Kingdom",
+    "query": "Canons Leisure Centre, Merton, London, UK",
+    "checked_on": "2026-09-15"
+  },
+  "padel-newham-stratford": {
+    "latitude": 51.5346,
+    "longitude": -0.0057857,
+    "display_name": "Stratford Padel Club, 221, High Street, Mill Meads, Stratford, London Borough of Newham, Greater London, England, E15 2AE, United Kingdom",
+    "query": "Stratford Padel Club, Newham, London, UK",
+    "checked_on": "2026-09-15"
+  },
+  "padel-redbridge-rocket-ilford": {
+    "latitude": 51.5728103,
+    "longitude": 0.0546351,
+    "display_name": "The Drive, Redbridge, London Borough of Redbridge, Greater London, England, IG1 3PJ, United Kingdom",
+    "query": "The Drive, Ilford IG1 3PS",
+    "checked_on": "2026-09-15"
+  },
+  "padel-southwark-padel-box-bermondsey": {
+    "latitude": 51.4834992,
+    "longitude": -0.0505279,
+    "display_name": "Rollins Street, New Cross Gate, London Borough of Lewisham, Greater London, England, SE15 1EU, United Kingdom",
+    "query": "Rollins Street, London SE15 1EP",
+    "checked_on": "2026-09-15"
+  },
+  "padel-sutton-social-sports": {
+    "latitude": 51.345196782879796,
+    "longitude": -0.19390807301277616,
+    "display_name": "London Cancer Hub, Cotswold Road, Sutton SM2 5NS",
+    "query": "Official venue map coordinates",
+    "checked_on": "2026-09-15"
+  },
+  "squash-waltham-forest-walthamstow": {
+    "latitude": 51.5760184,
+    "longitude": -0.0287788,
+    "display_name": "Walthamstow Leisure Centre, 243, Markhouse Road, Leyton, Walthamstow, Greater London, England, E17 8RN, United Kingdom",
+    "query": "Walthamstow Leisure Centre, Waltham Forest, London, UK",
+    "checked_on": "2026-09-15"
+  },
+  "padel-wandsworth-rocket-battersea": {
+    "latitude": 51.4817519,
+    "longitude": -0.1460471,
+    "display_name": "Circus Road West, Nine Elms, Clapham Junction, London Borough of Wandsworth, Greater London, England, SW11 8ET, United Kingdom",
+    "query": "Circus Road West, London SW11 8AL",
+    "checked_on": "2026-09-15"
+  },
+  "padel-wandsworth-padel-yard": {
+    "latitude": 51.4585247,
+    "longitude": -0.1954581,
+    "display_name": "Armoury Way, Wandsworth, London Borough of Wandsworth, Greater London, England, SW18 1HZ, United Kingdom",
+    "query": "2 Armoury Way, London SW18 1HZ",
+    "checked_on": "2026-09-15"
+  },
+  "padel-westminster-hyde-park": {
+    "latitude": 51.5031988,
+    "longitude": -0.1732562,
+    "display_name": "The Courts at Hyde Park, South Carriage Drive, Knightsbridge, City of Westminster, Greater London, England, W2 2UH, United Kingdom",
+    "query": "Hyde Park Courts, Westminster, London, UK",
+    "checked_on": "2026-09-15"
+  },
+  "padel-westminster-regents-park": {
+    "latitude": 51.5256472,
+    "longitude": -0.1541468,
+    "display_name": "York Bridge, East Marylebone, Marylebone, City of Westminster, Greater London, England, NW1 4NS, United Kingdom",
+    "query": "York Bridge, London NW1 4NU",
+    "checked_on": "2026-09-15"
+  },
+  "squash-richmond-teddington": {
+    "latitude": 51.4231397,
+    "longitude": -0.3109295,
+    "display_name": "Teddington School, Broom Road, Hampton Wick, Teddington, Greater London, England, TW11 9PJ, United Kingdom",
+    "query": "Teddington School, Broom Road, Teddington TW11 9PJ",
+    "checked_on": "2026-09-15"
+  },
+  "squash-bromley-crystal-palace": {
+    "latitude": 51.4204026,
+    "longitude": -0.069075,
+    "display_name": "Crystal Palace National Sports Centre, Geological strata bridge, Crystal Palace, London Borough of Bromley, Greater London, England, SE20 8DN, United Kingdom",
+    "query": "Crystal Palace National Sports Centre, London SE19 2BB",
+    "checked_on": "2026-09-15"
+  },
+  "squash-camden-oasis": {
+    "latitude": 51.5150168,
+    "longitude": -0.1253707,
+    "display_name": "Endell Street, Seven Dials, Bloomsbury, London Borough of Camden, Greater London, England, WC2H 9AJ, United Kingdom",
+    "query": "32 Endell Street, London WC2H 9AG",
+    "checked_on": "2026-09-15"
+  },
+  "squash-greenwich-woolwich-waves": {
+    "latitude": 51.4894586,
+    "longitude": 0.068635,
+    "display_name": "Woolwich Waves, 49, Woolwich New Road, Callis Yard, Glyndon, Plumstead, Royal Borough of Greenwich, Greater London, England, SE18 6EU, United Kingdom",
+    "query": "Woolwich Waves, 49 Woolwich New Road, London SE18 6EU",
+    "checked_on": "2026-09-15"
+  },
+  "squash-hackney-britannia": {
+    "latitude": 51.5342614,
+    "longitude": -0.0833736,
+    "display_name": "Britannia Leisure Centre, Pitfield Street, De Beauvoir Town, Hoxton, London Borough of Hackney, Greater London, England, N1 5DD, United Kingdom",
+    "query": "Britannia Leisure Centre, Pitfield Street, London N1 5FT",
+    "checked_on": "2026-09-15"
+  },
+  "squash-hackney-clissold": {
+    "latitude": 51.5591298,
+    "longitude": -0.0856431,
+    "display_name": "Clissold Leisure Centre, 63, Clissold Road, Stoke Newington, London Borough of Hackney, Greater London, England, N16 9EX, United Kingdom",
+    "query": "Clissold Leisure Centre, 63 Clissold Road, London N16 9EX",
+    "checked_on": "2026-09-15"
+  },
+  "squash-islington-finsbury": {
+    "latitude": 51.5260304,
+    "longitude": -0.0951406,
+    "display_name": "Finsbury Leisure Centre, Norman Street, St Luke's, Angel, Finsbury, London Borough of Islington, Greater London, England, EC1V 3PU, United Kingdom",
+    "query": "Finsbury Leisure Centre, Norman Street, London EC1V 3PU",
+    "checked_on": "2026-09-15"
+  },
+  "squash-islington-ironmonger-row": {
+    "latitude": 51.5265652,
+    "longitude": -0.0946975,
+    "display_name": "Ironmonger Row Baths, 1, Norman Street, St Luke's, Angel, Finsbury, London Borough of Islington, Greater London, England, EC1V 3AA, United Kingdom",
+    "query": "Ironmonger Row Baths, 1 Norman Street, London EC1V 3AA",
+    "checked_on": "2026-09-15"
+  },
+  "squash-islington-sobell": {
+    "latitude": 51.5589009,
+    "longitude": -0.1121304,
+    "display_name": "Sobell Leisure Centre, Hornsey Road, Lower Holloway, Holloway, London Borough of Islington, Greater London, England, N7 7NY, United Kingdom",
+    "query": "Sobell Leisure Centre, Islington, London, UK",
+    "checked_on": "2026-09-15"
+  },
+  "squash-kensington-kensington": {
+    "latitude": 51.5136277,
+    "longitude": -0.2138914,
+    "display_name": "Kensington Leisure Centre, Silchester Road, Lancaster West Estate, North Kensington, Royal Borough of Kensington and Chelsea, Greater London, England, W10 6EX, United Kingdom",
+    "query": "Kensington Leisure Centre, Silchester Road, London W10 6EX",
+    "checked_on": "2026-09-15"
+  },
+  "squash-lambeth-brixton": {
+    "latitude": 51.4636531,
+    "longitude": -0.1132776,
+    "display_name": "Brixton Recreation Centre, 27, Brixton Station Road, Stockwell Park, Brixton, London Borough of Lambeth, Greater London, England, SW9 8QQ, United Kingdom",
+    "query": "Brixton Recreation Centre, 27 Brixton Station Road, London SW9 8QQ",
+    "checked_on": "2026-09-15"
+  },
+  "squash-lambeth-flaxman": {
+    "latitude": 51.4714844,
+    "longitude": -0.1000598,
+    "display_name": "Flaxman Sports Centre, Carew Street, Thorlands Estate, Myatt's Fields, Loughborough Junction, London Borough of Lambeth, Greater London, England, SE5 9DF, United Kingdom",
+    "query": "Flaxman Sports Centre, Carew Street, London SE5 9DF",
+    "checked_on": "2026-09-15"
+  },
+  "squash-westminster-porchester": {
+    "latitude": 51.5171736,
+    "longitude": -0.1891515,
+    "display_name": "Porchester Centre, Queensway, Westbourne Green, Kensal Town, Bayswater, City of Westminster, Greater London, England, W2 5HS, United Kingdom",
+    "query": "Porchester Centre, Queensway, London W2 5HS",
+    "checked_on": "2026-09-15"
+  },
+  "squash-westminster-queen-mother": {
+    "latitude": 51.4934688,
+    "longitude": -0.1404521,
+    "display_name": "SW1V 1EL, City of Westminster, Greater London, England, United Kingdom",
+    "query": "SW1V 1EL, London",
+    "checked_on": "2026-09-15"
+  },
+  "squash-camden-bloomsbury-fitness": {
+    "latitude": 51.525044,
+    "longitude": -0.1328141,
+    "display_name": "Bloomsbury Theatre, 15, Gordon Street, St Pancras, London Borough of Camden, Greater London, England, WC1H 0AH, United Kingdom",
+    "query": "Bloomsbury Fitness Centre, 15 Gordon Street, London WC1H 0AY",
+    "checked_on": "2026-09-15"
+  }
 }

@@ -1,32 +1,39 @@
 export type Mode = 'after-work' | 'weekend';
+export type Sport = 'tennis' | 'squash' | 'padel';
+export type PriceOption = { label?: string; customer?: 'nonmember' | 'adult_standard'; time_band?: 'peak' | 'off_peak' | 'anytime'; amount_gbp: number; duration_minutes: number; modes: Mode[]; lighting: 'included' | 'unlit' };
 
 export type Venue = {
   id: string;
+  sport: Sport;
   name: string;
   borough: string;
   area?: string | null;
   operator?: string | null;
-  access: string;
+  access: 'pay_and_play' | 'public_access_unconfirmed' | 'free_walk_on' | 'public_pass';
   booking_url?: string | null;
   courts_total?: number | null;
   indoor_courts?: number | null;
   floodlit_courts?: number | null;
-  lighting: string;
+  lighting: 'unknown' | 'unlit' | 'floodlit' | 'indoor' | 'mixed';
   hours_text?: string | null;
-  evening_assessment: string;
+  evening_assessment: 'suitable' | 'seasonal' | 'unsuitable' | 'unknown';
   evening_notes?: string | null;
   weekend_notes?: string | null;
   price_text?: string | null;
+  price_options?: PriceOption[];
+  coordinate?: Point | null;
+  slot_minutes?: number | null;
   advance_days?: number | null;
   release_time?: string | null;
   release_rule?: string | null;
-  release_status: string;
+  release_status: 'published' | 'partial' | 'unknown';
   checked_on: string;
   sources: { url: string; supports: string }[];
   notes?: string | null;
 };
 
 export type Filters = {
+  sport: Sport;
   mode: Mode;
   borough: string;
   query: string;
@@ -37,6 +44,59 @@ export type Filters = {
 
 export type Release = { date: string; time: string; open: boolean };
 export type Point = { latitude: number; longitude: number };
+
+export function parseCatalogue(catalogue: { venues: Venue[] }, prices: Record<string, PriceOption[] | null>, coordinates: Record<string, Point | null>): Venue[] {
+  const ids = new Set(catalogue.venues.map((venue) => venue.id));
+  if (ids.size !== catalogue.venues.length) throw new Error('Duplicate venue IDs');
+  for (const id of Object.keys(prices)) if (!ids.has(id)) throw new Error(`Unknown price venue: ${id}`);
+  for (const id of Object.keys(coordinates)) if (!ids.has(id)) throw new Error(`Unknown coordinate venue: ${id}`);
+  return catalogue.venues.map((venue) => {
+    if (!['tennis', 'squash', 'padel'].includes(venue.sport) || !['suitable', 'seasonal', 'unsuitable', 'unknown'].includes(venue.evening_assessment) || !['published', 'partial', 'unknown'].includes(venue.release_status)) throw new Error(`Invalid venue config: ${venue.id}`);
+    if (!(venue.id in prices)) throw new Error(`Missing price entry: ${venue.id}`);
+    if (!(venue.id in coordinates)) throw new Error(`Missing coordinate entry: ${venue.id}`);
+    const rates = prices[venue.id] ?? [];
+    if (!Array.isArray(rates) || rates.some((rate) => !Number.isFinite(rate.amount_gbp) || rate.amount_gbp < 0 || !Number.isInteger(rate.duration_minutes) || rate.duration_minutes <= 0)) throw new Error(`Invalid prices: ${venue.id}`);
+    return { ...venue, price_options: rates, coordinate: coordinates[venue.id] };
+  });
+}
+
+export function priceOptionLabel(option: PriceOption): string {
+  if (option.label) return option.label;
+  if (!option.customer || !option.time_band) return 'Published rate';
+  const customer = option.customer === 'adult_standard' ? 'Adult standard' : 'Nonmember';
+  const band = option.time_band === 'off_peak' ? 'off-peak' : option.time_band === 'peak' ? 'peak' : 'anytime';
+  return `${customer} · ${band}`;
+}
+
+export function prettyDate(date: string): string {
+  return new Intl.DateTimeFormat('en-GB', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${date}T12:00:00Z`));
+}
+
+export function venueDisplay(venue: Venue, mode: Mode, playDate: string) {
+  const status = mode === 'weekend' ? { label: 'Weekend details', tone: 'neutral' } : ({
+    suitable: { label: 'Ready after work', tone: 'good' },
+    seasonal: { label: 'Seasonal daylight', tone: 'warn' },
+    unsuitable: { label: 'Closes too early', tone: 'bad' },
+    unknown: { label: 'Needs checking', tone: 'neutral' },
+  } as const)[venue.evening_assessment];
+  const price = publishedPriceRange(venue, mode);
+  const release = releaseDetails(venue, playDate);
+  const releaseRule = venue.release_rule ?? (venue.advance_days != null
+    ? `Up to ${venue.advance_days} days ahead; ${venue.release_status === 'published' && venue.release_time ? `opens at ${venue.release_time} London time` : 'release time unknown'}.`
+    : 'Booking window needs checking.');
+  return {
+    status,
+    lighting: venue.indoor_courts ? `${venue.indoor_courts} indoor` : venue.lighting,
+    price: price === null ? 'Check' : price.min === price.max ? `£${price.min}` : `£${price.min}–£${price.max}`,
+    priceUnit: price ? (price.duration_minutes === 60 ? 'per hour' : `per ${price.duration_minutes} min`) : venue.slot_minutes ? `for ${venue.slot_minutes} min` : '',
+    rates: (venue.price_options ?? []).filter((option) => option.modes.includes(mode)).map((option) => ({ ...option, label: priceOptionLabel(option) })),
+    suitability: mode === 'after-work' ? venue.evening_notes : venue.weekend_notes ?? venue.hours_text ?? 'Weekend court hours need checking.',
+    release,
+    releaseHeading: release?.open ? 'BOOKING WINDOW' : 'BE READY TO BOOK',
+    releaseLabel: release ? (release.open ? 'Open — check slots now' : `${prettyDate(release.date)} · ${release.time}`) : 'Release time needs checking',
+    releaseRule,
+  };
+}
 
 export function distanceMiles(from: Point, to: Point): number {
   const radians = (degrees: number) => degrees * Math.PI / 180;
@@ -56,6 +116,11 @@ export function osmEmbedUrl(point: Point): string {
 }
 
 export function relevantHourlyPrice(venue: Venue, mode: Mode): number | null {
+  if (venue.price_options?.length) {
+    const options = venue.price_options.filter((option) => option.modes.includes(mode));
+    return options.length === 1 && options[0].duration_minutes === 60 ? options[0].amount_gbp : null;
+  }
+  if (venue.sport !== 'tennis') return null;
   const text = venue.price_text;
   if (!text) return null;
   const hourly = [...text.matchAll(/£(\d+(?:\.\d{1,2})?)(?=[^£]{0,24}(?:\/\s*(?:hour|hr|h)\b|per hour))/gi)];
@@ -67,7 +132,19 @@ export function relevantHourlyPrice(venue: Venue, mode: Mode): number | null {
   return hourly.length === 1 ? Number(hourly[0][1]) : null;
 }
 
+export function publishedPriceRange(venue: Venue, mode: Mode): { min: number; max: number; duration_minutes: number } | null {
+  const options = venue.price_options?.filter((option) => option.modes.includes(mode)) ?? [];
+  if (options.length) {
+    const duration = venue.slot_minutes ?? options[0].duration_minutes;
+    const rates = options.filter((option) => option.duration_minutes === duration).map((option) => option.amount_gbp);
+    return rates.length ? { min: Math.min(...rates), max: Math.max(...rates), duration_minutes: duration } : null;
+  }
+  const price = relevantHourlyPrice(venue, mode);
+  return price === null ? null : { min: price, max: price, duration_minutes: 60 };
+}
+
 export function matchesVenue(venue: Venue, filters: Filters): boolean {
+  if (venue.sport !== filters.sport) return false;
   const query = filters.query.trim().toLowerCase();
   if (query && !`${venue.name} ${venue.borough} ${venue.area ?? ''}`.toLowerCase().includes(query)) return false;
   if (filters.borough && venue.borough !== filters.borough) return false;
@@ -113,6 +190,11 @@ export function venueDestination(venue: Venue): string {
   return [...new Set([venue.name, venue.area, venue.borough, 'London', 'UK'].filter(Boolean))].join(', ');
 }
 
+export function bookingUrlFor(venue: Venue, playDate: string): string | null {
+  const booking = venue.booking_url ?? venue.sources[0]?.url;
+  return booking?.replace(/\d{4}-\d{2}-\d{2}(?=\/by-time)/, playDate) ?? null;
+}
+
 export function directionsUrl(venue: Venue): string {
   const url = new URL('https://www.google.com/maps/dir/');
   url.searchParams.set('api', '1');
@@ -126,13 +208,13 @@ function icsEscape(value: string): string {
 
 export function calendarText(venue: Venue, release: Release, playDate: string): string {
   const local = `${release.date.replaceAll('-', '')}T${release.time.replace(':', '')}00`;
-  const booking = venue.booking_url ?? venue.sources[0]?.url ?? '';
+  const booking = bookingUrlFor(venue, playDate) ?? '';
   return [
     'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//London Court Ready//EN', 'BEGIN:VEVENT',
     `UID:${venue.id}-${playDate}@court-ready`,
     `DTSTART;TZID=Europe/London:${local}`,
     `DTEND;TZID=Europe/London:${local}`,
-    `SUMMARY:${icsEscape(`Book ${venue.name} tennis`)}`,
+    `SUMMARY:${icsEscape(`Book ${venue.name} ${venue.sport}`)}`,
     `DESCRIPTION:${icsEscape(`Booking opens for play on ${playDate}. ${booking}`)}`,
     'BEGIN:VALARM', 'ACTION:DISPLAY', 'DESCRIPTION:Booking opens in five minutes', 'TRIGGER:-PT5M',
     'END:VALARM', 'END:VEVENT', 'END:VCALENDAR', '',
