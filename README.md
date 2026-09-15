@@ -50,4 +50,10 @@ uv sync
 .venv/bin/python -m unittest discover -s tests -v
 ```
 
-The ingestion foundation does not fetch pages or change the app's current JSON yet.
+The ClubSpark pilot fetches public HTML and previews normalized metadata for one registry venue:
+
+```sh
+.venv/bin/python -m ingestion.providers.clubspark hammersmith-and-fulham-brook-green-tennis
+```
+
+Its parser is fixture-tested against Brook Green Tennis, Finsbury Park and Cottenham Park. The source pages are saved in `tests/fixtures/` (with form tokens redacted). Unclear price duration and conflicting booking windows or release clocks remain unknown. The preview does not change the app's JSON; validation and diffing are the next ingestion milestone.

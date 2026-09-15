@@ -36,6 +36,7 @@ class VenueMetadata:
     last_checked: datetime
     source_url: str
     court_count: int | None = None
+    floodlit_court_count: int | None = None
     surface: tuple[str, ...] = ()
     floodlit: bool | None = None
     prices: tuple[PriceRate, ...] = ()
