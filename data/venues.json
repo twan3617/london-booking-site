@@ -2,7 +2,7 @@
   "checked_on": "2026-09-15",
   "timezone": "Europe/London",
   "coverage_scope": "tennis",
-  "scope": "Public racquet venue collection; tennis is broad coverage, squash is a researched pay-and-play selection, and padel is an initial selection. Not a live availability feed.",
+  "scope": "Public racquet venue collection; tennis has broad coverage, while squash and padel are researched pay-and-play selections. Not a live availability feed.",
   "preferences": {
     "duration_minutes": 60,
     "weekday_window": [
@@ -1145,6 +1145,7 @@
     },
     {
       "access": "pay_and_play",
+      "courts_total": 6,
       "indoor_courts": 6,
       "floodlit_courts": null,
       "lighting": "indoor",
@@ -1166,7 +1167,6 @@
       "borough": "Barnet",
       "area": "Downland Close, N20",
       "booking_url": "https://playtomic.com/clubs/the-padel-hub-n20-north-london",
-      "courts_total": 6,
       "sources": [
         {
           "url": "https://www.ltapadel.org.uk/play/padel-in-your-area/padel-in-london/",
@@ -2020,6 +2020,7 @@
     },
     {
       "access": "pay_and_play",
+      "courts_total": 4,
       "indoor_courts": 0,
       "floodlit_courts": null,
       "lighting": "unknown",
@@ -2042,7 +2043,6 @@
       "area": "Wembley Park",
       "operator": "Social Sports Society",
       "booking_url": "https://socialsportssociety.com/venue/wembley-padel/",
-      "courts_total": 4,
       "sources": [
         {
           "url": "https://socialsportssociety.com/venue/wembley-padel/",
@@ -2278,6 +2278,44 @@
     },
     {
       "access": "pay_and_play",
+      "courts_total": 2,
+      "indoor_courts": 0,
+      "floodlit_courts": null,
+      "lighting": "unknown",
+      "hours_text": "Outdoor courts weekdays 08:00–22:00; weekends 09:00–17:00. Evening lighting needs checking.",
+      "evening_assessment": "unknown",
+      "evening_notes": null,
+      "weekend_notes": "Two outdoor courts; weekend centre hours end at 17:00.",
+      "price_text": null,
+      "slot_minutes": null,
+      "advance_days": null,
+      "release_time": null,
+      "release_rule": null,
+      "release_status": "unknown",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "padel-bromley-crystal-palace",
+      "sport": "padel",
+      "name": "Crystal Palace National Sports Centre",
+      "borough": "Bromley",
+      "area": "Crystal Palace",
+      "operator": "Game4Padel / Better",
+      "booking_url": "https://www.game4padel.com/crystal-palace",
+      "sources": [
+        {
+          "url": "https://www.game4padel.com/crystal-palace",
+          "supports": "Two public outdoor padel courts and booking route."
+        },
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/crystal-palace/crystal-palace-national-sports-centre/padel",
+          "supports": "Centre booking information and hours."
+        }
+      ],
+      "geo_query": "Crystal Palace National Sports Centre, Ledrington Road, London SE19 2BB"
+    },
+    {
+      "access": "pay_and_play",
+      "courts_total": 2,
       "indoor_courts": 2,
       "floodlit_courts": null,
       "lighting": "indoor",
@@ -2300,7 +2338,6 @@
       "area": "Crystal Palace",
       "operator": "Better",
       "booking_url": "https://www.better.org.uk/leisure-centre/london/crystal-palace/crystal-palace-national-sports-centre/facilities",
-      "courts_total": 2,
       "sources": [
         {
           "url": "https://www.better.org.uk/leisure-centre/london/crystal-palace/crystal-palace-national-sports-centre/facilities",
@@ -2578,6 +2615,7 @@
     },
     {
       "access": "pay_and_play",
+      "courts_total": 3,
       "indoor_courts": 3,
       "floodlit_courts": null,
       "lighting": "indoor",
@@ -2600,7 +2638,6 @@
       "area": "Bloomsbury",
       "operator": "Students’ Union UCL",
       "booking_url": "https://studentsunionucl.org/sport-fitness/book-our-squash-courts",
-      "courts_total": 3,
       "sources": [
         {
           "url": "https://studentsunionucl.org/sport-fitness/book-our-squash-courts",
@@ -2697,6 +2734,7 @@
     },
     {
       "access": "pay_and_play",
+      "courts_total": 3,
       "indoor_courts": 3,
       "floodlit_courts": null,
       "lighting": "indoor",
@@ -2719,7 +2757,6 @@
       "area": "Covent Garden",
       "operator": "Better",
       "booking_url": "https://www.better.org.uk/leisure-centre/london/camden/oasis-sports-centre/squash",
-      "courts_total": 3,
       "sources": [
         {
           "url": "https://www.better.org.uk/leisure-centre/london/camden/oasis-sports-centre/squash",
@@ -2771,6 +2808,7 @@
     },
     {
       "access": "pay_and_play",
+      "courts_total": 2,
       "indoor_courts": 2,
       "floodlit_courts": null,
       "lighting": "indoor",
@@ -2793,7 +2831,6 @@
       "area": "Swiss Cottage",
       "operator": "Better",
       "booking_url": "https://www.better.org.uk/leisure-centre/london/camden/swiss-cottage-leisure-centre/6985b6f8-b1c7-4cc7-adad-15c719a5ef88",
-      "courts_total": 2,
       "sources": [
         {
           "url": "https://www.better.org.uk/leisure-centre/london/camden/swiss-cottage-leisure-centre/6985b6f8-b1c7-4cc7-adad-15c719a5ef88",
@@ -3796,6 +3833,7 @@
     },
     {
       "access": "pay_and_play",
+      "courts_total": 3,
       "indoor_courts": 3,
       "floodlit_courts": null,
       "lighting": "indoor",
@@ -3817,7 +3855,6 @@
       "borough": "Ealing",
       "area": "Southall",
       "booking_url": "https://www.game4padel.com/",
-      "courts_total": 3,
       "sources": [
         {
           "url": "https://www.ltapadel.org.uk/play/padel-in-your-area/padel-in-london/",
@@ -3899,6 +3936,43 @@
       "borough": "Ealing",
       "sport": "tennis",
       "slot_minutes": 60
+    },
+    {
+      "access": "pay_and_play",
+      "courts_total": 11,
+      "indoor_courts": 11,
+      "floodlit_courts": null,
+      "lighting": "indoor",
+      "hours_text": "Courts daily 07:00–00:00.",
+      "evening_assessment": "suitable",
+      "evening_notes": "Seven public pay-and-play courts are bookable seven days ahead.",
+      "weekend_notes": "Indoor courts open through weekend daytime.",
+      "price_text": null,
+      "slot_minutes": null,
+      "advance_days": 7,
+      "release_time": null,
+      "release_rule": "Nonmembers can book seven days ahead; release clock unpublished.",
+      "release_status": "partial",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "padel-ealing-racketeer-acton",
+      "sport": "padel",
+      "name": "Racketeer Padel",
+      "borough": "Ealing",
+      "area": "North Acton",
+      "operator": "Racketeer",
+      "booking_url": "https://www.racketeer.club/faq",
+      "sources": [
+        {
+          "url": "https://www.racketeer.club/faq",
+          "supports": "Eleven bookable courts, pay-and-play access, hours, advance policy and address."
+        },
+        {
+          "url": "https://www.london.gov.uk/sites/default/files/23.pdf",
+          "supports": "North Acton Road site is in Ealing borough."
+        }
+      ],
+      "geo_query": "Racketeer Padel, 55-61 North Acton Road, London NW10 6PH"
     },
     {
       "area": "Greenford",
@@ -4844,6 +4918,43 @@
       "slot_minutes": 60
     },
     {
+      "access": "pay_and_play",
+      "courts_total": 2,
+      "indoor_courts": 0,
+      "floodlit_courts": null,
+      "lighting": "unlit",
+      "hours_text": "Outdoor courts operate during daylight; no floodlights.",
+      "evening_assessment": "seasonal",
+      "evening_notes": "19:00–21:00 depends on daylight; no floodlights.",
+      "weekend_notes": "Two outdoor daytime courts.",
+      "price_text": null,
+      "slot_minutes": null,
+      "advance_days": null,
+      "release_time": null,
+      "release_rule": null,
+      "release_status": "unknown",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "padel-greenwich-coldharbour",
+      "sport": "padel",
+      "name": "Coldharbour Leisure Centre",
+      "borough": "Greenwich",
+      "area": "Eltham",
+      "operator": "Game4Padel / Better",
+      "booking_url": "https://www.game4padel.com/gll-coldharbour",
+      "sources": [
+        {
+          "url": "https://www.game4padel.com/gll-coldharbour",
+          "supports": "Two outdoor courts and no floodlights."
+        },
+        {
+          "url": "https://www.better.org.uk/leisure-centre/london/greenwich/coldharbour-leisure-centre/padel",
+          "supports": "Public booking route."
+        }
+      ],
+      "geo_query": "Coldharbour Leisure Centre, Chapel Farm Road, London SE9 3LX"
+    },
+    {
       "area": "Eltham",
       "operator": "TwistFizz",
       "access": "pay_and_play",
@@ -5104,6 +5215,7 @@
     },
     {
       "access": "pay_and_play",
+      "courts_total": 2,
       "indoor_courts": 2,
       "floodlit_courts": null,
       "lighting": "indoor",
@@ -5126,7 +5238,6 @@
       "area": "Woolwich",
       "operator": "Better",
       "booking_url": "https://www.better.org.uk/leisure-centre/london/greenwich/woolwich-waves/squash",
-      "courts_total": 2,
       "sources": [
         {
           "url": "https://www.better.org.uk/leisure-centre/london/greenwich/woolwich-waves/squash",
@@ -5149,6 +5260,7 @@
     },
     {
       "access": "pay_and_play",
+      "courts_total": 4,
       "indoor_courts": 4,
       "floodlit_courts": null,
       "lighting": "indoor",
@@ -5171,7 +5283,6 @@
       "area": "Shoreditch",
       "operator": "Better",
       "booking_url": "https://www.better.org.uk/leisure-centre/london/hackney/britannia-leisure-centre/squash",
-      "courts_total": 4,
       "sources": [
         {
           "url": "https://www.better.org.uk/leisure-centre/london/hackney/britannia-leisure-centre/squash",
@@ -5223,6 +5334,7 @@
     },
     {
       "access": "pay_and_play",
+      "courts_total": 2,
       "indoor_courts": 2,
       "floodlit_courts": null,
       "lighting": "indoor",
@@ -5245,7 +5357,6 @@
       "area": "Stoke Newington",
       "operator": "Better",
       "booking_url": "https://www.better.org.uk/leisure-centre/london/hackney/clissold-leisure-centre/facilities",
-      "courts_total": 2,
       "sources": [
         {
           "url": "https://www.better.org.uk/leisure-centre/london/hackney/clissold-leisure-centre/facilities",
@@ -5661,6 +5772,7 @@
     },
     {
       "access": "pay_and_play",
+      "courts_total": 3,
       "indoor_courts": 3,
       "floodlit_courts": null,
       "lighting": "indoor",
@@ -5683,7 +5795,6 @@
       "area": "Hammersmith",
       "operator": "Better",
       "booking_url": "https://www.better.org.uk/leisure-centre/london/hammersmith-and-fulham/hammersmith-fitness-and-squash-centre/squash",
-      "courts_total": 3,
       "sources": [
         {
           "url": "https://www.better.org.uk/leisure-centre/london/hammersmith-and-fulham/hammersmith-fitness-and-squash-centre/squash",
@@ -5871,6 +5982,43 @@
       "borough": "Hammersmith and Fulham",
       "sport": "tennis",
       "slot_minutes": 60
+    },
+    {
+      "access": "pay_and_play",
+      "courts_total": 5,
+      "indoor_courts": 2,
+      "floodlit_courts": null,
+      "lighting": "mixed",
+      "hours_text": "Courts weekdays 06:00–23:00; weekends 07:00–23:00.",
+      "evening_assessment": "suitable",
+      "evening_notes": "Indoor courts suit evening play; nonmembers book three days ahead through Playtomic.",
+      "weekend_notes": "Courts bookable throughout weekend daytime.",
+      "price_text": null,
+      "slot_minutes": null,
+      "advance_days": 3,
+      "release_time": null,
+      "release_rule": "Nonmember booking opens three days ahead; release clock unpublished.",
+      "release_status": "partial",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "padel-hammersmith-earls-court-social",
+      "sport": "padel",
+      "name": "Padel Social Club Earl’s Court",
+      "borough": "Hammersmith and Fulham",
+      "area": "Earl’s Court",
+      "operator": "Padel Social Club",
+      "booking_url": "https://padelsocial.club/pages/earls-court",
+      "sources": [
+        {
+          "url": "https://padelsocial.club/pages/faqs",
+          "supports": "Pay-and-play access, three-day nonmember window and court hours."
+        },
+        {
+          "url": "https://padelsocial.club/pages/earls-court",
+          "supports": "Club facilities and location."
+        }
+      ],
+      "geo_query": "Padel Social Club, Empress Place, London SW6 1TT"
     },
     {
       "area": "Hammersmith",
@@ -6794,6 +6942,43 @@
       "slot_minutes": 60
     },
     {
+      "access": "pay_and_play",
+      "courts_total": 4,
+      "indoor_courts": 0,
+      "floodlit_courts": null,
+      "lighting": "unknown",
+      "hours_text": "Outdoor padel courts; check booking calendar for court hours and lighting.",
+      "evening_assessment": "unknown",
+      "evening_notes": null,
+      "weekend_notes": "Public court booking via Playtomic.",
+      "price_text": null,
+      "slot_minutes": null,
+      "advance_days": null,
+      "release_time": null,
+      "release_rule": null,
+      "release_status": "unknown",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "padel-havering-central-park",
+      "sport": "padel",
+      "name": "Central Park Leisure Centre",
+      "borough": "Havering",
+      "area": "Harold Hill",
+      "operator": "Padel4Everyone / Everyone Active",
+      "booking_url": "https://padel4everyone.co.uk/venues/central-park",
+      "sources": [
+        {
+          "url": "https://www.everyoneactive.com/centre/central-park-leisure-centre/",
+          "supports": "Four padel courts and centre address."
+        },
+        {
+          "url": "https://padel4everyone.co.uk/venues/central-park",
+          "supports": "Public padel booking at Central Park."
+        }
+      ],
+      "geo_query": "Central Park Leisure Centre, Gooshays Drive, Harold Hill RM3 9LB"
+    },
+    {
       "area": "Harold Wood",
       "operator": "Tennis in Havering",
       "access": "pay_and_play",
@@ -7199,6 +7384,43 @@
       "borough": "Hillingdon",
       "sport": "tennis",
       "slot_minutes": 60
+    },
+    {
+      "access": "pay_and_play",
+      "courts_total": 4,
+      "indoor_courts": 4,
+      "floodlit_courts": null,
+      "lighting": "indoor",
+      "hours_text": "Sports centre weekdays 07:00–23:00; weekends 09:00–19:00. Check squash court slots.",
+      "evening_assessment": "unknown",
+      "evening_notes": null,
+      "weekend_notes": "Public pay-as-you-go booking; weekend court hours need checking.",
+      "price_text": "Adult public court session £10; duration needs checking.",
+      "slot_minutes": null,
+      "advance_days": 7,
+      "release_time": null,
+      "release_rule": "Phone bookings seven days ahead; app bookings may open ten days ahead. Confirm public app access.",
+      "release_status": "partial",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "squash-hillingdon-brunel",
+      "sport": "squash",
+      "name": "Brunel University Sports Centre",
+      "borough": "Hillingdon",
+      "area": "Uxbridge",
+      "operator": "Brunel University London",
+      "booking_url": "https://www.brunel.ac.uk/life/sport/facilities/sports-centre/squash-courts",
+      "sources": [
+        {
+          "url": "https://www.brunel.ac.uk/life/sport/facilities/sports-centre/squash-courts",
+          "supports": "Four squash courts, nonmember price and advance booking routes."
+        },
+        {
+          "url": "https://www.brunel.ac.uk/life/sport/contact-us",
+          "supports": "Sports centre hours."
+        }
+      ],
+      "geo_query": "Brunel University Sports Centre, Kingston Lane, Uxbridge UB8 3PH"
     },
     {
       "area": "Eastcote",
@@ -8054,6 +8276,7 @@
     },
     {
       "access": "pay_and_play",
+      "courts_total": 4,
       "indoor_courts": 4,
       "floodlit_courts": null,
       "lighting": "indoor",
@@ -8076,7 +8299,6 @@
       "area": "Old Street",
       "operator": "Better",
       "booking_url": "https://www.better.org.uk/leisure-centre/london/islington/finsbury/squash",
-      "courts_total": 4,
       "sources": [
         {
           "url": "https://www.better.org.uk/leisure-centre/london/islington/finsbury/squash",
@@ -8128,6 +8350,7 @@
     },
     {
       "access": "pay_and_play",
+      "courts_total": 2,
       "indoor_courts": 2,
       "floodlit_courts": null,
       "lighting": "indoor",
@@ -8150,7 +8373,6 @@
       "area": "Old Street",
       "operator": "Better",
       "booking_url": "https://www.better.org.uk/leisure-centre/london/islington/ironmonger-row-baths/squash",
-      "courts_total": 2,
       "sources": [
         {
           "url": "https://www.better.org.uk/leisure-centre/london/islington/ironmonger-row-baths/squash",
@@ -8235,6 +8457,7 @@
     },
     {
       "access": "pay_and_play",
+      "courts_total": 6,
       "indoor_courts": 6,
       "floodlit_courts": null,
       "lighting": "indoor",
@@ -8257,7 +8480,6 @@
       "area": "Holloway",
       "operator": "Better",
       "booking_url": "https://www.better.org.uk/leisure-centre/london/islington/sobell/squash",
-      "courts_total": 6,
       "sources": [
         {
           "url": "https://www.better.org.uk/leisure-centre/london/islington/sobell/squash",
@@ -8419,6 +8641,7 @@
     },
     {
       "access": "pay_and_play",
+      "courts_total": 2,
       "indoor_courts": 2,
       "floodlit_courts": null,
       "lighting": "indoor",
@@ -8441,7 +8664,6 @@
       "area": "North Kensington",
       "operator": "Better",
       "booking_url": "https://www.better.org.uk/leisure-centre/london/kensington-and-chelsea/kensington-leisure-centre",
-      "courts_total": 2,
       "sources": [
         {
           "url": "https://www.better.org.uk/leisure-centre/london/kensington-and-chelsea/kensington-leisure-centre",
@@ -8490,6 +8712,39 @@
       "borough": "Kensington and Chelsea",
       "sport": "tennis",
       "slot_minutes": 60
+    },
+    {
+      "access": "pay_and_play",
+      "courts_total": 2,
+      "indoor_courts": 2,
+      "floodlit_courts": null,
+      "lighting": "indoor",
+      "hours_text": "Centre weekdays 06:30–22:00; weekends 09:00–17:00. Check squash court slots.",
+      "evening_assessment": "unknown",
+      "evening_notes": null,
+      "weekend_notes": "Indoor courts; check court-specific times.",
+      "price_text": null,
+      "slot_minutes": null,
+      "advance_days": null,
+      "release_time": null,
+      "release_rule": null,
+      "release_status": "unknown",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "squash-kensington-westway-portobello",
+      "sport": "squash",
+      "name": "Westway Portobello Fitness Club",
+      "borough": "Kensington and Chelsea",
+      "area": "North Kensington",
+      "operator": "Everyone Active",
+      "booking_url": "https://www.everyoneactive.com/centre/westway-portobello-fitness-club/",
+      "sources": [
+        {
+          "url": "https://www.everyoneactive.com/centre/westway-portobello-fitness-club/",
+          "supports": "Operator lists two squash courts, public casual access and centre hours."
+        }
+      ],
+      "geo_query": "Westway Portobello Fitness Club, 3-5 Thorpe Close, London W10 5XL"
     },
     {
       "area": "North Kensington",
@@ -8849,6 +9104,43 @@
       "slot_minutes": 60
     },
     {
+      "access": "pay_and_play",
+      "courts_total": null,
+      "indoor_courts": null,
+      "floodlit_courts": null,
+      "lighting": "indoor",
+      "hours_text": "Centre weekdays 06:30–22:30; weekends 08:00–19:00. Check squash court slots.",
+      "evening_assessment": "unknown",
+      "evening_notes": null,
+      "weekend_notes": "Squash courts can be booked throughout the week.",
+      "price_text": null,
+      "slot_minutes": null,
+      "advance_days": null,
+      "release_time": null,
+      "release_rule": null,
+      "release_status": "unknown",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "squash-kingston-tolworth",
+      "sport": "squash",
+      "name": "Tolworth Recreation Centre",
+      "borough": "Kingston upon Thames",
+      "area": "Tolworth",
+      "operator": "Places Leisure",
+      "booking_url": "https://www.placesleisure.org/centres/tolworth-recreation-centre/centre-activities/sports/",
+      "sources": [
+        {
+          "url": "https://www.placesleisure.org/centres/tolworth-recreation-centre/centre-activities/sports/",
+          "supports": "Squash courts bookable with a free Places account."
+        },
+        {
+          "url": "https://www.placesleisure.org/centres/tolworth-recreation-centre/",
+          "supports": "Centre address and hours."
+        }
+      ],
+      "geo_query": "Tolworth Recreation Centre, Fullers Way North, Tolworth KT6 7LQ"
+    },
+    {
       "area": "Surbiton",
       "operator": null,
       "access": "public_access_unconfirmed",
@@ -9006,6 +9298,7 @@
     },
     {
       "access": "pay_and_play",
+      "courts_total": null,
       "indoor_courts": null,
       "floodlit_courts": null,
       "lighting": "indoor",
@@ -9028,7 +9321,6 @@
       "area": "Brixton",
       "operator": "Active Lambeth",
       "booking_url": "https://active.lambeth.gov.uk/facilities/squash-courts/",
-      "courts_total": null,
       "sources": [
         {
           "url": "https://active.lambeth.gov.uk/facilities/squash-courts/",
@@ -9162,6 +9454,7 @@
     },
     {
       "access": "pay_and_play",
+      "courts_total": null,
       "indoor_courts": null,
       "floodlit_courts": null,
       "lighting": "indoor",
@@ -9184,7 +9477,6 @@
       "area": "Camberwell",
       "operator": "Active Lambeth",
       "booking_url": "https://active.lambeth.gov.uk/facilities/squash-courts/",
-      "courts_total": null,
       "sources": [
         {
           "url": "https://active.lambeth.gov.uk/facilities/squash-courts/",
@@ -10028,6 +10320,7 @@
     },
     {
       "access": "pay_and_play",
+      "courts_total": 1,
       "indoor_courts": 1,
       "floodlit_courts": null,
       "lighting": "indoor",
@@ -10050,7 +10343,6 @@
       "area": "Mitcham",
       "operator": "Better",
       "booking_url": "https://www.better.org.uk/leisure-centre/london/merton/canons-leisure-centre/squash-courts",
-      "courts_total": 1,
       "sources": [
         {
           "url": "https://www.better.org.uk/leisure-centre/london/merton/canons-leisure-centre/squash-courts",
@@ -10930,6 +11222,39 @@
       "slot_minutes": 60
     },
     {
+      "access": "pay_and_play",
+      "courts_total": 5,
+      "indoor_courts": 5,
+      "floodlit_courts": null,
+      "lighting": "indoor",
+      "hours_text": "Indoor courts; confirm bookable hours in the operator calendar.",
+      "evening_assessment": "unknown",
+      "evening_notes": null,
+      "weekend_notes": "Indoor courts available for public booking.",
+      "price_text": null,
+      "slot_minutes": null,
+      "advance_days": null,
+      "release_time": null,
+      "release_rule": null,
+      "release_status": "unknown",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "padel-newham-rocket-beckton",
+      "sport": "padel",
+      "name": "Rocket Padel Beckton",
+      "borough": "Newham",
+      "area": "Beckton",
+      "operator": "Rocket Padel",
+      "booking_url": "https://www.rocketpadel.com/club/beckton",
+      "sources": [
+        {
+          "url": "https://www.rocketpadel.com/club/beckton",
+          "supports": "Five indoor courts, club address and booking link."
+        }
+      ],
+      "geo_query": "Rocket Padel Beckton, 1 Triumph Road, London E6 5LW"
+    },
+    {
       "area": null,
       "operator": "Newham Parks Tennis / National Tennis Association",
       "access": "pay_and_play",
@@ -10972,6 +11297,7 @@
     },
     {
       "access": "pay_and_play",
+      "courts_total": 9,
       "indoor_courts": 9,
       "floodlit_courts": null,
       "lighting": "indoor",
@@ -10994,7 +11320,6 @@
       "area": "Stratford High Street",
       "operator": "Stratford Padel Club",
       "booking_url": "https://stratfordpadelclub.org/",
-      "courts_total": 9,
       "sources": [
         {
           "url": "https://stratfordpadelclub.org/",
@@ -11410,6 +11735,7 @@
     },
     {
       "access": "pay_and_play",
+      "courts_total": 12,
       "indoor_courts": 12,
       "floodlit_courts": null,
       "lighting": "indoor",
@@ -11432,7 +11758,6 @@
       "area": "Ilford",
       "operator": "Rocket Padel",
       "booking_url": "https://padelmates.se/club/rocketpadelilford",
-      "courts_total": 12,
       "sources": [
         {
           "url": "https://www.rocketpadel.com/club/ilford",
@@ -12043,6 +12368,7 @@
     },
     {
       "access": "pay_and_play",
+      "courts_total": 2,
       "indoor_courts": 2,
       "floodlit_courts": null,
       "lighting": "indoor",
@@ -12065,7 +12391,6 @@
       "area": "Teddington",
       "operator": "Richmond Council / Better",
       "booking_url": "https://www.better.org.uk/leisure-centre/london/richmond-upon-thames/teddington-sports-centre/3623-teddington-sports-centre",
-      "courts_total": 2,
       "sources": [
         {
           "url": "https://www.better.org.uk/leisure-centre/london/richmond-upon-thames/teddington-sports-centre/3623-teddington-sports-centre",
@@ -12346,6 +12671,43 @@
       "slot_minutes": 60
     },
     {
+      "access": "pay_and_play",
+      "courts_total": 5,
+      "indoor_courts": 0,
+      "floodlit_courts": 5,
+      "lighting": "floodlit",
+      "hours_text": "Courts Mon–Sat 08:00–22:00; Sunday and bank holidays 08:00–20:30.",
+      "evening_assessment": "suitable",
+      "evening_notes": "Floodlights included; pay-and-play bookings open seven days ahead on Nettla.",
+      "weekend_notes": "Weekend daytime available; Sunday closes at 20:30.",
+      "price_text": "Nonmember £45 peak per court-hour; weekday off-peak £40.99. Mixed member groups can pay individual shares.",
+      "slot_minutes": 60,
+      "advance_days": 7,
+      "release_time": null,
+      "release_rule": "Nonmembers can book seven days ahead; release clock unpublished.",
+      "release_status": "partial",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "padel-southwark-dulwich",
+      "sport": "padel",
+      "name": "Dulwich Padel Club",
+      "borough": "Southwark",
+      "area": "Dulwich",
+      "operator": "Dulwich Sports Club",
+      "booking_url": "https://www.dulwichpadelclub.co.uk/faq",
+      "sources": [
+        {
+          "url": "https://www.dulwichpadelclub.co.uk/faq",
+          "supports": "Nonmember access, seven-day window, hours, floodlights and prices."
+        },
+        {
+          "url": "https://dulwichsports.co.uk/",
+          "supports": "Five courts and open status."
+        }
+      ],
+      "geo_query": "Dulwich Padel Club, Giant Arches Road, London SE24 9HP"
+    },
+    {
       "area": "Dulwich",
       "operator": "Southwark Council",
       "access": "pay_and_play",
@@ -12462,6 +12824,7 @@
     },
     {
       "access": "pay_and_play",
+      "courts_total": 5,
       "indoor_courts": 5,
       "floodlit_courts": null,
       "lighting": "indoor",
@@ -12483,7 +12846,6 @@
       "borough": "Southwark",
       "area": "Rollins Street, Bermondsey",
       "booking_url": "https://playtomic.com/clubs/padel-box-bermondsey",
-      "courts_total": 5,
       "sources": [
         {
           "url": "https://playtomic.com/clubs/padel-box-bermondsey",
@@ -12639,6 +13001,39 @@
       "borough": "Sutton",
       "sport": "tennis",
       "slot_minutes": 60
+    },
+    {
+      "access": "pay_and_play",
+      "courts_total": null,
+      "indoor_courts": null,
+      "floodlit_courts": null,
+      "lighting": "indoor",
+      "hours_text": "Centre weekdays to 21:00–22:00; weekends to 20:00. Check squash court slots.",
+      "evening_assessment": "unknown",
+      "evening_notes": null,
+      "weekend_notes": "Casual squash booking route; check court-specific times.",
+      "price_text": null,
+      "slot_minutes": null,
+      "advance_days": null,
+      "release_time": null,
+      "release_rule": null,
+      "release_status": "unknown",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "squash-sutton-cheam",
+      "sport": "squash",
+      "name": "Cheam Leisure Centre",
+      "borough": "Sutton",
+      "area": "Cheam",
+      "operator": "Everyone Active",
+      "booking_url": "https://www.everyoneactive.com/centre/cheam-leisure-centre/",
+      "sources": [
+        {
+          "url": "https://www.everyoneactive.com/centre/cheam-leisure-centre/",
+          "supports": "Operator lists squash courts, pay-as-you-go access, address and centre hours."
+        }
+      ],
+      "geo_query": "Cheam Leisure Centre, Malden Road, Cheam SM3 8EP"
     },
     {
       "area": "Cheam",
@@ -12893,6 +13288,7 @@
     },
     {
       "access": "pay_and_play",
+      "courts_total": 4,
       "indoor_courts": 0,
       "floodlit_courts": null,
       "lighting": "unknown",
@@ -12915,7 +13311,6 @@
       "area": "London Cancer Hub, Sutton",
       "operator": "Social Sports Society",
       "booking_url": "https://socialsportssociety.com/venue/sutton/",
-      "courts_total": 4,
       "sources": [
         {
           "url": "https://socialsportssociety.com/venue/sutton/",
@@ -13161,6 +13556,76 @@
       "borough": "Tower Hamlets",
       "sport": "tennis",
       "slot_minutes": 60
+    },
+    {
+      "access": "pay_and_play",
+      "courts_total": 2,
+      "indoor_courts": 2,
+      "floodlit_courts": null,
+      "lighting": "indoor",
+      "hours_text": "Public hire weekdays 18:00–23:00; Sunday 12:00–20:00 in term season; Saturday closed.",
+      "evening_assessment": "suitable",
+      "evening_notes": "Request a court by phone or the sports-centre enquiry form.",
+      "weekend_notes": "Sunday public hire; Saturday closed.",
+      "price_text": null,
+      "slot_minutes": null,
+      "advance_days": null,
+      "release_time": null,
+      "release_rule": null,
+      "release_status": "unknown",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "squash-tower-hamlets-mulberry-shoreditch",
+      "sport": "squash",
+      "name": "Mulberry Academy Shoreditch Sports Centre",
+      "borough": "Tower Hamlets",
+      "area": "Shoreditch",
+      "operator": "Mulberry Academy Shoreditch",
+      "booking_url": "https://www.mulberryacademyshoreditch.org/mas-sports-centre/",
+      "sources": [
+        {
+          "url": "https://www.mulberryacademyshoreditch.org/mas-sports-centre/",
+          "supports": "Two squash courts, public booking contact and opening hours."
+        }
+      ],
+      "geo_query": "Mulberry Academy Shoreditch Sports Centre, Gosset Street, London E2 6NW"
+    },
+    {
+      "access": "pay_and_play",
+      "courts_total": 9,
+      "indoor_courts": 7,
+      "floodlit_courts": null,
+      "lighting": "mixed",
+      "hours_text": "Courts open from 06:00 weekdays and 07:00 weekends until midnight.",
+      "evening_assessment": "suitable",
+      "evening_notes": "Indoor courts and public pay-and-play booking via Padel Mates.",
+      "weekend_notes": "Weekend daytime court hire available.",
+      "price_text": null,
+      "slot_minutes": null,
+      "advance_days": 7,
+      "release_time": null,
+      "release_rule": "Standard bookings open seven days ahead; release clock unpublished.",
+      "release_status": "partial",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "padel-tower-hamlets-padium-canary-wharf",
+      "sport": "padel",
+      "name": "Padium Canary Wharf",
+      "borough": "Tower Hamlets",
+      "area": "Canary Wharf",
+      "operator": "Padium",
+      "booking_url": "https://www.padium.com/canary-wharf",
+      "sources": [
+        {
+          "url": "https://www.padium.com/canary-wharf",
+          "supports": "Nine courts, indoor/outdoor mix and address."
+        },
+        {
+          "url": "https://www.padium.com/about",
+          "supports": "Public booking, court hours and seven-day standard window."
+        }
+      ],
+      "geo_query": "Padium, 10 Bank Street, London E14 4DE"
     },
     {
       "area": "Poplar",
@@ -13676,6 +14141,7 @@
     },
     {
       "access": "pay_and_play",
+      "courts_total": 2,
       "indoor_courts": 2,
       "floodlit_courts": null,
       "lighting": "indoor",
@@ -13698,7 +14164,6 @@
       "area": "Walthamstow",
       "operator": "Better",
       "booking_url": "https://www.better.org.uk/leisure-centre/london/waltham-forest/walthamstow-leisure-centre/squash",
-      "courts_total": 2,
       "sources": [
         {
           "url": "https://www.better.org.uk/leisure-centre/london/waltham-forest/walthamstow-leisure-centre/squash",
@@ -13713,6 +14178,43 @@
           "supports": "40-minute bookings and adult nonmember peak/off-peak rates."
         }
       ]
+    },
+    {
+      "access": "pay_and_play",
+      "courts_total": 2,
+      "indoor_courts": 2,
+      "floodlit_courts": null,
+      "lighting": "indoor",
+      "hours_text": "Squash court slots weekdays 06:45–21:00; Saturday 08:00–17:45; Sunday 07:30–21:00.",
+      "evening_assessment": "suitable",
+      "evening_notes": "Book with a free Places account; verify the final start time in the calendar.",
+      "weekend_notes": "Saturday and Sunday squash slots published.",
+      "price_text": null,
+      "slot_minutes": null,
+      "advance_days": null,
+      "release_time": null,
+      "release_rule": null,
+      "release_status": "unknown",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "squash-wandsworth-balham",
+      "sport": "squash",
+      "name": "Balham Leisure Centre",
+      "borough": "Wandsworth",
+      "area": "Balham",
+      "operator": "Places Leisure",
+      "booking_url": "https://www.placesleisure.org/centres/balham-leisure-centre/centre-activities/squash/",
+      "sources": [
+        {
+          "url": "https://www.placesleisure.org/centres/balham-leisure-centre/centre-activities/squash/",
+          "supports": "Two squash courts and court-specific hours."
+        },
+        {
+          "url": "https://www.placesleisure.org/faqs/booking/",
+          "supports": "Free account booking route."
+        }
+      ],
+      "geo_query": "Balham Leisure Centre, Elmfield Road, London SW17 8AN"
     },
     {
       "area": "Battersea",
@@ -13946,6 +14448,7 @@
     },
     {
       "access": "pay_and_play",
+      "courts_total": 4,
       "indoor_courts": 4,
       "floodlit_courts": null,
       "lighting": "indoor",
@@ -13968,7 +14471,6 @@
       "area": "Battersea Power Station",
       "operator": "Rocket Padel",
       "booking_url": "https://padelmates.se/club/rocketpadelbattersea",
-      "courts_total": 4,
       "sources": [
         {
           "url": "https://www.rocketpadel.com/club/Battersea-power-station",
@@ -14016,6 +14518,7 @@
     },
     {
       "access": "pay_and_play",
+      "courts_total": 3,
       "indoor_courts": 0,
       "floodlit_courts": null,
       "lighting": "floodlit",
@@ -14038,7 +14541,6 @@
       "area": "2 Armoury Way, SW18 1HZ",
       "operator": "The Padel Yard / Game4Padel",
       "booking_url": "https://thepadelyard.com/",
-      "courts_total": 3,
       "sources": [
         {
           "url": "https://thepadelyard.com/",
@@ -14087,6 +14589,43 @@
       "borough": "Wandsworth",
       "sport": "tennis",
       "slot_minutes": 60
+    },
+    {
+      "access": "pay_and_play",
+      "courts_total": 3,
+      "indoor_courts": 3,
+      "floodlit_courts": null,
+      "lighting": "indoor",
+      "hours_text": "Centre open until 22:30 on weekdays; squash slots offered daily. Check court-specific times.",
+      "evening_assessment": "unknown",
+      "evening_notes": null,
+      "weekend_notes": "Squash court slots offered daily.",
+      "price_text": "£17.20 per court session; session duration needs checking.",
+      "slot_minutes": null,
+      "advance_days": null,
+      "release_time": null,
+      "release_rule": null,
+      "release_status": "unknown",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "squash-wandsworth-tooting",
+      "sport": "squash",
+      "name": "Tooting Leisure Centre",
+      "borough": "Wandsworth",
+      "area": "Tooting",
+      "operator": "Places Leisure",
+      "booking_url": "https://www.placesleisure.org/centres/tooting-leisure-centre/centre-activities/sports/",
+      "sources": [
+        {
+          "url": "https://www.placesleisure.org/centres/tooting-leisure-centre/centre-activities/sports/",
+          "supports": "Three squash courts, online casual booking and £17.20 session fee."
+        },
+        {
+          "url": "https://www.placesleisure.org/find-centre/",
+          "supports": "Greaves Place centre address."
+        }
+      ],
+      "geo_query": "Tooting Leisure Centre, Greaves Place, London SW17 0NE"
     },
     {
       "area": "Wandsworth",
@@ -14205,6 +14744,7 @@
     },
     {
       "access": "pay_and_play",
+      "courts_total": 1,
       "indoor_courts": 0,
       "floodlit_courts": 1,
       "lighting": "floodlit",
@@ -14227,7 +14767,6 @@
       "area": "Hyde Park",
       "operator": "The Royal Parks",
       "booking_url": "https://sportsandleisureroyalparks.bookings.flow.onl/location/hyde-park-courts/padel/2026-01-19/by-time",
-      "courts_total": 1,
       "sources": [
         {
           "url": "https://sportsandleisure.royalparks.org.uk/the-courts/padel",
@@ -14311,6 +14850,44 @@
     },
     {
       "access": "pay_and_play",
+      "courts_total": 4,
+      "indoor_courts": 0,
+      "floodlit_courts": null,
+      "lighting": "unknown",
+      "hours_text": "Two covered and two outdoor courts; check court-specific evening hours.",
+      "evening_assessment": "unknown",
+      "evening_notes": null,
+      "weekend_notes": "Public booking via Playtomic.",
+      "price_text": null,
+      "slot_minutes": null,
+      "advance_days": 3,
+      "release_time": null,
+      "release_rule": "Operator FAQ says nonmembers book three days ahead; confirm Paddington calendar.",
+      "release_status": "partial",
+      "checked_on": "2026-09-15",
+      "notes": null,
+      "id": "padel-westminster-paddington-social",
+      "sport": "padel",
+      "name": "Padel Social Club Paddington",
+      "borough": "Westminster",
+      "area": "Paddington",
+      "operator": "Padel Social Club",
+      "booking_url": "https://padelsocial.club/pages/paddington",
+      "sources": [
+        {
+          "url": "https://padelsocial.club/pages/paddington",
+          "supports": "Four courts and Paddington address."
+        },
+        {
+          "url": "https://padelsocial.club/pages/faqs",
+          "supports": "Pay-and-play access and three-day nonmember booking policy."
+        }
+      ],
+      "geo_query": "Padel Social Club Paddington, 5 Kingdom Street, London W2 6BD"
+    },
+    {
+      "access": "pay_and_play",
+      "courts_total": 1,
       "indoor_courts": 1,
       "floodlit_courts": null,
       "lighting": "indoor",
@@ -14333,7 +14910,6 @@
       "area": "Bayswater",
       "operator": "Everyone Active",
       "booking_url": "https://www.everyoneactive.com/centre/porchester-centre/",
-      "courts_total": 1,
       "sources": [
         {
           "url": "https://www.everyoneactive.com/centre/porchester-centre/",
@@ -14348,6 +14924,7 @@
     },
     {
       "access": "pay_and_play",
+      "courts_total": 3,
       "indoor_courts": 3,
       "floodlit_courts": null,
       "lighting": "indoor",
@@ -14370,7 +14947,6 @@
       "area": "Victoria",
       "operator": "Everyone Active",
       "booking_url": "https://www.everyoneactive.com/centre/queen-mother-sports-centre/",
-      "courts_total": 3,
       "sources": [
         {
           "url": "https://www.everyoneactive.com/centre/queen-mother-sports-centre/",
@@ -14385,6 +14961,7 @@
     },
     {
       "access": "pay_and_play",
+      "courts_total": 2,
       "indoor_courts": 0,
       "floodlit_courts": 2,
       "lighting": "floodlit",
@@ -14407,7 +14984,6 @@
       "area": "The Regent's Park",
       "operator": "The Royal Parks",
       "booking_url": "https://sportsandleisureroyalparks.bookings.flow.onl/location/the-regents-park-courts/padel/2026-01-19/by-time",
-      "courts_total": 2,
       "sources": [
         {
           "url": "https://sportsandleisure.royalparks.org.uk/the-courts/padel",

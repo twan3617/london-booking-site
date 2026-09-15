@@ -33,10 +33,24 @@ for (const venue of venues) {
   }
   if (response.status === 429) throw new Error('Nominatim rate limit reached; stop and resume later.');
   if (!response.ok) throw new Error(`Nominatim returned HTTP ${response.status}.`);
-  const match = (await response.json())[0];
+  let match = (await response.json())[0];
+  let resolvedQuery = query;
+  const postcode = venue.geo_query?.match(/\b[A-Z]{1,2}\d[A-Z\d]?\s*\d[A-Z]{2}\b/i)?.[0];
+  if (!match && postcode) {
+    await new Promise((resolve) => setTimeout(resolve, 1100));
+    url.searchParams.set('q', postcode);
+    const postcodeResponse = await fetch(url, {
+      headers: { 'User-Agent': 'CourtReadyLondon/0.1 (one-time venue coordinate collection)' },
+      signal: AbortSignal.timeout(15_000),
+    });
+    if (postcodeResponse.status === 429) throw new Error('Nominatim rate limit reached; stop and resume later.');
+    if (!postcodeResponse.ok) throw new Error(`Nominatim returned HTTP ${postcodeResponse.status}.`);
+    match = (await postcodeResponse.json())[0];
+    if (match) resolvedQuery = postcode;
+  }
   coordinates[venue.id] = match ? {
     latitude: Number(match.lat), longitude: Number(match.lon),
-    display_name: match.display_name, query, checked_on: new Date().toISOString().slice(0, 10),
+    display_name: match.display_name, query: resolvedQuery, checked_on: new Date().toISOString().slice(0, 10),
   } : null;
   writeFileSync(temporary, `${JSON.stringify(coordinates, null, 2)}\n`);
   renameSync(temporary, output);

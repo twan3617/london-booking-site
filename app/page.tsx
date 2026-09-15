@@ -22,7 +22,7 @@ export default function Home() {
   const [query, setQuery] = useState('');
   const [borough, setBorough] = useState('');
   const [facility, setFacility] = useState<Filters['facility']>('any');
-  const [status, setStatus] = useState<Filters['status']>('ready');
+  const [status, setStatus] = useState<Filters['status']>('all');
   const [maxPrice, setMaxPrice] = useState('');
   const [favourites, setFavourites] = useState<string[]>([]);
   const [favouritesOnly, setFavouritesOnly] = useState(false);

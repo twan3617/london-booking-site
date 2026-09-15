@@ -2343,5 +2343,117 @@
     "display_name": "Bloomsbury Theatre, 15, Gordon Street, St Pancras, London Borough of Camden, Greater London, England, WC1H 0AH, United Kingdom",
     "query": "Bloomsbury Fitness Centre, 15 Gordon Street, London WC1H 0AY",
     "checked_on": "2026-09-15"
+  },
+  "squash-hillingdon-brunel": {
+    "latitude": 51.532881,
+    "longitude": -0.4743382,
+    "display_name": "UB8 3PH, London Borough of Hillingdon, Greater London, England, United Kingdom",
+    "query": "UB8 3PH",
+    "checked_on": "2026-09-15"
+  },
+  "squash-kensington-westway-portobello": {
+    "latitude": 51.5182896,
+    "longitude": -0.2084052,
+    "display_name": "W10 5XL, Royal Borough of Kensington and Chelsea, Greater London, England, United Kingdom",
+    "query": "W10 5XL",
+    "checked_on": "2026-09-15"
+  },
+  "squash-kingston-tolworth": {
+    "latitude": 51.3752852,
+    "longitude": -0.2960013,
+    "display_name": "KT6 7LQ, Royal Borough of Kingston upon Thames, Greater London, England, United Kingdom",
+    "query": "KT6 7LQ",
+    "checked_on": "2026-09-15"
+  },
+  "squash-sutton-cheam": {
+    "latitude": 51.3680297,
+    "longitude": -0.2251554,
+    "display_name": "Cheam Leisure Centre, Malden Road, Worcester Park, London Borough of Sutton, Greater London, England, SM3 8EN, United Kingdom",
+    "query": "Cheam Leisure Centre, Malden Road, Cheam SM3 8EP",
+    "checked_on": "2026-09-15"
+  },
+  "squash-tower-hamlets-mulberry-shoreditch": {
+    "latitude": 51.5270697,
+    "longitude": -0.0699575,
+    "display_name": "E2 6NW, London Borough of Tower Hamlets, Greater London, England, United Kingdom",
+    "query": "E2 6NW",
+    "checked_on": "2026-09-15"
+  },
+  "squash-wandsworth-balham": {
+    "latitude": 51.4413677,
+    "longitude": -0.1522514,
+    "display_name": "Balham Leisure Centre, Elmfield Road, Balham, London Borough of Wandsworth, Greater London, England, SW17 8AN, United Kingdom",
+    "query": "Balham Leisure Centre, Elmfield Road, London SW17 8AN",
+    "checked_on": "2026-09-15"
+  },
+  "squash-wandsworth-tooting": {
+    "latitude": 51.4291854,
+    "longitude": -0.1738473,
+    "display_name": "Tooting Leisure Centre, Greaves Place, Summerstown, London Borough of Wandsworth, Greater London, England, SW17 0NB, United Kingdom",
+    "query": "Tooting Leisure Centre, Greaves Place, London SW17 0NE",
+    "checked_on": "2026-09-15"
+  },
+  "padel-bromley-crystal-palace": {
+    "latitude": 51.4210957,
+    "longitude": -0.0673542,
+    "display_name": "SE19 2BB, London Borough of Bromley, Greater London, England, United Kingdom",
+    "query": "SE19 2BB",
+    "checked_on": "2026-09-15"
+  },
+  "padel-ealing-racketeer-acton": {
+    "latitude": 51.53155,
+    "longitude": -0.25886,
+    "display_name": "NW10 6PH, London Borough of Ealing, Greater London, England, United Kingdom",
+    "query": "NW10 6PH",
+    "checked_on": "2026-09-15"
+  },
+  "padel-greenwich-coldharbour": {
+    "latitude": 51.4366291,
+    "longitude": 0.0544381,
+    "display_name": "Coldharbour Leisure Centre, Chapel Farm Road, South End, Coldharbour, Royal Borough of Greenwich, Greater London, England, SE9 3NJ, United Kingdom",
+    "query": "Coldharbour Leisure Centre, Chapel Farm Road, London SE9 3LX",
+    "checked_on": "2026-09-15"
+  },
+  "padel-hammersmith-earls-court-social": {
+    "latitude": 51.4870729,
+    "longitude": -0.1976872,
+    "display_name": "SW6 1TT, London Borough of Hammersmith and Fulham, Greater London, England, United Kingdom",
+    "query": "SW6 1TT",
+    "checked_on": "2026-09-15"
+  },
+  "padel-havering-central-park": {
+    "latitude": 51.6078707,
+    "longitude": 0.2241489,
+    "display_name": "Central Park Leisure Centre, Gooshays Drive, Harold Hill, London Borough of Havering, Greater London, England, RM3 8FT, United Kingdom",
+    "query": "Central Park Leisure Centre, Gooshays Drive, Harold Hill RM3 9LB",
+    "checked_on": "2026-09-15"
+  },
+  "padel-newham-rocket-beckton": {
+    "latitude": 51.5136768,
+    "longitude": 0.0560639,
+    "display_name": "E6 5LW, London Borough of Newham, Greater London, England, United Kingdom",
+    "query": "E6 5LW",
+    "checked_on": "2026-09-15"
+  },
+  "padel-southwark-dulwich": {
+    "latitude": 51.44853,
+    "longitude": -0.09641,
+    "display_name": "SE24 9HP, London Borough of Southwark, Greater London, England, United Kingdom",
+    "query": "SE24 9HP",
+    "checked_on": "2026-09-15"
+  },
+  "padel-tower-hamlets-padium-canary-wharf": {
+    "latitude": 51.50345,
+    "longitude": -0.02339,
+    "display_name": "E14 4DE, London Borough of Tower Hamlets, Greater London, England, United Kingdom",
+    "query": "E14 4DE",
+    "checked_on": "2026-09-15"
+  },
+  "padel-westminster-paddington-social": {
+    "latitude": 51.519337,
+    "longitude": -0.1821294,
+    "display_name": "W2 6BD, City of Westminster, Greater London, England, United Kingdom",
+    "query": "W2 6BD",
+    "checked_on": "2026-09-15"
   }
 }

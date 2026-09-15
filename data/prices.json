@@ -386,7 +386,13 @@
   "newham-west-ham-park": null,
   "padel-barnet-padel-hub-n20": null,
   "padel-brent-wembley": null,
+  "padel-bromley-crystal-palace": null,
   "padel-ealing-parkside-southall": null,
+  "padel-ealing-racketeer-acton": null,
+  "padel-greenwich-coldharbour": null,
+  "padel-hammersmith-earls-court-social": null,
+  "padel-havering-central-park": null,
+  "padel-newham-rocket-beckton": null,
   "padel-newham-stratford": [
     {
       "label": "Nonmember peak court, 60 minutes",
@@ -410,11 +416,36 @@
     }
   ],
   "padel-redbridge-rocket-ilford": null,
+  "padel-southwark-dulwich": [
+    {
+      "label": "Nonmember peak court hour",
+      "modes": [
+        "after-work",
+        "weekend"
+      ],
+      "lighting": "included",
+      "amount_gbp": 45,
+      "duration_minutes": 60,
+      "customer": "nonmember",
+      "time_band": "peak"
+    },
+    {
+      "label": "Nonmember weekday off-peak court hour",
+      "modes": [],
+      "lighting": "included",
+      "amount_gbp": 40.99,
+      "duration_minutes": 60,
+      "customer": "nonmember",
+      "time_band": "off_peak"
+    }
+  ],
   "padel-southwark-padel-box-bermondsey": null,
   "padel-sutton-social-sports": null,
+  "padel-tower-hamlets-padium-canary-wharf": null,
   "padel-wandsworth-padel-yard": null,
   "padel-wandsworth-rocket-battersea": null,
   "padel-westminster-hyde-park": null,
+  "padel-westminster-paddington-social": null,
   "padel-westminster-regents-park": null,
   "redbridge-barkingside-recreation-ground": null,
   "redbridge-barley-lane-recreation-ground": null,
@@ -484,6 +515,7 @@
     }
   ],
   "squash-hammersmith-fitness": null,
+  "squash-hillingdon-brunel": null,
   "squash-islington-finsbury": null,
   "squash-islington-ironmonger-row": null,
   "squash-islington-sobell": [
@@ -510,6 +542,8 @@
     }
   ],
   "squash-kensington-kensington": null,
+  "squash-kensington-westway-portobello": null,
+  "squash-kingston-tolworth": null,
   "squash-lambeth-brixton": null,
   "squash-lambeth-flaxman": null,
   "squash-merton-canons": null,
@@ -526,6 +560,8 @@
       "time_band": "anytime"
     }
   ],
+  "squash-sutton-cheam": null,
+  "squash-tower-hamlets-mulberry-shoreditch": null,
   "squash-waltham-forest-walthamstow": [
     {
       "amount_gbp": 12.85,
@@ -549,6 +585,8 @@
       "time_band": "off_peak"
     }
   ],
+  "squash-wandsworth-balham": null,
+  "squash-wandsworth-tooting": null,
   "squash-westminster-porchester": null,
   "squash-westminster-queen-mother": null,
   "sutton-beddington-park": null,
