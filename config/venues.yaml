@@ -1,0 +1,3252 @@
+venues:
+- id: barking-and-dagenham-barking-park
+  name: Barking Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/BarkingPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/BarkingPark
+  - https://clubspark.lta.org.uk/TennisinBarkingDagenham/Venues
+  - https://clubspark.lta.org.uk/TennisinBarkingDagenham/FAQs
+  - https://www.lbbd.gov.uk/sites/default/files/2023-12/LBBD9211_Parks_Tennis_Booking_A3_DEC23_Print.pdf
+- id: barking-and-dagenham-central-park-dagenham
+  name: Central Park Dagenham
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/CentralParkDagenham
+  metadata_sources:
+  - https://clubspark.lta.org.uk/CentralParkDagenham
+  - https://clubspark.lta.org.uk/TennisinBarkingDagenham/Venues
+  - https://clubspark.lta.org.uk/TennisinBarkingDagenham/FAQs
+  - https://www.lbbd.gov.uk/sites/default/files/2023-12/LBBD9211_Parks_Tennis_Booking_A3_DEC23_Print.pdf
+- id: barking-and-dagenham-greatfields-park
+  name: Greatfields Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/GreatfieldsPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/GreatfieldsPark
+  - https://clubspark.lta.org.uk/TennisinBarkingDagenham/Venues
+  - https://clubspark.lta.org.uk/TennisinBarkingDagenham/FAQs
+  - https://www.lbbd.gov.uk/sites/default/files/2023-12/LBBD9211_Parks_Tennis_Booking_A3_DEC23_Print.pdf
+- id: barking-and-dagenham-old-dagenham-park
+  name: Old Dagenham Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/OldDagenhamPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/OldDagenhamPark
+  - https://clubspark.lta.org.uk/TennisinBarkingDagenham/Venues
+  - https://clubspark.lta.org.uk/TennisinBarkingDagenham/FAQs
+  - https://www.lbbd.gov.uk/sites/default/files/2023-12/LBBD9211_Parks_Tennis_Booking_A3_DEC23_Print.pdf
+- id: barking-and-dagenham-st-chads-park
+  name: St Chads Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/StChadsPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/StChadsPark
+  - https://clubspark.lta.org.uk/TennisinBarkingDagenham/Venues
+  - https://clubspark.lta.org.uk/TennisinBarkingDagenham/FAQs
+  - https://www.lbbd.gov.uk/sites/default/files/2023-12/LBBD9211_Parks_Tennis_Booking_A3_DEC23_Print.pdf
+- id: barnet-bethune-park
+  name: Bethune Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/BethunePark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/BethunePark
+  - https://clubspark.lta.org.uk/PlayTennisBarnet
+  - https://www.barnet.gov.uk/parks-sport-and-leisure/sport-and-physical-activity/tennis-barnet
+- id: barnet-bittacy-hill-park
+  name: Bittacy Hill Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/BittacyHillPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/BittacyHillPark
+  - https://clubspark.lta.org.uk/PlayTennisBarnet
+  - https://www.barnet.gov.uk/parks-sport-and-leisure/sport-and-physical-activity/tennis-barnet
+- id: barnet-burnt-oak-leisure-centre
+  name: Burnt Oak Leisure Centre
+  sport: tennis
+  provider: better
+  booking_url: https://www.better.org.uk/leisure-centre/london/barnet/barnet-burnt-oak-leisure-centre/tennis
+  metadata_sources:
+  - https://www.better.org.uk/leisure-centre/london/barnet/barnet-burnt-oak-leisure-centre
+  - https://www.better.org.uk/leisure-centre/london/barnet/barnet-burnt-oak-leisure-centre/tennis
+- id: barnet-cherry-tree-wood
+  name: Cherry Tree Wood
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/CherryTreeWoods
+  metadata_sources:
+  - https://clubspark.lta.org.uk/CherryTreeWoods
+  - https://clubspark.lta.org.uk/PlayTennisBarnet
+  - https://www.barnet.gov.uk/parks-sport-and-leisure/sport-and-physical-activity/tennis-barnet
+- id: barnet-childs-hill-park
+  name: Childs Hill Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/ChildsHillPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/ChildsHillPark
+  - https://clubspark.lta.org.uk/PlayTennisBarnet
+  - https://www.barnet.gov.uk/parks-sport-and-leisure/sport-and-physical-activity/tennis-barnet
+- id: barnet-edgwarebury-park
+  name: Edgwarebury Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/EdgwareburyPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/EdgwareburyPark
+  - https://clubspark.lta.org.uk/PlayTennisBarnet
+  - https://www.barnet.gov.uk/parks-sport-and-leisure/sport-and-physical-activity/tennis-barnet
+- id: barnet-friary-park
+  name: Friary Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/FriaryPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/FriaryPark
+  - https://clubspark.lta.org.uk/PlayTennisBarnet
+  - https://www.barnet.gov.uk/parks-sport-and-leisure/sport-and-physical-activity/tennis-barnet
+- id: barnet-golders-hill-park
+  name: Golders Hill Park
+  sport: tennis
+  provider: html
+  booking_url: https://www.cityoflondon.gov.uk/things-to-do/green-spaces/hampstead-heath/where-to-go-at-hampstead-heath/golders-hill-park-tennis-courts
+  metadata_sources:
+  - https://www.cityoflondon.gov.uk/things-to-do/green-spaces/hampstead-heath/where-to-go-at-hampstead-heath/golders-hill-park-tennis-courts
+- id: barnet-halliwick-recreation-ground
+  name: Halliwick Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/HalliwickRec
+  metadata_sources:
+  - https://clubspark.lta.org.uk/HalliwickRec
+  - https://clubspark.lta.org.uk/PlayTennisBarnet
+  - https://www.barnet.gov.uk/parks-sport-and-leisure/sport-and-physical-activity/tennis-barnet
+- id: barnet-hendon-park
+  name: Hendon Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/HendonPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/HendonPark
+  - https://clubspark.lta.org.uk/PlayTennisBarnet
+  - https://www.barnet.gov.uk/parks-sport-and-leisure/sport-and-physical-activity/tennis-barnet
+- id: barnet-lyttelton-playing-fields
+  name: Lyttelton Playing Fields
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/LytteltonPlayingFields
+  metadata_sources:
+  - https://clubspark.lta.org.uk/LytteltonPlayingFields
+  - https://clubspark.lta.org.uk/PlayTennisBarnet
+  - https://www.barnet.gov.uk/parks-sport-and-leisure/sport-and-physical-activity/tennis-barnet
+- id: barnet-mill-hill-park
+  name: Mill Hill Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/MillHillPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/MillHillPark
+  - https://clubspark.lta.org.uk/PlayTennisBarnet
+  - https://www.barnet.gov.uk/parks-sport-and-leisure/sport-and-physical-activity/tennis-barnet
+- id: barnet-montrose-playing-fields
+  name: Montrose Playing Fields
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/MontrosePlayingFields
+  metadata_sources:
+  - https://clubspark.lta.org.uk/MontrosePlayingFields
+  - https://clubspark.lta.org.uk/PlayTennisBarnet
+  - https://www.barnet.gov.uk/parks-sport-and-leisure/sport-and-physical-activity/tennis-barnet
+- id: barnet-new-barnet-leisure-centre
+  name: New Barnet Leisure Centre
+  sport: tennis
+  provider: better
+  booking_url: https://www.better.org.uk/leisure-centre/london/barnet/new-barnet-leisure-centre/tennis
+  metadata_sources:
+  - https://www.better.org.uk/leisure-centre/london/barnet/new-barnet-leisure-centre
+  - https://www.better.org.uk/leisure-centre/london/barnet/new-barnet-leisure-centre/facilities
+- id: barnet-new-southgate-recreation-ground
+  name: New Southgate Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/NewSouthgateRecGround
+  metadata_sources:
+  - https://clubspark.lta.org.uk/NewSouthgateRecGround
+  - https://clubspark.lta.org.uk/PlayTennisBarnet
+  - https://www.barnet.gov.uk/parks-sport-and-leisure/sport-and-physical-activity/tennis-barnet
+- id: barnet-northway-gardens
+  name: Northway Gardens
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/NorthwayGardens
+  metadata_sources:
+  - https://clubspark.lta.org.uk/NorthwayGardens
+  - https://clubspark.lta.org.uk/PlayTennisBarnet
+  - https://www.barnet.gov.uk/parks-sport-and-leisure/sport-and-physical-activity/tennis-barnet
+- id: barnet-oak-hill-park
+  name: Oak Hill Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/OakhillPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/OakhillPark
+  - https://clubspark.lta.org.uk/PlayTennisBarnet
+  - https://www.barnet.gov.uk/parks-sport-and-leisure/sport-and-physical-activity/tennis-barnet
+- id: barnet-old-courthouse-recreation-ground
+  name: Old Courthouse Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/OldCourthouseRecGround
+  metadata_sources:
+  - https://clubspark.lta.org.uk/OldCourthouseRecGround
+  - https://clubspark.lta.org.uk/PlayTennisBarnet
+  - https://www.barnet.gov.uk/parks-sport-and-leisure/sport-and-physical-activity/tennis-barnet
+- id: barnet-princes-park
+  name: Princes Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/PrincesPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/PrincesPark
+  - https://clubspark.lta.org.uk/PlayTennisBarnet
+  - https://www.barnet.gov.uk/parks-sport-and-leisure/sport-and-physical-activity/tennis-barnet
+- id: barnet-rushgrove-park
+  name: Rushgrove Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/RushgrovePark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/RushgrovePark
+  - https://clubspark.lta.org.uk/PlayTennisBarnet
+  - https://www.barnet.gov.uk/parks-sport-and-leisure/sport-and-physical-activity/tennis-barnet
+- id: barnet-stonegrove-park
+  name: Stonegrove Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/StonegrovePark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/StonegrovePark
+  - https://clubspark.lta.org.uk/PlayTennisBarnet
+  - https://www.barnet.gov.uk/parks-sport-and-leisure/sport-and-physical-activity/tennis-barnet
+- id: barnet-sunnyhill-park
+  name: Sunnyhill Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/SunnyhillPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/SunnyhillPark
+  - https://clubspark.lta.org.uk/PlayTennisBarnet
+  - https://www.barnet.gov.uk/parks-sport-and-leisure/sport-and-physical-activity/tennis-barnet
+- id: barnet-tudor-sports-ground
+  name: Tudor Sports Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/TudorSportsGround
+  metadata_sources:
+  - https://clubspark.lta.org.uk/TudorSportsGround
+  - https://clubspark.lta.org.uk/PlayTennisBarnet
+  - https://www.barnet.gov.uk/parks-sport-and-leisure/sport-and-physical-activity/tennis-barnet
+- id: barnet-victoria-park-finchley
+  name: Victoria Park (Finchley)
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/VictoriaPark11
+  metadata_sources:
+  - https://clubspark.lta.org.uk/VictoriaPark11
+  - https://clubspark.lta.org.uk/PlayTennisBarnet
+  - https://www.barnet.gov.uk/parks-sport-and-leisure/sport-and-physical-activity/tennis-barnet
+- id: barnet-west-hendon-playing-fields
+  name: West Hendon Playing Fields
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/WestHendonPlayingFields
+  metadata_sources:
+  - https://clubspark.lta.org.uk/WestHendonPlayingFields
+  - https://clubspark.lta.org.uk/PlayTennisBarnet
+  - https://www.barnet.gov.uk/parks-sport-and-leisure/sport-and-physical-activity/tennis-barnet
+- id: bexley-belvedere-recreation-ground-south
+  name: Belvedere Recreation Ground South
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/BelvedereRecreationGround
+  metadata_sources:
+  - https://clubspark.lta.org.uk/BelvedereRecreationGround
+  - https://www.bexley.gov.uk/services/parks-leisure-and-libraries/tennis-bexley/improving-tennis-courts-bexley
+  - https://clubspark.lta.org.uk/ParksTennisinBexley
+  - https://www.twistfizz.co.uk/locations/
+- id: bexley-bexleyheath-tennis-club
+  name: Bexleyheath Tennis Club
+  sport: tennis
+  provider: html
+  booking_url: https://bexleyheathtennisclub.co.uk/payandplay/payandplay.html
+  metadata_sources:
+  - https://bexleyheathtennisclub.co.uk/payandplay/payandplay.html
+  - https://www.bexleyheathtennisclub.co.uk/winter24-25/
+  - https://bexleyheathtennisclub.co.uk/sponsorship/
+- id: bexley-danson-park
+  name: Danson Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/DansonParkTennis
+  metadata_sources:
+  - https://clubspark.lta.org.uk/DansonParkTennis
+  - https://www.bexley.gov.uk/services/parks-leisure-and-libraries/tennis-bexley/improving-tennis-courts-bexley
+  - https://clubspark.lta.org.uk/ParksTennisinBexley
+  - https://www.twistfizz.co.uk/locations/
+- id: bexley-northumberland-heath-recreation-ground
+  name: Northumberland Heath Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/NorthumberlandHeathRecreationGround
+  metadata_sources:
+  - https://clubspark.lta.org.uk/NorthumberlandHeathRecreationGround
+  - https://www.bexley.gov.uk/services/parks-leisure-and-libraries/tennis-bexley/improving-tennis-courts-bexley
+  - https://clubspark.lta.org.uk/ParksTennisinBexley
+  - https://www.twistfizz.co.uk/locations/
+- id: bexley-russell-park
+  name: Russell Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/RussellPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/RussellPark
+  - https://www.bexley.gov.uk/services/parks-leisure-and-libraries/tennis-bexley/improving-tennis-courts-bexley
+  - https://clubspark.lta.org.uk/ParksTennisinBexley
+  - https://www.twistfizz.co.uk/locations/
+- id: bexley-sidcup-place
+  name: Sidcup Place
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/SidcupPlace
+  metadata_sources:
+  - https://clubspark.lta.org.uk/SidcupPlace
+  - https://www.bexley.gov.uk/services/parks-leisure-and-libraries/tennis-bexley/improving-tennis-courts-bexley
+  - https://clubspark.lta.org.uk/ParksTennisinBexley
+  - https://www.twistfizz.co.uk/locations/
+- id: bexley-waring-park
+  name: Waring Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/WaringPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/WaringPark
+  - https://www.bexley.gov.uk/services/parks-leisure-and-libraries/tennis-bexley/improving-tennis-courts-bexley
+  - https://clubspark.lta.org.uk/ParksTennisinBexley
+  - https://www.twistfizz.co.uk/locations/
+- id: bexley-west-heath-recreation-ground
+  name: West Heath Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/WestHeath
+  metadata_sources:
+  - https://clubspark.lta.org.uk/WestHeath
+  - https://www.bexley.gov.uk/services/parks-leisure-and-libraries/tennis-bexley/improving-tennis-courts-bexley
+  - https://clubspark.lta.org.uk/ParksTennisinBexley
+  - https://www.twistfizz.co.uk/locations/
+- id: brent-alperton-sports-ground
+  name: Alperton Sports Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/AlpertonSportsGround
+  metadata_sources:
+  - https://clubspark.lta.org.uk/AlpertonSportsGround
+  - https://www.brent.gov.uk/tennis
+  - https://clubspark.lta.org.uk/TennisInBrent
+- id: brent-chelmsford-square
+  name: Chelmsford Square
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/ChelmsfordSquare
+  metadata_sources:
+  - https://clubspark.lta.org.uk/ChelmsfordSquare
+  - https://www.brent.gov.uk/tennis
+  - https://clubspark.lta.org.uk/TennisInBrent
+- id: brent-eton-grove-open-space
+  name: Eton Grove Open Space
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/EtonGrove
+  metadata_sources:
+  - https://clubspark.lta.org.uk/EtonGrove
+  - https://www.brent.gov.uk/tennis
+  - https://clubspark.lta.org.uk/TennisInBrent
+- id: brent-gladstone-park
+  name: Gladstone Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/GladstoneParkTennis
+  metadata_sources:
+  - https://clubspark.lta.org.uk/GladstoneParkTennis
+  - https://www.brent.gov.uk/tennis
+  - https://clubspark.lta.org.uk/TennisInBrent
+- id: brent-king-edward-vii-park
+  name: King Edward VII Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/KingEdwardVIIPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/KingEdwardVIIPark
+  - https://www.brent.gov.uk/tennis
+  - https://clubspark.lta.org.uk/TennisInBrent
+- id: brent-preston-park
+  name: Preston Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/PrestonPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/PrestonPark
+  - https://www.brent.gov.uk/tennis
+  - https://clubspark.lta.org.uk/TennisInBrent
+- id: brent-queen-s-park-tennis-courts
+  name: Queen's Park Tennis Courts
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/QueensParkTennisCourts
+  metadata_sources:
+  - https://clubspark.lta.org.uk/QueensParkTennisCourts
+- id: brent-roe-green-park
+  name: Roe Green Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/RoeGreenPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/RoeGreenPark
+  - https://www.brent.gov.uk/tennis
+  - https://clubspark.lta.org.uk/TennisInBrent
+- id: brent-vale-farm
+  name: Vale Farm
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/ValeFarm
+  metadata_sources:
+  - https://clubspark.lta.org.uk/ValeFarm
+  - https://www.brent.gov.uk/tennis
+  - https://clubspark.lta.org.uk/TennisInBrent
+- id: brent-woodcock-park
+  name: Woodcock Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/WoodcockPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/WoodcockPark
+  - https://www.brent.gov.uk/tennis
+  - https://clubspark.lta.org.uk/TennisInBrent
+- id: bromley-bromley-sports-club
+  name: Bromley Sports Club
+  sport: tennis
+  provider: html
+  booking_url: https://bromleysportsclub.co.uk/tennis/
+  metadata_sources:
+  - https://bromleysportsclub.co.uk/tennis/
+- id: bromley-bromley-tennis-centre-at-newstead-wood
+  name: Bromley Tennis Centre at Newstead Wood
+  sport: tennis
+  provider: html
+  booking_url: https://mybromleytenniscentre.co.uk
+  metadata_sources:
+  - https://www.bromleytenniscentre.co.uk/court-booking
+  - https://www.bromleytenniscentre.co.uk/about-us
+- id: bromley-church-house-gardens
+  name: Church House Gardens
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/ChurchHouseGardens
+  metadata_sources:
+  - https://clubspark.lta.org.uk/BromleyParksTennis
+  - https://clubspark.lta.org.uk/ChurchHouseGardens
+- id: bromley-coney-hall-recreation-ground
+  name: Coney Hall Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/ConeyHallRecGround
+  metadata_sources:
+  - https://clubspark.lta.org.uk/BromleyParksTennis
+  - https://clubspark.lta.org.uk/ConeyHallRecGround
+- id: bromley-croydon-road-recreation-ground
+  name: Croydon Road Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/CroydonRoadRecreationPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/BromleyParksTennis
+  - https://clubspark.lta.org.uk/CroydonRoadRecreationPark
+- id: bromley-crystal-palace-national-sports-centre
+  name: Crystal Palace National Sports Centre
+  sport: tennis
+  provider: better
+  booking_url: https://www.better.org.uk/leisure-centre/london/crystal-palace/crystal-palace-national-sports-centre
+  metadata_sources:
+  - https://www.better.org.uk/leisure-centre/london/crystal-palace/crystal-palace-national-sports-centre/facilities
+  - https://www.better.org.uk/leisure-centre/london/crystal-palace/crystal-palace-national-sports-centre/prices
+  - https://www.better.org.uk/leisure-centre/london/crystal-palace/crystal-palace-national-sports-centre
+- id: bromley-cudham-lane-south-recreation-ground
+  name: Cudham Lane South Recreation Ground
+  sport: tennis
+  provider: html
+  booking_url: https://bromleyparks.co.uk/portfolio/cudham-recreation-ground-south/
+  metadata_sources:
+  - https://bromleyparks.co.uk/portfolio/cudham-recreation-ground-south/
+- id: bromley-goddington-park
+  name: Goddington Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/GoddingtonPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/BromleyParksTennis
+  - https://clubspark.lta.org.uk/GoddingtonPark
+- id: bromley-kelsey-park
+  name: Kelsey Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/KelseyPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/BromleyParksTennis
+  - https://clubspark.lta.org.uk/KelseyPark
+- id: bromley-kings-hall-road-cator-park
+  name: Kings Hall Road (Cator Park)
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/KingsHallRoad
+  metadata_sources:
+  - https://clubspark.lta.org.uk/BromleyParksTennis
+  - https://clubspark.lta.org.uk/KingsHallRoad
+- id: bromley-poverest-park
+  name: Poverest Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/PoverestPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/BromleyParksTennis
+  - https://clubspark.lta.org.uk/PoverestPark
+- id: bromley-willett-recreation-ground
+  name: Willett Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/WillettRecreationGround
+  metadata_sources:
+  - https://clubspark.lta.org.uk/BromleyParksTennis
+  - https://clubspark.lta.org.uk/WillettRecreationGround
+- id: camden-kilburn-grange-park
+  name: Kilburn Grange Park
+  sport: tennis
+  provider: html
+  booking_url: https://camdenactive.camden.gov.uk/sports/kilburngrange/
+  metadata_sources:
+  - https://camdenactive.camden.gov.uk/sports/kilburngrange/
+  - https://camdenactive.camden.gov.uk/terms/
+  - https://www.camden.gov.uk/park-opening-and-closing-times
+- id: camden-lincoln-s-inn-fields
+  name: Lincoln's Inn Fields
+  sport: tennis
+  provider: html
+  booking_url: https://camdenactive.camden.gov.uk/sports/lincolnsinnfields/
+  metadata_sources:
+  - https://camdenactive.camden.gov.uk/sports/lincolnsinnfields/
+  - https://camdenactive.camden.gov.uk/terms/
+  - https://www.camden.gov.uk/park-opening-and-closing-times
+- id: camden-parliament-hill-fields
+  name: Parliament Hill Fields
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/ParliamentHillFieldsTennisCourts/Booking/BookByDate
+  metadata_sources:
+  - https://www.cityoflondon.gov.uk/things-to-do/green-spaces/hampstead-heath/where-to-go-at-hampstead-heath/parliament-hill-tennis-courts
+- id: camden-waterlow-park
+  name: Waterlow Park
+  sport: tennis
+  provider: html
+  booking_url: https://camdenactive.camden.gov.uk/sports/waterlow/
+  metadata_sources:
+  - https://camdenactive.camden.gov.uk/sports/waterlow/
+  - https://camdenactive.camden.gov.uk/terms/
+  - https://www.camden.gov.uk/park-opening-and-closing-times
+- id: city-of-london-golden-lane-sport-and-fitness
+  name: Golden Lane Sport and Fitness
+  sport: tennis
+  provider: html
+  booking_url: https://www.cityoflondon.gov.uk/services/health-and-wellbeing/golden-lane-sport-fitness
+  metadata_sources:
+  - https://www.cityoflondon.gov.uk/services/health-and-wellbeing/golden-lane-sport-fitness
+  - https://news.cityoflondon.gov.uk/golden-lane-leisure-centre-set-for-104million-refurbishment/
+- id: croydon-addiscombe-recreation-ground
+  name: Addiscombe Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/AddiscombeRecGround
+  metadata_sources:
+  - https://clubspark.lta.org.uk/AddiscombeRecGround
+- id: croydon-ashburton-park
+  name: Ashburton Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/AshburtonPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/AshburtonPark
+- id: croydon-biggin-woods
+  name: Biggin Woods
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/BigginWoods
+  metadata_sources:
+  - https://clubspark.lta.org.uk/BigginWoods
+- id: croydon-coulsdon-memorial-park
+  name: Coulsdon Memorial Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/CouldsonMemorialPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/CouldsonMemorialPark
+- id: croydon-grangewood-park
+  name: Grangewood Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/GrangewoodPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/GrangewoodPark
+- id: croydon-higher-drive-recreation-ground
+  name: Higher Drive Recreation Ground
+  sport: tennis
+  provider: html
+  booking_url: https://www.croydon.gov.uk/node/3173/higher-drive-recreation-ground
+  metadata_sources:
+  - https://www.croydon.gov.uk/node/3173/higher-drive-recreation-ground
+- id: croydon-park-hill-recreation-ground
+  name: Park Hill Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/ParkHillRecGround
+  metadata_sources:
+  - https://clubspark.lta.org.uk/ParkHillRecGround
+- id: croydon-purley-beeches-park
+  name: Purley Beeches Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/PurleyBeechesPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/PurleyBeechesPark
+- id: croydon-rickman-hill-park
+  name: Rickman Hill Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/RickmanHillPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/RickmanHillPark
+- id: croydon-shirley-church-recreation-ground
+  name: Shirley Church Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/ShirleyChurchRecGround
+  metadata_sources:
+  - https://clubspark.lta.org.uk/ShirleyChurchRecGround
+- id: croydon-south-norwood-lake
+  name: South Norwood Lake
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/SouthNorwoodLake
+  metadata_sources:
+  - https://clubspark.lta.org.uk/CroydonParksTennis/Bookacourt
+- id: croydon-south-norwood-recreation-ground
+  name: South Norwood Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/SouthNorwoodRecGround
+  metadata_sources:
+  - https://clubspark.lta.org.uk/CroydonParksTennis/Bookacourt
+- id: croydon-trumble-gardens
+  name: Trumble Gardens
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/TrumbleGardens
+  metadata_sources:
+  - https://clubspark.lta.org.uk/TrumbleGardens
+- id: croydon-upper-norwood-recreation-ground
+  name: Upper Norwood Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/UpperNorwoodRecreationGround
+  metadata_sources:
+  - https://clubspark.lta.org.uk/UpperNorwoodRecreationGround
+- id: croydon-wandle-park
+  name: Wandle Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/wandle-park
+  metadata_sources:
+  - https://clubspark.lta.org.uk/wandle-park
+- id: ealing-acton-park
+  name: Acton Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/ActonPark2
+  metadata_sources:
+  - https://clubspark.lta.org.uk/ActonPark2
+  - https://www.ealing.gov.uk/info/201142/sports_facilities/1686/tennis
+- id: ealing-alec-reed-academy-community-sports-centre
+  name: Alec Reed Academy Community Sports Centre
+  sport: tennis
+  provider: html
+  booking_url: https://www.alecreedacademy.co.uk
+  metadata_sources:
+  - https://clubspark.lta.org.uk/EalingTennis/Contact
+- id: ealing-berkeley-fields
+  name: Berkeley Fields
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/BerkleyFields2
+  metadata_sources:
+  - https://clubspark.lta.org.uk/BerkleyFields2
+  - https://www.ealing.gov.uk/info/201142/sports_facilities/1686/tennis
+- id: ealing-brentside-high-school
+  name: Brentside High School
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/EalingTennis/Contact
+  metadata_sources:
+  - https://clubspark.lta.org.uk/EalingTennis/Contact
+- id: ealing-churchfields-recreation-ground
+  name: Churchfields Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/ChurchfieldRecreationGround
+  metadata_sources:
+  - https://clubspark.lta.org.uk/ChurchfieldRecreationGround
+  - https://www.ealing.gov.uk/info/201142/sports_facilities/1686/tennis
+- id: ealing-dormers-wells-leisure-centre
+  name: Dormers Wells Leisure Centre
+  sport: tennis
+  provider: html
+  booking_url: https://www.everyoneactive.com/centre/dormers-wells-leisure-centre/
+  metadata_sources:
+  - https://clubspark.lta.org.uk/EalingTennis/Contact
+- id: ealing-elthorne-park
+  name: Elthorne Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/ElthorneTennis
+  metadata_sources:
+  - https://clubspark.lta.org.uk/ElthorneTennis
+  - https://clubspark.lta.org.uk/ElthorneTennis/Booking/Bookingpolicy
+- id: ealing-elthorne-sports-centre
+  name: Elthorne Sports Centre
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/EalingTennis/Contact
+  metadata_sources:
+  - https://clubspark.lta.org.uk/EalingTennis/Contact
+- id: ealing-featherstone-sports-centre
+  name: Featherstone Sports Centre
+  sport: tennis
+  provider: html
+  booking_url: https://www.featherstonesports.co.uk
+  metadata_sources:
+  - https://clubspark.lta.org.uk/EalingTennis/Contact
+- id: ealing-greenford-sports-centre
+  name: Greenford Sports Centre
+  sport: tennis
+  provider: html
+  booking_url: https://www.everyoneactive.com/greenford
+  metadata_sources:
+  - https://clubspark.lta.org.uk/EalingTennis/Contact
+- id: ealing-lammas-park
+  name: Lammas Park
+  sport: tennis
+  provider: parksports
+  booking_url: https://parksports.co.uk/venues/lammas-park
+  metadata_sources:
+  - https://parksports.co.uk/venues/lammas-park
+  - https://parksports.co.uk/cardholders
+- id: ealing-north-acton-playing-fields
+  name: North Acton Playing Fields
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/NorthActonPlayingFieldsTennisClub
+  metadata_sources:
+  - https://www.lta.org.uk/play/book-a-tennis-court/courts/north-acton-playing-fields_1352d12e-b343-4677-855f-fbe5e1b6a76e
+- id: ealing-perivale-park
+  name: Perivale Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/PerivaleParkPitches
+  metadata_sources:
+  - https://clubspark.lta.org.uk/PerivaleParkPitches
+  - https://www.ealing.gov.uk/info/201142/sports_facilities/1686/tennis
+- id: ealing-pitshanger-park
+  name: Pitshanger Park
+  sport: tennis
+  provider: parksports
+  booking_url: https://parksports.co.uk/venues/pitshanger-park
+  metadata_sources:
+  - https://parksports.co.uk/venues/pitshanger-park
+  - https://parksports.co.uk/cardholders
+- id: ealing-ravenor-park
+  name: Ravenor Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/RavenorPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/RavenorPark
+  - https://www.ealing.gov.uk/info/201142/sports_facilities/1686/tennis
+- id: ealing-reynolds-sports-centre
+  name: Reynolds Sports Centre
+  sport: tennis
+  provider: html
+  booking_url: https://www.everyoneactive.com/reynolds
+  metadata_sources:
+  - https://clubspark.lta.org.uk/EalingTennis/Contact
+- id: ealing-southall-park
+  name: Southall Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/SouthallPark2
+  metadata_sources:
+  - https://clubspark.lta.org.uk/SouthallPark2
+  - https://www.ealing.gov.uk/info/201142/sports_facilities/1686/tennis
+- id: ealing-southfield-recreation-ground
+  name: Southfield Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/SouthfieldRec
+  metadata_sources:
+  - https://clubspark.lta.org.uk/SouthfieldRec
+  - https://www.ealing.gov.uk/info/201142/sports_facilities/1686/tennis
+- id: ealing-spikes-bridge-park
+  name: Spikes Bridge Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/SpikesBridgePark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/SpikesBridgePark
+  - https://www.ealing.gov.uk/info/201142/sports_facilities/1686/tennis
+- id: ealing-swift-road-outdoor-sports-centre
+  name: Swift Road Outdoor Sports Centre
+  sport: tennis
+  provider: html
+  booking_url: https://www.everyoneactive.com/centre/swift-road-outdoor-sports-centre/
+  metadata_sources:
+  - https://clubspark.lta.org.uk/EalingTennis/Contact
+- id: ealing-twyford-sports-centre
+  name: Twyford Sports Centre
+  sport: tennis
+  provider: html
+  booking_url: https://www.everyoneactive.com/twyford
+  metadata_sources:
+  - https://clubspark.lta.org.uk/EalingTennis/Contact
+- id: ealing-wolf-fields-park
+  name: Wolf Fields Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/WolfFieldsPark2
+  metadata_sources:
+  - https://clubspark.lta.org.uk/WolfFieldsPark2
+  - https://www.ealing.gov.uk/info/201142/sports_facilities/1686/tennis
+- id: enfield-albany-park
+  name: Albany Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/AlbanyPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/AlbanyPark
+- id: enfield-arnos-park
+  name: Arnos Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/ArnosPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/ArnosPark
+- id: enfield-broomfield-park
+  name: Broomfield Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/BroomfieldPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/BroomfieldPark
+  - https://www.enfield.gov.uk/services/leisure-and-culture/enfield-tennis-courts-refurbishment
+- id: enfield-bush-hill-park
+  name: Bush Hill Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/BushHillPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/BushHillPark
+  - https://www.enfield.gov.uk/services/leisure-and-culture/enfield-tennis-courts-refurbishment
+- id: enfield-craig-park
+  name: Craig Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/CraigPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/CraigPark
+- id: enfield-durants-park
+  name: Durants Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/DurantsPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/DurantsPark
+- id: enfield-enfield-town-park
+  name: Enfield Town Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/EnfieldTownPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/EnfieldTownPark
+- id: enfield-firs-farm-recreation-ground
+  name: Firs Farm Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/FirsFarmTennis
+  metadata_sources:
+  - https://clubspark.lta.org.uk/FirsFarmTennis
+  - https://www.enfield.gov.uk/services/leisure-and-culture/enfield-tennis-courts-refurbishment
+- id: enfield-grovelands-park
+  name: Grovelands Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/GrovelandsPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/GrovelandsPark
+  - https://www.enfield.gov.uk/services/leisure-and-culture/enfield-tennis-courts-refurbishment
+- id: enfield-hazelwood-recreation-ground
+  name: Hazelwood Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/HazelwoodSportsGround
+  metadata_sources:
+  - https://clubspark.lta.org.uk/HazelwoodSportsGround
+- id: enfield-jubilee-park
+  name: Jubilee Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/JubileePark2
+  metadata_sources:
+  - https://clubspark.lta.org.uk/JubileePark2
+- id: enfield-north-enfield-recreation-ground
+  name: North Enfield Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/NorthEnfieldRecreation
+  metadata_sources:
+  - https://clubspark.lta.org.uk/NorthEnfieldRecreation
+- id: enfield-oakwood-park
+  name: Oakwood Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/OakwoodPark2
+  metadata_sources:
+  - https://clubspark.lta.org.uk/OakwoodPark2
+- id: enfield-ponders-end-recreation-ground
+  name: Ponders End Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/PondersEndRecreationGround
+  metadata_sources:
+  - https://clubspark.lta.org.uk/PondersEndRecreationGround
+- id: enfield-pymmes-park
+  name: Pymmes Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/PymmesPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/PymmesPark
+- id: greenwich-altash-gardens
+  name: Altash Gardens
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/altash-gardens
+  metadata_sources:
+  - https://clubspark.lta.org.uk/altash-gardens
+  - https://clubspark.lta.org.uk/ParksTennisinGreenwich
+- id: greenwich-blackheath-chesterfield-walk
+  name: Blackheath (Chesterfield Walk)
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/BlackheathPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/BlackheathPark
+  - https://clubspark.lta.org.uk/ParksTennisinGreenwich
+- id: greenwich-bostall-gardens
+  name: Bostall Gardens
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/bostallgardens
+  metadata_sources:
+  - https://clubspark.lta.org.uk/bostallgardens
+  - https://clubspark.lta.org.uk/ParksTennisinGreenwich
+- id: greenwich-charlton-lido-and-lifestyle-club-hornfair-park
+  name: Charlton Lido and Lifestyle Club (Hornfair Park)
+  sport: tennis
+  provider: better
+  booking_url: https://bookings.better.org.uk/location/charlton-lido/tennis
+  metadata_sources:
+  - https://www.better.org.uk/leisure-centre/london/greenwich/charlton-lido
+  - https://www.better.org.uk/leisure-centre/london/greenwich/charlton-lido/facilities
+- id: greenwich-eltham-park-south
+  name: Eltham Park South
+  sport: tennis
+  provider: html
+  booking_url: https://www.twistfizz.co.uk/booking-eltham-park-courts/
+  metadata_sources:
+  - https://www.twistfizz.co.uk/booking-eltham-park-courts/
+  - https://www.twistfizz.co.uk/terms-conditions/
+- id: greenwich-fairy-hill-park
+  name: Fairy Hill Park
+  sport: tennis
+  provider: html
+  booking_url: https://www.royalgreenwich.gov.uk/directory/14/parks_gardens_and_open_spaces/category/365
+  metadata_sources:
+  - https://www.royalgreenwich.gov.uk/download/downloads/id/4211/fairy_hill_park_management_plan_2021-2025_updated_jan_2024.pdf
+  - https://www.royalgreenwich.gov.uk/directory/14/parks_gardens_and_open_spaces/category/365
+- id: greenwich-greenwich-park
+  name: Greenwich Park
+  sport: tennis
+  provider: html
+  booking_url: https://sportsandleisure.royalparks.org.uk/greenwich-park
+  metadata_sources:
+  - https://sportsandleisure.royalparks.org.uk/greenwich-park
+  - https://sportsandleisure.royalparks.org.uk/frequently-asked-questions
+  - https://www.royalparks.org.uk/visit/parks/greenwich-park/sport-leisure
+- id: greenwich-kidbrooke-green
+  name: Kidbrooke Green
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/KidbrookeGreen
+  metadata_sources:
+  - https://clubspark.lta.org.uk/KidbrookeGreen
+  - https://clubspark.lta.org.uk/ParksTennisinGreenwich
+- id: greenwich-maryon-park
+  name: Maryon Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/MaryonPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/MaryonPark
+  - https://clubspark.lta.org.uk/ParksTennisinGreenwich
+- id: greenwich-plumstead-common
+  name: Plumstead Common
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/PlumsteadCommon
+  metadata_sources:
+  - https://clubspark.lta.org.uk/PlumsteadCommon
+  - https://clubspark.lta.org.uk/ParksTennisinGreenwich
+- id: greenwich-shooters-hill-sixth-form-college
+  name: Shooters Hill Sixth Form College
+  sport: tennis
+  provider: html
+  booking_url: https://www.twistfizz.co.uk/locations/
+  metadata_sources:
+  - https://www.twistfizz.co.uk/locations/
+- id: hackney-britannia-leisure-centre-rooftop-courts
+  name: Britannia Leisure Centre rooftop courts
+  sport: tennis
+  provider: better
+  booking_url: https://www.better.org.uk/leisure-centre/london/hackney/britannia-leisure-centre/kids-activities
+  metadata_sources:
+  - https://www.better.org.uk/leisure-centre/london/hackney/britannia-leisure-centre/facilities
+  - https://www.better.org.uk/leisure-centre/london/hackney/britannia-leisure-centre/kids-activities
+- id: hackney-clissold-park
+  name: Clissold Park
+  sport: tennis
+  provider: html
+  booking_url: https://www.hackneytennis.co.uk/booking/clissold-park-courts/
+  metadata_sources:
+  - https://www.hackneytennis.co.uk/booking/clissold-park-courts/
+  - https://www.hackneytennis.co.uk/booking/court-booking-terms-and-conditions/
+- id: hackney-hackney-downs
+  name: Hackney Downs
+  sport: tennis
+  provider: html
+  booking_url: https://www.hackneytennis.co.uk/booking/hackney-downs/
+  metadata_sources:
+  - https://www.hackneytennis.co.uk/booking/hackney-downs/
+  - https://www.hackneytennis.co.uk/booking/court-booking-terms-and-conditions/
+- id: hackney-haggerston-park
+  name: Haggerston Park
+  sport: tennis
+  provider: better
+  booking_url: https://www.better.org.uk/leisure-centre/london/hackney/hackney-parks/facilities
+  metadata_sources:
+  - https://www.better.org.uk/leisure-centre/london/hackney/hackney-parks/facilities
+- id: hackney-joe-white-gardens-aske-gardens
+  name: Joe White Gardens (Aske Gardens)
+  sport: tennis
+  provider: html
+  booking_url: https://www.hackneytennis.co.uk/booking/aske-gardens/
+  metadata_sources:
+  - https://www.hackneytennis.co.uk/booking/aske-gardens/
+  - https://www.hackneytennis.co.uk/booking/court-booking-terms-and-conditions/
+- id: hackney-london-fields
+  name: London Fields
+  sport: tennis
+  provider: html
+  booking_url: https://www.hackneytennis.co.uk/booking/london-fields/
+  metadata_sources:
+  - https://www.hackneytennis.co.uk/booking/london-fields/
+  - https://www.hackneytennis.co.uk/booking/court-booking-terms-and-conditions/
+- id: hackney-millfields-park
+  name: Millfields Park
+  sport: tennis
+  provider: html
+  booking_url: https://www.hackneytennis.co.uk/booking/millfields/
+  metadata_sources:
+  - https://www.hackneytennis.co.uk/booking/millfields/
+  - https://www.hackneytennis.co.uk/booking/court-booking-terms-and-conditions/
+- id: hackney-spring-hill
+  name: Spring Hill
+  sport: tennis
+  provider: html
+  booking_url: https://www.hackneytennis.co.uk/booking/spring-hill/
+  metadata_sources:
+  - https://www.hackneytennis.co.uk/booking/spring-hill/
+  - https://www.hackneytennis.co.uk/booking/court-booking-terms-and-conditions/
+- id: hackney-springfield-park
+  name: Springfield Park
+  sport: tennis
+  provider: html
+  booking_url: https://www.hackneytennis.co.uk/booking/springfield-park/
+  metadata_sources:
+  - https://www.hackneytennis.co.uk/booking/springfield-park/
+- id: hammersmith-and-fulham-bishops-park
+  name: Bishops Park
+  sport: tennis
+  provider: html
+  booking_url: https://rockslane.co.uk/tennis/
+  metadata_sources:
+  - https://rockslane.co.uk/tennis/
+- id: hammersmith-and-fulham-brook-green-tennis
+  name: Brook Green Tennis
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/BrookGreenTennis
+  metadata_sources:
+  - https://clubspark.lta.org.uk/BrookGreenTennis
+- id: hammersmith-and-fulham-eel-brook-common
+  name: Eel Brook Common
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/EelBrookCommon
+  metadata_sources:
+  - https://clubspark.lta.org.uk/EelBrookCommon
+  - https://clubspark.lta.org.uk/TennisInHammersmithAndFulham/PricesandInfo
+- id: hammersmith-and-fulham-hammersmith-park
+  name: Hammersmith Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/HammersmithPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/HammersmithPark
+- id: hammersmith-and-fulham-hurlingham-park
+  name: Hurlingham Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/HurlinghamPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/HurlinghamPark
+  - https://clubspark.lta.org.uk/TennisInHammersmithAndFulham/PricesandInfo
+- id: hammersmith-and-fulham-lillie-road-recreation-ground
+  name: Lillie Road Recreation Ground
+  sport: tennis
+  provider: html
+  booking_url: https://haveyoursay.lbhf.gov.uk/proposal-to-provide-new-tennis-court-and-muga-in-lillie-road-recreation-ground
+  metadata_sources:
+  - https://haveyoursay.lbhf.gov.uk/proposal-to-provide-new-tennis-court-and-muga-in-lillie-road-recreation-ground
+- id: hammersmith-and-fulham-linford-christie-outdoor-sports-centre
+  name: Linford Christie Outdoor Sports Centre
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/LinfordChristieStadium
+  metadata_sources:
+  - https://clubspark.lta.org.uk/LinfordChristieStadium
+  - https://clubspark.lta.org.uk/TennisInHammersmithAndFulham/PricesandInfo
+- id: hammersmith-and-fulham-normand-park-fulham-pools
+  name: Normand Park / Fulham Pools
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/TennisInHammersmithAndFulham
+  metadata_sources:
+  - https://clubspark.lta.org.uk/TennisInHammersmithAndFulham
+- id: hammersmith-and-fulham-ravenscourt-park
+  name: Ravenscourt Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/RavenscourtPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/RavenscourtPark
+  - https://clubspark.lta.org.uk/TennisInHammersmithAndFulham/PricesandInfo
+- id: hammersmith-and-fulham-south-park
+  name: South Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/SouthParkFulham
+  metadata_sources:
+  - https://clubspark.lta.org.uk/SouthParkFulham
+  - https://clubspark.lta.org.uk/TennisInHammersmithAndFulham/PricesandInfo
+- id: haringey-bruce-castle-park
+  name: Bruce Castle Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/BruceCastlePark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/BruceCastlePark
+  - https://clubspark.lta.org.uk/PavilionTennis/Booking/BookByDate
+- id: haringey-chapmans-green
+  name: Chapmans Green
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/ChapmansGreen
+  metadata_sources:
+  - https://clubspark.lta.org.uk/ChapmansGreen
+  - https://clubspark.lta.org.uk/haringeytennis/ParksTennis
+- id: haringey-chestnuts-park
+  name: Chestnuts Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/ChestnutsPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/ChestnutsPark
+  - https://clubspark.lta.org.uk/haringeytennis/ParksTennis
+- id: haringey-down-lane-park
+  name: Down Lane Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/DownLanePark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/DownLanePark
+  - https://clubspark.lta.org.uk/haringeytennis/ParksTennis
+- id: haringey-downhills-park
+  name: Downhills Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/DownhillsParkTennisClub
+  metadata_sources:
+  - https://clubspark.lta.org.uk/DownhillsParkTennisClub
+  - https://clubspark.lta.org.uk/haringeytennis/ParksTennis
+- id: haringey-finsbury-park
+  name: Finsbury Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/FinsburyPark/Booking/BookByDate
+  metadata_sources:
+  - https://clubspark.lta.org.uk/FinsburyPark/Booking/BookByDate
+- id: haringey-markfield-park
+  name: Markfield Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/MarkfieldPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/MarkfieldPark
+- id: haringey-new-river-sport-and-fitness
+  name: New River Sport and Fitness
+  sport: tennis
+  provider: html
+  booking_url: https://haringey.gov.uk/leisure-parks-culture/leisure-centres/new-river/facilities-new-river/tennis-new-river
+  metadata_sources:
+  - https://haringey.gov.uk/leisure-parks-culture/leisure-centres/new-river/facilities-new-river/tennis-new-river
+- id: haringey-o-r-tambo-recreation-ground-albert-road-rec
+  name: O.R. Tambo Recreation Ground (Albert Road Rec)
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/PavilionTennis
+  metadata_sources:
+  - https://clubspark.lta.org.uk/BruceCastlePark
+  - https://clubspark.lta.org.uk/PavilionTennis/Booking/BookByDate
+- id: haringey-priory-park
+  name: Priory Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/priorypark2
+  metadata_sources:
+  - https://clubspark.lta.org.uk/priorypark2
+  - https://clubspark.lta.org.uk/haringeytennis/ParksTennis
+- id: haringey-stationers-park
+  name: Stationers Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/StationersPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/StationersPark
+  - https://clubspark.lta.org.uk/haringeytennis/ParksTennis
+- id: harrow-byron-recreation-ground
+  name: Byron Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/byron-recreation-ground
+  metadata_sources:
+  - https://clubspark.lta.org.uk/byron-recreation-ground
+  - https://clubspark.lta.org.uk/TennisHarrow/Bookacourt
+- id: harrow-centenary-park
+  name: Centenary Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/CentenaryPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/CentenaryPark
+  - https://clubspark.lta.org.uk/TennisHarrow/Bookacourt
+- id: harrow-chandos-recreation-ground
+  name: Chandos Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/ChandosRecreationGround
+  metadata_sources:
+  - https://clubspark.lta.org.uk/ChandosRecreationGround
+  - https://clubspark.lta.org.uk/TennisHarrow/Bookacourt
+- id: harrow-harrow-recreation-ground
+  name: Harrow Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/HarrowRec
+  metadata_sources:
+  - https://clubspark.lta.org.uk/HarrowRec
+  - https://clubspark.lta.org.uk/TennisHarrow/Bookacourt
+- id: harrow-harrow-weald-recreation-ground
+  name: Harrow Weald Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/HarrowWealdRec
+  metadata_sources:
+  - https://clubspark.lta.org.uk/HarrowWealdRec
+  - https://clubspark.lta.org.uk/TennisHarrow/Bookacourt
+- id: harrow-headstone-manor-park
+  name: Headstone Manor Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/HeadstoneManorRec
+  metadata_sources:
+  - https://clubspark.lta.org.uk/HeadstoneManorRec
+  - https://clubspark.lta.org.uk/TennisHarrow/Bookacourt
+- id: harrow-montesole-playing-fields
+  name: Montesole Playing Fields
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/TheMontesolePlayingFields
+  metadata_sources:
+  - https://clubspark.lta.org.uk/TheMontesolePlayingFields
+  - https://clubspark.lta.org.uk/TennisHarrow/Bookacourt
+- id: harrow-pinner-village-gardens
+  name: Pinner Village Gardens
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/pinner-village-gardens
+  metadata_sources:
+  - https://clubspark.lta.org.uk/pinner-village-gardens
+  - https://clubspark.lta.org.uk/TennisHarrow/Bookacourt
+- id: harrow-queensbury-park
+  name: Queensbury Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/QueensburyRec
+  metadata_sources:
+  - https://clubspark.lta.org.uk/QueensburyRec
+  - https://clubspark.lta.org.uk/TennisHarrow/Bookacourt
+- id: harrow-rayners-mead
+  name: Rayners Mead
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/RaynersMead
+  metadata_sources:
+  - https://clubspark.lta.org.uk/RaynersMead
+  - https://clubspark.lta.org.uk/TennisHarrow/Bookacourt
+- id: harrow-roxeth-recreation-ground
+  name: Roxeth Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/RoxethRec
+  metadata_sources:
+  - https://clubspark.lta.org.uk/RoxethRec
+  - https://clubspark.lta.org.uk/TennisHarrow/Bookacourt
+- id: harrow-west-harrow-recreation-ground
+  name: West Harrow Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/west-harrow-recreation-ground
+  metadata_sources:
+  - https://clubspark.lta.org.uk/west-harrow-recreation-ground
+  - https://clubspark.lta.org.uk/TennisHarrow/Bookacourt
+- id: havering-harold-wood-park
+  name: Harold Wood Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/HaroldWoodPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/HaroldWoodPark
+  - https://clubspark.lta.org.uk/TennisinHavering
+- id: havering-harrow-lodge-park
+  name: Harrow Lodge Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/harrow-lodge-park
+  metadata_sources:
+  - https://clubspark.lta.org.uk/harrow-lodge-park
+  - https://clubspark.lta.org.uk/TennisinHavering
+- id: havering-haynes-park
+  name: Haynes Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/haynes-park
+  metadata_sources:
+  - https://clubspark.lta.org.uk/haynes-park
+  - https://clubspark.lta.org.uk/TennisinHavering
+- id: havering-hylands-park
+  name: Hylands Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/hylands-park
+  metadata_sources:
+  - https://clubspark.lta.org.uk/hylands-park
+  - https://clubspark.lta.org.uk/TennisinHavering
+- id: havering-lodge-farm-park
+  name: Lodge Farm Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/lodge-farm-park
+  metadata_sources:
+  - https://clubspark.lta.org.uk/lodge-farm-park
+  - https://clubspark.lta.org.uk/TennisinHavering
+- id: havering-noak-hill-sports-complex
+  name: Noak Hill Sports Complex
+  sport: tennis
+  provider: html
+  booking_url: https://www.everyoneactive.com/centre/Noak-Hill-Sports-Complex/
+  metadata_sources:
+  - https://www.everyoneactive.com/centre/Noak-Hill-Sports-Complex/
+- id: havering-raphael-park
+  name: Raphael Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/RaphaelPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/RaphaelPark
+  - https://clubspark.lta.org.uk/TennisinHavering
+- id: havering-rise-park
+  name: Rise Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/rise-park
+  metadata_sources:
+  - https://clubspark.lta.org.uk/rise-park
+  - https://clubspark.lta.org.uk/TennisinHavering
+- id: havering-spring-farm-park
+  name: Spring Farm Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/spring-farm-park
+  metadata_sources:
+  - https://clubspark.lta.org.uk/spring-farm-park
+  - https://clubspark.lta.org.uk/TennisinHavering
+- id: havering-upminster-park
+  name: Upminster Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/UpminsterPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/UpminsterPark
+  - https://clubspark.lta.org.uk/TennisinHavering
+- id: hillingdon-brunel-sports-park
+  name: Brunel Sports Park
+  sport: tennis
+  provider: html
+  booking_url: https://www.brunel.ac.uk/life/sport/facilities/sports-park
+  metadata_sources:
+  - https://www.brunel.ac.uk/life/sport/facilities/sports-park
+  - https://www.brunel.ac.uk/life/sport/facilities
+  - https://www.brunel.ac.uk/life/sport/Price-Lists
+- id: hillingdon-cavendish-recreation-ground
+  name: Cavendish Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/CavendishPark2
+  metadata_sources:
+  - https://pre.hillingdon.gov.uk/keeping-active/tennis
+  - https://clubspark.lta.org.uk/CavendishPark2
+- id: hillingdon-churchfield-gardens
+  name: Churchfield Gardens
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/ChurchfieldGardens/Booking/BookByDate
+  metadata_sources:
+  - https://pre.hillingdon.gov.uk/keeping-active/tennis
+  - https://clubspark.lta.org.uk/ChurchfieldGardens/Booking/BookByDate
+- id: hillingdon-fassnidge-park
+  name: Fassnidge Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/FassnidgePark2/Booking/BookByDate
+  metadata_sources:
+  - https://pre.hillingdon.gov.uk/keeping-active/tennis
+  - https://clubspark.lta.org.uk/FassnidgePark2/Booking/BookByDate
+- id: hillingdon-harmondsworth-recreation-ground
+  name: Harmondsworth Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/HarmondsworthRecGround/Booking/BookByDate
+  metadata_sources:
+  - https://pre.hillingdon.gov.uk/keeping-active/tennis
+  - https://clubspark.lta.org.uk/HarmondsworthRecGround/Booking/BookByDate
+- id: hillingdon-hillingdon-court-park
+  name: Hillingdon Court Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/HillingdonCourtPark/Booking/BookByDate
+  metadata_sources:
+  - https://pre.hillingdon.gov.uk/keeping-active/tennis
+  - https://clubspark.lta.org.uk/HillingdonCourtPark/Booking/BookByDate
+- id: hillingdon-moorhall-recreation-ground
+  name: Moorhall Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/MoorhallRecGround
+  metadata_sources:
+  - https://pre.hillingdon.gov.uk/keeping-active/tennis
+  - https://clubspark.lta.org.uk/MoorhallRecGround
+- id: hillingdon-northwood-recreation-ground
+  name: Northwood Recreation Ground
+  sport: tennis
+  provider: html
+  booking_url: https://pre.hillingdon.gov.uk/keeping-active/tennis
+  metadata_sources:
+  - https://pre.hillingdon.gov.uk/keeping-active/tennis
+- id: hillingdon-rosedale-park
+  name: Rosedale Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/RosedalePark/Booking/BookByDate
+  metadata_sources:
+  - https://pre.hillingdon.gov.uk/keeping-active/tennis
+  - https://clubspark.lta.org.uk/RosedalePark/Booking/BookByDate
+- id: hillingdon-swakeleys-park
+  name: Swakeleys Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/SwakeleysPark/Booking/BookByDate
+  metadata_sources:
+  - https://pre.hillingdon.gov.uk/keeping-active/tennis
+  - https://clubspark.lta.org.uk/SwakeleysPark/Booking/BookByDate
+- id: hillingdon-the-closes-recreation-ground
+  name: The Closes Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/TheClosesRecreationGround/Booking/BookByDate
+  metadata_sources:
+  - https://pre.hillingdon.gov.uk/keeping-active/tennis
+  - https://clubspark.lta.org.uk/TheClosesRecreationGround/Booking/BookByDate
+- id: hounslow-avenue-park
+  name: Avenue Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/AvenueParkHounslow
+  metadata_sources:
+  - https://clubspark.lta.org.uk/AvenueParkHounslow
+- id: hounslow-beaversfield-park
+  name: Beaversfield Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/BeaversfieldPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/BeaversfieldPark
+- id: hounslow-bedfont-recreation-ground
+  name: Bedfont Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/BedfontRec
+  metadata_sources:
+  - https://clubspark.lta.org.uk/BedfontRec
+- id: hounslow-brent-lea
+  name: Brent Lea
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/BrentLea
+  metadata_sources:
+  - https://clubspark.lta.org.uk/BrentLea
+- id: hounslow-chiswick-house-and-gardens-tennis
+  name: Chiswick House and Gardens Tennis
+  sport: tennis
+  provider: parksports
+  booking_url: https://parksports.co.uk/venues/chiswick
+  metadata_sources:
+  - https://parksports.co.uk/venues/chiswick
+  - https://parksports.co.uk/cardholders
+- id: hounslow-dukes-meadows-tennis
+  name: Dukes Meadows Tennis
+  sport: tennis
+  provider: html
+  booking_url: https://www.dukesmeadows.com
+  metadata_sources:
+  - https://prod.lta.org.uk/play/find-a-tennis-court/Venue/?VenueId=0014J000006dp2qQAA
+  - https://dukes-meadows-cdn.s3.eu-west-2.amazonaws.com/wp-content/uploads/2024/01/26151123/DUKES-RPDC-Selection-Policy-2024.pdf
+- id: hounslow-feltham-park
+  name: Feltham Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/FelthamPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/FelthamPark
+- id: hounslow-gunnersbury-park-sports-hub
+  name: Gunnersbury Park Sports Hub
+  sport: tennis
+  provider: better
+  booking_url: https://www.better.org.uk/leisure-centre/london/gunnersbury-park/gunnersbury-park-sports/2806-gunnersbury-park-sports
+  metadata_sources:
+  - https://www.better.org.uk/leisure-centre/london/gunnersbury-park/gunnersbury-park-sports/2806-gunnersbury-park-sports
+  - https://clubspark.lta.org.uk/Gunnersburypark
+  - https://ealing.moderngov.co.uk/documents/s12653/Appendix%204%20-%20240306_Perivale%20Golf%20Course%20Planning%20Note%20-%20PP%20Assessment%20of%20Golf%20Demand%20in%20Ealing_FIN.pdf
+- id: hounslow-hanworth-air-park-leisure-centre-library
+  name: Hanworth Air Park Leisure Centre & Library
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/TennisinHounslow
+  metadata_sources:
+  - https://clubspark.lta.org.uk/TennisinHounslow
+  - https://www.hounslow.gov.uk/news/article/10159/council-approves-funding-for-six-new-padel-courts-in-hounslow
+- id: hounslow-heston-park
+  name: Heston Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/HestonPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/HestonPark
+- id: hounslow-isleworth-leisure-centre-library
+  name: Isleworth Leisure Centre & Library
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/TennisinHounslow
+  metadata_sources:
+  - https://clubspark.lta.org.uk/TennisinHounslow
+  - https://www.hounslow.gov.uk/news/article/10159/council-approves-funding-for-six-new-padel-courts-in-hounslow
+- id: hounslow-jersey-gardens
+  name: Jersey Gardens
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/JerseyGardens
+  metadata_sources:
+  - https://clubspark.lta.org.uk/JerseyGardens
+- id: hounslow-lampton-park
+  name: Lampton Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/LamptonPark/
+  metadata_sources:
+  - https://clubspark.lta.org.uk/LamptonPark/
+- id: hounslow-rocks-lane-chiswick
+  name: Rocks Lane Chiswick
+  sport: tennis
+  provider: html
+  booking_url: https://rockslane.co.uk/tennis/
+  metadata_sources:
+  - https://rockslane.co.uk/tennis/
+- id: islington-highbury-fields
+  name: Highbury Fields
+  sport: tennis
+  provider: better
+  booking_url: https://bookings.better.org.uk/location/islington-tennis-centre/highbury-tennis/2026-09-15/by-time
+  metadata_sources:
+  - https://www.better.org.uk/leisure-centre/london/islington/islington-parks/3046-islington-parks
+  - https://www.better.org.uk/legal-policies/terms
+- id: islington-islington-tennis-centre
+  name: Islington Tennis Centre
+  sport: tennis
+  provider: better
+  booking_url: https://www.better.org.uk/leisure-centre/london/islington/islingtontc
+  metadata_sources:
+  - https://www.better.org.uk/leisure-centre/london/islington/islingtontc
+  - https://www.better.org.uk/legal-policies/terms
+- id: islington-rosemary-gardens
+  name: Rosemary Gardens
+  sport: tennis
+  provider: better
+  booking_url: https://bookings.better.org.uk/location/islington-tennis-centre/rosemary-gardens-activities
+  metadata_sources:
+  - https://www.better.org.uk/leisure-centre/london/islington/islington-parks/rosemary-gardens-football-pitch-and-tennis-courts
+- id: islington-tufnell-park-playing-fields
+  name: Tufnell Park Playing Fields
+  sport: tennis
+  provider: better
+  booking_url: https://bookings.better.org.uk/location/islington-tennis-centre/tufnell-park-activities
+  metadata_sources:
+  - https://www.better.org.uk/leisure-centre/london/islington/islington-parks/tufnell-park-playing-fields
+- id: kensington-and-chelsea-avondale-park
+  name: Avondale Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/AvondalePark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/AvondalePark
+  - https://clubspark.lta.org.uk/TennisInKensingtonChelsea/Membership/Join
+- id: kensington-and-chelsea-emslie-horniman-pleasance-park
+  name: Emslie Horniman Pleasance Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/EmslieHornimanPleasance
+  metadata_sources:
+  - https://clubspark.lta.org.uk/EmslieHornimanPleasance
+  - https://clubspark.lta.org.uk/TennisInKensingtonChelsea/Membership/Join
+- id: kensington-and-chelsea-holland-park
+  name: Holland Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/HollandPark2
+  metadata_sources:
+  - https://clubspark.lta.org.uk/HollandPark2
+  - https://clubspark.lta.org.uk/TennisInKensingtonChelsea/Membership/Join
+  - https://clubspark.lta.org.uk/HollandPark2/PricesandInfo
+- id: kensington-and-chelsea-kensington-memorial-park
+  name: Kensington Memorial Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/KensingtonMemorialPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/KensingtonMemorialPark
+  - https://clubspark.lta.org.uk/TennisInKensingtonChelsea/Membership/Join
+- id: kensington-and-chelsea-westway-sports-fitness-centre
+  name: Westway Sports & Fitness Centre
+  sport: tennis
+  provider: html
+  booking_url: https://www.everyoneactive.com/centre/westway-sports-fitness-centre/tennis/
+  metadata_sources:
+  - https://www.everyoneactive.com/centre/westway-sports-fitness-centre/tennis/
+  - https://www.everyoneactive.com/centre/westway-sports-fitness-centre/
+- id: kingston-upon-thames-alexandra-recreation-ground
+  name: Alexandra Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/AlexandraRecGround
+  metadata_sources:
+  - https://clubspark.lta.org.uk/AlexandraRecGround
+  - https://clubspark.lta.org.uk/TennisinKingston/PayandPlay
+  - https://clubspark.lta.org.uk/BeverleyPark/Conditions
+  - https://www.kingston.gov.uk/sites/default/files/2025-05/Kingston_Outdoor_Facilities_Strategy___Assessment_Report__final_%20%281%29.pdf
+- id: kingston-upon-thames-beverley-park
+  name: Beverley Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/BeverleyPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/BeverleyPark
+  - https://clubspark.lta.org.uk/TennisinKingston/PayandPlay
+  - https://clubspark.lta.org.uk/BeverleyPark/Conditions
+  - https://www.kingston.gov.uk/sites/default/files/2025-05/Kingston_Outdoor_Facilities_Strategy___Assessment_Report__final_%20%281%29.pdf
+- id: kingston-upon-thames-canbury-gardens-tennis-centre
+  name: Canbury Gardens Tennis Centre
+  sport: tennis
+  provider: html
+  booking_url: https://www.kingston.gov.uk/leisure-and-community/parks-sports-and-activities/sports-and-leisure-club-directory/canbury-gardens-tennis-centre
+  metadata_sources:
+  - https://www.kingston.gov.uk/leisure-and-community/parks-sports-and-activities/sports-and-leisure-club-directory/canbury-gardens-tennis-centre
+  - https://www.kingston.gov.uk/sites/default/files/2025-05/Kingston_Outdoor_Facilities_Strategy___Assessment_Report__final_%20%281%29.pdf
+- id: kingston-upon-thames-chessington-sports-centre
+  name: Chessington Sports Centre
+  sport: tennis
+  provider: html
+  booking_url: https://www.placesleisure.org/centres/chessington-sports-centre/
+  metadata_sources:
+  - https://www.placesleisure.org/centres/chessington-sports-centre/
+  - https://www.kingston.gov.uk/sites/default/files/2025-05/Kingston_Outdoor_Facilities_Strategy___Assessment_Report__final_%20%281%29.pdf
+- id: kingston-upon-thames-king-edward-s-recreation-ground
+  name: King Edward's Recreation Ground
+  sport: tennis
+  provider: html
+  booking_url: https://www.kingston.gov.uk/leisure-and-community/parks-sports-and-activities/recreation-areas-and-playgrounds/king-edwards-recreation-ground-completed-community-parks-programme-works
+  metadata_sources:
+  - https://www.kingston.gov.uk/leisure-and-community/parks-sports-and-activities/recreation-areas-and-playgrounds/king-edwards-recreation-ground-completed-community-parks-programme-works
+- id: kingston-upon-thames-kingston-road-recreation-ground
+  name: Kingston Road Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/KingstonRoadRecreationGround
+  metadata_sources:
+  - https://clubspark.lta.org.uk/KingstonRoadRecreationGround
+  - https://clubspark.lta.org.uk/TennisinKingston/PayandPlay
+  - https://clubspark.lta.org.uk/BeverleyPark/Conditions
+  - https://www.kingston.gov.uk/sites/default/files/2025-05/Kingston_Outdoor_Facilities_Strategy___Assessment_Report__final_%20%281%29.pdf
+- id: kingston-upon-thames-manor-park
+  name: Manor Park
+  sport: tennis
+  provider: html
+  booking_url: https://ourmanorpark.org.uk/manor-park-activities/tennis-court-hire/
+  metadata_sources:
+  - https://ourmanorpark.org.uk/manor-park-activities/tennis-court-hire/
+  - https://www.kingston.gov.uk/sites/default/files/2025-05/Kingston_Outdoor_Facilities_Strategy___Assessment_Report__final_%20%281%29.pdf
+- id: kingston-upon-thames-sir-francis-barker-recreation-ground
+  name: Sir Francis Barker Recreation Ground
+  sport: tennis
+  provider: html
+  booking_url: https://www.kingston.gov.uk/leisure-and-community/parks-sports-and-activities/recreation-areas-and-playgrounds/sir-francis-barker-recreation-ground
+  metadata_sources:
+  - https://www.kingston.gov.uk/leisure-and-community/parks-sports-and-activities/recreation-areas-and-playgrounds/sir-francis-barker-recreation-ground
+  - https://www.kingston.gov.uk/sites/default/files/2025-05/Kingston_Outdoor_Facilities_Strategy___Assessment_Report__final_%20%281%29.pdf
+  - https://www.kingston.gov.uk/environmental-health-and-public-issues/flooding-and-drainage/flood-prevention/sir-francis-barker-alleviation
+- id: kingston-upon-thames-victoria-recreation-ground
+  name: Victoria Recreation Ground
+  sport: tennis
+  provider: html
+  booking_url: https://www.kingston.gov.uk/leisure-and-community/parks-sports-and-activities/recreation-areas-and-playgrounds/victoria-recreation-ground
+  metadata_sources:
+  - https://www.kingston.gov.uk/leisure-and-community/parks-sports-and-activities/recreation-areas-and-playgrounds/victoria-recreation-ground
+  - https://www.kingston.gov.uk/sites/default/files/2025-05/Kingston_Outdoor_Facilities_Strategy___Assessment_Report__final_%20%281%29.pdf
+- id: kingston-upon-thames-ymca-hawker
+  name: YMCA Hawker
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/YMCAHawkerTennisKingston
+  metadata_sources:
+  - https://ymcastpaulsgroup.org/sport-other-activities/tennis-at-ymca-hawker/
+  - https://www.lta.org.uk/play/find-a-tennis-court/Venue/?VenueId=0014J000006ugPNQAY
+- id: lambeth-archbishop-s-park
+  name: Archbishop's Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/ArchbishopsParkLambethNorth
+  metadata_sources:
+  - https://clubspark.lta.org.uk/ArchbishopsParkLambethNorth
+  - https://clubspark.lta.org.uk/tennisinlambeth/FindyourgatecodeandFAQs
+  - https://clubspark.lta.org.uk/ArchbishopsParkLambethNorth/Booking/BookByDate
+- id: lambeth-archbishop-s-park-multi-use-games-area
+  name: Archbishop's Park Multi-Use Games Area
+  sport: tennis
+  provider: html
+  booking_url: https://active.lambeth.gov.uk/locations/archbishops-park/
+  metadata_sources:
+  - https://active.lambeth.gov.uk/facilities/muga-area/
+  - https://active.lambeth.gov.uk/locations/archbishops-park/
+  - https://clubspark.lta.org.uk/ArchbishopsParkLambethNorth/Booking/BookByDate
+- id: lambeth-brockwell-park
+  name: Brockwell Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/BrockwellPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/BrockwellPark
+  - https://clubspark.lta.org.uk/tennisinlambeth/FindyourgatecodeandFAQs
+  - https://www.lambeth.gov.uk/lambeth-data-hub/public-tennis-courts
+  - https://clubspark.lta.org.uk/BrockwellPark/Booking/BookByDate
+- id: lambeth-clapham-common
+  name: Clapham Common
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/ClaphamCommon
+  metadata_sources:
+  - https://clubspark.lta.org.uk/ClaphamCommon
+  - https://clubspark.lta.org.uk/tennisinlambeth/FindyourgatecodeandFAQs
+- id: lambeth-ferndale-community-sports-centre
+  name: Ferndale Community Sports Centre
+  sport: tennis
+  provider: html
+  booking_url: https://active.lambeth.gov.uk/locations/ferndale/
+  metadata_sources:
+  - https://active.lambeth.gov.uk/facilities/outdoor-hard-courts/
+  - https://active.lambeth.gov.uk/locations/ferndale/
+- id: lambeth-hillside-gardens-park
+  name: Hillside Gardens Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/HillsideGardensPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/HillsideGardensPark
+  - https://clubspark.lta.org.uk/tennisinlambeth/FindyourgatecodeandFAQs
+  - https://clubspark.lta.org.uk/HillsideGardensPark/Booking/BookByDate
+- id: lambeth-kennington-park
+  name: Kennington Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/KenningtonPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/KenningtonPark
+  - https://clubspark.lta.org.uk/tennisinlambeth/FindyourgatecodeandFAQs
+  - https://www.lambeth.gov.uk/lambeth-data-hub/public-tennis-courts
+  - https://www.lta.org.uk/play/find-a-tennis-court/?latitude=51.3667209&longitude=0.0744464&p=27
+- id: lambeth-larkhall-park
+  name: Larkhall Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/larkhallpark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/larkhallpark
+  - https://clubspark.lta.org.uk/tennisinlambeth/FindyourgatecodeandFAQs
+- id: lambeth-myatt-s-fields-park
+  name: Myatt's Fields Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/MyattsFieldsPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/MyattsFieldsPark
+  - https://www.lambeth.gov.uk/lambeth-data-hub/public-tennis-courts
+- id: lambeth-ruskin-park
+  name: Ruskin Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/RuskinPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/RuskinPark
+  - https://clubspark.lta.org.uk/tennisinlambeth/FindyourgatecodeandFAQs
+- id: lambeth-streatham-common-the-rookery
+  name: Streatham Common (The Rookery)
+  sport: tennis
+  provider: html
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/Streatham-Common_5C1FCB26-BE28-4AC4-932F-FC26E6207E90
+  metadata_sources:
+  - https://clubspark.lta.org.uk/TheRookery
+  - https://clubspark.lta.org.uk/tennisinlambeth/FindyourgatecodeandFAQs
+  - https://clubspark.lta.org.uk/TheRookery/Booking/LTAPlayLogin
+- id: lambeth-streatham-vale-park
+  name: Streatham Vale Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/StreathamValePark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/StreathamValePark
+  - https://clubspark.lta.org.uk/tennisinlambeth/FindyourgatecodeandFAQs
+  - https://www.lambeth.gov.uk/parks/streatham-vale-park
+- id: lambeth-vauxhall-park
+  name: Vauxhall Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/VauxhallPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/VauxhallPark
+  - https://clubspark.lta.org.uk/tennisinlambeth/FindyourgatecodeandFAQs
+  - https://clubspark.lta.org.uk/vauxhallpark/Booking/BookByDate
+- id: lewisham-catford-bridge
+  name: Catford Bridge
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/CatfordBridge
+  metadata_sources:
+  - https://clubspark.lta.org.uk/CatfordBridge
+  - https://clubspark.lta.org.uk/TennisInLewisham/Othercourts
+  - https://lewisham.gov.uk/inmyarea/sport/facilities/hiring-sports-facilities-and-venues
+- id: lewisham-chinbrook-meadows
+  name: Chinbrook Meadows
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/ChinbrookPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/ChinbrookPark
+  - https://clubspark.lta.org.uk/TennisInLewisham/Othercourts
+  - https://lewisham.gov.uk/inmyarea/sport/facilities/hiring-sports-facilities-and-venues
+- id: lewisham-downham-health-leisure-centre
+  name: Downham Health & Leisure Centre
+  sport: tennis
+  provider: html
+  booking_url: https://www.leisurecentre.com/downham-health-leisure-centre
+  metadata_sources:
+  - https://lewisham.gov.uk/inmyarea/sport/facilities/hiring-sports-facilities-and-venues
+  - https://www.leisurecentre.com/downham-health-leisure-centre/plan-your-visit/opening-times
+  - https://www.leisurecentre.com/downham-health-leisure-centre/sports-and-activities
+- id: lewisham-forest-hill-school-sports-centre
+  name: Forest Hill School Sports Centre
+  sport: tennis
+  provider: html
+  booking_url: https://lettings.foresthill.lewisham.sch.uk/
+  metadata_sources:
+  - https://lewisham.gov.uk/inmyarea/sport/facilities/hiring-sports-facilities-and-venues
+  - https://foresthillschool.communitybookings.co.uk/about-us
+- id: lewisham-hilly-fields
+  name: Hilly Fields
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/HillyFields
+  metadata_sources:
+  - https://clubspark.lta.org.uk/HillyFields
+  - https://clubspark.lta.org.uk/TennisInLewisham/Othercourts
+  - https://lewisham.gov.uk/inmyarea/sport/facilities/hiring-sports-facilities-and-venues
+- id: lewisham-honor-oak-park-sports-ground
+  name: Honor Oak Park Sports Ground
+  sport: tennis
+  provider: html
+  booking_url: https://www.kcl.ac.uk/sport/clubs-sports/honor-park
+  metadata_sources:
+  - https://www.kcl.ac.uk/sport/clubs-sports/honor-park
+- id: lewisham-ladywell-fields
+  name: Ladywell Fields
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/LadywellFields
+  metadata_sources:
+  - https://clubspark.lta.org.uk/LadywellFields
+  - https://clubspark.lta.org.uk/TennisInLewisham/Othercourts
+  - https://lewisham.gov.uk/inmyarea/sport/facilities/hiring-sports-facilities-and-venues
+- id: lewisham-manor-house-gardens
+  name: Manor House Gardens
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/ManorHouseGds
+  metadata_sources:
+  - https://clubspark.lta.org.uk/ManorHouseGds
+  - https://clubspark.lta.org.uk/TennisInLewisham/Othercourts
+  - https://lewisham.gov.uk/inmyarea/sport/facilities/hiring-sports-facilities-and-venues
+- id: lewisham-mayow-park
+  name: Mayow Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/MayowPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/MayowPark
+  - https://clubspark.lta.org.uk/TennisInLewisham/Othercourts
+  - https://lewisham.gov.uk/inmyarea/sport/facilities/hiring-sports-facilities-and-venues
+- id: lewisham-mountsfield-park
+  name: Mountsfield Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/TennisInLewisham/Othercourts
+  metadata_sources:
+  - https://clubspark.lta.org.uk/TennisInLewisham/Othercourts
+  - https://lewisham.gov.uk/inmyarea/sport/facilities/hiring-sports-facilities-and-venues
+- id: lewisham-st-dunstan-s-college
+  name: St Dunstan's College
+  sport: tennis
+  provider: html
+  booking_url: https://www.stdunstansenterprises.org.uk/sports-and-leisure/badminton
+  metadata_sources:
+  - https://www.stdunstansenterprises.org.uk/sports-and-leisure/badminton
+- id: lewisham-sydenham-wells-park
+  name: Sydenham Wells Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/SydenhamWellPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/SydenhamWellPark
+  - https://clubspark.lta.org.uk/TennisInLewisham/Othercourts
+  - https://lewisham.gov.uk/inmyarea/sport/facilities/hiring-sports-facilities-and-venues
+- id: lewisham-telegraph-hill-park
+  name: Telegraph Hill Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/TelegraphHill
+  metadata_sources:
+  - https://clubspark.lta.org.uk/TelegraphHill
+  - https://clubspark.lta.org.uk/TennisInLewisham/Othercourts
+  - https://lewisham.gov.uk/inmyarea/sport/facilities/hiring-sports-facilities-and-venues
+- id: merton-cottenham-park
+  name: Cottenham Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/CottenhamPark
+  metadata_sources:
+  - https://www.merton.gov.uk/healthy-living/sport-and-healthy-living/tennis-courts
+  - https://clubspark.lta.org.uk/CottenhamPark
+- id: merton-dundonald-recreation-ground
+  name: Dundonald Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/DundonaldRecGround
+  metadata_sources:
+  - https://www.merton.gov.uk/healthy-living/sport-and-healthy-living/tennis-courts
+  - https://clubspark.lta.org.uk/DundonaldRecGround
+- id: merton-harris-academy-merton
+  name: Harris Academy Merton
+  sport: tennis
+  provider: html
+  booking_url: https://www.harrismerton.org.uk/about-us/hire-our-facilities
+  metadata_sources:
+  - https://www.harrismerton.org.uk/about-us/hire-our-facilities
+- id: merton-haydons-road-recreation-ground
+  name: Haydons Road Recreation Ground
+  sport: tennis
+  provider: html
+  booking_url: https://www.merton.gov.uk/healthy-living/sport-and-healthy-living/tennis-courts
+  metadata_sources:
+  - https://www.merton.gov.uk/healthy-living/sport-and-healthy-living/tennis-courts
+- id: merton-holland-garden
+  name: Holland Garden
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/HollandGarden
+  metadata_sources:
+  - https://www.merton.gov.uk/healthy-living/sport-and-healthy-living/tennis-courts
+  - https://clubspark.lta.org.uk/HollandGarden
+- id: merton-john-innes-park
+  name: John Innes Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/JohnInnesParkMorden
+  metadata_sources:
+  - https://www.merton.gov.uk/healthy-living/sport-and-healthy-living/tennis-courts
+  - https://clubspark.lta.org.uk/JohnInnesParkMorden
+- id: merton-joseph-hood-recreation-ground
+  name: Joseph Hood Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/JosephHoodRecGround
+  metadata_sources:
+  - https://www.merton.gov.uk/healthy-living/sport-and-healthy-living/tennis-courts
+  - https://clubspark.lta.org.uk/JosephHoodRecGround
+- id: merton-king-george-s-playing-fields
+  name: King George's Playing Fields
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/KingGeorgesPlayingFields
+  metadata_sources:
+  - https://www.merton.gov.uk/healthy-living/sport-and-healthy-living/tennis-courts
+  - https://clubspark.lta.org.uk/KingGeorgesPlayingFields
+- id: merton-morden-park
+  name: Morden Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/MordenPark
+  metadata_sources:
+  - https://www.merton.gov.uk/healthy-living/sport-and-healthy-living/tennis-courts
+  - https://clubspark.lta.org.uk/MordenPark
+- id: merton-morden-recreation-ground
+  name: Morden Recreation Ground
+  sport: tennis
+  provider: html
+  booking_url: https://www.merton.gov.uk/healthy-living/sport-and-healthy-living/tennis-courts
+  metadata_sources:
+  - https://www.merton.gov.uk/healthy-living/sport-and-healthy-living/tennis-courts
+- id: merton-nursery-road-playing-fields
+  name: Nursery Road Playing Fields
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/NurseryRoadPlayingFields
+  metadata_sources:
+  - https://www.merton.gov.uk/healthy-living/sport-and-healthy-living/tennis-courts
+  - https://clubspark.lta.org.uk/NurseryRoadPlayingFields
+- id: merton-oakleigh-way-recreation-ground
+  name: Oakleigh Way Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/OakleighWayRecreationGround/Booking
+  metadata_sources:
+  - https://www.merton.gov.uk/healthy-living/sport-and-healthy-living/tennis-courts
+- id: merton-sir-joseph-hood-memorial-playing-fields
+  name: Sir Joseph Hood Memorial Playing Fields
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/SirJosephHoodMemorialPlayingFields
+  metadata_sources:
+  - https://www.merton.gov.uk/healthy-living/sport-and-healthy-living/tennis-courts
+  - https://clubspark.lta.org.uk/SirJosephHoodMemorialPlayingFields
+- id: merton-st-mark-s-church-of-england-academy
+  name: St Mark's Church of England Academy
+  sport: tennis
+  provider: html
+  booking_url: https://www.schoolsplus.co.uk/stmarksacademy/
+  metadata_sources:
+  - https://www.merton.gov.uk/leisure-recreation-and-culture/pitches-and-courts/multi-sport/all-weather
+  - https://www.schoolsplus.co.uk/stmarksacademy/
+- id: merton-tamworth-recreation-ground
+  name: Tamworth Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/TamworthRecreationGround
+  metadata_sources:
+  - https://www.merton.gov.uk/healthy-living/sport-and-healthy-living/tennis-courts
+  - https://clubspark.lta.org.uk/TamworthRecreationGround
+- id: merton-wimbledon-park
+  name: Wimbledon Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/wimbledonpark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/wimbledonpark
+  - https://www.merton.gov.uk/leisure-recreation-and-culture/parks-and-open-spaces/parks-and-recreation-grounds/wimbledon/wimbledon-park
+- id: newham-canning-town-recreation-ground
+  name: Canning Town Recreation Ground
+  sport: tennis
+  provider: html
+  booking_url: https://canning.newhamparkstennis.org.uk/?venue=canning_newhamparkstennis_org_uk
+  metadata_sources:
+  - https://canning.newhamparkstennis.org.uk/?venue=canning_newhamparkstennis_org_uk
+  - https://newhamparkstennis.org.uk/FAQs
+  - https://newhamparkstennis.org.uk/PayandPlay
+- id: newham-central-park
+  name: Central Park
+  sport: tennis
+  provider: html
+  booking_url: https://central.newhamparkstennis.org.uk/?venue=central_newhamparkstennis_org_uk
+  metadata_sources:
+  - https://central.newhamparkstennis.org.uk/?venue=central_newhamparkstennis_org_uk
+  - https://newhamparkstennis.org.uk/FAQs
+  - https://newhamparkstennis.org.uk/PayandPlay
+- id: newham-gooseley-playing-fields
+  name: Gooseley Playing Fields
+  sport: tennis
+  provider: html
+  booking_url: https://gooseley.newhamparkstennis.org.uk/?venue=gooseley_newhamparkstennis_org_uk
+  metadata_sources:
+  - https://gooseley.newhamparkstennis.org.uk/?venue=gooseley_newhamparkstennis_org_uk
+  - https://newhamparkstennis.org.uk/FAQs
+  - https://newhamparkstennis.org.uk/PayandPlay
+- id: newham-hermit-road-recreation-ground
+  name: Hermit Road Recreation Ground
+  sport: tennis
+  provider: html
+  booking_url: https://hermit.newhamparkstennis.org.uk/?venue=hermit_newhamparkstennis_org_uk
+  metadata_sources:
+  - https://hermit.newhamparkstennis.org.uk/?venue=hermit_newhamparkstennis_org_uk
+  - https://newhamparkstennis.org.uk/FAQs
+  - https://newhamparkstennis.org.uk/PayandPlay
+- id: newham-little-ilford-park
+  name: Little Ilford Park
+  sport: tennis
+  provider: html
+  booking_url: https://littlellford.newhamparkstennis.org.uk/?venue=littlellford_newhamparkstennis_org_uk
+  metadata_sources:
+  - https://littlellford.newhamparkstennis.org.uk/?venue=littlellford_newhamparkstennis_org_uk
+  - https://newhamparkstennis.org.uk/FAQs
+  - https://newhamparkstennis.org.uk/PayandPlay
+- id: newham-lyle-park
+  name: Lyle Park
+  sport: tennis
+  provider: html
+  booking_url: https://lyle.newhamparkstennis.org.uk/?venue=lyle_newhamparkstennis_org_uk
+  metadata_sources:
+  - https://lyle.newhamparkstennis.org.uk/?venue=lyle_newhamparkstennis_org_uk
+  - https://newhamparkstennis.org.uk/FAQs
+  - https://newhamparkstennis.org.uk/PayandPlay
+- id: newham-plashet-park
+  name: Plashet Park
+  sport: tennis
+  provider: html
+  booking_url: https://plashet.newhamparkstennis.org.uk/?venue=plashet_newhamparkstennis_org_uk
+  metadata_sources:
+  - https://plashet.newhamparkstennis.org.uk/?venue=plashet_newhamparkstennis_org_uk
+  - https://newhamparkstennis.org.uk/FAQs
+  - https://newhamparkstennis.org.uk/PayandPlay
+- id: newham-royal-victoria-gardens
+  name: Royal Victoria Gardens
+  sport: tennis
+  provider: html
+  booking_url: https://royalvictoria.newhamparkstennis.org.uk/?venue=royalvictoria_newhamparkstennis_org_uk
+  metadata_sources:
+  - https://royalvictoria.newhamparkstennis.org.uk/?venue=royalvictoria_newhamparkstennis_org_uk
+  - https://newhamparkstennis.org.uk/FAQs
+  - https://newhamparkstennis.org.uk/PayandPlay
+- id: newham-stratford-park
+  name: Stratford Park
+  sport: tennis
+  provider: html
+  booking_url: https://stratford.newhamparkstennis.org.uk/Booking/BookByDate
+  metadata_sources:
+  - https://stratford.newhamparkstennis.org.uk/Booking/BookByDate
+  - https://newhamparkstennis.org.uk/FAQs
+  - https://newhamparkstennis.org.uk/PayandPlay
+  - https://stratford.newhamparkstennis.org.uk/
+- id: newham-west-ham-park
+  name: West Ham Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/WestHamPark/Booking/Introduction
+  metadata_sources:
+  - https://clubspark.lta.org.uk/WestHamPark/Booking/Introduction
+  - https://clubspark.lta.org.uk/WestHamPark/Booking/FAQ
+  - https://clubspark.lta.org.uk/WestHamPark/Booking/Advancebooking
+- id: padel-barnet-padel-hub-n20
+  name: The Padel Hub N20
+  sport: padel
+  provider: html
+  booking_url: https://playtomic.com/clubs/the-padel-hub-n20-north-london
+  metadata_sources:
+  - https://www.ltapadel.org.uk/play/padel-in-your-area/padel-in-london/
+- id: padel-brent-wembley
+  name: Wembley Padel
+  sport: padel
+  provider: html
+  booking_url: https://socialsportssociety.com/venue/wembley-padel/
+  metadata_sources:
+  - https://socialsportssociety.com/venue/wembley-padel/
+  - https://socialsportssociety.com/book/
+- id: padel-bromley-crystal-palace
+  name: Crystal Palace National Sports Centre
+  sport: padel
+  provider: html
+  booking_url: https://www.game4padel.com/crystal-palace
+  metadata_sources:
+  - https://www.game4padel.com/crystal-palace
+  - https://www.better.org.uk/leisure-centre/london/crystal-palace/crystal-palace-national-sports-centre/padel
+- id: padel-ealing-parkside-southall
+  name: Parkside Padel
+  sport: padel
+  provider: html
+  booking_url: https://www.game4padel.com/
+  metadata_sources:
+  - https://www.ltapadel.org.uk/play/padel-in-your-area/padel-in-london/
+- id: padel-ealing-racketeer-acton
+  name: Racketeer Padel
+  sport: padel
+  provider: html
+  booking_url: https://www.racketeer.club/faq
+  metadata_sources:
+  - https://www.racketeer.club/faq
+  - https://www.london.gov.uk/sites/default/files/23.pdf
+- id: padel-greenwich-coldharbour
+  name: Coldharbour Leisure Centre
+  sport: padel
+  provider: html
+  booking_url: https://www.game4padel.com/gll-coldharbour
+  metadata_sources:
+  - https://www.game4padel.com/gll-coldharbour
+  - https://www.better.org.uk/leisure-centre/london/greenwich/coldharbour-leisure-centre/padel
+- id: padel-hammersmith-earls-court-social
+  name: Padel Social Club Earl’s Court
+  sport: padel
+  provider: html
+  booking_url: https://padelsocial.club/pages/earls-court
+  metadata_sources:
+  - https://padelsocial.club/pages/faqs
+  - https://padelsocial.club/pages/earls-court
+- id: padel-havering-central-park
+  name: Central Park Leisure Centre
+  sport: padel
+  provider: html
+  booking_url: https://padel4everyone.co.uk/venues/central-park
+  metadata_sources:
+  - https://www.everyoneactive.com/centre/central-park-leisure-centre/
+  - https://padel4everyone.co.uk/venues/central-park
+- id: padel-newham-rocket-beckton
+  name: Rocket Padel Beckton
+  sport: padel
+  provider: html
+  booking_url: https://www.rocketpadel.com/club/beckton
+  metadata_sources:
+  - https://www.rocketpadel.com/club/beckton
+- id: padel-newham-stratford
+  name: Stratford Padel Club
+  sport: padel
+  provider: html
+  booking_url: https://stratfordpadelclub.org/
+  metadata_sources:
+  - https://stratfordpadelclub.org/
+  - https://stratfordpadelclub.org/pricing/
+- id: padel-redbridge-rocket-ilford
+  name: Rocket Padel Ilford
+  sport: padel
+  provider: html
+  booking_url: https://padelmates.se/club/rocketpadelilford
+  metadata_sources:
+  - https://www.rocketpadel.com/club/ilford
+  - https://www.ltapadel.org.uk/play/padel-in-your-area/padel-in-london/
+- id: padel-southwark-dulwich
+  name: Dulwich Padel Club
+  sport: padel
+  provider: html
+  booking_url: https://www.dulwichpadelclub.co.uk/faq
+  metadata_sources:
+  - https://www.dulwichpadelclub.co.uk/faq
+  - https://dulwichsports.co.uk/
+- id: padel-southwark-padel-box-bermondsey
+  name: Padel Box Bermondsey
+  sport: padel
+  provider: html
+  booking_url: https://playtomic.com/clubs/padel-box-bermondsey
+  metadata_sources:
+  - https://playtomic.com/clubs/padel-box-bermondsey
+- id: padel-sutton-social-sports
+  name: S3 Padel Sutton
+  sport: padel
+  provider: html
+  booking_url: https://socialsportssociety.com/venue/sutton/
+  metadata_sources:
+  - https://socialsportssociety.com/venue/sutton/
+- id: padel-tower-hamlets-padium-canary-wharf
+  name: Padium Canary Wharf
+  sport: padel
+  provider: html
+  booking_url: https://www.padium.com/canary-wharf
+  metadata_sources:
+  - https://www.padium.com/canary-wharf
+  - https://www.padium.com/about
+- id: padel-wandsworth-padel-yard
+  name: The Padel Yard
+  sport: padel
+  provider: html
+  booking_url: https://thepadelyard.com/
+  metadata_sources:
+  - https://thepadelyard.com/
+- id: padel-wandsworth-rocket-battersea
+  name: Rocket Padel Battersea Power Station
+  sport: padel
+  provider: html
+  booking_url: https://padelmates.se/club/rocketpadelbattersea
+  metadata_sources:
+  - https://www.rocketpadel.com/club/Battersea-power-station
+  - https://www.ltapadel.org.uk/play/padel-in-your-area/padel-in-london/
+- id: padel-westminster-hyde-park
+  name: Hyde Park Courts
+  sport: padel
+  provider: html
+  booking_url: https://sportsandleisureroyalparks.bookings.flow.onl/location/hyde-park-courts/padel/2026-01-19/by-time
+  metadata_sources:
+  - https://sportsandleisure.royalparks.org.uk/the-courts/padel
+  - https://sportsandleisure.royalparks.org.uk/faqs
+- id: padel-westminster-paddington-social
+  name: Padel Social Club Paddington
+  sport: padel
+  provider: html
+  booking_url: https://padelsocial.club/pages/paddington
+  metadata_sources:
+  - https://padelsocial.club/pages/paddington
+  - https://padelsocial.club/pages/faqs
+- id: padel-westminster-regents-park
+  name: The Regent's Park Courts
+  sport: padel
+  provider: html
+  booking_url: https://sportsandleisureroyalparks.bookings.flow.onl/location/the-regents-park-courts/padel/2026-01-19/by-time
+  metadata_sources:
+  - https://sportsandleisure.royalparks.org.uk/the-courts/padel
+  - https://sportsandleisure.royalparks.org.uk/faqs
+- id: redbridge-barkingside-recreation-ground
+  name: Barkingside Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/BarkingsideRec
+  metadata_sources:
+  - https://clubspark.lta.org.uk/BarkingsideRec
+  - https://clubspark.lta.org.uk/TennisInRedbridge
+  - https://visionrcl.org.uk/leisure/expression-of-interest-tennis-coaching-provider/
+- id: redbridge-barley-lane-recreation-ground
+  name: Barley Lane Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/BarleyLaneRecGround
+  metadata_sources:
+  - https://clubspark.lta.org.uk/BarleyLaneRecGround
+  - https://clubspark.lta.org.uk/TennisInRedbridge
+- id: redbridge-clayhall-park
+  name: Clayhall Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/ClayhallPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/ClayhallPark
+  - https://clubspark.lta.org.uk/TennisInRedbridge
+- id: redbridge-elmhurst-gardens
+  name: Elmhurst Gardens
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/ElmhurstGardens
+  metadata_sources:
+  - https://clubspark.lta.org.uk/ElmhurstGardens
+  - https://clubspark.lta.org.uk/TennisInRedbridge
+  - https://visionrcl.org.uk/leisure/expression-of-interest-tennis-coaching-provider/
+- id: redbridge-goodmayes-park
+  name: Goodmayes Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/GoodmayesPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/GoodmayesPark
+  - https://clubspark.lta.org.uk/TennisInRedbridge
+- id: redbridge-loxford-park
+  name: Loxford Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/Loxford
+  metadata_sources:
+  - https://clubspark.lta.org.uk/Loxford
+  - https://clubspark.lta.org.uk/TennisInRedbridge
+  - https://visionrcl.org.uk/leisure/expression-of-interest-tennis-coaching-provider/
+- id: redbridge-ray-park
+  name: Ray Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/RayPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/RayPark
+  - https://clubspark.lta.org.uk/TennisInRedbridge
+  - https://visionrcl.org.uk/leisure/expression-of-interest-tennis-coaching-provider/
+- id: redbridge-redbridge-sports-leisure
+  name: Redbridge Sports & Leisure
+  sport: tennis
+  provider: html
+  booking_url: https://www.rslonline.co.uk/tennis/
+  metadata_sources:
+  - https://www.rslonline.co.uk/tennis/
+  - https://www.rslonline.co.uk/terms-conditions/
+  - https://www.rslonline.co.uk/racket-sports/
+- id: redbridge-seven-kings-park
+  name: Seven Kings Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/SevenKingsPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/SevenKingsPark
+  - https://clubspark.lta.org.uk/TennisInRedbridge
+- id: redbridge-south-park
+  name: South Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/SouthPark4
+  metadata_sources:
+  - https://clubspark.lta.org.uk/SouthPark4
+  - https://clubspark.lta.org.uk/TennisInRedbridge
+  - https://visionrcl.org.uk/leisure/expression-of-interest-tennis-coaching-provider/
+- id: redbridge-valentines-park
+  name: Valentines Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/ValentinesPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/ValentinesPark
+  - https://clubspark.lta.org.uk/TennisInRedbridge
+- id: richmond-upon-thames-barn-elms-playing-fields-sports-trust
+  name: Barn Elms Playing Fields / Sports Trust
+  sport: tennis
+  provider: html
+  booking_url: https://www.bestfields.co.uk
+  metadata_sources:
+  - https://www.richmond.gov.uk/services/parks_and_open_spaces/find_a_park/barn_elms_playing_field
+  - https://www.richmond.gov.uk/media/ggrlquet/playing_pitch_and_outdoor_sport_assessment_2023.pdf
+  - https://tennis4barnes.co.uk/
+- id: richmond-upon-thames-barn-elms-sports-centre
+  name: Barn Elms Sports Centre
+  sport: tennis
+  provider: html
+  booking_url: https://enablelc.org/parks/greenspaces/tennis-courts/
+  metadata_sources:
+  - https://enablelc.org/parks/greenspaces/tennis-courts/
+- id: richmond-upon-thames-cambridge-gardens
+  name: Cambridge Gardens
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/CambridgeGardens
+  metadata_sources:
+  - https://clubspark.lta.org.uk/CambridgeGardens
+  - https://clubspark.lta.org.uk/playtennisrichmond/BookaCourt
+- id: richmond-upon-thames-carlisle-park
+  name: Carlisle Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/CarlisleParkRichmond
+  metadata_sources:
+  - https://clubspark.lta.org.uk/CarlisleParkRichmond
+  - https://clubspark.lta.org.uk/playtennisrichmond/BookaCourt
+- id: richmond-upon-thames-hampton-sports-fitness-centre
+  name: Hampton Sports & Fitness Centre
+  sport: tennis
+  provider: better
+  booking_url: https://www.better.org.uk/leisure-centre/london/richmond-upon-thames/hampton-sports-and-fitness-centre
+  metadata_sources:
+  - https://www.better.org.uk/leisure-centre/london/richmond-upon-thames/hampton-sports-and-fitness-centre
+  - https://clubspark.lta.org.uk/playtennisrichmond
+- id: richmond-upon-thames-king-george-s-field
+  name: King George's Field
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/KingGeorgesFieldRichmond
+  metadata_sources:
+  - https://clubspark.lta.org.uk/KingGeorgesFieldRichmond
+  - https://clubspark.lta.org.uk/playtennisrichmond/BookaCourt
+- id: richmond-upon-thames-kings-field
+  name: Kings Field
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/KingsField
+  metadata_sources:
+  - https://clubspark.lta.org.uk/playtennisrichmond
+  - https://clubspark.lta.org.uk/playtennisrichmond/BookaCourt
+  - https://richmond.gov.uk/media/28018/the_kings_field_management_plan.pdf
+- id: richmond-upon-thames-kneller-gardens
+  name: Kneller Gardens
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/KnellerGardens
+  metadata_sources:
+  - https://clubspark.lta.org.uk/KnellerGardens
+  - https://clubspark.lta.org.uk/playtennisrichmond/BookaCourt
+- id: richmond-upon-thames-moor-mead-recreation-ground
+  name: Moor Mead Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/MoorMeadRecreationGround
+  metadata_sources:
+  - https://clubspark.lta.org.uk/MoorMeadRecreationGround
+  - https://clubspark.lta.org.uk/playtennisrichmond/BookaCourt
+- id: richmond-upon-thames-old-deer-park
+  name: Old Deer Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/OldDeerPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/OldDeerPark
+  - https://clubspark.lta.org.uk/playtennisrichmond/BookaCourt
+- id: richmond-upon-thames-palewell-common
+  name: Palewell Common
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/PalewellCommon
+  metadata_sources:
+  - https://clubspark.lta.org.uk/PalewellCommon
+  - https://clubspark.lta.org.uk/playtennisrichmond/BookaCourt
+- id: richmond-upon-thames-rocks-lane-barnes
+  name: Rocks Lane Barnes
+  sport: tennis
+  provider: html
+  booking_url: https://rockslane.co.uk/barnes/tennis/court-hire/
+  metadata_sources:
+  - https://rockslane.co.uk/tennis/
+- id: richmond-upon-thames-sheen-common
+  name: Sheen Common
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/SheenCommon
+  metadata_sources:
+  - https://clubspark.lta.org.uk/SheenCommon
+  - https://clubspark.lta.org.uk/playtennisrichmond/BookaCourt
+- id: richmond-upon-thames-teddington-sports-centre
+  name: Teddington Sports Centre
+  sport: tennis
+  provider: better
+  booking_url: https://www.better.org.uk/leisure-centre/london/richmond-upon-thames/teddington-sports-centre
+  metadata_sources:
+  - https://www.better.org.uk/leisure-centre/london/richmond-upon-thames/teddington-sports-centre
+  - https://clubspark.lta.org.uk/playtennisrichmond
+- id: richmond-upon-thames-westerly-ware
+  name: Westerly Ware
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/WesterlyWare
+  metadata_sources:
+  - https://clubspark.lta.org.uk/WesterlyWare
+  - https://clubspark.lta.org.uk/playtennisrichmond/BookaCourt
+- id: richmond-upon-thames-whitton-sports-fitness-centre
+  name: Whitton Sports & Fitness Centre
+  sport: tennis
+  provider: better
+  booking_url: https://www.better.org.uk/leisure-centre/london/richmond-upon-thames/whitton-sports-and-fitness-centre
+  metadata_sources:
+  - https://www.better.org.uk/leisure-centre/london/richmond-upon-thames/whitton-sports-and-fitness-centre
+  - https://clubspark.lta.org.uk/playtennisrichmond
+  - https://www.better.org.uk/leisure-centre/london/richmond-upon-thames/whitton-sports-and-fitness-centre/tennis
+- id: richmond-upon-thames-york-house-gardens
+  name: York House Gardens
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/YorkHouseGardens
+  metadata_sources:
+  - https://clubspark.lta.org.uk/YorkHouseGardens
+  - https://clubspark.lta.org.uk/playtennisrichmond/BookaCourt
+- id: southwark-belair-park
+  name: Belair Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/BelairPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/BelairPark
+  - https://clubspark.lta.org.uk/TennisInSouthwark/BookingInfo
+- id: southwark-brunswick-park
+  name: Brunswick Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/BrunswickPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/BrunswickPark
+  - https://clubspark.lta.org.uk/TennisInSouthwark/BookingInfo
+- id: southwark-burgess-park
+  name: Burgess Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/BurgessParkSouthwark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/BurgessParkSouthwark
+  - https://clubspark.lta.org.uk/TennisInSouthwark/BookingInfo
+  - https://www.southwark.gov.uk/culture-and-sport/parks-and-open-spaces/find-park/burgess-park?article=
+- id: southwark-dulwich-park
+  name: Dulwich Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/DulwichPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/DulwichPark
+  - https://clubspark.lta.org.uk/TennisInSouthwark/BookingInfo
+- id: southwark-geraldine-mary-harmsworth-park
+  name: Geraldine Mary Harmsworth Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/GeraldineMaryHarmsworth
+  metadata_sources:
+  - https://clubspark.lta.org.uk/GeraldineMaryHarmsworth
+  - https://clubspark.lta.org.uk/TennisInSouthwark/BookingInfo
+  - https://clubspark.lta.org.uk/GeraldineMaryHarmsworth/Booking/BookByDate
+- id: southwark-honor-oak-recreation-ground
+  name: Honor Oak Recreation Ground
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/HonorOakRecreationGround
+  metadata_sources:
+  - https://clubspark.lta.org.uk/HonorOakRecreationGround
+  - https://clubspark.lta.org.uk/TennisInSouthwark/BookingInfo
+- id: southwark-southwark-park
+  name: Southwark Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/SouthwarkPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/SouthwarkPark
+  - https://clubspark.lta.org.uk/TennisInSouthwark/BookingInfo
+- id: southwark-tanner-street-park
+  name: Tanner Street Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/TannerStPark
+  metadata_sources:
+  - https://clubspark.lta.org.uk/TannerStPark
+  - https://clubspark.lta.org.uk/TennisInSouthwark/BookingInfo
+- id: squash-bromley-crystal-palace
+  name: Crystal Palace National Sports Centre
+  sport: squash
+  provider: better
+  booking_url: https://www.better.org.uk/leisure-centre/london/crystal-palace/crystal-palace-national-sports-centre/facilities
+  metadata_sources:
+  - https://www.better.org.uk/leisure-centre/london/crystal-palace/crystal-palace-national-sports-centre/facilities
+  - https://www.better.org.uk/leisure-centre/london/crystal-palace/crystal-palace-national-sports-centre/prices
+  - https://www.better.org.uk/leisure-centre/london/crystal-palace/crystal-palace-national-sports-centre
+- id: squash-camden-bloomsbury-fitness
+  name: Bloomsbury Fitness Centre
+  sport: squash
+  provider: html
+  booking_url: https://studentsunionucl.org/sport-fitness/book-our-squash-courts
+  metadata_sources:
+  - https://studentsunionucl.org/sport-fitness/book-our-squash-courts
+  - https://www.westminster.gov.uk/sites/default/files/media/documents/wcc-indoor-facilities-assessment-needs-assessment-2026.pdf
+- id: squash-camden-oasis
+  name: Oasis Sports Centre
+  sport: squash
+  provider: better
+  booking_url: https://www.better.org.uk/leisure-centre/london/camden/oasis-sports-centre/squash
+  metadata_sources:
+  - https://www.better.org.uk/leisure-centre/london/camden/oasis-sports-centre/squash
+  - https://www.better.org.uk/leisure-centre/london/camden/oasis-sports-centre
+  - https://www.better.org.uk/leisure-centre/london/camden/oasis-sports-centre/prices
+- id: squash-camden-swiss-cottage
+  name: Swiss Cottage Leisure Centre
+  sport: squash
+  provider: better
+  booking_url: https://www.better.org.uk/leisure-centre/london/camden/swiss-cottage-leisure-centre/6985b6f8-b1c7-4cc7-adad-15c719a5ef88
+  metadata_sources:
+  - https://www.better.org.uk/leisure-centre/london/camden/swiss-cottage-leisure-centre/6985b6f8-b1c7-4cc7-adad-15c719a5ef88
+  - https://www.better.org.uk/leisure-centre/london/camden/swiss-cottage-leisure-centre/prices
+- id: squash-greenwich-woolwich-waves
+  name: Woolwich Waves
+  sport: squash
+  provider: better
+  booking_url: https://www.better.org.uk/leisure-centre/london/greenwich/woolwich-waves/squash
+  metadata_sources:
+  - https://www.better.org.uk/leisure-centre/london/greenwich/woolwich-waves/squash
+  - https://www.better.org.uk/leisure-centre/london/greenwich/woolwich-waves/facilities
+  - https://www.better.org.uk/leisure-centre/london/greenwich/woolwich-waves
+  - https://www.better.org.uk/leisure-centre/london/greenwich/woolwich-waves/prices
+- id: squash-hackney-britannia
+  name: Britannia Leisure Centre
+  sport: squash
+  provider: better
+  booking_url: https://www.better.org.uk/leisure-centre/london/hackney/britannia-leisure-centre/squash
+  metadata_sources:
+  - https://www.better.org.uk/leisure-centre/london/hackney/britannia-leisure-centre/squash
+  - https://www.better.org.uk/leisure-centre/london/hackney/britannia-leisure-centre
+- id: squash-hackney-clissold
+  name: Clissold Leisure Centre
+  sport: squash
+  provider: better
+  booking_url: https://www.better.org.uk/leisure-centre/london/hackney/clissold-leisure-centre/facilities
+  metadata_sources:
+  - https://www.better.org.uk/leisure-centre/london/hackney/clissold-leisure-centre/facilities
+  - https://www.better.org.uk/leisure-centre/london/hackney/clissold-leisure-centre
+  - https://www.better.org.uk/leisure-centre/london/hackney/clissold-leisure-centre/prices
+- id: squash-hammersmith-fitness
+  name: Hammersmith Fitness and Squash Centre
+  sport: squash
+  provider: better
+  booking_url: https://www.better.org.uk/leisure-centre/london/hammersmith-and-fulham/hammersmith-fitness-and-squash-centre/squash
+  metadata_sources:
+  - https://www.better.org.uk/leisure-centre/london/hammersmith-and-fulham/hammersmith-fitness-and-squash-centre/squash
+  - https://www.better.org.uk/leisure-centre/london/hammersmith-and-fulham/hammersmith-fitness-and-squash-centre
+  - https://www.better.org.uk/leisure-centre/london/hammersmith-and-fulham/hammersmith-fitness-and-squash-centre/prices
+- id: squash-hillingdon-brunel
+  name: Brunel University Sports Centre
+  sport: squash
+  provider: html
+  booking_url: https://www.brunel.ac.uk/life/sport/facilities/sports-centre/squash-courts
+  metadata_sources:
+  - https://www.brunel.ac.uk/life/sport/facilities/sports-centre/squash-courts
+  - https://www.brunel.ac.uk/life/sport/contact-us
+- id: squash-islington-finsbury
+  name: Finsbury Leisure Centre
+  sport: squash
+  provider: better
+  booking_url: https://www.better.org.uk/leisure-centre/london/islington/finsbury/squash
+  metadata_sources:
+  - https://www.better.org.uk/leisure-centre/london/islington/finsbury/squash
+  - https://www.better.org.uk/leisure-centre/london/islington/finsbury/prices
+- id: squash-islington-ironmonger-row
+  name: Ironmonger Row Baths
+  sport: squash
+  provider: better
+  booking_url: https://www.better.org.uk/leisure-centre/london/islington/ironmonger-row-baths/squash
+  metadata_sources:
+  - https://www.better.org.uk/leisure-centre/london/islington/ironmonger-row-baths/squash
+  - https://www.better.org.uk/leisure-centre/london/islington/ironmonger-row-baths/prices
+- id: squash-islington-sobell
+  name: Sobell Leisure Centre
+  sport: squash
+  provider: better
+  booking_url: https://www.better.org.uk/leisure-centre/london/islington/sobell/squash
+  metadata_sources:
+  - https://www.better.org.uk/leisure-centre/london/islington/sobell/squash
+  - https://www.better.org.uk/leisure-centre/london/islington/sobell/prices
+- id: squash-kensington-kensington
+  name: Kensington Leisure Centre
+  sport: squash
+  provider: better
+  booking_url: https://www.better.org.uk/leisure-centre/london/kensington-and-chelsea/kensington-leisure-centre
+  metadata_sources:
+  - https://www.better.org.uk/leisure-centre/london/kensington-and-chelsea/kensington-leisure-centre
+  - https://www.better.org.uk/leisure-centre/london/kensingtonand-chelsea/kensington-leisure-centre/prices
+- id: squash-kensington-westway-portobello
+  name: Westway Portobello Fitness Club
+  sport: squash
+  provider: html
+  booking_url: https://www.everyoneactive.com/centre/westway-portobello-fitness-club/
+  metadata_sources:
+  - https://www.everyoneactive.com/centre/westway-portobello-fitness-club/
+- id: squash-kingston-tolworth
+  name: Tolworth Recreation Centre
+  sport: squash
+  provider: html
+  booking_url: https://www.placesleisure.org/centres/tolworth-recreation-centre/centre-activities/sports/
+  metadata_sources:
+  - https://www.placesleisure.org/centres/tolworth-recreation-centre/centre-activities/sports/
+  - https://www.placesleisure.org/centres/tolworth-recreation-centre/
+- id: squash-lambeth-brixton
+  name: Brixton Recreation Centre
+  sport: squash
+  provider: html
+  booking_url: https://active.lambeth.gov.uk/facilities/squash-courts/
+  metadata_sources:
+  - https://active.lambeth.gov.uk/facilities/squash-courts/
+  - https://active.lambeth.gov.uk/locations/brixton-recreation-centre/
+- id: squash-lambeth-flaxman
+  name: Flaxman Sports Centre
+  sport: squash
+  provider: html
+  booking_url: https://active.lambeth.gov.uk/facilities/squash-courts/
+  metadata_sources:
+  - https://active.lambeth.gov.uk/facilities/squash-courts/
+  - https://active.lambeth.gov.uk/locations/flaxman/
+- id: squash-merton-canons
+  name: Canons Leisure Centre
+  sport: squash
+  provider: better
+  booking_url: https://www.better.org.uk/leisure-centre/london/merton/canons-leisure-centre/squash-courts
+  metadata_sources:
+  - https://www.better.org.uk/leisure-centre/london/merton/canons-leisure-centre/squash-courts
+  - https://www.better.org.uk/leisure-centre/london/merton/canons-leisure-centre/prices
+  - https://www.better.org.uk/leisure-centre/london/merton/canons-leisure-centre/squash
+- id: squash-richmond-teddington
+  name: Teddington Sports Centre
+  sport: squash
+  provider: better
+  booking_url: https://www.better.org.uk/leisure-centre/london/richmond-upon-thames/teddington-sports-centre/3623-teddington-sports-centre
+  metadata_sources:
+  - https://www.better.org.uk/leisure-centre/london/richmond-upon-thames/teddington-sports-centre/3623-teddington-sports-centre
+  - https://www.better.org.uk/leisure-centre/london/richmond-upon-thames/teddington-sports-centre
+- id: squash-sutton-cheam
+  name: Cheam Leisure Centre
+  sport: squash
+  provider: html
+  booking_url: https://www.everyoneactive.com/centre/cheam-leisure-centre/
+  metadata_sources:
+  - https://www.everyoneactive.com/centre/cheam-leisure-centre/
+- id: squash-tower-hamlets-mulberry-shoreditch
+  name: Mulberry Academy Shoreditch Sports Centre
+  sport: squash
+  provider: html
+  booking_url: https://www.mulberryacademyshoreditch.org/mas-sports-centre/
+  metadata_sources:
+  - https://www.mulberryacademyshoreditch.org/mas-sports-centre/
+- id: squash-waltham-forest-walthamstow
+  name: Walthamstow Leisure Centre
+  sport: squash
+  provider: better
+  booking_url: https://www.better.org.uk/leisure-centre/london/waltham-forest/walthamstow-leisure-centre/squash
+  metadata_sources:
+  - https://www.better.org.uk/leisure-centre/london/waltham-forest/walthamstow-leisure-centre/squash
+  - https://www.better.org.uk/leisure-centre/london/waltham-forest/walthamstow-leisure-centre
+  - https://www.better.org.uk/leisure-centre/london/waltham-forest/walthamstow-leisure-centre/prices
+- id: squash-wandsworth-balham
+  name: Balham Leisure Centre
+  sport: squash
+  provider: html
+  booking_url: https://www.placesleisure.org/centres/balham-leisure-centre/centre-activities/squash/
+  metadata_sources:
+  - https://www.placesleisure.org/centres/balham-leisure-centre/centre-activities/squash/
+  - https://www.placesleisure.org/faqs/booking/
+- id: squash-wandsworth-tooting
+  name: Tooting Leisure Centre
+  sport: squash
+  provider: html
+  booking_url: https://www.placesleisure.org/centres/tooting-leisure-centre/centre-activities/sports/
+  metadata_sources:
+  - https://www.placesleisure.org/centres/tooting-leisure-centre/centre-activities/sports/
+  - https://www.placesleisure.org/find-centre/
+- id: squash-westminster-porchester
+  name: Porchester Centre
+  sport: squash
+  provider: html
+  booking_url: https://www.everyoneactive.com/centre/porchester-centre/
+  metadata_sources:
+  - https://www.everyoneactive.com/centre/porchester-centre/
+  - https://www.westminster.gov.uk/sites/default/files/media/documents/wcc-indoor-facilities-assessment-needs-assessment-2026.pdf
+- id: squash-westminster-queen-mother
+  name: Queen Mother Sports Centre
+  sport: squash
+  provider: html
+  booking_url: https://www.everyoneactive.com/centre/queen-mother-sports-centre/
+  metadata_sources:
+  - https://www.everyoneactive.com/centre/queen-mother-sports-centre/
+  - https://www.westminster.gov.uk/sites/default/files/media/documents/wcc-indoor-facilities-assessment-needs-assessment-2026.pdf
+- id: sutton-beddington-park
+  name: Beddington Park
+  sport: tennis
+  provider: html
+  booking_url: https://tennissutton.com/book/courts/beddington-park
+  metadata_sources:
+  - https://www.sutton.gov.uk/libraries-museums-parks-and-leisure/sports-and-activities/tennis/tennis-courts-sutton-parks
+  - https://tennissutton.com/courts
+  - https://tennissutton.com/book/courts/beddington-park
+- id: sutton-carshalton-park
+  name: Carshalton Park
+  sport: tennis
+  provider: html
+  booking_url: https://www.sutton.gov.uk/libraries-museums-parks-and-leisure/sports-and-activities/tennis/tennis-courts-sutton-parks
+  metadata_sources:
+  - https://www.sutton.gov.uk/libraries-museums-parks-and-leisure/sports-and-activities/tennis/tennis-courts-sutton-parks
+- id: sutton-cheam-recreation-ground
+  name: Cheam Recreation Ground
+  sport: tennis
+  provider: html
+  booking_url: https://www.sutton.gov.uk/libraries-museums-parks-and-leisure/sports-and-activities/tennis/tennis-courts-sutton-parks
+  metadata_sources:
+  - https://www.sutton.gov.uk/libraries-museums-parks-and-leisure/sports-and-activities/tennis/tennis-courts-sutton-parks
+- id: sutton-corrigan-avenue-recreation-ground
+  name: Corrigan Avenue Recreation Ground
+  sport: tennis
+  provider: html
+  booking_url: https://tennissutton.com/book/courts/corrigan-avenue-recreation-ground
+  metadata_sources:
+  - https://www.sutton.gov.uk/libraries-museums-parks-and-leisure/sports-and-activities/tennis/tennis-courts-sutton-parks
+  - https://tennissutton.com/courts
+- id: sutton-cuddington-recreation-ground
+  name: Cuddington Recreation Ground
+  sport: tennis
+  provider: html
+  booking_url: https://tennissutton.com/book/courts/cuddington-recreation-ground
+  metadata_sources:
+  - https://www.sutton.gov.uk/libraries-museums-parks-and-leisure/sports-and-activities/tennis/tennis-courts-sutton-parks
+  - https://tennissutton.com/courts
+  - https://tennissutton.com/book/courts/cuddington-recreation-ground
+- id: sutton-mellows-park
+  name: Mellows Park
+  sport: tennis
+  provider: html
+  booking_url: https://tennissutton.com/book/courts/mellows-park
+  metadata_sources:
+  - https://www.sutton.gov.uk/libraries-museums-parks-and-leisure/sports-and-activities/tennis/tennis-courts-sutton-parks
+  - https://tennissutton.com/courts
+  - https://tennissutton.com/book/courts/mellows-park
+- id: sutton-rosehill-park-west
+  name: Rosehill Park West
+  sport: tennis
+  provider: html
+  booking_url: https://www.sutton.gov.uk/libraries-museums-parks-and-leisure/sports-and-activities/tennis/tennis-courts-sutton-parks
+  metadata_sources:
+  - https://www.sutton.gov.uk/libraries-museums-parks-and-leisure/sports-and-activities/tennis/tennis-courts-sutton-parks
+- id: sutton-roundshaw-park
+  name: Roundshaw Park
+  sport: tennis
+  provider: html
+  booking_url: https://www.sutton.gov.uk/libraries-museums-parks-and-leisure/sports-and-activities/tennis/tennis-courts-sutton-parks
+  metadata_sources:
+  - https://www.sutton.gov.uk/libraries-museums-parks-and-leisure/sports-and-activities/tennis/tennis-courts-sutton-parks
+- id: sutton-royston-park
+  name: Royston Park
+  sport: tennis
+  provider: html
+  booking_url: https://www.sutton.gov.uk/libraries-museums-parks-and-leisure/sports-and-activities/tennis/tennis-courts-sutton-parks
+  metadata_sources:
+  - https://www.sutton.gov.uk/libraries-museums-parks-and-leisure/sports-and-activities/tennis/tennis-courts-sutton-parks
+- id: sutton-stanley-park
+  name: Stanley Park
+  sport: tennis
+  provider: html
+  booking_url: https://tennissutton.com/book/courts/stanley-park
+  metadata_sources:
+  - https://www.sutton.gov.uk/libraries-museums-parks-and-leisure/sports-and-activities/tennis/tennis-courts-sutton-parks
+  - https://tennissutton.com/courts
+  - https://tennissutton.com/book/courts/stanley-park
+- id: sutton-sutton-common-recreation-ground
+  name: Sutton Common Recreation Ground
+  sport: tennis
+  provider: html
+  booking_url: https://tennissutton.com/book/courts/sutton-common-recreation-ground
+  metadata_sources:
+  - https://www.sutton.gov.uk/libraries-museums-parks-and-leisure/sports-and-activities/tennis/tennis-courts-sutton-parks
+  - https://tennissutton.com/courts
+- id: sutton-sutton-sports-village
+  name: Sutton Sports Village
+  sport: tennis
+  provider: better
+  booking_url: https://www.better.org.uk/leisure-centre/london/sutton/sutton-sports-village
+  metadata_sources:
+  - https://www.better.org.uk/leisure-centre/london/sutton/sutton-sports-village
+  - https://www.better.org.uk/leisure-centre/london/sutton/sutton-sports-village/prices
+- id: tower-hamlets-bethnal-green-gardens
+  name: Bethnal Green Gardens
+  sport: tennis
+  provider: html
+  booking_url: https://tennistowerhamlets.com/book/courts/bethnal-green-gardens
+  metadata_sources:
+  - https://tennistowerhamlets.com/courts
+  - https://www.towerhamletstennis.org.uk/tennis-court-bookings
+  - https://tennistowerhamlets.com/pricing
+  - https://www.towerhamlets.gov.uk/lgnl/leisure_and_culture/sport_and_physical_activity/Choose_a_sport/tennis.aspx
+- id: tower-hamlets-john-orwell-sports-centre
+  name: John Orwell Sports Centre
+  sport: tennis
+  provider: html
+  booking_url: https://be-well.org.uk/centres/john-orwell-sports-centre/
+  metadata_sources:
+  - https://be-well.org.uk/centres/john-orwell-sports-centre/
+- id: tower-hamlets-king-edward-memorial-park
+  name: King Edward Memorial Park
+  sport: tennis
+  provider: html
+  booking_url: https://tennistowerhamlets.com/courts
+  metadata_sources:
+  - https://tennistowerhamlets.com/courts
+  - https://www.towerhamletstennis.org.uk/tennis-court-bookings
+  - https://tennistowerhamlets.com/pricing
+  - https://www.towerhamlets.gov.uk/lgnl/leisure_and_culture/sport_and_physical_activity/Choose_a_sport/tennis.aspx
+- id: tower-hamlets-poplar-recreation-ground
+  name: Poplar Recreation Ground
+  sport: tennis
+  provider: html
+  booking_url: https://tennistowerhamlets.com/courts
+  metadata_sources:
+  - https://tennistowerhamlets.com/courts
+  - https://www.towerhamletstennis.org.uk/tennis-court-bookings
+  - https://tennistowerhamlets.com/pricing
+  - https://www.towerhamlets.gov.uk/lgnl/leisure_and_culture/sport_and_physical_activity/Choose_a_sport/tennis.aspx
+- id: tower-hamlets-ropemakers-fields
+  name: Ropemakers Fields
+  sport: tennis
+  provider: html
+  booking_url: https://tennistowerhamlets.com/courts
+  metadata_sources:
+  - https://tennistowerhamlets.com/courts
+  - https://www.towerhamletstennis.org.uk/tennis-court-bookings
+  - https://tennistowerhamlets.com/pricing
+  - https://www.towerhamlets.gov.uk/lgnl/leisure_and_culture/sport_and_physical_activity/Choose_a_sport/tennis.aspx
+- id: tower-hamlets-st-john-s-park
+  name: St John's Park
+  sport: tennis
+  provider: html
+  booking_url: https://tennistowerhamlets.com/book/courts/st-johns-park
+  metadata_sources:
+  - https://tennistowerhamlets.com/courts
+  - https://www.towerhamletstennis.org.uk/tennis-court-bookings
+  - https://tennistowerhamlets.com/pricing
+  - https://www.towerhamlets.gov.uk/lgnl/leisure_and_culture/sport_and_physical_activity/Choose_a_sport/tennis.aspx
+  - https://tennistowerhamlets.com/
+- id: tower-hamlets-victoria-park
+  name: Victoria Park
+  sport: tennis
+  provider: html
+  booking_url: https://tennistowerhamlets.com/courts
+  metadata_sources:
+  - https://tennistowerhamlets.com/courts
+  - https://www.towerhamletstennis.org.uk/tennis-court-bookings
+  - https://tennistowerhamlets.com/pricing
+  - https://www.towerhamlets.gov.uk/lgnl/leisure_and_culture/sport_and_physical_activity/Choose_a_sport/tennis.aspx
+- id: tower-hamlets-wapping-gardens
+  name: Wapping Gardens
+  sport: tennis
+  provider: html
+  booking_url: https://tennistowerhamlets.com/courts
+  metadata_sources:
+  - https://tennistowerhamlets.com/courts
+  - https://www.towerhamletstennis.org.uk/tennis-court-bookings
+  - https://tennistowerhamlets.com/pricing
+  - https://www.towerhamlets.gov.uk/lgnl/leisure_and_culture/sport_and_physical_activity/Choose_a_sport/tennis.aspx
+- id: waltham-forest-abbotts-park
+  name: Abbotts Park
+  sport: tennis
+  provider: html
+  booking_url: https://abbotts.playtenniswalthamforest.com/?venue=abbotts_playtenniswalthamforest_com
+  metadata_sources:
+  - https://playtenniswalthamforest.com/
+  - https://playtenniswalthamforest.com/Wheretoplay
+  - https://abbotts.playtenniswalthamforest.com/?venue=abbotts_playtenniswalthamforest_com
+- id: waltham-forest-chingford-memorial-park
+  name: Chingford Memorial Park
+  sport: tennis
+  provider: html
+  booking_url: https://chingford.playtenniswalthamforest.com/?venue=chingford_playtenniswalthamforest_com
+  metadata_sources:
+  - https://playtenniswalthamforest.com/
+  - https://playtenniswalthamforest.com/Wheretoplay
+  - https://chingford.playtenniswalthamforest.com/?venue=chingford_playtenniswalthamforest_com
+- id: waltham-forest-chingford-school-of-tennis-club
+  name: Chingford School of Tennis Club
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/ChingfordSchoolofTennisClub
+  metadata_sources:
+  - https://clubspark.lta.org.uk/ChingfordSchoolofTennisClub
+  - https://chingfordschooloftennis.co.uk/courthire.php
+- id: waltham-forest-higham-hill-park
+  name: Higham Hill Park
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/HighamHillP
+  metadata_sources:
+  - https://playtenniswalthamforest.com/
+  - https://playtenniswalthamforest.com/Wheretoplay
+  - https://clubspark.lta.org.uk/HighamHillP
+- id: waltham-forest-lee-valley-hockey-and-tennis-centre
+  name: Lee Valley Hockey and Tennis Centre
+  sport: tennis
+  provider: better
+  booking_url: https://www.better.org.uk/leisure-centre/lee-valley/hockey-and-tennis-centre
+  metadata_sources:
+  - https://www.better.org.uk/leisure-centre/lee-valley/hockey-and-tennis-centre
+  - https://www.better.org.uk/leisure-centre/lee-valley/hockey-and-tennis-centre/tennis/pay-and-play
+  - https://www.lta.org.uk/play/find-a-tennis-court/Venue/?VenueId=0014J000006douPQAQ
+- id: waltham-forest-lloyd-and-aveling-park
+  name: Lloyd and Aveling Park
+  sport: tennis
+  provider: html
+  booking_url: https://lloyd.playtenniswalthamforest.com/?venue=lloyd_playtenniswalthamforest_com
+  metadata_sources:
+  - https://playtenniswalthamforest.com/
+  - https://playtenniswalthamforest.com/Wheretoplay
+  - https://lloyd.playtenniswalthamforest.com/?venue=lloyd_playtenniswalthamforest_com
+- id: waltham-forest-ridgeway-park
+  name: Ridgeway Park
+  sport: tennis
+  provider: html
+  booking_url: https://ridgeway.playtenniswalthamforest.com/Booking/BookByDate
+  metadata_sources:
+  - https://playtenniswalthamforest.com/
+  - https://playtenniswalthamforest.com/Wheretoplay
+  - https://ridgeway.playtenniswalthamforest.com/Booking/BookByDate
+- id: wandsworth-battersea-park-millennium-arena
+  name: Battersea Park Millennium Arena
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/BatterseaParkTennisCourts/Booking/BookByDate
+  metadata_sources:
+  - https://clubspark.lta.org.uk/BatterseaParkTennisCourts
+  - https://bluebird-carrot-kkzr.squarespace.com/battersea-park-millennium-arena-gym
+  - https://clubspark.lta.org.uk/BatterseaParkTennisCourts/Booking/BookByDate
+- id: wandsworth-fred-wells-gardens
+  name: Fred Wells Gardens
+  sport: tennis
+  provider: html
+  booking_url: https://www.wandsworth.gov.uk/leisure-and-culture/parks-and-open-spaces/exercise-places/fred-wells-tennis-court/
+  metadata_sources:
+  - https://enablelc.org/parks/greenspaces/tennis-courts/
+- id: wandsworth-furzedown-recreation-centre
+  name: Furzedown Recreation Centre
+  sport: tennis
+  provider: html
+  booking_url: https://www.wandsworth.gov.uk/leisure-and-culture/sport-and-fitness/leisure-centres/sports-pitches/furzedown-recreation-centre/
+  metadata_sources:
+  - https://www.wandsworth.gov.uk/leisure-and-culture/sport-and-fitness/leisure-centres/sports-pitches/furzedown-recreation-centre/
+- id: wandsworth-furzedown-recreation-ground
+  name: Furzedown Recreation Ground
+  sport: tennis
+  provider: html
+  booking_url: https://allstartennis.co.uk/court-hire/
+  metadata_sources:
+  - https://allstartennis.co.uk/locations/
+  - https://allstartennis.co.uk/court-hire/
+  - https://allstartennis.co.uk/prices/
+- id: wandsworth-king-george-s-park
+  name: King George's Park
+  sport: tennis
+  provider: html
+  booking_url: https://allstartennis.co.uk/court-hire/
+  metadata_sources:
+  - https://allstartennis.co.uk/locations/
+  - https://allstartennis.co.uk/court-hire/
+  - https://allstartennis.co.uk/prices/
+- id: wandsworth-leader-s-gardens
+  name: Leader's Gardens
+  sport: tennis
+  provider: html
+  booking_url: https://allstartennis.co.uk/court-hire/
+  metadata_sources:
+  - https://allstartennis.co.uk/locations/
+  - https://allstartennis.co.uk/court-hire/
+  - https://allstartennis.co.uk/prices/
+- id: wandsworth-roehampton-playing-fields
+  name: Roehampton Playing Fields
+  sport: tennis
+  provider: clubspark
+  booking_url: https://clubspark.lta.org.uk/RoehamptonPlayingFields
+  metadata_sources:
+  - https://clubspark.lta.org.uk/RoehamptonPlayingFields
+- id: wandsworth-tooting-bec-common
+  name: Tooting Bec Common
+  sport: tennis
+  provider: html
+  booking_url: https://allstartennis.co.uk/court-hire/
+  metadata_sources:
+  - https://allstartennis.co.uk/locations/
+  - https://allstartennis.co.uk/court-hire/
+  - https://allstartennis.co.uk/prices/
+- id: wandsworth-wandsworth-common
+  name: Wandsworth Common
+  sport: tennis
+  provider: html
+  booking_url: https://allstartennis.co.uk/court-hire/
+  metadata_sources:
+  - https://allstartennis.co.uk/locations/
+  - https://allstartennis.co.uk/court-hire/
+  - https://allstartennis.co.uk/prices/
+- id: wandsworth-wandsworth-park
+  name: Wandsworth Park
+  sport: tennis
+  provider: html
+  booking_url: https://allstartennis.co.uk/court-hire/
+  metadata_sources:
+  - https://allstartennis.co.uk/locations/
+  - https://allstartennis.co.uk/court-hire/
+  - https://allstartennis.co.uk/prices/
+- id: westminster-academy-sport
+  name: Academy Sport
+  sport: tennis
+  provider: html
+  booking_url: https://www.everyoneactive.com/centre/academy-sport/
+  metadata_sources:
+  - https://www.everyoneactive.com/centre/academy-sport/
+- id: westminster-hyde-park-courts
+  name: Hyde Park Courts
+  sport: tennis
+  provider: html
+  booking_url: https://sportsandleisureroyalparks.bookings.flow.onl/location/hyde-park-courts/tennis/2026-09-19/by-time
+  metadata_sources:
+  - https://sportsandleisure.royalparks.org.uk/the-courts/tennis
+  - https://sportsandleisure.royalparks.org.uk/faqs
+- id: westminster-paddington-recreation-ground
+  name: Paddington Recreation Ground
+  sport: tennis
+  provider: html
+  booking_url: https://www.everyoneactive.com/centre/paddington-recreation-ground/
+  metadata_sources:
+  - https://www.everyoneactive.com/centre/paddington-recreation-ground/
+- id: westminster-the-regent-s-park-courts
+  name: The Regent's Park Courts
+  sport: tennis
+  provider: html
+  booking_url: https://sportsandleisure.royalparks.org.uk/regents-park/sports-activities/adult-tennis
+  metadata_sources:
+  - https://sportsandleisure.royalparks.org.uk/regents-park/sports-activities
+  - https://sportsandleisure.royalparks.org.uk/clubs-teams-leagues
+  - https://sportsandleisure.royalparks.org.uk/faqs

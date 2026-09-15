@@ -36,3 +36,18 @@ cp data/london-racquet-venues.json site/data/venues.json
 ```
 
 When adding a venue, add its ID to both `site/data/prices.json` (use `null` if no structured price is known) and `site/data/coordinates.json` (use `null` if no reliable pin is known), then run `npm test` from `site/`.
+
+Run `python3 scripts/provider-inventory.py` to rebuild the [booking-provider coverage report](docs/provider-coverage.md) and [per-venue source inventory](docs/provider-inventory.json). The classification uses booking-link domains and marks other site backends as unverified.
+
+## Metadata ingestion foundation
+
+`config/venues.yaml` is the curated registry of venue IDs, sports, source adapters, booking links and metadata-source links. It was initially seeded from the existing site data; `provider: html` means the underlying booking system has not been confirmed. Observed facts belong in the provider-independent types in `ingestion/models.py`, not in the registry.
+
+The Python setup is local:
+
+```sh
+uv sync
+.venv/bin/python -m unittest discover -s tests -v
+```
+
+The ingestion foundation does not fetch pages or change the app's current JSON yet.
