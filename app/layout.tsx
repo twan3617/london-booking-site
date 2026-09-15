@@ -13,17 +13,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://court-ready-london-tennis.tonywang205.chatgpt.site'),
+  metadataBase: new URL(process.env.URL ?? 'http://localhost:3000'),
   title: 'Public Courts Across London',
   description: 'Find public London tennis, squash and padel courts and check when their booking windows open.',
   openGraph: {
-    title: 'Court Ready',
+    title: 'Public Courts Across London',
     description: 'London public racquet court booking planner',
     images: ['/og.png'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Court Ready',
+    title: 'Public Courts Across London',
     description: 'London public racquet court booking planner',
     images: ['/og.png'],
   },
