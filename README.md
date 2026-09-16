@@ -37,7 +37,7 @@ cp data/london-racquet-venues.json site/data/venues.json
 
 When adding a venue, add its ID to both `site/data/prices.json` (use `null` if no structured price is known) and `site/data/coordinates.json` (use `null` if no reliable pin is known), then run `npm test` from `site/`.
 
-Run `python3 scripts/provider-inventory.py` to rebuild the [booking-provider coverage report](docs/provider-coverage.md) and [per-venue source inventory](docs/provider-inventory.json). The classification uses booking-link domains and marks other site backends as unverified.
+Run `.venv/bin/python scripts/provider_inventory.py` to rebuild the [metadata-refresh coverage report](docs/provider-coverage.md) and [per-venue source inventory](docs/provider-inventory.json). The report keeps the configured metadata source family separate from the booking-link hostname.
 
 ## Metadata ingestion foundation
 
