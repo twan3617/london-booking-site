@@ -67,3 +67,13 @@ The OpenActive pilot reads a curated Better `FacilityUse` item for Gunnersbury t
 It records individual-court count and common court hours from the public JSON. It does not infer price, booking window or slot duration. The saved Better fixtures are CC-BY 4.0; display use requires attribution to Better.
 
 `ingestion.review.review_metadata(existing, candidate)` validates a refreshed record and returns field-level changes. Invalid values and disappearance of previously known values make `safe_to_apply` false; `format_review(...)` produces a local text report. This layer does not write or accept changes.
+
+## Refresh metadata
+
+Run the supported pilot venues with the Python interpreter:
+
+```sh
+.venv/bin/python scripts/refresh_metadata.py
+```
+
+The script fetches the three tested ClubSpark venues and two mapped Better OpenActive venues, prints the change report, and atomically writes `data/ingestion-metadata.json`. Invalid responses abort the run. If a previously known field disappears or a collection shrinks, its saved value is retained and the report marks it as blocked. The frontend JSON is not changed.
