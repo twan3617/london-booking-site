@@ -1,0 +1,7 @@
+# OpenActive metadata pilot
+
+M4 reads two curated Better FacilityUse records from Better's current [OpenActive dataset](https://better-admin.org.uk/api/openactive/better): Gunnersbury Park Sports Hub tennis and Finsbury Leisure Centre squash. Better serves each record as a public JSON RPDE item at its FacilityUse `@id`. The registry stores those two item URLs; the updater fetches one item directly for a local preview. This is an item lookup, not a full RPDE harvest. A publisher without item lookup will need feed paging later.
+
+The source validates `updated` state, `FacilityUse` type, RPDE and JSON-LD source identity, canonical sport concept, and unique individual-court IDs within the FacilityUse namespace. It maps the observed place name and booking link to `VenueMetadata`, counts the individual courts in these manually checked homogeneous records, and uses `hoursAvailable` only when every court reports the same complete weekly hours. The place's opening hours are not court hours. The exact facility label `Tennis Court (Floodlit)` sets `floodlit=True`; missing lighting data stays unknown. Prices, booking window, release time, slot duration and availability remain unknown because these FacilityUse records do not state them.
+
+Direct JSON responses are saved as offline fixtures. HTTP or validation failures raise errors; no partial record or site JSON update is produced. Better's feed is CC-BY 4.0 and requires attribution if this data is later displayed in the app. M4 commits only on the isolated worktree branch and does not merge or push.

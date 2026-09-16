@@ -57,3 +57,11 @@ The ClubSpark pilot fetches public HTML and previews normalized metadata for one
 ```
 
 Its parser is fixture-tested against Brook Green Tennis, Finsbury Park and Cottenham Park. The source pages are saved in `tests/fixtures/` (with form tokens redacted). Unclear price duration and conflicting booking windows or release clocks remain unknown. The preview does not change the app's JSON; validation and diffing are the next ingestion milestone.
+
+The OpenActive pilot reads a curated Better `FacilityUse` item for Gunnersbury tennis or Finsbury squash:
+
+```sh
+.venv/bin/python -m ingestion.providers.openactive hounslow-gunnersbury-park-sports-hub
+```
+
+It records individual-court count and common court hours from the public JSON. It does not infer price, booking window or slot duration. The saved Better fixtures are CC-BY 4.0; display use requires attribution to Better.
