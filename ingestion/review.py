@@ -123,6 +123,16 @@ def _missing(value):
     return value is None or isinstance(value, (str, tuple, list, dict, set)) and not value
 
 
+def _collection_shrank(before, after):
+    if isinstance(before, dict) and isinstance(after, dict):
+        return not before.keys() <= after.keys() or any(
+            key in after and _collection_shrank(before[key], after[key]) for key in before
+        )
+    if isinstance(before, (tuple, list, set)) and isinstance(after, type(before)):
+        return len(after) < len(before)
+    return False
+
+
 def review_metadata(existing: VenueMetadata, candidate: VenueMetadata) -> MetadataReview:
     issues = list(validate_metadata(candidate))
     if existing.venue_id != candidate.venue_id:
@@ -132,7 +142,7 @@ def review_metadata(existing: VenueMetadata, candidate: VenueMetadata) -> Metada
         before, after = getattr(existing, field), getattr(candidate, field)
         if before == after:
             continue
-        blocked = not _missing(before) and _missing(after)
+        blocked = not _missing(before) and (_missing(after) or _collection_shrank(before, after))
         changes.append(FieldChange(field, before, after, blocked))
         if blocked:
             issues.append(ReviewIssue("warning", field, "Previously known value disappeared"))

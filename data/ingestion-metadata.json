@@ -1,0 +1,268 @@
+{
+  "venues": [
+    {
+      "venue_id": "hammersmith-and-fulham-brook-green-tennis",
+      "name": "Brook Green Tennis",
+      "booking_url": "https://clubspark.lta.org.uk/BrookGreenTennis",
+      "last_checked": "2026-09-16T22:33:16.339792+00:00",
+      "source_url": "https://clubspark.lta.org.uk/BrookGreenTennis",
+      "court_count": 3,
+      "floodlit_court_count": 3,
+      "surface": [],
+      "floodlit": true,
+      "prices": [],
+      "booking_window_days": 14,
+      "member_booking_window_days": null,
+      "release_time": "10:15:00",
+      "slot_duration_minutes": null,
+      "opening_hours": {
+        "monday": [
+          [
+            "07:00:00",
+            "21:00:00"
+          ]
+        ],
+        "tuesday": [
+          [
+            "07:00:00",
+            "21:00:00"
+          ]
+        ],
+        "wednesday": [
+          [
+            "07:00:00",
+            "21:00:00"
+          ]
+        ],
+        "thursday": [
+          [
+            "07:00:00",
+            "21:00:00"
+          ]
+        ],
+        "friday": [
+          [
+            "07:00:00",
+            "21:00:00"
+          ]
+        ],
+        "saturday": [
+          [
+            "07:00:00",
+            "21:00:00"
+          ]
+        ],
+        "sunday": [
+          [
+            "07:00:00",
+            "21:00:00"
+          ]
+        ]
+      },
+      "membership_required": null
+    },
+    {
+      "venue_id": "haringey-finsbury-park",
+      "name": "Finsbury Park",
+      "booking_url": "https://clubspark.lta.org.uk/FinsburyPark/Booking/BookByDate",
+      "last_checked": "2026-09-16T22:33:16.539190+00:00",
+      "source_url": "https://clubspark.lta.org.uk/FinsburyPark/Booking/BookByDate",
+      "court_count": null,
+      "floodlit_court_count": 6,
+      "surface": [],
+      "floodlit": true,
+      "prices": [],
+      "booking_window_days": 7,
+      "member_booking_window_days": null,
+      "release_time": "00:00:00",
+      "slot_duration_minutes": null,
+      "opening_hours": {
+        "monday": [
+          [
+            "07:00:00",
+            "22:00:00"
+          ]
+        ],
+        "tuesday": [
+          [
+            "07:00:00",
+            "22:00:00"
+          ]
+        ],
+        "wednesday": [
+          [
+            "07:00:00",
+            "22:00:00"
+          ]
+        ],
+        "thursday": [
+          [
+            "07:00:00",
+            "22:00:00"
+          ]
+        ],
+        "friday": [
+          [
+            "07:00:00",
+            "22:00:00"
+          ]
+        ],
+        "saturday": [
+          [
+            "07:00:00",
+            "22:00:00"
+          ]
+        ],
+        "sunday": [
+          [
+            "07:00:00",
+            "22:00:00"
+          ]
+        ]
+      },
+      "membership_required": null
+    },
+    {
+      "venue_id": "hounslow-gunnersbury-park-sports-hub",
+      "name": "Gunnersbury Park Sports Hub",
+      "booking_url": "https://bookings.better.org.uk/location/gunnersbury-park-sports-hub/tennis-court-outdoor",
+      "last_checked": "2026-09-16T22:33:16.773167+00:00",
+      "source_url": "https://better-admin.org.uk/api/openactive/better/facility-uses/activity_recurrence_group:11612",
+      "court_count": 8,
+      "floodlit_court_count": null,
+      "surface": [],
+      "floodlit": true,
+      "prices": [],
+      "booking_window_days": null,
+      "member_booking_window_days": null,
+      "release_time": null,
+      "slot_duration_minutes": null,
+      "opening_hours": {
+        "monday": [
+          [
+            "07:00:00",
+            "22:00:00"
+          ]
+        ],
+        "tuesday": [
+          [
+            "07:00:00",
+            "22:00:00"
+          ]
+        ],
+        "wednesday": [
+          [
+            "07:00:00",
+            "22:00:00"
+          ]
+        ],
+        "thursday": [
+          [
+            "07:00:00",
+            "22:00:00"
+          ]
+        ],
+        "friday": [
+          [
+            "07:00:00",
+            "22:00:00"
+          ]
+        ],
+        "saturday": [
+          [
+            "08:00:00",
+            "20:00:00"
+          ]
+        ],
+        "sunday": [
+          [
+            "08:00:00",
+            "20:00:00"
+          ]
+        ]
+      },
+      "membership_required": null
+    },
+    {
+      "venue_id": "merton-cottenham-park",
+      "name": "Cottenham Park",
+      "booking_url": "https://clubspark.lta.org.uk/CottenhamPark",
+      "last_checked": "2026-09-16T22:33:17.051024+00:00",
+      "source_url": "https://clubspark.lta.org.uk/CottenhamPark",
+      "court_count": 6,
+      "floodlit_court_count": null,
+      "surface": [
+        "hard"
+      ],
+      "floodlit": null,
+      "prices": [],
+      "booking_window_days": 1,
+      "member_booking_window_days": null,
+      "release_time": "22:00:00",
+      "slot_duration_minutes": null,
+      "opening_hours": null,
+      "membership_required": null
+    },
+    {
+      "venue_id": "squash-islington-finsbury",
+      "name": "Finsbury Leisure Centre",
+      "booking_url": "https://bookings.better.org.uk/location/finsbury-leisure-centre/squash-court-40min",
+      "last_checked": "2026-09-16T22:33:17.266075+00:00",
+      "source_url": "https://better-admin.org.uk/api/openactive/better/facility-uses/activity_recurrence_group:2914",
+      "court_count": 4,
+      "floodlit_court_count": null,
+      "surface": [],
+      "floodlit": null,
+      "prices": [],
+      "booking_window_days": null,
+      "member_booking_window_days": null,
+      "release_time": null,
+      "slot_duration_minutes": null,
+      "opening_hours": {
+        "monday": [
+          [
+            "09:20:00",
+            "22:00:00"
+          ]
+        ],
+        "tuesday": [
+          [
+            "09:20:00",
+            "22:00:00"
+          ]
+        ],
+        "wednesday": [
+          [
+            "09:20:00",
+            "22:00:00"
+          ]
+        ],
+        "thursday": [
+          [
+            "09:20:00",
+            "22:00:00"
+          ]
+        ],
+        "friday": [
+          [
+            "09:20:00",
+            "22:00:00"
+          ]
+        ],
+        "saturday": [
+          [
+            "07:00:00",
+            "18:00:00"
+          ]
+        ],
+        "sunday": [
+          [
+            "07:00:00",
+            "18:00:00"
+          ]
+        ]
+      },
+      "membership_required": null
+    }
+  ]
+}
