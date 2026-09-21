@@ -2,8 +2,8 @@
 
 from typing import Protocol
 
-from .models import Venue, VenueMetadata
+from .models import MetadataPatch, Venue
 
 
 class MetadataSource(Protocol):
-    async def fetch_metadata(self, venue: Venue) -> VenueMetadata: ...
+    async def fetch_metadata(self, venue: Venue) -> MetadataPatch: ...

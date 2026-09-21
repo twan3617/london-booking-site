@@ -3,12 +3,11 @@
 import argparse
 import asyncio
 import json
-from dataclasses import asdict
 from datetime import datetime, time, timezone
 from pathlib import Path
 from urllib.request import Request, urlopen
 
-from ingestion.models import Venue, VenueMetadata
+from ingestion.models import MetadataField, MetadataPatch, Venue
 from ingestion.registry import _web_url, load_registry
 
 WEEKDAYS = ("monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday")
@@ -43,7 +42,7 @@ def _weekly_hours(specifications):
     return {day: tuple(sorted(periods)) for day, periods in days.items()} if all(days.values()) else None
 
 
-def parse_facility_use(venue: Venue, item: dict, source_url: str, checked_at: datetime) -> VenueMetadata:
+def parse_facility_use(venue: Venue, item: dict, source_url: str, checked_at: datetime) -> MetadataPatch:
     if not isinstance(item, dict) or item.get("state") != "updated" or item.get("kind") != "FacilityUse":
         raise ValueError("Updated FacilityUse item required")
     if item.get("id") != source_url.rsplit("/", 1)[-1]:
@@ -70,15 +69,18 @@ def parse_facility_use(venue: Venue, item: dict, source_url: str, checked_at: da
     # ponytail: curated homogeneous FacilityUse records; add per-court mappings before using mixed-venue records.
     hours = [_weekly_hours(court.get("hoursAvailable")) for court in courts]
     opening_hours = hours[0] if hours[0] is not None and all(value == hours[0] for value in hours) else None
-    return VenueMetadata(
+    observed = {
+        MetadataField.NAME: location["name"].strip(),
+        MetadataField.BOOKING_URL: booking_url,
+        MetadataField.COURT_COUNT: len(courts),
+        MetadataField.FLOODLIT: True if data.get("name") == "Tennis Court (Floodlit)" else None,
+        MetadataField.OPENING_HOURS: opening_hours,
+    }
+    return MetadataPatch(
         venue_id=venue.id,
-        name=location["name"].strip(),
-        booking_url=booking_url,
-        court_count=len(courts),
-        floodlit=True if data.get("name") == "Tennis Court (Floodlit)" else None,
-        opening_hours=opening_hours,
-        last_checked=checked_at,
         source_url=source_url,
+        checked_at=checked_at,
+        values={field: value for field, value in observed.items() if value is not None},
     )
 
 
@@ -92,7 +94,7 @@ class OpenActiveSource:
     def __init__(self, fetch_json=None):
         self.fetch_json = fetch_json or _fetch_json
 
-    async def fetch_metadata(self, venue: Venue) -> VenueMetadata:
+    async def fetch_metadata(self, venue: Venue) -> MetadataPatch:
         source_url = next((url for url in venue.metadata_sources if "/api/openactive/" in url and "/facility-uses/" in url), None)
         if source_url is None:
             raise ValueError(f"No curated OpenActive FacilityUse item: {venue.id}")
@@ -108,7 +110,13 @@ def main():
     venue = next((item for item in load_registry(root / "config/venues.yaml") if item.id == args.venue_id), None)
     if venue is None:
         parser.error(f"Unknown venue ID: {args.venue_id}")
-    print(json.dumps(asdict(asyncio.run(OpenActiveSource().fetch_metadata(venue))), indent=2, default=str))
+    metadata = asyncio.run(OpenActiveSource().fetch_metadata(venue))
+    print(json.dumps({
+        "venue_id": metadata.venue_id,
+        "source_url": metadata.source_url,
+        "checked_at": metadata.checked_at,
+        "values": {field.value: value for field, value in metadata.values.items()},
+    }, indent=2, default=str))
 
 
 if __name__ == "__main__":

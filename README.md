@@ -50,7 +50,7 @@ uv sync
 .venv/bin/python -m unittest discover -s tests -v
 ```
 
-The ClubSpark pilot fetches public HTML and previews normalized metadata for one registry venue:
+The ClubSpark pilot fetches public HTML and previews a normalized metadata patch for one registry venue:
 
 ```sh
 .venv/bin/python -m ingestion.providers.clubspark hammersmith-and-fulham-brook-green-tennis
@@ -58,7 +58,7 @@ The ClubSpark pilot fetches public HTML and previews normalized metadata for one
 
 Its parser is fixture-tested against Brook Green Tennis, Finsbury Park and Cottenham Park. The source pages are saved in `tests/fixtures/` (with form tokens redacted). Unclear price duration and conflicting booking windows or release clocks remain unknown. The preview does not change the app's JSON; validation and diffing are the next ingestion milestone.
 
-The OpenActive pilot reads a curated Better `FacilityUse` item for Gunnersbury tennis or Finsbury squash:
+The OpenActive pilot reads a curated Better `FacilityUse` item for Gunnersbury tennis or Finsbury squash and emits the same patch shape:
 
 ```sh
 .venv/bin/python -m ingestion.providers.openactive hounslow-gunnersbury-park-sports-hub
@@ -76,4 +76,4 @@ Run the supported pilot venues with the Python interpreter:
 .venv/bin/python scripts/refresh_metadata.py
 ```
 
-The script fetches the three tested ClubSpark venues and two mapped Better OpenActive venues, prints the change report, and atomically writes `data/ingestion-metadata.json`. Invalid responses abort the run. If a previously known field disappears or a collection shrinks, its saved value is retained and the report marks it as blocked. The frontend JSON is not changed.
+The script fetches the three tested ClubSpark venues and two mapped Better OpenActive venues, applies only the fields present in each patch, prints the change report, and atomically writes `data/ingestion-metadata.json`. Invalid responses abort the run. Omitted fields retain their saved values; explicit collection shrinkage is blocked. The frontend JSON is not changed.
