@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from ingestion.models import PriceRate, VenueMetadata
+from ingestion.models import PriceRate, VenueMetadata, apply_metadata_patch
 from ingestion.providers.clubspark import ClubSparkSource
 from ingestion.providers.openactive import OpenActiveSource
 from ingestion.registry import load_registry
@@ -120,13 +120,12 @@ async def refresh_metadata(venues, sources, output=OUTPUT):
         source = sources.get(venue.id)
         if source is None:
             continue
-        candidate = await source.fetch_metadata(venue)
+        patch = await source.fetch_metadata(venue)
+        previous = existing.get(venue.id)
+        candidate = apply_metadata_patch(venue, patch, previous)
         invalid_fields = [issue.field for issue in validate_metadata(candidate)]
-        if candidate.venue_id != venue.id:
-            invalid_fields.append("venue_id")
         if invalid_fields:
             raise ValueError(f"Invalid refreshed metadata for {venue.id}: {', '.join(invalid_fields)}")
-        previous = existing.get(venue.id)
         if previous is None:
             refreshed[venue.id] = candidate
             reports.append(f"{candidate.name}\nNew metadata record.")

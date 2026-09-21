@@ -5,6 +5,7 @@ import unittest
 from datetime import datetime, time, timezone
 from pathlib import Path
 
+from ingestion.models import MetadataField, apply_metadata_patch
 from ingestion.providers.openactive import OpenActiveSource, parse_facility_use
 from ingestion.registry import load_registry
 
@@ -17,11 +18,16 @@ def fixture(name):
     return json.loads((ROOT / "tests/fixtures" / name).read_text())
 
 
+def parsed(venue, item, source_url=None):
+    patch = parse_facility_use(venue, item, source_url or venue.metadata_sources[0], CHECKED_AT)
+    return apply_metadata_patch(venue, patch)
+
+
 class OpenActiveTests(unittest.TestCase):
     def test_gunnersbury_court_metadata_uses_individual_hours(self):
         venue = VENUES["hounslow-gunnersbury-park-sports-hub"]
         source_url = venue.metadata_sources[0]
-        metadata = parse_facility_use(venue, fixture("better_gunnersbury.json"), source_url, CHECKED_AT)
+        metadata = parsed(venue, fixture("better_gunnersbury.json"), source_url)
         self.assertEqual((metadata.venue_id, metadata.name, metadata.source_url), (venue.id, venue.name, source_url))
         self.assertEqual(metadata.booking_url, "https://bookings.better.org.uk/location/gunnersbury-park-sports-hub/tennis-court-outdoor")
         self.assertEqual((metadata.court_count, metadata.floodlit), (8, True))
@@ -34,7 +40,7 @@ class OpenActiveTests(unittest.TestCase):
 
     def test_finsbury_squash_stays_sport_specific_without_inferred_duration(self):
         venue = VENUES["squash-islington-finsbury"]
-        metadata = parse_facility_use(venue, fixture("better_finsbury_squash.json"), venue.metadata_sources[0], CHECKED_AT)
+        metadata = parsed(venue, fixture("better_finsbury_squash.json"))
         self.assertEqual(metadata.court_count, 4)
         self.assertEqual(metadata.opening_hours["monday"], ((time(9, 20), time(22)),))
         self.assertEqual(metadata.opening_hours["sunday"], ((time(7), time(18)),))
@@ -82,7 +88,9 @@ class OpenActiveTests(unittest.TestCase):
         venue = VENUES["hounslow-gunnersbury-park-sports-hub"]
         item = copy.deepcopy(fixture("better_gunnersbury.json"))
         item["data"]["individualFacilityUse"][0]["hoursAvailable"][0]["closes"] = "21:00:00"
-        metadata = parse_facility_use(venue, item, venue.metadata_sources[0], CHECKED_AT)
+        patch = parse_facility_use(venue, item, venue.metadata_sources[0], CHECKED_AT)
+        metadata = apply_metadata_patch(venue, patch)
+        self.assertNotIn(MetadataField.OPENING_HOURS, patch.values)
         self.assertIsNone(metadata.opening_hours)
         self.assertEqual(metadata.court_count, 8)
 
@@ -90,10 +98,11 @@ class OpenActiveTests(unittest.TestCase):
         venue = VENUES["hounslow-gunnersbury-park-sports-hub"]
         calls = []
         source = OpenActiveSource(fetch_json=lambda url: calls.append(url) or fixture("better_gunnersbury.json"))
-        metadata = asyncio.run(source.fetch_metadata(venue))
+        patch = asyncio.run(source.fetch_metadata(venue))
+        metadata = apply_metadata_patch(venue, patch)
         self.assertEqual(calls, [venue.metadata_sources[0]])
         self.assertEqual(metadata.court_count, 8)
-        self.assertIsNotNone(metadata.last_checked.tzinfo)
+        self.assertIsNotNone(patch.checked_at.tzinfo)
         missing = VENUES["islington-highbury-fields"]
         with self.assertRaises(ValueError):
             asyncio.run(source.fetch_metadata(missing))

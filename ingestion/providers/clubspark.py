@@ -4,13 +4,12 @@ import argparse
 import asyncio
 import json
 import re
-from dataclasses import asdict
 from datetime import datetime, time, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.request import Request, urlopen
 
-from ingestion.models import Venue, VenueMetadata
+from ingestion.models import MetadataField, MetadataPatch, Venue
 from ingestion.registry import load_registry
 
 WEEKDAYS = ("monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday")
@@ -66,7 +65,7 @@ def _clock(raw):
     return time(hour, minute)
 
 
-def parse_clubspark(venue: Venue, html: str, checked_at: datetime) -> VenueMetadata:
+def parse_clubspark(venue: Venue, html: str, checked_at: datetime) -> MetadataPatch:
     if venue.provider != "clubspark":
         raise ValueError("ClubSpark venue required")
     page = _VisibleParagraphs()
@@ -122,19 +121,20 @@ def parse_clubspark(venue: Venue, html: str, checked_at: datetime) -> VenueMetad
             if start and end:
                 hours = {day: ((start, end),) for day in WEEKDAYS}
 
-    return VenueMetadata(
+    observed = {
+        MetadataField.COURT_COUNT: court_count,
+        MetadataField.FLOODLIT_COURT_COUNT: floodlit_count,
+        MetadataField.SURFACE: surface,
+        MetadataField.FLOODLIT: floodlit,
+        MetadataField.BOOKING_WINDOW_DAYS: next(iter(windows)) if len(windows) == 1 else None,
+        MetadataField.RELEASE_TIME: next(iter(releases)) if len(releases) == 1 else None,
+        MetadataField.OPENING_HOURS: hours,
+    }
+    return MetadataPatch(
         venue_id=venue.id,
-        name=venue.name,
-        booking_url=venue.booking_url,
-        last_checked=checked_at,
         source_url=venue.booking_url,
-        court_count=court_count,
-        floodlit_court_count=floodlit_count,
-        surface=surface,
-        floodlit=floodlit,
-        booking_window_days=next(iter(windows)) if len(windows) == 1 else None,
-        release_time=next(iter(releases)) if len(releases) == 1 else None,
-        opening_hours=hours,
+        checked_at=checked_at,
+        values={field: value for field, value in observed.items() if value is not None and value != ()},
     )
 
 
@@ -148,7 +148,7 @@ class ClubSparkSource:
     def __init__(self, fetch_html=None):
         self.fetch_html = fetch_html or _fetch_html
 
-    async def fetch_metadata(self, venue: Venue) -> VenueMetadata:
+    async def fetch_metadata(self, venue: Venue) -> MetadataPatch:
         if venue.provider != "clubspark":
             raise ValueError("ClubSpark venue required")
         html = await asyncio.to_thread(self.fetch_html, venue.booking_url)
@@ -164,7 +164,12 @@ def main():
     if venue is None:
         parser.error(f"Unknown venue ID: {args.venue_id}")
     metadata = asyncio.run(ClubSparkSource().fetch_metadata(venue))
-    print(json.dumps(asdict(metadata), indent=2, default=str))
+    print(json.dumps({
+        "venue_id": metadata.venue_id,
+        "source_url": metadata.source_url,
+        "checked_at": metadata.checked_at,
+        "values": {field.value: value for field, value in metadata.values.items()},
+    }, indent=2, default=str))
 
 
 if __name__ == "__main__":
