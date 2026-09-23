@@ -5,12 +5,14 @@ import catalogue from '../data/venues.json';
 import coordinateData from '../data/coordinates.json';
 import priceData from '../data/prices.json';
 import availabilityData from '../data/availability.json';
-import { availabilityForVenue, bookingUrlFor, calendarText, directionsUrl, distanceMiles, matchesVenue, osmEmbedUrl, parseCatalogue, prettyDate, releaseDetails, venueDisplay, withinBookingWindow, type AvailabilitySnapshot, type Filters, type Mode, type Point, type PriceOption, type Sport, type Venue } from './booking';
+import { availabilityBookingUrl, availabilityForVenue, bookingUrlFor, calendarText, directionsUrl, distanceMiles, matchesVenue, osmEmbedUrl, parseCatalogue, prettyDate, releaseDetails, venueDisplay, withinBookingWindow, type AvailabilitySnapshot, type Filters, type Mode, type Point, type PriceOption, type Sport, type Venue } from './booking';
 
 const priceOptions = priceData as Record<string, PriceOption[] | null>;
 const venues = parseCatalogue(catalogue as unknown as { venues: Venue[] }, priceOptions, coordinateData as Record<string, Point | null>);
 const availability = availabilityData as AvailabilitySnapshot;
-const checkedAt = new Intl.DateTimeFormat('en-GB', { dateStyle: 'medium', timeStyle: 'short', timeZone: 'Europe/London' }).format(new Date(availability.generated_at));
+const londonDateTime = new Intl.DateTimeFormat('en-GB', { dateStyle: 'medium', timeStyle: 'short', timeZone: 'Europe/London' });
+const checkedAt = londonDateTime.format(new Date(availability.generated_at));
+const checkedDurations = new Set(availability.slots.map((slot) => (Date.parse(slot.end_time) - Date.parse(slot.start_time)) / 60_000));
 
 function nextSaturday() {
   const date = new Date();
@@ -37,12 +39,16 @@ export default function Home() {
   const [sortOrder, setSortOrder] = useState<'recommended' | 'distance'>('recommended');
   const [userLocation, setUserLocation] = useState<Point | null>(null);
   const [locationMessage, setLocationMessage] = useState('');
+  const [currentTime, setCurrentTime] = useState<number | null>(null);
   const boroughs = useMemo(() => [...new Set(venues.filter((venue) => venue.sport === sport).map((venue) => venue.borough))].sort(), [sport]);
   const checkedVenues = venues.filter((venue) => venue.sport === sport && availability.venue_ids.includes(venue.id)).length;
   const dateCovered = playDate >= availability.coverage_start && playDate <= availability.coverage_end;
-  const snapshotOld = Date.now() - Date.parse(availability.generated_at) > 30 * 60_000;
-  const emptyTitle = view === 'locations' ? 'No matching courts' : favouritesOnly ? 'No favourites match' : !dateCovered ? 'Date not checked' : !checkedVenues ? 'Availability not checked yet' : availableOnly ? 'No checked free slots match' : 'No locations match';
-  const emptyHint = view === 'locations' ? 'Try showing every status or removing a price cap.' : favouritesOnly ? 'Turn off Favourites to see other locations.' : !dateCovered ? 'Choose a date inside the checked range.' : !checkedVenues ? `No ${sport} venues have an availability feed in this pilot.` : availableOnly ? 'Try another time or turn off Available only to browse locations.' : 'Try changing the search or filters.';
+  const snapshotOld = currentTime !== null && currentTime - Date.parse(availability.generated_at) > 30 * 60_000;
+  const londonToday = currentTime === null ? '' : new Intl.DateTimeFormat('sv-SE', { timeZone: 'Europe/London', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date(currentTime));
+  const snapshotExpired = londonToday > availability.coverage_end;
+  const durationChecked = checkedDurations.has(durationMinutes);
+  const emptyTitle = view === 'locations' ? 'No matching courts' : snapshotExpired ? 'Availability snapshot expired' : favouritesOnly ? 'No favourites match' : !dateCovered ? 'Date not checked' : !checkedVenues ? 'Availability not checked yet' : !durationChecked ? 'Duration not checked' : availableOnly ? 'No bookable slots seen' : 'No locations match';
+  const emptyHint = view === 'locations' ? 'Try showing every status or removing a price cap.' : snapshotExpired ? 'Browse locations and check directly with the booking provider until a new snapshot is published.' : favouritesOnly ? 'Turn off Favourites to see other locations.' : !dateCovered ? 'Choose a date inside the checked range.' : !checkedVenues ? `No ${sport} venues have an availability feed in this pilot.` : !durationChecked ? `The current snapshot only contains ${[...checkedDurations].join(' and ')}-minute bookings.` : availableOnly ? 'Try another time or turn off Available only to see full and not-yet-open slots.' : 'Try changing the search or filters.';
 
   useEffect(() => {
     const timer = window.setTimeout(() => {
@@ -51,10 +57,17 @@ export default function Home() {
     return () => window.clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    const update = () => setCurrentTime(Date.now());
+    const first = window.setTimeout(update, 0);
+    const interval = window.setInterval(update, 60_000);
+    return () => { window.clearTimeout(first); window.clearInterval(interval); };
+  }, []);
+
   const results = useMemo(() => {
     const filters: Filters = { sport, mode, borough, query, facility, status: view === 'time' || mode === 'weekend' ? 'all' : status, maxPrice: view === 'time' || sport !== 'tennis' || maxPrice === '' ? null : Number(maxPrice) };
     return venues
-      .filter((venue) => matchesVenue(venue, filters) && (view === 'time' ? (!availableOnly || availabilityForVenue(availability, venue.id, playDate, startTime, durationMinutes).status === 'available') : withinBookingWindow(venue, playDate)) && (!favouritesOnly || favourites.includes(venue.id)))
+      .filter((venue) => matchesVenue(venue, filters) && (view === 'time' ? !snapshotExpired && (!availableOnly || availabilityForVenue(availability, venue.id, playDate, startTime, durationMinutes).status === 'available') : withinBookingWindow(venue, playDate)) && (!favouritesOnly || favourites.includes(venue.id)))
       .sort((a, b) => {
         if (sortOrder === 'distance' && userLocation) {
           const aDistance = a.coordinate ? distanceMiles(userLocation, a.coordinate) : Infinity;
@@ -63,7 +76,7 @@ export default function Home() {
         }
         return Number(favourites.includes(b.id)) - Number(favourites.includes(a.id)) || ['suitable', 'seasonal', 'unknown', 'unsuitable'].indexOf(a.evening_assessment) - ['suitable', 'seasonal', 'unknown', 'unsuitable'].indexOf(b.evening_assessment) || a.name.localeCompare(b.name);
       });
-  }, [view, sport, mode, playDate, startTime, durationMinutes, availableOnly, borough, query, facility, status, maxPrice, favourites, favouritesOnly, sortOrder, userLocation]);
+  }, [view, sport, mode, playDate, startTime, durationMinutes, availableOnly, snapshotExpired, borough, query, facility, status, maxPrice, favourites, favouritesOnly, sortOrder, userLocation]);
 
   function toggleFavourite(id: string) {
     const next = favourites.includes(id) ? favourites.filter((item) => item !== id) : [...favourites, id];
@@ -122,23 +135,24 @@ export default function Home() {
 
     <section className="results">
       <div className="results-head"><div><p className="eyebrow">{prettyDate(playDate)}{view === 'time' ? ` · ${startTime} · ${durationMinutes} min` : ''}</p><h2>{view === 'time' ? `${results.length} locations match` : `${results.length} courts match`}</h2></div><div className="result-tools"><label>Sort<select value={sortOrder} onChange={(event) => chooseSort(event.target.value as 'recommended' | 'distance')}><option value="recommended">Recommended</option><option value="distance">Nearest to me</option></select></label>{view === 'time' && <button type="button" className={`favourites-toggle ${availableOnly ? 'active' : ''}`} aria-pressed={availableOnly} onClick={() => setAvailableOnly(!availableOnly)}>Available only</button>}<button className={`favourites-toggle ${favouritesOnly ? 'active' : ''}`} onClick={() => setFavouritesOnly(!favouritesOnly)}>★ Favourites {favourites.length || ''}</button></div></div>
-      {view === 'time' && <p className="availability-note" role="status">Last checked {checkedAt} London time. {checkedVenues} of {venues.filter((venue) => venue.sport === sport).length} {sport} locations checked for {availability.coverage_start}–{availability.coverage_end}. {snapshotOld ? 'This snapshot is over 30 minutes old. ' : ''}Slots can change; confirm on the booking site.</p>}
+      {view === 'time' && <p className="availability-note" role="status">Last checked {checkedAt} London time. {checkedVenues} of {venues.filter((venue) => venue.sport === sport).length} {sport} locations checked for {availability.coverage_start}–{availability.coverage_end}. {snapshotExpired ? 'This snapshot has expired. ' : snapshotOld ? 'This snapshot is over 30 minutes old. ' : ''}{!durationChecked ? `Only ${[...checkedDurations].join(' and ')}-minute bookings are covered. ` : ''}Slots can change; confirm on the booking site.</p>}
       {locationMessage && <p className="location-message" role="status">{locationMessage}</p>}
       <div className="court-grid">{results.slice(0, limit).map((venue) => {
         const display = venueDisplay(venue, mode, playDate);
         const release = display.release;
         const slotResult = view === 'time' ? availabilityForVenue(availability, venue.id, playDate, startTime, durationMinutes) : null;
         const slotPrices = slotResult?.slots.flatMap((slot) => slot.price_pence === null ? [] : [slot.price_pence]) ?? [];
-        const bookingUrl = slotResult?.slots[0]?.booking_url ?? bookingUrlFor(venue, playDate);
+        const opensAt = slotResult?.slots[0]?.booking_opens_at;
+        const bookingUrl = view === 'time' ? availabilityBookingUrl(availability, venue.id, playDate) ?? bookingUrlFor(venue, playDate) : bookingUrlFor(venue, playDate);
         const coordinate = venue.coordinate;
         const distance = userLocation && coordinate ? distanceMiles(userLocation, coordinate) : null;
         return <article className="court-card" key={venue.id}>
-          <div className="card-top"><span className={`status ${slotResult ? slotResult.status === 'available' ? 'good' : slotResult.status === 'none' ? 'bad' : 'neutral' : display.status.tone}`}>{slotResult ? ({ available: 'Seen free at last check', none: 'No free slot found', unsupported: 'Availability not checked', outside: 'Date not checked' } as const)[slotResult.status] : display.status.label}</span><button className="star" aria-label={`${favourites.includes(venue.id) ? 'Remove' : 'Add'} ${venue.name} ${favourites.includes(venue.id) ? 'from' : 'to'} favourites`} onClick={() => toggleFavourite(venue.id)}>{favourites.includes(venue.id) ? '★' : '☆'}</button></div>
+          <div className="card-top"><span className={`status ${slotResult ? slotResult.status === 'available' ? 'good' : slotResult.status === 'none' ? 'bad' : slotResult.status === 'unreleased' ? 'warn' : 'neutral' : display.status.tone}`}>{slotResult ? ({ available: 'Seen free at last check', unreleased: 'Not open when checked', none: 'No bookable slot seen', unsupported: 'Availability not checked', outside: 'Date not checked' } as const)[slotResult.status] : display.status.label}</span><button className="star" aria-label={`${favourites.includes(venue.id) ? 'Remove' : 'Add'} ${venue.name} ${favourites.includes(venue.id) ? 'from' : 'to'} favourites`} onClick={() => toggleFavourite(venue.id)}>{favourites.includes(venue.id) ? '★' : '☆'}</button></div>
           <h3>{venue.name}</h3><p className="location">{venue.area ? `${venue.area} · ` : ''}{venue.borough}{distance !== null && <strong> · {distance.toFixed(1)} miles away</strong>}</p>
           <div className="facts"><div><span>COURTS</span><strong>{venue.courts_total ?? '—'}</strong></div><div><span>LIGHT</span><strong>{display.lighting}</strong></div><div><span>PRICE</span><strong>{display.price}</strong><small>{display.priceUnit}</small></div></div>
           {display.rates.length > 0 && <details className="price-panel"><summary>Published rates · check final price</summary>{display.rates.map((option) => <div key={`${option.label}-${option.duration_minutes}`}><span>{option.label}</span><strong>£{option.amount_gbp}/{option.duration_minutes} min</strong></div>)}</details>}
           <p className="suitability">{display.suitability}</p>
-          {slotResult ? <div className={`release ${slotResult.status === 'available' ? 'open' : ''}`}><span>SELECTED TIME</span><strong>{slotResult.status === 'available' ? `${slotResult.slots.length} ${slotResult.slots.length === 1 ? 'court' : 'courts'} seen free at ${startTime}` : slotResult.status === 'none' ? `No ${durationMinutes}-minute slot at ${startTime}` : slotResult.status === 'outside' ? 'Date outside checked range' : 'Availability not checked here'}</strong><small>{slotResult.status === 'available' && slotPrices.length ? `From £${(Math.min(...slotPrices) / 100).toFixed(2)} for ${durationMinutes} minutes · ` : ''}Checked {checkedAt}; confirm before booking.</small></div> : <div className={`release ${release?.open ? 'open' : ''}`}><span>{display.releaseHeading}</span><strong>{display.releaseLabel}</strong><small>{display.releaseRule}</small></div>}
+          {slotResult ? <div className={`release ${slotResult.status === 'available' ? 'open' : ''}`}><span>SELECTED TIME</span><strong>{slotResult.status === 'available' ? `${slotResult.slots.length} ${slotResult.slots.length === 1 ? 'court' : 'courts'} seen free at ${startTime}` : slotResult.status === 'unreleased' ? 'Booking had not opened when checked' : slotResult.status === 'none' ? `No bookable ${durationMinutes}-minute slot seen at ${startTime}` : slotResult.status === 'outside' ? 'Date outside checked range' : 'Availability not checked here'}</strong><small>{slotResult.status === 'unsupported' ? 'Use the booking link to check this venue.' : slotResult.status === 'outside' ? `Snapshot covers ${availability.coverage_start}–${availability.coverage_end}.` : <>{slotResult.status === 'available' && slotPrices.length ? `From £${(Math.min(...slotPrices) / 100).toFixed(2)} for ${durationMinutes} minutes · ` : ''}{slotResult.status === 'unreleased' && opensAt ? `Booking opens ${londonDateTime.format(new Date(opensAt))} · ` : ''}Checked {checkedAt}; confirm before booking.</>}</small></div> : <div className={`release ${release?.open ? 'open' : ''}`}><span>{display.releaseHeading}</span><strong>{display.releaseLabel}</strong><small>{display.releaseRule}</small></div>}
           {coordinate && <details className="map-panel"><summary>View map</summary><iframe title={`Map showing ${venue.name}`} src={osmEmbedUrl(coordinate)} loading="lazy" referrerPolicy="strict-origin-when-cross-origin" /><div><a href={directionsUrl(venue)} target="_blank" rel="noreferrer">Directions from me ↗</a><a href={`https://www.openstreetmap.org/?mlat=${coordinate.latitude}&mlon=${coordinate.longitude}#map=16/${coordinate.latitude}/${coordinate.longitude}`} target="_blank" rel="noreferrer">Open larger map ↗</a></div><small>© OpenStreetMap contributors · Pin generated from venue name and borough</small></details>}
           <div className="actions">{bookingUrl && <a className="book" href={bookingUrl} target="_blank" rel="noreferrer">Check booking ↗</a>}<a href={directionsUrl(venue)} target="_blank" rel="noreferrer">Directions from me</a>{view === 'locations' && release && !release.open && <button onClick={() => downloadReminder(venue)}>Add reminder</button>}<a className="source" href={venue.sources[0]?.url} target="_blank" rel="noreferrer">Source</a></div>
         </article>;

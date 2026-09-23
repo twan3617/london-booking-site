@@ -63,6 +63,14 @@ def parse_slots(venue: Venue, payload: dict, play_date: date, detected_at: datet
         end_time = datetime.combine(play_date, _clock(ends.get("format_24_hour"), "end time"), LONDON)
         price = row.get("price")
         price_pence = price.get("raw") if isinstance(price, dict) else None
+        release = row.get("first_bookable_at")
+        if release is not None and not isinstance(release, dict):
+            raise ValueError("Invalid Better booking release")
+        raw_release = release.get("utc") if release else None
+        try:
+            booking_opens_at = datetime.fromisoformat(raw_release) if raw_release else None
+        except (TypeError, ValueError):
+            raise ValueError("Invalid Better booking release") from None
         slots.append(AvailabilitySlot(
             venue_id=venue.id,
             court_id=location["id"],
@@ -72,6 +80,7 @@ def parse_slots(venue: Venue, payload: dict, play_date: date, detected_at: datet
             price_pence=price_pence,
             booking_url=booking_url,
             detected_at=detected_at,
+            booking_opens_at=booking_opens_at,
         ))
     return tuple(slots)
 

@@ -7,6 +7,7 @@ import {
   directionsUrl,
   distanceMiles,
   availabilityForVenue,
+  availabilityBookingUrl,
   osmEmbedUrl,
   matchesVenue,
   publishedPriceRange,
@@ -43,6 +44,7 @@ const availability: AvailabilitySnapshot = {
   coverage_start: '2026-09-23',
   coverage_end: '2026-09-29',
   venue_ids: ['hyde-park'],
+  booking_urls: { 'hyde-park': 'https://example.com/book' },
   slots: [
     { venue_id: 'hyde-park', court_id: '1', start_time: '2026-09-26T19:00:00+01:00', end_time: '2026-09-26T20:00:00+01:00', available: true, price_pence: 1200, booking_url: 'https://example.com/26', detected_at: '2026-09-23T20:00:00Z' },
     { venue_id: 'hyde-park', court_id: '2', start_time: '2026-09-26T19:00:00+01:00', end_time: '2026-09-26T20:00:00+01:00', available: false, price_pence: 1200, booking_url: 'https://example.com/26', detected_at: '2026-09-23T20:00:00Z' },
@@ -61,6 +63,19 @@ test('time-first search separates no slots, unsupported venues and dates outside
   assert.deepEqual(availabilityForVenue(availability, 'hyde-park', '2026-09-26', '10:00', 60), { status: 'none', slots: [] });
   assert.deepEqual(availabilityForVenue(availability, 'another-venue', '2026-09-26', '19:00', 60), { status: 'unsupported', slots: [] });
   assert.deepEqual(availabilityForVenue(availability, 'hyde-park', '2026-09-30', '19:00', 60), { status: 'outside', slots: [] });
+});
+
+test('time-first search reports booking that had not opened at the last check', () => {
+  const unreleased = { ...availability.slots[1], booking_opens_at: '2026-09-24T21:00:00Z' };
+  const snapshot = { ...availability, slots: [unreleased] };
+  assert.deepEqual(availabilityForVenue(snapshot, 'hyde-park', '2026-09-26', '19:00', 60), {
+    status: 'unreleased', slots: [unreleased],
+  });
+});
+
+test('time-first booking link reaches the dated provider page without a free slot', () => {
+  assert.equal(availabilityBookingUrl(availability, 'hyde-park', '2026-09-26'), 'https://example.com/book/2026-09-26/by-time');
+  assert.equal(availabilityBookingUrl(availability, 'another-venue', '2026-09-26'), null);
 });
 
 test('Any price keeps venues whose price is unknown', () => {

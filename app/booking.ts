@@ -44,14 +44,22 @@ export type Filters = {
 
 export type Release = { date: string; time: string; open: boolean };
 export type Point = { latitude: number; longitude: number };
-export type AvailabilitySlot = { venue_id: string; court_id: string | null; start_time: string; end_time: string; available: boolean; price_pence: number | null; booking_url: string; detected_at: string };
-export type AvailabilitySnapshot = { generated_at: string; coverage_start: string; coverage_end: string; venue_ids: string[]; slots: AvailabilitySlot[] };
+export type AvailabilitySlot = { venue_id: string; court_id: string | null; start_time: string; end_time: string; available: boolean; price_pence: number | null; booking_url: string; detected_at: string; booking_opens_at?: string | null };
+export type AvailabilitySnapshot = { generated_at: string; coverage_start: string; coverage_end: string; venue_ids: string[]; booking_urls: Record<string, string>; slots: AvailabilitySlot[] };
 
-export function availabilityForVenue(snapshot: AvailabilitySnapshot, venueId: string, date: string, start: string, durationMinutes: number): { status: 'available' | 'none' | 'unsupported' | 'outside'; slots: AvailabilitySlot[] } {
+export function availabilityBookingUrl(snapshot: AvailabilitySnapshot, venueId: string, date: string): string | null {
+  const base = snapshot.booking_urls[venueId];
+  return base ? `${base}/${date}/by-time` : null;
+}
+
+export function availabilityForVenue(snapshot: AvailabilitySnapshot, venueId: string, date: string, start: string, durationMinutes: number): { status: 'available' | 'unreleased' | 'none' | 'unsupported' | 'outside'; slots: AvailabilitySlot[] } {
   if (!snapshot.venue_ids.includes(venueId)) return { status: 'unsupported', slots: [] };
   if (date < snapshot.coverage_start || date > snapshot.coverage_end) return { status: 'outside', slots: [] };
-  const slots = snapshot.slots.filter((slot) => slot.venue_id === venueId && slot.available && slot.start_time.slice(0, 10) === date && slot.start_time.slice(11, 16) === start && (Date.parse(slot.end_time) - Date.parse(slot.start_time)) / 60_000 === durationMinutes);
-  return { status: slots.length ? 'available' : 'none', slots };
+  const matching = snapshot.slots.filter((slot) => slot.venue_id === venueId && slot.start_time.slice(0, 10) === date && slot.start_time.slice(11, 16) === start && (Date.parse(slot.end_time) - Date.parse(slot.start_time)) / 60_000 === durationMinutes);
+  const available = matching.filter((slot) => slot.available);
+  if (available.length) return { status: 'available', slots: available };
+  const unreleased = matching.filter((slot) => slot.booking_opens_at && Date.parse(slot.booking_opens_at) > Date.parse(slot.detected_at));
+  return unreleased.length ? { status: 'unreleased', slots: unreleased } : { status: 'none', slots: [] };
 }
 
 export function parseCatalogue(catalogue: { venues: Venue[] }, prices: Record<string, PriceOption[] | null>, coordinates: Record<string, Point | null>): Venue[] {
