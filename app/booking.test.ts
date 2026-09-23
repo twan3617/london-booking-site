@@ -8,6 +8,7 @@ import {
   distanceMiles,
   availabilityForVenue,
   availabilityBookingUrl,
+  bookingAccountRequired,
   osmEmbedUrl,
   matchesVenue,
   publishedPriceRange,
@@ -76,6 +77,19 @@ test('time-first search reports booking that had not opened at the last check', 
 test('time-first booking link reaches the dated provider page without a free slot', () => {
   assert.equal(availabilityBookingUrl(availability, 'hyde-park', '2026-09-26'), 'https://example.com/book/2026-09-26/by-time');
   assert.equal(availabilityBookingUrl(availability, 'another-venue', '2026-09-26'), null);
+});
+
+test('ClubSpark opens the selected booking-sheet date and requires an account', () => {
+  const snapshot = {
+    ...availability,
+    booking_urls: { 'hyde-park': 'https://clubspark.lta.org.uk/BarkingPark' },
+    slots: [{ ...availability.slots[0], venue_id: 'hyde-park', court_id: 'court-1', start_time: '2026-09-26T07:00:00+01:00', end_time: '2026-09-26T08:00:00+01:00', available: true }],
+  };
+  assert.equal(availabilityBookingUrl(snapshot, 'hyde-park', '2026-09-26'), 'https://clubspark.lta.org.uk/BarkingPark/Booking/BookByDate#?date=2026-09-26');
+  assert.equal(availabilityForVenue(snapshot, 'hyde-park', '2026-09-26', '07:00', 60).status, 'available');
+  assert.equal(availabilityBookingUrl({ ...snapshot, booking_urls: { 'hyde-park': 'https://clubspark.lta.org.uk/BarkingPark/Booking/BookByDate' } }, 'hyde-park', '2026-09-26'), 'https://clubspark.lta.org.uk/BarkingPark/Booking/BookByDate#?date=2026-09-26');
+  assert.equal(bookingAccountRequired(snapshot, 'hyde-park'), true);
+  assert.equal(bookingAccountRequired(availability, 'hyde-park'), false);
 });
 
 test('Any price keeps venues whose price is unknown', () => {
