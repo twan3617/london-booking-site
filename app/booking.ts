@@ -73,6 +73,27 @@ export function availabilityForVenue(snapshot: AvailabilitySnapshot, venueId: st
   return unreleased.length ? { status: 'unreleased', slots: unreleased } : { status: 'none', slots: [] };
 }
 
+export function availabilityGrid(snapshot: AvailabilitySnapshot, venueIds: string[], durationMinutes: number) {
+  const days: string[] = [];
+  for (const day = new Date(`${snapshot.coverage_start}T00:00:00Z`); day.toISOString().slice(0, 10) <= snapshot.coverage_end; day.setUTCDate(day.getUTCDate() + 1)) {
+    days.push(day.toISOString().slice(0, 10));
+  }
+  const allowed = new Set(venueIds);
+  const times = new Set<string>();
+  const cells: Record<string, { venueIds: string[]; courtCount: number }> = {};
+  for (const slot of snapshot.slots) {
+    const date = slot.start_time.slice(0, 10);
+    if (!allowed.has(slot.venue_id) || date < snapshot.coverage_start || date > snapshot.coverage_end || (Date.parse(slot.end_time) - Date.parse(slot.start_time)) / 60_000 !== durationMinutes) continue;
+    const time = slot.start_time.slice(11, 16);
+    times.add(time);
+    if (!slot.available) continue;
+    const cell = cells[`${date}|${time}`] ??= { venueIds: [], courtCount: 0 };
+    if (!cell.venueIds.includes(slot.venue_id)) cell.venueIds.push(slot.venue_id);
+    cell.courtCount++;
+  }
+  return { days, times: [...times].sort(), cells };
+}
+
 export function parseCatalogue(catalogue: { venues: Venue[] }, prices: Record<string, PriceOption[] | null>, coordinates: Record<string, Point | null>): Venue[] {
   const ids = new Set(catalogue.venues.map((venue) => venue.id));
   if (ids.size !== catalogue.venues.length) throw new Error('Duplicate venue IDs');

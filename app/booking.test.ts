@@ -7,6 +7,7 @@ import {
   directionsUrl,
   distanceMiles,
   availabilityForVenue,
+  availabilityGrid,
   availabilityBookingUrl,
   bookingAccountRequired,
   osmEmbedUrl,
@@ -58,6 +59,26 @@ test('time-first search returns only bookable slots at the exact start and durat
   });
   assert.deepEqual(availabilityForVenue(availability, 'hyde-park', '2026-09-26', '18:00', 60), { status: 'none', slots: [] });
   assert.deepEqual(availabilityForVenue(availability, 'hyde-park', '2026-09-26', '19:00', 90), { status: 'none', slots: [] });
+});
+
+test('time grid groups free courts by day and start time within filtered venues', () => {
+  const free = availability.slots[0];
+  const snapshot = { ...availability, venue_ids: ['hyde-park', 'other'], slots: [
+    free,
+    { ...free, court_id: '3' },
+    availability.slots[1],
+    { ...free, venue_id: 'other', court_id: '4' },
+    { ...free, start_time: '2026-09-27T18:00:00+01:00', end_time: '2026-09-27T19:00:00+01:00' },
+    { ...free, start_time: '2026-09-26T18:00:00+01:00', end_time: '2026-09-26T19:30:00+01:00' },
+  ] };
+
+  const grid = availabilityGrid(snapshot, ['hyde-park', 'other'], 60);
+  assert.deepEqual(grid.days, ['2026-09-23', '2026-09-24', '2026-09-25', '2026-09-26', '2026-09-27', '2026-09-28', '2026-09-29']);
+  assert.deepEqual(grid.times, ['18:00', '19:00']);
+  assert.deepEqual(grid.cells['2026-09-26|19:00'], { venueIds: ['hyde-park', 'other'], courtCount: 3 });
+  assert.deepEqual(grid.cells['2026-09-27|18:00'], { venueIds: ['hyde-park'], courtCount: 1 });
+  assert.equal(grid.cells['2026-09-24|19:00'], undefined);
+  assert.deepEqual(availabilityGrid(snapshot, ['other'], 60).cells['2026-09-26|19:00'], { venueIds: ['other'], courtCount: 1 });
 });
 
 test('time-first search separates no slots, unsupported venues and dates outside coverage', () => {

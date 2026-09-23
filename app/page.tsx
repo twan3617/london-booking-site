@@ -5,7 +5,7 @@ import catalogue from '../data/venues.json';
 import coordinateData from '../data/coordinates.json';
 import priceData from '../data/prices.json';
 import availabilityData from '../data/availability.json';
-import { availabilityBookingUrl, availabilityForVenue, bookingAccountRequired, bookingUrlFor, calendarText, directionsUrl, distanceMiles, matchesVenue, osmEmbedUrl, parseCatalogue, prettyDate, releaseDetails, venueDisplay, withinBookingWindow, type AvailabilitySnapshot, type Filters, type Mode, type Point, type PriceOption, type Sport, type Venue } from './booking';
+import { availabilityBookingUrl, availabilityForVenue, availabilityGrid, bookingAccountRequired, bookingUrlFor, calendarText, directionsUrl, distanceMiles, matchesVenue, osmEmbedUrl, parseCatalogue, prettyDate, releaseDetails, venueDisplay, withinBookingWindow, type AvailabilitySnapshot, type Filters, type Mode, type Point, type PriceOption, type Sport, type Venue } from './booking';
 
 const priceOptions = priceData as Record<string, PriceOption[] | null>;
 const venues = parseCatalogue(catalogue as unknown as { venues: Venue[] }, priceOptions, coordinateData as Record<string, Point | null>);
@@ -27,7 +27,6 @@ export default function Home() {
   const [playDate, setPlayDate] = useState(nextSaturday);
   const [startTime, setStartTime] = useState('19:00');
   const [durationMinutes, setDurationMinutes] = useState(60);
-  const [availableOnly, setAvailableOnly] = useState(true);
   const [query, setQuery] = useState('');
   const [borough, setBorough] = useState('');
   const [facility, setFacility] = useState<Filters['facility']>('any');
@@ -42,13 +41,10 @@ export default function Home() {
   const [currentTime, setCurrentTime] = useState<number | null>(null);
   const boroughs = useMemo(() => [...new Set(venues.filter((venue) => venue.sport === sport).map((venue) => venue.borough))].sort(), [sport]);
   const checkedVenues = venues.filter((venue) => venue.sport === sport && availability.venue_ids.includes(venue.id)).length;
-  const dateCovered = playDate >= availability.coverage_start && playDate <= availability.coverage_end;
   const snapshotOld = currentTime !== null && currentTime - Date.parse(availability.generated_at) > 30 * 60_000;
   const londonToday = currentTime === null ? '' : new Intl.DateTimeFormat('sv-SE', { timeZone: 'Europe/London', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date(currentTime));
   const snapshotExpired = londonToday > availability.coverage_end;
   const durationChecked = checkedDurations.has(durationMinutes);
-  const emptyTitle = view === 'locations' ? 'No matching courts' : snapshotExpired ? 'Availability snapshot expired' : favouritesOnly ? 'No favourites match' : !dateCovered ? 'Date not checked' : !checkedVenues ? 'Availability not checked yet' : !durationChecked ? 'Duration not checked' : availableOnly ? 'No bookable slots seen' : 'No locations match';
-  const emptyHint = view === 'locations' ? 'Try showing every status or removing a price cap.' : snapshotExpired ? 'Browse locations and check directly with the booking provider until a new snapshot is published.' : favouritesOnly ? 'Turn off Favourites to see other locations.' : !dateCovered ? 'Choose a date inside the checked range.' : !checkedVenues ? `No ${sport} venues have an availability feed in this pilot.` : !durationChecked ? `The current snapshot only contains ${[...checkedDurations].join(' and ')}-minute bookings.` : availableOnly ? 'Try another time or turn off Available only to see full and not-yet-open slots.' : 'Try changing the search or filters.';
 
   useEffect(() => {
     const timer = window.setTimeout(() => {
@@ -67,7 +63,7 @@ export default function Home() {
   const results = useMemo(() => {
     const filters: Filters = { sport, mode, borough, query, facility, status: view === 'time' || mode === 'weekend' ? 'all' : status, maxPrice: view === 'time' || sport !== 'tennis' || maxPrice === '' ? null : Number(maxPrice) };
     return venues
-      .filter((venue) => matchesVenue(venue, filters) && (view === 'time' ? !snapshotExpired && (!availableOnly || availabilityForVenue(availability, venue.id, playDate, startTime, durationMinutes).status === 'available') : withinBookingWindow(venue, playDate)) && (!favouritesOnly || favourites.includes(venue.id)))
+      .filter((venue) => matchesVenue(venue, filters) && (view === 'time' || withinBookingWindow(venue, playDate)) && (!favouritesOnly || favourites.includes(venue.id)))
       .sort((a, b) => {
         if (sortOrder === 'distance' && userLocation) {
           const aDistance = a.coordinate ? distanceMiles(userLocation, a.coordinate) : Infinity;
@@ -76,7 +72,10 @@ export default function Home() {
         }
         return Number(favourites.includes(b.id)) - Number(favourites.includes(a.id)) || ['suitable', 'seasonal', 'unknown', 'unsuitable'].indexOf(a.evening_assessment) - ['suitable', 'seasonal', 'unknown', 'unsuitable'].indexOf(b.evening_assessment) || a.name.localeCompare(b.name);
       });
-  }, [view, sport, mode, playDate, startTime, durationMinutes, availableOnly, snapshotExpired, borough, query, facility, status, maxPrice, favourites, favouritesOnly, sortOrder, userLocation]);
+  }, [view, sport, mode, playDate, borough, query, facility, status, maxPrice, favourites, favouritesOnly, sortOrder, userLocation]);
+  const grid = useMemo(() => availabilityGrid(availability, results.map((venue) => venue.id), durationMinutes), [results, durationMinutes]);
+  const selectedCell = grid.cells[`${playDate}|${startTime}`];
+  const selectedVenues = results.filter((venue) => selectedCell?.venueIds.includes(venue.id));
 
   function toggleFavourite(id: string) {
     const next = favourites.includes(id) ? favourites.filter((item) => item !== id) : [...favourites, id];
@@ -122,8 +121,7 @@ export default function Home() {
         <button className={mode === 'weekend' ? 'active' : ''} onClick={() => setMode('weekend')}>Weekend daytime <small>09:00–17:00</small></button>
       </div>}
       <div className={`filter-grid ${view === 'time' ? 'time-filters' : ''}`}>
-        <label>Playing date<input type="date" value={playDate} onChange={(event) => { if (event.target.value) setPlayDate(event.target.value); }} /></label>
-        {view === 'time' && <label>Start time<input type="time" step="1800" value={startTime} onChange={(event) => setStartTime(event.target.value)} /></label>}
+        {view === 'locations' && <label>Playing date<input type="date" value={playDate} onChange={(event) => { if (event.target.value) setPlayDate(event.target.value); }} /></label>}
         {view === 'time' && <label>Duration<select value={durationMinutes} onChange={(event) => setDurationMinutes(Number(event.target.value))}><option value={30}>30 minutes</option><option value={45}>45 minutes</option><option value={60}>60 minutes</option><option value={90}>90 minutes</option></select></label>}
         <label>Search<input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Court, area or borough" /></label>
         <label>Borough<select value={borough} onChange={(event) => setBorough(event.target.value)}><option value="">All London</option>{boroughs.map((item) => <option key={item}>{item}</option>)}</select></label>
@@ -134,40 +132,52 @@ export default function Home() {
     </section>
 
     <section className="results">
-      <div className="results-head"><div><p className="eyebrow">{prettyDate(playDate)}{view === 'time' ? ` · ${startTime} · ${durationMinutes} min` : ''}</p><h2>{view === 'time' ? `${results.length} locations match` : `${results.length} courts match`}</h2></div><div className="result-tools"><label>Sort<select value={sortOrder} onChange={(event) => chooseSort(event.target.value as 'recommended' | 'distance')}><option value="recommended">Recommended</option><option value="distance">Nearest to me</option></select></label>{view === 'time' && <button type="button" className={`favourites-toggle ${availableOnly ? 'active' : ''}`} aria-pressed={availableOnly} onClick={() => setAvailableOnly(!availableOnly)}>Available only</button>}<button className={`favourites-toggle ${favouritesOnly ? 'active' : ''}`} onClick={() => setFavouritesOnly(!favouritesOnly)}>★ Favourites {favourites.length || ''}</button></div></div>
+      <div className="results-head"><div><p className="eyebrow">{view === 'time' ? `${prettyDate(availability.coverage_start)}–${prettyDate(availability.coverage_end)} · ${durationMinutes} min` : prettyDate(playDate)}</p><h2>{view === 'time' ? 'Availability by time' : `${results.length} courts match`}</h2></div><div className="result-tools"><label>Sort<select value={sortOrder} onChange={(event) => chooseSort(event.target.value as 'recommended' | 'distance')}><option value="recommended">Recommended</option><option value="distance">Nearest to me</option></select></label><button className={`favourites-toggle ${favouritesOnly ? 'active' : ''}`} onClick={() => setFavouritesOnly(!favouritesOnly)}>★ Favourites {favourites.length || ''}</button></div></div>
       {view === 'time' && <p className="availability-note" role="status">Last checked {checkedAt} London time. {checkedVenues} of {venues.filter((venue) => venue.sport === sport).length} {sport} locations checked for {availability.coverage_start}–{availability.coverage_end}. {snapshotExpired ? 'This snapshot has expired. ' : snapshotOld ? 'This snapshot is over 30 minutes old. ' : ''}{!durationChecked ? `Only ${[...checkedDurations].join(' and ')}-minute bookings are covered. ` : ''}Slots can change; confirm on the booking site.</p>}
       {locationMessage && <p className="location-message" role="status">{locationMessage}</p>}
-      <div className="court-grid">{results.slice(0, limit).map((venue) => {
+      {view === 'time' && (snapshotExpired || !grid.times.length ? <div className="empty"><h3>{snapshotExpired ? 'Availability snapshot expired' : !checkedVenues ? 'Availability not checked yet' : !durationChecked ? 'Duration not checked' : 'No checked times match'}</h3><p>{snapshotExpired ? 'Browse locations and check directly with the booking provider until a new snapshot is published.' : !checkedVenues ? `No ${sport} locations have an availability feed in this pilot.` : !durationChecked ? `The current snapshot only contains ${[...checkedDurations].join(' and ')}-minute bookings.` : 'Try removing a filter or choosing another sport.'}</p></div> : <>
+        <p className="grid-legend">Each cell counts locations seen free at the last check. A dash means none seen among the checked venues.</p>
+        <div className="time-grid-scroll" role="region" aria-label="Court availability by day and time" tabIndex={0}>
+          <table className="time-grid">
+            <thead><tr><th scope="col">Start</th>{grid.days.map((day) => <th scope="col" key={day}>{prettyDate(day).replace(/ \d{4}$/, '')}</th>)}</tr></thead>
+            <tbody>{grid.times.map((time) => <tr key={time}><th scope="row">{time}</th>{grid.days.map((day) => {
+              const cell = grid.cells[`${day}|${time}`];
+              const count = cell?.venueIds.length ?? 0;
+              return <td key={day}><button type="button" className={`time-cell ${count ? 'has-slots' : ''} ${playDate === day && startTime === time ? 'selected' : ''}`} aria-label={`${prettyDate(day)} at ${time}: ${count} locations, ${cell?.courtCount ?? 0} courts seen free`} aria-pressed={playDate === day && startTime === time} onClick={() => { setPlayDate(day); setStartTime(time); setLimit(24); requestAnimationFrame(() => document.getElementById('selected-time-locations')?.scrollIntoView({ behavior: 'smooth', block: 'start' })); }}><strong>{count || '—'}</strong>{count > 0 && <small>{cell.courtCount} {cell.courtCount === 1 ? 'court' : 'courts'}</small>}</button></td>;
+            })}</tr>)}</tbody>
+          </table>
+        </div>
+        {grid.days.includes(playDate) && grid.times.includes(startTime) ? <section id="selected-time-locations" className="time-selection" aria-label="Locations at selected time" aria-live="polite">
+          <div className="time-selection-head"><div><p className="eyebrow">SELECTED TIME</p><h3>{prettyDate(playDate)} · {startTime}</h3></div><p>{selectedVenues.length} {selectedVenues.length === 1 ? 'location' : 'locations'} · {selectedCell?.courtCount ?? 0} {selectedCell?.courtCount === 1 ? 'court' : 'courts'} seen free</p></div>
+          {selectedVenues.length ? <div className="time-location-list">{selectedVenues.slice(0, limit).map((venue) => {
+            const slots = availabilityForVenue(availability, venue.id, playDate, startTime, durationMinutes).slots;
+            const prices = slots.flatMap((slot) => slot.price_pence === null ? [] : [slot.price_pence]);
+            const bookingUrl = availabilityBookingUrl(availability, venue.id, playDate) ?? bookingUrlFor(venue, playDate);
+            const distance = userLocation && venue.coordinate ? distanceMiles(userLocation, venue.coordinate) : null;
+            return <article className="time-location" key={venue.id}><div><h4>{venue.name}</h4><p>{venue.area ? `${venue.area} · ` : ''}{venue.borough} · {slots.length} {slots.length === 1 ? 'court' : 'courts'} seen free{prices.length ? ` · From £${(Math.min(...prices) / 100).toFixed(2)} for ${durationMinutes} min` : ''}{distance !== null ? ` · ${distance.toFixed(1)} miles away` : ''}</p>{bookingAccountRequired(availability, venue.id) && <small>ClubSpark account required to book.</small>}</div><div className="time-location-actions"><button className="star" aria-label={`${favourites.includes(venue.id) ? 'Remove' : 'Add'} ${venue.name} ${favourites.includes(venue.id) ? 'from' : 'to'} favourites`} onClick={() => toggleFavourite(venue.id)}>{favourites.includes(venue.id) ? '★' : '☆'}</button>{bookingUrl && <a href={bookingUrl} target="_blank" rel="noreferrer">Check booking ↗</a>}</div></article>;
+          })}</div> : <p className="no-time-locations">No free courts seen among checked locations at this time. Try another cell.</p>}
+          {selectedVenues.length > limit && <button className="show-more" onClick={() => setLimit(limit + 24)}>Show 24 more</button>}
+        </section> : <p className="no-time-locations">Choose a cell to see available locations.</p>}
+      </>)}
+      {view === 'locations' && <div className="court-grid">{results.slice(0, limit).map((venue) => {
         const display = venueDisplay(venue, mode, playDate);
         const release = display.release;
-        const slotResult = view === 'time' ? availabilityForVenue(availability, venue.id, playDate, startTime, durationMinutes) : null;
-        const slotPrices = slotResult?.slots.flatMap((slot) => slot.price_pence === null ? [] : [slot.price_pence]) ?? [];
-        const opensAt = slotResult?.slots[0]?.booking_opens_at;
-        const bookingUrl = view === 'time' ? availabilityBookingUrl(availability, venue.id, playDate) ?? bookingUrlFor(venue, playDate) : bookingUrlFor(venue, playDate);
+        const bookingUrl = bookingUrlFor(venue, playDate);
         const coordinate = venue.coordinate;
         const distance = userLocation && coordinate ? distanceMiles(userLocation, coordinate) : null;
         return <article className="court-card" key={venue.id}>
-          <div className="card-top"><span className={`status ${slotResult ? slotResult.status === 'available' ? 'good' : slotResult.status === 'none' ? 'bad' : slotResult.status === 'unreleased' ? 'warn' : 'neutral' : display.status.tone}`}>{slotResult ? ({ available: 'Seen free at last check', unreleased: 'Not open when checked', none: 'No bookable slot seen', unsupported: 'Availability not checked', outside: 'Date not checked' } as const)[slotResult.status] : display.status.label}</span><button className="star" aria-label={`${favourites.includes(venue.id) ? 'Remove' : 'Add'} ${venue.name} ${favourites.includes(venue.id) ? 'from' : 'to'} favourites`} onClick={() => toggleFavourite(venue.id)}>{favourites.includes(venue.id) ? '★' : '☆'}</button></div>
+          <div className="card-top"><span className={`status ${display.status.tone}`}>{display.status.label}</span><button className="star" aria-label={`${favourites.includes(venue.id) ? 'Remove' : 'Add'} ${venue.name} ${favourites.includes(venue.id) ? 'from' : 'to'} favourites`} onClick={() => toggleFavourite(venue.id)}>{favourites.includes(venue.id) ? '★' : '☆'}</button></div>
           <h3>{venue.name}</h3><p className="location">{venue.area ? `${venue.area} · ` : ''}{venue.borough}{distance !== null && <strong> · {distance.toFixed(1)} miles away</strong>}</p>
           <div className="facts"><div><span>COURTS</span><strong>{venue.courts_total ?? '—'}</strong></div><div><span>LIGHT</span><strong>{display.lighting}</strong></div><div><span>PRICE</span><strong>{display.price}</strong><small>{display.priceUnit}</small></div></div>
           {display.rates.length > 0 && <details className="price-panel"><summary>Published rates · check final price</summary>{display.rates.map((option) => <div key={`${option.label}-${option.duration_minutes}`}><span>{option.label}</span><strong>£{option.amount_gbp}/{option.duration_minutes} min</strong></div>)}</details>}
           <p className="suitability">{display.suitability}</p>
-          {slotResult ? <div className={`release ${slotResult.status === 'available' ? 'open' : ''}`}>
-            <span>SELECTED TIME</span>
-            <strong>{slotResult.status === 'available' ? `${slotResult.slots.length} ${slotResult.slots.length === 1 ? 'court' : 'courts'} seen free at ${startTime}` : slotResult.status === 'unreleased' ? 'Booking had not opened when checked' : slotResult.status === 'none' ? `No bookable ${durationMinutes}-minute slot seen at ${startTime}` : slotResult.status === 'outside' ? 'Date outside checked range' : 'Availability not checked here'}</strong>
-            <small>{slotResult.status === 'unsupported' ? 'Use the booking link to check this venue.' : slotResult.status === 'outside' ? `Snapshot covers ${availability.coverage_start}–${availability.coverage_end}.` : <>
-              {slotResult.status === 'available' && slotPrices.length ? `From £${(Math.min(...slotPrices) / 100).toFixed(2)} for ${durationMinutes} minutes · ` : ''}
-              {slotResult.status === 'unreleased' && opensAt ? `Booking opens ${londonDateTime.format(new Date(opensAt))} · ` : ''}
-              Checked {checkedAt}; confirm before booking.
-              {bookingAccountRequired(availability, venue.id) ? ' ClubSpark account required to book.' : ''}
-            </>}</small>
-          </div> : <div className={`release ${release?.open ? 'open' : ''}`}><span>{display.releaseHeading}</span><strong>{display.releaseLabel}</strong><small>{display.releaseRule}</small></div>}
+          <div className={`release ${release?.open ? 'open' : ''}`}><span>{display.releaseHeading}</span><strong>{display.releaseLabel}</strong><small>{display.releaseRule}</small></div>
           {coordinate && <details className="map-panel"><summary>View map</summary><iframe title={`Map showing ${venue.name}`} src={osmEmbedUrl(coordinate)} loading="lazy" referrerPolicy="strict-origin-when-cross-origin" /><div><a href={directionsUrl(venue)} target="_blank" rel="noreferrer">Directions from me ↗</a><a href={`https://www.openstreetmap.org/?mlat=${coordinate.latitude}&mlon=${coordinate.longitude}#map=16/${coordinate.latitude}/${coordinate.longitude}`} target="_blank" rel="noreferrer">Open larger map ↗</a></div><small>© OpenStreetMap contributors · Pin generated from venue name and borough</small></details>}
-          <div className="actions">{bookingUrl && <a className="book" href={bookingUrl} target="_blank" rel="noreferrer">Check booking ↗</a>}<a href={directionsUrl(venue)} target="_blank" rel="noreferrer">Directions from me</a>{view === 'locations' && release && !release.open && <button onClick={() => downloadReminder(venue)}>Add reminder</button>}<a className="source" href={venue.sources[0]?.url} target="_blank" rel="noreferrer">Source</a></div>
+          <div className="actions">{bookingUrl && <a className="book" href={bookingUrl} target="_blank" rel="noreferrer">Check booking ↗</a>}<a href={directionsUrl(venue)} target="_blank" rel="noreferrer">Directions from me</a>{release && !release.open && <button onClick={() => downloadReminder(venue)}>Add reminder</button>}<a className="source" href={venue.sources[0]?.url} target="_blank" rel="noreferrer">Source</a></div>
         </article>;
-      })}</div>
-      {!results.length && <div className="empty"><h3>{emptyTitle}</h3><p>{emptyHint}</p></div>}
-      {results.length > limit && <button className="show-more" onClick={() => setLimit(limit + 24)}>Show 24 more</button>}
+      })}</div>}
+      {view === 'locations' && !results.length && <div className="empty"><h3>No matching courts</h3><p>Try showing every status or removing a price cap.</p></div>}
+      {view === 'locations' && results.length > limit && <button className="show-more" onClick={() => setLimit(limit + 24)}>Show 24 more</button>}
     </section>
   </main>;
 }
