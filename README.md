@@ -1,6 +1,6 @@
 # Public Courts Across London
 
-A local planner for public tennis, squash and padel courts in London. It shows researched booking rules, indicative prices, evening suitability, maps and distance sorting. It does not show live court availability or make bookings.
+A local planner for public tennis, squash and padel courts in London. It shows researched booking rules, indicative prices, evening suitability, maps and distance sorting. Its time-first view shows the most recently saved availability snapshot for supported venues; it does not book courts.
 
 ## Run locally
 
@@ -77,3 +77,13 @@ Run the supported pilot venues with the Python interpreter:
 ```
 
 The script fetches the three tested ClubSpark venues and two mapped Better OpenActive venues, applies only the fields present in each patch, prints the change report, and atomically writes `data/ingestion-metadata.json`. Invalid responses abort the run. Omitted fields retain their saved values; explicit collection shrinkage is blocked. The frontend JSON is not changed.
+
+## Availability pilot
+
+Refresh the next seven days of configured Better availability with:
+
+```bash
+.venv/bin/python scripts/refresh_availability.py
+```
+
+The first pilot reads Gunnersbury's public date-scoped booking JSON and atomically writes provider-independent slots to `data/availability.json`. The site's **Find a time** view matches the selected date, exact start time and duration, shows the snapshot's check time, and links to Better for the actual booking. Only Gunnersbury is checked; other venues remain visibly unverified. Run the refresh again and rebuild/redeploy the site to publish newer slots. The script is not scheduled, so saved slots can become stale.

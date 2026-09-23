@@ -20,6 +20,7 @@ class Venue:
     provider: Provider
     booking_url: str
     metadata_sources: tuple[str, ...]
+    availability_url: str | None = None
 
 
 @dataclass(frozen=True)
@@ -49,6 +50,37 @@ class VenueMetadata:
     slot_duration_minutes: int | None = None
     opening_hours: dict[str, tuple[tuple[time, time], ...]] | None = None
     membership_required: bool | None = None
+
+
+@dataclass(frozen=True)
+class AvailabilitySlot:
+    venue_id: str
+    court_id: str | None
+    start_time: datetime
+    end_time: datetime
+    available: bool
+    price_pence: int | None
+    booking_url: str
+    detected_at: datetime
+
+    def __post_init__(self):
+        booking = urlparse(self.booking_url) if isinstance(self.booking_url, str) else None
+        if not isinstance(self.venue_id, str) or not self.venue_id.strip():
+            raise ValueError("Availability venue ID is required")
+        if self.court_id is not None and (not isinstance(self.court_id, str) or not self.court_id.strip()):
+            raise ValueError("Availability court ID must be non-empty")
+        if not isinstance(self.start_time, datetime) or self.start_time.tzinfo is None:
+            raise ValueError("Availability start time must include a timezone")
+        if not isinstance(self.end_time, datetime) or self.end_time.tzinfo is None or self.end_time <= self.start_time:
+            raise ValueError("Availability end time must follow the start time")
+        if not isinstance(self.available, bool):
+            raise ValueError("Availability status must be boolean")
+        if self.price_pence is not None and (type(self.price_pence) is not int or self.price_pence < 0):
+            raise ValueError("Availability price must be non-negative pence")
+        if not booking or booking.scheme not in {"http", "https"} or not booking.hostname:
+            raise ValueError("Availability booking URL must be HTTP or HTTPS")
+        if not isinstance(self.detected_at, datetime) or self.detected_at.tzinfo is None:
+            raise ValueError("Availability detected time must include a timezone")
 
 
 class MetadataField(StrEnum):

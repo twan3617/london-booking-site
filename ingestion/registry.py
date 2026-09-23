@@ -48,5 +48,6 @@ def load_registry(path: Path) -> tuple[Venue, ...]:
             provider=row["provider"],
             booking_url=_web_url(row.get("booking_url"), "booking URL"),
             metadata_sources=tuple(_web_url(source, "metadata URL") for source in sources),
+            availability_url=_web_url(row["availability_url"], "availability URL") if row.get("availability_url") is not None else None,
         ))
     return tuple(venues)

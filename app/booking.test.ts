@@ -6,6 +6,7 @@ import {
   bookingUrlFor,
   directionsUrl,
   distanceMiles,
+  availabilityForVenue,
   osmEmbedUrl,
   matchesVenue,
   publishedPriceRange,
@@ -15,6 +16,7 @@ import {
   relevantHourlyPrice,
   withinBookingWindow,
   type Venue,
+  type AvailabilitySnapshot,
 } from './booking.ts';
 
 const venue: Venue = {
@@ -35,6 +37,31 @@ const venue: Venue = {
   checked_on: '2026-09-14',
   sources: [{ url: 'https://example.com/source', supports: 'Details' }],
 };
+
+const availability: AvailabilitySnapshot = {
+  generated_at: '2026-09-23T20:00:00Z',
+  coverage_start: '2026-09-23',
+  coverage_end: '2026-09-29',
+  venue_ids: ['hyde-park'],
+  slots: [
+    { venue_id: 'hyde-park', court_id: '1', start_time: '2026-09-26T19:00:00+01:00', end_time: '2026-09-26T20:00:00+01:00', available: true, price_pence: 1200, booking_url: 'https://example.com/26', detected_at: '2026-09-23T20:00:00Z' },
+    { venue_id: 'hyde-park', court_id: '2', start_time: '2026-09-26T19:00:00+01:00', end_time: '2026-09-26T20:00:00+01:00', available: false, price_pence: 1200, booking_url: 'https://example.com/26', detected_at: '2026-09-23T20:00:00Z' },
+  ],
+};
+
+test('time-first search returns only bookable slots at the exact start and duration', () => {
+  assert.deepEqual(availabilityForVenue(availability, 'hyde-park', '2026-09-26', '19:00', 60), {
+    status: 'available', slots: [availability.slots[0]],
+  });
+  assert.deepEqual(availabilityForVenue(availability, 'hyde-park', '2026-09-26', '18:00', 60), { status: 'none', slots: [] });
+  assert.deepEqual(availabilityForVenue(availability, 'hyde-park', '2026-09-26', '19:00', 90), { status: 'none', slots: [] });
+});
+
+test('time-first search separates no slots, unsupported venues and dates outside coverage', () => {
+  assert.deepEqual(availabilityForVenue(availability, 'hyde-park', '2026-09-26', '10:00', 60), { status: 'none', slots: [] });
+  assert.deepEqual(availabilityForVenue(availability, 'another-venue', '2026-09-26', '19:00', 60), { status: 'unsupported', slots: [] });
+  assert.deepEqual(availabilityForVenue(availability, 'hyde-park', '2026-09-30', '19:00', 60), { status: 'outside', slots: [] });
+});
 
 test('Any price keeps venues whose price is unknown', () => {
   assert.equal(matchesVenue({ ...venue, price_text: null }, {
