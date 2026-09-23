@@ -1,0 +1,190 @@
+{
+  "data": [
+    {
+      "id": "AQGd9z1YXPZjmvO2hKu395YFJgfFlyaVsA",
+      "name": "Tennis Court - Outdoor (Floodlit)",
+      "allows_anonymous_bookings": false,
+      "pre_booking_notice": null,
+      "root_activity_category": {
+        "v2": true,
+        "id": "019a4a46-d608-71ac-9dd4-35f7fea20b65",
+        "v2Id": "019a4a46-d608-71ac-9dd4-35f7fea20b65",
+        "name": "Tennis",
+        "slug": "tennis",
+        "v2_slug": "tennis",
+        "v1_slug": null,
+        "path": "tennis",
+        "v1_type": null,
+        "v2_type": null,
+        "allocation_strategy": "customer",
+        "image": "",
+        "parent_slug": null,
+        "has_children": false,
+        "is_root": true
+      },
+      "category_slug": "tennis-court-outdoor",
+      "duration": "60min",
+      "instructors": [],
+      "date": {
+        "raw": "2026-09-26",
+        "raw_pretty": "26/09/2026",
+        "day_pretty": "Sat",
+        "date_pretty": "26 Sep",
+        "full_date_pretty": "Sat 26 September 2026",
+        "full_date": "26 September 2026",
+        "difference": "4 days from now",
+        "tz": "Europe/London"
+      },
+      "location": {
+        "id": "481",
+        "name": "Tennis Court 1, Tennis Courts, Gunnersbury Park Sports Hub",
+        "type": "resource",
+        "slug": "tennis-court-1-tennis-courts-gunnersbury-park-sports-hub",
+        "venue_id": 90049,
+        "venue_slug": "gunnersbury-park-sports-hub"
+      },
+      "slot_display_location": "Tennis Court 1, Tennis Courts, Gunnersbury Park Sports Hub",
+      "price": {
+        "benefit_applied": false,
+        "package_applied": false,
+        "formatted": "\u00a313.45",
+        "raw": 1345
+      },
+      "starts_at": {
+        "format_12_hour": "7:00pm",
+        "format_24_hour": "19:00"
+      },
+      "ends_at": {
+        "format_12_hour": "8:00pm",
+        "format_24_hour": "20:00"
+      },
+      "first_bookable_at": {
+        "utc": "2026-09-20T21:00:00+00:00",
+        "local": "2026-09-20T22:00:00+01:00",
+        "timezone": "Europe/London",
+        "format_12_hour": "10:00pm",
+        "format_24_hour": "22:00"
+      },
+      "last_bookable_at": {
+        "format_12_hour": "7:10pm",
+        "format_24_hour": "19:10"
+      },
+      "venue_name": "Gunnersbury Park Sports Hub",
+      "pricing_option_id": 1083,
+      "cart_type": "purchasableOccurrence",
+      "composite_key": "a8275716",
+      "booking": null,
+      "bookings_count": 1,
+      "spaces": 0,
+      "capacity": 1,
+      "action_to_show": {
+        "status": "FULL",
+        "reason": "The session being booked is already full"
+      },
+      "waitlist_id": null,
+      "restrictions": {
+        "pre_waiver": null,
+        "pre_induction": null,
+        "criteria": null
+      },
+      "has_pre_purchase_restrictions": false,
+      "requires_induction": false,
+      "restriction_ids": [],
+      "benefit_available": null,
+      "tags": []
+    },
+    {
+      "id": "AQGd9zzTVvjpsUdYoAH_rVEFJgfFlyaVsA",
+      "name": "Tennis Court - Outdoor (Floodlit)",
+      "allows_anonymous_bookings": false,
+      "pre_booking_notice": null,
+      "root_activity_category": {
+        "v2": true,
+        "id": "019a4a46-d608-71ac-9dd4-35f7fea20b65",
+        "v2Id": "019a4a46-d608-71ac-9dd4-35f7fea20b65",
+        "name": "Tennis",
+        "slug": "tennis",
+        "v2_slug": "tennis",
+        "v1_slug": null,
+        "path": "tennis",
+        "v1_type": null,
+        "v2_type": null,
+        "allocation_strategy": "customer",
+        "image": "",
+        "parent_slug": null,
+        "has_children": false,
+        "is_root": true
+      },
+      "category_slug": "tennis-court-outdoor",
+      "duration": "60min",
+      "instructors": [],
+      "date": {
+        "raw": "2026-09-26",
+        "raw_pretty": "26/09/2026",
+        "day_pretty": "Sat",
+        "date_pretty": "26 Sep",
+        "full_date_pretty": "Sat 26 September 2026",
+        "full_date": "26 September 2026",
+        "difference": "4 days from now",
+        "tz": "Europe/London"
+      },
+      "location": {
+        "id": "482",
+        "name": "Tennis Court 2, Tennis Courts, Gunnersbury Park Sports Hub",
+        "type": "resource",
+        "slug": "tennis-court-2-tennis-courts-gunnersbury-park-sports-hub",
+        "venue_id": 90049,
+        "venue_slug": "gunnersbury-park-sports-hub"
+      },
+      "slot_display_location": "Tennis Court 2, Tennis Courts, Gunnersbury Park Sports Hub",
+      "price": {
+        "benefit_applied": false,
+        "package_applied": false,
+        "formatted": "\u00a313.45",
+        "raw": 1345
+      },
+      "starts_at": {
+        "format_12_hour": "7:00pm",
+        "format_24_hour": "19:00"
+      },
+      "ends_at": {
+        "format_12_hour": "8:00pm",
+        "format_24_hour": "20:00"
+      },
+      "first_bookable_at": {
+        "utc": "2026-09-20T21:00:00+00:00",
+        "local": "2026-09-20T22:00:00+01:00",
+        "timezone": "Europe/London",
+        "format_12_hour": "10:00pm",
+        "format_24_hour": "22:00"
+      },
+      "last_bookable_at": {
+        "format_12_hour": "7:10pm",
+        "format_24_hour": "19:10"
+      },
+      "venue_name": "Gunnersbury Park Sports Hub",
+      "pricing_option_id": 1083,
+      "cart_type": "purchasableOccurrence",
+      "composite_key": "a8275716",
+      "booking": null,
+      "bookings_count": 0,
+      "spaces": 1,
+      "capacity": 1,
+      "action_to_show": {
+        "status": "BOOK",
+        "reason": null
+      },
+      "waitlist_id": null,
+      "restrictions": {
+        "pre_waiver": null,
+        "pre_induction": null,
+        "criteria": null
+      },
+      "has_pre_purchase_restrictions": false,
+      "requires_induction": false,
+      "restriction_ids": [],
+      "benefit_available": null,
+      "tags": []
+    }
+  ]
+}

@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.URL ?? 'http://localhost:3000'),
   title: 'Public Courts Across London',
-  description: 'Find public London tennis, squash and padel courts and check when their booking windows open.',
+  description: 'Browse London tennis, squash and padel courts, or find slots in the latest availability check for supported venues.',
   openGraph: {
     title: 'Public Courts Across London',
     description: 'London public racquet court booking planner',

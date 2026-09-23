@@ -1590,7 +1590,8 @@ venues:
   name: Gunnersbury Park Sports Hub
   sport: tennis
   provider: better
-  booking_url: https://www.better.org.uk/leisure-centre/london/gunnersbury-park/gunnersbury-park-sports/2806-gunnersbury-park-sports
+  booking_url: https://bookings.better.org.uk/location/gunnersbury-park-sports-hub/tennis-court-outdoor
+  availability_url: https://better-admin.org.uk/api/activities/venue/gunnersbury-park-sports-hub/activity/tennis-court-outdoor/v2/slots
   metadata_sources:
   - https://better-admin.org.uk/api/openactive/better/facility-uses/activity_recurrence_group:11612
   - https://www.better.org.uk/leisure-centre/london/gunnersbury-park/gunnersbury-park-sports/2806-gunnersbury-park-sports
