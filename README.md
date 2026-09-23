@@ -87,3 +87,5 @@ Refresh the next seven days of configured Better availability with:
 ```
 
 The first pilot reads Gunnersbury's public date-scoped booking JSON and atomically writes provider-independent slots to `data/availability.json`. The site's **Find a time** view matches the selected date, exact start time and duration, shows the snapshot's check time, and links to Better for the actual booking. Only Gunnersbury is checked; other venues remain visibly unverified. Run the refresh again and rebuild/redeploy the site to publish newer slots. The script is not scheduled, so saved slots can become stale.
+
+The ClubSpark adapter is a local pilot: `ingestion/providers/clubspark_availability.py` expands `Category: 0` booking-sheet ranges into individual slots. It has no live fetcher configured and is not included in the refresh script or published snapshot. ClubSpark slots, if later published, link to the selected booking date and tell visitors they need a ClubSpark account to book.

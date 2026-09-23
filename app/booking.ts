@@ -49,7 +49,18 @@ export type AvailabilitySnapshot = { generated_at: string; coverage_start: strin
 
 export function availabilityBookingUrl(snapshot: AvailabilitySnapshot, venueId: string, date: string): string | null {
   const base = snapshot.booking_urls[venueId];
+  if (base && bookingAccountRequired(snapshot, venueId)) {
+    const url = new URL(base);
+    url.pathname = `${url.pathname.replace(/\/Booking\/BookByDate\/?$/, '').replace(/\/$/, '')}/Booking/BookByDate`;
+    url.hash = `?date=${date}`;
+    return url.toString();
+  }
   return base ? `${base}/${date}/by-time` : null;
+}
+
+export function bookingAccountRequired(snapshot: AvailabilitySnapshot, venueId: string): boolean {
+  const base = snapshot.booking_urls[venueId];
+  return !!base && new URL(base).hostname === 'clubspark.lta.org.uk';
 }
 
 export function availabilityForVenue(snapshot: AvailabilitySnapshot, venueId: string, date: string, start: string, durationMinutes: number): { status: 'available' | 'unreleased' | 'none' | 'unsupported' | 'outside'; slots: AvailabilitySlot[] } {
