@@ -4,9 +4,12 @@ import json
 import unittest
 from datetime import date, datetime, timezone
 from pathlib import Path
+from tempfile import TemporaryDirectory
+from unittest.mock import patch
 
 from ingestion.providers.better import BetterAvailabilitySource, parse_slots
 from ingestion.registry import load_registry
+from scripts.refresh_availability import refresh_availability
 
 ROOT = Path(__file__).resolve().parents[1]
 VENUE = next(
@@ -50,6 +53,19 @@ class BetterAvailabilityTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Duplicate Better slot"):
             parse_slots(VENUE, duplicate, PLAY_DATE, DETECTED_AT)
 
+    def test_unreleased_slot_keeps_its_booking_release_time(self):
+        payload = fixture()
+        payload["data"][0]["action_to_show"] = {
+            "status": None,
+            "reason": "You cannot book this activity yet",
+        }
+        payload["data"][0]["first_bookable_at"]["utc"] = "2026-09-23T21:00:00+00:00"
+
+        slot = parse_slots(VENUE, payload, PLAY_DATE, DETECTED_AT)[0]
+
+        self.assertFalse(slot.available)
+        self.assertEqual(slot.booking_opens_at.isoformat(), "2026-09-23T21:00:00+00:00")
+
     def test_source_fetches_the_curated_date_endpoint(self):
         calls = []
         source = BetterAvailabilitySource(fetch_json=lambda url: calls.append(url) or copy.deepcopy(fixture()))
@@ -60,6 +76,17 @@ class BetterAvailabilityTests(unittest.TestCase):
         self.assertEqual(
             calls,
             [f"{VENUE.availability_url}?date=2026-09-26"],
+        )
+
+    def test_refresh_saves_the_official_booking_url_for_dates_without_slots(self):
+        with TemporaryDirectory(dir=ROOT) as directory:
+            output = Path(directory) / "availability.json"
+            with patch("scripts.refresh_availability.BetterAvailabilitySource.fetch_availability", return_value=()):
+                asyncio.run(refresh_availability(output))
+            snapshot = json.loads(output.read_text())
+        self.assertEqual(
+            snapshot["booking_urls"][VENUE.id],
+            "https://bookings.better.org.uk/location/gunnersbury-park-sports-hub/tennis-court-outdoor",
         )
 
 

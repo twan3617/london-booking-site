@@ -29,6 +29,7 @@ def _slot_json(slot):
         "price_pence": slot.price_pence,
         "booking_url": slot.booking_url,
         "detected_at": slot.detected_at.isoformat(),
+        "booking_opens_at": slot.booking_opens_at.isoformat() if slot.booking_opens_at else None,
     }
 
 
@@ -57,6 +58,7 @@ async def refresh_availability(output: Path = OUTPUT):
         "coverage_start": start_date.isoformat(),
         "coverage_end": end_date.isoformat(),
         "venue_ids": [venue.id for venue in venues],
+        "booking_urls": {venue.id: venue.booking_url for venue in venues},
         "slots": [_slot_json(slot) for slot in slots],
     }
     _save(output, payload)

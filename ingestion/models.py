@@ -62,6 +62,7 @@ class AvailabilitySlot:
     price_pence: int | None
     booking_url: str
     detected_at: datetime
+    booking_opens_at: datetime | None = None
 
     def __post_init__(self):
         booking = urlparse(self.booking_url) if isinstance(self.booking_url, str) else None
@@ -81,6 +82,8 @@ class AvailabilitySlot:
             raise ValueError("Availability booking URL must be HTTP or HTTPS")
         if not isinstance(self.detected_at, datetime) or self.detected_at.tzinfo is None:
             raise ValueError("Availability detected time must include a timezone")
+        if self.booking_opens_at is not None and (not isinstance(self.booking_opens_at, datetime) or self.booking_opens_at.tzinfo is None):
+            raise ValueError("Availability booking release time must include a timezone")
 
 
 class MetadataField(StrEnum):
