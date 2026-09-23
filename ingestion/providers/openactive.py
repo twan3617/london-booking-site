@@ -71,7 +71,7 @@ def parse_facility_use(venue: Venue, item: dict, source_url: str, checked_at: da
     opening_hours = hours[0] if hours[0] is not None and all(value == hours[0] for value in hours) else None
     observed = {
         MetadataField.NAME: location["name"].strip(),
-        MetadataField.BOOKING_URL: booking_url,
+        MetadataField.BOOKING_URL: booking_url if booking_url == venue.booking_url else None,
         MetadataField.COURT_COUNT: len(courts),
         MetadataField.FLOODLIT: True if data.get("name") == "Tennis Court (Floodlit)" else None,
         MetadataField.OPENING_HOURS: opening_hours,

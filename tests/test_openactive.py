@@ -47,6 +47,7 @@ class OpenActiveTests(unittest.TestCase):
         self.assertIsNone(metadata.floodlit)
         self.assertIsNone(metadata.slot_duration_minutes)
         self.assertEqual(metadata.prices, ())
+        self.assertEqual(metadata.booking_url, venue.booking_url)
 
     def test_deleted_or_wrong_identity_is_rejected(self):
         venue = VENUES["hounslow-gunnersbury-park-sports-hub"]

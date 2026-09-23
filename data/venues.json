@@ -4884,7 +4884,7 @@
       "area": "Charlton",
       "operator": "Better / GLL",
       "access": "pay_and_play",
-      "booking_url": "https://bookings.better.org.uk/location/charlton-lido/tennis",
+      "booking_url": "https://bookings.better.org.uk/location/charlton-lido/tennis-court-outdoor",
       "booking_link_kind": "calendar",
       "courts_total": null,
       "indoor_courts": 0,
@@ -8298,7 +8298,7 @@
       "borough": "Islington",
       "area": "Old Street",
       "operator": "Better",
-      "booking_url": "https://www.better.org.uk/leisure-centre/london/islington/finsbury/squash",
+      "booking_url": "https://bookings.better.org.uk/location/finsbury-leisure-centre/squash-40min",
       "sources": [
         {
           "url": "https://www.better.org.uk/leisure-centre/london/islington/finsbury/squash",
@@ -8315,7 +8315,7 @@
       "area": "Highbury",
       "operator": "Better / GLL",
       "access": "pay_and_play",
-      "booking_url": "https://bookings.better.org.uk/location/islington-tennis-centre/highbury-tennis/2026-09-15/by-time",
+      "booking_url": "https://bookings.better.org.uk/location/islington-tennis-centre/highbury-tennis",
       "booking_link_kind": "calendar",
       "courts_total": 11,
       "indoor_courts": 0,

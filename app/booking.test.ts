@@ -12,6 +12,7 @@ import {
   bookingAccountRequired,
   osmEmbedUrl,
   matchesVenue,
+  nextSaturday,
   publishedPriceRange,
   parseCatalogue,
   venueDisplay,
@@ -52,6 +53,11 @@ const availability: AvailabilitySnapshot = {
     { venue_id: 'hyde-park', court_id: '2', start_time: '2026-09-26T19:00:00+01:00', end_time: '2026-09-26T20:00:00+01:00', available: false, price_pence: 1200, booking_url: 'https://example.com/26', detected_at: '2026-09-23T20:00:00Z' },
   ],
 };
+
+test('default Saturday follows the London date across UTC midnight', () => {
+  assert.equal(nextSaturday(new Date('2026-09-23T23:40:00Z')), '2026-09-26');
+  assert.equal(nextSaturday(new Date('2026-09-25T23:40:00Z')), '2026-10-03');
+});
 
 test('time-first search returns only bookable slots at the exact start and duration', () => {
   assert.deepEqual(availabilityForVenue(availability, 'hyde-park', '2026-09-26', '19:00', 60), {
