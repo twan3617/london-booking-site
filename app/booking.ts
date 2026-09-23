@@ -223,6 +223,12 @@ function londonNow(now: Date): string {
   return `${get('year')}-${get('month')}-${get('day')}T${get('hour')}:${get('minute')}`;
 }
 
+export function nextSaturday(now: Date): string {
+  const date = new Date(`${londonNow(now).slice(0, 10)}T12:00:00Z`);
+  date.setUTCDate(date.getUTCDate() + ((6 - date.getUTCDay() + 7) % 7 || 7));
+  return date.toISOString().slice(0, 10);
+}
+
 export function releaseDetails(venue: Venue, playDate: string, now = new Date()): Release | null {
   if (venue.release_status !== 'published' || venue.advance_days == null || !venue.release_time) return null;
   const date = subtractDays(playDate, venue.advance_days);

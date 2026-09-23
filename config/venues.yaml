@@ -982,7 +982,8 @@ venues:
   name: Charlton Lido and Lifestyle Club (Hornfair Park)
   sport: tennis
   provider: better
-  booking_url: https://bookings.better.org.uk/location/charlton-lido/tennis
+  booking_url: https://bookings.better.org.uk/location/charlton-lido/tennis-court-outdoor
+  availability_url: https://better-admin.org.uk/api/activities/venue/charlton-lido/activity/tennis-court-outdoor/v2/slots
   metadata_sources:
   - https://www.better.org.uk/leisure-centre/london/greenwich/charlton-lido
   - https://www.better.org.uk/leisure-centre/london/greenwich/charlton-lido/facilities
@@ -1645,7 +1646,8 @@ venues:
   name: Highbury Fields
   sport: tennis
   provider: better
-  booking_url: https://bookings.better.org.uk/location/islington-tennis-centre/highbury-tennis/2026-09-15/by-time
+  booking_url: https://bookings.better.org.uk/location/islington-tennis-centre/highbury-tennis
+  availability_url: https://better-admin.org.uk/api/activities/venue/islington-tennis-centre/activity/highbury-tennis/v2/slots
   metadata_sources:
   - https://www.better.org.uk/leisure-centre/london/islington/islington-parks/3046-islington-parks
   - https://www.better.org.uk/legal-policies/terms
@@ -2771,7 +2773,8 @@ venues:
   name: Finsbury Leisure Centre
   sport: squash
   provider: better
-  booking_url: https://www.better.org.uk/leisure-centre/london/islington/finsbury/squash
+  booking_url: https://bookings.better.org.uk/location/finsbury-leisure-centre/squash-40min
+  availability_url: https://better-admin.org.uk/api/activities/venue/finsbury-leisure-centre/activity/squash-40min/v2/slots
   metadata_sources:
   - https://better-admin.org.uk/api/openactive/better/facility-uses/activity_recurrence_group:2914
   - https://www.better.org.uk/leisure-centre/london/islington/finsbury/squash

@@ -1,0 +1,190 @@
+{
+  "data": [
+    {
+      "id": "AQGeG0jeqvoZr20WrRRR89QFIthllyJmEA",
+      "name": "Tennis Court - Outdoor",
+      "allows_anonymous_bookings": false,
+      "pre_booking_notice": null,
+      "root_activity_category": {
+        "v2": true,
+        "id": "019a4a46-d608-71ac-9dd4-35f7fea20b65",
+        "v2Id": "019a4a46-d608-71ac-9dd4-35f7fea20b65",
+        "name": "Tennis",
+        "slug": "tennis",
+        "v2_slug": "tennis",
+        "v1_slug": null,
+        "path": "tennis",
+        "v1_type": null,
+        "v2_type": null,
+        "allocation_strategy": "customer",
+        "image": "",
+        "parent_slug": null,
+        "has_children": false,
+        "is_root": true
+      },
+      "category_slug": "tennis-court-outdoor",
+      "duration": "60min",
+      "instructors": [],
+      "date": {
+        "raw": "2026-09-24",
+        "raw_pretty": "24/09/2026",
+        "day_pretty": "Thu",
+        "date_pretty": "24 Sep",
+        "full_date_pretty": "Thu 24 September 2026",
+        "full_date": "24 September 2026",
+        "difference": "9 hours from now",
+        "tz": "Europe/London"
+      },
+      "location": {
+        "id": "4171",
+        "name": "Tennis Court 1, Charlton Lido and Lifestyle Club",
+        "type": "resource",
+        "slug": "tennis-court-1-charlton-lido-and-lifestyle-club",
+        "venue_id": 90218,
+        "venue_slug": "charlton-lido"
+      },
+      "slot_display_location": "Tennis Court 1, Charlton Lido and Lifestyle Club",
+      "price": {
+        "benefit_applied": false,
+        "package_applied": false,
+        "formatted": "\u00a36.00",
+        "raw": 600
+      },
+      "starts_at": {
+        "format_12_hour": "9:00am",
+        "format_24_hour": "09:00"
+      },
+      "ends_at": {
+        "format_12_hour": "10:00am",
+        "format_24_hour": "10:00"
+      },
+      "first_bookable_at": {
+        "utc": "2026-09-18T21:00:00+00:00",
+        "local": "2026-09-18T22:00:00+01:00",
+        "timezone": "Europe/London",
+        "format_12_hour": "10:00pm",
+        "format_24_hour": "22:00"
+      },
+      "last_bookable_at": {
+        "format_12_hour": "9:10am",
+        "format_24_hour": "09:10"
+      },
+      "venue_name": "Charlton Lido and Lifestyle Club",
+      "pricing_option_id": 1032,
+      "cart_type": "purchasableOccurrence",
+      "composite_key": "f628be6e",
+      "booking": null,
+      "bookings_count": 0,
+      "spaces": 1,
+      "capacity": 1,
+      "action_to_show": {
+        "status": "BOOK",
+        "reason": null
+      },
+      "waitlist_id": null,
+      "restrictions": {
+        "pre_waiver": null,
+        "pre_induction": null,
+        "criteria": null
+      },
+      "has_pre_purchase_restrictions": false,
+      "requires_induction": false,
+      "restriction_ids": [],
+      "benefit_available": null,
+      "tags": []
+    },
+    {
+      "id": "AQGeGxvCWfEfphLfrUsAYRoFI1b1lyPkoA",
+      "name": "Tennis Court - Outdoor",
+      "allows_anonymous_bookings": false,
+      "pre_booking_notice": null,
+      "root_activity_category": {
+        "v2": true,
+        "id": "019a4a46-d608-71ac-9dd4-35f7fea20b65",
+        "v2Id": "019a4a46-d608-71ac-9dd4-35f7fea20b65",
+        "name": "Tennis",
+        "slug": "tennis",
+        "v2_slug": "tennis",
+        "v1_slug": null,
+        "path": "tennis",
+        "v1_type": null,
+        "v2_type": null,
+        "allocation_strategy": "customer",
+        "image": "",
+        "parent_slug": null,
+        "has_children": false,
+        "is_root": true
+      },
+      "category_slug": "tennis-court-outdoor",
+      "duration": "60min",
+      "instructors": [],
+      "date": {
+        "raw": "2026-09-24",
+        "raw_pretty": "24/09/2026",
+        "day_pretty": "Thu",
+        "date_pretty": "24 Sep",
+        "full_date_pretty": "Thu 24 September 2026",
+        "full_date": "24 September 2026",
+        "difference": "18 hours from now",
+        "tz": "Europe/London"
+      },
+      "location": {
+        "id": "4174",
+        "name": "Tennis Court 4, Charlton Lido and Lifestyle Club",
+        "type": "resource",
+        "slug": "tennis-court-4-charlton-lido-and-lifestyle-club",
+        "venue_id": 90218,
+        "venue_slug": "charlton-lido"
+      },
+      "slot_display_location": "Tennis Court 4, Charlton Lido and Lifestyle Club",
+      "price": {
+        "benefit_applied": false,
+        "package_applied": false,
+        "formatted": "\u00a36.00",
+        "raw": 600
+      },
+      "starts_at": {
+        "format_12_hour": "6:00pm",
+        "format_24_hour": "18:00"
+      },
+      "ends_at": {
+        "format_12_hour": "7:00pm",
+        "format_24_hour": "19:00"
+      },
+      "first_bookable_at": {
+        "utc": "2026-09-18T21:00:00+00:00",
+        "local": "2026-09-18T22:00:00+01:00",
+        "timezone": "Europe/London",
+        "format_12_hour": "10:00pm",
+        "format_24_hour": "22:00"
+      },
+      "last_bookable_at": {
+        "format_12_hour": "6:10pm",
+        "format_24_hour": "18:10"
+      },
+      "venue_name": "Charlton Lido and Lifestyle Club",
+      "pricing_option_id": 1032,
+      "cart_type": "purchasableOccurrence",
+      "composite_key": "ba37c706",
+      "booking": null,
+      "bookings_count": 1,
+      "spaces": 0,
+      "capacity": 1,
+      "action_to_show": {
+        "status": "FULL",
+        "reason": "The session being booked is already full"
+      },
+      "waitlist_id": null,
+      "restrictions": {
+        "pre_waiver": null,
+        "pre_induction": null,
+        "criteria": null
+      },
+      "has_pre_purchase_restrictions": false,
+      "requires_induction": false,
+      "restriction_ids": [],
+      "benefit_available": null,
+      "tags": []
+    }
+  ]
+}

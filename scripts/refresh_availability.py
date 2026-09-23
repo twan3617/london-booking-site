@@ -41,8 +41,10 @@ def _save(output: Path, payload: dict):
 
 
 async def refresh_availability(output: Path = OUTPUT):
-    start_date = datetime.now(LONDON).date()
-    end_date = start_date + timedelta(days=DAYS_AHEAD)
+    now = datetime.now(timezone.utc)
+    start_date = now.astimezone(LONDON).date()
+    # Better's seven-day booking sheet advances at UTC midnight.
+    end_date = min(start_date + timedelta(days=DAYS_AHEAD), now.date() + timedelta(days=DAYS_AHEAD))
     venues = [venue for venue in load_registry(ROOT / "config/venues.yaml") if venue.availability_url]
     sources = {"better": BetterAvailabilitySource()}
     slots = []
