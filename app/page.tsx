@@ -4,20 +4,18 @@ import { useEffect, useMemo, useState } from 'react';
 import catalogue from '../data/venues.json';
 import coordinateData from '../data/coordinates.json';
 import priceData from '../data/prices.json';
-import availabilityData from '../data/availability.json';
-import { availabilityBookingUrl, availabilityForVenue, availabilityGrid, bookingAccountRequired, bookingUrlFor, calendarText, directionsUrl, distanceMiles, matchesVenue, nextSaturday, osmEmbedUrl, parseCatalogue, prettyDate, releaseDetails, venueDisplay, withinBookingWindow, type AvailabilitySnapshot, type Filters, type Mode, type Point, type PriceOption, type Sport, type Venue } from './booking';
+import { availabilityBookingUrl, availabilityForVenue, availabilityGrid, bookingAccountRequired, bookingUrlFor, calendarText, directionsUrl, distanceMiles, isAvailabilitySnapshot, matchesVenue, nextSaturday, osmEmbedUrl, parseCatalogue, prettyDate, releaseDetails, venueDisplay, withinBookingWindow, type AvailabilitySnapshot, type Filters, type Mode, type Point, type PriceOption, type Sport, type Venue } from './booking';
 
 const priceOptions = priceData as Record<string, PriceOption[] | null>;
 const venues = parseCatalogue(catalogue as unknown as { venues: Venue[] }, priceOptions, coordinateData as Record<string, Point | null>);
-const availability = availabilityData as AvailabilitySnapshot;
+const EMPTY_AVAILABILITY: AvailabilitySnapshot = { generated_at: '1970-01-01T00:00:00Z', coverage_start: '1970-01-01', coverage_end: '1970-01-01', venue_ids: [], booking_urls: {}, slots: [] };
 const londonDateTime = new Intl.DateTimeFormat('en-GB', { dateStyle: 'medium', timeStyle: 'short', timeZone: 'Europe/London' });
-const checkedAt = londonDateTime.format(new Date(availability.generated_at));
 
 export default function Home() {
   const [view, setView] = useState<'locations' | 'time'>('locations');
   const [sport, setSport] = useState<Sport>('tennis');
   const [mode, setMode] = useState<Mode>('after-work');
-  const [playDate, setPlayDate] = useState(() => nextSaturday(new Date(availability.generated_at)));
+  const [playDate, setPlayDate] = useState('');
   const [startTime, setStartTime] = useState('19:00');
   const [durationMinutes, setDurationMinutes] = useState(60);
   const [query, setQuery] = useState('');
@@ -32,12 +30,17 @@ export default function Home() {
   const [userLocation, setUserLocation] = useState<Point | null>(null);
   const [locationMessage, setLocationMessage] = useState('');
   const [currentTime, setCurrentTime] = useState<number | null>(null);
+  const [snapshot, setSnapshot] = useState<AvailabilitySnapshot | null>(null);
+  const [availabilityError, setAvailabilityError] = useState(false);
+  const availability = snapshot ?? EMPTY_AVAILABILITY;
+  const checkedAt = snapshot ? londonDateTime.format(new Date(snapshot.generated_at)) : '';
   const boroughs = useMemo(() => [...new Set(venues.filter((venue) => venue.sport === sport).map((venue) => venue.borough))].sort(), [sport]);
-  const checkedVenueIds = useMemo(() => new Set(venues.filter((venue) => venue.sport === sport && availability.venue_ids.includes(venue.id)).map((venue) => venue.id)), [sport]);
-  const checkedDurations = useMemo(() => [...new Set(availability.slots.filter((slot) => checkedVenueIds.has(slot.venue_id)).map((slot) => (Date.parse(slot.end_time) - Date.parse(slot.start_time)) / 60_000))].sort((a, b) => a - b), [checkedVenueIds]);
+  const checkedVenueIds = useMemo(() => new Set(venues.filter((venue) => venue.sport === sport && availability.venue_ids.includes(venue.id)).map((venue) => venue.id)), [sport, availability]);
+  const checkedDurations = useMemo(() => [...new Set(availability.slots.filter((slot) => checkedVenueIds.has(slot.venue_id)).map((slot) => (Date.parse(slot.end_time) - Date.parse(slot.start_time)) / 60_000))].sort((a, b) => a - b), [checkedVenueIds, availability]);
   const shownDuration = checkedDurations.includes(durationMinutes) ? durationMinutes : checkedDurations[0] ?? durationMinutes;
   const checkedVenues = checkedVenueIds.size;
-  const snapshotOld = currentTime !== null && currentTime - Date.parse(availability.generated_at) > 30 * 60_000;
+  const snapshotOld = currentTime !== null && currentTime - Date.parse(availability.generated_at) > 60 * 60_000;
+  const snapshotTooOld = currentTime !== null && currentTime - Date.parse(availability.generated_at) > 2 * 60 * 60_000;
   const londonToday = currentTime === null ? '' : new Intl.DateTimeFormat('sv-SE', { timeZone: 'Europe/London', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date(currentTime));
   const snapshotExpired = londonToday > availability.coverage_end;
   const durationChecked = checkedDurations.includes(shownDuration);
@@ -56,6 +59,32 @@ export default function Home() {
     return () => { window.clearTimeout(first); window.clearInterval(interval); };
   }, []);
 
+  useEffect(() => {
+    if (view !== 'time') return;
+    let active = true;
+    let pending = false;
+    async function refresh() {
+      if (pending) return;
+      pending = true;
+      try {
+        const response = await fetch('/.netlify/functions/availability', { cache: 'no-store' });
+        if (!response.ok) throw new Error('Availability request failed');
+        const candidate: unknown = await response.json();
+        if (!isAvailabilitySnapshot(candidate)) throw new Error('Invalid availability snapshot');
+        if (active) { setSnapshot(candidate); setAvailabilityError(false); }
+      } catch {
+        if (active) setAvailabilityError(true);
+      } finally {
+        pending = false;
+      }
+    }
+    void refresh();
+    const interval = window.setInterval(() => { if (document.visibilityState === 'visible') void refresh(); }, 5 * 60_000);
+    const onVisible = () => { if (document.visibilityState === 'visible') void refresh(); };
+    document.addEventListener('visibilitychange', onVisible);
+    return () => { active = false; window.clearInterval(interval); document.removeEventListener('visibilitychange', onVisible); };
+  }, [view]);
+
   const results = useMemo(() => {
     const filters: Filters = { sport, mode, borough, query, facility, status: view === 'time' || mode === 'weekend' ? 'all' : status, maxPrice: view === 'time' || sport !== 'tennis' || maxPrice === '' ? null : Number(maxPrice) };
     return venues
@@ -69,7 +98,7 @@ export default function Home() {
         return Number(favourites.includes(b.id)) - Number(favourites.includes(a.id)) || ['suitable', 'seasonal', 'unknown', 'unsuitable'].indexOf(a.evening_assessment) - ['suitable', 'seasonal', 'unknown', 'unsuitable'].indexOf(b.evening_assessment) || a.name.localeCompare(b.name);
       });
   }, [view, sport, mode, playDate, borough, query, facility, status, maxPrice, favourites, favouritesOnly, sortOrder, userLocation]);
-  const grid = useMemo(() => availabilityGrid(availability, results.map((venue) => venue.id), shownDuration), [results, shownDuration]);
+  const grid = useMemo(() => availabilityGrid(availability, results.map((venue) => venue.id), shownDuration), [availability, results, shownDuration]);
   const selectedCell = grid.cells[`${playDate}|${startTime}`];
   const selectedVenues = results.filter((venue) => selectedCell?.venueIds.includes(venue.id));
 
@@ -128,10 +157,11 @@ export default function Home() {
     </section>
 
     <section className="results">
-      <div className="results-head"><div><p className="eyebrow">{view === 'time' ? `${prettyDate(availability.coverage_start)}–${prettyDate(availability.coverage_end)} · ${shownDuration} min` : prettyDate(playDate)}</p><h2>{view === 'time' ? 'Availability by time' : `${results.length} courts match`}</h2></div><div className="result-tools"><label>Sort<select value={sortOrder} onChange={(event) => chooseSort(event.target.value as 'recommended' | 'distance')}><option value="recommended">Recommended</option><option value="distance">Nearest to me</option></select></label><button className={`favourites-toggle ${favouritesOnly ? 'active' : ''}`} onClick={() => setFavouritesOnly(!favouritesOnly)}>★ Favourites {favourites.length || ''}</button></div></div>
-      {view === 'time' && <p className="availability-note" role="status">Last checked {checkedAt} London time. {checkedVenues} of {venues.filter((venue) => venue.sport === sport).length} {sport} locations checked for {availability.coverage_start}–{availability.coverage_end}. {snapshotExpired ? 'This snapshot has expired. ' : snapshotOld ? 'This snapshot is over 30 minutes old. ' : ''}{!durationChecked && checkedVenues ? `No ${sport} durations were returned. ` : ''}Slots can change; confirm on the booking site.</p>}
+      <div className="results-head"><div><p className="eyebrow">{view === 'time' ? snapshot ? `${prettyDate(availability.coverage_start)}–${prettyDate(availability.coverage_end)} · ${shownDuration} min` : 'Latest availability' : prettyDate(playDate)}</p><h2>{view === 'time' ? 'Availability by time' : `${results.length} courts match`}</h2></div><div className="result-tools"><label>Sort<select value={sortOrder} onChange={(event) => chooseSort(event.target.value as 'recommended' | 'distance')}><option value="recommended">Recommended</option><option value="distance">Nearest to me</option></select></label><button className={`favourites-toggle ${favouritesOnly ? 'active' : ''}`} onClick={() => setFavouritesOnly(!favouritesOnly)}>★ Favourites {favourites.length || ''}</button></div></div>
+      {view === 'time' && snapshot && <p className="availability-note" role="status">Last checked {checkedAt} London time. {checkedVenues} of {venues.filter((venue) => venue.sport === sport).length} {sport} locations checked for {availability.coverage_start}–{availability.coverage_end}. {availabilityError ? 'The latest refresh could not be loaded. ' : ''}{snapshotExpired ? 'This snapshot has expired. ' : snapshotTooOld ? 'This snapshot is over two hours old. ' : snapshotOld ? 'This snapshot is over one hour old. ' : ''}{!durationChecked && checkedVenues ? `No ${sport} durations were returned. ` : ''}Slots can change; confirm on the booking site.</p>}
       {locationMessage && <p className="location-message" role="status">{locationMessage}</p>}
-      {view === 'time' && (snapshotExpired || !grid.times.length ? <div className="empty"><h3>{snapshotExpired ? 'Availability snapshot expired' : !checkedVenues ? 'Availability not checked yet' : !durationChecked ? 'Duration not checked' : 'No checked times match'}</h3><p>{snapshotExpired ? 'Browse locations and check directly with the booking provider until a new snapshot is published.' : !checkedVenues ? `No ${sport} locations have an availability feed in this pilot.` : !durationChecked ? 'The provider returned no booking durations.' : 'Try removing a filter or choosing another sport.'}</p></div> : <>
+      {view === 'time' && !snapshot && <div className="empty" role="status"><h3>{availabilityError ? 'Availability unavailable' : 'Checking availability…'}</h3><p>{availabilityError ? 'Could not load the latest check. Try again shortly or browse locations.' : 'Loading the latest court check.'}</p></div>}
+      {view === 'time' && snapshot && (snapshotExpired || snapshotTooOld || !grid.times.length ? <div className="empty"><h3>{!checkedVenues ? 'Availability not checked yet' : snapshotExpired || snapshotTooOld ? 'Availability snapshot expired' : !durationChecked ? 'Duration not checked' : 'No checked times match'}</h3><p>{!checkedVenues ? `No ${sport} locations have an availability feed in this pilot.` : snapshotExpired || snapshotTooOld ? 'Browse locations and check directly with the booking provider until a new snapshot is published.' : !durationChecked ? 'The provider returned no booking durations.' : 'Try removing a filter or choosing another sport.'}</p></div> : <>
         <p className="grid-legend">Each cell counts locations seen free at the last check. A dash means none seen among the checked venues.</p>
         <div className="time-grid-scroll" role="region" aria-label="Court availability by day and time" tabIndex={0}>
           <table className="time-grid">

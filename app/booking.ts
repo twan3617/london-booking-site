@@ -47,6 +47,17 @@ export type Point = { latitude: number; longitude: number };
 export type AvailabilitySlot = { venue_id: string; court_id: string | null; start_time: string; end_time: string; available: boolean; price_pence: number | null; booking_url: string; detected_at: string; booking_opens_at?: string | null };
 export type AvailabilitySnapshot = { generated_at: string; coverage_start: string; coverage_end: string; venue_ids: string[]; booking_urls: Record<string, string>; slots: AvailabilitySlot[] };
 
+export function isAvailabilitySnapshot(value: unknown): value is AvailabilitySnapshot {
+  if (!value || typeof value !== 'object') return false;
+  const snapshot = value as Record<string, unknown>;
+  if (typeof snapshot.generated_at !== 'string' || !Number.isFinite(Date.parse(snapshot.generated_at))) return false;
+  if (typeof snapshot.coverage_start !== 'string' || typeof snapshot.coverage_end !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(snapshot.coverage_start) || !/^\d{4}-\d{2}-\d{2}$/.test(snapshot.coverage_end) || !Number.isFinite(Date.parse(`${snapshot.coverage_start}T12:00:00Z`)) || !Number.isFinite(Date.parse(`${snapshot.coverage_end}T12:00:00Z`)) || snapshot.coverage_start > snapshot.coverage_end) return false;
+  if (!Array.isArray(snapshot.venue_ids) || !snapshot.venue_ids.every((id) => typeof id === 'string') || !snapshot.booking_urls || typeof snapshot.booking_urls !== 'object' || Array.isArray(snapshot.booking_urls)) return false;
+  if (!Object.values(snapshot.booking_urls).every((url) => typeof url === 'string' && URL.canParse(url) && /^https?:/.test(url))) return false;
+  if (!Array.isArray(snapshot.slots)) return false;
+  return snapshot.slots.every((slot) => slot && typeof slot === 'object' && typeof slot.venue_id === 'string' && typeof slot.start_time === 'string' && typeof slot.end_time === 'string' && typeof slot.available === 'boolean' && (slot.price_pence === null || Number.isInteger(slot.price_pence)) && typeof slot.booking_url === 'string' && typeof slot.detected_at === 'string');
+}
+
 export function availabilityBookingUrl(snapshot: AvailabilitySnapshot, venueId: string, date: string): string | null {
   const base = snapshot.booking_urls[venueId];
   if (base && bookingAccountRequired(snapshot, venueId)) {
@@ -118,6 +129,7 @@ export function priceOptionLabel(option: PriceOption): string {
 }
 
 export function prettyDate(date: string): string {
+  if (!date) return 'Choose a playing date';
   return new Intl.DateTimeFormat('en-GB', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${date}T12:00:00Z`));
 }
 
@@ -230,7 +242,7 @@ export function nextSaturday(now: Date): string {
 }
 
 export function releaseDetails(venue: Venue, playDate: string, now = new Date()): Release | null {
-  if (venue.release_status !== 'published' || venue.advance_days == null || !venue.release_time) return null;
+  if (!playDate || venue.release_status !== 'published' || venue.advance_days == null || !venue.release_time) return null;
   const date = subtractDays(playDate, venue.advance_days);
   return { date, time: venue.release_time, open: londonNow(now) >= `${date}T${venue.release_time}` };
 }
@@ -246,6 +258,7 @@ export function venueDestination(venue: Venue): string {
 }
 
 export function bookingUrlFor(venue: Venue, playDate: string): string | null {
+  if (!playDate) return null;
   const booking = venue.booking_url ?? venue.sources[0]?.url;
   return booking?.replace(/\d{4}-\d{2}-\d{2}(?=\/by-time)/, playDate) ?? null;
 }

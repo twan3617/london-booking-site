@@ -13,8 +13,10 @@ import {
   osmEmbedUrl,
   matchesVenue,
   nextSaturday,
+  prettyDate,
   publishedPriceRange,
   parseCatalogue,
+  isAvailabilitySnapshot,
   venueDisplay,
   releaseDetails,
   relevantHourlyPrice,
@@ -54,9 +56,26 @@ const availability: AvailabilitySnapshot = {
   ],
 };
 
+test('fetched availability must have a usable snapshot shape', () => {
+  assert.equal(isAvailabilitySnapshot(availability), true);
+  assert.equal(isAvailabilitySnapshot({ ...availability, slots: 'missing' }), false);
+  assert.equal(isAvailabilitySnapshot({ ...availability, generated_at: 'bad date' }), false);
+  assert.equal(isAvailabilitySnapshot({ ...availability, coverage_start: '2026-99-99' }), false);
+  assert.equal(isAvailabilitySnapshot({ ...availability, booking_urls: { 'hyde-park': 'bad url' } }), false);
+  assert.equal(isAvailabilitySnapshot({ ...availability, slots: [{ ...availability.slots[0], available: 'yes' }] }), false);
+});
+
 test('default Saturday follows the London date across UTC midnight', () => {
   assert.equal(nextSaturday(new Date('2026-09-23T23:40:00Z')), '2026-09-26');
   assert.equal(nextSaturday(new Date('2026-09-25T23:40:00Z')), '2026-10-03');
+});
+
+test('date-dependent card details wait until the browser selects a playing date', () => {
+  assert.equal(prettyDate(''), 'Choose a playing date');
+  assert.equal(releaseDetails(venue, ''), null);
+  assert.equal(venueDisplay(venue, 'after-work', '').release, null);
+  assert.equal(withinBookingWindow(venue, ''), true);
+  assert.equal(bookingUrlFor({ ...venue, booking_url: 'https://example.com/2026-09-19/by-time' }, ''), null);
 });
 
 test('time-first search returns only bookable slots at the exact start and duration', () => {
