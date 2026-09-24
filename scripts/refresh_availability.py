@@ -3,7 +3,7 @@
 import asyncio
 import json
 import sys
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, time, timedelta, timezone
 from pathlib import Path
 from urllib.parse import urlparse
 from zoneinfo import ZoneInfo
@@ -12,7 +12,8 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from ingestion.providers.better import BetterAvailabilitySource
+from ingestion.models import PriceRate
+from ingestion.providers.better import BetterAvailabilitySource, metadata_patch_from_slots
 from ingestion.providers.lta import LtaAvailabilitySource
 from ingestion.providers.matchi import MatchiAvailabilitySource
 from ingestion.providers.padelmates import PadelMatesAvailabilitySource
@@ -36,6 +37,23 @@ def _slot_json(slot):
         "detected_at": slot.detected_at.isoformat(),
         "booking_opens_at": slot.booking_opens_at.isoformat() if slot.booking_opens_at else None,
     }
+
+
+def _metadata_json(patch):
+    values = {}
+    for field, value in patch.values.items():
+        if isinstance(value, tuple) and all(isinstance(rate, PriceRate) for rate in value):
+            value = [{
+                "amount_gbp": str(rate.amount_gbp),
+                "duration_minutes": rate.duration_minutes,
+                "customer": rate.customer,
+                "time_band": rate.time_band,
+                "lights_included": rate.lights_included,
+            } for rate in value]
+        elif isinstance(value, time):
+            value = value.isoformat()
+        values[field.value] = value
+    return {"source_url": patch.source_url, "checked_at": patch.checked_at.isoformat(), "values": values}
 
 
 def _save(output: Path, payload: dict):
@@ -69,10 +87,15 @@ async def refresh_availability(output: Path = OUTPUT):
     failed_providers = []
     for source_host, provider_venues in venues_by_host.items():
         slots = []
+        metadata = {}
         try:
             for venue in provider_venues:
                 venue_slots = await sources[source_host].fetch_availability(venue, start_date, end_date)
                 slots.extend(venue_slots)
+                if source_host == "better-admin.org.uk":
+                    patch = metadata_patch_from_slots(venue, venue_slots)
+                    if patch and patch.values:
+                        metadata[venue.id] = _metadata_json(patch)
                 print(f"{venue.name}: {sum(slot.available for slot in venue_slots)} available of {len(venue_slots)} slots")
         except Exception as error:
             failed_providers.append(source_host)
@@ -85,6 +108,7 @@ async def refresh_availability(output: Path = OUTPUT):
             "venue_ids": [venue.id for venue in provider_venues],
             "booking_urls": {venue.id: venue.booking_url for venue in provider_venues},
             "slots": [_slot_json(slot) for slot in slots],
+            "metadata": metadata,
         }
     if not providers:
         raise RuntimeError("All availability providers failed")
@@ -97,6 +121,7 @@ async def refresh_availability(output: Path = OUTPUT):
         "venue_ids": [venue_id for snapshot in snapshots for venue_id in snapshot["venue_ids"]],
         "booking_urls": {venue_id: url for snapshot in snapshots for venue_id, url in snapshot["booking_urls"].items()},
         "slots": [slot for snapshot in snapshots for slot in snapshot["slots"]],
+        "metadata": {venue_id: metadata for snapshot in snapshots for venue_id, metadata in snapshot["metadata"].items()},
         "providers": providers,
         "failed_providers": failed_providers,
     }

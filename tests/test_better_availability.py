@@ -3,12 +3,14 @@ import copy
 import json
 import unittest
 from dataclasses import replace
-from datetime import date, datetime, timezone
+from datetime import date, datetime, time, timezone
+from decimal import Decimal
 from pathlib import Path
 from tempfile import TemporaryDirectory
 from unittest.mock import patch
 
-from ingestion.providers.better import BetterAvailabilitySource, parse_slots
+from ingestion.models import MetadataField, PriceRate
+from ingestion.providers.better import BetterAvailabilitySource, metadata_patch_from_slots, parse_slots
 from ingestion.registry import load_registry
 from scripts.refresh_availability import refresh_availability
 
@@ -27,6 +29,20 @@ def fixture():
 
 
 class BetterAvailabilityTests(unittest.TestCase):
+    def test_slots_produce_a_normalized_metadata_patch(self):
+        slots = parse_slots(VENUE, fixture(), PLAY_DATE, DETECTED_AT)
+
+        patch = metadata_patch_from_slots(VENUE, slots)
+
+        self.assertEqual(patch.source_url, VENUE.availability_urls[0])
+        self.assertEqual(patch.checked_at, DETECTED_AT)
+        self.assertEqual(patch.values, {
+            MetadataField.PRICES: (PriceRate(Decimal("13.45"), 60),),
+            MetadataField.BOOKING_WINDOW_DAYS: 6,
+            MetadataField.RELEASE_TIME: time(22),
+            MetadataField.SLOT_DURATION_MINUTES: 60,
+        })
+
     def test_slots_are_normalized_without_provider_fields(self):
         slots = parse_slots(VENUE, fixture(), PLAY_DATE, DETECTED_AT)
 
@@ -140,6 +156,35 @@ class BetterAvailabilityTests(unittest.TestCase):
         self.assertIn("https://www.lta.org.uk/play/book-a-tennis-court/courts/barking-park_", snapshot["booking_urls"]["barking-and-dagenham-barking-park"])
         self.assertEqual(snapshot["booking_urls"]["padel-barnet-padel-hub-n20"], "https://playtomic.io/tenant/7a6f7a17-5a73-4468-9329-56c901f1ceba")
         self.assertEqual(snapshot["booking_urls"]["padel-newham-rocket-beckton"], "https://padelmates.se/club/f953765495194a299e49f49674d69a41")
+
+    def test_refresh_carries_better_metadata_from_the_same_api_result(self):
+        slots = parse_slots(VENUE, fixture(), PLAY_DATE, DETECTED_AT)
+
+        with TemporaryDirectory(dir=ROOT) as directory:
+            output = Path(directory) / "availability.json"
+            with patch("scripts.refresh_availability.BetterAvailabilitySource.fetch_availability", side_effect=lambda venue, *_: slots if venue.id == VENUE.id else ()), patch("scripts.refresh_availability.LtaAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.PlaytomicAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.MatchiAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.PadelMatesAvailabilitySource.fetch_availability", return_value=()):
+                asyncio.run(refresh_availability(output))
+            snapshot = json.loads(output.read_text())
+
+        self.assertIn("metadata", snapshot["providers"]["better-admin.org.uk"])
+        observed = snapshot["providers"]["better-admin.org.uk"]["metadata"][VENUE.id]
+        self.assertEqual(snapshot["metadata"][VENUE.id], observed)
+        self.assertEqual(observed, {
+            "source_url": VENUE.availability_urls[0],
+            "checked_at": DETECTED_AT.isoformat(),
+            "values": {
+                "prices": [{
+                    "amount_gbp": "13.45",
+                    "duration_minutes": 60,
+                    "customer": None,
+                    "time_band": None,
+                    "lights_included": None,
+                }],
+                "booking_window_days": 6,
+                "release_time": "22:00:00",
+                "slot_duration_minutes": 60,
+            },
+        })
 
     def test_refresh_includes_the_padelmates_provider_batch(self):
         with TemporaryDirectory(dir=ROOT) as directory:

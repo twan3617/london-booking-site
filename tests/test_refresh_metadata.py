@@ -11,6 +11,7 @@ from scripts.refresh_metadata import load_snapshot, refresh_metadata
 
 
 API_SOURCE = "https://api.example.org/source"
+AVAILABILITY_SOURCE = "https://api.example.org/availability"
 VENUE = Venue(
     id="example-court",
     name="Example Court",
@@ -18,6 +19,7 @@ VENUE = Venue(
     provider="clubspark",
     booking_url="https://example.org/book",
     metadata_sources=("https://example.org/source", API_SOURCE),
+    availability_urls=(AVAILABILITY_SOURCE,),
 )
 
 
@@ -125,6 +127,12 @@ class RefreshMetadataTests(unittest.TestCase):
             saved = load_snapshot(output)[VENUE.id]
             self.assertEqual((saved.court_count, saved.surface, saved.booking_window_days), (4, ("hard",), 7))
             self.assertEqual(saved.source_url, API_SOURCE)
+
+    def test_registered_availability_api_can_supply_metadata(self):
+        observed = apply_metadata_patch(VENUE, patch(source_url=AVAILABILITY_SOURCE, slot_duration_minutes=60))
+
+        self.assertEqual(observed.slot_duration_minutes, 60)
+        self.assertEqual(observed.source_url, AVAILABILITY_SOURCE)
 
     def test_omitted_values_are_preserved_without_becoming_changes(self):
         with tempfile.TemporaryDirectory() as directory:

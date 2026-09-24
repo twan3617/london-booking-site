@@ -45,8 +45,17 @@ export type Filters = {
 export type Release = { date: string; time: string; open: boolean };
 export type Point = { latitude: number; longitude: number };
 export type AvailabilitySlot = { venue_id: string; court_id: string | null; start_time: string; end_time: string; available: boolean; price_pence: number | null; booking_url: string; detected_at: string; booking_opens_at?: string | null };
-export type ProviderAvailabilitySnapshot = { generated_at: string; coverage_start: string; coverage_end: string; venue_ids: string[]; booking_urls: Record<string, string>; slots: AvailabilitySlot[] };
+export type AvailabilityMetadataPatch = { source_url: string; checked_at: string; values: Record<string, unknown> };
+export type ProviderAvailabilitySnapshot = { generated_at: string; coverage_start: string; coverage_end: string; venue_ids: string[]; booking_urls: Record<string, string>; slots: AvailabilitySlot[]; metadata?: Record<string, AvailabilityMetadataPatch> };
 export type AvailabilitySnapshot = ProviderAvailabilitySnapshot & { providers?: Record<string, ProviderAvailabilitySnapshot>; failed_providers?: string[] };
+
+function isAvailabilityMetadataPatch(value: unknown): value is AvailabilityMetadataPatch {
+  if (!value || typeof value !== 'object') return false;
+  const patch = value as Record<string, unknown>;
+  return typeof patch.source_url === 'string' && URL.canParse(patch.source_url) && /^https?:/.test(patch.source_url)
+    && typeof patch.checked_at === 'string' && Number.isFinite(Date.parse(patch.checked_at))
+    && !!patch.values && typeof patch.values === 'object' && !Array.isArray(patch.values);
+}
 
 function isProviderAvailabilitySnapshot(value: unknown): value is ProviderAvailabilitySnapshot {
   if (!value || typeof value !== 'object') return false;
@@ -55,6 +64,7 @@ function isProviderAvailabilitySnapshot(value: unknown): value is ProviderAvaila
   if (typeof snapshot.coverage_start !== 'string' || typeof snapshot.coverage_end !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(snapshot.coverage_start) || !/^\d{4}-\d{2}-\d{2}$/.test(snapshot.coverage_end) || !Number.isFinite(Date.parse(`${snapshot.coverage_start}T12:00:00Z`)) || !Number.isFinite(Date.parse(`${snapshot.coverage_end}T12:00:00Z`)) || snapshot.coverage_start > snapshot.coverage_end) return false;
   if (!Array.isArray(snapshot.venue_ids) || !snapshot.venue_ids.every((id) => typeof id === 'string') || !snapshot.booking_urls || typeof snapshot.booking_urls !== 'object' || Array.isArray(snapshot.booking_urls)) return false;
   if (!Object.values(snapshot.booking_urls).every((url) => typeof url === 'string' && URL.canParse(url) && /^https?:/.test(url))) return false;
+  if (snapshot.metadata !== undefined && (!snapshot.metadata || typeof snapshot.metadata !== 'object' || Array.isArray(snapshot.metadata) || !Object.values(snapshot.metadata).every(isAvailabilityMetadataPatch))) return false;
   if (!Array.isArray(snapshot.slots)) return false;
   return snapshot.slots.every((slot) => slot && typeof slot === 'object' && typeof slot.venue_id === 'string' && typeof slot.start_time === 'string' && typeof slot.end_time === 'string' && typeof slot.available === 'boolean' && (slot.price_pence === null || Number.isInteger(slot.price_pence)) && typeof slot.booking_url === 'string' && typeof slot.detected_at === 'string');
 }
@@ -78,6 +88,7 @@ function combineAvailabilityProviders(providers: Record<string, ProviderAvailabi
     venue_ids: [...new Set(snapshots.flatMap((snapshot) => snapshot.venue_ids))],
     booking_urls: Object.assign({}, ...snapshots.map((snapshot) => snapshot.booking_urls)),
     slots: snapshots.flatMap((snapshot) => snapshot.slots).filter((slot) => slot.start_time.slice(0, 10) >= coverage_start && slot.start_time.slice(0, 10) <= coverage_end),
+    metadata: Object.assign({}, ...snapshots.map((snapshot) => snapshot.metadata ?? {})),
     providers,
     failed_providers,
   };

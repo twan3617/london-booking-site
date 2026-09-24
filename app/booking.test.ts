@@ -60,7 +60,10 @@ const availability: AvailabilitySnapshot = {
 };
 
 test('fetched availability must have a usable snapshot shape', () => {
+  const metadata = { 'hyde-park': { source_url: 'https://better-admin.org.uk/api/slots', checked_at: '2026-09-23T20:00:00Z', values: { booking_window_days: 6 } } };
   assert.equal(isAvailabilitySnapshot(availability), true);
+  assert.equal(isAvailabilitySnapshot({ ...availability, metadata }), true);
+  assert.equal(isAvailabilitySnapshot({ ...availability, metadata: { 'hyde-park': { ...metadata['hyde-park'], source_url: 'bad url' } } }), false);
   assert.equal(isAvailabilitySnapshot({ ...availability, slots: 'missing' }), false);
   assert.equal(isAvailabilitySnapshot({ ...availability, generated_at: 'bad date' }), false);
   assert.equal(isAvailabilitySnapshot({ ...availability, coverage_start: '2026-99-99' }), false);
@@ -69,9 +72,10 @@ test('fetched availability must have a usable snapshot shape', () => {
 });
 
 test('a failed provider keeps its previous snapshot while successful providers advance', () => {
+  const observed = { source_url: 'https://better-admin.org.uk/api/slots', checked_at: '2026-09-23T20:00:00Z', values: { booking_window_days: 6 } };
   const clubSlot = { ...availability.slots[0], venue_id: 'club-park', booking_url: 'https://clubspark.lta.org.uk/ClubPark' };
   const club = { ...availability, generated_at: '2026-09-23T19:00:00Z', venue_ids: ['club-park'], booking_urls: { 'club-park': 'https://clubspark.lta.org.uk/ClubPark' }, slots: [clubSlot] };
-  const better = { ...availability, generated_at: '2026-09-23T20:00:00Z' };
+  const better = { ...availability, generated_at: '2026-09-23T20:00:00Z', metadata: { 'hyde-park': observed } };
   const previous = { ...availability, providers: { 'clubspark.lta.org.uk': club } };
   const current = { ...better, providers: { 'better-admin.org.uk': better }, failed_providers: ['clubspark.lta.org.uk'] };
 
@@ -81,6 +85,7 @@ test('a failed provider keeps its previous snapshot while successful providers a
   assert.deepEqual(merged.venue_ids.sort(), ['club-park', 'hyde-park']);
   assert.equal(merged.slots.length, 3);
   assert.equal(merged.generated_at, '2026-09-23T19:00:00Z');
+  assert.deepEqual(merged.metadata, { 'hyde-park': observed });
   assert.deepEqual(merged.failed_providers, ['clubspark.lta.org.uk']);
   const fresh = freshAvailability(merged, Date.parse('2026-09-23T21:30:00Z'));
   assert.deepEqual(Object.keys(fresh?.providers ?? {}), ['better-admin.org.uk']);

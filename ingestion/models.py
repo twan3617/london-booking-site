@@ -126,7 +126,7 @@ class MetadataPatch:
 def apply_metadata_patch(venue: Venue, patch: MetadataPatch, existing: VenueMetadata | None = None) -> VenueMetadata:
     if patch.venue_id != venue.id or existing is not None and existing.venue_id != venue.id:
         raise ValueError("Metadata patch venue ID mismatch")
-    if patch.source_url not in venue.metadata_sources and patch.source_url != venue.booking_url:
+    if patch.source_url not in venue.metadata_sources + venue.availability_urls and patch.source_url != venue.booking_url:
         raise ValueError("Metadata patch source is not registered for venue")
     if existing is not None and patch.checked_at < existing.last_checked:
         raise ValueError("Metadata patch is older than saved metadata")
