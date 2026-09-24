@@ -13,7 +13,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from ingestion.providers.better import BetterAvailabilitySource
-from ingestion.providers.clubspark_availability import ClubSparkAvailabilitySource
+from ingestion.providers.lta import LtaAvailabilitySource
 from ingestion.providers.playtomic import PlaytomicAvailabilitySource
 from ingestion.registry import load_registry
 
@@ -51,7 +51,7 @@ async def refresh_availability(output: Path = OUTPUT):
     venues = [venue for venue in load_registry(ROOT / "config/venues.yaml") if venue.availability_urls]
     sources = {
         "better-admin.org.uk": BetterAvailabilitySource(),
-        "clubspark.lta.org.uk": ClubSparkAvailabilitySource(),
+        "www.lta.org.uk": LtaAvailabilitySource(),
         "playtomic.com": PlaytomicAvailabilitySource(),
     }
     venues_by_host = {}

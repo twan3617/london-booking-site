@@ -174,6 +174,13 @@ test('ClubSpark opens the selected booking-sheet date and requires an account', 
   assert.equal(bookingAccountRequired(availability, 'hyde-park'), false);
 });
 
+test('LTA Play opens the selected date and requires an account', () => {
+  const base = 'https://www.lta.org.uk/play/book-a-tennis-court/courts/barking-park_f5ecb843-7ecb-4a64-8aef-65a2eab98446/';
+  const snapshot = { ...availability, booking_urls: { 'hyde-park': base } };
+  assert.equal(availabilityBookingUrl(snapshot, 'hyde-park', '2026-09-26'), `${base}?date=2026-09-26`);
+  assert.equal(bookingAccountRequired(snapshot, 'hyde-park'), true);
+});
+
 test('Any price keeps venues whose price is unknown', () => {
   assert.equal(matchesVenue({ ...venue, price_text: null }, {
     sport: 'tennis', mode: 'after-work', borough: '', query: '', facility: 'any', status: 'all', maxPrice: null,

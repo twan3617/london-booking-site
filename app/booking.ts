@@ -101,10 +101,15 @@ export function freshAvailability(snapshot: AvailabilitySnapshot, now: number, m
 
 export function availabilityBookingUrl(snapshot: AvailabilitySnapshot, venueId: string, date: string): string | null {
   const base = snapshot.booking_urls[venueId];
-  if (base && bookingAccountRequired(snapshot, venueId)) {
+  if (base && new URL(base).hostname === 'clubspark.lta.org.uk') {
     const url = new URL(base);
     url.pathname = `${url.pathname.replace(/\/Booking\/BookByDate\/?$/, '').replace(/\/$/, '')}/Booking/BookByDate`;
     url.hash = `?date=${date}`;
+    return url.toString();
+  }
+  if (base && new URL(base).hostname === 'www.lta.org.uk') {
+    const url = new URL(base);
+    url.searchParams.set('date', date);
     return url.toString();
   }
   return base ? `${base}/${date}/by-time` : null;
@@ -112,7 +117,7 @@ export function availabilityBookingUrl(snapshot: AvailabilitySnapshot, venueId: 
 
 export function bookingAccountRequired(snapshot: AvailabilitySnapshot, venueId: string): boolean {
   const base = snapshot.booking_urls[venueId];
-  return !!base && new URL(base).hostname === 'clubspark.lta.org.uk';
+  return !!base && ['clubspark.lta.org.uk', 'www.lta.org.uk'].includes(new URL(base).hostname);
 }
 
 export function bookingUrlsForSlots(slots: AvailabilitySlot[]): string[] {

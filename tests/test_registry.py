@@ -2,6 +2,7 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
+from urllib.parse import parse_qs, urlparse
 
 from ingestion.registry import load_registry
 
@@ -46,12 +47,22 @@ class RegistryTests(unittest.TestCase):
 
         clubspark = [venue for venue in venues if venue.provider == "clubspark"]
         self.assertEqual(len(clubspark), 232)
-        self.assertEqual(sum(bool(venue.availability_urls) for venue in clubspark), 23)
-        self.assertEqual(sum(len(venue.availability_urls) for venue in clubspark), 23)
+        self.assertEqual(sum(bool(venue.availability_urls) for venue in clubspark), 206)
+        self.assertTrue(all(not venue.availability_urls or venue.availability_urls[0].startswith("https://www.lta.org.uk/") for venue in clubspark))
+        lta_urls = [venue.availability_urls[0] for venue in clubspark if venue.availability_urls]
+        self.assertEqual(len(lta_urls), len(set(lta_urls)))
+        for venue in clubspark:
+            if venue.availability_urls:
+                venue_id = parse_qs(urlparse(venue.availability_urls[0]).query)["venueid"][0]
+                self.assertIn(f"_{venue_id}/", venue.booking_url)
 
         playtomic = [venue for venue in venues if venue.availability_urls and venue.availability_urls[0].startswith("https://playtomic.com/")]
         self.assertEqual(len(playtomic), 8)
         self.assertTrue(all(venue.sport == "padel" and len(venue.availability_urls) == 1 for venue in playtomic))
+
+        configured = [venue for venue in venues if venue.availability_urls]
+        self.assertEqual(len(configured), 235)
+        self.assertEqual(sum(len(venue.availability_urls) for venue in configured), 238)
 
     def test_duplicate_ids_are_rejected(self):
         document = """venues:

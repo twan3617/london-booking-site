@@ -3,9 +3,9 @@ venues:
   name: Barking Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/BarkingPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/barking-park_f5ecb843-7ecb-4a64-8aef-65a2eab98446/
   availability_urls:
-  - https://clubspark.lta.org.uk/v0/VenueBooking/BarkingPark/GetVenueSessions
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=f5ecb843-7ecb-4a64-8aef-65a2eab98446
   metadata_sources:
   - https://clubspark.lta.org.uk/BarkingPark
   - https://clubspark.lta.org.uk/TennisinBarkingDagenham/Venues
@@ -15,9 +15,9 @@ venues:
   name: Central Park Dagenham
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/CentralParkDagenham
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/central-park-dagenham_3bb6a656-8187-4255-b252-e7a8aa973aee/
   availability_urls:
-  - https://clubspark.lta.org.uk/v0/VenueBooking/CentralParkDagenham/GetVenueSessions
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=3bb6a656-8187-4255-b252-e7a8aa973aee
   metadata_sources:
   - https://clubspark.lta.org.uk/CentralParkDagenham
   - https://clubspark.lta.org.uk/TennisinBarkingDagenham/Venues
@@ -27,9 +27,9 @@ venues:
   name: Greatfields Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/GreatfieldsPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/greatfields-park_e439fa9e-ffe3-44ff-bc47-154172b30018/
   availability_urls:
-  - https://clubspark.lta.org.uk/v0/VenueBooking/GreatfieldsPark/GetVenueSessions
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=e439fa9e-ffe3-44ff-bc47-154172b30018
   metadata_sources:
   - https://clubspark.lta.org.uk/GreatfieldsPark
   - https://clubspark.lta.org.uk/TennisinBarkingDagenham/Venues
@@ -39,9 +39,9 @@ venues:
   name: Old Dagenham Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/OldDagenhamPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/old-dagenham-park_e757dd73-823a-42bc-b985-7bbbc694cf74/
   availability_urls:
-  - https://clubspark.lta.org.uk/v0/VenueBooking/OldDagenhamPark/GetVenueSessions
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=e757dd73-823a-42bc-b985-7bbbc694cf74
   metadata_sources:
   - https://clubspark.lta.org.uk/OldDagenhamPark
   - https://clubspark.lta.org.uk/TennisinBarkingDagenham/Venues
@@ -51,9 +51,9 @@ venues:
   name: St Chads Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/StChadsPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/st-chads-park_3edd551d-aa79-4eb3-b138-b14dd4808115/
   availability_urls:
-  - https://clubspark.lta.org.uk/v0/VenueBooking/StChadsPark/GetVenueSessions
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=3edd551d-aa79-4eb3-b138-b14dd4808115
   metadata_sources:
   - https://clubspark.lta.org.uk/StChadsPark
   - https://clubspark.lta.org.uk/TennisinBarkingDagenham/Venues
@@ -63,9 +63,9 @@ venues:
   name: Bethune Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/BethunePark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/bethune-park_507b8af1-c936-4404-a041-6e28f89cde1f/
   availability_urls:
-  - https://clubspark.lta.org.uk/v0/VenueBooking/BethunePark/GetVenueSessions
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=507b8af1-c936-4404-a041-6e28f89cde1f
   metadata_sources:
   - https://clubspark.lta.org.uk/BethunePark
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -74,9 +74,9 @@ venues:
   name: Bittacy Hill Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/BittacyHillPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/bittacy-hill-park_61337eb0-d3e1-46fc-9797-439c8a743f69/
   availability_urls:
-  - https://clubspark.lta.org.uk/v0/VenueBooking/BittacyHillPark/GetVenueSessions
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=61337eb0-d3e1-46fc-9797-439c8a743f69
   metadata_sources:
   - https://clubspark.lta.org.uk/BittacyHillPark
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -95,9 +95,9 @@ venues:
   name: Cherry Tree Wood
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/CherryTreeWoods
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/cherry-tree-wood_08f8cd1e-5eaa-479b-bfea-0400afe0cfb1/
   availability_urls:
-  - https://clubspark.lta.org.uk/v0/VenueBooking/CherryTreeWoods/GetVenueSessions
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=08f8cd1e-5eaa-479b-bfea-0400afe0cfb1
   metadata_sources:
   - https://clubspark.lta.org.uk/CherryTreeWoods
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -106,9 +106,9 @@ venues:
   name: Childs Hill Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/ChildsHillPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/childs-hill-park_7b300b14-7d8d-4189-a889-4ebc3b4fe7df/
   availability_urls:
-  - https://clubspark.lta.org.uk/v0/VenueBooking/ChildsHillPark/GetVenueSessions
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=7b300b14-7d8d-4189-a889-4ebc3b4fe7df
   metadata_sources:
   - https://clubspark.lta.org.uk/ChildsHillPark
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -117,9 +117,9 @@ venues:
   name: Edgwarebury Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/EdgwareburyPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/edgwarebury-park_f099e90c-8fe3-4fbd-8535-f9bd532bdc29/
   availability_urls:
-  - https://clubspark.lta.org.uk/v0/VenueBooking/EdgwareburyPark/GetVenueSessions
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=f099e90c-8fe3-4fbd-8535-f9bd532bdc29
   metadata_sources:
   - https://clubspark.lta.org.uk/EdgwareburyPark
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -128,9 +128,9 @@ venues:
   name: Friary Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/FriaryPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/friary-park_1d267afe-79ed-4ddb-8b79-d82fccff12d3/
   availability_urls:
-  - https://clubspark.lta.org.uk/v0/VenueBooking/FriaryPark/GetVenueSessions
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=1d267afe-79ed-4ddb-8b79-d82fccff12d3
   metadata_sources:
   - https://clubspark.lta.org.uk/FriaryPark
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -146,9 +146,9 @@ venues:
   name: Halliwick Recreation Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/HalliwickRec
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/halliwick-rec_eb0ed587-d1bb-4c1b-a9d8-2c72782debf1/
   availability_urls:
-  - https://clubspark.lta.org.uk/v0/VenueBooking/HalliwickRec/GetVenueSessions
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=eb0ed587-d1bb-4c1b-a9d8-2c72782debf1
   metadata_sources:
   - https://clubspark.lta.org.uk/HalliwickRec
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -157,9 +157,9 @@ venues:
   name: Hendon Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/HendonPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/hendon-park_d73068d6-2ebb-494d-9635-86d2e411787b/
   availability_urls:
-  - https://clubspark.lta.org.uk/v0/VenueBooking/HendonPark/GetVenueSessions
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=d73068d6-2ebb-494d-9635-86d2e411787b
   metadata_sources:
   - https://clubspark.lta.org.uk/HendonPark
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -168,9 +168,9 @@ venues:
   name: Lyttelton Playing Fields
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/LytteltonPlayingFields
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/lyttelton-playing-fields_04d7a746-fb69-413d-abe1-61cc670a4cf1/
   availability_urls:
-  - https://clubspark.lta.org.uk/v0/VenueBooking/LytteltonPlayingFields/GetVenueSessions
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=04d7a746-fb69-413d-abe1-61cc670a4cf1
   metadata_sources:
   - https://clubspark.lta.org.uk/LytteltonPlayingFields
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -179,9 +179,9 @@ venues:
   name: Mill Hill Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/MillHillPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/mill-hill-park_bd7fa086-5629-4d15-89a9-1a1ac79439cb/
   availability_urls:
-  - https://clubspark.lta.org.uk/v0/VenueBooking/MillHillPark/GetVenueSessions
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=bd7fa086-5629-4d15-89a9-1a1ac79439cb
   metadata_sources:
   - https://clubspark.lta.org.uk/MillHillPark
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -190,9 +190,9 @@ venues:
   name: Montrose Playing Fields
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/MontrosePlayingFields
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/montrose-playing-fields_e21dc56b-5dc5-48e4-ace6-fa8861809f2c/
   availability_urls:
-  - https://clubspark.lta.org.uk/v0/VenueBooking/MontrosePlayingFields/GetVenueSessions
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=e21dc56b-5dc5-48e4-ace6-fa8861809f2c
   metadata_sources:
   - https://clubspark.lta.org.uk/MontrosePlayingFields
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -209,9 +209,9 @@ venues:
   name: New Southgate Recreation Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/NewSouthgateRecGround
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/new-southgate-rec-ground_bebaa473-1b61-43e9-8ae9-1c681567f2bf/
   availability_urls:
-  - https://clubspark.lta.org.uk/v0/VenueBooking/NewSouthgateRecGround/GetVenueSessions
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=bebaa473-1b61-43e9-8ae9-1c681567f2bf
   metadata_sources:
   - https://clubspark.lta.org.uk/NewSouthgateRecGround
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -220,9 +220,9 @@ venues:
   name: Northway Gardens
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/NorthwayGardens
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/northway-gardens_97f9842e-bfb7-4ae9-a2be-bbb7e30d002e/
   availability_urls:
-  - https://clubspark.lta.org.uk/v0/VenueBooking/NorthwayGardens/GetVenueSessions
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=97f9842e-bfb7-4ae9-a2be-bbb7e30d002e
   metadata_sources:
   - https://clubspark.lta.org.uk/NorthwayGardens
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -231,9 +231,9 @@ venues:
   name: Oak Hill Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/OakhillPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/oak-hill-park_69b5c167-d6ef-4b64-a4ce-f451bcd3e656/
   availability_urls:
-  - https://clubspark.lta.org.uk/v0/VenueBooking/OakhillPark/GetVenueSessions
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=69b5c167-d6ef-4b64-a4ce-f451bcd3e656
   metadata_sources:
   - https://clubspark.lta.org.uk/OakhillPark
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -242,9 +242,9 @@ venues:
   name: Old Courthouse Recreation Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/OldCourthouseRecGround
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/old-courthouse-rec-ground_1c5be8cd-465e-4515-a4f2-9b907e5b8d8d/
   availability_urls:
-  - https://clubspark.lta.org.uk/v0/VenueBooking/OldCourthouseRecGround/GetVenueSessions
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=1c5be8cd-465e-4515-a4f2-9b907e5b8d8d
   metadata_sources:
   - https://clubspark.lta.org.uk/OldCourthouseRecGround
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -253,9 +253,9 @@ venues:
   name: Princes Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/PrincesPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/princes-park_e6946701-7d35-4898-816c-dc87692f243c/
   availability_urls:
-  - https://clubspark.lta.org.uk/v0/VenueBooking/PrincesPark/GetVenueSessions
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=e6946701-7d35-4898-816c-dc87692f243c
   metadata_sources:
   - https://clubspark.lta.org.uk/PrincesPark
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -264,7 +264,9 @@ venues:
   name: Rushgrove Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/RushgrovePark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/rushgrove-park_4283a763-c184-4110-afb1-59d2d7b5d8eb/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=4283a763-c184-4110-afb1-59d2d7b5d8eb
   metadata_sources:
   - https://clubspark.lta.org.uk/RushgrovePark
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -273,7 +275,9 @@ venues:
   name: Stonegrove Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/StonegrovePark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/stonegrove-park_fab50f2c-a750-46b8-9e15-70aff31f626c/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=fab50f2c-a750-46b8-9e15-70aff31f626c
   metadata_sources:
   - https://clubspark.lta.org.uk/StonegrovePark
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -282,7 +286,9 @@ venues:
   name: Sunnyhill Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/SunnyhillPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/sunnyhill-park_9a069f47-fbe6-4c54-a418-39075c4d274b/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=9a069f47-fbe6-4c54-a418-39075c4d274b
   metadata_sources:
   - https://clubspark.lta.org.uk/SunnyhillPark
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -291,7 +297,9 @@ venues:
   name: Tudor Sports Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/TudorSportsGround
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/tudor-sports-ground_43af6bd0-c352-4b19-a895-bc687a2a6b08/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=43af6bd0-c352-4b19-a895-bc687a2a6b08
   metadata_sources:
   - https://clubspark.lta.org.uk/TudorSportsGround
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -300,7 +308,9 @@ venues:
   name: Victoria Park (Finchley)
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/VictoriaPark11
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/victoria-park-finchley_bc17eec6-b77c-4481-a367-4bee95ce7f05/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=bc17eec6-b77c-4481-a367-4bee95ce7f05
   metadata_sources:
   - https://clubspark.lta.org.uk/VictoriaPark11
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -309,7 +319,9 @@ venues:
   name: West Hendon Playing Fields
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/WestHendonPlayingFields
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/west-hendon-playing-fields_76dfa3e2-c81d-47db-9a8c-803b6501dca5/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=76dfa3e2-c81d-47db-9a8c-803b6501dca5
   metadata_sources:
   - https://clubspark.lta.org.uk/WestHendonPlayingFields
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -318,7 +330,9 @@ venues:
   name: Belvedere Recreation Ground South
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/BelvedereRecreationGround
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/belvedere-recreation-ground-south_694f22e4-b36c-4053-aea7-b7c6696274d2/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=694f22e4-b36c-4053-aea7-b7c6696274d2
   metadata_sources:
   - https://clubspark.lta.org.uk/BelvedereRecreationGround
   - https://www.bexley.gov.uk/services/parks-leisure-and-libraries/tennis-bexley/improving-tennis-courts-bexley
@@ -337,7 +351,9 @@ venues:
   name: Danson Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/DansonParkTennis
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/danson-park_2aa93779-9864-475b-b5ac-1feee12e52fc/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=2aa93779-9864-475b-b5ac-1feee12e52fc
   metadata_sources:
   - https://clubspark.lta.org.uk/DansonParkTennis
   - https://www.bexley.gov.uk/services/parks-leisure-and-libraries/tennis-bexley/improving-tennis-courts-bexley
@@ -347,7 +363,9 @@ venues:
   name: Northumberland Heath Recreation Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/NorthumberlandHeathRecreationGround
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/northumberland-heath-recreation-ground_14ed8b1d-857d-4ca4-92fd-31629fbdc715/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=14ed8b1d-857d-4ca4-92fd-31629fbdc715
   metadata_sources:
   - https://clubspark.lta.org.uk/NorthumberlandHeathRecreationGround
   - https://www.bexley.gov.uk/services/parks-leisure-and-libraries/tennis-bexley/improving-tennis-courts-bexley
@@ -357,7 +375,9 @@ venues:
   name: Russell Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/RussellPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/russell-park_e926e49f-8254-4fb0-a2ca-16e1090d3cb0/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=e926e49f-8254-4fb0-a2ca-16e1090d3cb0
   metadata_sources:
   - https://clubspark.lta.org.uk/RussellPark
   - https://www.bexley.gov.uk/services/parks-leisure-and-libraries/tennis-bexley/improving-tennis-courts-bexley
@@ -367,7 +387,9 @@ venues:
   name: Sidcup Place
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/SidcupPlace
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/sidcup-place_93b88358-3f62-4c3f-899b-36bf4ab033b0/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=93b88358-3f62-4c3f-899b-36bf4ab033b0
   metadata_sources:
   - https://clubspark.lta.org.uk/SidcupPlace
   - https://www.bexley.gov.uk/services/parks-leisure-and-libraries/tennis-bexley/improving-tennis-courts-bexley
@@ -377,7 +399,9 @@ venues:
   name: Waring Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/WaringPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/waring-park_24ce526e-65d3-4ddd-977a-85e549625a6b/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=24ce526e-65d3-4ddd-977a-85e549625a6b
   metadata_sources:
   - https://clubspark.lta.org.uk/WaringPark
   - https://www.bexley.gov.uk/services/parks-leisure-and-libraries/tennis-bexley/improving-tennis-courts-bexley
@@ -387,7 +411,9 @@ venues:
   name: West Heath Recreation Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/WestHeath
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/west-heath-recreation-ground_a3f2ac7c-da5d-4bee-a39a-dd64a4bd8687/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=a3f2ac7c-da5d-4bee-a39a-dd64a4bd8687
   metadata_sources:
   - https://clubspark.lta.org.uk/WestHeath
   - https://www.bexley.gov.uk/services/parks-leisure-and-libraries/tennis-bexley/improving-tennis-courts-bexley
@@ -397,7 +423,9 @@ venues:
   name: Alperton Sports Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/AlpertonSportsGround
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/alperton-sports-ground_31191813-1a9d-43da-a31e-254b1faae720/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=31191813-1a9d-43da-a31e-254b1faae720
   metadata_sources:
   - https://clubspark.lta.org.uk/AlpertonSportsGround
   - https://www.brent.gov.uk/tennis
@@ -406,7 +434,9 @@ venues:
   name: Chelmsford Square
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/ChelmsfordSquare
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/chelmsford-square_15d248c2-5ac3-4cd5-af44-3f69a539791f/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=15d248c2-5ac3-4cd5-af44-3f69a539791f
   metadata_sources:
   - https://clubspark.lta.org.uk/ChelmsfordSquare
   - https://www.brent.gov.uk/tennis
@@ -415,7 +445,9 @@ venues:
   name: Eton Grove Open Space
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/EtonGrove
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/eton-grove_86a91fc9-b5d2-494c-a4bb-5837520cfd00/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=86a91fc9-b5d2-494c-a4bb-5837520cfd00
   metadata_sources:
   - https://clubspark.lta.org.uk/EtonGrove
   - https://www.brent.gov.uk/tennis
@@ -424,7 +456,9 @@ venues:
   name: Gladstone Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/GladstoneParkTennis
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/gladstone-park_bee84977-a311-452a-b8b9-1d5efe2cc9a1/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=bee84977-a311-452a-b8b9-1d5efe2cc9a1
   metadata_sources:
   - https://clubspark.lta.org.uk/GladstoneParkTennis
   - https://www.brent.gov.uk/tennis
@@ -433,7 +467,9 @@ venues:
   name: King Edward VII Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/KingEdwardVIIPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/king-edward-vii-park_36072346-23dd-4102-aec7-496040fc577b/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=36072346-23dd-4102-aec7-496040fc577b
   metadata_sources:
   - https://clubspark.lta.org.uk/KingEdwardVIIPark
   - https://www.brent.gov.uk/tennis
@@ -442,7 +478,9 @@ venues:
   name: Preston Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/PrestonPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/preston-park_72920b7f-37b3-44b5-a5a7-dee019349183/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=72920b7f-37b3-44b5-a5a7-dee019349183
   metadata_sources:
   - https://clubspark.lta.org.uk/PrestonPark
   - https://www.brent.gov.uk/tennis
@@ -451,14 +489,18 @@ venues:
   name: Queen's Park Tennis Courts
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/QueensParkTennisCourts
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/queens-park-tennis-courts_62a33f54-1bff-49ac-9e26-67154ef07728/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=62a33f54-1bff-49ac-9e26-67154ef07728
   metadata_sources:
   - https://clubspark.lta.org.uk/QueensParkTennisCourts
 - id: brent-roe-green-park
   name: Roe Green Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/RoeGreenPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/roe-green-park_ee74c45c-b80a-4c77-9ab2-803d0a320dc2/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=ee74c45c-b80a-4c77-9ab2-803d0a320dc2
   metadata_sources:
   - https://clubspark.lta.org.uk/RoeGreenPark
   - https://www.brent.gov.uk/tennis
@@ -467,7 +509,9 @@ venues:
   name: Vale Farm
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/ValeFarm
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/vale-farm_77dc6b79-75f6-4ccf-91e1-36996bc7a9a7/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=77dc6b79-75f6-4ccf-91e1-36996bc7a9a7
   metadata_sources:
   - https://clubspark.lta.org.uk/ValeFarm
   - https://www.brent.gov.uk/tennis
@@ -476,7 +520,9 @@ venues:
   name: Woodcock Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/WoodcockPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/woodcock-park_a3503bd6-be42-478a-bf7c-ab36ed2d4167/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=a3503bd6-be42-478a-bf7c-ab36ed2d4167
   metadata_sources:
   - https://clubspark.lta.org.uk/WoodcockPark
   - https://www.brent.gov.uk/tennis
@@ -500,7 +546,9 @@ venues:
   name: Church House Gardens
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/ChurchHouseGardens
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/church-house-gardens-bromley_e3248b5b-1b12-47ca-b467-4d44803d7a61/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=e3248b5b-1b12-47ca-b467-4d44803d7a61
   metadata_sources:
   - https://clubspark.lta.org.uk/BromleyParksTennis
   - https://clubspark.lta.org.uk/ChurchHouseGardens
@@ -508,7 +556,9 @@ venues:
   name: Coney Hall Recreation Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/ConeyHallRecGround
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/coney-hall-recreation-ground_9ad1775a-5177-4725-986b-361a831848e7/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=9ad1775a-5177-4725-986b-361a831848e7
   metadata_sources:
   - https://clubspark.lta.org.uk/BromleyParksTennis
   - https://clubspark.lta.org.uk/ConeyHallRecGround
@@ -542,7 +592,9 @@ venues:
   name: Goddington Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/GoddingtonPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/goddington-park_21ce9b5c-96d1-44c0-836f-5cdec8c60334/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=21ce9b5c-96d1-44c0-836f-5cdec8c60334
   metadata_sources:
   - https://clubspark.lta.org.uk/BromleyParksTennis
   - https://clubspark.lta.org.uk/GoddingtonPark
@@ -558,7 +610,9 @@ venues:
   name: Kings Hall Road (Cator Park)
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/KingsHallRoad
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/kings-hall-road_bf14e292-7ccc-4383-8c2a-abbebd107e71/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=bf14e292-7ccc-4383-8c2a-abbebd107e71
   metadata_sources:
   - https://clubspark.lta.org.uk/BromleyParksTennis
   - https://clubspark.lta.org.uk/KingsHallRoad
@@ -566,7 +620,9 @@ venues:
   name: Poverest Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/PoverestPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/poverest-park_fc6e70a4-186d-4d3e-9a6d-dd80c41cec97/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=fc6e70a4-186d-4d3e-9a6d-dd80c41cec97
   metadata_sources:
   - https://clubspark.lta.org.uk/BromleyParksTennis
   - https://clubspark.lta.org.uk/PoverestPark
@@ -600,7 +656,9 @@ venues:
   name: Parliament Hill Fields
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/ParliamentHillFieldsTennisCourts/Booking/BookByDate
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/parliament-hill-fields-tennis-courts_64c6acf4-0ecd-476b-b548-899d9963386c/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=64c6acf4-0ecd-476b-b548-899d9963386c
   metadata_sources:
   - https://www.cityoflondon.gov.uk/things-to-do/green-spaces/hampstead-heath/where-to-go-at-hampstead-heath/parliament-hill-tennis-courts
 - id: camden-waterlow-park
@@ -624,35 +682,45 @@ venues:
   name: Addiscombe Recreation Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/AddiscombeRecGround
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/addiscombe-rec-ground_cfe268bc-ed42-48d2-9410-3ac031af8e6f/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=cfe268bc-ed42-48d2-9410-3ac031af8e6f
   metadata_sources:
   - https://clubspark.lta.org.uk/AddiscombeRecGround
 - id: croydon-ashburton-park
   name: Ashburton Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/AshburtonPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/ashburton-park_6880aebb-2973-481d-b413-a0e76d791a81/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=6880aebb-2973-481d-b413-a0e76d791a81
   metadata_sources:
   - https://clubspark.lta.org.uk/AshburtonPark
 - id: croydon-biggin-woods
   name: Biggin Woods
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/BigginWoods
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/biggin-woods_fe0c5a5b-f954-4a86-8f8d-c2fad3b5ba2b/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=fe0c5a5b-f954-4a86-8f8d-c2fad3b5ba2b
   metadata_sources:
   - https://clubspark.lta.org.uk/BigginWoods
 - id: croydon-coulsdon-memorial-park
   name: Coulsdon Memorial Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/CouldsonMemorialPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/coulsdon-memorial-park_af3ac345-41af-4ac2-89ee-cdb5a896fd3a/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=af3ac345-41af-4ac2-89ee-cdb5a896fd3a
   metadata_sources:
   - https://clubspark.lta.org.uk/CouldsonMemorialPark
 - id: croydon-grangewood-park
   name: Grangewood Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/GrangewoodPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/grangewood-park_b03eb97e-45f6-4b53-8527-bef505626823/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=b03eb97e-45f6-4b53-8527-bef505626823
   metadata_sources:
   - https://clubspark.lta.org.uk/GrangewoodPark
 - id: croydon-higher-drive-recreation-ground
@@ -666,70 +734,90 @@ venues:
   name: Park Hill Recreation Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/ParkHillRecGround
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/park-hill-rec-ground_c3ac9716-4fd5-4384-be3c-b3af1e1aa151/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=c3ac9716-4fd5-4384-be3c-b3af1e1aa151
   metadata_sources:
   - https://clubspark.lta.org.uk/ParkHillRecGround
 - id: croydon-purley-beeches-park
   name: Purley Beeches Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/PurleyBeechesPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/purley-beeches-park_9ca5bae9-d187-4c8b-80a0-7530dbb8a2dd/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=9ca5bae9-d187-4c8b-80a0-7530dbb8a2dd
   metadata_sources:
   - https://clubspark.lta.org.uk/PurleyBeechesPark
 - id: croydon-rickman-hill-park
   name: Rickman Hill Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/RickmanHillPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/rickman-hill-park_1c56a054-7ded-453c-8071-574773148106/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=1c56a054-7ded-453c-8071-574773148106
   metadata_sources:
   - https://clubspark.lta.org.uk/RickmanHillPark
 - id: croydon-shirley-church-recreation-ground
   name: Shirley Church Recreation Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/ShirleyChurchRecGround
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/shirley-church-rec-ground_f69a2042-8e77-4747-886f-871a61e2149f/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=f69a2042-8e77-4747-886f-871a61e2149f
   metadata_sources:
   - https://clubspark.lta.org.uk/ShirleyChurchRecGround
 - id: croydon-south-norwood-lake
   name: South Norwood Lake
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/SouthNorwoodLake
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/south-norwood-lake_07ff47bf-2ccc-4ff6-84b9-b7b451e7b3f5/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=07ff47bf-2ccc-4ff6-84b9-b7b451e7b3f5
   metadata_sources:
   - https://clubspark.lta.org.uk/CroydonParksTennis/Bookacourt
 - id: croydon-south-norwood-recreation-ground
   name: South Norwood Recreation Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/SouthNorwoodRecGround
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/south-norwood-rec-ground_bc4fc2cc-e5e7-4afa-83b6-f4e3eb97659f/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=bc4fc2cc-e5e7-4afa-83b6-f4e3eb97659f
   metadata_sources:
   - https://clubspark.lta.org.uk/CroydonParksTennis/Bookacourt
 - id: croydon-trumble-gardens
   name: Trumble Gardens
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/TrumbleGardens
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/trumble-gardens_9d042a1e-f25f-4def-8c5a-fa2bdd093931/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=9d042a1e-f25f-4def-8c5a-fa2bdd093931
   metadata_sources:
   - https://clubspark.lta.org.uk/TrumbleGardens
 - id: croydon-upper-norwood-recreation-ground
   name: Upper Norwood Recreation Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/UpperNorwoodRecreationGround
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/upper-norwood-recreation-ground_d00d06d7-49da-4925-b320-8a33ec486cfd/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=d00d06d7-49da-4925-b320-8a33ec486cfd
   metadata_sources:
   - https://clubspark.lta.org.uk/UpperNorwoodRecreationGround
 - id: croydon-wandle-park
   name: Wandle Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/wandle-park
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/wandle-park_76307ee2-89f5-4bc7-90b6-e0fce14a5b60/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=76307ee2-89f5-4bc7-90b6-e0fce14a5b60
   metadata_sources:
   - https://clubspark.lta.org.uk/wandle-park
 - id: ealing-acton-park
   name: Acton Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/ActonPark2
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/acton-park_d19f7ba0-0bbf-4c86-bb59-8193813b9367/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=d19f7ba0-0bbf-4c86-bb59-8193813b9367
   metadata_sources:
   - https://clubspark.lta.org.uk/ActonPark2
   - https://www.ealing.gov.uk/info/201142/sports_facilities/1686/tennis
@@ -744,7 +832,9 @@ venues:
   name: Berkeley Fields
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/BerkleyFields2
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/berkeley-fields_b151140d-b6c9-4a82-801a-ddb196a50ba0/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=b151140d-b6c9-4a82-801a-ddb196a50ba0
   metadata_sources:
   - https://clubspark.lta.org.uk/BerkleyFields2
   - https://www.ealing.gov.uk/info/201142/sports_facilities/1686/tennis
@@ -759,7 +849,9 @@ venues:
   name: Churchfields Recreation Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/ChurchfieldRecreationGround
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/churchfield-recreation-ground_061e1773-8c62-4c9b-a1ad-f8da199401e0/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=061e1773-8c62-4c9b-a1ad-f8da199401e0
   metadata_sources:
   - https://clubspark.lta.org.uk/ChurchfieldRecreationGround
   - https://www.ealing.gov.uk/info/201142/sports_facilities/1686/tennis
@@ -774,7 +866,9 @@ venues:
   name: Elthorne Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/ElthorneTennis
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/elthorne-tennis_6cfc63b8-6857-42bb-862a-c88f1d5cb14c/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=6cfc63b8-6857-42bb-862a-c88f1d5cb14c
   metadata_sources:
   - https://clubspark.lta.org.uk/ElthorneTennis
   - https://clubspark.lta.org.uk/ElthorneTennis/Booking/Bookingpolicy
@@ -811,14 +905,18 @@ venues:
   name: North Acton Playing Fields
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/NorthActonPlayingFieldsTennisClub
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/north-acton-playing-fields_1352d12e-b343-4677-855f-fbe5e1b6a76e/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=1352d12e-b343-4677-855f-fbe5e1b6a76e
   metadata_sources:
   - https://www.lta.org.uk/play/book-a-tennis-court/courts/north-acton-playing-fields_1352d12e-b343-4677-855f-fbe5e1b6a76e
 - id: ealing-perivale-park
   name: Perivale Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/PerivaleParkPitches
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/perivale-park_d9a65da2-25b1-4940-8511-d715dbc19843/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=d9a65da2-25b1-4940-8511-d715dbc19843
   metadata_sources:
   - https://clubspark.lta.org.uk/PerivaleParkPitches
   - https://www.ealing.gov.uk/info/201142/sports_facilities/1686/tennis
@@ -834,7 +932,9 @@ venues:
   name: Ravenor Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/RavenorPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/ravenor-park_6f448c48-b4c9-4ab3-bc2a-fca81801c3f8/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=6f448c48-b4c9-4ab3-bc2a-fca81801c3f8
   metadata_sources:
   - https://clubspark.lta.org.uk/RavenorPark
   - https://www.ealing.gov.uk/info/201142/sports_facilities/1686/tennis
@@ -849,7 +949,9 @@ venues:
   name: Southall Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/SouthallPark2
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/southall-park_3ba804a4-0b62-494c-924d-03f27b1baf53/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=3ba804a4-0b62-494c-924d-03f27b1baf53
   metadata_sources:
   - https://clubspark.lta.org.uk/SouthallPark2
   - https://www.ealing.gov.uk/info/201142/sports_facilities/1686/tennis
@@ -857,7 +959,9 @@ venues:
   name: Southfield Recreation Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/SouthfieldRec
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/southfield-rec_02ede91d-f847-442b-ae79-0744941d4e59/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=02ede91d-f847-442b-ae79-0744941d4e59
   metadata_sources:
   - https://clubspark.lta.org.uk/SouthfieldRec
   - https://www.ealing.gov.uk/info/201142/sports_facilities/1686/tennis
@@ -865,7 +969,9 @@ venues:
   name: Spikes Bridge Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/SpikesBridgePark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/spikes-bridge-park_ad3b56db-8227-49c5-93b1-cc17db2744d0/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=ad3b56db-8227-49c5-93b1-cc17db2744d0
   metadata_sources:
   - https://clubspark.lta.org.uk/SpikesBridgePark
   - https://www.ealing.gov.uk/info/201142/sports_facilities/1686/tennis
@@ -887,7 +993,9 @@ venues:
   name: Wolf Fields Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/WolfFieldsPark2
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/wolf-fields-park_86020c65-46b1-4674-9338-65f02f817600/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=86020c65-46b1-4674-9338-65f02f817600
   metadata_sources:
   - https://clubspark.lta.org.uk/WolfFieldsPark2
   - https://www.ealing.gov.uk/info/201142/sports_facilities/1686/tennis
@@ -895,21 +1003,27 @@ venues:
   name: Albany Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/AlbanyPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/albany-park_060f19de-a7db-4ff7-b6c1-d271080aa6ed/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=060f19de-a7db-4ff7-b6c1-d271080aa6ed
   metadata_sources:
   - https://clubspark.lta.org.uk/AlbanyPark
 - id: enfield-arnos-park
   name: Arnos Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/ArnosPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/arnos-park_9edf38d1-743b-4415-b297-4ef9676cfff2/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=9edf38d1-743b-4415-b297-4ef9676cfff2
   metadata_sources:
   - https://clubspark.lta.org.uk/ArnosPark
 - id: enfield-broomfield-park
   name: Broomfield Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/BroomfieldPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/broomfield-park_79acde1b-44d5-40cc-899d-f0438eec63fb/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=79acde1b-44d5-40cc-899d-f0438eec63fb
   metadata_sources:
   - https://clubspark.lta.org.uk/BroomfieldPark
   - https://www.enfield.gov.uk/services/leisure-and-culture/enfield-tennis-courts-refurbishment
@@ -917,7 +1031,9 @@ venues:
   name: Bush Hill Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/BushHillPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/bush-hill-park_d313196e-9a94-49ca-86e8-1c6609908bef/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=d313196e-9a94-49ca-86e8-1c6609908bef
   metadata_sources:
   - https://clubspark.lta.org.uk/BushHillPark
   - https://www.enfield.gov.uk/services/leisure-and-culture/enfield-tennis-courts-refurbishment
@@ -925,28 +1041,36 @@ venues:
   name: Craig Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/CraigPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/craig-park_f2ebcbdc-e941-486f-94b8-cb247d1bc128/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=f2ebcbdc-e941-486f-94b8-cb247d1bc128
   metadata_sources:
   - https://clubspark.lta.org.uk/CraigPark
 - id: enfield-durants-park
   name: Durants Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/DurantsPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/durants-park_e3abfe3c-da5a-4c61-b6f9-1032a2da704a/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=e3abfe3c-da5a-4c61-b6f9-1032a2da704a
   metadata_sources:
   - https://clubspark.lta.org.uk/DurantsPark
 - id: enfield-enfield-town-park
   name: Enfield Town Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/EnfieldTownPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/enfield-town-park_ff70ce27-2fb8-4694-97df-d29f825fd2d4/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=ff70ce27-2fb8-4694-97df-d29f825fd2d4
   metadata_sources:
   - https://clubspark.lta.org.uk/EnfieldTownPark
 - id: enfield-firs-farm-recreation-ground
   name: Firs Farm Recreation Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/FirsFarmTennis
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/firs-farm-recreation-ground_a84b765f-3cfb-4d46-9b3a-ecb6d1316b91/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=a84b765f-3cfb-4d46-9b3a-ecb6d1316b91
   metadata_sources:
   - https://clubspark.lta.org.uk/FirsFarmTennis
   - https://www.enfield.gov.uk/services/leisure-and-culture/enfield-tennis-courts-refurbishment
@@ -954,7 +1078,9 @@ venues:
   name: Grovelands Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/GrovelandsPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/grovelands-park_bc548df6-d188-41de-8103-e79e7fb19110/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=bc548df6-d188-41de-8103-e79e7fb19110
   metadata_sources:
   - https://clubspark.lta.org.uk/GrovelandsPark
   - https://www.enfield.gov.uk/services/leisure-and-culture/enfield-tennis-courts-refurbishment
@@ -983,28 +1109,36 @@ venues:
   name: Oakwood Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/OakwoodPark2
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/oakwood-park_02a5433e-fff2-44da-a723-773b46dade66/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=02a5433e-fff2-44da-a723-773b46dade66
   metadata_sources:
   - https://clubspark.lta.org.uk/OakwoodPark2
 - id: enfield-ponders-end-recreation-ground
   name: Ponders End Recreation Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/PondersEndRecreationGround
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/ponders-end-recreation-ground_57c10509-f65a-4c49-a90d-0a7447608576/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=57c10509-f65a-4c49-a90d-0a7447608576
   metadata_sources:
   - https://clubspark.lta.org.uk/PondersEndRecreationGround
 - id: enfield-pymmes-park
   name: Pymmes Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/PymmesPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/pymmes-park_d358e036-9d62-407f-a03b-2d35a5c83a7f/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=d358e036-9d62-407f-a03b-2d35a5c83a7f
   metadata_sources:
   - https://clubspark.lta.org.uk/PymmesPark
 - id: greenwich-altash-gardens
   name: Altash Gardens
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/altash-gardens
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/altash-gardens_29ee9414-57e4-46d4-b573-a9cd6a986fe9/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=29ee9414-57e4-46d4-b573-a9cd6a986fe9
   metadata_sources:
   - https://clubspark.lta.org.uk/altash-gardens
   - https://clubspark.lta.org.uk/ParksTennisinGreenwich
@@ -1012,7 +1146,9 @@ venues:
   name: Blackheath (Chesterfield Walk)
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/BlackheathPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/blackheath-chesterfield-walk_de1fc5e6-36c5-4653-afb7-375a3f82d811/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=de1fc5e6-36c5-4653-afb7-375a3f82d811
   metadata_sources:
   - https://clubspark.lta.org.uk/BlackheathPark
   - https://clubspark.lta.org.uk/ParksTennisinGreenwich
@@ -1020,7 +1156,9 @@ venues:
   name: Bostall Gardens
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/bostallgardens
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/bostall-gardens_090d965b-fef8-4e02-87f5-0e12ac3706d2/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=090d965b-fef8-4e02-87f5-0e12ac3706d2
   metadata_sources:
   - https://clubspark.lta.org.uk/bostallgardens
   - https://clubspark.lta.org.uk/ParksTennisinGreenwich
@@ -1063,7 +1201,9 @@ venues:
   name: Kidbrooke Green
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/KidbrookeGreen
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/kidbrooke-green_1a901ccf-e99a-4995-a3f3-e0093a803607/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=1a901ccf-e99a-4995-a3f3-e0093a803607
   metadata_sources:
   - https://clubspark.lta.org.uk/KidbrookeGreen
   - https://clubspark.lta.org.uk/ParksTennisinGreenwich
@@ -1071,7 +1211,9 @@ venues:
   name: Maryon Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/MaryonPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/maryon-park_cf35c7c6-f6a2-4b9c-9ca5-46ccd9005297/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=cf35c7c6-f6a2-4b9c-9ca5-46ccd9005297
   metadata_sources:
   - https://clubspark.lta.org.uk/MaryonPark
   - https://clubspark.lta.org.uk/ParksTennisinGreenwich
@@ -1079,7 +1221,9 @@ venues:
   name: Plumstead Common
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/PlumsteadCommon
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/plumstead-common_e0a78043-7a01-4997-a595-6c1b5128cd76/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=e0a78043-7a01-4997-a595-6c1b5128cd76
   metadata_sources:
   - https://clubspark.lta.org.uk/PlumsteadCommon
   - https://clubspark.lta.org.uk/ParksTennisinGreenwich
@@ -1175,14 +1319,18 @@ venues:
   name: Brook Green Tennis
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/BrookGreenTennis
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/brook-green-tennis_f1cd4dcf-dae1-430f-bc5c-4c26aa8759a3/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=f1cd4dcf-dae1-430f-bc5c-4c26aa8759a3
   metadata_sources:
   - https://clubspark.lta.org.uk/BrookGreenTennis
 - id: hammersmith-and-fulham-eel-brook-common
   name: Eel Brook Common
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/EelBrookCommon
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/eel-brook-common_e70f9431-bb18-48fd-b907-fd5ac0b7de1e/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=e70f9431-bb18-48fd-b907-fd5ac0b7de1e
   metadata_sources:
   - https://clubspark.lta.org.uk/EelBrookCommon
   - https://clubspark.lta.org.uk/TennisInHammersmithAndFulham/PricesandInfo
@@ -1197,7 +1345,9 @@ venues:
   name: Hurlingham Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/HurlinghamPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/hurlingham-park_1370c1a8-69d0-4381-a6a8-471f065735fd/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=1370c1a8-69d0-4381-a6a8-471f065735fd
   metadata_sources:
   - https://clubspark.lta.org.uk/HurlinghamPark
   - https://clubspark.lta.org.uk/TennisInHammersmithAndFulham/PricesandInfo
@@ -1212,7 +1362,9 @@ venues:
   name: Linford Christie Outdoor Sports Centre
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/LinfordChristieStadium
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/linford-christie-outdoor-sports-centre_ca8ed05a-2da4-4d6f-b218-a1279de71441/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=ca8ed05a-2da4-4d6f-b218-a1279de71441
   metadata_sources:
   - https://clubspark.lta.org.uk/LinfordChristieStadium
   - https://clubspark.lta.org.uk/TennisInHammersmithAndFulham/PricesandInfo
@@ -1227,7 +1379,9 @@ venues:
   name: Ravenscourt Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/RavenscourtPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/ravenscourt-park_13496b8a-fc3f-4d46-b396-1bc11dc105c3/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=13496b8a-fc3f-4d46-b396-1bc11dc105c3
   metadata_sources:
   - https://clubspark.lta.org.uk/RavenscourtPark
   - https://clubspark.lta.org.uk/TennisInHammersmithAndFulham/PricesandInfo
@@ -1235,7 +1389,9 @@ venues:
   name: South Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/SouthParkFulham
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/south-park_af129600-b4f9-4f39-b181-698cacaad913/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=af129600-b4f9-4f39-b181-698cacaad913
   metadata_sources:
   - https://clubspark.lta.org.uk/SouthParkFulham
   - https://clubspark.lta.org.uk/TennisInHammersmithAndFulham/PricesandInfo
@@ -1243,7 +1399,9 @@ venues:
   name: Bruce Castle Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/BruceCastlePark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/bruce-castle_de9afc73-49e9-49a0-94fa-3773a657702f/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=de9afc73-49e9-49a0-94fa-3773a657702f
   metadata_sources:
   - https://clubspark.lta.org.uk/BruceCastlePark
   - https://clubspark.lta.org.uk/PavilionTennis/Booking/BookByDate
@@ -1251,7 +1409,9 @@ venues:
   name: Chapmans Green
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/ChapmansGreen
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/chapmans-green_b15c70ad-73b5-41f6-934f-ed6b8b7039cf/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=b15c70ad-73b5-41f6-934f-ed6b8b7039cf
   metadata_sources:
   - https://clubspark.lta.org.uk/ChapmansGreen
   - https://clubspark.lta.org.uk/haringeytennis/ParksTennis
@@ -1259,7 +1419,9 @@ venues:
   name: Chestnuts Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/ChestnutsPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/chestnuts-park_c9db1df6-ecc4-4965-bbf5-c2e71e7c06ce/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=c9db1df6-ecc4-4965-bbf5-c2e71e7c06ce
   metadata_sources:
   - https://clubspark.lta.org.uk/ChestnutsPark
   - https://clubspark.lta.org.uk/haringeytennis/ParksTennis
@@ -1267,7 +1429,9 @@ venues:
   name: Down Lane Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/DownLanePark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/down-lane-park_3e9a3066-fb3f-4639-bb0e-d3a6648bb6f9/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=3e9a3066-fb3f-4639-bb0e-d3a6648bb6f9
   metadata_sources:
   - https://clubspark.lta.org.uk/DownLanePark
   - https://clubspark.lta.org.uk/haringeytennis/ParksTennis
@@ -1275,7 +1439,9 @@ venues:
   name: Downhills Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/DownhillsParkTennisClub
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/downhills-park_7593c6d8-a344-4494-919a-6ba741573a52/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=7593c6d8-a344-4494-919a-6ba741573a52
   metadata_sources:
   - https://clubspark.lta.org.uk/DownhillsParkTennisClub
   - https://clubspark.lta.org.uk/haringeytennis/ParksTennis
@@ -1283,7 +1449,9 @@ venues:
   name: Finsbury Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/FinsburyPark/Booking/BookByDate
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/finsbury-park_422ffc17-2283-483d-8ec3-65f7fda31a05/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=422ffc17-2283-483d-8ec3-65f7fda31a05
   metadata_sources:
   - https://clubspark.lta.org.uk/FinsburyPark/Booking/BookByDate
 - id: haringey-markfield-park
@@ -1312,7 +1480,9 @@ venues:
   name: Priory Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/priorypark2
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/priory-park-haringey_86eb2a83-9794-4fb7-9f8c-933fcce1c092/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=86eb2a83-9794-4fb7-9f8c-933fcce1c092
   metadata_sources:
   - https://clubspark.lta.org.uk/priorypark2
   - https://clubspark.lta.org.uk/haringeytennis/ParksTennis
@@ -1320,7 +1490,9 @@ venues:
   name: Stationers Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/StationersPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/stationers-park_fdd0dd8d-f332-46a5-bb22-cb403ce136bf/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=fdd0dd8d-f332-46a5-bb22-cb403ce136bf
   metadata_sources:
   - https://clubspark.lta.org.uk/StationersPark
   - https://clubspark.lta.org.uk/haringeytennis/ParksTennis
@@ -1328,7 +1500,9 @@ venues:
   name: Byron Recreation Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/byron-recreation-ground
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/byron-recreation-ground_c6994c62-39bf-4186-abbd-42d832a08199/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=c6994c62-39bf-4186-abbd-42d832a08199
   metadata_sources:
   - https://clubspark.lta.org.uk/byron-recreation-ground
   - https://clubspark.lta.org.uk/TennisHarrow/Bookacourt
@@ -1336,7 +1510,9 @@ venues:
   name: Centenary Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/CentenaryPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/centenary-park_fd99a41d-fe04-4487-9162-f65cfe7e73c9/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=fd99a41d-fe04-4487-9162-f65cfe7e73c9
   metadata_sources:
   - https://clubspark.lta.org.uk/CentenaryPark
   - https://clubspark.lta.org.uk/TennisHarrow/Bookacourt
@@ -1344,7 +1520,9 @@ venues:
   name: Chandos Recreation Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/ChandosRecreationGround
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/chandos-recreation-ground_5e0d64da-8b43-4a61-a67b-31acf6c6dcdf/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=5e0d64da-8b43-4a61-a67b-31acf6c6dcdf
   metadata_sources:
   - https://clubspark.lta.org.uk/ChandosRecreationGround
   - https://clubspark.lta.org.uk/TennisHarrow/Bookacourt
@@ -1352,7 +1530,9 @@ venues:
   name: Harrow Recreation Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/HarrowRec
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/harrow-recreation-ground_e7a309e6-0176-4f67-96b7-75cd27b2814b/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=e7a309e6-0176-4f67-96b7-75cd27b2814b
   metadata_sources:
   - https://clubspark.lta.org.uk/HarrowRec
   - https://clubspark.lta.org.uk/TennisHarrow/Bookacourt
@@ -1360,7 +1540,9 @@ venues:
   name: Harrow Weald Recreation Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/HarrowWealdRec
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/harrow-weald-recreation-ground_2c16bc3b-cfe4-4083-9ae8-8e0e861e7bec/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=2c16bc3b-cfe4-4083-9ae8-8e0e861e7bec
   metadata_sources:
   - https://clubspark.lta.org.uk/HarrowWealdRec
   - https://clubspark.lta.org.uk/TennisHarrow/Bookacourt
@@ -1368,7 +1550,9 @@ venues:
   name: Headstone Manor Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/HeadstoneManorRec
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/headstone-manor-park_5cd980e7-8959-40f8-98e9-07ddba2bb59a/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=5cd980e7-8959-40f8-98e9-07ddba2bb59a
   metadata_sources:
   - https://clubspark.lta.org.uk/HeadstoneManorRec
   - https://clubspark.lta.org.uk/TennisHarrow/Bookacourt
@@ -1376,7 +1560,9 @@ venues:
   name: Montesole Playing Fields
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/TheMontesolePlayingFields
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/montesole-playing-fields_4fd6dce0-e251-4040-b1fd-bbf2e06b3e31/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=4fd6dce0-e251-4040-b1fd-bbf2e06b3e31
   metadata_sources:
   - https://clubspark.lta.org.uk/TheMontesolePlayingFields
   - https://clubspark.lta.org.uk/TennisHarrow/Bookacourt
@@ -1384,7 +1570,9 @@ venues:
   name: Pinner Village Gardens
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/pinner-village-gardens
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/pinner-village-gardens_7bc50c3b-0906-467d-953c-404620260860/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=7bc50c3b-0906-467d-953c-404620260860
   metadata_sources:
   - https://clubspark.lta.org.uk/pinner-village-gardens
   - https://clubspark.lta.org.uk/TennisHarrow/Bookacourt
@@ -1392,7 +1580,9 @@ venues:
   name: Queensbury Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/QueensburyRec
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/queensbury-park_ac3c30ed-3cdc-48b5-acf2-3a45bae3501f/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=ac3c30ed-3cdc-48b5-acf2-3a45bae3501f
   metadata_sources:
   - https://clubspark.lta.org.uk/QueensburyRec
   - https://clubspark.lta.org.uk/TennisHarrow/Bookacourt
@@ -1400,7 +1590,9 @@ venues:
   name: Rayners Mead
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/RaynersMead
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/rayners-mead_22f4dfdc-6aae-4655-aec4-24d686fe4694/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=22f4dfdc-6aae-4655-aec4-24d686fe4694
   metadata_sources:
   - https://clubspark.lta.org.uk/RaynersMead
   - https://clubspark.lta.org.uk/TennisHarrow/Bookacourt
@@ -1408,7 +1600,9 @@ venues:
   name: Roxeth Recreation Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/RoxethRec
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/roxeth-recreation-ground_af1a2e1c-b871-4d45-a976-406403be0854/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=af1a2e1c-b871-4d45-a976-406403be0854
   metadata_sources:
   - https://clubspark.lta.org.uk/RoxethRec
   - https://clubspark.lta.org.uk/TennisHarrow/Bookacourt
@@ -1416,7 +1610,9 @@ venues:
   name: West Harrow Recreation Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/west-harrow-recreation-ground
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/west-harrow-recreation-ground_46afac00-4b50-46c6-a252-0a74c65f3f11/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=46afac00-4b50-46c6-a252-0a74c65f3f11
   metadata_sources:
   - https://clubspark.lta.org.uk/west-harrow-recreation-ground
   - https://clubspark.lta.org.uk/TennisHarrow/Bookacourt
@@ -1424,7 +1620,9 @@ venues:
   name: Harold Wood Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/HaroldWoodPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/harold-wood-park_bcce8192-200d-4c81-b8d5-882f24bfe965/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=bcce8192-200d-4c81-b8d5-882f24bfe965
   metadata_sources:
   - https://clubspark.lta.org.uk/HaroldWoodPark
   - https://clubspark.lta.org.uk/TennisinHavering
@@ -1432,7 +1630,9 @@ venues:
   name: Harrow Lodge Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/harrow-lodge-park
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/harrow-lodge-park_9745e11f-8a41-4515-ac89-44ac13fb7d4b/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=9745e11f-8a41-4515-ac89-44ac13fb7d4b
   metadata_sources:
   - https://clubspark.lta.org.uk/harrow-lodge-park
   - https://clubspark.lta.org.uk/TennisinHavering
@@ -1440,7 +1640,9 @@ venues:
   name: Haynes Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/haynes-park
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/haynes-park_53e15b73-bb7d-4944-a91c-15bc06c0ea1c/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=53e15b73-bb7d-4944-a91c-15bc06c0ea1c
   metadata_sources:
   - https://clubspark.lta.org.uk/haynes-park
   - https://clubspark.lta.org.uk/TennisinHavering
@@ -1448,7 +1650,9 @@ venues:
   name: Hylands Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/hylands-park
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/hylands-park_bb4119e3-e818-4f30-b556-45a18d7dc7cf/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=bb4119e3-e818-4f30-b556-45a18d7dc7cf
   metadata_sources:
   - https://clubspark.lta.org.uk/hylands-park
   - https://clubspark.lta.org.uk/TennisinHavering
@@ -1456,7 +1660,9 @@ venues:
   name: Lodge Farm Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/lodge-farm-park
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/lodge-farm-park_2d8820aa-235c-4077-8d8c-42c9adb6fb1d/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=2d8820aa-235c-4077-8d8c-42c9adb6fb1d
   metadata_sources:
   - https://clubspark.lta.org.uk/lodge-farm-park
   - https://clubspark.lta.org.uk/TennisinHavering
@@ -1471,7 +1677,9 @@ venues:
   name: Raphael Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/RaphaelPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/raphael-park_e69a49a8-a446-46e1-af4c-616e4769f246/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=e69a49a8-a446-46e1-af4c-616e4769f246
   metadata_sources:
   - https://clubspark.lta.org.uk/RaphaelPark
   - https://clubspark.lta.org.uk/TennisinHavering
@@ -1479,7 +1687,9 @@ venues:
   name: Rise Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/rise-park
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/rise-park_48368639-b7ab-429d-b506-60b852cdb461/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=48368639-b7ab-429d-b506-60b852cdb461
   metadata_sources:
   - https://clubspark.lta.org.uk/rise-park
   - https://clubspark.lta.org.uk/TennisinHavering
@@ -1487,7 +1697,9 @@ venues:
   name: Spring Farm Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/spring-farm-park
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/spring-farm-park_a723367f-3d89-4bcf-9318-dc7c276def20/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=a723367f-3d89-4bcf-9318-dc7c276def20
   metadata_sources:
   - https://clubspark.lta.org.uk/spring-farm-park
   - https://clubspark.lta.org.uk/TennisinHavering
@@ -1495,7 +1707,9 @@ venues:
   name: Upminster Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/UpminsterPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/upminster-park_497ab607-608e-4ea6-93cc-d6bceb9d2fef/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=497ab607-608e-4ea6-93cc-d6bceb9d2fef
   metadata_sources:
   - https://clubspark.lta.org.uk/UpminsterPark
   - https://clubspark.lta.org.uk/TennisinHavering
@@ -1512,7 +1726,9 @@ venues:
   name: Cavendish Recreation Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/CavendishPark2
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/cavendish-park_8856251a-dccf-4d91-9f22-42f588847c8d/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=8856251a-dccf-4d91-9f22-42f588847c8d
   metadata_sources:
   - https://pre.hillingdon.gov.uk/keeping-active/tennis
   - https://clubspark.lta.org.uk/CavendishPark2
@@ -1520,7 +1736,9 @@ venues:
   name: Churchfield Gardens
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/ChurchfieldGardens/Booking/BookByDate
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/churchfield-gardens_7ce3a8e1-babd-4db1-8774-8a7fb373afcd/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=7ce3a8e1-babd-4db1-8774-8a7fb373afcd
   metadata_sources:
   - https://pre.hillingdon.gov.uk/keeping-active/tennis
   - https://clubspark.lta.org.uk/ChurchfieldGardens/Booking/BookByDate
@@ -1528,7 +1746,9 @@ venues:
   name: Fassnidge Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/FassnidgePark2/Booking/BookByDate
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/fassnidge-park_818fdeb5-f011-47a0-9fb4-71055839091b/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=818fdeb5-f011-47a0-9fb4-71055839091b
   metadata_sources:
   - https://pre.hillingdon.gov.uk/keeping-active/tennis
   - https://clubspark.lta.org.uk/FassnidgePark2/Booking/BookByDate
@@ -1536,7 +1756,9 @@ venues:
   name: Harmondsworth Recreation Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/HarmondsworthRecGround/Booking/BookByDate
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/harmondsworth-recreation-ground_ee48dd80-bde8-400d-af1f-efce2b7d64c5/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=ee48dd80-bde8-400d-af1f-efce2b7d64c5
   metadata_sources:
   - https://pre.hillingdon.gov.uk/keeping-active/tennis
   - https://clubspark.lta.org.uk/HarmondsworthRecGround/Booking/BookByDate
@@ -1544,7 +1766,9 @@ venues:
   name: Hillingdon Court Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/HillingdonCourtPark/Booking/BookByDate
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/hillingdon-court-park_07f1782c-662d-4ca6-b5c0-60a0ec6068e7/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=07f1782c-662d-4ca6-b5c0-60a0ec6068e7
   metadata_sources:
   - https://pre.hillingdon.gov.uk/keeping-active/tennis
   - https://clubspark.lta.org.uk/HillingdonCourtPark/Booking/BookByDate
@@ -1552,7 +1776,9 @@ venues:
   name: Moorhall Recreation Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/MoorhallRecGround
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/moorhall-recreation-ground_97941b3b-d8a0-4376-84b8-9f800078356a/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=97941b3b-d8a0-4376-84b8-9f800078356a
   metadata_sources:
   - https://pre.hillingdon.gov.uk/keeping-active/tennis
   - https://clubspark.lta.org.uk/MoorhallRecGround
@@ -1567,7 +1793,9 @@ venues:
   name: Rosedale Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/RosedalePark/Booking/BookByDate
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/rosedale-park_b708aa95-357c-4ec8-89d0-f21ae75d7937/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=b708aa95-357c-4ec8-89d0-f21ae75d7937
   metadata_sources:
   - https://pre.hillingdon.gov.uk/keeping-active/tennis
   - https://clubspark.lta.org.uk/RosedalePark/Booking/BookByDate
@@ -1575,7 +1803,9 @@ venues:
   name: Swakeleys Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/SwakeleysPark/Booking/BookByDate
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/swakeleys-park_86bf155d-8961-412f-8cf2-2a6fef166f93/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=86bf155d-8961-412f-8cf2-2a6fef166f93
   metadata_sources:
   - https://pre.hillingdon.gov.uk/keeping-active/tennis
   - https://clubspark.lta.org.uk/SwakeleysPark/Booking/BookByDate
@@ -1583,7 +1813,9 @@ venues:
   name: The Closes Recreation Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/TheClosesRecreationGround/Booking/BookByDate
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/the-closes-recreation-ground_7f6cff94-0fbe-487b-a986-74dc5d320d98/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=7f6cff94-0fbe-487b-a986-74dc5d320d98
   metadata_sources:
   - https://pre.hillingdon.gov.uk/keeping-active/tennis
   - https://clubspark.lta.org.uk/TheClosesRecreationGround/Booking/BookByDate
@@ -1684,7 +1916,9 @@ venues:
   name: Lampton Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/LamptonPark/
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/lampton-park_2d9f0ff1-0e9f-4a15-8a2a-db6f8ca0ad55/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=2d9f0ff1-0e9f-4a15-8a2a-db6f8ca0ad55
   metadata_sources:
   - https://clubspark.lta.org.uk/LamptonPark/
 - id: hounslow-rocks-lane-chiswick
@@ -1732,7 +1966,9 @@ venues:
   name: Avondale Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/AvondalePark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/avondale-park_8c262af8-7147-43ab-8324-b44be5d359d8/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=8c262af8-7147-43ab-8324-b44be5d359d8
   metadata_sources:
   - https://clubspark.lta.org.uk/AvondalePark
   - https://clubspark.lta.org.uk/TennisInKensingtonChelsea/Membership/Join
@@ -1740,7 +1976,9 @@ venues:
   name: Emslie Horniman Pleasance Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/EmslieHornimanPleasance
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/emslie-horniman-pleasance_ee7642c3-8057-4853-b98a-2eaace20c05c/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=ee7642c3-8057-4853-b98a-2eaace20c05c
   metadata_sources:
   - https://clubspark.lta.org.uk/EmslieHornimanPleasance
   - https://clubspark.lta.org.uk/TennisInKensingtonChelsea/Membership/Join
@@ -1783,7 +2021,9 @@ venues:
   name: Beverley Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/BeverleyPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/beverley-park_efbede25-f47a-40c0-bb3a-1e1b4477acda/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=efbede25-f47a-40c0-bb3a-1e1b4477acda
   metadata_sources:
   - https://clubspark.lta.org.uk/BeverleyPark
   - https://clubspark.lta.org.uk/TennisinKingston/PayandPlay
@@ -1816,7 +2056,9 @@ venues:
   name: Kingston Road Recreation Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/KingstonRoadRecreationGround
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/kingston-road-recreation-ground_c59e75a1-70ed-4f92-ba2a-3e54bab9ad68/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=c59e75a1-70ed-4f92-ba2a-3e54bab9ad68
   metadata_sources:
   - https://clubspark.lta.org.uk/KingstonRoadRecreationGround
   - https://clubspark.lta.org.uk/TennisinKingston/PayandPlay
@@ -1859,7 +2101,9 @@ venues:
   name: Archbishop's Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/ArchbishopsParkLambethNorth
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/archbishops-park_307b4855-9c90-4b69-b855-415ff80a7417/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=307b4855-9c90-4b69-b855-415ff80a7417
   metadata_sources:
   - https://clubspark.lta.org.uk/ArchbishopsParkLambethNorth
   - https://clubspark.lta.org.uk/tennisinlambeth/FindyourgatecodeandFAQs
@@ -1877,7 +2121,9 @@ venues:
   name: Brockwell Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/BrockwellPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/brockwell-park_03a2d315-2b9a-411d-8891-1bfde4cb4cf3/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=03a2d315-2b9a-411d-8891-1bfde4cb4cf3
   metadata_sources:
   - https://clubspark.lta.org.uk/BrockwellPark
   - https://clubspark.lta.org.uk/tennisinlambeth/FindyourgatecodeandFAQs
@@ -1887,7 +2133,9 @@ venues:
   name: Clapham Common
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/ClaphamCommon
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/clapham-common_2fb20762-62d1-4fc7-961c-f4404d4d1ae8/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=2fb20762-62d1-4fc7-961c-f4404d4d1ae8
   metadata_sources:
   - https://clubspark.lta.org.uk/ClaphamCommon
   - https://clubspark.lta.org.uk/tennisinlambeth/FindyourgatecodeandFAQs
@@ -1903,7 +2151,9 @@ venues:
   name: Hillside Gardens Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/HillsideGardensPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/hillside-gardens-park_e37baae4-39b1-47b0-bd81-b2cdbb6f7a8f/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=e37baae4-39b1-47b0-bd81-b2cdbb6f7a8f
   metadata_sources:
   - https://clubspark.lta.org.uk/HillsideGardensPark
   - https://clubspark.lta.org.uk/tennisinlambeth/FindyourgatecodeandFAQs
@@ -1912,7 +2162,9 @@ venues:
   name: Kennington Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/KenningtonPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/kennington-park_38f9b2bb-b840-45a9-9c6e-dc685f04ed25/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=38f9b2bb-b840-45a9-9c6e-dc685f04ed25
   metadata_sources:
   - https://clubspark.lta.org.uk/KenningtonPark
   - https://clubspark.lta.org.uk/tennisinlambeth/FindyourgatecodeandFAQs
@@ -1922,7 +2174,9 @@ venues:
   name: Larkhall Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/larkhallpark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/larkhall-park_9bf5a08b-35a4-4d93-806f-09362d110ebe/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=9bf5a08b-35a4-4d93-806f-09362d110ebe
   metadata_sources:
   - https://clubspark.lta.org.uk/larkhallpark
   - https://clubspark.lta.org.uk/tennisinlambeth/FindyourgatecodeandFAQs
@@ -1930,7 +2184,9 @@ venues:
   name: Myatt's Fields Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/MyattsFieldsPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/myatts-fields-park_c7968b48-2c0c-4e2f-a2ae-850976a46f5e/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=c7968b48-2c0c-4e2f-a2ae-850976a46f5e
   metadata_sources:
   - https://clubspark.lta.org.uk/MyattsFieldsPark
   - https://www.lambeth.gov.uk/lambeth-data-hub/public-tennis-courts
@@ -1938,7 +2194,9 @@ venues:
   name: Ruskin Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/RuskinPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/ruskin-park_f8d424f7-f693-4bcf-b35b-71c3ace7d818/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=f8d424f7-f693-4bcf-b35b-71c3ace7d818
   metadata_sources:
   - https://clubspark.lta.org.uk/RuskinPark
   - https://clubspark.lta.org.uk/tennisinlambeth/FindyourgatecodeandFAQs
@@ -1955,7 +2213,9 @@ venues:
   name: Streatham Vale Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/StreathamValePark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/streatham-vale-park_29dfbcd8-c72b-4629-ba93-212c3d73ee6a/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=29dfbcd8-c72b-4629-ba93-212c3d73ee6a
   metadata_sources:
   - https://clubspark.lta.org.uk/StreathamValePark
   - https://clubspark.lta.org.uk/tennisinlambeth/FindyourgatecodeandFAQs
@@ -1964,7 +2224,9 @@ venues:
   name: Vauxhall Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/VauxhallPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/vauxhall-park_ed2c2180-e21f-494a-bf03-199755c45b64/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=ed2c2180-e21f-494a-bf03-199755c45b64
   metadata_sources:
   - https://clubspark.lta.org.uk/VauxhallPark
   - https://clubspark.lta.org.uk/tennisinlambeth/FindyourgatecodeandFAQs
@@ -1973,7 +2235,9 @@ venues:
   name: Catford Bridge
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/CatfordBridge
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/catford-bridge_e397087d-d00b-4950-af0b-c7856269f86c/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=e397087d-d00b-4950-af0b-c7856269f86c
   metadata_sources:
   - https://clubspark.lta.org.uk/CatfordBridge
   - https://clubspark.lta.org.uk/TennisInLewisham/Othercourts
@@ -1982,7 +2246,9 @@ venues:
   name: Chinbrook Meadows
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/ChinbrookPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/chinbrook-meadows_8f2ec368-e250-49b1-b297-05060f7c91e7/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=8f2ec368-e250-49b1-b297-05060f7c91e7
   metadata_sources:
   - https://clubspark.lta.org.uk/ChinbrookPark
   - https://clubspark.lta.org.uk/TennisInLewisham/Othercourts
@@ -2008,7 +2274,9 @@ venues:
   name: Hilly Fields
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/HillyFields
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/hilly-fields_73a37dbe-18fe-4ac6-8a16-073105b5e9fe/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=73a37dbe-18fe-4ac6-8a16-073105b5e9fe
   metadata_sources:
   - https://clubspark.lta.org.uk/HillyFields
   - https://clubspark.lta.org.uk/TennisInLewisham/Othercourts
@@ -2024,7 +2292,9 @@ venues:
   name: Ladywell Fields
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/LadywellFields
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/ladywell-fields_f285b458-743a-492f-8e28-90018ece24f0/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=f285b458-743a-492f-8e28-90018ece24f0
   metadata_sources:
   - https://clubspark.lta.org.uk/LadywellFields
   - https://clubspark.lta.org.uk/TennisInLewisham/Othercourts
@@ -2033,7 +2303,9 @@ venues:
   name: Manor House Gardens
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/ManorHouseGds
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/manor-house-gardens_8a19f8a8-f59c-4e97-ae6a-138a09dedc31/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=8a19f8a8-f59c-4e97-ae6a-138a09dedc31
   metadata_sources:
   - https://clubspark.lta.org.uk/ManorHouseGds
   - https://clubspark.lta.org.uk/TennisInLewisham/Othercourts
@@ -2042,7 +2314,9 @@ venues:
   name: Mayow Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/MayowPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/mayow-park_92f4f1da-ad43-439d-890e-27fc1899392e/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=92f4f1da-ad43-439d-890e-27fc1899392e
   metadata_sources:
   - https://clubspark.lta.org.uk/MayowPark
   - https://clubspark.lta.org.uk/TennisInLewisham/Othercourts
@@ -2066,7 +2340,9 @@ venues:
   name: Sydenham Wells Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/SydenhamWellPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/sydenham-wells-park_36af8af5-6d59-497d-a3e9-a046f1f4b1e6/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=36af8af5-6d59-497d-a3e9-a046f1f4b1e6
   metadata_sources:
   - https://clubspark.lta.org.uk/SydenhamWellPark
   - https://clubspark.lta.org.uk/TennisInLewisham/Othercourts
@@ -2075,7 +2351,9 @@ venues:
   name: Telegraph Hill Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/TelegraphHill
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/telegraph-hill_92853953-c509-4384-8df6-0b0c6e86605e/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=92853953-c509-4384-8df6-0b0c6e86605e
   metadata_sources:
   - https://clubspark.lta.org.uk/TelegraphHill
   - https://clubspark.lta.org.uk/TennisInLewisham/Othercourts
@@ -2084,7 +2362,9 @@ venues:
   name: Cottenham Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/CottenhamPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/cottenham-park_e428e707-251b-430e-b969-dca7998a2ab5/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=e428e707-251b-430e-b969-dca7998a2ab5
   metadata_sources:
   - https://www.merton.gov.uk/healthy-living/sport-and-healthy-living/tennis-courts
   - https://clubspark.lta.org.uk/CottenhamPark
@@ -2092,7 +2372,9 @@ venues:
   name: Dundonald Recreation Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/DundonaldRecGround
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/dundonald-rec-ground_3ce3aed6-3c1d-4d6f-b54d-4d468d4dcb47/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=3ce3aed6-3c1d-4d6f-b54d-4d468d4dcb47
   metadata_sources:
   - https://www.merton.gov.uk/healthy-living/sport-and-healthy-living/tennis-courts
   - https://clubspark.lta.org.uk/DundonaldRecGround
@@ -2114,7 +2396,9 @@ venues:
   name: Holland Garden
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/HollandGarden
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/holland-garden_8d0f683a-5dba-4802-ae69-ac5b87ec4e01/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=8d0f683a-5dba-4802-ae69-ac5b87ec4e01
   metadata_sources:
   - https://www.merton.gov.uk/healthy-living/sport-and-healthy-living/tennis-courts
   - https://clubspark.lta.org.uk/HollandGarden
@@ -2122,7 +2406,9 @@ venues:
   name: John Innes Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/JohnInnesParkMorden
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/john-innes-park_cc72823d-34db-4d47-b552-e15305b7c2ff/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=cc72823d-34db-4d47-b552-e15305b7c2ff
   metadata_sources:
   - https://www.merton.gov.uk/healthy-living/sport-and-healthy-living/tennis-courts
   - https://clubspark.lta.org.uk/JohnInnesParkMorden
@@ -2130,7 +2416,9 @@ venues:
   name: Joseph Hood Recreation Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/JosephHoodRecGround
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/joseph-hood-recreation-ground_4b8c9006-3628-434d-93b3-970e2ed1e7fb/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=4b8c9006-3628-434d-93b3-970e2ed1e7fb
   metadata_sources:
   - https://www.merton.gov.uk/healthy-living/sport-and-healthy-living/tennis-courts
   - https://clubspark.lta.org.uk/JosephHoodRecGround
@@ -2138,7 +2426,9 @@ venues:
   name: King George's Playing Fields
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/KingGeorgesPlayingFields
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/king-georges-playing-fields_dfe8c365-57d7-4811-8891-5824b431088d/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=dfe8c365-57d7-4811-8891-5824b431088d
   metadata_sources:
   - https://www.merton.gov.uk/healthy-living/sport-and-healthy-living/tennis-courts
   - https://clubspark.lta.org.uk/KingGeorgesPlayingFields
@@ -2146,7 +2436,9 @@ venues:
   name: Morden Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/MordenPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/morden-park_1cf80f80-682a-4982-afcc-849ddf3857b0/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=1cf80f80-682a-4982-afcc-849ddf3857b0
   metadata_sources:
   - https://www.merton.gov.uk/healthy-living/sport-and-healthy-living/tennis-courts
   - https://clubspark.lta.org.uk/MordenPark
@@ -2161,7 +2453,9 @@ venues:
   name: Nursery Road Playing Fields
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/NurseryRoadPlayingFields
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/nursery-road-playing-fields_4897b0fe-6476-4161-b614-db911cfdc28b/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=4897b0fe-6476-4161-b614-db911cfdc28b
   metadata_sources:
   - https://www.merton.gov.uk/healthy-living/sport-and-healthy-living/tennis-courts
   - https://clubspark.lta.org.uk/NurseryRoadPlayingFields
@@ -2169,14 +2463,18 @@ venues:
   name: Oakleigh Way Recreation Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/OakleighWayRecreationGround/Booking
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/oakleigh-way-recreation-ground_dab72540-dbc7-4d9f-a501-2fb1f21d50e9/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=dab72540-dbc7-4d9f-a501-2fb1f21d50e9
   metadata_sources:
   - https://www.merton.gov.uk/healthy-living/sport-and-healthy-living/tennis-courts
 - id: merton-sir-joseph-hood-memorial-playing-fields
   name: Sir Joseph Hood Memorial Playing Fields
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/SirJosephHoodMemorialPlayingFields
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/sir-joseph-hood-memorial-playing-fields_3b1dab3c-07d9-4fe7-81d0-cc5b1f1c1cb3/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=3b1dab3c-07d9-4fe7-81d0-cc5b1f1c1cb3
   metadata_sources:
   - https://www.merton.gov.uk/healthy-living/sport-and-healthy-living/tennis-courts
   - https://clubspark.lta.org.uk/SirJosephHoodMemorialPlayingFields
@@ -2192,7 +2490,9 @@ venues:
   name: Tamworth Recreation Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/TamworthRecreationGround
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/tamworth-recreation-ground_e77a98ca-3386-4c90-a18c-d0748a40d291/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=e77a98ca-3386-4c90-a18c-d0748a40d291
   metadata_sources:
   - https://www.merton.gov.uk/healthy-living/sport-and-healthy-living/tennis-courts
   - https://clubspark.lta.org.uk/TamworthRecreationGround
@@ -2200,9 +2500,9 @@ venues:
   name: Wimbledon Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/wimbledonpark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/wimbledon-park_b1a2dc34-d3b5-4b01-930e-bbd9c40b2464/
   availability_urls:
-  - https://clubspark.lta.org.uk/v0/VenueBooking/wimbledonpark/GetVenueSessions
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=b1a2dc34-d3b5-4b01-930e-bbd9c40b2464
   metadata_sources:
   - https://clubspark.lta.org.uk/wimbledonpark
   - https://www.merton.gov.uk/leisure-recreation-and-culture/parks-and-open-spaces/parks-and-recreation-grounds/wimbledon/wimbledon-park
@@ -2292,7 +2592,9 @@ venues:
   name: West Ham Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/WestHamPark/Booking/Introduction
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/west-ham-park_5f9758ed-db3c-4f5f-9e25-bcb5335e273f/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=5f9758ed-db3c-4f5f-9e25-bcb5335e273f
   metadata_sources:
   - https://clubspark.lta.org.uk/WestHamPark/Booking/Introduction
   - https://clubspark.lta.org.uk/WestHamPark/Booking/FAQ
@@ -2471,7 +2773,9 @@ venues:
   name: Barkingside Recreation Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/BarkingsideRec
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/barkingside-recreation-ground_c7f7869e-a425-43c0-8286-54d086324913/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=c7f7869e-a425-43c0-8286-54d086324913
   metadata_sources:
   - https://clubspark.lta.org.uk/BarkingsideRec
   - https://clubspark.lta.org.uk/TennisInRedbridge
@@ -2480,7 +2784,9 @@ venues:
   name: Barley Lane Recreation Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/BarleyLaneRecGround
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/barley-lane-rec-ground_c8fd0d69-12c8-4af7-9ef4-0aa61cc19376/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=c8fd0d69-12c8-4af7-9ef4-0aa61cc19376
   metadata_sources:
   - https://clubspark.lta.org.uk/BarleyLaneRecGround
   - https://clubspark.lta.org.uk/TennisInRedbridge
@@ -2488,7 +2794,9 @@ venues:
   name: Clayhall Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/ClayhallPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/clayhall-park_b37283ab-c091-4b8c-bcf8-9a488bddfecb/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=b37283ab-c091-4b8c-bcf8-9a488bddfecb
   metadata_sources:
   - https://clubspark.lta.org.uk/ClayhallPark
   - https://clubspark.lta.org.uk/TennisInRedbridge
@@ -2496,7 +2804,9 @@ venues:
   name: Elmhurst Gardens
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/ElmhurstGardens
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/elmhurst-gardens_ed73d987-09c7-4d15-9f96-4fe98963c64b/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=ed73d987-09c7-4d15-9f96-4fe98963c64b
   metadata_sources:
   - https://clubspark.lta.org.uk/ElmhurstGardens
   - https://clubspark.lta.org.uk/TennisInRedbridge
@@ -2505,7 +2815,9 @@ venues:
   name: Goodmayes Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/GoodmayesPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/goodmayes-park_2befd45c-5dc2-42be-9607-3256325304cc/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=2befd45c-5dc2-42be-9607-3256325304cc
   metadata_sources:
   - https://clubspark.lta.org.uk/GoodmayesPark
   - https://clubspark.lta.org.uk/TennisInRedbridge
@@ -2513,7 +2825,9 @@ venues:
   name: Loxford Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/Loxford
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/loxford-park_04630d39-b6f0-45bd-aead-95932499e31d/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=04630d39-b6f0-45bd-aead-95932499e31d
   metadata_sources:
   - https://clubspark.lta.org.uk/Loxford
   - https://clubspark.lta.org.uk/TennisInRedbridge
@@ -2522,7 +2836,9 @@ venues:
   name: Ray Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/RayPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/ray-park_f53dfe3d-a734-4523-839c-632df068a65b/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=f53dfe3d-a734-4523-839c-632df068a65b
   metadata_sources:
   - https://clubspark.lta.org.uk/RayPark
   - https://clubspark.lta.org.uk/TennisInRedbridge
@@ -2540,7 +2856,9 @@ venues:
   name: Seven Kings Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/SevenKingsPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/seven-kings-park_2cdae1c8-9674-4fdf-9ea4-cb704f764b82/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=2cdae1c8-9674-4fdf-9ea4-cb704f764b82
   metadata_sources:
   - https://clubspark.lta.org.uk/SevenKingsPark
   - https://clubspark.lta.org.uk/TennisInRedbridge
@@ -2548,7 +2866,9 @@ venues:
   name: South Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/SouthPark4
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/south-park_822b605f-d246-4ce8-90b0-2f22ca6c473d/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=822b605f-d246-4ce8-90b0-2f22ca6c473d
   metadata_sources:
   - https://clubspark.lta.org.uk/SouthPark4
   - https://clubspark.lta.org.uk/TennisInRedbridge
@@ -2557,7 +2877,9 @@ venues:
   name: Valentines Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/ValentinesPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/valentines-park_c57be7f7-05c4-4df6-bcf8-cb7c58596f23/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=c57be7f7-05c4-4df6-bcf8-cb7c58596f23
   metadata_sources:
   - https://clubspark.lta.org.uk/ValentinesPark
   - https://clubspark.lta.org.uk/TennisInRedbridge
@@ -2581,7 +2903,9 @@ venues:
   name: Cambridge Gardens
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/CambridgeGardens
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/cambridge-gardens_2216a5a2-f801-46bd-92f6-dda22686bd69/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=2216a5a2-f801-46bd-92f6-dda22686bd69
   metadata_sources:
   - https://clubspark.lta.org.uk/CambridgeGardens
   - https://clubspark.lta.org.uk/playtennisrichmond/BookaCourt
@@ -2589,9 +2913,9 @@ venues:
   name: Carlisle Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/CarlisleParkRichmond
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/carlisle-park_f7ee25a8-a82f-4dea-8a8d-5a387e93c537/
   availability_urls:
-  - https://clubspark.lta.org.uk/v0/VenueBooking/CarlisleParkRichmond/GetVenueSessions
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=f7ee25a8-a82f-4dea-8a8d-5a387e93c537
   metadata_sources:
   - https://clubspark.lta.org.uk/CarlisleParkRichmond
   - https://clubspark.lta.org.uk/playtennisrichmond/BookaCourt
@@ -2607,7 +2931,9 @@ venues:
   name: King George's Field
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/KingGeorgesFieldRichmond
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/king-georges-field_c6a2c8a7-3af7-429b-8c10-5c51ea2e8dbb/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=c6a2c8a7-3af7-429b-8c10-5c51ea2e8dbb
   metadata_sources:
   - https://clubspark.lta.org.uk/KingGeorgesFieldRichmond
   - https://clubspark.lta.org.uk/playtennisrichmond/BookaCourt
@@ -2615,7 +2941,9 @@ venues:
   name: Kings Field
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/KingsField
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/kings-field_2619ea6b-cbae-4733-aa21-d965d7c07064/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=2619ea6b-cbae-4733-aa21-d965d7c07064
   metadata_sources:
   - https://clubspark.lta.org.uk/playtennisrichmond
   - https://clubspark.lta.org.uk/playtennisrichmond/BookaCourt
@@ -2624,7 +2952,9 @@ venues:
   name: Kneller Gardens
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/KnellerGardens
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/kneller-gardens_3de933ba-9a8d-4b1b-819a-59d6ce958c10/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=3de933ba-9a8d-4b1b-819a-59d6ce958c10
   metadata_sources:
   - https://clubspark.lta.org.uk/KnellerGardens
   - https://clubspark.lta.org.uk/playtennisrichmond/BookaCourt
@@ -2632,7 +2962,9 @@ venues:
   name: Moor Mead Recreation Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/MoorMeadRecreationGround
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/moor-mead-recreation-ground_1d2c7098-827f-43b6-9a24-4d4577ed9a82/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=1d2c7098-827f-43b6-9a24-4d4577ed9a82
   metadata_sources:
   - https://clubspark.lta.org.uk/MoorMeadRecreationGround
   - https://clubspark.lta.org.uk/playtennisrichmond/BookaCourt
@@ -2640,7 +2972,9 @@ venues:
   name: Old Deer Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/OldDeerPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/old-deer-park_75260fcc-0395-446b-aa53-ab4a07c617c2/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=75260fcc-0395-446b-aa53-ab4a07c617c2
   metadata_sources:
   - https://clubspark.lta.org.uk/OldDeerPark
   - https://clubspark.lta.org.uk/playtennisrichmond/BookaCourt
@@ -2648,7 +2982,9 @@ venues:
   name: Palewell Common
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/PalewellCommon
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/palewell-common_8965d6c5-d96d-43c8-b417-89258331c88f/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=8965d6c5-d96d-43c8-b417-89258331c88f
   metadata_sources:
   - https://clubspark.lta.org.uk/PalewellCommon
   - https://clubspark.lta.org.uk/playtennisrichmond/BookaCourt
@@ -2663,7 +2999,9 @@ venues:
   name: Sheen Common
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/SheenCommon
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/sheen-common_04699eba-76c9-4ab9-b767-89fd40f25155/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=04699eba-76c9-4ab9-b767-89fd40f25155
   metadata_sources:
   - https://clubspark.lta.org.uk/SheenCommon
   - https://clubspark.lta.org.uk/playtennisrichmond/BookaCourt
@@ -2679,7 +3017,9 @@ venues:
   name: Westerly Ware
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/WesterlyWare
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/westerly-ware_e6967a6d-cbee-4285-bf5a-27fd3b8a6fe4/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=e6967a6d-cbee-4285-bf5a-27fd3b8a6fe4
   metadata_sources:
   - https://clubspark.lta.org.uk/WesterlyWare
   - https://clubspark.lta.org.uk/playtennisrichmond/BookaCourt
@@ -2696,7 +3036,9 @@ venues:
   name: York House Gardens
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/YorkHouseGardens
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/york-house-gardens_5543368a-1fea-4e59-b28e-3ab00cbc97df/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=5543368a-1fea-4e59-b28e-3ab00cbc97df
   metadata_sources:
   - https://clubspark.lta.org.uk/YorkHouseGardens
   - https://clubspark.lta.org.uk/playtennisrichmond/BookaCourt
@@ -2704,7 +3046,9 @@ venues:
   name: Belair Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/BelairPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/belair-park_e014e2b3-7f87-4fe0-9261-4a2b5ba0fa49/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=e014e2b3-7f87-4fe0-9261-4a2b5ba0fa49
   metadata_sources:
   - https://clubspark.lta.org.uk/BelairPark
   - https://clubspark.lta.org.uk/TennisInSouthwark/BookingInfo
@@ -2712,7 +3056,9 @@ venues:
   name: Brunswick Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/BrunswickPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/brunswick-park-southwark_5f2eb567-89fe-452a-87f5-60cb42f5d35c/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=5f2eb567-89fe-452a-87f5-60cb42f5d35c
   metadata_sources:
   - https://clubspark.lta.org.uk/BrunswickPark
   - https://clubspark.lta.org.uk/TennisInSouthwark/BookingInfo
@@ -2720,7 +3066,9 @@ venues:
   name: Burgess Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/BurgessParkSouthwark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/burgess-park_12e87a80-3f5f-4985-9e81-eb064ba8f71b/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=12e87a80-3f5f-4985-9e81-eb064ba8f71b
   metadata_sources:
   - https://clubspark.lta.org.uk/BurgessParkSouthwark
   - https://clubspark.lta.org.uk/TennisInSouthwark/BookingInfo
@@ -2729,7 +3077,9 @@ venues:
   name: Dulwich Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/DulwichPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/dulwich-park_aae62282-2de2-4950-ac4a-0ea947476505/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=aae62282-2de2-4950-ac4a-0ea947476505
   metadata_sources:
   - https://clubspark.lta.org.uk/DulwichPark
   - https://clubspark.lta.org.uk/TennisInSouthwark/BookingInfo
@@ -2737,7 +3087,9 @@ venues:
   name: Geraldine Mary Harmsworth Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/GeraldineMaryHarmsworth
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/geraldine-mary-harmsworth_8d4edcff-b880-4e21-a027-ca82cc343fa5/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=8d4edcff-b880-4e21-a027-ca82cc343fa5
   metadata_sources:
   - https://clubspark.lta.org.uk/GeraldineMaryHarmsworth
   - https://clubspark.lta.org.uk/TennisInSouthwark/BookingInfo
@@ -2746,7 +3098,9 @@ venues:
   name: Honor Oak Recreation Ground
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/HonorOakRecreationGround
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/honor-oak-recreation-ground_09210dea-3498-43d1-8483-29490e230247/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=09210dea-3498-43d1-8483-29490e230247
   metadata_sources:
   - https://clubspark.lta.org.uk/HonorOakRecreationGround
   - https://clubspark.lta.org.uk/TennisInSouthwark/BookingInfo
@@ -2754,7 +3108,9 @@ venues:
   name: Southwark Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/SouthwarkPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/southwark-park_4123ed12-8dd6-4f48-a706-6ab2fbde16ba/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=4123ed12-8dd6-4f48-a706-6ab2fbde16ba
   metadata_sources:
   - https://clubspark.lta.org.uk/SouthwarkPark
   - https://clubspark.lta.org.uk/TennisInSouthwark/BookingInfo
@@ -2762,7 +3118,9 @@ venues:
   name: Tanner Street Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/TannerStPark
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/tanner-st-park_678288d9-d179-40aa-8727-9db920d15fdc/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=678288d9-d179-40aa-8727-9db920d15fdc
   metadata_sources:
   - https://clubspark.lta.org.uk/TannerStPark
   - https://clubspark.lta.org.uk/TennisInSouthwark/BookingInfo
@@ -3201,7 +3559,9 @@ venues:
   name: Chingford School of Tennis Club
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/ChingfordSchoolofTennisClub
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/chingford-school-of-tennis-club_47f8e07a-1c99-454d-8ee1-fe1400bcfda3/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=47f8e07a-1c99-454d-8ee1-fe1400bcfda3
   metadata_sources:
   - https://clubspark.lta.org.uk/ChingfordSchoolofTennisClub
   - https://chingfordschooloftennis.co.uk/courthire.php
@@ -3209,7 +3569,9 @@ venues:
   name: Higham Hill Park
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/HighamHillP
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/higham-hill-park-tennis-courts_4ba6d80a-6504-4193-a7b0-4ef46c58eebc/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=4ba6d80a-6504-4193-a7b0-4ef46c58eebc
   metadata_sources:
   - https://playtenniswalthamforest.com/
   - https://playtenniswalthamforest.com/Wheretoplay
@@ -3248,7 +3610,9 @@ venues:
   name: Battersea Park Millennium Arena
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/BatterseaParkTennisCourts/Booking/BookByDate
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/battersea-park-tennis-courts_b2eed0a9-2cf4-4d9d-95b8-46248117c9ba/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=b2eed0a9-2cf4-4d9d-95b8-46248117c9ba
   metadata_sources:
   - https://clubspark.lta.org.uk/BatterseaParkTennisCourts
   - https://bluebird-carrot-kkzr.squarespace.com/battersea-park-millennium-arena-gym
@@ -3298,7 +3662,9 @@ venues:
   name: Roehampton Playing Fields
   sport: tennis
   provider: clubspark
-  booking_url: https://clubspark.lta.org.uk/RoehamptonPlayingFields
+  booking_url: https://www.lta.org.uk/play/book-a-tennis-court/courts/roehampton-playing-fields_9711167b-7a63-44e1-86ba-103d09816cfe/
+  availability_urls:
+  - https://www.lta.org.uk/api/courtdetail/availability?venueid=9711167b-7a63-44e1-86ba-103d09816cfe
   metadata_sources:
   - https://clubspark.lta.org.uk/RoehamptonPlayingFields
 - id: wandsworth-tooting-bec-common
