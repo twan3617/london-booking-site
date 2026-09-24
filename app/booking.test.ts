@@ -87,6 +87,12 @@ test('a failed provider keeps its previous snapshot while successful providers a
   assert.deepEqual(fresh?.venue_ids, ['hyde-park']);
 });
 
+test('expired availability keeps its coverage while hiding stale slots', () => {
+  const expired = freshAvailability(availability, Date.parse('2026-09-24T00:01:00Z'));
+
+  assert.deepEqual(expired, { ...availability, slots: [] });
+});
+
 test('a partial first provider refresh cannot replace a legacy flat snapshot', () => {
   const current = { ...availability, providers: { 'better-admin.org.uk': availability }, failed_providers: ['clubspark.lta.org.uk'] };
   assert.throws(() => mergeAvailabilityRefresh(current, availability), /complete provider refresh/);

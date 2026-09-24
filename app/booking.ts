@@ -93,10 +93,10 @@ export function mergeAvailabilityRefresh(current: AvailabilitySnapshot, previous
   return combineAvailabilityProviders(providers, current.failed_providers);
 }
 
-export function freshAvailability(snapshot: AvailabilitySnapshot, now: number, maxAgeMs = 2 * 60 * 60_000): AvailabilitySnapshot | null {
-  if (!snapshot.providers) return now - Date.parse(snapshot.generated_at) <= maxAgeMs ? snapshot : null;
+export function freshAvailability(snapshot: AvailabilitySnapshot, now: number, maxAgeMs = 2 * 60 * 60_000): AvailabilitySnapshot {
+  if (!snapshot.providers) return now - Date.parse(snapshot.generated_at) <= maxAgeMs ? snapshot : { ...snapshot, slots: [] };
   const providers = Object.fromEntries(Object.entries(snapshot.providers).filter(([, provider]) => now - Date.parse(provider.generated_at) <= maxAgeMs));
-  return Object.keys(providers).length ? combineAvailabilityProviders(providers, snapshot.failed_providers) : null;
+  return Object.keys(providers).length ? combineAvailabilityProviders(providers, snapshot.failed_providers) : { ...snapshot, slots: [] };
 }
 
 export function availabilityBookingUrl(snapshot: AvailabilitySnapshot, venueId: string, date: string): string | null {

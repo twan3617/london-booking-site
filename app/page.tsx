@@ -39,7 +39,7 @@ export default function Home() {
   const [currentTime, setCurrentTime] = useState<number | null>(null);
   const [snapshot, setSnapshot] = useState<AvailabilitySnapshot | null>(null);
   const [availabilityError, setAvailabilityError] = useState(false);
-  const availability = useMemo(() => snapshot && currentTime !== null ? freshAvailability(snapshot, currentTime) ?? EMPTY_AVAILABILITY : snapshot ?? EMPTY_AVAILABILITY, [snapshot, currentTime]);
+  const availability = useMemo(() => snapshot && currentTime !== null ? freshAvailability(snapshot, currentTime) : snapshot ?? EMPTY_AVAILABILITY, [snapshot, currentTime]);
   const sportVenueIds = useMemo(() => new Set(venues.filter((venue) => venue.sport === sport).map((venue) => venue.id)), [sport]);
   const relevantProviders = useMemo(() => Object.entries(snapshot?.providers ?? {}).filter(([, provider]) => provider.venue_ids.some((id) => sportVenueIds.has(id))), [snapshot, sportVenueIds]);
   const providerChecks = relevantProviders.map(([host, provider]) => `${PROVIDER_NAMES[host] ?? host} ${londonDateTime.format(new Date(provider.generated_at))}${snapshot?.failed_providers?.includes(host) ? ' (using previous)' : currentTime !== null && currentTime - Date.parse(provider.generated_at) > 2 * 60 * 60_000 ? ' (stale)' : ''}`).join(' · ');
