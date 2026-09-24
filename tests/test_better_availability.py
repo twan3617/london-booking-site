@@ -140,6 +140,25 @@ class BetterAvailabilityTests(unittest.TestCase):
         self.assertEqual(snapshot["booking_urls"]["barking-and-dagenham-barking-park"], "https://clubspark.lta.org.uk/BarkingPark")
         self.assertEqual(snapshot["booking_urls"]["padel-barnet-padel-hub-n20"], "https://playtomic.io/tenant/7a6f7a17-5a73-4468-9329-56c901f1ceba")
 
+    def test_refresh_keeps_successful_provider_batches_when_one_provider_fails(self):
+        with TemporaryDirectory(dir=ROOT) as directory:
+            output = Path(directory) / "availability.json"
+            with patch("scripts.refresh_availability.BetterAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.ClubSparkAvailabilitySource.fetch_availability", side_effect=RuntimeError("blocked")), patch("scripts.refresh_availability.PlaytomicAvailabilitySource.fetch_availability", return_value=()):
+                asyncio.run(refresh_availability(output))
+            snapshot = json.loads(output.read_text())
+
+        self.assertEqual(set(snapshot["providers"]), {"better-admin.org.uk", "playtomic.com"})
+        self.assertEqual(snapshot["failed_providers"], ["clubspark.lta.org.uk"])
+
+    def test_refresh_does_not_replace_the_snapshot_when_every_provider_fails(self):
+        with TemporaryDirectory(dir=ROOT) as directory:
+            output = Path(directory) / "availability.json"
+            output.write_text("previous snapshot")
+            with patch("scripts.refresh_availability.BetterAvailabilitySource.fetch_availability", side_effect=RuntimeError("blocked")), patch("scripts.refresh_availability.ClubSparkAvailabilitySource.fetch_availability", side_effect=RuntimeError("blocked")), patch("scripts.refresh_availability.PlaytomicAvailabilitySource.fetch_availability", side_effect=RuntimeError("blocked")):
+                with self.assertRaisesRegex(RuntimeError, "All availability providers failed"):
+                    asyncio.run(refresh_availability(output))
+            self.assertEqual(output.read_text(), "previous snapshot")
+
     def test_refresh_does_not_request_a_date_beyond_betters_utc_window(self):
         class BeforeUtcMidnight(datetime):
             @classmethod

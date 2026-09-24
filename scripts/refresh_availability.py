@@ -54,25 +54,50 @@ async def refresh_availability(output: Path = OUTPUT):
         "clubspark.lta.org.uk": ClubSparkAvailabilitySource(),
         "playtomic.com": PlaytomicAvailabilitySource(),
     }
-    slots = []
+    venues_by_host = {}
     for venue in venues:
         source_host = urlparse(venue.availability_urls[0]).hostname
-        source = sources.get(source_host)
-        if source is None:
+        if source_host not in sources:
             raise ValueError(f"No availability source for host: {source_host}")
-        venue_slots = await source.fetch_availability(venue, start_date, end_date)
-        slots.extend(venue_slots)
-        print(f"{venue.name}: {sum(slot.available for slot in venue_slots)} available of {len(venue_slots)} slots")
+        venues_by_host.setdefault(source_host, []).append(venue)
+
+    providers = {}
+    failed_providers = []
+    for source_host, provider_venues in venues_by_host.items():
+        slots = []
+        try:
+            for venue in provider_venues:
+                venue_slots = await sources[source_host].fetch_availability(venue, start_date, end_date)
+                slots.extend(venue_slots)
+                print(f"{venue.name}: {sum(slot.available for slot in venue_slots)} available of {len(venue_slots)} slots")
+        except Exception as error:
+            failed_providers.append(source_host)
+            print(f"{source_host} refresh failed: {error}", file=sys.stderr)
+            continue
+        providers[source_host] = {
+            "generated_at": datetime.now(timezone.utc).isoformat(),
+            "coverage_start": start_date.isoformat(),
+            "coverage_end": end_date.isoformat(),
+            "venue_ids": [venue.id for venue in provider_venues],
+            "booking_urls": {venue.id: venue.booking_url for venue in provider_venues},
+            "slots": [_slot_json(slot) for slot in slots],
+        }
+    if not providers:
+        raise RuntimeError("All availability providers failed")
+
+    snapshots = list(providers.values())
     payload = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "coverage_start": start_date.isoformat(),
         "coverage_end": end_date.isoformat(),
-        "venue_ids": [venue.id for venue in venues],
-        "booking_urls": {venue.id: venue.booking_url for venue in venues},
-        "slots": [_slot_json(slot) for slot in slots],
+        "venue_ids": [venue_id for snapshot in snapshots for venue_id in snapshot["venue_ids"]],
+        "booking_urls": {venue_id: url for snapshot in snapshots for venue_id, url in snapshot["booking_urls"].items()},
+        "slots": [slot for snapshot in snapshots for slot in snapshot["slots"]],
+        "providers": providers,
+        "failed_providers": failed_providers,
     }
     _save(output, payload)
-    print(f"Saved {len(slots)} slots to {output.relative_to(ROOT)}")
+    print(f"Saved {len(payload['slots'])} slots to {output.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":

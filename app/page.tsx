@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from 'react';
 import catalogue from '../data/venues.json';
 import coordinateData from '../data/coordinates.json';
 import priceData from '../data/prices.json';
-import { availabilityForVenue, availabilityGrid, bookingAccountRequired, bookingUrlsForSlots, bookingUrlFor, calendarText, directionsUrl, distanceMiles, isAvailabilitySnapshot, matchesVenue, nextSaturday, osmEmbedUrl, parseCatalogue, prettyDate, releaseDetails, venueDisplay, withinBookingWindow, type AvailabilitySnapshot, type Filters, type Mode, type Point, type PriceOption, type Sport, type Venue } from './booking';
+import { availabilityForVenue, availabilityGrid, bookingAccountRequired, bookingUrlsForSlots, bookingUrlFor, calendarText, directionsUrl, distanceMiles, freshAvailability, isAvailabilitySnapshot, matchesVenue, nextSaturday, osmEmbedUrl, parseCatalogue, prettyDate, releaseDetails, venueDisplay, withinBookingWindow, type AvailabilitySnapshot, type Filters, type Mode, type Point, type PriceOption, type Sport, type Venue } from './booking';
 
 const priceOptions = priceData as Record<string, PriceOption[] | null>;
 const venues = parseCatalogue(catalogue as unknown as { venues: Venue[] }, priceOptions, coordinateData as Record<string, Point | null>);
@@ -32,7 +32,10 @@ export default function Home() {
   const [currentTime, setCurrentTime] = useState<number | null>(null);
   const [snapshot, setSnapshot] = useState<AvailabilitySnapshot | null>(null);
   const [availabilityError, setAvailabilityError] = useState(false);
-  const availability = snapshot ?? EMPTY_AVAILABILITY;
+  const availability = useMemo(() => snapshot && currentTime !== null ? freshAvailability(snapshot, currentTime) ?? EMPTY_AVAILABILITY : snapshot ?? EMPTY_AVAILABILITY, [snapshot, currentTime]);
+  const sportVenueIds = useMemo(() => new Set(venues.filter((venue) => venue.sport === sport).map((venue) => venue.id)), [sport]);
+  const relevantProviders = useMemo(() => Object.entries(snapshot?.providers ?? {}).filter(([, provider]) => provider.venue_ids.some((id) => sportVenueIds.has(id))), [snapshot, sportVenueIds]);
+  const providerChecks = relevantProviders.map(([host, provider]) => `${host === 'better-admin.org.uk' ? 'Better' : host === 'clubspark.lta.org.uk' ? 'ClubSpark' : 'Playtomic'} ${londonDateTime.format(new Date(provider.generated_at))}${snapshot?.failed_providers?.includes(host) ? ' (using previous)' : currentTime !== null && currentTime - Date.parse(provider.generated_at) > 2 * 60 * 60_000 ? ' (stale)' : ''}`).join(' · ');
   const checkedAt = snapshot ? londonDateTime.format(new Date(snapshot.generated_at)) : '';
   const boroughs = useMemo(() => [...new Set(venues.filter((venue) => venue.sport === sport).map((venue) => venue.borough))].sort(), [sport]);
   const checkedVenueIds = useMemo(() => new Set(venues.filter((venue) => venue.sport === sport && availability.venue_ids.includes(venue.id)).map((venue) => venue.id)), [sport, availability]);
@@ -40,7 +43,7 @@ export default function Home() {
   const shownDuration = checkedDurations.includes(durationMinutes) ? durationMinutes : checkedDurations[0] ?? durationMinutes;
   const checkedVenues = checkedVenueIds.size;
   const snapshotOld = currentTime !== null && currentTime - Date.parse(availability.generated_at) > 60 * 60_000;
-  const snapshotTooOld = currentTime !== null && currentTime - Date.parse(availability.generated_at) > 2 * 60 * 60_000;
+  const snapshotTooOld = currentTime !== null && (snapshot?.providers ? relevantProviders.length > 0 && relevantProviders.every(([, provider]) => currentTime - Date.parse(provider.generated_at) > 2 * 60 * 60_000) : currentTime - Date.parse(availability.generated_at) > 2 * 60 * 60_000);
   const londonToday = currentTime === null ? '' : new Intl.DateTimeFormat('sv-SE', { timeZone: 'Europe/London', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date(currentTime));
   const snapshotExpired = londonToday > availability.coverage_end;
   const durationChecked = checkedDurations.includes(shownDuration);
@@ -158,7 +161,7 @@ export default function Home() {
 
     <section className="results">
       <div className="results-head"><div><p className="eyebrow">{view === 'time' ? snapshot ? `${prettyDate(availability.coverage_start)}–${prettyDate(availability.coverage_end)} · ${shownDuration} min` : 'Latest availability' : prettyDate(playDate)}</p><h2>{view === 'time' ? 'Availability by time' : `${results.length} courts match`}</h2></div><div className="result-tools"><label>Sort<select value={sortOrder} onChange={(event) => chooseSort(event.target.value as 'recommended' | 'distance')}><option value="recommended">Recommended</option><option value="distance">Nearest to me</option></select></label><button className={`favourites-toggle ${favouritesOnly ? 'active' : ''}`} onClick={() => setFavouritesOnly(!favouritesOnly)}>★ Favourites {favourites.length || ''}</button></div></div>
-      {view === 'time' && snapshot && <p className="availability-note" role="status">Last checked {checkedAt} London time. {checkedVenues} of {venues.filter((venue) => venue.sport === sport).length} {sport} locations checked for {availability.coverage_start}–{availability.coverage_end}. {availabilityError ? 'The latest refresh could not be loaded. ' : ''}{snapshotExpired ? 'This snapshot has expired. ' : snapshotTooOld ? 'This snapshot is over two hours old. ' : snapshotOld ? 'This snapshot is over one hour old. ' : ''}{!durationChecked && checkedVenues ? `No ${sport} durations were returned. ` : ''}Slots can change; confirm on the booking site.</p>}
+      {view === 'time' && snapshot && <p className="availability-note" role="status">{providerChecks ? `Provider checks: ${providerChecks}. ` : `Last checked ${checkedAt} London time. `}{checkedVenues} of {venues.filter((venue) => venue.sport === sport).length} {sport} locations checked for {availability.coverage_start}–{availability.coverage_end}. {availabilityError ? 'The latest refresh could not be loaded. ' : ''}{snapshotExpired ? 'This snapshot has expired. ' : snapshotTooOld ? 'All provider snapshots are over two hours old. ' : snapshotOld && !snapshot.providers ? 'This snapshot is over one hour old. ' : ''}{!durationChecked && checkedVenues ? `No ${sport} durations were returned. ` : ''}Slots can change; confirm on the booking site.</p>}
       {locationMessage && <p className="location-message" role="status">{locationMessage}</p>}
       {view === 'time' && !snapshot && <div className="empty" role="status"><h3>{availabilityError ? 'Availability unavailable' : 'Checking availability…'}</h3><p>{availabilityError ? 'Could not load the latest check. Try again shortly or browse locations.' : 'Loading the latest court check.'}</p></div>}
       {view === 'time' && snapshot && (snapshotExpired || snapshotTooOld || !grid.times.length ? <div className="empty"><h3>{!checkedVenues ? 'Availability not checked yet' : snapshotExpired || snapshotTooOld ? 'Availability snapshot expired' : !durationChecked ? 'Duration not checked' : 'No checked times match'}</h3><p>{!checkedVenues ? `No ${sport} locations have an availability feed in this pilot.` : snapshotExpired || snapshotTooOld ? 'Browse locations and check directly with the booking provider until a new snapshot is published.' : !durationChecked ? 'The provider returned no booking durations.' : 'Try removing a filter or choosing another sport.'}</p></div> : <>

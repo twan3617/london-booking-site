@@ -18,6 +18,8 @@ import {
   publishedPriceRange,
   parseCatalogue,
   isAvailabilitySnapshot,
+  freshAvailability,
+  mergeAvailabilityRefresh,
   venueDisplay,
   releaseDetails,
   relevantHourlyPrice,
@@ -64,6 +66,30 @@ test('fetched availability must have a usable snapshot shape', () => {
   assert.equal(isAvailabilitySnapshot({ ...availability, coverage_start: '2026-99-99' }), false);
   assert.equal(isAvailabilitySnapshot({ ...availability, booking_urls: { 'hyde-park': 'bad url' } }), false);
   assert.equal(isAvailabilitySnapshot({ ...availability, slots: [{ ...availability.slots[0], available: 'yes' }] }), false);
+});
+
+test('a failed provider keeps its previous snapshot while successful providers advance', () => {
+  const clubSlot = { ...availability.slots[0], venue_id: 'club-park', booking_url: 'https://clubspark.lta.org.uk/ClubPark' };
+  const club = { ...availability, generated_at: '2026-09-23T19:00:00Z', venue_ids: ['club-park'], booking_urls: { 'club-park': 'https://clubspark.lta.org.uk/ClubPark' }, slots: [clubSlot] };
+  const better = { ...availability, generated_at: '2026-09-23T20:00:00Z' };
+  const previous = { ...availability, providers: { 'clubspark.lta.org.uk': club } };
+  const current = { ...better, providers: { 'better-admin.org.uk': better }, failed_providers: ['clubspark.lta.org.uk'] };
+
+  const merged = mergeAvailabilityRefresh(current, previous);
+
+  assert.deepEqual(Object.keys(merged.providers ?? {}).sort(), ['better-admin.org.uk', 'clubspark.lta.org.uk']);
+  assert.deepEqual(merged.venue_ids.sort(), ['club-park', 'hyde-park']);
+  assert.equal(merged.slots.length, 3);
+  assert.equal(merged.generated_at, '2026-09-23T19:00:00Z');
+  assert.deepEqual(merged.failed_providers, ['clubspark.lta.org.uk']);
+  const fresh = freshAvailability(merged, Date.parse('2026-09-23T21:30:00Z'));
+  assert.deepEqual(Object.keys(fresh?.providers ?? {}), ['better-admin.org.uk']);
+  assert.deepEqual(fresh?.venue_ids, ['hyde-park']);
+});
+
+test('a partial first provider refresh cannot replace a legacy flat snapshot', () => {
+  const current = { ...availability, providers: { 'better-admin.org.uk': availability }, failed_providers: ['clubspark.lta.org.uk'] };
+  assert.throws(() => mergeAvailabilityRefresh(current, availability), /complete provider refresh/);
 });
 
 test('default Saturday follows the London date across UTC midnight', () => {
