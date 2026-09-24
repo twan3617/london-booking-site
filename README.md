@@ -76,7 +76,7 @@ Run the supported pilot venues with the Python interpreter:
 .venv/bin/python scripts/refresh_metadata.py
 ```
 
-The script fetches the three tested ClubSpark venues and two mapped Better OpenActive venues, applies only the fields present in each patch, prints the change report, and atomically writes `data/ingestion-metadata.json`. Invalid responses abort the run. Omitted fields retain their saved values; explicit collection shrinkage is blocked. The frontend JSON is not changed.
+The script fetches the tested ClubSpark and Better OpenActive sources, applies only the fields present in each patch, prints the change report, and atomically writes `data/ingestion-metadata.json`. Gunnersbury reads its ClubSpark page first and its OpenActive API record second, so structured API fields win conflicts while HTML fills omitted fields. Invalid responses abort the run. Omitted fields retain their saved values; explicit collection shrinkage is blocked. The frontend JSON is not changed.
 
 ## Availability pilot
 

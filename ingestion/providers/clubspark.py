@@ -65,9 +65,7 @@ def _clock(raw):
     return time(hour, minute)
 
 
-def parse_clubspark(venue: Venue, html: str, checked_at: datetime) -> MetadataPatch:
-    if venue.provider != "clubspark":
-        raise ValueError("ClubSpark venue required")
+def parse_clubspark(venue: Venue, html: str, checked_at: datetime, source_url: str) -> MetadataPatch:
     page = _VisibleParagraphs()
     page.feed(html)
     page._flush()
@@ -132,7 +130,7 @@ def parse_clubspark(venue: Venue, html: str, checked_at: datetime) -> MetadataPa
     }
     return MetadataPatch(
         venue_id=venue.id,
-        source_url=venue.booking_url,
+        source_url=source_url,
         checked_at=checked_at,
         values={field: value for field, value in observed.items() if value is not None and value != ()},
     )
@@ -149,10 +147,11 @@ class ClubSparkSource:
         self.fetch_html = fetch_html or _fetch_html
 
     async def fetch_metadata(self, venue: Venue) -> MetadataPatch:
-        if venue.provider != "clubspark":
-            raise ValueError("ClubSpark venue required")
-        html = await asyncio.to_thread(self.fetch_html, venue.booking_url)
-        return parse_clubspark(venue, html, datetime.now(timezone.utc))
+        source_url = next((url for url in venue.metadata_sources if url.startswith("https://clubspark.lta.org.uk/")), None)
+        if source_url is None:
+            raise ValueError(f"No ClubSpark metadata source: {venue.id}")
+        html = await asyncio.to_thread(self.fetch_html, source_url)
+        return parse_clubspark(venue, html, datetime.now(timezone.utc), source_url)
 
 
 def main():

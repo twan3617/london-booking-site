@@ -17,7 +17,7 @@ def fixture(name):
 
 
 def parsed(venue, html):
-    return apply_metadata_patch(venue, parse_clubspark(venue, html, CHECKED_AT))
+    return apply_metadata_patch(venue, parse_clubspark(venue, html, CHECKED_AT, venue.metadata_sources[0]))
 
 
 class ClubSparkTests(unittest.TestCase):
@@ -28,7 +28,7 @@ class ClubSparkTests(unittest.TestCase):
         self.assertEqual((metadata.court_count, metadata.floodlit_court_count, metadata.floodlit), (3, 3, True))
         self.assertEqual(metadata.opening_hours["monday"], ((time(7), time(21)),))
         self.assertEqual(len(metadata.opening_hours), 7)
-        self.assertEqual(metadata.source_url, venue.booking_url)
+        self.assertEqual(metadata.source_url, venue.metadata_sources[0])
 
     def test_finsbury_park_does_not_invent_total_count_or_price_unit(self):
         venue = VENUES["haringey-finsbury-park"]
@@ -51,7 +51,7 @@ class ClubSparkTests(unittest.TestCase):
 
     def test_missing_rules_stay_unknown(self):
         venue = VENUES["merton-cottenham-park"]
-        patch = parse_clubspark(venue, "<html><body><h1>Court booking</h1><p>Book a court with ClubSpark.</p></body></html>", CHECKED_AT)
+        patch = parse_clubspark(venue, "<html><body><h1>Court booking</h1><p>Book a court with ClubSpark.</p></body></html>", CHECKED_AT, venue.metadata_sources[0])
         metadata = apply_metadata_patch(venue, patch)
         self.assertEqual(dict(patch.values), {})
         self.assertEqual(metadata.name, venue.name)
@@ -85,20 +85,24 @@ class ClubSparkTests(unittest.TestCase):
         metadata = parsed(venue, "<p>Courts are released at 9.</p>")
         self.assertIsNone(metadata.release_time)
 
-    def test_source_fetches_one_public_page_and_rejects_other_providers(self):
+    def test_source_fetches_the_registered_clubspark_page_for_any_provider(self):
         venue = VENUES["hammersmith-and-fulham-brook-green-tennis"]
         calls = []
         source = ClubSparkSource(fetch_html=lambda url: calls.append(url) or fixture("clubspark_brook_green.html"))
         patch = asyncio.run(source.fetch_metadata(venue))
         metadata = apply_metadata_patch(venue, patch)
-        self.assertEqual(calls, [venue.booking_url])
+        self.assertEqual(calls, [venue.metadata_sources[0]])
         self.assertEqual(metadata.booking_window_days, 14)
         self.assertIn(MetadataField.BOOKING_WINDOW_DAYS, patch.values)
         self.assertIsNotNone(patch.checked_at.tzinfo)
-        other = VENUES["islington-highbury-fields"]
-        with self.assertRaisesRegex(ValueError, "ClubSpark venue required"):
-            asyncio.run(source.fetch_metadata(other))
-        self.assertEqual(calls, [venue.booking_url])
+
+        gunnersbury = VENUES["hounslow-gunnersbury-park-sports-hub"]
+        patch = asyncio.run(source.fetch_metadata(gunnersbury))
+        self.assertEqual(calls[-1], "https://clubspark.lta.org.uk/Gunnersburypark")
+        self.assertEqual(patch.source_url, calls[-1])
+
+        with self.assertRaisesRegex(ValueError, "No ClubSpark metadata source"):
+            asyncio.run(source.fetch_metadata(VENUES["islington-highbury-fields"]))
 
 
 if __name__ == "__main__":

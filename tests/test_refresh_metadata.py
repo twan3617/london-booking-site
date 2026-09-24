@@ -10,13 +10,14 @@ from ingestion.models import MetadataField, MetadataPatch, Venue, VenueMetadata,
 from scripts.refresh_metadata import load_snapshot, refresh_metadata
 
 
+API_SOURCE = "https://api.example.org/source"
 VENUE = Venue(
     id="example-court",
     name="Example Court",
     sport="tennis",
     provider="clubspark",
     booking_url="https://example.org/book",
-    metadata_sources=("https://example.org/source",),
+    metadata_sources=("https://example.org/source", API_SOURCE),
 )
 
 
@@ -34,10 +35,10 @@ def metadata(**changes):
     return replace(value, **changes)
 
 
-def patch(checked_at=None, **values):
+def patch(checked_at=None, source_url=None, **values):
     return MetadataPatch(
         venue_id=VENUE.id,
-        source_url=VENUE.metadata_sources[0],
+        source_url=source_url or VENUE.metadata_sources[0],
         checked_at=checked_at or datetime(2026, 9, 16, 12, tzinfo=timezone.utc),
         values={MetadataField(field): value for field, value in values.items()},
     )
@@ -112,6 +113,18 @@ class RefreshMetadataTests(unittest.TestCase):
             self.assertEqual(reports, ("Example Court\nNew metadata record.",))
             document = json.loads(output.read_text())
             self.assertEqual(document["venues"][0]["last_checked"], "2026-09-16T12:00:00+00:00")
+
+    def test_multiple_sources_fill_gaps_and_later_api_values_win(self):
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "metadata.json"
+            html = StaticSource(patch(court_count=3, surface=("hard",), booking_window_days=7))
+            api = StaticSource(patch(source_url=API_SOURCE, court_count=4))
+
+            asyncio.run(refresh_metadata((VENUE,), {VENUE.id: (html, api)}, output))
+
+            saved = load_snapshot(output)[VENUE.id]
+            self.assertEqual((saved.court_count, saved.surface, saved.booking_window_days), (4, ("hard",), 7))
+            self.assertEqual(saved.source_url, API_SOURCE)
 
     def test_omitted_values_are_preserved_without_becoming_changes(self):
         with tempfile.TemporaryDirectory() as directory:

@@ -23,7 +23,7 @@ SOURCES = {
     "hammersmith-and-fulham-brook-green-tennis": ClubSparkSource(),
     "haringey-finsbury-park": ClubSparkSource(),
     "merton-cottenham-park": ClubSparkSource(),
-    "hounslow-gunnersbury-park-sports-hub": OpenActiveSource(),
+    "hounslow-gunnersbury-park-sports-hub": (ClubSparkSource(), OpenActiveSource()),
     "squash-islington-finsbury": OpenActiveSource(),
 }
 
@@ -117,12 +117,13 @@ async def refresh_metadata(venues, sources, output=OUTPUT):
     refreshed = dict(existing)
     reports = []
     for venue in venues:
-        source = sources.get(venue.id)
-        if source is None:
+        venue_sources = sources.get(venue.id)
+        if venue_sources is None:
             continue
-        patch = await source.fetch_metadata(venue)
         previous = existing.get(venue.id)
-        candidate = apply_metadata_patch(venue, patch, previous)
+        candidate = previous
+        for source in venue_sources if isinstance(venue_sources, tuple) else (venue_sources,):
+            candidate = apply_metadata_patch(venue, await source.fetch_metadata(venue), candidate)
         invalid_fields = [issue.field for issue in validate_metadata(candidate)]
         if invalid_fields:
             raise ValueError(f"Invalid refreshed metadata for {venue.id}: {', '.join(invalid_fields)}")
