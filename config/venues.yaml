@@ -2682,7 +2682,9 @@ venues:
   name: Rocket Padel Beckton
   sport: padel
   provider: html
-  booking_url: https://www.rocketpadel.com/club/beckton
+  booking_url: https://padelmates.se/club/f953765495194a299e49f49674d69a41
+  availability_urls:
+  - https://fastapi-production-fargate.padelmates.io/club/?club_id=f953765495194a299e49f49674d69a41
   metadata_sources:
   - https://www.rocketpadel.com/club/beckton
 - id: padel-newham-stratford
@@ -2697,7 +2699,9 @@ venues:
   name: Rocket Padel Ilford
   sport: padel
   provider: html
-  booking_url: https://padelmates.se/club/rocketpadelilford
+  booking_url: https://padelmates.se/club/788fa2c66535421aabc60fd27f941c42
+  availability_urls:
+  - https://fastapi-production-fargate.padelmates.io/club/?club_id=788fa2c66535421aabc60fd27f941c42
   metadata_sources:
   - https://www.rocketpadel.com/club/ilford
   - https://www.ltapadel.org.uk/play/padel-in-your-area/padel-in-london/
@@ -2746,7 +2750,9 @@ venues:
   name: Rocket Padel Battersea Power Station
   sport: padel
   provider: html
-  booking_url: https://padelmates.se/club/rocketpadelbattersea
+  booking_url: https://padelmates.se/club/n8T0bz1PtMa1WhVElJ7Eclg0ooj2
+  availability_urls:
+  - https://fastapi-production-fargate.padelmates.io/club/?club_id=n8T0bz1PtMa1WhVElJ7Eclg0ooj2
   metadata_sources:
   - https://www.rocketpadel.com/club/Battersea-power-station
   - https://www.ltapadel.org.uk/play/padel-in-your-area/padel-in-london/

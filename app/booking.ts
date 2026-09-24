@@ -112,13 +112,13 @@ export function availabilityBookingUrl(snapshot: AvailabilitySnapshot, venueId: 
     url.searchParams.set('date', date);
     return url.toString();
   }
-  if (base && new URL(base).hostname === 'www.matchi.se') return base;
+  if (base && ['www.matchi.se', 'padelmates.se'].includes(new URL(base).hostname)) return base;
   return base ? `${base}/${date}/by-time` : null;
 }
 
 export function bookingAccountRequired(snapshot: AvailabilitySnapshot, venueId: string): boolean {
   const base = snapshot.booking_urls[venueId];
-  return !!base && ['clubspark.lta.org.uk', 'www.lta.org.uk', 'www.matchi.se'].includes(new URL(base).hostname);
+  return !!base && ['clubspark.lta.org.uk', 'www.lta.org.uk', 'www.matchi.se', 'padelmates.se'].includes(new URL(base).hostname);
 }
 
 export function bookingUrlsForSlots(slots: AvailabilitySlot[]): string[] {

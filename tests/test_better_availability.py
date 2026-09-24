@@ -130,7 +130,7 @@ class BetterAvailabilityTests(unittest.TestCase):
     def test_refresh_saves_the_official_booking_url_for_dates_without_slots(self):
         with TemporaryDirectory(dir=ROOT) as directory:
             output = Path(directory) / "availability.json"
-            with patch("scripts.refresh_availability.BetterAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.LtaAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.PlaytomicAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.MatchiAvailabilitySource.fetch_availability", return_value=()):
+            with patch("scripts.refresh_availability.BetterAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.LtaAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.PlaytomicAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.MatchiAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.PadelMatesAvailabilitySource.fetch_availability", return_value=()):
                 asyncio.run(refresh_availability(output))
             snapshot = json.loads(output.read_text())
         self.assertEqual(
@@ -139,22 +139,38 @@ class BetterAvailabilityTests(unittest.TestCase):
         )
         self.assertIn("https://www.lta.org.uk/play/book-a-tennis-court/courts/barking-park_", snapshot["booking_urls"]["barking-and-dagenham-barking-park"])
         self.assertEqual(snapshot["booking_urls"]["padel-barnet-padel-hub-n20"], "https://playtomic.io/tenant/7a6f7a17-5a73-4468-9329-56c901f1ceba")
+        self.assertEqual(snapshot["booking_urls"]["padel-newham-rocket-beckton"], "https://padelmates.se/club/f953765495194a299e49f49674d69a41")
+
+    def test_refresh_includes_the_padelmates_provider_batch(self):
+        with TemporaryDirectory(dir=ROOT) as directory:
+            output = Path(directory) / "availability.json"
+            with patch("scripts.refresh_availability.BetterAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.LtaAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.PlaytomicAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.MatchiAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.PadelMatesAvailabilitySource.fetch_availability", return_value=()):
+                asyncio.run(refresh_availability(output))
+            snapshot = json.loads(output.read_text())
+
+        provider = snapshot["providers"]["fastapi-production-fargate.padelmates.io"]
+        self.assertEqual(provider["venue_ids"], [
+            "padel-newham-rocket-beckton",
+            "padel-redbridge-rocket-ilford",
+            "padel-wandsworth-rocket-battersea",
+        ])
+        self.assertEqual(provider["booking_urls"]["padel-newham-rocket-beckton"], "https://padelmates.se/club/f953765495194a299e49f49674d69a41")
 
     def test_refresh_keeps_successful_provider_batches_when_one_provider_fails(self):
         with TemporaryDirectory(dir=ROOT) as directory:
             output = Path(directory) / "availability.json"
-            with patch("scripts.refresh_availability.BetterAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.LtaAvailabilitySource.fetch_availability", side_effect=RuntimeError("blocked")), patch("scripts.refresh_availability.PlaytomicAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.MatchiAvailabilitySource.fetch_availability", return_value=()):
+            with patch("scripts.refresh_availability.BetterAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.LtaAvailabilitySource.fetch_availability", side_effect=RuntimeError("blocked")), patch("scripts.refresh_availability.PlaytomicAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.MatchiAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.PadelMatesAvailabilitySource.fetch_availability", return_value=()):
                 asyncio.run(refresh_availability(output))
             snapshot = json.loads(output.read_text())
 
-        self.assertEqual(set(snapshot["providers"]), {"better-admin.org.uk", "playtomic.com", "api.matchi.com"})
+        self.assertEqual(set(snapshot["providers"]), {"better-admin.org.uk", "playtomic.com", "api.matchi.com", "fastapi-production-fargate.padelmates.io"})
         self.assertEqual(snapshot["failed_providers"], ["www.lta.org.uk"])
 
     def test_refresh_does_not_replace_the_snapshot_when_every_provider_fails(self):
         with TemporaryDirectory(dir=ROOT) as directory:
             output = Path(directory) / "availability.json"
             output.write_text("previous snapshot")
-            with patch("scripts.refresh_availability.BetterAvailabilitySource.fetch_availability", side_effect=RuntimeError("blocked")), patch("scripts.refresh_availability.LtaAvailabilitySource.fetch_availability", side_effect=RuntimeError("blocked")), patch("scripts.refresh_availability.PlaytomicAvailabilitySource.fetch_availability", side_effect=RuntimeError("blocked")), patch("scripts.refresh_availability.MatchiAvailabilitySource.fetch_availability", side_effect=RuntimeError("blocked")):
+            with patch("scripts.refresh_availability.BetterAvailabilitySource.fetch_availability", side_effect=RuntimeError("blocked")), patch("scripts.refresh_availability.LtaAvailabilitySource.fetch_availability", side_effect=RuntimeError("blocked")), patch("scripts.refresh_availability.PlaytomicAvailabilitySource.fetch_availability", side_effect=RuntimeError("blocked")), patch("scripts.refresh_availability.MatchiAvailabilitySource.fetch_availability", side_effect=RuntimeError("blocked")), patch("scripts.refresh_availability.PadelMatesAvailabilitySource.fetch_availability", side_effect=RuntimeError("blocked")):
                 with self.assertRaisesRegex(RuntimeError, "All availability providers failed"):
                     asyncio.run(refresh_availability(output))
             self.assertEqual(output.read_text(), "previous snapshot")
@@ -167,7 +183,7 @@ class BetterAvailabilityTests(unittest.TestCase):
 
         with TemporaryDirectory(dir=ROOT) as directory:
             output = Path(directory) / "availability.json"
-            with patch("scripts.refresh_availability.datetime", BeforeUtcMidnight), patch("scripts.refresh_availability.BetterAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.LtaAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.PlaytomicAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.MatchiAvailabilitySource.fetch_availability", return_value=()):
+            with patch("scripts.refresh_availability.datetime", BeforeUtcMidnight), patch("scripts.refresh_availability.BetterAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.LtaAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.PlaytomicAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.MatchiAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.PadelMatesAvailabilitySource.fetch_availability", return_value=()):
                 asyncio.run(refresh_availability(output))
             snapshot = json.loads(output.read_text())
         self.assertEqual((snapshot["coverage_start"], snapshot["coverage_end"]), ("2026-09-24", "2026-09-29"))
@@ -180,7 +196,7 @@ class BetterAvailabilityTests(unittest.TestCase):
 
         with TemporaryDirectory(dir=ROOT) as directory:
             output = Path(directory) / "availability.json"
-            with patch("scripts.refresh_availability.datetime", DuringLondonDay), patch("scripts.refresh_availability.BetterAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.LtaAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.PlaytomicAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.MatchiAvailabilitySource.fetch_availability", return_value=()):
+            with patch("scripts.refresh_availability.datetime", DuringLondonDay), patch("scripts.refresh_availability.BetterAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.LtaAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.PlaytomicAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.MatchiAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.PadelMatesAvailabilitySource.fetch_availability", return_value=()):
                 asyncio.run(refresh_availability(output))
             snapshot = json.loads(output.read_text())
 

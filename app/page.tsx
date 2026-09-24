@@ -9,6 +9,13 @@ import { availabilityForVenue, availabilityGrid, bookingAccountRequired, booking
 const priceOptions = priceData as Record<string, PriceOption[] | null>;
 const venues = parseCatalogue(catalogue as unknown as { venues: Venue[] }, priceOptions, coordinateData as Record<string, Point | null>);
 const EMPTY_AVAILABILITY: AvailabilitySnapshot = { generated_at: '1970-01-01T00:00:00Z', coverage_start: '1970-01-01', coverage_end: '1970-01-01', venue_ids: [], booking_urls: {}, slots: [] };
+const PROVIDER_NAMES: Record<string, string> = {
+  'api.matchi.com': 'MATCHi',
+  'better-admin.org.uk': 'Better',
+  'fastapi-production-fargate.padelmates.io': 'Padel Mates',
+  'playtomic.com': 'Playtomic',
+  'www.lta.org.uk': 'LTA Play',
+};
 const londonDateTime = new Intl.DateTimeFormat('en-GB', { dateStyle: 'medium', timeStyle: 'short', timeZone: 'Europe/London' });
 
 export default function Home() {
@@ -35,7 +42,7 @@ export default function Home() {
   const availability = useMemo(() => snapshot && currentTime !== null ? freshAvailability(snapshot, currentTime) ?? EMPTY_AVAILABILITY : snapshot ?? EMPTY_AVAILABILITY, [snapshot, currentTime]);
   const sportVenueIds = useMemo(() => new Set(venues.filter((venue) => venue.sport === sport).map((venue) => venue.id)), [sport]);
   const relevantProviders = useMemo(() => Object.entries(snapshot?.providers ?? {}).filter(([, provider]) => provider.venue_ids.some((id) => sportVenueIds.has(id))), [snapshot, sportVenueIds]);
-  const providerChecks = relevantProviders.map(([host, provider]) => `${host === 'better-admin.org.uk' ? 'Better' : host === 'www.lta.org.uk' ? 'LTA Play' : host === 'api.matchi.com' ? 'MATCHi' : 'Playtomic'} ${londonDateTime.format(new Date(provider.generated_at))}${snapshot?.failed_providers?.includes(host) ? ' (using previous)' : currentTime !== null && currentTime - Date.parse(provider.generated_at) > 2 * 60 * 60_000 ? ' (stale)' : ''}`).join(' · ');
+  const providerChecks = relevantProviders.map(([host, provider]) => `${PROVIDER_NAMES[host] ?? host} ${londonDateTime.format(new Date(provider.generated_at))}${snapshot?.failed_providers?.includes(host) ? ' (using previous)' : currentTime !== null && currentTime - Date.parse(provider.generated_at) > 2 * 60 * 60_000 ? ' (stale)' : ''}`).join(' · ');
   const checkedAt = snapshot ? londonDateTime.format(new Date(snapshot.generated_at)) : '';
   const boroughs = useMemo(() => [...new Set(venues.filter((venue) => venue.sport === sport).map((venue) => venue.borough))].sort(), [sport]);
   const checkedVenueIds = useMemo(() => new Set(venues.filter((venue) => venue.sport === sport && availability.venue_ids.includes(venue.id)).map((venue) => venue.id)), [sport, availability]);

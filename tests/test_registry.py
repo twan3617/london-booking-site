@@ -64,9 +64,13 @@ class RegistryTests(unittest.TestCase):
         self.assertEqual(len(matchi), 3)
         self.assertTrue(all(venue.sport == "padel" and len(venue.availability_urls) == 1 for venue in matchi))
 
+        padelmates = [venue for venue in venues if venue.availability_urls and venue.availability_urls[0].startswith("https://fastapi-production-fargate.padelmates.io/")]
+        self.assertEqual(len(padelmates), 3)
+        self.assertTrue(all(venue.sport == "padel" and len(venue.availability_urls) == 1 for venue in padelmates))
+
         configured = [venue for venue in venues if venue.availability_urls]
-        self.assertEqual(len(configured), 238)
-        self.assertEqual(sum(len(venue.availability_urls) for venue in configured), 241)
+        self.assertEqual(len(configured), 241)
+        self.assertEqual(sum(len(venue.availability_urls) for venue in configured), 244)
 
     def test_duplicate_ids_are_rejected(self):
         document = """venues:

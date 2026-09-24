@@ -188,6 +188,13 @@ test('MATCHi keeps its facility link and requires an account', () => {
   assert.equal(bookingAccountRequired(snapshot, 'hyde-park'), true);
 });
 
+test('Padel Mates keeps its club link and requires an account', () => {
+  const base = 'https://padelmates.se/club/f953765495194a299e49f49674d69a41';
+  const snapshot = { ...availability, booking_urls: { 'hyde-park': base } };
+  assert.equal(availabilityBookingUrl(snapshot, 'hyde-park', '2026-09-26'), base);
+  assert.equal(bookingAccountRequired(snapshot, 'hyde-park'), true);
+});
+
 test('Any price keeps venues whose price is unknown', () => {
   assert.equal(matchesVenue({ ...venue, price_text: null }, {
     sport: 'tennis', mode: 'after-work', borough: '', query: '', facility: 'any', status: 'all', maxPrice: null,

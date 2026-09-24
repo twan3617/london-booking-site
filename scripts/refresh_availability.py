@@ -15,6 +15,7 @@ if str(ROOT) not in sys.path:
 from ingestion.providers.better import BetterAvailabilitySource
 from ingestion.providers.lta import LtaAvailabilitySource
 from ingestion.providers.matchi import MatchiAvailabilitySource
+from ingestion.providers.padelmates import PadelMatesAvailabilitySource
 from ingestion.providers.playtomic import PlaytomicAvailabilitySource
 from ingestion.registry import load_registry
 
@@ -54,6 +55,7 @@ async def refresh_availability(output: Path = OUTPUT):
         "better-admin.org.uk": BetterAvailabilitySource(),
         "www.lta.org.uk": LtaAvailabilitySource(),
         "api.matchi.com": MatchiAvailabilitySource(),
+        "fastapi-production-fargate.padelmates.io": PadelMatesAvailabilitySource(),
         "playtomic.com": PlaytomicAvailabilitySource(),
     }
     venues_by_host = {}
