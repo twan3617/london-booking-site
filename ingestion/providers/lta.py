@@ -1,6 +1,5 @@
 """Read LTA Play's public court availability response."""
 
-import asyncio
 import json
 import re
 from datetime import date, datetime, timezone
@@ -11,6 +10,7 @@ from uuid import UUID
 from zoneinfo import ZoneInfo
 
 from ingestion.models import AvailabilitySlot, Venue
+from ingestion.sources import RequestPacer
 
 
 LONDON = ZoneInfo("Europe/London")
@@ -96,8 +96,9 @@ def _fetch_json(url):
 
 
 class LtaAvailabilitySource:
-    def __init__(self, fetch_json=None):
+    def __init__(self, fetch_json=None, request_pacer=None):
         self.fetch_json = fetch_json or _fetch_json
+        self.request_pacer = request_pacer or RequestPacer()
 
     async def fetch_availability(self, venue: Venue, start_date: date, end_date: date) -> tuple[AvailabilitySlot, ...]:
         source = _source(venue)
@@ -107,7 +108,7 @@ class LtaAvailabilitySource:
         slots = []
         play_date = start_date
         while play_date <= end_date:
-            payload = await asyncio.to_thread(self.fetch_json, f"{source}&{urlencode({'date': play_date.isoformat()})}")
+            payload = await self.request_pacer.run(self.fetch_json, f"{source}&{urlencode({'date': play_date.isoformat()})}")
             slots.extend(parse_slots(venue, payload, play_date, detected_at))
             play_date = date.fromordinal(play_date.toordinal() + 1)
         return tuple(slots)

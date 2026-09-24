@@ -1,6 +1,5 @@
 """Read date-scoped availability from Better's public booking frontend."""
 
-import asyncio
 import json
 import re
 from datetime import date, datetime, time, timedelta, timezone
@@ -9,6 +8,7 @@ from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
 
 from ingestion.models import AvailabilitySlot, Venue
+from ingestion.sources import RequestPacer
 
 LONDON = ZoneInfo("Europe/London")
 SOURCE_PATTERN = re.compile(r"/api/activities/venue/([^/]+)/activity/([^/]+)/v2/slots$")
@@ -101,8 +101,9 @@ def _fetch_json(url: str):
 
 
 class BetterAvailabilitySource:
-    def __init__(self, fetch_json=None):
+    def __init__(self, fetch_json=None, request_pacer=None):
         self.fetch_json = fetch_json or _fetch_json
+        self.request_pacer = request_pacer or RequestPacer()
 
     async def fetch_availability(self, venue: Venue, start_date: date, end_date: date) -> tuple[AvailabilitySlot, ...]:
         for availability_url in venue.availability_urls:
@@ -118,7 +119,7 @@ class BetterAvailabilitySource:
         while play_date <= end_date:
             for availability_url in venue.availability_urls:
                 url = f"{availability_url}?{urlencode({'date': play_date.isoformat()})}"
-                payload = await asyncio.to_thread(self.fetch_json, url)
+                payload = await self.request_pacer.run(self.fetch_json, url)
                 for slot in parse_slots(venue, payload, play_date, detected_at, availability_url):
                     key = (slot.court_id, slot.start_time, slot.end_time)
                     if key not in seen:
