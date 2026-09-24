@@ -21,6 +21,7 @@ import {
   freshAvailability,
   mergeAvailabilityRefresh,
   venueDisplay,
+  venueWithAvailabilityMetadata,
   releaseDetails,
   relevantHourlyPrice,
   withinBookingWindow,
@@ -71,6 +72,32 @@ test('fetched availability must have a usable snapshot shape', () => {
   assert.equal(isAvailabilitySnapshot({ ...availability, slots: [{ ...availability.slots[0], available: 'yes' }] }), false);
 });
 
+test('API metadata overrides observed fields while static facts fill the gaps', () => {
+  const snapshot = { ...availability, metadata: { 'hyde-park': {
+    source_url: 'https://better-admin.org.uk/api/slots',
+    checked_at: '2026-09-23T20:00:00Z',
+    values: {
+      prices: [{ amount_gbp: '13.45', duration_minutes: 60, customer: null, time_band: null, lights_included: null }],
+      booking_window_days: 6,
+      release_time: '22:00:00',
+      slot_duration_minutes: 60,
+    },
+  } } };
+
+  const observed = venueWithAvailabilityMetadata(venue, snapshot);
+
+  assert.equal(observed.lighting, venue.lighting);
+  assert.equal(observed.advance_days, 6);
+  assert.equal(observed.release_time, '22:00');
+  assert.equal(observed.release_status, 'published');
+  assert.equal(observed.release_rule, null);
+  assert.equal(observed.slot_minutes, 60);
+  assert.deepEqual(observed.price_options, [{
+    label: 'Observed booking price', amount_gbp: 13.45, duration_minutes: 60,
+    modes: ['after-work', 'weekend'], lighting: 'unknown',
+  }]);
+});
+
 test('a failed provider keeps its previous snapshot while successful providers advance', () => {
   const observed = { source_url: 'https://better-admin.org.uk/api/slots', checked_at: '2026-09-23T20:00:00Z', values: { booking_window_days: 6 } };
   const clubSlot = { ...availability.slots[0], venue_id: 'club-park', booking_url: 'https://clubspark.lta.org.uk/ClubPark' };
@@ -93,9 +120,10 @@ test('a failed provider keeps its previous snapshot while successful providers a
 });
 
 test('expired availability keeps its coverage while hiding stale slots', () => {
-  const expired = freshAvailability(availability, Date.parse('2026-09-24T00:01:00Z'));
+  const withMetadata = { ...availability, metadata: { 'hyde-park': { source_url: 'https://better-admin.org.uk/api/slots', checked_at: '2026-09-23T20:00:00Z', values: { booking_window_days: 6 } } } };
+  const expired = freshAvailability(withMetadata, Date.parse('2026-09-24T00:01:00Z'));
 
-  assert.deepEqual(expired, { ...availability, slots: [] });
+  assert.deepEqual(expired, { ...withMetadata, slots: [], metadata: {} });
 });
 
 test('a partial first provider refresh cannot replace a legacy flat snapshot', () => {

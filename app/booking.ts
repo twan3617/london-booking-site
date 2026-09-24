@@ -1,6 +1,6 @@
 export type Mode = 'after-work' | 'weekend';
 export type Sport = 'tennis' | 'squash' | 'padel';
-export type PriceOption = { label?: string; customer?: 'nonmember' | 'adult_standard'; time_band?: 'peak' | 'off_peak' | 'anytime'; amount_gbp: number; duration_minutes: number; modes: Mode[]; lighting: 'included' | 'unlit' };
+export type PriceOption = { label?: string; customer?: 'nonmember' | 'adult_standard'; time_band?: 'peak' | 'off_peak' | 'anytime'; amount_gbp: number; duration_minutes: number; modes: Mode[]; lighting: 'included' | 'unlit' | 'unknown' };
 
 export type Venue = {
   id: string;
@@ -105,9 +105,9 @@ export function mergeAvailabilityRefresh(current: AvailabilitySnapshot, previous
 }
 
 export function freshAvailability(snapshot: AvailabilitySnapshot, now: number, maxAgeMs = 2 * 60 * 60_000): AvailabilitySnapshot {
-  if (!snapshot.providers) return now - Date.parse(snapshot.generated_at) <= maxAgeMs ? snapshot : { ...snapshot, slots: [] };
+  if (!snapshot.providers) return now - Date.parse(snapshot.generated_at) <= maxAgeMs ? snapshot : { ...snapshot, slots: [], metadata: {} };
   const providers = Object.fromEntries(Object.entries(snapshot.providers).filter(([, provider]) => now - Date.parse(provider.generated_at) <= maxAgeMs));
-  return Object.keys(providers).length ? combineAvailabilityProviders(providers, snapshot.failed_providers) : { ...snapshot, slots: [] };
+  return Object.keys(providers).length ? combineAvailabilityProviders(providers, snapshot.failed_providers) : { ...snapshot, slots: [], metadata: {} };
 }
 
 export function availabilityBookingUrl(snapshot: AvailabilitySnapshot, venueId: string, date: string): string | null {
@@ -165,6 +165,33 @@ export function availabilityGrid(snapshot: AvailabilitySnapshot, venueIds: strin
     cell.courtCount++;
   }
   return { days, times: [...times].sort(), cells };
+}
+
+export function venueWithAvailabilityMetadata(venue: Venue, snapshot: AvailabilitySnapshot): Venue {
+  const values = snapshot.metadata?.[venue.id]?.values;
+  if (!values) return venue;
+  const observed = { ...venue };
+  const duration = values.slot_duration_minutes;
+  if (Number.isInteger(duration) && Number(duration) > 0 && Number(duration) <= 1440) observed.slot_minutes = Number(duration);
+  const window = values.booking_window_days;
+  const release = values.release_time;
+  if (Number.isInteger(window) && Number(window) > 0 && Number(window) <= 60) observed.advance_days = Number(window);
+  if (typeof release === 'string' && /^([01]\d|2[0-3]):[0-5]\d(?::[0-5]\d)?$/.test(release)) observed.release_time = release.slice(0, 5);
+  if (observed.advance_days !== venue.advance_days || observed.release_time !== venue.release_time) {
+    observed.release_rule = null;
+    observed.release_status = observed.advance_days != null && observed.release_time ? 'published' : 'partial';
+  }
+  if (Array.isArray(values.prices)) {
+    const prices = values.prices.flatMap((rate): PriceOption[] => {
+      if (!rate || typeof rate !== 'object') return [];
+      const raw = rate as Record<string, unknown>;
+      const amount = Number(raw.amount_gbp);
+      if (!Number.isFinite(amount) || amount <= 0 || amount >= 100 || !Number.isInteger(raw.duration_minutes) || Number(raw.duration_minutes) <= 0) return [];
+      return [{ label: 'Observed booking price', amount_gbp: amount, duration_minutes: Number(raw.duration_minutes), modes: ['after-work', 'weekend'], lighting: raw.lights_included === false ? 'unlit' : raw.lights_included === true ? 'included' : 'unknown' }];
+    });
+    if (prices.length) observed.price_options = prices;
+  }
+  return observed;
 }
 
 export function parseCatalogue(catalogue: { venues: Venue[] }, prices: Record<string, PriceOption[] | null>, coordinates: Record<string, Point | null>): Venue[] {

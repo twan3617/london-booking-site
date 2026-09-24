@@ -63,7 +63,7 @@ const server = createServer(async (req, res) => {
 });
 server.listen(3100, '127.0.0.1');
 console.log('Storage/function checks passed. SYNTHETIC DATA ONLY: http://127.0.0.1:3100');
-console.log('Type fresh, changed, stale, missing, invalid, or quit. The page fetches on opening Find a time, tab return, and every five minutes.');
+console.log('Type fresh, changed, stale, missing, invalid, or quit. The page fetches on open, tab return, and every five minutes.');
 const input = createInterface({ input: process.stdin });
 try {
   for await (const line of input) {
