@@ -80,12 +80,29 @@ The script fetches the three tested ClubSpark venues and two mapped Better OpenA
 
 ## Availability pilot
 
-Refresh the next seven days of configured Better availability with:
+Refresh the next seven days of configured Better availability locally with:
 
 ```bash
 .venv/bin/python scripts/refresh_availability.py
 ```
 
-The Better pilot reads public date-scoped booking JSON for Charlton Lido, Gunnersbury Park, Highbury Fields and Finsbury Leisure Centre, then atomically writes provider-independent slots to `data/availability.json`. The site's **Find a time** view shows checked days as columns and start times as rows; selecting a cell lists locations with free courts at that exact start time and duration, along with booking links. Tennis uses 60-minute slots and Finsbury squash uses 40-minute slots. The view also shows the snapshot's check time and coverage; other venues remain visibly unverified. Run the refresh again and rebuild/redeploy the site to publish newer slots. The script is not scheduled, so saved slots can become stale.
+The Better pilot reads public date-scoped booking JSON for Charlton Lido, Gunnersbury Park, Highbury Fields and Finsbury Leisure Centre, then atomically writes provider-independent slots to the ignored local file `data/availability.json`. The site's **Find a time** view fetches the latest published snapshot from `/.netlify/functions/availability` when opened, every five minutes while visible, and when the tab becomes visible again. It shows checked days as columns and start times as rows; selecting a cell lists locations with free courts at that exact start time and duration, along with booking links. Tennis uses 60-minute slots and Finsbury squash uses 40-minute slots. The view shows the snapshot's check time and coverage; after two hours it hides stale slot counts. Other venues remain visibly unverified.
+
+On the deployed Netlify site, the read-only function serves the `latest` key in the site-wide `court-availability` Blob store. The hourly GitHub Actions workflow runs the existing Python scraper and `scripts/publish_availability.mjs`; a failed or empty refresh does not replace the previous snapshot. Set GitHub Actions repository secrets `NETLIFY_SITE_ID` (Netlify project ID) and `NETLIFY_AUTH_TOKEN` (a Netlify personal access token with access to that project), then run **Refresh court availability** once with **Run workflow** to publish the first snapshot. The workflow must be on the repository's default branch to run on schedule. New snapshots do not commit data or rebuild the site; only changes to the site code or function require a Netlify deploy.
+
+### Activate snapshot refresh on Netlify
+
+1. Deploy this code to your existing Netlify project once, including `netlify/functions/availability.mjs`.
+2. In Netlify, copy **Project configuration → General → Project information → Project ID**. This is the value for `NETLIFY_SITE_ID`; the ID in `.openai/hosting.json` belongs to a different hosting service.
+3. Create a Netlify personal access token under **User settings → Applications → Personal access tokens**.
+4. In the GitHub repository, open **Settings → Secrets and variables → Actions** and create repository secrets named `NETLIFY_SITE_ID` and `NETLIFY_AUTH_TOKEN` with those values. Keep the token in secrets, never in source code or browser configuration.
+5. Once the workflow is on the default branch, open **Actions → Refresh court availability → Run workflow**. Its first successful upload creates the store and snapshot automatically.
+6. Open `https://YOUR-NETLIFY-DOMAIN/.netlify/functions/availability`. It should return JSON with a recent `generated_at`. Then open **Find a time** on the site.
+
+After setup, the workflow refreshes hourly and the open time view polls every five minutes. GitHub scheduled runs can be delayed. If refresh fails, the previous snapshot remains stored; the page hides counts once they are over two hours old.
+
+`npm run dev` runs the frontend only and does not serve the Netlify function. Local scraping still writes the ignored JSON for inspection; it does not publish it. Verify the storage-to-browser connection on a Netlify deploy after the first upload. Until then, the time view shows an unavailable state.
+
+References: [Netlify Blobs setup and project ID](https://docs.netlify.com/build/data-and-storage/netlify-blobs/), [GitHub Actions secrets](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets).
 
 The ClubSpark adapter is a local pilot: `ingestion/providers/clubspark_availability.py` expands `Category: 0` booking-sheet ranges into individual slots. It has no live fetcher configured and is not included in the refresh script or published snapshot. ClubSpark slots, if later published, link to the selected booking date and tell visitors they need a ClubSpark account to book.

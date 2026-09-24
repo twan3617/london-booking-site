@@ -64,3 +64,7 @@ next-env.d.ts
 /.venv/
 __pycache__/
 *.pyc
+*.egg-info/
+
+# Live court checks are stored in Netlify Blobs, not Git.
+/data/availability.json
