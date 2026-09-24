@@ -101,7 +101,45 @@ On the deployed Netlify site, the read-only function serves the `latest` key in 
 
 After setup, the workflow refreshes hourly and the open time view polls every five minutes. GitHub scheduled runs can be delayed. If refresh fails, the previous snapshot remains stored; the page hides counts once they are over two hours old.
 
-`npm run dev` runs the frontend only and does not serve the Netlify function. Local scraping still writes the ignored JSON for inspection; it does not publish it. Verify the storage-to-browser connection on a Netlify deploy after the first upload. Until then, the time view shows an unavailable state.
+`npm run dev` runs the frontend only and does not serve the Netlify function. Local scraping still writes the ignored JSON for inspection; it does not publish it. Use the local integration preview below to test storage-to-browser behaviour without deploying. Cloud credentials and the scheduled job still need a separate check when deployment is enabled.
+
+### Local integration preview (synthetic data)
+
+The intended hosted flow (deployment and scheduled refreshes are currently inactive):
+
+```mermaid
+flowchart TD
+  APIs[Booking provider APIs] -->|Availability responses| Scraper[Python scraper running in GitHub Actions]
+  Scraper -->|Validate and upload JSON| Blobs[Netlify Blobs: latest snapshot]
+  Blobs -->|Read stored JSON| Function[Read-only Netlify function]
+  Function -->|JSON on each browser fetch| Grid[Availability grid in the browser]
+  Catalogue[Catalogue JSON shipped with the website] -->|Names, locations and other metadata| Grid
+  Grid -->|User follows booking link| Booking[Provider booking website]
+```
+
+The local preview replaces the provider calls and scheduled scraper with manual sample updates, and Netlify Blobs with its local emulator. The function and browser use the production code. Fetches happen when the time view opens, every five minutes while visible, and when the browser tab becomes visible again. Receiving new JSON updates the grid without rebuilding or reloading the website. Failed fetches retain the previous snapshot with a warning; counts older than two hours are hidden.
+
+With Node 24, run from this directory:
+
+```sh
+npx next build
+node scripts/preview_availability.mjs
+```
+
+Open `http://127.0.0.1:3100` and choose **Find a time**. The preview uses the installed Netlify SDK's local Blob server, temporary storage, our actual availability function, and the built website. It first asserts that the function returns 503 for missing data and reads updated snapshots without caching. No Netlify credentials, provider calls, uploads, deployments, or GitHub jobs are used. The displayed courts and prices are synthetic test data.
+
+Type a scenario in the terminal:
+
+| Command | Expected behaviour after the next browser fetch |
+| --- | --- |
+| `fresh` | One location with two sample courts |
+| `changed` | Same location with one sample court |
+| `missing` | Function returns 503; a previously loaded snapshot remains with a refresh warning |
+| `invalid` | Malformed data is rejected; the previous snapshot remains with a warning |
+| `stale` | Three-hour-old snapshot hides counts and displays an expiry message |
+| `quit` | Stops the preview and removes its temporary Blob storage |
+
+The open, visible time view polls every five minutes. Switching away to another browser tab and returning also fetches the latest snapshot without reloading the page. For a first-load failure check, use `missing` and then reload the browser: the time view should show availability unavailable.
 
 References: [Netlify Blobs setup and project ID](https://docs.netlify.com/build/data-and-storage/netlify-blobs/), [GitHub Actions secrets](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets).
 
