@@ -44,6 +44,15 @@ class RegistryTests(unittest.TestCase):
         self.assertEqual(sum(bool(venue.availability_urls) for venue in better), 21)
         self.assertEqual(sum(len(venue.availability_urls) for venue in better), 24)
 
+        clubspark = [venue for venue in venues if venue.provider == "clubspark"]
+        self.assertEqual(len(clubspark), 232)
+        self.assertEqual(sum(bool(venue.availability_urls) for venue in clubspark), 23)
+        self.assertEqual(sum(len(venue.availability_urls) for venue in clubspark), 23)
+
+        playtomic = [venue for venue in venues if venue.availability_urls and venue.availability_urls[0].startswith("https://playtomic.com/")]
+        self.assertEqual(len(playtomic), 8)
+        self.assertTrue(all(venue.sport == "padel" and len(venue.availability_urls) == 1 for venue in playtomic))
+
     def test_duplicate_ids_are_rejected(self):
         document = """venues:
   - id: same

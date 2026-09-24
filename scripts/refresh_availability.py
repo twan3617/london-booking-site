@@ -5,6 +5,7 @@ import json
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from urllib.parse import urlparse
 from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -12,6 +13,8 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from ingestion.providers.better import BetterAvailabilitySource
+from ingestion.providers.clubspark_availability import ClubSparkAvailabilitySource
+from ingestion.providers.playtomic import PlaytomicAvailabilitySource
 from ingestion.registry import load_registry
 
 OUTPUT = ROOT / "data/availability.json"
@@ -46,12 +49,17 @@ async def refresh_availability(output: Path = OUTPUT):
     # Better currently exposes today plus five further dates.
     end_date = start_date + timedelta(days=DAYS_AHEAD)
     venues = [venue for venue in load_registry(ROOT / "config/venues.yaml") if venue.availability_urls]
-    sources = {"better": BetterAvailabilitySource()}
+    sources = {
+        "better-admin.org.uk": BetterAvailabilitySource(),
+        "clubspark.lta.org.uk": ClubSparkAvailabilitySource(),
+        "playtomic.com": PlaytomicAvailabilitySource(),
+    }
     slots = []
     for venue in venues:
-        source = sources.get(venue.provider)
+        source_host = urlparse(venue.availability_urls[0]).hostname
+        source = sources.get(source_host)
         if source is None:
-            raise ValueError(f"No availability source for provider: {venue.provider}")
+            raise ValueError(f"No availability source for host: {source_host}")
         venue_slots = await source.fetch_availability(venue, start_date, end_date)
         slots.extend(venue_slots)
         print(f"{venue.name}: {sum(slot.available for slot in venue_slots)} available of {len(venue_slots)} slots")

@@ -130,13 +130,15 @@ class BetterAvailabilityTests(unittest.TestCase):
     def test_refresh_saves_the_official_booking_url_for_dates_without_slots(self):
         with TemporaryDirectory(dir=ROOT) as directory:
             output = Path(directory) / "availability.json"
-            with patch("scripts.refresh_availability.BetterAvailabilitySource.fetch_availability", return_value=()):
+            with patch("scripts.refresh_availability.BetterAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.ClubSparkAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.PlaytomicAvailabilitySource.fetch_availability", return_value=()):
                 asyncio.run(refresh_availability(output))
             snapshot = json.loads(output.read_text())
         self.assertEqual(
             snapshot["booking_urls"][VENUE.id],
             "https://bookings.better.org.uk/location/gunnersbury-park-sports-hub/tennis-court-outdoor",
         )
+        self.assertEqual(snapshot["booking_urls"]["barking-and-dagenham-barking-park"], "https://clubspark.lta.org.uk/BarkingPark")
+        self.assertEqual(snapshot["booking_urls"]["padel-barnet-padel-hub-n20"], "https://playtomic.io/tenant/7a6f7a17-5a73-4468-9329-56c901f1ceba")
 
     def test_refresh_does_not_request_a_date_beyond_betters_utc_window(self):
         class BeforeUtcMidnight(datetime):
@@ -146,7 +148,7 @@ class BetterAvailabilityTests(unittest.TestCase):
 
         with TemporaryDirectory(dir=ROOT) as directory:
             output = Path(directory) / "availability.json"
-            with patch("scripts.refresh_availability.datetime", BeforeUtcMidnight), patch("scripts.refresh_availability.BetterAvailabilitySource.fetch_availability", return_value=()):
+            with patch("scripts.refresh_availability.datetime", BeforeUtcMidnight), patch("scripts.refresh_availability.BetterAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.ClubSparkAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.PlaytomicAvailabilitySource.fetch_availability", return_value=()):
                 asyncio.run(refresh_availability(output))
             snapshot = json.loads(output.read_text())
         self.assertEqual((snapshot["coverage_start"], snapshot["coverage_end"]), ("2026-09-24", "2026-09-29"))
@@ -159,7 +161,7 @@ class BetterAvailabilityTests(unittest.TestCase):
 
         with TemporaryDirectory(dir=ROOT) as directory:
             output = Path(directory) / "availability.json"
-            with patch("scripts.refresh_availability.datetime", DuringLondonDay), patch("scripts.refresh_availability.BetterAvailabilitySource.fetch_availability", return_value=()):
+            with patch("scripts.refresh_availability.datetime", DuringLondonDay), patch("scripts.refresh_availability.BetterAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.ClubSparkAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.PlaytomicAvailabilitySource.fetch_availability", return_value=()):
                 asyncio.run(refresh_availability(output))
             snapshot = json.loads(output.read_text())
 

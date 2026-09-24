@@ -1,7 +1,10 @@
 import asyncio
+import copy
 import unittest
+from dataclasses import replace
 from datetime import date, datetime, timezone
 from pathlib import Path
+from unittest.mock import AsyncMock, patch
 
 from ingestion.providers.clubspark_availability import ClubSparkAvailabilitySource, parse_sessions
 from ingestion.registry import load_registry
@@ -42,7 +45,7 @@ def booking_sheet():
 class ClubSparkAvailabilityTests(unittest.TestCase):
     def test_open_range_expands_to_court_slots_and_excludes_booked_and_closed_time(self):
         venue = VENUES["barking-and-dagenham-barking-park"]
-        slots = parse_sessions(venue, booking_sheet(), PLAY_DATE, DETECTED_AT)
+        slots = parse_sessions(venue, booking_sheet(), PLAY_DATE, PLAY_DATE, DETECTED_AT)
 
         self.assertEqual([slot.start_time.isoformat() for slot in slots], [
             "2026-09-24T07:00:00+01:00", "2026-09-24T08:00:00+01:00", "2026-09-24T09:00:00+01:00",
@@ -59,23 +62,70 @@ class ClubSparkAvailabilityTests(unittest.TestCase):
             target = payload["Resources"][0]["Days"][0]
             (target if field == "Date" else target["Sessions"][0])[field] = value
             with self.subTest(field=field), self.assertRaises(ValueError):
-                parse_sessions(venue, payload, PLAY_DATE, DETECTED_AT)
+                parse_sessions(venue, payload, PLAY_DATE, PLAY_DATE, DETECTED_AT)
         payload = booking_sheet()
         payload["TimeZone"] = "UTC"
         with self.assertRaisesRegex(ValueError, "timezone"):
-            parse_sessions(venue, payload, PLAY_DATE, DETECTED_AT)
+            parse_sessions(venue, payload, PLAY_DATE, PLAY_DATE, DETECTED_AT)
 
-    def test_source_uses_same_date_scoped_request_for_another_venue(self):
-        venue = VENUES["hammersmith-and-fulham-ravenscourt-park"]
+    def test_source_fetches_the_date_range_once(self):
+        base = VENUES["hammersmith-and-fulham-ravenscourt-park"]
+        endpoint = "https://clubspark.lta.org.uk/v0/VenueBooking/RavenscourtPark/GetVenueSessions"
+        venue = replace(base, availability_urls=(endpoint,))
+        payload = booking_sheet()
+        next_day = copy.deepcopy(payload["Resources"][0]["Days"][0])
+        next_day["Date"] = "2026-09-25T00:00:00"
+        payload["Resources"][0]["Days"].append(next_day)
+        calls = []
+        source = ClubSparkAvailabilitySource(fetch_json=lambda url: calls.append(url) or payload)
+
+        slots = asyncio.run(source.fetch_availability(venue, PLAY_DATE, date(2026, 9, 25)))
+
+        self.assertEqual(len(slots), 6)
+        self.assertEqual({slot.start_time.date() for slot in slots}, {PLAY_DATE, date(2026, 9, 25)})
+        self.assertEqual(calls, [
+            f"{endpoint}?resourceID=&startDate=2026-09-24&endDate=2026-09-25&roleId=",
+        ])
+
+    def test_date_range_must_cover_every_requested_day(self):
+        venue = VENUES["barking-and-dagenham-barking-park"]
+        with self.assertRaisesRegex(ValueError, "date coverage"):
+            parse_sessions(venue, booking_sheet(), PLAY_DATE, date(2026, 9, 25), DETECTED_AT)
+
+        payload = booking_sheet()
+        second_day = copy.deepcopy(payload["Resources"][0]["Days"][0])
+        second_day["Date"] = "2026-09-25T00:00:00"
+        payload["Resources"][0]["Days"].append(second_day)
+        second_court = copy.deepcopy(payload["Resources"][0])
+        second_court["ID"] = "court-2"
+        second_court["Days"] = second_court["Days"][:1]
+        payload["Resources"].append(second_court)
+        with self.assertRaisesRegex(ValueError, "date coverage"):
+            parse_sessions(venue, payload, PLAY_DATE, date(2026, 9, 25), DETECTED_AT)
+
+    def test_source_spaces_successive_venue_requests(self):
+        source = ClubSparkAvailabilitySource(fetch_json=lambda _: booking_sheet())
+
+        async def fetch_twice():
+            await source.fetch_availability(VENUES["barking-and-dagenham-barking-park"], PLAY_DATE, PLAY_DATE)
+            await source.fetch_availability(VENUES["barking-and-dagenham-central-park-dagenham"], PLAY_DATE, PLAY_DATE)
+
+        with patch("ingestion.providers.clubspark_availability.asyncio.sleep", new_callable=AsyncMock) as sleep:
+            asyncio.run(fetch_twice())
+        sleep.assert_awaited_once()
+        self.assertGreater(sleep.await_args.args[0], 0)
+
+    def test_source_rejects_a_foreign_venue_or_host_before_fetching(self):
+        base = VENUES["hammersmith-and-fulham-ravenscourt-park"]
         calls = []
         source = ClubSparkAvailabilitySource(fetch_json=lambda url: calls.append(url) or booking_sheet())
-
-        slots = asyncio.run(source.fetch_availability(venue, PLAY_DATE, PLAY_DATE))
-
-        self.assertEqual(len(slots), 3)
-        self.assertEqual(calls, [
-            "https://clubspark.lta.org.uk/v0/VenueBooking/RavenscourtPark/GetVenueSessions?resourceID=&startDate=2026-09-24&endDate=2026-09-24&roleId=",
-        ])
+        for endpoint in (
+            "https://clubspark.lta.org.uk/v0/VenueBooking/BarkingPark/GetVenueSessions",
+            "https://example.org/v0/VenueBooking/RavenscourtPark/GetVenueSessions",
+        ):
+            with self.subTest(endpoint=endpoint), self.assertRaisesRegex(ValueError, "No ClubSpark availability source"):
+                asyncio.run(source.fetch_availability(replace(base, availability_urls=(endpoint,)), PLAY_DATE, PLAY_DATE))
+        self.assertEqual(calls, [])
 
 
 if __name__ == "__main__":

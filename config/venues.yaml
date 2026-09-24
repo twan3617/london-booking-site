@@ -4,6 +4,8 @@ venues:
   sport: tennis
   provider: clubspark
   booking_url: https://clubspark.lta.org.uk/BarkingPark
+  availability_urls:
+  - https://clubspark.lta.org.uk/v0/VenueBooking/BarkingPark/GetVenueSessions
   metadata_sources:
   - https://clubspark.lta.org.uk/BarkingPark
   - https://clubspark.lta.org.uk/TennisinBarkingDagenham/Venues
@@ -14,6 +16,8 @@ venues:
   sport: tennis
   provider: clubspark
   booking_url: https://clubspark.lta.org.uk/CentralParkDagenham
+  availability_urls:
+  - https://clubspark.lta.org.uk/v0/VenueBooking/CentralParkDagenham/GetVenueSessions
   metadata_sources:
   - https://clubspark.lta.org.uk/CentralParkDagenham
   - https://clubspark.lta.org.uk/TennisinBarkingDagenham/Venues
@@ -24,6 +28,8 @@ venues:
   sport: tennis
   provider: clubspark
   booking_url: https://clubspark.lta.org.uk/GreatfieldsPark
+  availability_urls:
+  - https://clubspark.lta.org.uk/v0/VenueBooking/GreatfieldsPark/GetVenueSessions
   metadata_sources:
   - https://clubspark.lta.org.uk/GreatfieldsPark
   - https://clubspark.lta.org.uk/TennisinBarkingDagenham/Venues
@@ -34,6 +40,8 @@ venues:
   sport: tennis
   provider: clubspark
   booking_url: https://clubspark.lta.org.uk/OldDagenhamPark
+  availability_urls:
+  - https://clubspark.lta.org.uk/v0/VenueBooking/OldDagenhamPark/GetVenueSessions
   metadata_sources:
   - https://clubspark.lta.org.uk/OldDagenhamPark
   - https://clubspark.lta.org.uk/TennisinBarkingDagenham/Venues
@@ -44,6 +52,8 @@ venues:
   sport: tennis
   provider: clubspark
   booking_url: https://clubspark.lta.org.uk/StChadsPark
+  availability_urls:
+  - https://clubspark.lta.org.uk/v0/VenueBooking/StChadsPark/GetVenueSessions
   metadata_sources:
   - https://clubspark.lta.org.uk/StChadsPark
   - https://clubspark.lta.org.uk/TennisinBarkingDagenham/Venues
@@ -54,6 +64,8 @@ venues:
   sport: tennis
   provider: clubspark
   booking_url: https://clubspark.lta.org.uk/BethunePark
+  availability_urls:
+  - https://clubspark.lta.org.uk/v0/VenueBooking/BethunePark/GetVenueSessions
   metadata_sources:
   - https://clubspark.lta.org.uk/BethunePark
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -63,6 +75,8 @@ venues:
   sport: tennis
   provider: clubspark
   booking_url: https://clubspark.lta.org.uk/BittacyHillPark
+  availability_urls:
+  - https://clubspark.lta.org.uk/v0/VenueBooking/BittacyHillPark/GetVenueSessions
   metadata_sources:
   - https://clubspark.lta.org.uk/BittacyHillPark
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -82,6 +96,8 @@ venues:
   sport: tennis
   provider: clubspark
   booking_url: https://clubspark.lta.org.uk/CherryTreeWoods
+  availability_urls:
+  - https://clubspark.lta.org.uk/v0/VenueBooking/CherryTreeWoods/GetVenueSessions
   metadata_sources:
   - https://clubspark.lta.org.uk/CherryTreeWoods
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -91,6 +107,8 @@ venues:
   sport: tennis
   provider: clubspark
   booking_url: https://clubspark.lta.org.uk/ChildsHillPark
+  availability_urls:
+  - https://clubspark.lta.org.uk/v0/VenueBooking/ChildsHillPark/GetVenueSessions
   metadata_sources:
   - https://clubspark.lta.org.uk/ChildsHillPark
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -100,6 +118,8 @@ venues:
   sport: tennis
   provider: clubspark
   booking_url: https://clubspark.lta.org.uk/EdgwareburyPark
+  availability_urls:
+  - https://clubspark.lta.org.uk/v0/VenueBooking/EdgwareburyPark/GetVenueSessions
   metadata_sources:
   - https://clubspark.lta.org.uk/EdgwareburyPark
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -109,6 +129,8 @@ venues:
   sport: tennis
   provider: clubspark
   booking_url: https://clubspark.lta.org.uk/FriaryPark
+  availability_urls:
+  - https://clubspark.lta.org.uk/v0/VenueBooking/FriaryPark/GetVenueSessions
   metadata_sources:
   - https://clubspark.lta.org.uk/FriaryPark
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -125,6 +147,8 @@ venues:
   sport: tennis
   provider: clubspark
   booking_url: https://clubspark.lta.org.uk/HalliwickRec
+  availability_urls:
+  - https://clubspark.lta.org.uk/v0/VenueBooking/HalliwickRec/GetVenueSessions
   metadata_sources:
   - https://clubspark.lta.org.uk/HalliwickRec
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -134,6 +158,8 @@ venues:
   sport: tennis
   provider: clubspark
   booking_url: https://clubspark.lta.org.uk/HendonPark
+  availability_urls:
+  - https://clubspark.lta.org.uk/v0/VenueBooking/HendonPark/GetVenueSessions
   metadata_sources:
   - https://clubspark.lta.org.uk/HendonPark
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -143,6 +169,8 @@ venues:
   sport: tennis
   provider: clubspark
   booking_url: https://clubspark.lta.org.uk/LytteltonPlayingFields
+  availability_urls:
+  - https://clubspark.lta.org.uk/v0/VenueBooking/LytteltonPlayingFields/GetVenueSessions
   metadata_sources:
   - https://clubspark.lta.org.uk/LytteltonPlayingFields
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -152,6 +180,8 @@ venues:
   sport: tennis
   provider: clubspark
   booking_url: https://clubspark.lta.org.uk/MillHillPark
+  availability_urls:
+  - https://clubspark.lta.org.uk/v0/VenueBooking/MillHillPark/GetVenueSessions
   metadata_sources:
   - https://clubspark.lta.org.uk/MillHillPark
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -161,6 +191,8 @@ venues:
   sport: tennis
   provider: clubspark
   booking_url: https://clubspark.lta.org.uk/MontrosePlayingFields
+  availability_urls:
+  - https://clubspark.lta.org.uk/v0/VenueBooking/MontrosePlayingFields/GetVenueSessions
   metadata_sources:
   - https://clubspark.lta.org.uk/MontrosePlayingFields
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -178,6 +210,8 @@ venues:
   sport: tennis
   provider: clubspark
   booking_url: https://clubspark.lta.org.uk/NewSouthgateRecGround
+  availability_urls:
+  - https://clubspark.lta.org.uk/v0/VenueBooking/NewSouthgateRecGround/GetVenueSessions
   metadata_sources:
   - https://clubspark.lta.org.uk/NewSouthgateRecGround
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -187,6 +221,8 @@ venues:
   sport: tennis
   provider: clubspark
   booking_url: https://clubspark.lta.org.uk/NorthwayGardens
+  availability_urls:
+  - https://clubspark.lta.org.uk/v0/VenueBooking/NorthwayGardens/GetVenueSessions
   metadata_sources:
   - https://clubspark.lta.org.uk/NorthwayGardens
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -196,6 +232,8 @@ venues:
   sport: tennis
   provider: clubspark
   booking_url: https://clubspark.lta.org.uk/OakhillPark
+  availability_urls:
+  - https://clubspark.lta.org.uk/v0/VenueBooking/OakhillPark/GetVenueSessions
   metadata_sources:
   - https://clubspark.lta.org.uk/OakhillPark
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -205,6 +243,8 @@ venues:
   sport: tennis
   provider: clubspark
   booking_url: https://clubspark.lta.org.uk/OldCourthouseRecGround
+  availability_urls:
+  - https://clubspark.lta.org.uk/v0/VenueBooking/OldCourthouseRecGround/GetVenueSessions
   metadata_sources:
   - https://clubspark.lta.org.uk/OldCourthouseRecGround
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -214,6 +254,8 @@ venues:
   sport: tennis
   provider: clubspark
   booking_url: https://clubspark.lta.org.uk/PrincesPark
+  availability_urls:
+  - https://clubspark.lta.org.uk/v0/VenueBooking/PrincesPark/GetVenueSessions
   metadata_sources:
   - https://clubspark.lta.org.uk/PrincesPark
   - https://clubspark.lta.org.uk/PlayTennisBarnet
@@ -2159,6 +2201,8 @@ venues:
   sport: tennis
   provider: clubspark
   booking_url: https://clubspark.lta.org.uk/wimbledonpark
+  availability_urls:
+  - https://clubspark.lta.org.uk/v0/VenueBooking/wimbledonpark/GetVenueSessions
   metadata_sources:
   - https://clubspark.lta.org.uk/wimbledonpark
   - https://www.merton.gov.uk/leisure-recreation-and-culture/parks-and-open-spaces/parks-and-recreation-grounds/wimbledon/wimbledon-park
@@ -2257,14 +2301,18 @@ venues:
   name: The Padel Hub N20
   sport: padel
   provider: html
-  booking_url: https://playtomic.com/clubs/the-padel-hub-n20-north-london
+  booking_url: https://playtomic.io/tenant/7a6f7a17-5a73-4468-9329-56c901f1ceba
+  availability_urls:
+  - https://playtomic.com/api/clubs/availability?tenant_id=7a6f7a17-5a73-4468-9329-56c901f1ceba&sport_id=PADEL
   metadata_sources:
   - https://www.ltapadel.org.uk/play/padel-in-your-area/padel-in-london/
 - id: padel-brent-wembley
   name: Wembley Padel
   sport: padel
   provider: html
-  booking_url: https://socialsportssociety.com/venue/wembley-padel/
+  booking_url: https://playtomic.io/tenant/c583d30b-3381-418d-8d4d-73c2460de8c7
+  availability_urls:
+  - https://playtomic.com/api/clubs/availability?tenant_id=c583d30b-3381-418d-8d4d-73c2460de8c7&sport_id=PADEL
   metadata_sources:
   - https://socialsportssociety.com/venue/wembley-padel/
   - https://socialsportssociety.com/book/
@@ -2287,7 +2335,9 @@ venues:
   name: Racketeer Padel
   sport: padel
   provider: html
-  booking_url: https://www.racketeer.club/faq
+  booking_url: https://playtomic.io/tenant/549a1bc8-d63e-43d4-b632-5a313e299845
+  availability_urls:
+  - https://playtomic.com/api/clubs/availability?tenant_id=549a1bc8-d63e-43d4-b632-5a313e299845&sport_id=PADEL
   metadata_sources:
   - https://www.racketeer.club/faq
   - https://www.london.gov.uk/sites/default/files/23.pdf
@@ -2303,7 +2353,9 @@ venues:
   name: Padel Social Club Earl’s Court
   sport: padel
   provider: html
-  booking_url: https://padelsocial.club/pages/earls-court
+  booking_url: https://playtomic.io/tenant/1c97a3d1-ded7-4c4b-808e-8c37bb1b2a1f
+  availability_urls:
+  - https://playtomic.com/api/clubs/availability?tenant_id=1c97a3d1-ded7-4c4b-808e-8c37bb1b2a1f&sport_id=PADEL
   metadata_sources:
   - https://padelsocial.club/pages/faqs
   - https://padelsocial.club/pages/earls-court
@@ -2311,7 +2363,9 @@ venues:
   name: Central Park Leisure Centre
   sport: padel
   provider: html
-  booking_url: https://padel4everyone.co.uk/venues/central-park
+  booking_url: https://playtomic.io/tenant/48991fdc-d2d4-415a-b9ab-c3c911083d80
+  availability_urls:
+  - https://playtomic.com/api/clubs/availability?tenant_id=48991fdc-d2d4-415a-b9ab-c3c911083d80&sport_id=PADEL
   metadata_sources:
   - https://www.everyoneactive.com/centre/central-park-leisure-centre/
   - https://padel4everyone.co.uk/venues/central-park
@@ -2350,14 +2404,18 @@ venues:
   name: Padel Box Bermondsey
   sport: padel
   provider: html
-  booking_url: https://playtomic.com/clubs/padel-box-bermondsey
+  booking_url: https://playtomic.io/tenant/a95b1ddd-ea5a-4516-86a8-cf3825ebe760
+  availability_urls:
+  - https://playtomic.com/api/clubs/availability?tenant_id=a95b1ddd-ea5a-4516-86a8-cf3825ebe760&sport_id=PADEL
   metadata_sources:
   - https://playtomic.com/clubs/padel-box-bermondsey
 - id: padel-sutton-social-sports
   name: S3 Padel Sutton
   sport: padel
   provider: html
-  booking_url: https://socialsportssociety.com/venue/sutton/
+  booking_url: https://playtomic.io/tenant/82c2a7fc-e943-45ed-9752-1116d37a818b
+  availability_urls:
+  - https://playtomic.com/api/clubs/availability?tenant_id=82c2a7fc-e943-45ed-9752-1116d37a818b&sport_id=PADEL
   metadata_sources:
   - https://socialsportssociety.com/venue/sutton/
 - id: padel-tower-hamlets-padium-canary-wharf
@@ -2395,7 +2453,9 @@ venues:
   name: Padel Social Club Paddington
   sport: padel
   provider: html
-  booking_url: https://padelsocial.club/pages/paddington
+  booking_url: https://playtomic.io/tenant/0cf8af2e-6122-4c75-8195-c5ab4de58922
+  availability_urls:
+  - https://playtomic.com/api/clubs/availability?tenant_id=0cf8af2e-6122-4c75-8195-c5ab4de58922&sport_id=PADEL
   metadata_sources:
   - https://padelsocial.club/pages/paddington
   - https://padelsocial.club/pages/faqs
@@ -2530,6 +2590,8 @@ venues:
   sport: tennis
   provider: clubspark
   booking_url: https://clubspark.lta.org.uk/CarlisleParkRichmond
+  availability_urls:
+  - https://clubspark.lta.org.uk/v0/VenueBooking/CarlisleParkRichmond/GetVenueSessions
   metadata_sources:
   - https://clubspark.lta.org.uk/CarlisleParkRichmond
   - https://clubspark.lta.org.uk/playtennisrichmond/BookaCourt
