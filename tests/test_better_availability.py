@@ -130,7 +130,7 @@ class BetterAvailabilityTests(unittest.TestCase):
     def test_refresh_saves_the_official_booking_url_for_dates_without_slots(self):
         with TemporaryDirectory(dir=ROOT) as directory:
             output = Path(directory) / "availability.json"
-            with patch("scripts.refresh_availability.BetterAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.LtaAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.PlaytomicAvailabilitySource.fetch_availability", return_value=()):
+            with patch("scripts.refresh_availability.BetterAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.LtaAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.PlaytomicAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.MatchiAvailabilitySource.fetch_availability", return_value=()):
                 asyncio.run(refresh_availability(output))
             snapshot = json.loads(output.read_text())
         self.assertEqual(
@@ -143,18 +143,18 @@ class BetterAvailabilityTests(unittest.TestCase):
     def test_refresh_keeps_successful_provider_batches_when_one_provider_fails(self):
         with TemporaryDirectory(dir=ROOT) as directory:
             output = Path(directory) / "availability.json"
-            with patch("scripts.refresh_availability.BetterAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.LtaAvailabilitySource.fetch_availability", side_effect=RuntimeError("blocked")), patch("scripts.refresh_availability.PlaytomicAvailabilitySource.fetch_availability", return_value=()):
+            with patch("scripts.refresh_availability.BetterAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.LtaAvailabilitySource.fetch_availability", side_effect=RuntimeError("blocked")), patch("scripts.refresh_availability.PlaytomicAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.MatchiAvailabilitySource.fetch_availability", return_value=()):
                 asyncio.run(refresh_availability(output))
             snapshot = json.loads(output.read_text())
 
-        self.assertEqual(set(snapshot["providers"]), {"better-admin.org.uk", "playtomic.com"})
+        self.assertEqual(set(snapshot["providers"]), {"better-admin.org.uk", "playtomic.com", "api.matchi.com"})
         self.assertEqual(snapshot["failed_providers"], ["www.lta.org.uk"])
 
     def test_refresh_does_not_replace_the_snapshot_when_every_provider_fails(self):
         with TemporaryDirectory(dir=ROOT) as directory:
             output = Path(directory) / "availability.json"
             output.write_text("previous snapshot")
-            with patch("scripts.refresh_availability.BetterAvailabilitySource.fetch_availability", side_effect=RuntimeError("blocked")), patch("scripts.refresh_availability.LtaAvailabilitySource.fetch_availability", side_effect=RuntimeError("blocked")), patch("scripts.refresh_availability.PlaytomicAvailabilitySource.fetch_availability", side_effect=RuntimeError("blocked")):
+            with patch("scripts.refresh_availability.BetterAvailabilitySource.fetch_availability", side_effect=RuntimeError("blocked")), patch("scripts.refresh_availability.LtaAvailabilitySource.fetch_availability", side_effect=RuntimeError("blocked")), patch("scripts.refresh_availability.PlaytomicAvailabilitySource.fetch_availability", side_effect=RuntimeError("blocked")), patch("scripts.refresh_availability.MatchiAvailabilitySource.fetch_availability", side_effect=RuntimeError("blocked")):
                 with self.assertRaisesRegex(RuntimeError, "All availability providers failed"):
                     asyncio.run(refresh_availability(output))
             self.assertEqual(output.read_text(), "previous snapshot")
@@ -167,7 +167,7 @@ class BetterAvailabilityTests(unittest.TestCase):
 
         with TemporaryDirectory(dir=ROOT) as directory:
             output = Path(directory) / "availability.json"
-            with patch("scripts.refresh_availability.datetime", BeforeUtcMidnight), patch("scripts.refresh_availability.BetterAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.LtaAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.PlaytomicAvailabilitySource.fetch_availability", return_value=()):
+            with patch("scripts.refresh_availability.datetime", BeforeUtcMidnight), patch("scripts.refresh_availability.BetterAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.LtaAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.PlaytomicAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.MatchiAvailabilitySource.fetch_availability", return_value=()):
                 asyncio.run(refresh_availability(output))
             snapshot = json.loads(output.read_text())
         self.assertEqual((snapshot["coverage_start"], snapshot["coverage_end"]), ("2026-09-24", "2026-09-29"))
@@ -180,7 +180,7 @@ class BetterAvailabilityTests(unittest.TestCase):
 
         with TemporaryDirectory(dir=ROOT) as directory:
             output = Path(directory) / "availability.json"
-            with patch("scripts.refresh_availability.datetime", DuringLondonDay), patch("scripts.refresh_availability.BetterAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.LtaAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.PlaytomicAvailabilitySource.fetch_availability", return_value=()):
+            with patch("scripts.refresh_availability.datetime", DuringLondonDay), patch("scripts.refresh_availability.BetterAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.LtaAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.PlaytomicAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.MatchiAvailabilitySource.fetch_availability", return_value=()):
                 asyncio.run(refresh_availability(output))
             snapshot = json.loads(output.read_text())
 

@@ -2622,16 +2622,21 @@ venues:
   name: Crystal Palace National Sports Centre
   sport: padel
   provider: html
-  booking_url: https://www.game4padel.com/crystal-palace
+  booking_url: https://www.matchi.se/facilities/game4padelcrystalpalace
+  availability_urls:
+  - https://api.matchi.com/facilities/2368
   metadata_sources:
-  - https://www.game4padel.com/crystal-palace
+  - https://www.matchi.se/facilities/game4padelcrystalpalace
   - https://www.better.org.uk/leisure-centre/london/crystal-palace/crystal-palace-national-sports-centre/padel
 - id: padel-ealing-parkside-southall
   name: Parkside Padel
   sport: padel
   provider: html
-  booking_url: https://www.game4padel.com/
+  booking_url: https://www.matchi.se/facilities/game4padelparkside
+  availability_urls:
+  - https://api.matchi.com/facilities/2573
   metadata_sources:
+  - https://www.matchi.se/facilities/game4padelparkside
   - https://www.ltapadel.org.uk/play/padel-in-your-area/padel-in-london/
 - id: padel-ealing-racketeer-acton
   name: Racketeer Padel
@@ -2647,9 +2652,11 @@ venues:
   name: Coldharbour Leisure Centre
   sport: padel
   provider: html
-  booking_url: https://www.game4padel.com/gll-coldharbour
+  booking_url: https://www.matchi.se/facilities/game4padelgll
+  availability_urls:
+  - https://api.matchi.com/facilities/2636
   metadata_sources:
-  - https://www.game4padel.com/gll-coldharbour
+  - https://www.matchi.se/facilities/game4padelgll
   - https://www.better.org.uk/leisure-centre/london/greenwich/coldharbour-leisure-centre/padel
 - id: padel-hammersmith-earls-court-social
   name: Padel Social Club Earl’s Court

@@ -60,9 +60,13 @@ class RegistryTests(unittest.TestCase):
         self.assertEqual(len(playtomic), 8)
         self.assertTrue(all(venue.sport == "padel" and len(venue.availability_urls) == 1 for venue in playtomic))
 
+        matchi = [venue for venue in venues if venue.availability_urls and venue.availability_urls[0].startswith("https://api.matchi.com/")]
+        self.assertEqual(len(matchi), 3)
+        self.assertTrue(all(venue.sport == "padel" and len(venue.availability_urls) == 1 for venue in matchi))
+
         configured = [venue for venue in venues if venue.availability_urls]
-        self.assertEqual(len(configured), 235)
-        self.assertEqual(sum(len(venue.availability_urls) for venue in configured), 238)
+        self.assertEqual(len(configured), 238)
+        self.assertEqual(sum(len(venue.availability_urls) for venue in configured), 241)
 
     def test_duplicate_ids_are_rejected(self):
         document = """venues:

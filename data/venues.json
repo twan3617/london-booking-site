@@ -2300,10 +2300,10 @@
       "borough": "Bromley",
       "area": "Crystal Palace",
       "operator": "Game4Padel / Better",
-      "booking_url": "https://www.game4padel.com/crystal-palace",
+      "booking_url": "https://www.matchi.se/facilities/game4padelcrystalpalace",
       "sources": [
         {
-          "url": "https://www.game4padel.com/crystal-palace",
+          "url": "https://www.matchi.se/facilities/game4padelcrystalpalace",
           "supports": "Two public outdoor padel courts and booking route."
         },
         {
@@ -3854,7 +3854,7 @@
       "name": "Parkside Padel",
       "borough": "Ealing",
       "area": "Southall",
-      "booking_url": "https://www.game4padel.com/",
+      "booking_url": "https://www.matchi.se/facilities/game4padelparkside",
       "sources": [
         {
           "url": "https://www.ltapadel.org.uk/play/padel-in-your-area/padel-in-london/",
@@ -4941,10 +4941,10 @@
       "borough": "Greenwich",
       "area": "Eltham",
       "operator": "Game4Padel / Better",
-      "booking_url": "https://www.game4padel.com/gll-coldharbour",
+      "booking_url": "https://www.matchi.se/facilities/game4padelgll",
       "sources": [
         {
-          "url": "https://www.game4padel.com/gll-coldharbour",
+          "url": "https://www.matchi.se/facilities/game4padelgll",
           "supports": "Two outdoor courts and no floodlights."
         },
         {
