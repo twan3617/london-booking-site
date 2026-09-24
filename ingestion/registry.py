@@ -41,6 +41,9 @@ def load_registry(path: Path) -> tuple[Venue, ...]:
         sources = row.get("metadata_sources")
         if not isinstance(sources, list) or not sources:
             raise ValueError(f"Missing metadata sources: {venue_id}")
+        availability_urls = row.get("availability_urls", [])
+        if not isinstance(availability_urls, list):
+            raise ValueError(f"Invalid availability URLs: {venue_id}")
         venues.append(Venue(
             id=venue_id,
             name=name,
@@ -48,6 +51,6 @@ def load_registry(path: Path) -> tuple[Venue, ...]:
             provider=row["provider"],
             booking_url=_web_url(row.get("booking_url"), "booking URL"),
             metadata_sources=tuple(_web_url(source, "metadata URL") for source in sources),
-            availability_url=_web_url(row["availability_url"], "availability URL") if row.get("availability_url") is not None else None,
+            availability_urls=tuple(_web_url(url, "availability URL") for url in availability_urls),
         ))
     return tuple(venues)

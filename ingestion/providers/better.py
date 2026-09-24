@@ -4,25 +4,29 @@ import asyncio
 import json
 import re
 from datetime import date, datetime, time, timedelta, timezone
-from urllib.parse import urlencode
+from urllib.parse import urlencode, urlparse
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
 
 from ingestion.models import AvailabilitySlot, Venue
 
 LONDON = ZoneInfo("Europe/London")
-SOURCE_PATTERN = re.compile(r"/venue/([^/]+)/activity/([^/]+)/v2/slots$")
+SOURCE_PATTERN = re.compile(r"/api/activities/venue/([^/]+)/activity/([^/]+)/v2/slots$")
+BOOKING_PATTERN = re.compile(r"/location/([^/]+)/[^/]+$")
 
 
-def _source_parts(venue: Venue) -> tuple[str, str]:
-    match = SOURCE_PATTERN.search(venue.availability_url or "")
-    if venue.provider != "better" or match is None:
+def _source_parts(venue: Venue, availability_url: str | None = None) -> tuple[str, str]:
+    source = availability_url or (venue.availability_urls[0] if len(venue.availability_urls) == 1 else "")
+    source_url = urlparse(source)
+    booking_url = urlparse(venue.booking_url)
+    match = SOURCE_PATTERN.fullmatch(source_url.path)
+    booking_match = BOOKING_PATTERN.fullmatch(booking_url.path)
+    if (venue.provider != "better" or source_url.scheme != "https" or source_url.netloc != "better-admin.org.uk"
+            or source_url.query or source_url.fragment or match is None
+            or booking_url.scheme != "https" or booking_url.netloc != "bookings.better.org.uk"
+            or booking_match is None or match.group(1) != booking_match.group(1)):
         raise ValueError(f"No Better availability source: {venue.id}")
-    venue_slug, activity_slug = match.groups()
-    expected_booking = f"https://bookings.better.org.uk/location/{venue_slug}/{activity_slug}"
-    if venue.booking_url != expected_booking:
-        raise ValueError(f"Better booking URL does not match availability source: {venue.id}")
-    return venue_slug, activity_slug
+    return match.groups()
 
 
 def _clock(value: object, label: str) -> time:
@@ -35,12 +39,12 @@ def _clock(value: object, label: str) -> time:
     return parsed
 
 
-def parse_slots(venue: Venue, payload: dict, play_date: date, detected_at: datetime) -> tuple[AvailabilitySlot, ...]:
-    venue_slug, activity_slug = _source_parts(venue)
+def parse_slots(venue: Venue, payload: dict, play_date: date, detected_at: datetime, availability_url: str | None = None) -> tuple[AvailabilitySlot, ...]:
+    venue_slug, activity_slug = _source_parts(venue, availability_url)
     rows = payload.get("data") if isinstance(payload, dict) else None
     if not isinstance(rows, list):
         raise ValueError("Better slots response must contain a data list")
-    booking_url = f"{venue.booking_url}/{play_date.isoformat()}/by-time"
+    booking_url = f"https://bookings.better.org.uk/location/{venue_slug}/{activity_slug}/{play_date.isoformat()}/by-time"
     slots = []
     seen = set()
     for row in rows:
@@ -101,15 +105,24 @@ class BetterAvailabilitySource:
         self.fetch_json = fetch_json or _fetch_json
 
     async def fetch_availability(self, venue: Venue, start_date: date, end_date: date) -> tuple[AvailabilitySlot, ...]:
-        _source_parts(venue)
+        for availability_url in venue.availability_urls:
+            _source_parts(venue, availability_url)
+        if not venue.availability_urls:
+            raise ValueError(f"No Better availability source: {venue.id}")
         if end_date < start_date:
             raise ValueError("Availability end date precedes start date")
         detected_at = datetime.now(timezone.utc)
         slots = []
+        seen = set()
         play_date = start_date
         while play_date <= end_date:
-            url = f"{venue.availability_url}?{urlencode({'date': play_date.isoformat()})}"
-            payload = await asyncio.to_thread(self.fetch_json, url)
-            slots.extend(parse_slots(venue, payload, play_date, detected_at))
+            for availability_url in venue.availability_urls:
+                url = f"{availability_url}?{urlencode({'date': play_date.isoformat()})}"
+                payload = await asyncio.to_thread(self.fetch_json, url)
+                for slot in parse_slots(venue, payload, play_date, detected_at, availability_url):
+                    key = (slot.court_id, slot.start_time, slot.end_time)
+                    if key not in seen:
+                        seen.add(key)
+                        slots.append(slot)
             play_date += timedelta(days=1)
         return tuple(slots)

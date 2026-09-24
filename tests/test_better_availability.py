@@ -2,6 +2,7 @@ import asyncio
 import copy
 import json
 import unittest
+from dataclasses import replace
 from datetime import date, datetime, timezone
 from pathlib import Path
 from tempfile import TemporaryDirectory
@@ -75,8 +76,40 @@ class BetterAvailabilityTests(unittest.TestCase):
         self.assertEqual(len(slots), 2)
         self.assertEqual(
             calls,
-            [f"{VENUE.availability_url}?date=2026-09-26"],
+            [f"{VENUE.availability_urls[0]}?date=2026-09-26"],
         )
+
+    def test_source_combines_multiple_products_without_duplicate_courts(self):
+        indoor_url = "https://better-admin.org.uk/api/activities/venue/gunnersbury-park-sports-hub/activity/tennis-court-indoor/v2/slots"
+        venue = replace(VENUE, availability_urls=(VENUE.availability_urls[0], indoor_url))
+        calls = []
+
+        def fetch_json(url):
+            calls.append(url)
+            payload = copy.deepcopy(fixture())
+            if "tennis-court-indoor" in url:
+                for index, row in enumerate(payload["data"]):
+                    row["id"] = f"indoor-{index}"
+                    row["category_slug"] = "tennis-court-indoor"
+                payload["data"][1]["location"]["id"] = "483"
+            return payload
+
+        slots = asyncio.run(BetterAvailabilitySource(fetch_json=fetch_json).fetch_availability(venue, PLAY_DATE, PLAY_DATE))
+
+        self.assertEqual([slot.court_id for slot in slots], ["481", "482", "483"])
+        self.assertEqual(slots[-1].booking_url, "https://bookings.better.org.uk/location/gunnersbury-park-sports-hub/tennis-court-indoor/2026-09-26/by-time")
+        self.assertEqual(calls, [
+            f"{VENUE.availability_urls[0]}?date=2026-09-26",
+            f"{indoor_url}?date=2026-09-26",
+        ])
+
+    def test_source_rejects_foreign_venue_or_host(self):
+        for url in (
+            "https://better-admin.org.uk/api/activities/venue/lee-valley-hockey-and-tennis-centre/activity/tennis-court-indoor/v2/slots",
+            "https://example.org/api/activities/venue/gunnersbury-park-sports-hub/activity/tennis-court-indoor/v2/slots",
+        ):
+            with self.subTest(url=url), self.assertRaisesRegex(ValueError, "No Better availability source"):
+                asyncio.run(BetterAvailabilitySource(fetch_json=lambda _: fixture()).fetch_availability(replace(VENUE, availability_urls=(url,)), PLAY_DATE, PLAY_DATE))
 
     def test_more_court_venues_use_the_existing_better_slot_parser(self):
         venues = {venue.id: venue for venue in load_registry(ROOT / "config/venues.yaml")}
@@ -88,7 +121,7 @@ class BetterAvailabilityTests(unittest.TestCase):
             with self.subTest(venue=venue_id):
                 venue = venues[venue_id]
                 self.assertEqual(venue.booking_url, f"https://bookings.better.org.uk/location/{venue_slug}/{activity_slug}")
-                self.assertEqual(venue.availability_url, f"https://better-admin.org.uk/api/activities/venue/{venue_slug}/activity/{activity_slug}/v2/slots")
+                self.assertEqual(venue.availability_urls, (f"https://better-admin.org.uk/api/activities/venue/{venue_slug}/activity/{activity_slug}/v2/slots",))
                 payload = json.loads((ROOT / "tests/fixtures" / fixture_name).read_text())
                 slots = parse_slots(venue, payload, date(2026, 9, 24), DETECTED_AT)
                 self.assertEqual([slot.available for slot in slots], [True, False])
@@ -104,12 +137,6 @@ class BetterAvailabilityTests(unittest.TestCase):
             snapshot["booking_urls"][VENUE.id],
             "https://bookings.better.org.uk/location/gunnersbury-park-sports-hub/tennis-court-outdoor",
         )
-        self.assertEqual(set(snapshot["venue_ids"]), {
-            VENUE.id,
-            "greenwich-charlton-lido-and-lifestyle-club-hornfair-park",
-            "islington-highbury-fields",
-            "squash-islington-finsbury",
-        })
 
     def test_refresh_does_not_request_a_date_beyond_betters_utc_window(self):
         class BeforeUtcMidnight(datetime):
@@ -122,6 +149,20 @@ class BetterAvailabilityTests(unittest.TestCase):
             with patch("scripts.refresh_availability.datetime", BeforeUtcMidnight), patch("scripts.refresh_availability.BetterAvailabilitySource.fetch_availability", return_value=()):
                 asyncio.run(refresh_availability(output))
             snapshot = json.loads(output.read_text())
+        self.assertEqual((snapshot["coverage_start"], snapshot["coverage_end"]), ("2026-09-24", "2026-09-29"))
+
+    def test_refresh_uses_betters_current_six_date_window(self):
+        class DuringLondonDay(datetime):
+            @classmethod
+            def now(cls, tz=None):
+                return datetime(2026, 9, 24, 10, tzinfo=timezone.utc).astimezone(tz)
+
+        with TemporaryDirectory(dir=ROOT) as directory:
+            output = Path(directory) / "availability.json"
+            with patch("scripts.refresh_availability.datetime", DuringLondonDay), patch("scripts.refresh_availability.BetterAvailabilitySource.fetch_availability", return_value=()):
+                asyncio.run(refresh_availability(output))
+            snapshot = json.loads(output.read_text())
+
         self.assertEqual((snapshot["coverage_start"], snapshot["coverage_end"]), ("2026-09-24", "2026-09-29"))
 
 

@@ -25,7 +25,7 @@
 .time-selection-head h3{margin:0;font-family:Georgia,serif;font-size:28px;font-weight:normal}.time-selection-head p:last-child{margin:0;color:var(--muted);font-size:13px}
 .time-location-list{display:grid;gap:9px}.time-location{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:15px 18px;border:1px solid var(--line);border-radius:10px;background:white}
 .time-location h4{margin:0 0 5px;font-size:17px}.time-location p{margin:0;color:var(--muted);font-size:13px}.time-location small{display:block;margin-top:5px;color:var(--muted);font-size:12px}
-.time-location-actions{display:flex;align-items:center;gap:10px}
+.time-location-actions{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:10px}
 .time-location a{flex:none;border-radius:8px;padding:10px 12px;color:white;background:var(--ink);font-size:12px;font-weight:700;text-decoration:none}
 .no-time-locations{padding:22px;border:1px dashed var(--line);border-radius:10px;color:var(--muted);font-size:14px;text-align:center}
 @media(max-width:620px){.filter-grid.time-filters{grid-template-columns:repeat(2,minmax(0,1fr))}.time-selection-head{align-items:flex-start;flex-direction:column}.time-location{align-items:flex-start;flex-direction:column}.time-location-actions{align-self:stretch;justify-content:space-between}}

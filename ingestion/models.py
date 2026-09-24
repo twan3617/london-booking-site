@@ -20,7 +20,7 @@ class Venue:
     provider: Provider
     booking_url: str
     metadata_sources: tuple[str, ...]
-    availability_url: str | None = None
+    availability_urls: tuple[str, ...] = ()
 
 
 @dataclass(frozen=True)

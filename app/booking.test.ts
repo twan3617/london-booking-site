@@ -9,6 +9,7 @@ import {
   availabilityForVenue,
   availabilityGrid,
   availabilityBookingUrl,
+  bookingUrlsForSlots,
   bookingAccountRequired,
   osmEmbedUrl,
   matchesVenue,
@@ -84,6 +85,15 @@ test('time-first search returns only bookable slots at the exact start and durat
   });
   assert.deepEqual(availabilityForVenue(availability, 'hyde-park', '2026-09-26', '18:00', 60), { status: 'none', slots: [] });
   assert.deepEqual(availabilityForVenue(availability, 'hyde-park', '2026-09-26', '19:00', 90), { status: 'none', slots: [] });
+});
+
+test('time-first results keep each distinct product booking link', () => {
+  const slot = availability.slots[0];
+  assert.deepEqual(bookingUrlsForSlots([
+    slot,
+    { ...slot, court_id: '2' },
+    { ...slot, court_id: '3', booking_url: 'https://example.com/indoor/26' },
+  ]), ['https://example.com/26', 'https://example.com/indoor/26']);
 });
 
 test('time grid groups free courts by day and start time within filtered venues', () => {

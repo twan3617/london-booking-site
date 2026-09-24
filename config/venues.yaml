@@ -71,7 +71,9 @@ venues:
   name: Burnt Oak Leisure Centre
   sport: tennis
   provider: better
-  booking_url: https://www.better.org.uk/leisure-centre/london/barnet/barnet-burnt-oak-leisure-centre/tennis
+  booking_url: https://bookings.better.org.uk/location/barnet-burnt-oak-leisure-centre/tennis-court-outdoor
+  availability_urls:
+  - https://better-admin.org.uk/api/activities/venue/barnet-burnt-oak-leisure-centre/activity/tennis-court-outdoor/v2/slots
   metadata_sources:
   - https://www.better.org.uk/leisure-centre/london/barnet/barnet-burnt-oak-leisure-centre
   - https://www.better.org.uk/leisure-centre/london/barnet/barnet-burnt-oak-leisure-centre/tennis
@@ -480,7 +482,9 @@ venues:
   name: Crystal Palace National Sports Centre
   sport: tennis
   provider: better
-  booking_url: https://www.better.org.uk/leisure-centre/london/crystal-palace/crystal-palace-national-sports-centre
+  booking_url: https://bookings.better.org.uk/location/crystal-palace-leisure-centre/tennis-court-outdoor
+  availability_urls:
+  - https://better-admin.org.uk/api/activities/venue/crystal-palace-leisure-centre/activity/tennis-court-outdoor/v2/slots
   metadata_sources:
   - https://www.better.org.uk/leisure-centre/london/crystal-palace/crystal-palace-national-sports-centre/facilities
   - https://www.better.org.uk/leisure-centre/london/crystal-palace/crystal-palace-national-sports-centre/prices
@@ -983,7 +987,8 @@ venues:
   sport: tennis
   provider: better
   booking_url: https://bookings.better.org.uk/location/charlton-lido/tennis-court-outdoor
-  availability_url: https://better-admin.org.uk/api/activities/venue/charlton-lido/activity/tennis-court-outdoor/v2/slots
+  availability_urls:
+  - https://better-admin.org.uk/api/activities/venue/charlton-lido/activity/tennis-court-outdoor/v2/slots
   metadata_sources:
   - https://www.better.org.uk/leisure-centre/london/greenwich/charlton-lido
   - https://www.better.org.uk/leisure-centre/london/greenwich/charlton-lido/facilities
@@ -1047,7 +1052,9 @@ venues:
   name: Britannia Leisure Centre rooftop courts
   sport: tennis
   provider: better
-  booking_url: https://www.better.org.uk/leisure-centre/london/hackney/britannia-leisure-centre/kids-activities
+  booking_url: https://bookings.better.org.uk/location/britannia-leisure-centre/tennis-court-outdoor
+  availability_urls:
+  - https://better-admin.org.uk/api/activities/venue/britannia-leisure-centre/activity/tennis-court-outdoor/v2/slots
   metadata_sources:
   - https://www.better.org.uk/leisure-centre/london/hackney/britannia-leisure-centre/facilities
   - https://www.better.org.uk/leisure-centre/london/hackney/britannia-leisure-centre/kids-activities
@@ -1071,7 +1078,9 @@ venues:
   name: Haggerston Park
   sport: tennis
   provider: better
-  booking_url: https://www.better.org.uk/leisure-centre/london/hackney/hackney-parks/facilities
+  booking_url: https://bookings.better.org.uk/location/hackney-parks/tennis-court-outdoor
+  availability_urls:
+  - https://better-admin.org.uk/api/activities/venue/hackney-parks/activity/tennis-court-outdoor/v2/slots
   metadata_sources:
   - https://www.better.org.uk/leisure-centre/london/hackney/hackney-parks/facilities
 - id: hackney-joe-white-gardens-aske-gardens
@@ -1592,7 +1601,8 @@ venues:
   sport: tennis
   provider: better
   booking_url: https://bookings.better.org.uk/location/gunnersbury-park-sports-hub/tennis-court-outdoor
-  availability_url: https://better-admin.org.uk/api/activities/venue/gunnersbury-park-sports-hub/activity/tennis-court-outdoor/v2/slots
+  availability_urls:
+  - https://better-admin.org.uk/api/activities/venue/gunnersbury-park-sports-hub/activity/tennis-court-outdoor/v2/slots
   metadata_sources:
   - https://better-admin.org.uk/api/openactive/better/facility-uses/activity_recurrence_group:11612
   - https://www.better.org.uk/leisure-centre/london/gunnersbury-park/gunnersbury-park-sports/2806-gunnersbury-park-sports
@@ -1647,7 +1657,8 @@ venues:
   sport: tennis
   provider: better
   booking_url: https://bookings.better.org.uk/location/islington-tennis-centre/highbury-tennis
-  availability_url: https://better-admin.org.uk/api/activities/venue/islington-tennis-centre/activity/highbury-tennis/v2/slots
+  availability_urls:
+  - https://better-admin.org.uk/api/activities/venue/islington-tennis-centre/activity/highbury-tennis/v2/slots
   metadata_sources:
   - https://www.better.org.uk/leisure-centre/london/islington/islington-parks/3046-islington-parks
   - https://www.better.org.uk/legal-policies/terms
@@ -1655,7 +1666,9 @@ venues:
   name: Islington Tennis Centre
   sport: tennis
   provider: better
-  booking_url: https://www.better.org.uk/leisure-centre/london/islington/islingtontc
+  booking_url: https://bookings.better.org.uk/location/islington-tennis-centre/tennis-court-indoor
+  availability_urls:
+  - https://better-admin.org.uk/api/activities/venue/islington-tennis-centre/activity/tennis-court-indoor/v2/slots
   metadata_sources:
   - https://www.better.org.uk/leisure-centre/london/islington/islingtontc
   - https://www.better.org.uk/legal-policies/terms
@@ -2695,7 +2708,9 @@ venues:
   name: Crystal Palace National Sports Centre
   sport: squash
   provider: better
-  booking_url: https://www.better.org.uk/leisure-centre/london/crystal-palace/crystal-palace-national-sports-centre/facilities
+  booking_url: https://bookings.better.org.uk/location/crystal-palace-leisure-centre/squash-40min
+  availability_urls:
+  - https://better-admin.org.uk/api/activities/venue/crystal-palace-leisure-centre/activity/squash-40min/v2/slots
   metadata_sources:
   - https://www.better.org.uk/leisure-centre/london/crystal-palace/crystal-palace-national-sports-centre/facilities
   - https://www.better.org.uk/leisure-centre/london/crystal-palace/crystal-palace-national-sports-centre/prices
@@ -2712,7 +2727,9 @@ venues:
   name: Oasis Sports Centre
   sport: squash
   provider: better
-  booking_url: https://www.better.org.uk/leisure-centre/london/camden/oasis-sports-centre/squash
+  booking_url: https://bookings.better.org.uk/location/oasis-sports-centre/squash-40min
+  availability_urls:
+  - https://better-admin.org.uk/api/activities/venue/oasis-sports-centre/activity/squash-40min/v2/slots
   metadata_sources:
   - https://www.better.org.uk/leisure-centre/london/camden/oasis-sports-centre/squash
   - https://www.better.org.uk/leisure-centre/london/camden/oasis-sports-centre
@@ -2721,7 +2738,9 @@ venues:
   name: Swiss Cottage Leisure Centre
   sport: squash
   provider: better
-  booking_url: https://www.better.org.uk/leisure-centre/london/camden/swiss-cottage-leisure-centre/6985b6f8-b1c7-4cc7-adad-15c719a5ef88
+  booking_url: https://bookings.better.org.uk/location/swiss-cottage-leisure-centre/squash-40min
+  availability_urls:
+  - https://better-admin.org.uk/api/activities/venue/swiss-cottage-leisure-centre/activity/squash-40min/v2/slots
   metadata_sources:
   - https://www.better.org.uk/leisure-centre/london/camden/swiss-cottage-leisure-centre/6985b6f8-b1c7-4cc7-adad-15c719a5ef88
   - https://www.better.org.uk/leisure-centre/london/camden/swiss-cottage-leisure-centre/prices
@@ -2739,7 +2758,9 @@ venues:
   name: Britannia Leisure Centre
   sport: squash
   provider: better
-  booking_url: https://www.better.org.uk/leisure-centre/london/hackney/britannia-leisure-centre/squash
+  booking_url: https://bookings.better.org.uk/location/britannia-leisure-centre/squash-40min
+  availability_urls:
+  - https://better-admin.org.uk/api/activities/venue/britannia-leisure-centre/activity/squash-40min/v2/slots
   metadata_sources:
   - https://www.better.org.uk/leisure-centre/london/hackney/britannia-leisure-centre/squash
   - https://www.better.org.uk/leisure-centre/london/hackney/britannia-leisure-centre
@@ -2747,7 +2768,9 @@ venues:
   name: Clissold Leisure Centre
   sport: squash
   provider: better
-  booking_url: https://www.better.org.uk/leisure-centre/london/hackney/clissold-leisure-centre/facilities
+  booking_url: https://bookings.better.org.uk/location/clissold-leisure-centre/squash-40min
+  availability_urls:
+  - https://better-admin.org.uk/api/activities/venue/clissold-leisure-centre/activity/squash-40min/v2/slots
   metadata_sources:
   - https://www.better.org.uk/leisure-centre/london/hackney/clissold-leisure-centre/facilities
   - https://www.better.org.uk/leisure-centre/london/hackney/clissold-leisure-centre
@@ -2756,7 +2779,9 @@ venues:
   name: Hammersmith Fitness and Squash Centre
   sport: squash
   provider: better
-  booking_url: https://www.better.org.uk/leisure-centre/london/hammersmith-and-fulham/hammersmith-fitness-and-squash-centre/squash
+  booking_url: https://bookings.better.org.uk/location/hammersmith-fitness-squash-centre/squash-40min
+  availability_urls:
+  - https://better-admin.org.uk/api/activities/venue/hammersmith-fitness-squash-centre/activity/squash-40min/v2/slots
   metadata_sources:
   - https://www.better.org.uk/leisure-centre/london/hammersmith-and-fulham/hammersmith-fitness-and-squash-centre/squash
   - https://www.better.org.uk/leisure-centre/london/hammersmith-and-fulham/hammersmith-fitness-and-squash-centre
@@ -2774,7 +2799,8 @@ venues:
   sport: squash
   provider: better
   booking_url: https://bookings.better.org.uk/location/finsbury-leisure-centre/squash-40min
-  availability_url: https://better-admin.org.uk/api/activities/venue/finsbury-leisure-centre/activity/squash-40min/v2/slots
+  availability_urls:
+  - https://better-admin.org.uk/api/activities/venue/finsbury-leisure-centre/activity/squash-40min/v2/slots
   metadata_sources:
   - https://better-admin.org.uk/api/openactive/better/facility-uses/activity_recurrence_group:2914
   - https://www.better.org.uk/leisure-centre/london/islington/finsbury/squash
@@ -2783,7 +2809,9 @@ venues:
   name: Ironmonger Row Baths
   sport: squash
   provider: better
-  booking_url: https://www.better.org.uk/leisure-centre/london/islington/ironmonger-row-baths/squash
+  booking_url: https://bookings.better.org.uk/location/ironmonger-row-baths/squash-40min
+  availability_urls:
+  - https://better-admin.org.uk/api/activities/venue/ironmonger-row-baths/activity/squash-40min/v2/slots
   metadata_sources:
   - https://www.better.org.uk/leisure-centre/london/islington/ironmonger-row-baths/squash
   - https://www.better.org.uk/leisure-centre/london/islington/ironmonger-row-baths/prices
@@ -2791,7 +2819,9 @@ venues:
   name: Sobell Leisure Centre
   sport: squash
   provider: better
-  booking_url: https://www.better.org.uk/leisure-centre/london/islington/sobell/squash
+  booking_url: https://bookings.better.org.uk/location/sobell-leisure-centre/squash-40min
+  availability_urls:
+  - https://better-admin.org.uk/api/activities/venue/sobell-leisure-centre/activity/squash-40min/v2/slots
   metadata_sources:
   - https://www.better.org.uk/leisure-centre/london/islington/sobell/squash
   - https://www.better.org.uk/leisure-centre/london/islington/sobell/prices
@@ -2838,7 +2868,9 @@ venues:
   name: Canons Leisure Centre
   sport: squash
   provider: better
-  booking_url: https://www.better.org.uk/leisure-centre/london/merton/canons-leisure-centre/squash-courts
+  booking_url: https://bookings.better.org.uk/location/canons-leisure-centre/squash-40min
+  availability_urls:
+  - https://better-admin.org.uk/api/activities/venue/canons-leisure-centre/activity/squash-40min/v2/slots
   metadata_sources:
   - https://www.better.org.uk/leisure-centre/london/merton/canons-leisure-centre/squash-courts
   - https://www.better.org.uk/leisure-centre/london/merton/canons-leisure-centre/prices
@@ -2869,7 +2901,9 @@ venues:
   name: Walthamstow Leisure Centre
   sport: squash
   provider: better
-  booking_url: https://www.better.org.uk/leisure-centre/london/waltham-forest/walthamstow-leisure-centre/squash
+  booking_url: https://bookings.better.org.uk/location/walthamstow-leisure-centre/squash-40min
+  availability_urls:
+  - https://better-admin.org.uk/api/activities/venue/walthamstow-leisure-centre/activity/squash-40min/v2/slots
   metadata_sources:
   - https://www.better.org.uk/leisure-centre/london/waltham-forest/walthamstow-leisure-centre/squash
   - https://www.better.org.uk/leisure-centre/london/waltham-forest/walthamstow-leisure-centre
@@ -2997,7 +3031,11 @@ venues:
   name: Sutton Sports Village
   sport: tennis
   provider: better
-  booking_url: https://www.better.org.uk/leisure-centre/london/sutton/sutton-sports-village
+  booking_url: https://bookings.better.org.uk/location/sutton-sports-village/tennis-court-indoor
+  availability_urls:
+  - https://better-admin.org.uk/api/activities/venue/sutton-sports-village/activity/tennis-court-clay/v2/slots
+  - https://better-admin.org.uk/api/activities/venue/sutton-sports-village/activity/tennis-court-indoor/v2/slots
+  - https://better-admin.org.uk/api/activities/venue/sutton-sports-village/activity/tennis-court-dome/v2/slots
   metadata_sources:
   - https://www.better.org.uk/leisure-centre/london/sutton/sutton-sports-village
   - https://www.better.org.uk/leisure-centre/london/sutton/sutton-sports-village/prices
@@ -3118,7 +3156,10 @@ venues:
   name: Lee Valley Hockey and Tennis Centre
   sport: tennis
   provider: better
-  booking_url: https://www.better.org.uk/leisure-centre/lee-valley/hockey-and-tennis-centre
+  booking_url: https://bookings.better.org.uk/location/lee-valley-hockey-and-tennis-centre/tennis-court-outdoor
+  availability_urls:
+  - https://better-admin.org.uk/api/activities/venue/lee-valley-hockey-and-tennis-centre/activity/tennis-court-indoor/v2/slots
+  - https://better-admin.org.uk/api/activities/venue/lee-valley-hockey-and-tennis-centre/activity/tennis-court-outdoor/v2/slots
   metadata_sources:
   - https://www.better.org.uk/leisure-centre/lee-valley/hockey-and-tennis-centre
   - https://www.better.org.uk/leisure-centre/lee-valley/hockey-and-tennis-centre/tennis/pay-and-play

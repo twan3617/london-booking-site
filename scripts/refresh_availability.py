@@ -16,7 +16,7 @@ from ingestion.registry import load_registry
 
 OUTPUT = ROOT / "data/availability.json"
 LONDON = ZoneInfo("Europe/London")
-DAYS_AHEAD = 6
+DAYS_AHEAD = 5
 
 
 def _slot_json(slot):
@@ -43,9 +43,9 @@ def _save(output: Path, payload: dict):
 async def refresh_availability(output: Path = OUTPUT):
     now = datetime.now(timezone.utc)
     start_date = now.astimezone(LONDON).date()
-    # Better's seven-day booking sheet advances at UTC midnight.
-    end_date = min(start_date + timedelta(days=DAYS_AHEAD), now.date() + timedelta(days=DAYS_AHEAD))
-    venues = [venue for venue in load_registry(ROOT / "config/venues.yaml") if venue.availability_url]
+    # Better currently exposes today plus five further dates.
+    end_date = start_date + timedelta(days=DAYS_AHEAD)
+    venues = [venue for venue in load_registry(ROOT / "config/venues.yaml") if venue.availability_urls]
     sources = {"better": BetterAvailabilitySource()}
     slots = []
     for venue in venues:

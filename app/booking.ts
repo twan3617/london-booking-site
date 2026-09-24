@@ -74,6 +74,10 @@ export function bookingAccountRequired(snapshot: AvailabilitySnapshot, venueId: 
   return !!base && new URL(base).hostname === 'clubspark.lta.org.uk';
 }
 
+export function bookingUrlsForSlots(slots: AvailabilitySlot[]): string[] {
+  return [...new Set(slots.map((slot) => slot.booking_url))];
+}
+
 export function availabilityForVenue(snapshot: AvailabilitySnapshot, venueId: string, date: string, start: string, durationMinutes: number): { status: 'available' | 'unreleased' | 'none' | 'unsupported' | 'outside'; slots: AvailabilitySlot[] } {
   if (!snapshot.venue_ids.includes(venueId)) return { status: 'unsupported', slots: [] };
   if (date < snapshot.coverage_start || date > snapshot.coverage_end) return { status: 'outside', slots: [] };

@@ -80,13 +80,13 @@ The script fetches the three tested ClubSpark venues and two mapped Better OpenA
 
 ## Availability pilot
 
-Refresh the next seven days of configured Better availability locally with:
+Refresh the six dates currently exposed by Better locally with:
 
 ```bash
 .venv/bin/python scripts/refresh_availability.py
 ```
 
-The Better pilot reads public date-scoped booking JSON for Charlton Lido, Gunnersbury Park, Highbury Fields and Finsbury Leisure Centre, then atomically writes provider-independent slots to the ignored local file `data/availability.json`. The site's **Find a time** view fetches the latest published snapshot from `/.netlify/functions/availability` when opened, every five minutes while visible, and when the tab becomes visible again. It shows checked days as columns and start times as rows; selecting a cell lists locations with free courts at that exact start time and duration, along with booking links. Tennis uses 60-minute slots and Finsbury squash uses 40-minute slots. The view shows the snapshot's check time and coverage; after two hours it hides stale slot counts. Other venues remain visibly unverified.
+The Better integration reads public date-scoped booking JSON for 21 verified venues across 24 booking products, then atomically writes provider-independent slots to the ignored local file `data/availability.json`. Multiple products at Sutton and Lee Valley are combined and duplicate court-times are removed. Nine catalogue entries currently have no matching public Better tennis or squash product and remain unverified. The site's **Find a time** view fetches the latest published snapshot from `/.netlify/functions/availability` when opened, every five minutes while visible, and when the tab becomes visible again. It shows checked days as columns and start times as rows; selecting a cell lists locations with free courts at that exact start time and duration, along with booking links. The view shows the snapshot's check time and coverage; after two hours it hides stale slot counts.
 
 On the deployed Netlify site, the read-only function serves the `latest` key in the site-wide `court-availability` Blob store. The hourly GitHub Actions workflow runs the existing Python scraper and `scripts/publish_availability.mjs`; a failed or empty refresh does not replace the previous snapshot. Set GitHub Actions repository secrets `NETLIFY_SITE_ID` (Netlify project ID) and `NETLIFY_AUTH_TOKEN` (a Netlify personal access token with access to that project), then run **Refresh court availability** once with **Run workflow** to publish the first snapshot. The workflow must be on the repository's default branch to run on schedule. New snapshots do not commit data or rebuild the site; only changes to the site code or function require a Netlify deploy.
 
