@@ -69,8 +69,8 @@ class RegistryTests(unittest.TestCase):
         self.assertTrue(all(venue.sport == "padel" and len(venue.availability_urls) == 1 for venue in padelmates))
 
         configured = [venue for venue in venues if venue.availability_urls]
-        self.assertEqual(len(configured), 241)
-        self.assertEqual(sum(len(venue.availability_urls) for venue in configured), 244)
+        self.assertEqual(len(configured), 243)
+        self.assertEqual(sum(len(venue.availability_urls) for venue in configured), 246)
 
     def test_duplicate_ids_are_rejected(self):
         document = """venues:

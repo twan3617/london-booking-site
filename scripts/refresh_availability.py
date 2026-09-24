@@ -71,6 +71,7 @@ async def refresh_availability(output: Path = OUTPUT):
     venues = [venue for venue in load_registry(ROOT / "config/venues.yaml") if venue.availability_urls]
     sources = {
         "better-admin.org.uk": BetterAvailabilitySource(),
+        "flow.onl": BetterAvailabilitySource(),
         "www.lta.org.uk": LtaAvailabilitySource(),
         "api.matchi.com": MatchiAvailabilitySource(),
         "fastapi-production-fargate.padelmates.io": PadelMatesAvailabilitySource(),
@@ -92,7 +93,7 @@ async def refresh_availability(output: Path = OUTPUT):
             for venue in provider_venues:
                 venue_slots = await sources[source_host].fetch_availability(venue, start_date, end_date)
                 slots.extend(venue_slots)
-                if source_host == "better-admin.org.uk":
+                if source_host in {"better-admin.org.uk", "flow.onl"}:
                     patch = metadata_patch_from_slots(venue, venue_slots)
                     if patch and patch.values:
                         metadata[venue.id] = _metadata_json(patch)

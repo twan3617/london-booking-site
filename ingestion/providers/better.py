@@ -1,4 +1,4 @@
-"""Read date-scoped availability from Better's public booking frontend."""
+"""Read date-scoped availability from Flow booking frontends."""
 
 import json
 import re
@@ -13,21 +13,26 @@ from ingestion.sources import RequestPacer
 
 LONDON = ZoneInfo("Europe/London")
 SOURCE_PATTERN = re.compile(r"/api/activities/venue/([^/]+)/activity/([^/]+)/v2/slots$")
-BOOKING_PATTERN = re.compile(r"/location/([^/]+)/[^/]+$")
+BOOKING_PATTERN = re.compile(r"/location/([^/]+)/[^/]+(?:/\d{4}-\d{2}-\d{2}/by-time)?$")
+BOOKING_HOSTS = {
+    "better-admin.org.uk": "bookings.better.org.uk",
+    "flow.onl": "sportsandleisureroyalparks.bookings.flow.onl",
+}
 
 
-def _source_parts(venue: Venue, availability_url: str | None = None) -> tuple[str, str]:
+def _source_parts(venue: Venue, availability_url: str | None = None) -> tuple[str, str, str]:
     source = availability_url or (venue.availability_urls[0] if len(venue.availability_urls) == 1 else "")
     source_url = urlparse(source)
     booking_url = urlparse(venue.booking_url)
     match = SOURCE_PATTERN.fullmatch(source_url.path)
     booking_match = BOOKING_PATTERN.fullmatch(booking_url.path)
-    if (venue.provider != "better" or source_url.scheme != "https" or source_url.netloc != "better-admin.org.uk"
+    booking_host = BOOKING_HOSTS.get(source_url.hostname)
+    if (source_url.scheme != "https" or booking_host is None
             or source_url.query or source_url.fragment or match is None
-            or booking_url.scheme != "https" or booking_url.netloc != "bookings.better.org.uk"
+            or booking_url.scheme != "https" or booking_url.netloc != booking_host
             or booking_match is None or match.group(1) != booking_match.group(1)):
         raise ValueError(f"No Better availability source: {venue.id}")
-    return match.groups()
+    return *match.groups(), booking_host
 
 
 def _clock(value: object, label: str) -> time:
@@ -41,11 +46,11 @@ def _clock(value: object, label: str) -> time:
 
 
 def parse_slots(venue: Venue, payload: dict, play_date: date, detected_at: datetime, availability_url: str | None = None) -> tuple[AvailabilitySlot, ...]:
-    venue_slug, activity_slug = _source_parts(venue, availability_url)
+    venue_slug, activity_slug, booking_host = _source_parts(venue, availability_url)
     rows = payload.get("data") if isinstance(payload, dict) else None
     if not isinstance(rows, list):
         raise ValueError("Better slots response must contain a data list")
-    booking_url = f"https://bookings.better.org.uk/location/{venue_slug}/{activity_slug}/{play_date.isoformat()}/by-time"
+    booking_url = f"https://{booking_host}/location/{venue_slug}/{activity_slug}/{play_date.isoformat()}/by-time"
     slots = []
     seen = set()
     for row in rows:
@@ -115,10 +120,11 @@ def metadata_patch_from_slots(venue: Venue, slots: tuple[AvailabilitySlot, ...])
 
 
 def _fetch_json(url: str):
+    booking_host = BOOKING_HOSTS[urlparse(url).hostname]
     request = Request(url, headers={
         "Accept": "application/json",
-        "Origin": "https://bookings.better.org.uk",
-        "Referer": "https://bookings.better.org.uk/",
+        "Origin": f"https://{booking_host}",
+        "Referer": f"https://{booking_host}/",
         "User-Agent": "LondonCourtAvailability/0.1",
     })
     with urlopen(request, timeout=15) as response:

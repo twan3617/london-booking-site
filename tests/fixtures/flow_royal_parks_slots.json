@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "id": "royal-parks-full",
+      "category_slug": "padel",
+      "date": {"raw": "2026-09-25", "tz": "Europe/London"},
+      "location": {"id": "1677", "venue_slug": "hyde-park-courts"},
+      "price": {"raw": 0},
+      "starts_at": {"format_24_hour": "07:00"},
+      "ends_at": {"format_24_hour": "08:00"},
+      "first_bookable_at": {"utc": "2026-09-18T06:00:00+00:00"},
+      "action_to_show": {"status": "FULL"}
+    },
+    {
+      "id": "royal-parks-bookable",
+      "category_slug": "padel",
+      "date": {"raw": "2026-09-25", "tz": "Europe/London"},
+      "location": {"id": "1677", "venue_slug": "hyde-park-courts"},
+      "price": {"raw": 2500},
+      "starts_at": {"format_24_hour": "08:00"},
+      "ends_at": {"format_24_hour": "09:00"},
+      "first_bookable_at": {"utc": "2026-09-18T06:00:00+00:00"},
+      "action_to_show": {"status": "BOOK"}
+    }
+  ]
+}

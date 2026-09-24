@@ -2761,6 +2761,8 @@ venues:
   sport: padel
   provider: html
   booking_url: https://sportsandleisureroyalparks.bookings.flow.onl/location/hyde-park-courts/padel/2026-01-19/by-time
+  availability_urls:
+  - https://flow.onl/api/activities/venue/hyde-park-courts/activity/padel/v2/slots
   metadata_sources:
   - https://sportsandleisure.royalparks.org.uk/the-courts/padel
   - https://sportsandleisure.royalparks.org.uk/faqs
@@ -2779,6 +2781,8 @@ venues:
   sport: padel
   provider: html
   booking_url: https://sportsandleisureroyalparks.bookings.flow.onl/location/the-regents-park-courts/padel/2026-01-19/by-time
+  availability_urls:
+  - https://flow.onl/api/activities/venue/the-regents-park-courts/activity/padel/v2/slots
   metadata_sources:
   - https://sportsandleisure.royalparks.org.uk/the-courts/padel
   - https://sportsandleisure.royalparks.org.uk/faqs

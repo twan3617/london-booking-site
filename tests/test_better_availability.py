@@ -20,6 +20,11 @@ VENUE = next(
     for venue in load_registry(ROOT / "config/venues.yaml")
     if venue.id == "hounslow-gunnersbury-park-sports-hub"
 )
+ROYAL_PARKS_VENUE = next(
+    venue
+    for venue in load_registry(ROOT / "config/venues.yaml")
+    if venue.id == "padel-westminster-hyde-park"
+)
 PLAY_DATE = date(2026, 9, 26)
 DETECTED_AT = datetime(2026, 9, 21, 21, 50, tzinfo=timezone.utc)
 
@@ -28,7 +33,22 @@ def fixture():
     return json.loads((ROOT / "tests/fixtures/better_gunnersbury_slots.json").read_text())
 
 
+def royal_parks_fixture():
+    return json.loads((ROOT / "tests/fixtures/flow_royal_parks_slots.json").read_text())
+
+
 class BetterAvailabilityTests(unittest.TestCase):
+    def test_royal_parks_reuses_the_flow_slot_parser(self):
+        slots = parse_slots(ROYAL_PARKS_VENUE, royal_parks_fixture(), date(2026, 9, 25), DETECTED_AT)
+
+        self.assertEqual([slot.available for slot in slots], [False, True])
+        self.assertEqual(slots[1].court_id, "1677")
+        self.assertEqual(slots[1].price_pence, 2500)
+        self.assertEqual(
+            slots[1].booking_url,
+            "https://sportsandleisureroyalparks.bookings.flow.onl/location/hyde-park-courts/padel/2026-09-25/by-time",
+        )
+
     def test_slots_produce_a_normalized_metadata_patch(self):
         slots = parse_slots(VENUE, fixture(), PLAY_DATE, DETECTED_AT)
 
@@ -208,7 +228,7 @@ class BetterAvailabilityTests(unittest.TestCase):
                 asyncio.run(refresh_availability(output))
             snapshot = json.loads(output.read_text())
 
-        self.assertEqual(set(snapshot["providers"]), {"better-admin.org.uk", "playtomic.com", "api.matchi.com", "fastapi-production-fargate.padelmates.io"})
+        self.assertEqual(set(snapshot["providers"]), {"better-admin.org.uk", "flow.onl", "playtomic.com", "api.matchi.com", "fastapi-production-fargate.padelmates.io"})
         self.assertEqual(snapshot["failed_providers"], ["www.lta.org.uk"])
 
     def test_refresh_does_not_replace_the_snapshot_when_every_provider_fails(self):
