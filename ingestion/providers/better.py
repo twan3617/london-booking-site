@@ -3,12 +3,11 @@
 import json
 import re
 from datetime import date, datetime, time, timedelta, timezone
-from decimal import Decimal
 from urllib.parse import urlencode, urlparse
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
 
-from ingestion.models import AvailabilitySlot, MetadataField, MetadataPatch, PriceRate, Venue
+from ingestion.models import AvailabilitySlot, Venue
 from ingestion.sources import RequestPacer
 
 LONDON = ZoneInfo("Europe/London")
@@ -93,30 +92,6 @@ def parse_slots(venue: Venue, payload: dict, play_date: date, detected_at: datet
             booking_opens_at=booking_opens_at,
         ))
     return tuple(slots)
-
-
-def metadata_patch_from_slots(venue: Venue, slots: tuple[AvailabilitySlot, ...]) -> MetadataPatch | None:
-    if not slots:
-        return None
-    durations = {int((slot.end_time - slot.start_time).total_seconds() // 60) for slot in slots}
-    prices = tuple(PriceRate(Decimal(price) / 100, duration) for price, duration in sorted({
-        (slot.price_pence, int((slot.end_time - slot.start_time).total_seconds() // 60))
-        for slot in slots if slot.price_pence
-    }))
-    releases = {
-        ((slot.start_time.astimezone(LONDON).date() - slot.booking_opens_at.astimezone(LONDON).date()).days,
-         slot.booking_opens_at.astimezone(LONDON).time().replace(tzinfo=None))
-        for slot in slots if slot.booking_opens_at
-    }
-    values = {MetadataField.PRICES: prices} if prices else {}
-    if len(durations) == 1:
-        values[MetadataField.SLOT_DURATION_MINUTES] = durations.pop()
-    if len(releases) == 1:
-        window, release_time = releases.pop()
-        if window > 0:
-            values[MetadataField.BOOKING_WINDOW_DAYS] = window
-            values[MetadataField.RELEASE_TIME] = release_time
-    return MetadataPatch(venue.id, venue.availability_urls[0], max(slot.detected_at for slot in slots), values)
 
 
 def _fetch_json(url: str):

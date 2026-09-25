@@ -12,8 +12,9 @@ from tempfile import TemporaryDirectory
 from unittest.mock import patch
 
 from ingestion.models import MetadataField, PriceRate
-from ingestion.providers.better import BetterAvailabilitySource, metadata_patch_from_slots, parse_slots
+from ingestion.providers.better import BetterAvailabilitySource, parse_slots
 from ingestion.registry import load_registry
+from ingestion.sources import metadata_patch_from_slots
 from scripts.refresh_availability import main, refresh_availability
 
 ROOT = Path(__file__).resolve().parents[1]

@@ -14,13 +14,13 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from ingestion.models import PriceRate
-from ingestion.providers.better import BetterAvailabilitySource, metadata_patch_from_slots
+from ingestion.providers.better import BetterAvailabilitySource
 from ingestion.providers.lta import LtaAvailabilitySource
 from ingestion.providers.matchi import MatchiAvailabilitySource
 from ingestion.providers.padelmates import PadelMatesAvailabilitySource
 from ingestion.providers.playtomic import PlaytomicAvailabilitySource
 from ingestion.registry import load_registry
-from ingestion.sources import RequestPacer
+from ingestion.sources import RequestPacer, metadata_patch_from_slots
 
 OUTPUT = ROOT / "data/availability.json"
 LONDON = ZoneInfo("Europe/London")
@@ -106,10 +106,9 @@ async def refresh_availability(output: Path = OUTPUT, provider: str | None = Non
             for venue in provider_venues:
                 venue_slots = await sources[source_host].fetch_availability(venue, start_date, end_date)
                 slots.extend(venue_slots)
-                if source_host in {"better-admin.org.uk", "flow.onl"}:
-                    patch = metadata_patch_from_slots(venue, venue_slots)
-                    if patch and patch.values:
-                        metadata[venue.id] = _metadata_json(patch)
+                patch = metadata_patch_from_slots(venue, venue_slots)
+                if patch and patch.values:
+                    metadata[venue.id] = _metadata_json(patch)
                 print(f"{venue.name}: {sum(slot.available for slot in venue_slots)} available of {len(venue_slots)} slots")
         except Exception as error:
             failed_providers.append(source_host)

@@ -1,9 +1,14 @@
 import asyncio
+import json
 import unittest
 from datetime import date, datetime, timezone
+from pathlib import Path
+from tempfile import TemporaryDirectory
+from unittest.mock import patch
 
 from ingestion.models import Venue
 from ingestion.providers.playtomic import PlaytomicAvailabilitySource, parse_slots
+from scripts.refresh_availability import refresh_availability
 
 
 TENANT_ID = "7a6f7a17-5a73-4468-9329-56c901f1ceba"
@@ -74,6 +79,28 @@ class PlaytomicAvailabilityTests(unittest.TestCase):
             with self.subTest(url=url), self.assertRaisesRegex(ValueError, "No Playtomic availability source"):
                 asyncio.run(source.fetch_availability(venue, PLAY_DATE, PLAY_DATE))
         self.assertEqual(calls, [])
+
+    def test_refresh_promotes_slot_price_and_duration_to_live_metadata(self):
+        payload = fixture()
+        payload[0]["slots"] = payload[0]["slots"][:1]
+        slots = parse_slots(VENUE, payload, PLAY_DATE, DETECTED_AT)
+
+        with TemporaryDirectory(dir=Path(__file__).resolve().parents[1]) as directory:
+            output = Path(directory) / "availability.json"
+            with patch("scripts.refresh_availability.load_registry", return_value=(VENUE,)), patch(
+                "scripts.refresh_availability.PlaytomicAvailabilitySource.fetch_availability", return_value=slots
+            ):
+                asyncio.run(refresh_availability(output, provider="playtomic"))
+            metadata = json.loads(output.read_text())["metadata"][VENUE.id]["values"]
+
+        self.assertEqual(metadata["prices"], [{
+            "amount_gbp": "60",
+            "duration_minutes": 60,
+            "customer": None,
+            "time_band": None,
+            "lights_included": None,
+        }])
+        self.assertEqual(metadata["slot_duration_minutes"], 60)
 
 
 if __name__ == "__main__":
