@@ -9,6 +9,7 @@ from urllib.request import Request, urlopen
 
 from ingestion.models import MetadataField, MetadataPatch, Venue
 from ingestion.registry import _web_url, load_registry
+from ingestion.sources import RequestPacer
 
 WEEKDAYS = ("monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday")
 FACILITY_TYPES = {
@@ -91,14 +92,15 @@ def _fetch_json(url):
 
 
 class OpenActiveSource:
-    def __init__(self, fetch_json=None):
+    def __init__(self, fetch_json=None, request_pacer=None):
         self.fetch_json = fetch_json or _fetch_json
+        self.request_pacer = request_pacer or RequestPacer(10, 2)
 
     async def fetch_metadata(self, venue: Venue) -> MetadataPatch:
         source_url = next((url for url in venue.metadata_sources if "/api/openactive/" in url and "/facility-uses/" in url), None)
         if source_url is None:
             raise ValueError(f"No curated OpenActive FacilityUse item: {venue.id}")
-        item = await asyncio.to_thread(self.fetch_json, source_url)
+        item = await self.request_pacer.run(self.fetch_json, source_url)
         return parse_facility_use(venue, item, source_url, datetime.now(timezone.utc))
 
 

@@ -1,13 +1,15 @@
 import asyncio
+import io
 import json
 import tempfile
 import unittest
+from contextlib import redirect_stdout
 from dataclasses import replace
 from datetime import datetime, time, timezone
 from pathlib import Path
 
 from ingestion.models import MetadataField, MetadataPatch, Venue, VenueMetadata, apply_metadata_patch
-from scripts.refresh_metadata import load_snapshot, refresh_metadata
+from scripts.refresh_metadata import load_snapshot, main, refresh_metadata
 
 
 API_SOURCE = "https://api.example.org/source"
@@ -52,6 +54,11 @@ class StaticSource:
 
     async def fetch_metadata(self, venue):
         return self.value
+
+
+class FailingSource:
+    async def fetch_metadata(self, venue):
+        raise RuntimeError("provider unavailable")
 
 
 class RefreshMetadataTests(unittest.TestCase):
@@ -109,12 +116,60 @@ class RefreshMetadataTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             output = Path(directory) / "metadata.json"
             initial = patch(court_count=3, surface=("hard",), booking_window_days=7)
-            reports = asyncio.run(refresh_metadata((VENUE,), {VENUE.id: StaticSource(initial)}, output))
+            reports, failures = asyncio.run(refresh_metadata((VENUE,), {VENUE.id: StaticSource(initial)}, output))
             saved = load_snapshot(output)[VENUE.id]
             self.assertEqual((saved.court_count, saved.surface, saved.booking_window_days), (3, ("hard",), 7))
             self.assertEqual(reports, ("Example Court\nNew metadata record.",))
+            self.assertEqual(failures, ())
             document = json.loads(output.read_text())
             self.assertEqual(document["venues"][0]["last_checked"], "2026-09-16T12:00:00+00:00")
+
+    def test_failed_venue_keeps_its_snapshot_while_another_refreshes(self):
+        other = replace(VENUE, id="other-court", name="Other Court")
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "metadata.json"
+            asyncio.run(refresh_metadata((VENUE,), {VENUE.id: StaticSource(patch(court_count=3))}, output))
+            other_patch = MetadataPatch(
+                other.id,
+                other.metadata_sources[0],
+                datetime(2026, 9, 17, 12, tzinfo=timezone.utc),
+                {MetadataField.COURT_COUNT: 2},
+            )
+
+            reports, failures = asyncio.run(refresh_metadata(
+                (VENUE, other),
+                {VENUE.id: FailingSource(), other.id: StaticSource(other_patch)},
+                output,
+            ))
+
+            saved = load_snapshot(output)
+            self.assertEqual(saved[VENUE.id].court_count, 3)
+            self.assertEqual(saved[other.id].court_count, 2)
+            self.assertEqual(len(reports), 1)
+            self.assertEqual(failures, (f"{VENUE.id}: provider unavailable",))
+
+    def test_all_failures_do_not_create_an_empty_snapshot(self):
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "metadata.json"
+
+            reports, failures = asyncio.run(refresh_metadata(
+                (VENUE,), {VENUE.id: FailingSource()}, output
+            ))
+
+            self.assertEqual(reports, ())
+            self.assertEqual(failures, (f"{VENUE.id}: provider unavailable",))
+            self.assertFalse(output.exists())
+
+    def test_cli_lists_providers_and_plans_without_fetching(self):
+        listed = io.StringIO()
+        with redirect_stdout(listed):
+            main(["--list"])
+        self.assertEqual(listed.getvalue().splitlines(), ["clubspark", "everyoneactive", "openactive"])
+
+        planned = io.StringIO()
+        with redirect_stdout(planned):
+            main(["--provider", "everyoneactive", "--plan"])
+        self.assertIn("everyoneactive: 4 venues, 10s pacing, request limit 4", planned.getvalue())
 
     def test_multiple_sources_fill_gaps_and_later_api_values_win(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -140,11 +195,12 @@ class RefreshMetadataTests(unittest.TestCase):
             initial = patch(court_count=3, surface=("hard",), booking_window_days=7)
             asyncio.run(refresh_metadata((VENUE,), {VENUE.id: StaticSource(initial)}, output))
             later = datetime(2026, 9, 17, 12, tzinfo=timezone.utc)
-            reports = asyncio.run(refresh_metadata((VENUE,), {VENUE.id: StaticSource(patch(later, court_count=3))}, output))
+            reports, failures = asyncio.run(refresh_metadata((VENUE,), {VENUE.id: StaticSource(patch(later, court_count=3))}, output))
             saved = load_snapshot(output)[VENUE.id]
             self.assertEqual((saved.surface, saved.booking_window_days), (("hard",), 7))
             self.assertEqual(saved.last_checked, later)
             self.assertEqual(reports, ("Example Court\nNo metadata changes.",))
+            self.assertEqual(failures, ())
 
     def test_partial_collections_are_preserved_and_reported(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -157,7 +213,7 @@ class RefreshMetadataTests(unittest.TestCase):
             asyncio.run(refresh_metadata((VENUE,), {VENUE.id: StaticSource(initial)}, output))
 
             partial = patch(surface=("hard",), opening_hours={"monday": hours["monday"]})
-            reports = asyncio.run(refresh_metadata((VENUE,), {VENUE.id: StaticSource(partial)}, output))
+            reports, failures = asyncio.run(refresh_metadata((VENUE,), {VENUE.id: StaticSource(partial)}, output))
 
             saved = load_snapshot(output)[VENUE.id]
             self.assertEqual(saved.surface, initial.values[MetadataField.SURFACE])
@@ -165,6 +221,7 @@ class RefreshMetadataTests(unittest.TestCase):
             self.assertIn("surface\n  old: ('hard', 'clay')\n  new: ('hard',)\n  status: blocked", reports[0])
             self.assertIn("opening_hours", reports[0])
             self.assertIn("status: blocked", reports[0])
+            self.assertEqual(failures, ())
 
     def test_invalid_candidate_does_not_replace_snapshot(self):
         with tempfile.TemporaryDirectory() as directory:

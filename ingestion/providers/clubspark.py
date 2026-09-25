@@ -11,6 +11,7 @@ from urllib.request import Request, urlopen
 
 from ingestion.models import MetadataField, MetadataPatch, Venue
 from ingestion.registry import load_registry
+from ingestion.sources import RequestPacer
 
 WEEKDAYS = ("monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday")
 NUMBER_WORDS = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10}
@@ -143,14 +144,15 @@ def _fetch_html(url):
 
 
 class ClubSparkSource:
-    def __init__(self, fetch_html=None):
+    def __init__(self, fetch_html=None, request_pacer=None):
         self.fetch_html = fetch_html or _fetch_html
+        self.request_pacer = request_pacer or RequestPacer(10, 4)
 
     async def fetch_metadata(self, venue: Venue) -> MetadataPatch:
         source_url = next((url for url in venue.metadata_sources if url.startswith("https://clubspark.lta.org.uk/")), None)
         if source_url is None:
             raise ValueError(f"No ClubSpark metadata source: {venue.id}")
-        html = await asyncio.to_thread(self.fetch_html, source_url)
+        html = await self.request_pacer.run(self.fetch_html, source_url)
         return parse_clubspark(venue, html, datetime.now(timezone.utc), source_url)
 
 

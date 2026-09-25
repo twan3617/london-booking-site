@@ -6,6 +6,7 @@ from pathlib import Path
 from ingestion.models import MetadataField, apply_metadata_patch
 from ingestion.providers.clubspark import ClubSparkSource, parse_clubspark
 from ingestion.registry import load_registry
+from ingestion.sources import RequestPacer
 
 ROOT = Path(__file__).resolve().parents[1]
 VENUES = {venue.id: venue for venue in load_registry(ROOT / "config/venues.yaml")}
@@ -88,7 +89,10 @@ class ClubSparkTests(unittest.TestCase):
     def test_source_fetches_the_registered_clubspark_page_for_any_provider(self):
         venue = VENUES["hammersmith-and-fulham-brook-green-tennis"]
         calls = []
-        source = ClubSparkSource(fetch_html=lambda url: calls.append(url) or fixture("clubspark_brook_green.html"))
+        source = ClubSparkSource(
+            fetch_html=lambda url: calls.append(url) or fixture("clubspark_brook_green.html"),
+            request_pacer=RequestPacer(0),
+        )
         patch = asyncio.run(source.fetch_metadata(venue))
         metadata = apply_metadata_patch(venue, patch)
         self.assertEqual(calls, [venue.metadata_sources[0]])

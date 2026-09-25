@@ -70,13 +70,15 @@ It records individual-court count and common court hours from the public JSON. I
 
 ## Refresh metadata
 
-Run the supported pilot venues with the Python interpreter:
+List or preview the supported providers before making requests:
 
 ```sh
-.venv/bin/python scripts/refresh_metadata.py
+.venv/bin/python scripts/refresh_metadata.py --list
+.venv/bin/python scripts/refresh_metadata.py --provider everyoneactive --plan
+.venv/bin/python scripts/refresh_metadata.py --all
 ```
 
-The script fetches the tested ClubSpark and Better OpenActive sources, applies only the fields present in each patch, prints the change report, and atomically writes `data/ingestion-metadata.json`. Gunnersbury reads its ClubSpark page first and its OpenActive API record second, so structured API fields win conflicts while HTML fills omitted fields. Invalid responses abort the run. Omitted fields retain their saved values; explicit collection shrinkage is blocked. The frontend JSON is not changed.
+The script fetches the tested ClubSpark, Everyone Active and Better OpenActive sources with provider request pacing and hard request caps. It applies only observed fields and atomically writes `data/ingestion-metadata.json`. Failed sources retain their last good records while other venues continue; the command returns a failure status after saving successful updates. Invalid normalized metadata still aborts the run. Omitted fields retain their saved values and explicit collection shrinkage is blocked. The frontend JSON is not changed.
 
 ## Availability pilot
 

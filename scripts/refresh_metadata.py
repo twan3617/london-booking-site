@@ -1,5 +1,6 @@
 """Refresh the currently supported venue metadata into one JSON snapshot."""
 
+import argparse
 import asyncio
 import json
 import sys
@@ -20,19 +21,36 @@ from ingestion.registry import load_registry
 from ingestion.review import format_review, review_metadata, validate_metadata
 
 OUTPUT = ROOT / "data/ingestion-metadata.json"
+CLUBSPARK = ClubSparkSource()
 EVERYONE_ACTIVE = EveryoneActiveMetadataSource()
-SOURCES = {
-    "hammersmith-and-fulham-brook-green-tennis": ClubSparkSource(),
-    "haringey-finsbury-park": ClubSparkSource(),
-    "merton-cottenham-park": ClubSparkSource(),
-    "hounslow-gunnersbury-park-sports-hub": (ClubSparkSource(), OpenActiveSource()),
-    "squash-islington-finsbury": OpenActiveSource(),
-    "squash-kensington-westway-portobello": EVERYONE_ACTIVE,
-    "squash-sutton-cheam": EVERYONE_ACTIVE,
-    "squash-westminster-porchester": EVERYONE_ACTIVE,
-    "squash-westminster-queen-mother": EVERYONE_ACTIVE,
+OPENACTIVE = OpenActiveSource()
+PROVIDERS = {
+    "clubspark": {
+        "hammersmith-and-fulham-brook-green-tennis": CLUBSPARK,
+        "haringey-finsbury-park": CLUBSPARK,
+        "merton-cottenham-park": CLUBSPARK,
+        "hounslow-gunnersbury-park-sports-hub": CLUBSPARK,
+    },
+    "everyoneactive": {
+        "squash-kensington-westway-portobello": EVERYONE_ACTIVE,
+        "squash-sutton-cheam": EVERYONE_ACTIVE,
+        "squash-westminster-porchester": EVERYONE_ACTIVE,
+        "squash-westminster-queen-mother": EVERYONE_ACTIVE,
+    },
+    "openactive": {
+        "hounslow-gunnersbury-park-sports-hub": OPENACTIVE,
+        "squash-islington-finsbury": OPENACTIVE,
+    },
 }
 
+
+def _selected_sources(provider_names):
+    selected = {}
+    for name in provider_names:
+        for venue_id, source in PROVIDERS[name].items():
+            current = selected.get(venue_id)
+            selected[venue_id] = (current, source) if current is not None else source
+    return selected
 
 def _record(metadata):
     record = asdict(metadata)
@@ -122,14 +140,24 @@ async def refresh_metadata(venues, sources, output=OUTPUT):
     existing = load_snapshot(output)
     refreshed = dict(existing)
     reports = []
+    failures = []
     for venue in venues:
         venue_sources = sources.get(venue.id)
         if venue_sources is None:
             continue
         previous = existing.get(venue.id)
         candidate = previous
+        succeeded = False
         for source in venue_sources if isinstance(venue_sources, tuple) else (venue_sources,):
-            candidate = apply_metadata_patch(venue, await source.fetch_metadata(venue), candidate)
+            try:
+                patch = await source.fetch_metadata(venue)
+            except Exception as error:
+                failures.append(f"{venue.id}: {error}")
+                continue
+            candidate = apply_metadata_patch(venue, patch, candidate)
+            succeeded = True
+        if not succeeded:
+            continue
         invalid_fields = [issue.field for issue in validate_metadata(candidate)]
         if invalid_fields:
             raise ValueError(f"Invalid refreshed metadata for {venue.id}: {', '.join(invalid_fields)}")
@@ -144,16 +172,36 @@ async def refresh_metadata(venues, sources, output=OUTPUT):
         preserved = {change.field: change.before for change in review.changes if change.blocked}
         refreshed[venue.id] = replace(candidate, **preserved)
         reports.append(format_review(review))
-    _save_snapshot(output, refreshed)
-    return tuple(reports)
+    if reports:
+        _save_snapshot(output, refreshed)
+    return tuple(reports), tuple(failures)
 
 
-def main():
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    selection = parser.add_mutually_exclusive_group(required=True)
+    selection.add_argument("--all", action="store_true", help="refresh every configured provider")
+    selection.add_argument("--provider", choices=PROVIDERS, help="refresh one provider")
+    selection.add_argument("--list", action="store_true", help="list available providers")
+    parser.add_argument("--plan", action="store_true", help="show the refresh scope without making requests")
+    args = parser.parse_args(argv)
+    if args.list:
+        print(*PROVIDERS, sep="\n")
+        return 0
+    selected = tuple(PROVIDERS) if args.all else (args.provider,)
+    if args.plan:
+        for name in selected:
+            pacer = next(iter(PROVIDERS[name].values())).request_pacer
+            print(f"{name}: {len(PROVIDERS[name])} venues, {pacer.interval_seconds:g}s pacing, request limit {pacer.max_requests}")
+        return 0
     venues = load_registry(ROOT / "config/venues.yaml")
-    reports = asyncio.run(refresh_metadata(venues, SOURCES))
+    reports, failures = asyncio.run(refresh_metadata(venues, _selected_sources(selected)))
     print("\n\n".join(reports))
     print(f"\nSaved {len(reports)} refreshed venues to {OUTPUT.relative_to(ROOT)}")
+    for failure in failures:
+        print(f"Refresh failed: {failure}", file=sys.stderr)
+    return 1 if failures else 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
