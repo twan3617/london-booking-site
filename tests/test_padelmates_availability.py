@@ -2,9 +2,11 @@ import asyncio
 import unittest
 from dataclasses import replace
 from datetime import date, datetime, timezone
+from pathlib import Path
 
 from ingestion.models import Venue
 from ingestion.providers.padelmates import PadelMatesAvailabilitySource, parse_slots
+from ingestion.registry import load_registry
 
 
 CLUB_ID = "f953765495194a299e49f49674d69a41"
@@ -18,6 +20,11 @@ VENUE = Venue(
     booking_url=f"https://padelmates.se/club/{CLUB_ID}",
     metadata_sources=("https://www.rocketpadel.com/club/beckton",),
     availability_urls=(f"https://fastapi-production-fargate.padelmates.io/club/?club_id={CLUB_ID}",),
+)
+PADIUM = next(
+    venue
+    for venue in load_registry(Path(__file__).resolve().parents[1] / "config/venues.yaml")
+    if venue.id == "padel-tower-hamlets-padium-canary-wharf"
 )
 
 
@@ -77,6 +84,12 @@ def fixture():
 
 
 class PadelMatesAvailabilityTests(unittest.TestCase):
+    def test_padium_uses_the_existing_padelmates_source(self):
+        slots = asyncio.run(PadelMatesAvailabilitySource(fetch_json=lambda _: fixture()).fetch_availability(PADIUM, PLAY_DATE, PLAY_DATE))
+
+        self.assertEqual(len(slots), 1)
+        self.assertEqual(slots[0].venue_id, PADIUM.id)
+
     def test_only_open_padel_slots_are_normalized_to_london_time(self):
         slots = parse_slots(VENUE, fixture(), PLAY_DATE, DETECTED_AT)
 

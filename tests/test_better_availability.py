@@ -217,6 +217,7 @@ class BetterAvailabilityTests(unittest.TestCase):
         self.assertEqual(provider["venue_ids"], [
             "padel-newham-rocket-beckton",
             "padel-redbridge-rocket-ilford",
+            "padel-tower-hamlets-padium-canary-wharf",
             "padel-wandsworth-rocket-battersea",
         ])
         self.assertEqual(provider["booking_urls"]["padel-newham-rocket-beckton"], "https://padelmates.se/club/f953765495194a299e49f49674d69a41")
