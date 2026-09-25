@@ -52,6 +52,18 @@ export type RefreshedMetadataSnapshot = { venues: Array<Record<string, unknown> 
 
 const WEEKDAYS = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'] as const;
 const DAY_LABELS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+const PROVIDER_NAMES: Record<string, string> = {
+  'api.matchi.com': 'MATCHi',
+  'better-admin.org.uk': 'Better',
+  'fastapi-production-fargate.padelmates.io': 'Padel Mates',
+  'flow.onl': 'Royal Parks',
+  'playtomic.com': 'Playtomic',
+  'www.lta.org.uk': 'LTA Play',
+};
+
+export function providerName(host: string): string {
+  return PROVIDER_NAMES[host] ?? host;
+}
 
 function openingHoursText(value: unknown): string | null {
   if (!value || typeof value !== 'object' || Array.isArray(value)) return null;

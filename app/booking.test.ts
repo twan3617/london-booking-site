@@ -15,6 +15,7 @@ import {
   matchesVenue,
   nextSaturday,
   prettyDate,
+  providerName,
   publishedPriceRange,
   parseCatalogue,
   isAvailabilitySnapshot,
@@ -29,6 +30,11 @@ import {
   type Venue,
   type AvailabilitySnapshot,
 } from './booking.ts';
+
+test('provider names stay readable in availability updates', () => {
+  assert.equal(providerName('flow.onl'), 'Royal Parks');
+  assert.equal(providerName('unknown.example'), 'unknown.example');
+});
 
 const venue: Venue = {
   id: 'hyde-park',
