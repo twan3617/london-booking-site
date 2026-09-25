@@ -148,8 +148,12 @@ def main(argv=None):
     selection = parser.add_mutually_exclusive_group(required=True)
     selection.add_argument("--all", action="store_true", help="refresh every configured provider")
     selection.add_argument("--provider", choices=PROVIDERS, help="refresh one provider")
+    selection.add_argument("--list", action="store_true", help="list available providers")
     parser.add_argument("--plan", action="store_true", help="show the refresh scope without making requests")
     args = parser.parse_args(argv)
+    if args.list:
+        print(*PROVIDERS, sep="\n")
+        return
     asyncio.run(refresh_availability(provider=args.provider, plan=args.plan))
 
 

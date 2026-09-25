@@ -1,7 +1,9 @@
 import asyncio
 import copy
+import io
 import json
 import unittest
+from contextlib import redirect_stdout
 from dataclasses import replace
 from datetime import date, datetime, time, timezone
 from decimal import Decimal
@@ -12,7 +14,7 @@ from unittest.mock import patch
 from ingestion.models import MetadataField, PriceRate
 from ingestion.providers.better import BetterAvailabilitySource, metadata_patch_from_slots, parse_slots
 from ingestion.registry import load_registry
-from scripts.refresh_availability import refresh_availability
+from scripts.refresh_availability import main, refresh_availability
 
 ROOT = Path(__file__).resolve().parents[1]
 VENUE = next(
@@ -278,6 +280,21 @@ class BetterAvailabilityTests(unittest.TestCase):
 
         self.assertIn("playtomic", print_line.call_args.args[0])
         self.assertIn("request limit", print_line.call_args.args[0])
+
+    def test_list_prints_the_available_provider_names(self):
+        output = io.StringIO()
+
+        with redirect_stdout(output):
+            main(["--list"])
+
+        self.assertEqual(output.getvalue().splitlines(), [
+            "better",
+            "royal-parks",
+            "lta",
+            "matchi",
+            "padelmates",
+            "playtomic",
+        ])
 
 
 if __name__ == "__main__":
