@@ -164,7 +164,7 @@ class RefreshMetadataTests(unittest.TestCase):
         listed = io.StringIO()
         with redirect_stdout(listed):
             main(["--list"])
-        self.assertEqual(listed.getvalue().splitlines(), ["clubspark", "everyoneactive", "openactive"])
+        self.assertEqual(listed.getvalue().splitlines(), ["clubspark", "everyoneactive", "openactive", "placesleisure"])
 
         planned = io.StringIO()
         with redirect_stdout(planned):

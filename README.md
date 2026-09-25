@@ -75,6 +75,7 @@ List or preview the supported providers before making requests:
 ```sh
 .venv/bin/python scripts/refresh_metadata.py --list
 .venv/bin/python scripts/refresh_metadata.py --provider everyoneactive --plan
+.venv/bin/python scripts/refresh_metadata.py --provider placesleisure --plan
 .venv/bin/python scripts/refresh_metadata.py --all
 ```
 

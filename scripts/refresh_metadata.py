@@ -17,6 +17,7 @@ from ingestion.models import PriceRate, VenueMetadata, apply_metadata_patch
 from ingestion.providers.clubspark import ClubSparkSource
 from ingestion.providers.everyoneactive import EveryoneActiveMetadataSource
 from ingestion.providers.openactive import OpenActiveSource
+from ingestion.providers.placesleisure import PlacesLeisureMetadataSource
 from ingestion.registry import load_registry
 from ingestion.review import format_review, review_metadata, validate_metadata
 
@@ -24,6 +25,7 @@ OUTPUT = ROOT / "data/ingestion-metadata.json"
 CLUBSPARK = ClubSparkSource()
 EVERYONE_ACTIVE = EveryoneActiveMetadataSource()
 OPENACTIVE = OpenActiveSource()
+PLACES_LEISURE = PlacesLeisureMetadataSource()
 PROVIDERS = {
     "clubspark": {
         "hammersmith-and-fulham-brook-green-tennis": CLUBSPARK,
@@ -40,6 +42,11 @@ PROVIDERS = {
     "openactive": {
         "hounslow-gunnersbury-park-sports-hub": OPENACTIVE,
         "squash-islington-finsbury": OPENACTIVE,
+    },
+    "placesleisure": {
+        "squash-kingston-tolworth": PLACES_LEISURE,
+        "squash-wandsworth-balham": PLACES_LEISURE,
+        "squash-wandsworth-tooting": PLACES_LEISURE,
     },
 }
 
