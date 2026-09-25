@@ -1,34 +1,29 @@
-# Next steps
+# Backend status
 
-Paused on 21 September 2026 after agreeing on a hybrid ingestion strategy.
+The backend MVP is ready for frontend polish. Deployment and scheduled refreshes remain disabled.
 
-## Agreed sequence
+## Completed
 
-1. Add a small typed metadata-patch model: venue ID, source URL, checked time and only the fields actually observed.
-2. Validate and diff patches against the curated catalogue; missing fields retain their existing values.
-3. Convert the five existing ClubSpark/OpenActive pilots to patches.
-4. Build a local Better availability MVP for one or two mapped venues:
-   - canonical availability slots
-   - generated local `data/availability.json`
-   - date, start time and duration selection
-   - distance ordering, map cards and official booking links
-   - last-checked time
-5. Expand metadata and availability provider by provider.
+- Availability covers 244 of 399 venues: 216 tennis, 11 squash and 17 padel.
+- Better, Royal Parks, LTA Play, Playtomic, MATCHi and Padel Mates normalize prices and durations from the same responses used for availability. These values remain live snapshot metadata rather than committed catalogue facts.
+- Provider batches stop on their first error. Successful batches are saved atomically, failed batches retain their last published snapshot, and a total failure replaces nothing.
+- The metadata CLI supports ClubSpark, Better OpenActive, Everyone Active and Places Leisure. The committed snapshot currently contains eight refreshed venues.
+- Places Leisure metadata is verified for Tolworth, Balham and Tooting: all expose 45-minute squash sessions and stable weekly hours.
 
-Do not wait for complete metadata automation before testing availability. Aim for roughly 80–90% automated metadata with a curated manual fallback for the long tail.
+## Remaining squash availability
 
-## ClubSpark finding
+Squash availability covers 11 of 26 venues. The remaining 15 are intentionally deferred:
 
-A read-only sample of one ClubSpark venue per borough fetched 27 of 27 pages, but a venue page alone exposed court count for 7 venues and booking windows for 6. Shared scheme pages and PDFs contain many of the missing facts.
+| Group | Venues | Current blocker |
+| --- | ---: | --- |
+| Better | 3 | Woolwich Waves, Kensington and Teddington still need verified booking-product mappings. |
+| Everyone Active | 4 | Westway Portobello, Cheam, Porchester and Queen Mother require an account for availability. Public metadata remains supported. |
+| Places Leisure | 3 | Tolworth, Balham and Tooting expose public timetable metadata, but the availability endpoint timed out in two paced probes. |
+| Active Lambeth | 2 | Brixton and Flaxman use an authentication-protected Flow booking path. |
+| Independent | 3 | Bloomsbury Fitness, Brunel and Mulberry Academy Shoreditch have no verified public availability API. |
 
-Altash Gardens also demonstrated the contextual parsing risk: its page publishes 14 days for members and 7 days for pay-and-play. The current parser saw only 14 days. Do not enable all 232 ClubSpark venues until patches can combine multiple sources without overwriting curated values.
+Do not probe the account-protected providers again unless credentials or a documented public endpoint becomes available. Keep sending users to the official booking page for unsupported venues.
 
-## Repository state
+## Next product work
 
-- Worktree: `/Users/wang_to/workspace/book-court/.worktrees/metadata-openactive-m4`
-- Current branch: `metadata-clubspark-coverage`
-- Provider/source separation: commit `1c1c9c0`
-- Direct five-venue refresh: commit `3e5f247`
-- No merge or push has been performed.
-
-Never push from `main`; the user controls external data. Local branches, worktrees, commits and merges are allowed.
+Polish the location cards and time grid, especially freshness, unsupported-provider messaging and direct booking links. After that, deploy the existing Netlify function once and validate one manual snapshot upload before enabling an hourly schedule.

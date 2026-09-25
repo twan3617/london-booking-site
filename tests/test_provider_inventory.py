@@ -30,6 +30,12 @@ class ProviderInventoryTests(unittest.TestCase):
             "everyoneactive",
         )
 
+    def test_places_leisure_timetable_page_is_reported_as_structured(self):
+        self.assertEqual(
+            source_kind("https://www.placesleisure.org/centres/tooting-leisure-centre/centre-activities/sports/"),
+            "placesleisure",
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -25,6 +25,8 @@ def source_kind(url):
         return "openactive"
     if domain == "api.everyoneactive.com":
         return "everyoneactive"
+    if domain == "www.placesleisure.org" and "/centre-activities/" in url:
+        return "placesleisure"
     if domain == "parksports.co.uk":
         return "parksports"
     if urlparse(url).path.lower().endswith(".pdf"):

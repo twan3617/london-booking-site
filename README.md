@@ -79,7 +79,7 @@ List or preview the supported providers before making requests:
 .venv/bin/python scripts/refresh_metadata.py --all
 ```
 
-The script fetches the tested ClubSpark, Everyone Active and Better OpenActive sources with provider request pacing and hard request caps. It applies only observed fields and atomically writes `data/ingestion-metadata.json`. Failed sources retain their last good records while other venues continue; the command returns a failure status after saving successful updates. Invalid normalized metadata still aborts the run. Omitted fields retain their saved values and explicit collection shrinkage is blocked. The frontend JSON is not changed.
+The script fetches the tested ClubSpark, Everyone Active, Places Leisure and Better OpenActive sources with provider request pacing and hard request caps. It applies only observed fields and atomically writes `data/ingestion-metadata.json`. Failed sources retain their last good records while other venues continue; the command returns a failure status after saving successful updates. Invalid normalized metadata still aborts the run. Omitted fields retain their saved values and explicit collection shrinkage is blocked. The frontend JSON is not changed.
 
 ## Availability pilot
 

@@ -263,6 +263,189 @@
         ]
       },
       "membership_required": null
+    },
+    {
+      "venue_id": "squash-kingston-tolworth",
+      "name": "Tolworth Recreation Centre",
+      "booking_url": "https://www.placesleisure.org/centres/tolworth-recreation-centre/centre-activities/sports/",
+      "last_checked": "2026-09-25T10:08:14.397953+00:00",
+      "source_url": "https://www.placesleisure.org/centres/tolworth-recreation-centre/centre-activities/sports/",
+      "court_count": null,
+      "floodlit_court_count": null,
+      "surface": [],
+      "floodlit": null,
+      "prices": [],
+      "booking_window_days": null,
+      "member_booking_window_days": null,
+      "release_time": null,
+      "slot_duration_minutes": 45,
+      "opening_hours": {
+        "monday": [
+          [
+            "08:00:00",
+            "22:15:00"
+          ]
+        ],
+        "tuesday": [
+          [
+            "08:00:00",
+            "22:15:00"
+          ]
+        ],
+        "wednesday": [
+          [
+            "08:00:00",
+            "22:15:00"
+          ]
+        ],
+        "thursday": [
+          [
+            "08:00:00",
+            "22:15:00"
+          ]
+        ],
+        "friday": [
+          [
+            "08:00:00",
+            "22:15:00"
+          ]
+        ],
+        "saturday": [
+          [
+            "08:00:00",
+            "19:15:00"
+          ]
+        ],
+        "sunday": [
+          [
+            "08:00:00",
+            "19:15:00"
+          ]
+        ]
+      },
+      "membership_required": null
+    },
+    {
+      "venue_id": "squash-wandsworth-balham",
+      "name": "Balham Leisure Centre",
+      "booking_url": "https://www.placesleisure.org/centres/balham-leisure-centre/centre-activities/squash/",
+      "last_checked": "2026-09-25T10:08:14.457554+00:00",
+      "source_url": "https://www.placesleisure.org/centres/balham-leisure-centre/centre-activities/squash/",
+      "court_count": null,
+      "floodlit_court_count": null,
+      "surface": [],
+      "floodlit": null,
+      "prices": [],
+      "booking_window_days": null,
+      "member_booking_window_days": null,
+      "release_time": null,
+      "slot_duration_minutes": 45,
+      "opening_hours": {
+        "monday": [
+          [
+            "06:45:00",
+            "21:00:00"
+          ]
+        ],
+        "tuesday": [
+          [
+            "06:45:00",
+            "21:00:00"
+          ]
+        ],
+        "wednesday": [
+          [
+            "06:45:00",
+            "21:00:00"
+          ]
+        ],
+        "thursday": [
+          [
+            "06:45:00",
+            "21:00:00"
+          ]
+        ],
+        "friday": [
+          [
+            "06:45:00",
+            "21:00:00"
+          ]
+        ],
+        "saturday": [
+          [
+            "08:00:00",
+            "17:45:00"
+          ]
+        ],
+        "sunday": [
+          [
+            "08:00:00",
+            "20:45:00"
+          ]
+        ]
+      },
+      "membership_required": null
+    },
+    {
+      "venue_id": "squash-wandsworth-tooting",
+      "name": "Tooting Leisure Centre",
+      "booking_url": "https://www.placesleisure.org/centres/tooting-leisure-centre/centre-activities/sports/",
+      "last_checked": "2026-09-25T10:08:14.472525+00:00",
+      "source_url": "https://www.placesleisure.org/centres/tooting-leisure-centre/centre-activities/sports/",
+      "court_count": null,
+      "floodlit_court_count": null,
+      "surface": [],
+      "floodlit": null,
+      "prices": [],
+      "booking_window_days": null,
+      "member_booking_window_days": null,
+      "release_time": null,
+      "slot_duration_minutes": 45,
+      "opening_hours": {
+        "monday": [
+          [
+            "07:00:00",
+            "22:00:00"
+          ]
+        ],
+        "tuesday": [
+          [
+            "07:00:00",
+            "22:00:00"
+          ]
+        ],
+        "wednesday": [
+          [
+            "07:00:00",
+            "22:00:00"
+          ]
+        ],
+        "thursday": [
+          [
+            "07:00:00",
+            "22:00:00"
+          ]
+        ],
+        "friday": [
+          [
+            "07:00:00",
+            "22:00:00"
+          ]
+        ],
+        "saturday": [
+          [
+            "07:30:00",
+            "19:30:00"
+          ]
+        ],
+        "sunday": [
+          [
+            "08:00:00",
+            "21:30:00"
+          ]
+        ]
+      },
+      "membership_required": null
     }
   ]
 }
