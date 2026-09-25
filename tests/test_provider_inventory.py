@@ -24,6 +24,12 @@ class ProviderInventoryTests(unittest.TestCase):
     def test_pdf_source_is_not_reported_as_html(self):
         self.assertEqual(source_kind("https://council.example/courts.pdf?version=2"), "pdf")
 
+    def test_everyone_active_api_is_reported_as_structured(self):
+        self.assertEqual(
+            source_kind("https://api.everyoneactive.com/v1.0/centres/0153/timetable"),
+            "everyoneactive",
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

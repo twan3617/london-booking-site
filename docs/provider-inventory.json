@@ -6504,6 +6504,10 @@
       {
         "url": "https://www.everyoneactive.com/centre/westway-portobello-fitness-club/",
         "detected_kind": "html"
+      },
+      {
+        "url": "https://api.everyoneactive.com/v1.0/centres/0163/timetable",
+        "detected_kind": "everyoneactive"
       }
     ]
   },
@@ -6572,6 +6576,10 @@
       {
         "url": "https://www.everyoneactive.com/centre/cheam-leisure-centre/",
         "detected_kind": "html"
+      },
+      {
+        "url": "https://api.everyoneactive.com/v1.0/centres/0073/timetable",
+        "detected_kind": "everyoneactive"
       }
     ]
   },
@@ -6638,6 +6646,10 @@
         "detected_kind": "html"
       },
       {
+        "url": "https://api.everyoneactive.com/v1.0/centres/0153/timetable",
+        "detected_kind": "everyoneactive"
+      },
+      {
         "url": "https://www.westminster.gov.uk/sites/default/files/media/documents/wcc-indoor-facilities-assessment-needs-assessment-2026.pdf",
         "detected_kind": "pdf"
       }
@@ -6654,6 +6666,10 @@
       {
         "url": "https://www.everyoneactive.com/centre/queen-mother-sports-centre/",
         "detected_kind": "html"
+      },
+      {
+        "url": "https://api.everyoneactive.com/v1.0/centres/0155/timetable",
+        "detected_kind": "everyoneactive"
       },
       {
         "url": "https://www.westminster.gov.uk/sites/default/files/media/documents/wcc-indoor-facilities-assessment-needs-assessment-2026.pdf",

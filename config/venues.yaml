@@ -3279,6 +3279,7 @@ venues:
   booking_url: https://www.everyoneactive.com/centre/westway-portobello-fitness-club/
   metadata_sources:
   - https://www.everyoneactive.com/centre/westway-portobello-fitness-club/
+  - https://api.everyoneactive.com/v1.0/centres/0163/timetable
 - id: squash-kingston-tolworth
   name: Tolworth Recreation Centre
   sport: squash
@@ -3329,6 +3330,7 @@ venues:
   booking_url: https://www.everyoneactive.com/centre/cheam-leisure-centre/
   metadata_sources:
   - https://www.everyoneactive.com/centre/cheam-leisure-centre/
+  - https://api.everyoneactive.com/v1.0/centres/0073/timetable
 - id: squash-tower-hamlets-mulberry-shoreditch
   name: Mulberry Academy Shoreditch Sports Centre
   sport: squash
@@ -3370,6 +3372,7 @@ venues:
   booking_url: https://www.everyoneactive.com/centre/porchester-centre/
   metadata_sources:
   - https://www.everyoneactive.com/centre/porchester-centre/
+  - https://api.everyoneactive.com/v1.0/centres/0153/timetable
   - https://www.westminster.gov.uk/sites/default/files/media/documents/wcc-indoor-facilities-assessment-needs-assessment-2026.pdf
 - id: squash-westminster-queen-mother
   name: Queen Mother Sports Centre
@@ -3378,6 +3381,7 @@ venues:
   booking_url: https://www.everyoneactive.com/centre/queen-mother-sports-centre/
   metadata_sources:
   - https://www.everyoneactive.com/centre/queen-mother-sports-centre/
+  - https://api.everyoneactive.com/v1.0/centres/0155/timetable
   - https://www.westminster.gov.uk/sites/default/files/media/documents/wcc-indoor-facilities-assessment-needs-assessment-2026.pdf
 - id: sutton-beddington-park
   name: Beddington Park

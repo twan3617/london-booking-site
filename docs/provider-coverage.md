@@ -20,6 +20,7 @@ These counts overlap because a venue can cite more than one source type. A cited
 | html | 255 |
 | clubspark | 241 |
 | pdf | 22 |
+| everyoneactive | 4 |
 | parksports | 3 |
 | openactive | 2 |
 

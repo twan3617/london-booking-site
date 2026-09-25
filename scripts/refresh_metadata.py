@@ -14,17 +14,23 @@ if str(ROOT) not in sys.path:
 
 from ingestion.models import PriceRate, VenueMetadata, apply_metadata_patch
 from ingestion.providers.clubspark import ClubSparkSource
+from ingestion.providers.everyoneactive import EveryoneActiveMetadataSource
 from ingestion.providers.openactive import OpenActiveSource
 from ingestion.registry import load_registry
 from ingestion.review import format_review, review_metadata, validate_metadata
 
 OUTPUT = ROOT / "data/ingestion-metadata.json"
+EVERYONE_ACTIVE = EveryoneActiveMetadataSource()
 SOURCES = {
     "hammersmith-and-fulham-brook-green-tennis": ClubSparkSource(),
     "haringey-finsbury-park": ClubSparkSource(),
     "merton-cottenham-park": ClubSparkSource(),
     "hounslow-gunnersbury-park-sports-hub": (ClubSparkSource(), OpenActiveSource()),
     "squash-islington-finsbury": OpenActiveSource(),
+    "squash-kensington-westway-portobello": EVERYONE_ACTIVE,
+    "squash-sutton-cheam": EVERYONE_ACTIVE,
+    "squash-westminster-porchester": EVERYONE_ACTIVE,
+    "squash-westminster-queen-mother": EVERYONE_ACTIVE,
 }
 
 
