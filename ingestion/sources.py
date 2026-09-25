@@ -11,13 +11,18 @@ from .models import AvailabilitySlot, MetadataPatch, Venue
 class RequestPacer:
     """Limit request starts for one provider."""
 
-    def __init__(self, interval_seconds: float = 1.0):
+    def __init__(self, interval_seconds: float = 1.0, max_requests: int | None = None):
         self.interval_seconds = interval_seconds
+        self.max_requests = max_requests
+        self._requests = 0
         self._next_request_at = 0.0
         self._lock = asyncio.Lock()
 
     async def run(self, function, *args):
         async with self._lock:
+            if self.max_requests is not None and self._requests >= self.max_requests:
+                raise RuntimeError(f"Provider request limit of {self.max_requests} reached")
+            self._requests += 1
             delay = self._next_request_at - monotonic()
             if delay > 0:
                 await asyncio.sleep(delay)

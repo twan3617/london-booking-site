@@ -268,6 +268,17 @@ class BetterAvailabilityTests(unittest.TestCase):
 
         self.assertEqual((snapshot["coverage_start"], snapshot["coverage_end"]), ("2026-09-24", "2026-09-29"))
 
+    def test_refresh_plan_describes_one_provider_without_fetching_or_writing(self):
+        with TemporaryDirectory(dir=ROOT) as directory:
+            output = Path(directory) / "availability.json"
+            with patch("builtins.print") as print_line:
+                asyncio.run(refresh_availability(output, provider="playtomic", plan=True))
+
+            self.assertFalse(output.exists())
+
+        self.assertIn("playtomic", print_line.call_args.args[0])
+        self.assertIn("request limit", print_line.call_args.args[0])
+
 
 if __name__ == "__main__":
     unittest.main()

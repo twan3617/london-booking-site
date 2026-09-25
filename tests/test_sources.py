@@ -19,6 +19,20 @@ class RequestPacerTests(unittest.TestCase):
 
         sleep.assert_awaited_once_with(0.75)
 
+    def test_request_limit_stops_before_an_extra_call(self):
+        calls = []
+
+        async def run():
+            pacer = RequestPacer(0, max_requests=2)
+            await pacer.run(calls.append, "first")
+            await pacer.run(calls.append, "second")
+            await pacer.run(calls.append, "third")
+
+        with self.assertRaisesRegex(RuntimeError, "request limit of 2"):
+            asyncio.run(run())
+
+        self.assertEqual(calls, ["first", "second"])
+
 
 if __name__ == "__main__":
     unittest.main()

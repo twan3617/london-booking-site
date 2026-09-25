@@ -1,5 +1,6 @@
 """Refresh the small set of configured live availability sources."""
 
+import argparse
 import asyncio
 import json
 import sys
@@ -19,10 +20,19 @@ from ingestion.providers.matchi import MatchiAvailabilitySource
 from ingestion.providers.padelmates import PadelMatesAvailabilitySource
 from ingestion.providers.playtomic import PlaytomicAvailabilitySource
 from ingestion.registry import load_registry
+from ingestion.sources import RequestPacer
 
 OUTPUT = ROOT / "data/availability.json"
 LONDON = ZoneInfo("Europe/London")
 DAYS_AHEAD = 5
+PROVIDERS = {
+    "better": ("better-admin.org.uk", BetterAvailabilitySource, 1, 150),
+    "royal-parks": ("flow.onl", BetterAvailabilitySource, 1, 20),
+    "lta": ("www.lta.org.uk", LtaAvailabilitySource, 1, 1250),
+    "matchi": ("api.matchi.com", MatchiAvailabilitySource, 10, 50),
+    "padelmates": ("fastapi-production-fargate.padelmates.io", PadelMatesAvailabilitySource, 10, 30),
+    "playtomic": ("playtomic.com", PlaytomicAvailabilitySource, 1, 50),
+}
 
 
 def _slot_json(slot):
@@ -63,26 +73,29 @@ def _save(output: Path, payload: dict):
     temporary.replace(output)
 
 
-async def refresh_availability(output: Path = OUTPUT):
+async def refresh_availability(output: Path = OUTPUT, provider: str | None = None, plan: bool = False):
     now = datetime.now(timezone.utc)
     start_date = now.astimezone(LONDON).date()
     # Better currently exposes today plus five further dates.
     end_date = start_date + timedelta(days=DAYS_AHEAD)
     venues = [venue for venue in load_registry(ROOT / "config/venues.yaml") if venue.availability_urls]
+    selected = {provider: PROVIDERS[provider]} if provider else PROVIDERS
     sources = {
-        "better-admin.org.uk": BetterAvailabilitySource(),
-        "flow.onl": BetterAvailabilitySource(),
-        "www.lta.org.uk": LtaAvailabilitySource(),
-        "api.matchi.com": MatchiAvailabilitySource(),
-        "fastapi-production-fargate.padelmates.io": PadelMatesAvailabilitySource(),
-        "playtomic.com": PlaytomicAvailabilitySource(),
+        host: source(request_pacer=RequestPacer(interval, request_limit))
+        for host, source, interval, request_limit in selected.values()
     }
     venues_by_host = {}
     for venue in venues:
         source_host = urlparse(venue.availability_urls[0]).hostname
-        if source_host not in sources:
+        if source_host not in {details[0] for details in PROVIDERS.values()}:
             raise ValueError(f"No availability source for host: {source_host}")
-        venues_by_host.setdefault(source_host, []).append(venue)
+        if source_host in sources:
+            venues_by_host.setdefault(source_host, []).append(venue)
+
+    if plan:
+        for name, (host, _, interval, request_limit) in selected.items():
+            print(f"{name}: {len(venues_by_host.get(host, []))} venues, {interval}s pacing, request limit {request_limit}")
+        return
 
     providers = {}
     failed_providers = []
@@ -130,5 +143,15 @@ async def refresh_availability(output: Path = OUTPUT):
     print(f"Saved {len(payload['slots'])} slots to {output.relative_to(ROOT)}")
 
 
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    selection = parser.add_mutually_exclusive_group(required=True)
+    selection.add_argument("--all", action="store_true", help="refresh every configured provider")
+    selection.add_argument("--provider", choices=PROVIDERS, help="refresh one provider")
+    parser.add_argument("--plan", action="store_true", help="show the refresh scope without making requests")
+    args = parser.parse_args(argv)
+    asyncio.run(refresh_availability(provider=args.provider, plan=args.plan))
+
+
 if __name__ == "__main__":
-    asyncio.run(refresh_availability())
+    main()
