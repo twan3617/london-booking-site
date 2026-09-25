@@ -1,6 +1,6 @@
 export type Mode = 'after-work' | 'weekend';
 export type Sport = 'tennis' | 'squash' | 'padel';
-export type PriceOption = { label?: string; customer?: 'nonmember' | 'adult_standard'; time_band?: 'peak' | 'off_peak' | 'anytime'; amount_gbp: number; duration_minutes: number; modes: Mode[]; lighting: 'included' | 'unlit' | 'unknown' };
+export type PriceOption = { label?: string; customer?: 'nonmember' | 'member' | 'adult_standard'; time_band?: 'peak' | 'off_peak' | 'anytime'; amount_gbp: number; duration_minutes: number; modes: Mode[]; lighting: 'included' | 'unlit' | 'unknown' };
 
 export type Venue = {
   id: string;
@@ -48,6 +48,86 @@ export type AvailabilitySlot = { venue_id: string; court_id: string | null; star
 export type AvailabilityMetadataPatch = { source_url: string; checked_at: string; values: Record<string, unknown> };
 export type ProviderAvailabilitySnapshot = { generated_at: string; coverage_start: string; coverage_end: string; venue_ids: string[]; booking_urls: Record<string, string>; slots: AvailabilitySlot[]; metadata?: Record<string, AvailabilityMetadataPatch> };
 export type AvailabilitySnapshot = ProviderAvailabilitySnapshot & { providers?: Record<string, ProviderAvailabilitySnapshot>; failed_providers?: string[] };
+export type RefreshedMetadataSnapshot = { venues: Array<Record<string, unknown> & { venue_id: string }> };
+
+const WEEKDAYS = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'] as const;
+const DAY_LABELS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+
+function openingHoursText(value: unknown): string | null {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) return null;
+  const days = WEEKDAYS.flatMap((day, index) => {
+    const periods = (value as Record<string, unknown>)[day];
+    if (!Array.isArray(periods) || !periods.length || periods.some((period) => !Array.isArray(period) || period.length !== 2 || !period.every((clock) => typeof clock === 'string' && /^([01]\d|2[0-3]):[0-5]\d(?::[0-5]\d)?$/.test(clock)))) return [];
+    return [{ index, hours: periods.map(([start, end]) => `${String(start).slice(0, 5)}–${String(end).slice(0, 5)}`).join(', ') }];
+  });
+  const groups: { first: number; last: number; hours: string }[] = [];
+  for (const day of days) {
+    const previous = groups.at(-1);
+    if (previous && previous.last + 1 === day.index && previous.hours === day.hours) previous.last = day.index;
+    else groups.push({ first: day.index, last: day.index, hours: day.hours });
+  }
+  return groups.length ? groups.map(({ first, last, hours }) => `${DAY_LABELS[first]}${first === last ? '' : `–${DAY_LABELS[last]}`} ${hours}`).join('; ') : null;
+}
+
+function withMetadataValues(venue: Venue, values: Record<string, unknown>): Venue {
+  const observed = { ...venue };
+  if (Number.isInteger(values.court_count) && Number(values.court_count) > 0) observed.courts_total = Number(values.court_count);
+  if (Number.isInteger(values.floodlit_court_count) && Number(values.floodlit_court_count) >= 0) observed.floodlit_courts = Number(values.floodlit_court_count);
+  if (!observed.indoor_courts && typeof values.floodlit === 'boolean') observed.lighting = values.floodlit ? 'floodlit' : 'unlit';
+  const duration = values.slot_duration_minutes;
+  if (Number.isInteger(duration) && Number(duration) > 0 && Number(duration) <= 1440) observed.slot_minutes = Number(duration);
+  const window = values.booking_window_days;
+  const release = values.release_time;
+  if (Number.isInteger(window) && Number(window) > 0 && Number(window) <= 60) observed.advance_days = Number(window);
+  if (typeof release === 'string' && /^([01]\d|2[0-3]):[0-5]\d(?::[0-5]\d)?$/.test(release)) observed.release_time = release.slice(0, 5);
+  if (observed.advance_days !== venue.advance_days || observed.release_time !== venue.release_time) {
+    observed.release_rule = null;
+    observed.release_status = observed.advance_days != null && observed.release_time ? 'published' : 'partial';
+  }
+  const hours = openingHoursText(values.opening_hours);
+  if (hours) observed.hours_text = hours;
+  if (Array.isArray(values.prices)) {
+    const prices = values.prices.flatMap((rate): PriceOption[] => {
+      if (!rate || typeof rate !== 'object') return [];
+      const raw = rate as Record<string, unknown>;
+      const amount = Number(raw.amount_gbp);
+      const customer = ['nonmember', 'member', 'adult_standard'].includes(String(raw.customer)) ? raw.customer as PriceOption['customer'] : undefined;
+      const timeBand = ['peak', 'off_peak', 'anytime'].includes(String(raw.time_band)) ? raw.time_band as PriceOption['time_band'] : undefined;
+      if (!Number.isFinite(amount) || amount <= 0 || amount >= 100 || !Number.isInteger(raw.duration_minutes) || Number(raw.duration_minutes) <= 0) return [];
+      return [{
+        ...(!customer && !timeBand ? { label: 'Observed booking price' } : {}),
+        ...(customer ? { customer } : {}),
+        ...(timeBand ? { time_band: timeBand } : {}),
+        amount_gbp: amount,
+        duration_minutes: Number(raw.duration_minutes),
+        modes: ['after-work', 'weekend'],
+        lighting: raw.lights_included === false ? 'unlit' : raw.lights_included === true ? 'included' : 'unknown',
+      }];
+    });
+    if (prices.length) observed.price_options = prices;
+  }
+  return observed;
+}
+
+export function venuesWithRefreshedMetadata(venues: Venue[], snapshot: RefreshedMetadataSnapshot): Venue[] {
+  if (!snapshot || !Array.isArray(snapshot.venues)) throw new Error('Invalid refreshed metadata snapshot');
+  const byId = new Map(venues.map((venue) => [venue.id, venue]));
+  const seen = new Set<string>();
+  for (const record of snapshot.venues) {
+    if (!record || typeof record !== 'object' || typeof record.venue_id !== 'string' || seen.has(record.venue_id) || !byId.has(record.venue_id)) throw new Error(`Invalid refreshed metadata venue: ${record?.venue_id ?? ''}`);
+    if (typeof record.name !== 'string' || !record.name.trim() || typeof record.booking_url !== 'string' || !URL.canParse(record.booking_url) || typeof record.source_url !== 'string' || !URL.canParse(record.source_url) || typeof record.last_checked !== 'string' || !Number.isFinite(Date.parse(record.last_checked))) throw new Error(`Invalid refreshed metadata record: ${record.venue_id}`);
+    seen.add(record.venue_id);
+    const venue = withMetadataValues(byId.get(record.venue_id)!, record);
+    byId.set(record.venue_id, {
+      ...venue,
+      name: record.name,
+      booking_url: record.booking_url,
+      checked_on: record.last_checked.slice(0, 10),
+      sources: [{ url: record.source_url, supports: 'Latest automated metadata.' }, ...venue.sources.filter((source) => source.url !== record.source_url)],
+    });
+  }
+  return venues.map((venue) => byId.get(venue.id)!);
+}
 
 function isAvailabilityMetadataPatch(value: unknown): value is AvailabilityMetadataPatch {
   if (!value || typeof value !== 'object') return false;
@@ -170,28 +250,7 @@ export function availabilityGrid(snapshot: AvailabilitySnapshot, venueIds: strin
 export function venueWithAvailabilityMetadata(venue: Venue, snapshot: AvailabilitySnapshot): Venue {
   const values = snapshot.metadata?.[venue.id]?.values;
   if (!values) return venue;
-  const observed = { ...venue };
-  const duration = values.slot_duration_minutes;
-  if (Number.isInteger(duration) && Number(duration) > 0 && Number(duration) <= 1440) observed.slot_minutes = Number(duration);
-  const window = values.booking_window_days;
-  const release = values.release_time;
-  if (Number.isInteger(window) && Number(window) > 0 && Number(window) <= 60) observed.advance_days = Number(window);
-  if (typeof release === 'string' && /^([01]\d|2[0-3]):[0-5]\d(?::[0-5]\d)?$/.test(release)) observed.release_time = release.slice(0, 5);
-  if (observed.advance_days !== venue.advance_days || observed.release_time !== venue.release_time) {
-    observed.release_rule = null;
-    observed.release_status = observed.advance_days != null && observed.release_time ? 'published' : 'partial';
-  }
-  if (Array.isArray(values.prices)) {
-    const prices = values.prices.flatMap((rate): PriceOption[] => {
-      if (!rate || typeof rate !== 'object') return [];
-      const raw = rate as Record<string, unknown>;
-      const amount = Number(raw.amount_gbp);
-      if (!Number.isFinite(amount) || amount <= 0 || amount >= 100 || !Number.isInteger(raw.duration_minutes) || Number(raw.duration_minutes) <= 0) return [];
-      return [{ label: 'Observed booking price', amount_gbp: amount, duration_minutes: Number(raw.duration_minutes), modes: ['after-work', 'weekend'], lighting: raw.lights_included === false ? 'unlit' : raw.lights_included === true ? 'included' : 'unknown' }];
-    });
-    if (prices.length) observed.price_options = prices;
-  }
-  return observed;
+  return withMetadataValues(venue, values);
 }
 
 export function parseCatalogue(catalogue: { venues: Venue[] }, prices: Record<string, PriceOption[] | null>, coordinates: Record<string, Point | null>): Venue[] {
@@ -212,7 +271,7 @@ export function parseCatalogue(catalogue: { venues: Venue[] }, prices: Record<st
 export function priceOptionLabel(option: PriceOption): string {
   if (option.label) return option.label;
   if (!option.customer || !option.time_band) return 'Published rate';
-  const customer = option.customer === 'adult_standard' ? 'Adult standard' : 'Nonmember';
+  const customer = option.customer === 'adult_standard' ? 'Adult standard' : option.customer === 'member' ? 'Member' : 'Nonmember';
   const band = option.time_band === 'off_peak' ? 'off-peak' : option.time_band === 'peak' ? 'peak' : 'anytime';
   return `${customer} · ${band}`;
 }

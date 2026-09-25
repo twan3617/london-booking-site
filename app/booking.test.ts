@@ -22,6 +22,7 @@ import {
   mergeAvailabilityRefresh,
   venueDisplay,
   venueWithAvailabilityMetadata,
+  venuesWithRefreshedMetadata,
   releaseDetails,
   relevantHourlyPrice,
   withinBookingWindow,
@@ -96,6 +97,42 @@ test('API metadata overrides observed fields while static facts fill the gaps', 
     label: 'Observed booking price', amount_gbp: 13.45, duration_minutes: 60,
     modes: ['after-work', 'weekend'], lighting: 'unknown',
   }]);
+});
+
+test('refreshed metadata sits between the catalogue and live API', () => {
+  const [refreshed] = venuesWithRefreshedMetadata([venue], { venues: [{
+    venue_id: 'hyde-park',
+    name: 'Hyde Park Courts',
+    booking_url: 'https://example.com/refreshed-booking',
+    last_checked: '2026-09-24T10:00:00Z',
+    source_url: 'https://example.com/refreshed-source',
+    court_count: 4,
+    floodlit_court_count: 4,
+    floodlit: true,
+    prices: [{ amount_gbp: '12.50', duration_minutes: 45, customer: 'nonmember', time_band: 'peak', lights_included: true }],
+    booking_window_days: 10,
+    release_time: '09:15:00',
+    slot_duration_minutes: 45,
+    opening_hours: { monday: [['07:00:00', '22:00:00']], tuesday: [['07:00:00', '22:00:00']] },
+  }] });
+  const live = venueWithAvailabilityMetadata(refreshed, { ...availability, metadata: { 'hyde-park': {
+    source_url: 'https://better-admin.org.uk/api/slots',
+    checked_at: '2026-09-25T10:00:00Z',
+    values: { booking_window_days: 6 },
+  } } });
+
+  assert.equal(live.name, 'Hyde Park Courts');
+  assert.equal(live.booking_url, 'https://example.com/refreshed-booking');
+  assert.equal(live.courts_total, 4);
+  assert.equal(live.floodlit_courts, 4);
+  assert.equal(live.lighting, 'floodlit');
+  assert.equal(live.slot_minutes, 45);
+  assert.equal(live.advance_days, 6);
+  assert.equal(live.release_time, '09:15');
+  assert.equal(live.hours_text, 'Mon–Tue 07:00–22:00');
+  assert.equal(live.checked_on, '2026-09-24');
+  assert.equal(live.sources[0].url, 'https://example.com/refreshed-source');
+  assert.equal(live.price_options?.[0].amount_gbp, 12.5);
 });
 
 test('a failed provider keeps its previous snapshot while successful providers advance', () => {

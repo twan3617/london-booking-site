@@ -3,11 +3,12 @@
 import { useEffect, useMemo, useState } from 'react';
 import catalogue from '../data/venues.json';
 import coordinateData from '../data/coordinates.json';
+import refreshedMetadata from '../data/ingestion-metadata.json';
 import priceData from '../data/prices.json';
-import { availabilityForVenue, availabilityGrid, bookingAccountRequired, bookingUrlsForSlots, bookingUrlFor, calendarText, directionsUrl, distanceMiles, freshAvailability, isAvailabilitySnapshot, matchesVenue, nextSaturday, osmEmbedUrl, parseCatalogue, prettyDate, releaseDetails, venueDisplay, venueWithAvailabilityMetadata, withinBookingWindow, type AvailabilitySnapshot, type Filters, type Mode, type Point, type PriceOption, type Sport, type Venue } from './booking';
+import { availabilityForVenue, availabilityGrid, bookingAccountRequired, bookingUrlsForSlots, bookingUrlFor, calendarText, directionsUrl, distanceMiles, freshAvailability, isAvailabilitySnapshot, matchesVenue, nextSaturday, osmEmbedUrl, parseCatalogue, prettyDate, releaseDetails, venueDisplay, venueWithAvailabilityMetadata, venuesWithRefreshedMetadata, withinBookingWindow, type AvailabilitySnapshot, type Filters, type Mode, type Point, type PriceOption, type RefreshedMetadataSnapshot, type Sport, type Venue } from './booking';
 
 const priceOptions = priceData as Record<string, PriceOption[] | null>;
-const venues = parseCatalogue(catalogue as unknown as { venues: Venue[] }, priceOptions, coordinateData as Record<string, Point | null>);
+const venues = venuesWithRefreshedMetadata(parseCatalogue(catalogue as unknown as { venues: Venue[] }, priceOptions, coordinateData as Record<string, Point | null>), refreshedMetadata as unknown as RefreshedMetadataSnapshot);
 const EMPTY_AVAILABILITY: AvailabilitySnapshot = { generated_at: '1970-01-01T00:00:00Z', coverage_start: '1970-01-01', coverage_end: '1970-01-01', venue_ids: [], booking_urls: {}, slots: [] };
 const PROVIDER_NAMES: Record<string, string> = {
   'api.matchi.com': 'MATCHi',
