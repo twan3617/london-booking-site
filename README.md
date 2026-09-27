@@ -96,7 +96,7 @@ On the deployed Netlify site, the read-only function serves the `latest` key in 
 ### Activate snapshot refresh on Netlify
 
 1. Deploy this code to your existing Netlify project once, including `netlify/functions/availability.mjs`.
-2. In Netlify, copy **Project configuration → General → Project information → Project ID**. This is the value for `NETLIFY_SITE_ID`; the ID in `.openai/hosting.json` belongs to a different hosting service.
+2. In Netlify, copy **Project configuration → General → Project information → Project ID**. This is the value for `NETLIFY_SITE_ID`.
 3. Create a Netlify personal access token under **User settings → Applications → Personal access tokens**.
 4. In the GitHub repository, open **Settings → Secrets and variables → Actions** and create repository secrets named `NETLIFY_SITE_ID` and `NETLIFY_AUTH_TOKEN` with those values. Keep the token in secrets, never in source code or browser configuration.
 5. Once the workflow is on the default branch, open **Actions → Refresh court availability → Run workflow**. Its first successful upload creates the store and snapshot automatically.
