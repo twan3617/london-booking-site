@@ -168,11 +168,8 @@ export function isAvailabilitySnapshot(value: unknown): value is AvailabilitySna
   return snapshot.failed_providers === undefined || (Array.isArray(snapshot.failed_providers) && snapshot.failed_providers.every((provider) => typeof provider === 'string'));
 }
 
-function combineAvailabilityProviders(providers: Record<string, ProviderAvailabilitySnapshot>, failed_providers: string[] = []): AvailabilitySnapshot {
+function combineAvailabilityProviders(providers: Record<string, ProviderAvailabilitySnapshot>, coverage_start: string, coverage_end: string, failed_providers: string[] = []): AvailabilitySnapshot {
   const snapshots = Object.values(providers);
-  const coverage_start = snapshots.map((snapshot) => snapshot.coverage_start).sort().at(-1);
-  const coverage_end = snapshots.map((snapshot) => snapshot.coverage_end).sort()[0];
-  if (!coverage_start || !coverage_end || coverage_start > coverage_end) throw new Error('Provider availability windows do not overlap');
   return {
     generated_at: snapshots.map((snapshot) => snapshot.generated_at).sort()[0],
     coverage_start,
@@ -193,13 +190,13 @@ export function mergeAvailabilityRefresh(current: AvailabilitySnapshot, previous
   for (const [provider, snapshot] of Object.entries(providers)) {
     if (snapshot.coverage_end < current.coverage_start || snapshot.coverage_start > current.coverage_end) delete providers[provider];
   }
-  return combineAvailabilityProviders(providers, current.failed_providers);
+  return combineAvailabilityProviders(providers, current.coverage_start, current.coverage_end, current.failed_providers);
 }
 
 export function freshAvailability(snapshot: AvailabilitySnapshot, now: number, maxAgeMs = 2 * 60 * 60_000): AvailabilitySnapshot {
   if (!snapshot.providers) return now - Date.parse(snapshot.generated_at) <= maxAgeMs ? snapshot : { ...snapshot, slots: [], metadata: {} };
   const providers = Object.fromEntries(Object.entries(snapshot.providers).filter(([, provider]) => now - Date.parse(provider.generated_at) <= maxAgeMs));
-  return Object.keys(providers).length ? combineAvailabilityProviders(providers, snapshot.failed_providers) : { ...snapshot, slots: [], metadata: {} };
+  return Object.keys(providers).length ? combineAvailabilityProviders(providers, snapshot.coverage_start, snapshot.coverage_end, snapshot.failed_providers) : { ...snapshot, slots: [], metadata: {} };
 }
 
 export function availabilityBookingUrl(snapshot: AvailabilitySnapshot, venueId: string, date: string): string | null {
@@ -230,7 +227,7 @@ export function bookingUrlsForSlots(slots: AvailabilitySlot[]): string[] {
 
 export function availabilityForVenue(snapshot: AvailabilitySnapshot, venueId: string, date: string, start: string, durationMinutes: number): { status: 'available' | 'unreleased' | 'none' | 'unsupported' | 'outside'; slots: AvailabilitySlot[] } {
   if (!snapshot.venue_ids.includes(venueId)) return { status: 'unsupported', slots: [] };
-  if (date < snapshot.coverage_start || date > snapshot.coverage_end) return { status: 'outside', slots: [] };
+  if (date < snapshot.coverage_start || date > snapshot.coverage_end || snapshot.providers && !Object.values(snapshot.providers).some((provider) => provider.venue_ids.includes(venueId) && date >= provider.coverage_start && date <= provider.coverage_end)) return { status: 'outside', slots: [] };
   const matching = snapshot.slots.filter((slot) => slot.venue_id === venueId && slot.start_time.slice(0, 10) === date && slot.start_time.slice(11, 16) === start && (Date.parse(slot.end_time) - Date.parse(slot.start_time)) / 60_000 === durationMinutes);
   const available = matching.filter((slot) => slot.available);
   if (available.length) return { status: 'available', slots: available };

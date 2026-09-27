@@ -162,6 +162,23 @@ test('a failed provider keeps its previous snapshot while successful providers a
   assert.deepEqual(fresh?.venue_ids, ['hyde-park']);
 });
 
+test('a carried provider does not hide the new provider’s final day', () => {
+  const oldSlot = { ...availability.slots[0], venue_id: 'club-park', start_time: '2026-09-29T19:00:00Z', end_time: '2026-09-29T20:00:00Z' };
+  const old = { ...availability, generated_at: '2026-09-24T23:30:00Z', coverage_start: '2026-09-24', coverage_end: '2026-09-29', venue_ids: ['club-park'], booking_urls: { 'club-park': 'https://example.com/club' }, slots: [oldSlot] };
+  const newSlot = { ...availability.slots[0], start_time: '2026-09-30T19:00:00Z', end_time: '2026-09-30T20:00:00Z' };
+  const updated = { ...availability, generated_at: '2026-09-25T00:00:00Z', coverage_start: '2026-09-25', coverage_end: '2026-09-30', slots: [newSlot] };
+  const merged = mergeAvailabilityRefresh(
+    { ...updated, providers: { better: updated }, failed_providers: ['club'] },
+    { ...old, providers: { club: old } },
+  );
+
+  assert.equal(merged.coverage_start, '2026-09-25');
+  assert.equal(merged.coverage_end, '2026-09-30');
+  assert.deepEqual(merged.slots, [oldSlot, newSlot]);
+  assert.equal(availabilityForVenue(merged, 'club-park', '2026-09-30', '19:00', 60).status, 'outside');
+  assert.deepEqual(freshAvailability(merged, Date.parse('2026-09-25T00:20:00Z')).slots, [oldSlot, newSlot]);
+});
+
 test('expired availability keeps its coverage while hiding stale slots', () => {
   const withMetadata = { ...availability, metadata: { 'hyde-park': { source_url: 'https://better-admin.org.uk/api/slots', checked_at: '2026-09-23T20:00:00Z', values: { booking_window_days: 6 } } } };
   const expired = freshAvailability(withMetadata, Date.parse('2026-09-24T00:01:00Z'));
