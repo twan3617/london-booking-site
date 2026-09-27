@@ -77,7 +77,7 @@ export default function Home() {
       if (pending) return;
       pending = true;
       try {
-        const response = await fetch('/.netlify/functions/availability', { cache: 'no-store' });
+        const response = await fetch('/.netlify/functions/availability');
         if (!response.ok) throw new Error('Availability request failed');
         const candidate: unknown = await response.json();
         if (!isAvailabilitySnapshot(candidate)) throw new Error('Invalid availability snapshot');
@@ -89,10 +89,8 @@ export default function Home() {
       }
     }
     void refresh();
-    const interval = window.setInterval(() => { if (document.visibilityState === 'visible') void refresh(); }, 5 * 60_000);
-    const onVisible = () => { if (document.visibilityState === 'visible') void refresh(); };
-    document.addEventListener('visibilitychange', onVisible);
-    return () => { active = false; window.clearInterval(interval); document.removeEventListener('visibilitychange', onVisible); };
+    const interval = window.setInterval(() => { if (document.visibilityState === 'visible') void refresh(); }, 30 * 60_000);
+    return () => { active = false; window.clearInterval(interval); };
   }, []);
 
   const results = useMemo(() => {

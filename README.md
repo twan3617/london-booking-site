@@ -89,7 +89,7 @@ Refresh the six dates currently exposed by Better locally with:
 .venv/bin/python scripts/refresh_availability.py --all
 ```
 
-The refresh reads public booking JSON for 244 verified venues: 21 Better venues across 24 products, two Royal Parks padel venues on the shared Flow API, 206 former ClubSpark venues now exposed through LTA Play, eight Playtomic padel venues, three Game4Padel venues on MATCHi, and four Padel Mates venues. Better products at Sutton and Lee Valley are combined and duplicate court-times are removed. All provider responses emit provider-independent price and duration observations from the slots already fetched; Better and Royal Parks also expose booking-window and release-time observations. Fresh observations override those fields on location cards while the catalogue continues to supply other facts; stale observations are removed with their provider snapshot. LTA Play is queried once per venue and date; Playtomic and MATCHi preserve each available duration and GBP price. MATCHi fetches each facility once and each court once for the full date range. Requests run without parallel bursts and stop for that provider on the first error. Request starts are at least one second apart for Better, Royal Parks, LTA Play and Playtomic, and ten seconds apart for MATCHi and Padel Mates. Each provider is refreshed independently and written atomically as provider-independent slots to the ignored local file `data/availability.json`. Nine Better catalogue entries, 26 ClubSpark catalogue entries that could not be matched safely to LTA Play, and three padel venues remain unsupported. The site fetches the latest published snapshot from `/.netlify/functions/availability` when opened, every five minutes while visible, and when the tab becomes visible again. Its **Find a time** view shows checked days as columns and start times as rows; selecting a cell lists locations with free courts at that exact start time and duration, along with product-specific booking links. The view shows each provider's check time and excludes that provider's slot counts after two hours.
+The refresh reads public booking JSON for 244 verified venues: 21 Better venues across 24 products, two Royal Parks padel venues on the shared Flow API, 206 former ClubSpark venues now exposed through LTA Play, eight Playtomic padel venues, three Game4Padel venues on MATCHi, and four Padel Mates venues. Better products at Sutton and Lee Valley are combined and duplicate court-times are removed. All provider responses emit provider-independent price and duration observations from the slots already fetched; Better and Royal Parks also expose booking-window and release-time observations. Fresh observations override those fields on location cards while the catalogue continues to supply other facts; stale observations are removed with their provider snapshot. LTA Play is queried once per venue and date; Playtomic and MATCHi preserve each available duration and GBP price. MATCHi fetches each facility once and each court once for the full date range. Requests run without parallel bursts and stop for that provider on the first error. Request starts are at least one second apart for Better, Royal Parks, LTA Play and Playtomic, and ten seconds apart for MATCHi and Padel Mates. Each provider is refreshed independently and written atomically as provider-independent slots to the ignored local file `data/availability.json`. Nine Better catalogue entries, 26 ClubSpark catalogue entries that could not be matched safely to LTA Play, and three padel venues remain unsupported. The site reads the latest published snapshot from `/.netlify/functions/availability` on first visit and checks every 30 minutes while visible. Netlify and browsers reuse a successful response for up to 30 minutes; returning to a tab does not trigger a check. Its **Find a time** view shows checked days as columns and start times as rows; selecting a cell lists locations with free courts at that exact start time and duration, along with product-specific booking links. The view shows each provider's check time and excludes that provider's slot counts after two hours.
 
 On the deployed Netlify site, the read-only function serves the `latest` key in the site-wide `court-availability` Blob store. The publisher replaces successful provider snapshots and carries forward the latest successful snapshot for a failed provider; if every provider fails, nothing is replaced. The manual GitHub Actions workflow runs the existing Python scraper and `scripts/publish_availability.mjs`. Set GitHub Actions repository secrets `NETLIFY_SITE_ID` (Netlify project ID) and `NETLIFY_AUTH_TOKEN` (a Netlify personal access token with access to that project), then run **Refresh court availability** with **Run workflow** when staged validation is complete. New snapshots do not commit data or rebuild the site; only changes to the site code or function require a Netlify deploy.
 
@@ -102,7 +102,9 @@ On the deployed Netlify site, the read-only function serves the `latest` key in 
 5. Once the workflow is on the default branch, open **Actions → Refresh court availability → Run workflow**. Its first successful upload creates the store and snapshot automatically.
 6. Open `https://YOUR-NETLIFY-DOMAIN/.netlify/functions/availability`. It should return JSON with a recent `generated_at`. Then open **Find a time** on the site.
 
-Scheduling is intentionally disabled during staged validation. When enabled later, the open page will continue polling every five minutes independently of the refresh frequency. If refresh fails, the previous snapshot remains stored; the page hides counts and API-derived metadata once they are over two hours old.
+Scheduling is intentionally disabled during staged validation. When enabled later, the open page will check every 30 minutes while visible, independently of the refresh frequency. If refresh fails, the previous snapshot remains stored; the page hides counts and API-derived metadata once they are over two hours old.
+
+The scraper's per-run request caps are 1,250 LTA Play, 150 Better, 50 Playtomic, 50 MATCHi, 30 Padel Mates and 20 Royal Parks requests (1,550 combined). These are our own safeguards, not published provider allowances. They reset on each run, so the manual workflow does not enforce an hourly limit across repeated runs.
 
 `npm run dev` runs the frontend only and does not serve the Netlify function. Local scraping still writes the ignored JSON for inspection; it does not publish it. Use the local integration preview below to test storage-to-browser behaviour without deploying. Cloud credentials and the scheduled job still need a separate check when deployment is enabled.
 
@@ -120,7 +122,7 @@ flowchart TD
   Grid -->|User follows booking link| Booking[Provider booking website]
 ```
 
-The local preview replaces the provider calls and scheduled scraper with manual sample updates, and Netlify Blobs with its local emulator. The function and browser use the production code. Fetches happen when the page opens, every five minutes while visible, and when the browser tab becomes visible again. Receiving new JSON updates the grid without rebuilding or reloading the website. Failed fetches retain the previous snapshot with a warning; counts and API-derived metadata older than two hours are hidden.
+The local preview replaces the provider calls and scheduled scraper with manual sample updates, and Netlify Blobs with its local emulator. The function and browser use the production code. The deployed site uses a 30-minute shared and browser cache and checks every 30 minutes while visible. The local preview disables caching so reloading the page shows a newly selected scenario without rebuilding the website. Failed fetches retain the previous snapshot with a warning; counts and API-derived metadata older than two hours are hidden.
 
 With Node 24, run from this directory:
 
@@ -129,11 +131,11 @@ npx next build
 node scripts/preview_availability.mjs
 ```
 
-Open `http://127.0.0.1:3100` and choose **Find a time**. The preview uses the installed Netlify SDK's local Blob server, temporary storage, our actual availability function, and the built website. It first asserts that the function returns 503 for missing data and reads updated snapshots without caching. No Netlify credentials, provider calls, uploads, deployments, or GitHub jobs are used. The displayed courts and prices are synthetic test data.
+Open `http://127.0.0.1:3100` and choose **Find a time**. If that port is occupied, run `PORT=3105 node scripts/preview_availability.mjs` and open port 3105 instead. The preview uses the installed Netlify SDK's local Blob server, temporary storage, our actual availability function, and the built website. It first asserts that the function returns 503 for missing data and advertises a 30-minute shared and browser cache for successful snapshots. The local preview overrides that cache while testing scenarios. No Netlify credentials, provider calls, uploads, deployments, or GitHub jobs are used. The displayed courts and prices are synthetic test data.
 
 Type a scenario in the terminal:
 
-| Command | Expected behaviour after the next browser fetch |
+| Command | Expected behaviour after reloading the page |
 | --- | --- |
 | `fresh` | One location with two sample courts |
 | `changed` | Same location with one sample court |
@@ -142,7 +144,7 @@ Type a scenario in the terminal:
 | `stale` | Three-hour-old snapshot hides counts and displays an expiry message |
 | `quit` | Stops the preview and removes its temporary Blob storage |
 
-The open, visible page polls every five minutes. Switching away to another browser tab and returning also fetches the latest snapshot without reloading the page. For a first-load failure check, use `missing` and then reload the browser: the time view should show availability unavailable.
+After entering a scenario, reload the local preview page to see it. Returning to the tab does not fetch again. For a first-load failure check, use `missing` and then reload the browser: the time view should show availability unavailable.
 
 References: [Netlify Blobs setup and project ID](https://docs.netlify.com/build/data-and-storage/netlify-blobs/), [GitHub Actions secrets](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets).
 

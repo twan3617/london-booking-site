@@ -14,6 +14,7 @@ import { isAvailabilitySnapshot, nextSaturday } from '../app/booking.ts';
 const directory = await mkdtemp(join(tmpdir(), 'court-availability-preview-'));
 const blobs = new BlobsServer({ directory, token: 'local-preview-only' });
 const { address } = await blobs.start();
+const port = Number(process.env.PORT ?? 3100);
 setEnvironmentContext({ siteID: 'local-preview', token: 'local-preview-only', edgeURL: address, apiURL: address });
 const store = getStore('court-availability');
 const venueId = 'greenwich-charlton-lido-and-lifestyle-club-hornfair-park';
@@ -45,25 +46,25 @@ assert.equal((await availabilityHandler()).status, 503);
 await publish('fresh');
 const response = await availabilityHandler();
 assert.equal(response.status, 200);
-assert.equal(response.headers.get('cache-control'), 'no-store');
+assert.equal(response.headers.get('cache-control'), 'public, max-age=1800');
 assert.equal((await response.json()).slots.filter((slot) => slot.available).length, 2);
 await publish('changed');
 assert.equal((await (await availabilityHandler()).json()).slots.filter((slot) => slot.available).length, 1);
 await publish('fresh');
 
-const app = next({ dev: false, hostname: '127.0.0.1', port: 3100 });
+const app = next({ dev: false, hostname: '127.0.0.1', port });
 await app.prepare();
 const handle = app.getRequestHandler();
 const server = createServer(async (req, res) => {
   if (req.url !== '/.netlify/functions/availability') return handle(req, res);
   const result = req.method === 'GET' ? await availabilityHandler() : new Response(null, { status: 405 });
-  res.writeHead(result.status, Object.fromEntries(result.headers));
+  res.writeHead(result.status, { ...Object.fromEntries(result.headers), 'cache-control': 'no-store' });
   res.end(await result.text());
   console.log(`Availability read: ${result.status} at ${new Date().toISOString()}`);
 });
-server.listen(3100, '127.0.0.1');
-console.log('Storage/function checks passed. SYNTHETIC DATA ONLY: http://127.0.0.1:3100');
-console.log('Type fresh, changed, stale, missing, invalid, or quit. The page fetches on open, tab return, and every five minutes.');
+server.listen(port, '127.0.0.1');
+console.log(`Storage/function checks passed. SYNTHETIC DATA ONLY: http://127.0.0.1:${port}`);
+console.log('Type fresh, changed, stale, missing, invalid, or quit. Reload the page to see a new scenario.');
 const input = createInterface({ input: process.stdin });
 try {
   for await (const line of input) {
