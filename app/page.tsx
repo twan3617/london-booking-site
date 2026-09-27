@@ -4,8 +4,9 @@ import { useEffect, useMemo, useState } from 'react';
 import catalogue from '../data/venues.json';
 import coordinateData from '../data/coordinates.json';
 import refreshedMetadata from '../data/ingestion-metadata.json';
+import siteSettings from '../config/site-settings.json';
 import priceData from '../data/prices.json';
-import { availabilityForVenue, availabilityGrid, bookingAccountRequired, bookingUrlsForSlots, bookingUrlFor, calendarText, directionsUrl, distanceMiles, freshAvailability, isAvailabilitySnapshot, matchesVenue, nextSaturday, osmEmbedUrl, parseCatalogue, prettyDate, providerName, releaseDetails, venueDisplay, venueWithAvailabilityMetadata, venuesWithRefreshedMetadata, withinBookingWindow, type AvailabilitySnapshot, type Filters, type Mode, type Point, type PriceOption, type RefreshedMetadataSnapshot, type Sport, type Venue } from './booking';
+import { availabilityForVenue, availabilityGrid, bookingAccountRequired, bookingUrlsForSlots, bookingUrlFor, calendarText, directionsUrl, distanceMiles, freshAvailability, isAvailabilitySnapshot, matchesVenue, nextSaturday, osmEmbedUrl, parseCatalogue, prettyDate, providerName, releaseDetails, venueDisplay, venueWithAvailabilityMetadata, venuesWithRefreshedMetadata, withoutLtaAvailability, withinBookingWindow, type AvailabilitySnapshot, type Filters, type Mode, type Point, type PriceOption, type RefreshedMetadataSnapshot, type Sport, type Venue } from './booking';
 
 const priceOptions = priceData as Record<string, PriceOption[] | null>;
 const venues = venuesWithRefreshedMetadata(parseCatalogue(catalogue as unknown as { venues: Venue[] }, priceOptions, coordinateData as Record<string, Point | null>), refreshedMetadata as unknown as RefreshedMetadataSnapshot);
@@ -81,7 +82,7 @@ export default function Home() {
         if (!response.ok) throw new Error('Availability request failed');
         const candidate: unknown = await response.json();
         if (!isAvailabilitySnapshot(candidate)) throw new Error('Invalid availability snapshot');
-        if (active) { setSnapshot(candidate); setAvailabilityError(false); }
+        if (active) { setSnapshot(siteSettings.lta_enabled ? candidate : withoutLtaAvailability(candidate)); setAvailabilityError(false); }
       } catch {
         if (active) setAvailabilityError(true);
       } finally {
@@ -149,6 +150,7 @@ export default function Home() {
         <button type="button" className={view === 'time' ? 'active' : ''} aria-pressed={view === 'time'} onClick={() => { setView('time'); setLimit(24); }}>Find a time</button>
       </div>
       <div className="sport-tabs" role="group" aria-label="Sport">{(['tennis', 'squash', 'padel'] as const).map((item) => <button type="button" key={item} className={sport === item ? 'active' : ''} aria-pressed={sport === item} onClick={() => { setSport(item); setBorough(''); setFacility('any'); setLimit(24); }}>{item}</button>)}</div>
+      {!siteSettings.lta_enabled && sport === 'tennis' && <p className="lta-notice" role="note">LTA sites are not being pulled. You can still use their booking links.</p>}
       {view === 'locations' && <div className="mode-tabs" role="group" aria-label="When do you want to play?">
         <button type="button" className={mode === 'after-work' ? 'active' : ''} aria-pressed={mode === 'after-work'} onClick={() => { setMode('after-work'); setStatus('ready'); }}>After work <small>19:00–21:00</small></button>
         <button type="button" className={mode === 'weekend' ? 'active' : ''} aria-pressed={mode === 'weekend'} onClick={() => setMode('weekend')}>Weekend daytime <small>09:00–17:00</small></button>

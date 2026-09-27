@@ -193,6 +193,13 @@ export function mergeAvailabilityRefresh(current: AvailabilitySnapshot, previous
   return combineAvailabilityProviders(providers, current.coverage_start, current.coverage_end, current.failed_providers);
 }
 
+export function withoutLtaAvailability(snapshot: AvailabilitySnapshot): AvailabilitySnapshot {
+  if (!snapshot.providers?.['www.lta.org.uk']) return snapshot;
+  const providers = Object.fromEntries(Object.entries(snapshot.providers).filter(([host]) => host !== 'www.lta.org.uk'));
+  if (!Object.keys(providers).length) return { ...snapshot, venue_ids: [], booking_urls: {}, slots: [], metadata: {}, providers, failed_providers: snapshot.failed_providers?.filter((host) => host !== 'www.lta.org.uk') };
+  return combineAvailabilityProviders(providers, snapshot.coverage_start, snapshot.coverage_end, snapshot.failed_providers?.filter((host) => host !== 'www.lta.org.uk'));
+}
+
 export function freshAvailability(snapshot: AvailabilitySnapshot, now: number, maxAgeMs = 2 * 60 * 60_000): AvailabilitySnapshot {
   if (!snapshot.providers) return now - Date.parse(snapshot.generated_at) <= maxAgeMs ? snapshot : { ...snapshot, slots: [], metadata: {} };
   const providers = Object.fromEntries(Object.entries(snapshot.providers).filter(([, provider]) => now - Date.parse(provider.generated_at) <= maxAgeMs));

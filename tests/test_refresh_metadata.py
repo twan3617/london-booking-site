@@ -7,6 +7,7 @@ from contextlib import redirect_stdout
 from dataclasses import replace
 from datetime import datetime, time, timezone
 from pathlib import Path
+from unittest.mock import patch as mock_patch
 
 from ingestion.models import MetadataField, MetadataPatch, Venue, VenueMetadata, apply_metadata_patch
 from scripts.refresh_metadata import load_snapshot, main, refresh_metadata
@@ -170,6 +171,25 @@ class RefreshMetadataTests(unittest.TestCase):
         with redirect_stdout(planned):
             main(["--provider", "everyoneactive", "--plan"])
         self.assertIn("everyoneactive: 4 venues, 10s pacing, request limit 4", planned.getvalue())
+
+    def test_cli_skips_clubspark_when_lta_is_disabled(self):
+        planned = io.StringIO()
+        with redirect_stdout(planned):
+            main(["--all", "--plan"])
+        self.assertNotIn("clubspark", planned.getvalue())
+        with mock_patch("scripts.refresh_metadata.CLUBSPARK.fetch_metadata", side_effect=AssertionError("LTA request made")) as lta:
+            with self.assertRaisesRegex(ValueError, "LTA metadata is disabled"):
+                main(["--provider", "clubspark"])
+            lta.assert_not_called()
+
+    def test_cli_can_include_clubspark_when_lta_is_enabled(self):
+        with tempfile.TemporaryDirectory() as directory:
+            setting = Path(directory) / "availability.json"
+            setting.write_text('{"lta_enabled": true}')
+            planned = io.StringIO()
+            with mock_patch("scripts.refresh_metadata.SETTINGS_PATH", setting), redirect_stdout(planned):
+                main(["--all", "--plan"])
+            self.assertIn("clubspark: 4 venues", planned.getvalue())
 
     def test_multiple_sources_fill_gaps_and_later_api_values_win(self):
         with tempfile.TemporaryDirectory() as directory:

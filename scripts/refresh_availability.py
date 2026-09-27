@@ -23,6 +23,7 @@ from ingestion.registry import load_registry
 from ingestion.sources import RequestPacer, metadata_patch_from_slots
 
 OUTPUT = ROOT / "data/availability.json"
+SETTINGS_PATH = ROOT / "config/site-settings.json"
 LONDON = ZoneInfo("Europe/London")
 DAYS_AHEAD = 5
 PROVIDERS = {
@@ -74,12 +75,15 @@ def _save(output: Path, payload: dict):
 
 
 async def refresh_availability(output: Path = OUTPUT, provider: str | None = None, plan: bool = False):
+    lta_enabled = json.loads(SETTINGS_PATH.read_text()).get("lta_enabled") is True
+    if provider == "lta" and not lta_enabled:
+        raise ValueError("LTA availability is disabled in config/site-settings.json")
     now = datetime.now(timezone.utc)
     start_date = now.astimezone(LONDON).date()
     # Better currently exposes today plus five further dates.
     end_date = start_date + timedelta(days=DAYS_AHEAD)
     venues = [venue for venue in load_registry(ROOT / "config/venues.yaml") if venue.availability_urls]
-    selected = {provider: PROVIDERS[provider]} if provider else PROVIDERS
+    selected = {provider: PROVIDERS[provider]} if provider else {name: details for name, details in PROVIDERS.items() if name != "lta" or lta_enabled}
     sources = {
         host: source(request_pacer=RequestPacer(interval, request_limit))
         for host, source, interval, request_limit in selected.values()

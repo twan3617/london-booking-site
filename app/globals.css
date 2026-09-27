@@ -33,3 +33,4 @@
 .time-location a{flex:none;border-radius:8px;padding:10px 12px;color:white;background:var(--ink);font-size:12px;font-weight:700;text-decoration:none}
 .no-time-locations{padding:22px;border:1px dashed var(--line);border-radius:10px;color:var(--muted);font-size:14px;text-align:center}
 @media(max-width:620px){.filter-grid.time-filters{grid-template-columns:repeat(2,minmax(0,1fr))}.time-selection-head{align-items:flex-start;flex-direction:column}.time-location{align-items:flex-start;flex-direction:column}.time-location-actions{align-self:stretch;justify-content:space-between}}
+.lta-notice{margin:14px 0;color:var(--muted);font-size:14px}

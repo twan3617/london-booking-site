@@ -1,6 +1,8 @@
 import { readFile } from 'node:fs/promises';
 import { getStore } from '@netlify/blobs';
-import { isAvailabilitySnapshot, mergeAvailabilityRefresh } from '../app/booking.ts';
+import { isAvailabilitySnapshot, mergeAvailabilityRefresh, withoutLtaAvailability } from '../app/booking.ts';
+
+const settings = JSON.parse(await readFile(new URL('../config/site-settings.json', import.meta.url), 'utf8'));
 
 const current = JSON.parse(await readFile(new URL('../data/availability.json', import.meta.url), 'utf8'));
 if (!isAvailabilitySnapshot(current) || !current.providers || !Object.keys(current.providers).length) {
@@ -14,7 +16,8 @@ if (!siteID || !token) throw new Error('NETLIFY_SITE_ID and NETLIFY_AUTH_TOKEN a
 const store = getStore('court-availability', { siteID, token });
 const previousText = await store.get('latest');
 const previous = previousText === null ? undefined : JSON.parse(previousText);
-const snapshot = mergeAvailabilityRefresh(current, isAvailabilitySnapshot(previous) ? previous : undefined);
+const merged = mergeAvailabilityRefresh(current, isAvailabilitySnapshot(previous) ? previous : undefined);
+const snapshot = settings.lta_enabled === true ? merged : withoutLtaAvailability(merged);
 if (!snapshot.venue_ids.length || !snapshot.slots.length) throw new Error('Refusing to publish an empty availability snapshot');
 await store.setJSON('latest', snapshot);
 console.log(`Published ${snapshot.slots.length} slots checked at ${snapshot.generated_at}`);

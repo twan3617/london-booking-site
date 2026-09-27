@@ -21,6 +21,7 @@ import {
   isAvailabilitySnapshot,
   freshAvailability,
   mergeAvailabilityRefresh,
+  withoutLtaAvailability,
   venueDisplay,
   venueWithAvailabilityMetadata,
   venuesWithRefreshedMetadata,
@@ -160,6 +161,20 @@ test('a failed provider keeps its previous snapshot while successful providers a
   const fresh = freshAvailability(merged, Date.parse('2026-09-23T21:30:00Z'));
   assert.deepEqual(Object.keys(fresh?.providers ?? {}), ['better-admin.org.uk']);
   assert.deepEqual(fresh?.venue_ids, ['hyde-park']);
+});
+
+test('disabled LTA is removed from carried snapshots and all displayed availability', () => {
+  const lta = { ...availability, venue_ids: ['lta-park'], booking_urls: { 'lta-park': 'https://www.lta.org.uk/book' }, slots: [{ ...availability.slots[0], venue_id: 'lta-park' }], metadata: { 'lta-park': { source_url: 'https://www.lta.org.uk', checked_at: availability.generated_at, values: {} } } };
+  const merged = mergeAvailabilityRefresh(
+    { ...availability, providers: { 'better-admin.org.uk': availability } },
+    { ...lta, providers: { 'www.lta.org.uk': lta } },
+  );
+  const filtered = withoutLtaAvailability(merged);
+  assert.deepEqual(Object.keys(filtered.providers ?? {}), ['better-admin.org.uk']);
+  assert.deepEqual(filtered.venue_ids, availability.venue_ids);
+  assert.deepEqual(filtered.booking_urls, availability.booking_urls);
+  assert.deepEqual(filtered.slots, availability.slots);
+  assert.deepEqual(filtered.metadata, {});
 });
 
 test('a carried provider does not hide the new provider’s final day', () => {

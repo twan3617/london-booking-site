@@ -176,7 +176,8 @@ class BetterAvailabilityTests(unittest.TestCase):
             snapshot["booking_urls"][VENUE.id],
             "https://bookings.better.org.uk/location/gunnersbury-park-sports-hub/tennis-court-outdoor",
         )
-        self.assertIn("https://www.lta.org.uk/play/book-a-tennis-court/courts/barking-park_", snapshot["booking_urls"]["barking-and-dagenham-barking-park"])
+        self.assertNotIn("www.lta.org.uk", snapshot["providers"])
+        self.assertNotIn("barking-and-dagenham-barking-park", snapshot["booking_urls"])
         self.assertEqual(snapshot["booking_urls"]["padel-barnet-padel-hub-n20"], "https://playtomic.io/tenant/7a6f7a17-5a73-4468-9329-56c901f1ceba")
         self.assertEqual(snapshot["booking_urls"]["padel-newham-rocket-beckton"], "https://padelmates.se/club/f953765495194a299e49f49674d69a41")
 
@@ -233,7 +234,28 @@ class BetterAvailabilityTests(unittest.TestCase):
             snapshot = json.loads(output.read_text())
 
         self.assertEqual(set(snapshot["providers"]), {"better-admin.org.uk", "flow.onl", "playtomic.com", "api.matchi.com", "fastapi-production-fargate.padelmates.io"})
-        self.assertEqual(snapshot["failed_providers"], ["www.lta.org.uk"])
+        self.assertEqual(snapshot["failed_providers"], [])
+
+    def test_lta_is_off_by_default_and_makes_no_request_even_when_selected(self):
+        with TemporaryDirectory(dir=ROOT) as directory:
+            output = Path(directory) / "availability.json"
+            with patch("scripts.refresh_availability.BetterAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.LtaAvailabilitySource.fetch_availability", side_effect=AssertionError("LTA request made")) as lta, patch("scripts.refresh_availability.PlaytomicAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.MatchiAvailabilitySource.fetch_availability", return_value=()), patch("scripts.refresh_availability.PadelMatesAvailabilitySource.fetch_availability", return_value=()):
+                asyncio.run(refresh_availability(output))
+                self.assertNotIn("www.lta.org.uk", json.loads(output.read_text())["providers"])
+                with self.assertRaisesRegex(ValueError, "LTA availability is disabled"):
+                    asyncio.run(refresh_availability(output, provider="lta"))
+                lta.assert_not_called()
+
+    def test_lta_can_be_enabled_in_the_site_setting(self):
+        with TemporaryDirectory(dir=ROOT) as directory:
+            setting = Path(directory) / "availability.json"
+            setting.write_text('{"lta_enabled": true}')
+            output = Path(directory) / "snapshot.json"
+            lta_venue = next(venue for venue in load_registry(ROOT / "config/venues.yaml") if venue.availability_urls and "www.lta.org.uk" in venue.availability_urls[0])
+            with patch("scripts.refresh_availability.SETTINGS_PATH", setting), patch("scripts.refresh_availability.load_registry", return_value=(lta_venue,)), patch("scripts.refresh_availability.LtaAvailabilitySource.fetch_availability", return_value=()) as lta:
+                asyncio.run(refresh_availability(output, provider="lta"))
+            self.assertEqual(lta.call_count, 1)
+            self.assertIn("www.lta.org.uk", json.loads(output.read_text())["providers"])
 
     def test_refresh_does_not_replace_the_snapshot_when_every_provider_fails(self):
         with TemporaryDirectory(dir=ROOT) as directory:

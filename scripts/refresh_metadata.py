@@ -22,6 +22,7 @@ from ingestion.registry import load_registry
 from ingestion.review import format_review, review_metadata, validate_metadata
 
 OUTPUT = ROOT / "data/ingestion-metadata.json"
+SETTINGS_PATH = ROOT / "config/site-settings.json"
 CLUBSPARK = ClubSparkSource()
 EVERYONE_ACTIVE = EveryoneActiveMetadataSource()
 OPENACTIVE = OpenActiveSource()
@@ -195,7 +196,10 @@ def main(argv=None):
     if args.list:
         print(*PROVIDERS, sep="\n")
         return 0
-    selected = tuple(PROVIDERS) if args.all else (args.provider,)
+    lta_enabled = json.loads(SETTINGS_PATH.read_text()).get("lta_enabled") is True
+    if args.provider == "clubspark" and not lta_enabled:
+        raise ValueError("LTA metadata is disabled in config/site-settings.json")
+    selected = tuple(name for name in PROVIDERS if name != "clubspark" or lta_enabled) if args.all else (args.provider,)
     if args.plan:
         for name in selected:
             pacer = next(iter(PROVIDERS[name].values())).request_pacer
